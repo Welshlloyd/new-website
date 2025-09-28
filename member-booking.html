@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Membership Credit Booking | The Woof of Walk Street</title>
+  <meta name="description" content="Use your membership credits to request a solo weekday walk. We’ll confirm by email and add it to your calendar.">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    :root{--gold:#f4c542;--line:#1d232c}
+    .wrap{max-width:820px;margin:28px auto 40px;padding:0 16px}
+    form{background:#0f1318;border:1px solid var(--line);border-radius:16px;padding:18px}
+    label{display:block;margin:.8rem 0 .35rem}
+    input,select,textarea{width:100%;padding:12px;border-radius:10px;border:1px solid #2a3440;background:#0b0e12;color:#e9edf2}
+    button{margin-top:14px;background:var(--gold);color:#111;border:0;border-radius:10px;padding:12px 16px;font-weight:800;cursor:pointer}
+    .note{margin-top:10px;color:#cfd7e1}
+    .success{display:none;margin-top:16px;background:#0e1a12;border:1px solid #214d33;color:#c9f1dd;border-radius:12px;padding:14px}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand"><a href="index.html"><img class="wordmark" src="images/brand/wordmark.svg" alt="The Woof of Walk Street"></a></div>
+    <nav class="primary-nav">
+      <a href="index.html">Home</a>
+      <a href="memberships.html">Memberships</a>
+      <a href="dog-walking.html">Walking</a>
+      <a href="boarding-services.html">Boarding</a>
+      <a href="contact.html">Contact us</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <h1>Use Membership Credit</h1>
+    <p>Submit your preferred day/time below. We’ll verify credits and confirm your booking by email.</p>
+
+    <form id="creditForm">
+      <label for="name">Your name</label>
+      <input id="name" name="name" required>
+
+      <label for="dog">Dog’s name</label>
+      <input id="dog" name="dog" required>
+
+      <label for="plan">Your plan</label>
+      <select id="plan" name="plan" required>
+        <option value="">Select…</option>
+        <option>Starter Sniffvestment (4)</option>
+        <option>Tail Growth (10)</option>
+        <option>Unlimited Pawfolio</option>
+      </select>
+
+      <label for="date">Preferred date (Mon–Fri)</label>
+      <input id="date" name="date" type="date" required>
+
+      <label for="time">Preferred time (7:00–19:00)</label>
+      <input id="time" name="time" type="time" min="07:00" max="19:00" required>
+
+      <label for="notes">Notes (access, preferences, etc.)</label>
+      <textarea id="notes" name="notes" rows="4" placeholder="Gate code, meet spot, anything else"></textarea>
+
+      <button type="submit">Request Booking</button>
+      <p class="note">Walks are 45 minutes, solo only. Bookings are confirmed subject to availability.</p>
+    </form>
+
+    <div id="ok" class="success" role="status">Thanks! Your request was submitted. We’ll confirm by email shortly.</div>
+  </main>
+
+  <footer class="site-footer"><div class="copy">© 2025 The Woof of Walk Street</div></footer>
+
+  <script>
+    const f = document.getElementById('creditForm');
+    const ok = document.getElementById('ok');
+    f.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = new FormData(f);
+      const params = new URLSearchParams(data).toString();
+      // Send via mailto for now (replace with server endpoint later)
+      const subject = encodeURIComponent('Membership Credit Booking Request');
+      const body = encodeURIComponent(
+        `Name: ${data.get('name')}\nDog: ${data.get('dog')}\nPlan: ${data.get('plan')}\nDate: ${data.get('date')}\nTime: ${data.get('time')}\nNotes: ${data.get('notes') || '-'}`);
+      window.location.href = `mailto:info@walkstreet.com?subject=${subject}&body=${body}`;
+      f.reset(); ok.style.display = 'block';
+    });
+  </script>
+</body>
+</html>

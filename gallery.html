@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery | The Woof of Walk Street</title>
+  <meta name="description" content="See moments from our solo walks and Weekend Woof Club boarding in South Melbourne. Follow us on Instagram for daily updates." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .hero { padding:56px 16px 10px; text-align:center }
+    .wrap { max-width:1100px; margin:0 auto 40px; padding:0 16px }
+    .grid { display:grid; gap:10px; grid-template-columns:repeat(12,1fr) }
+    .grid img { width:100%; height:100%; object-fit:cover; border-radius:10px }
+    .cell { grid-column:span 4; aspect-ratio:1/1; overflow:hidden }
+    @media(max-width:1000px){ .cell { grid-column:span 6 } }
+    @media(max-width:620px){ .cell { grid-column:1/-1 } }
+    .embed { margin:24px 0 10px }
+    .note { color:#cfd7e1 }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="brand">
+      <a href="index.html">
+        <img class="wordmark" src="images/brand/wordmark.svg" alt="The Woof of Walk Street">
+      </a>
+    </div>
+    <nav class="primary-nav">
+      <a href="index.html">Home</a>
+      <a href="memberships.html">Memberships</a>
+      <a href="dog-walking.html">Walking</a>
+      <a href="boarding-services.html">Boarding</a>
+      <a href="contact.html">Contact us</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Gallery</h1>
+    <p class="note">Follow our day-to-day on Instagram — plus some of our favourite snaps below.</p>
+  </section>
+
+  <!-- Instagram Widget -->
+  <main class="wrap">
+    <div class="embed" aria-label="Instagram gallery">
+      <!-- Replace with your SnapWidget code -->
+      <iframe src="https://snapwidget.com/embed/1108836" 
+              class="snapwidget-widget" allowtransparency="true" 
+              frameborder="0" scrolling="no" 
+              style="border:none; overflow:hidden; width:100%; max-width:1000px; height:500px" 
+              title="Posts from Instagram">
+      </iframe>
+    </div>
+
+    <!-- Static Photo Grid -->
+    <section class="grid" aria-label="Photo grid">
+      <figure class="cell"><img src="images/gallery/dog-walking-south-melbourne.jpg" alt="Solo walk on the beach"></figure>
+      <figure class="cell"><img src="images/gallery/weekend-woof-club-cozy-dog.jpg" alt="Cozy Weekend Woof Club boarding guest"></figure>
+      <figure class="cell"><img src="images/gallery/dogs-playing-together.jpg" alt="Happy dogs playing together"></figure>
+      <figure class="cell"><img src="images/gallery/melbourne-skyline.jpg" alt="Melbourne skyline from a walk route"></figure>
+      <figure class="cell"><img src="images/gallery/south-melbourne-beach.jpg" alt="South Melbourne beach pier"></figure>
+      <figure class="cell"><img src="images/gallery/logo-hero.webp" alt="Brand hero pup overlooking skyline"></figure>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="copy">© 2025 The Woof of Walk Street</div>
+  </footer>
+</body>
+</html>

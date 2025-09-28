@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Core pages -->
+  <url><loc>https://www.woofofwalkstreet.com/</loc></url>
+  <url><loc>https://www.woofofwalkstreet.com/memberships.html</loc></url>
+  <url><loc>https://www.woofofwalkstreet.com/membership-starter.html</loc></url>
+  <url><loc>https://www.woofofwalkstreet.com/membership-growth.html</loc></url>
+  <url><loc>https://www.woofofwalkstreet.com/membership-unlimited.html</loc></url>
+  <url><loc>https://www.woofofwalkstreet.com/dog-walking.html</loc></url>
+  <url><loc>https://www.woofofwalkstreet.com/boarding-services.html</loc></url>
+  <url><loc>https://www.woofofwalkstreet.com/book-now.html</loc></url>
+  <url><loc>https://www.woofofwalkstreet.com/member-booking.html</loc></url>
+  <url><loc>https://www.woofofwalkstreet.com/gallery.html</loc></url>
+  <url><loc>https://www.woofofwalkstreet.com/testimonials.html</loc></url>
+  <url><loc>https://www.woofofwalkstreet.com/faq.html</loc></url>
+  <url><loc>https://www.woofofwalkstreet.com/privacy.html</loc></url>
+  <url><loc>https://www.woofofwalkstreet.com/terms.html</loc></url>
+
+  <!-- Blog -->
+  <url><loc>https://www.woofofwalkstreet.com/blog/index.html</loc></url>
+  <!-- Add each post you’ve published: -->
+  <!-- <url><loc>https://www.woofofwalkstreet.com/blog/solo-vs-pack-walking.html</loc></url> -->
+  <!-- <url><loc>https://www.woofofwalkstreet.com/blog/how-to-choose-dog-walker-melbourne.html</loc></url> -->
+</urlset>

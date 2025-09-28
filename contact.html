@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Contact Us | The Woof of Walk Street</title>
+  <meta name="description" content="Contact The Woof of Walk Street. Solo dog walking and boutique boarding in South Melbourne. Book casual walks via Time To Pet or use your membership credits.">
+  <link rel="stylesheet" href="css/styles.css"/>
+  <link rel="icon" href="images/logo/favicon.ico"/>
+
+  <!-- LocalBusiness schema for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"The Woof of Walk Street",
+    "image":"https://www.woofofwalkstreet.com/images/brand/mascot-skyline@2x.webp",
+    "url":"https://www.woofofwalkstreet.com/",
+    "telephone":"+61 4XX XXX XXX",
+    "address":{
+      "@type":"PostalAddress",
+      "addressLocality":"South Melbourne",
+      "addressRegion":"VIC",
+      "postalCode":"3205",
+      "addressCountry":"AU"
+    },
+    "areaServed":"South Melbourne, Albert Park, Port Melbourne, Middle Park",
+    "openingHoursSpecification":[
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"07:00","closes":"19:00"}
+    ]
+  }
+  </script>
+
+  <style>
+    .hero{padding:56px 16px 18px;text-align:center}
+    .hero p{color:#cfd7e1;max-width:780px;margin:0 auto}
+    .wrap{max-width:1000px;margin:12px auto 40px;padding:0 16px}
+    .grid{display:grid;gap:20px;grid-template-columns:repeat(12,1fr)}
+    .card{grid-column:span 6;background:#0f1318;border:1px solid #1d232c;border-radius:16px;padding:20px}
+    .card h2{margin:.2rem 0 .6rem}
+    .btn{display:inline-block;margin-top:10px;padding:12px 16px;border-radius:10px;font-weight:800;text-decoration:none}
+    .btn-primary{background:#f4c542;color:#111}
+    .btn-ghost{border:1px solid #2a3440;color:#e9edf2}
+    .muted{color:#9badbd}
+    iframe.map{width:100%;height:300px;border:0;border-radius:12px}
+    @media(max-width:980px){.card{grid-column:1/-1}}
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="brand"><a href="index.html"><img class="wordmark" src="images/brand/wordmark.svg" alt="The Woof of Walk Street"></a></div>
+    <nav class="primary-nav">
+      <a href="index.html">Home</a>
+      <a href="memberships.html">Memberships</a>
+      <a href="dog-walking.html">Walking</a>
+      <a href="boarding-services.html">Boarding</a>
+      <a href="contact.html" aria-current="page">Contact us</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Contact The Woof of Walk Street</h1>
+    <p>Solo, ethical walks and boutique boarding in South Melbourne. Book casual via Time To Pet or request a member-credit slot below.</p>
+  </section>
+
+  <main class="wrap">
+    <section class="grid">
+      <!-- Booking buttons -->
+      <div class="card">
+        <h2>Book a Walk</h2>
+        <p>Choose casual booking via our portal, or use your membership credits.</p>
+        <ul class="muted">
+          <li>45-minute solo walks</li>
+          <li>Mon–Fri, 7:00am–7:00pm</li>
+          <li>GPS tracking & photos</li>
+        </ul>
+        <a class="btn btn-primary" href="https://www.timetopet.com/portal/woofofwalkstreet/request-services" target="_blank" rel="noopener">Book Casual in Portal</a>
+        <a class="btn btn-ghost" href="member-booking.html">Use Membership Credit</a>
+      </div>
+
+      <!-- Direct contact -->
+      <div class="card">
+        <h2>Say Hello</h2>
+        <p class="muted">Questions, special requests, or custom schedules? We’re here to help.</p>
+        <p><strong>Email:</strong> <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a><br/>
+           <strong>Phone:</strong> <a href="tel:+614XXXXXXXX">+61 4XX XXX XXX</a><br/>
+           <strong>Areas:</strong> South Melbourne, Albert Park, Port Melbourne, Middle Park</p>
+        <p class="muted">Hours: Mon–Fri, 7:00am–7:00pm (public holidays excluded)</p>
+      </div>
+
+      <!-- Simple contact form (mailto) -->
+      <div class="card" style="grid-column:span 12">
+        <h2>Quick Message</h2>
+        <form id="contactForm">
+          <div style="display:grid;gap:12px;grid-template-columns:repeat(2,1fr);margin-bottom:10px">
+            <input name="name" placeholder="Your name" required/>
+            <input name="email" type="email" placeholder="Email address" required/>
+          </div>
+          <textarea name="message" rows="5" placeholder="How can we help?" required></textarea>
+          <div>
+            <button class="btn btn-primary" type="submit">Send Message</button>
+            <span class="muted" id="sent" style="margin-left:8px;display:none">Thanks! Check your email client to send.</span>
+          </div>
+        </form>
+      </div>
+
+      <!-- Map -->
+      <div class="card" style="grid-column:span 12">
+        <h2>Based in South Melbourne</h2>
+        <iframe class="map" loading="lazy"
+          src="https://www.google.com/maps?q=South+Melbourne+VIC+3205&output=embed"
+          title="South Melbourne map"></iframe>
+        <p class="muted" style="margin-top:8px">We service nearby suburbs. Exact address provided after booking.</p>
+      </div>
+    </section>
+
+    <!-- Donation note -->
+    <section class="card" style="grid-column:span 12;background:#0e1b10;border-color:#1a3d23;margin-top:16px">
+      <strong>We give back:</strong> 10% of profits are donated to The Lost Dogs’ Home (North Melbourne) and local shelters.
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer"><div class="copy">© 2025 The Woof of Walk Street</div></footer>
+
+  <script>
+    // mailto handoff (simple, no backend)
+    const f=document.getElementById('contactForm'); const s=document.getElementById('sent');
+    f.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const data=new FormData(f);
+      const subject=encodeURIComponent('Website enquiry');
+      const body=encodeURIComponent(`Name: ${data.get('name')}\nEmail: ${data.get('email')}\n\nMessage:\n${data.get('message')}`);
+      window.location.href=`mailto:info@woofofwalkstreet.com?subject=${subject}&body=${body}`;
+      s.style.display='inline';
+      f.reset();
+    });
+  </script>
+</body>
+</html>

@@ -1,72 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gallery | The Woof of Walk Street</title>
-  <meta name="description" content="See moments from our solo walks and Weekend Woof Club boarding in South Melbourne. Follow us on Instagram for daily updates." />
-  <link rel="stylesheet" href="css/styles.css" />
-  <style>
-    .hero { padding:56px 16px 10px; text-align:center }
-    .wrap { max-width:1100px; margin:0 auto 40px; padding:0 16px }
-    .grid { display:grid; gap:10px; grid-template-columns:repeat(12,1fr) }
-    .grid img { width:100%; height:100%; object-fit:cover; border-radius:10px }
-    .cell { grid-column:span 4; aspect-ratio:1/1; overflow:hidden }
-    @media(max-width:1000px){ .cell { grid-column:span 6 } }
-    @media(max-width:620px){ .cell { grid-column:1/-1 } }
-    .embed { margin:24px 0 10px }
-    .note { color:#cfd7e1 }
-  </style>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Dog Walking & Boarding Gallery | Woof of Walk Street</title>
+  <meta name="description" content="See our pups in action — solo dog walks, weekend boarding, and happy clients across South Melbourne."/>
+  <link rel="icon" href="/images/brand/favicon.ico"/>
+  <link rel="stylesheet" href="/css/styles.css"/>
 </head>
 <body>
-  <!-- Header -->
-  <header class="site-header">
-    <div class="brand">
-      <a href="index.html">
-        <img class="wordmark" src="images/brand/wordmark.svg" alt="The Woof of Walk Street">
-      </a>
+<header class="site-header">
+  <nav class="navbar container">
+    <a class="brand" href="/"><img src="/images/brand/logo-lockup-gold.webp" width="56" height="56" alt=""><strong>The Woof of Walk Street</strong></a>
+    <div class="nav-links" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/memberships.html">Memberships</a>
+      <a href="/services.html">Walking</a>
+      <a href="/boarding-services.html">Boarding</a>
+      <a href="/contact.html">Contact us</a>
     </div>
-    <nav class="primary-nav">
-      <a href="index.html">Home</a>
-      <a href="memberships.html">Memberships</a>
-      <a href="dog-walking.html">Walking</a>
-      <a href="boarding-services.html">Boarding</a>
-      <a href="contact.html">Contact us</a>
-    </nav>
-  </header>
+  </nav>
+</header>
 
-  <!-- Hero -->
+<main>
   <section class="hero">
-    <h1>Gallery</h1>
-    <p class="note">Follow our day-to-day on Instagram — plus some of our favourite snaps below.</p>
+    <div class="container">
+      <h1>Gallery</h1>
+      <p class="subhead">Our solo walks and boutique boarding — calm, happy, and transparent.</p>
+      <div class="cta-buttons">
+        <a href="https://www.timetopet.com/portal/woofofwalkstreet" class="cta-button">Book a Walk</a>
+        <a href="/boarding-services.html" class="cta-button secondary">Book Boarding</a>
+      </div>
+    </div>
   </section>
 
-  <!-- Instagram Widget -->
-  <main class="wrap">
-    <div class="embed" aria-label="Instagram gallery">
-      <!-- Replace with your SnapWidget code -->
-      <iframe src="https://snapwidget.com/embed/1108836" 
-              class="snapwidget-widget" allowtransparency="true" 
-              frameborder="0" scrolling="no" 
-              style="border:none; overflow:hidden; width:100%; max-width:1000px; height:500px" 
-              title="Posts from Instagram">
-      </iframe>
+  <section class="container">
+    <h2>Instagram Feed</h2>
+    <div class="embed-1x1">
+      <!-- SnapWidget -->
+      <iframe src="https://snapwidget.com/embed/1108836" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none;overflow:hidden;width:100%;height:500px" title="Posts from Instagram" loading="lazy"></iframe>
     </div>
+  </section>
 
-    <!-- Static Photo Grid -->
-    <section class="grid" aria-label="Photo grid">
-      <figure class="cell"><img src="images/gallery/dog-walking-south-melbourne.jpg" alt="Solo walk on the beach"></figure>
-      <figure class="cell"><img src="images/gallery/weekend-woof-club-cozy-dog.jpg" alt="Cozy Weekend Woof Club boarding guest"></figure>
-      <figure class="cell"><img src="images/gallery/dogs-playing-together.jpg" alt="Happy dogs playing together"></figure>
-      <figure class="cell"><img src="images/gallery/melbourne-skyline.jpg" alt="Melbourne skyline from a walk route"></figure>
-      <figure class="cell"><img src="images/gallery/south-melbourne-beach.jpg" alt="South Melbourne beach pier"></figure>
-      <figure class="cell"><img src="images/gallery/logo-hero.webp" alt="Brand hero pup overlooking skyline"></figure>
-    </section>
-  </main>
+  <section class="container">
+    <h2>Highlights</h2>
+    <div class="gallery-grid">
+      <figure><img src="/images/gallery/dog-playing-park.webp" alt="Dog playing at the park in South Melbourne" loading="lazy"></figure>
+      <figure><img src="/images/gallery/dog-on-beach.webp" alt="Sunset stroll by South Melbourne beach" loading="lazy"></figure>
+      <figure><img src="/images/gallery/dog-sleeping-1.webp" alt="Cozy nap during Weekend Woof Club boarding" loading="lazy"></figure>
+      <figure><img src="/images/gallery/dog-sleeping-2.webp" alt="Relaxed dog, lights out and zen" loading="lazy"></figure>
+    </div>
+  </section>
+</main>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="copy">© 2025 The Woof of Walk Street</div>
-  </footer>
+<footer>
+  <p>© 2025 The Woof of Walk Street · 10% of profits donated to local shelters</p>
+  <div class="footer-links">
+    <a href="/privacy.html">Privacy Policy</a> · 
+    <a href="/terms.html">Terms & Conditions</a> · 
+    <a href="/sitemap.html">Sitemap</a>
+  </div>
+  <div class="social-icons">
+    <a href="https://instagram.com/woofofwalkstreet" target="_blank"><img src="/images/icons/instagram.svg" alt="Instagram"></a>
+    <a href="https://facebook.com/woofofwalkstreet" target="_blank"><img src="/images/icons/facebook.svg" alt="Facebook"></a>
+    <a href="https://twitter.com/woofofwalkst" target="_blank"><img src="/images/icons/twitter.svg" alt="Twitter"></a>
+  </div>
+  <div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <p><strong>The Woof of Walk Street</strong><br>South Melbourne, VIC<br>Phone: +61-400-123-456</p>
+  </div>
+</footer>
+
+<script src="/js/form-validation.js"></script>
 </body>
 </html>
+

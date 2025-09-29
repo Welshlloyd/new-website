@@ -1,97 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>FAQ | The Woof of Walk Street</title>
-  <meta name="description" content="Answers about solo dog walking, memberships, booking rules, and Weekend Woof Club boarding in South Melbourne.">
-  <link rel="stylesheet" href="css/styles.css"/>
-  <link rel="icon" href="images/logo/favicon.ico"/>
-  <style>
-    .hero{padding:56px 16px 12px;text-align:center}
-    .wrap{max-width:980px;margin:10px auto 50px;padding:0 16px}
-    details{background:#0f1318;border:1px solid #1d232c;border-radius:12px;padding:14px 16px;margin:10px 0}
-    summary{cursor:pointer;font-weight:800}
-    summary::-webkit-details-marker{display:none}
-    .muted{color:#9badbd}
-    .note{background:#0e1b10;border:1px solid #1a3d23;border-radius:12px;padding:14px 16px;margin-top:16px}
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FAQ – The Woof of Walk Street</title>
+  <meta name="description" content="Answers about our one-dog-only walking, memberships, and Weekend Woof Club boarding." />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="/css/fixes.css" />
+  <link rel="icon" href="/images/brand/favicon.ico">
 </head>
 <body>
-  <!-- Header -->
-  <header class="site-header">
-    <div class="brand"><a href="index.html"><img class="wordmark" src="images/brand/wordmark.svg" alt="The Woof of Walk Street"></a></div>
-    <nav class="primary-nav">
-      <a href="index.html">Home</a>
-      <a href="memberships.html">Memberships</a>
-      <a href="dog-walking.html">Walking</a>
-      <a href="boarding-services.html">Boarding</a>
-      <a href="contact.html">Contact us</a>
-    </nav>
-  </header>
 
-  <!-- Hero -->
+<header class="site-header">
+  <div class="navbar container">
+    <a class="brand" href="/"><img src="/images/brand/logo-lockup-gold-320.webp" width="40" height="40" alt=""> <strong>The Woof of Walk Street</strong></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/memberships.html">Memberships</a>
+      <a href="/services.html">Walking</a>
+      <a href="/boarding-services.html">Boarding</a>
+      <a href="/contact.html">Contact us</a>
+    </nav>
+  </div>
+</header>
+
+<main>
   <section class="hero">
-    <h1>Frequently Asked Questions</h1>
-    <p class="muted">If you don’t see your question here, <a href="contact.html">send us a message</a>.</p>
+    <div class="container">
+      <h1>Frequently Asked Questions</h1>
+      <p class="subhead">If it’s not answered here, ping us — we’re happy to help.</p>
+    </div>
   </section>
 
-  <main class="wrap">
-    <details open>
-      <summary>Do you really walk only one dog at a time?</summary>
-      <p>Always. We’re strictly <strong>one-dog-only</strong>. No pack walking, no car-ferrying from park to park. Your dog gets a full 45-minute walk and our complete attention.</p>
-    </details>
+  <section>
+    <div class="container">
 
-    <details>
-      <summary>What are your hours and service area?</summary>
-      <p>Walks are available <strong>Mon–Fri, 7:00am–7:00pm</strong> within South Melbourne and nearby suburbs (Albert Park, Port Melbourne, Middle Park). Public holidays excluded.</p>
-    </details>
+      <h2 id="walking">Walking</h2>
+      <details class="card"><summary>Do you ever walk more than one dog?</summary><p>No. We are strictly one-dog-only. It’s safer, calmer, and delivers proper exercise and focus.</p></details>
+      <details class="card"><summary>How long is a walk and what’s included?</summary><p>Our casual walk is <strong>45 minutes</strong> and includes GPS tracking, photo updates, and notes after each session.</p></details>
+      <details class="card"><summary>When are walks available?</summary><p>Walks are available <strong>Monday–Friday, 7:00am–7:00pm</strong>. All walks must be booked in the portal calendar and are <strong>subject to availability</strong>.</p></details>
+      <details class="card"><summary>How much is a casual walk?</summary><p><strong>$80</strong> per 45-minute walk (incl. GST). Frequent walkers usually save with a membership.</p></details>
 
-    <details>
-      <summary>How do I book a casual walk?</summary>
-      <p>Use our client portal and choose your time: <a href="https://www.timetopet.com/portal/woofofwalkstreet/request-services" target="_blank" rel="noopener">Book Casual in Time To Pet</a>. You’ll create an account on first use.</p>
-    </details>
+      <h2 id="memberships" style="margin-top:28px;">Memberships</h2>
+      <details class="card"><summary>What plans do you offer and pricing?</summary>
+        <ul>
+          <li><strong>Starter Sniffvestment</strong> – 4 solo walks/month – <strong>$295</strong></li>
+          <li><strong>Tail Growth Plan</strong> – 10 solo walks/month – <strong>$750</strong></li>
+          <li><strong>Unlimited Pawfolio</strong> – Weekdays, 1 walk/day (Mon–Fri) – <strong>$1,500</strong></li>
+        </ul>
+        <p>All memberships follow the same rules: Mon–Fri 7am–7pm, calendar booking required, subject to availability, and unused walks don’t roll over.</p>
+      </details>
+      <details class="card"><summary>Can I change times or skip a week?</summary><p>You can move bookings inside our change window if a slot is available. Unused walks don’t roll over to the next month.</p></details>
+      <details class="card"><summary>How does Unlimited work?</summary><p>Unlimited allows <strong>one walk per weekday</strong> (Mon–Fri) for that dog in the membership month. It offers the biggest flexibility and best value if you walk frequently.</p></details>
 
-    <details>
-      <summary>How do membership credits work?</summary>
-      <p>Members can request a walk using their credits here: <a href="member-booking.html">Use Membership Credit</a>. Credits apply to weekday, 45-minute solo walks. Unused walks don’t roll over unless specified in your plan.</p>
-    </details>
+      <h2 id="boarding" style="margin-top:28px;">Weekend Woof Club (Boarding)</h2>
+      <details class="card"><summary>How many dogs stay at once?</summary><p>One guest only. It’s calmer, cleaner, and feels like staying with family.</p></details>
+      <details class="card"><summary>What do you feed?</summary><p>We can feed your dog’s food or supply high-quality kibble and cooked chicken on request.</p></details>
+      <details class="card"><summary>Do you support local shelters?</summary><p>Yes. We donate <strong>10% of profits</strong> to The Lost Dogs’ Home North Melbourne and other local dog charities.</p></details>
 
-    <details>
-      <summary>What are the membership options?</summary>
-      <p>Three plans: <strong>Starter (4 walks)</strong>, <strong>Growth (10 walks)</strong>, and <strong>Unlimited (one weekday walk/day)</strong>. See details on the <a href="memberships.html">Memberships</a> page.</p>
-    </details>
+      <div class="promo card" style="margin-top:28px;">
+        <h3>New here?</h3>
+        <p>Create your account and book in seconds.</p>
+        <a class="btn button-primary" target="_blank" rel="noopener" href="https://www.timetopet.com/portal/woofofwalkstreet">Open Client Portal</a>
+      </div>
 
-    <details>
-      <summary>Do you provide GPS tracking and photos?</summary>
-      <p>Yes—every walk includes GPS tracking and a photo update so you can see where your dog went and how they’re doing.</p>
-    </details>
+    </div>
+  </section>
+</main>
 
-    <details>
-      <summary>How does Weekend Woof Club boarding work?</summary>
-      <p>It’s a boutique, one-guest-only weekend stay. Choose Friday→Sunday or Friday→Monday. No public holiday surcharges. Photo updates included. Learn more on <a href="boarding-services.html">Boarding</a>.</p>
-    </details>
+<footer class="site-footer">
+  <div class="container footer-top">
+    <div class="footer-brand">
+      <img src="/images/brand/logo-lockup-gold-320.webp" alt="">
+      <div><strong>The Woof of Walk Street</strong><br/>South Melbourne, VIC · Mon–Fri 7am–7pm</div>
+    </div>
+    <nav aria-label="Footer">
+      <ul style="list-style:none;padding:0;margin:0;">
+        <li><a href="/memberships.html">Memberships</a></li>
+        <li><a href="/services.html">Walking</a></li>
+        <li><a href="/boarding-services.html">Boarding</a></li>
+        <li><a href="/faq.html">FAQ</a></li>
+        <li><a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></li>
+        <li><a href="/sitemap.html">Sitemap</a></li>
+      </ul>
+    </nav>
+    <div>
+      <div>Need help?</div>
+      <p><a class="btn button-primary" href="https://www.timetopet.com/portal/woofofwalkstreet" target="_blank" rel="noopener">Open Client Portal</a></p>
+      <div class="footer-social">
+        <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram"><img src="/images/social/instagram.svg" alt=""></a>
+        <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook"><img src="/images/social/facebook.svg" alt=""></a>
+        <a href="https://x.com/woofofwalk" aria-label="X (Twitter)"><img src="/images/social/x.svg" alt=""></a>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="text-align:center;margin-top:18px;opacity:.8;">© <span id="y"></span> The Woof of Walk Street.</div>
+  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</footer>
 
-    <details>
-      <summary>Can you feed my dog during boarding?</summary>
-      <p>Absolutely. We can supply quality kibble and cooked chicken, or you can provide your own food. Let us know any preferences or allergies.</p>
-    </details>
-
-    <details>
-      <summary>Are you insured and police-checked?</summary>
-      <p>Yes. We’re fully insured and police-checked for your peace of mind.</p>
-    </details>
-
-    <details>
-      <summary>What’s your cancellation policy?</summary>
-      <p>Please cancel with as much notice as possible so we can offer the slot to another client. Late cancellations may forfeit a credit at our discretion during peak times.</p>
-    </details>
-
-    <section class="note">
-      <p><strong>We give back:</strong> 10% of profits are donated to The Lost Dogs’ Home (North Melbourne) and local shelters. Every booking helps a dog in need.</p>
-    </section>
-  </main>
-
-  <footer class="site-footer"><div class="copy">© 2025 The Woof of Walk Street</div></footer>
 </body>
 </html>

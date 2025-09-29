@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Woof of Walk Street | Ethical Solo Dog Walking & Weekend Boarding</title>
+  <meta name="description" content="Ethical, one-dog-at-a-time walks with GPS & photos, plus boutique weekend boarding in South Melbourne. Book casual walks via Time To Pet or use membership credits." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="images/logo/favicon.ico" />
+  <link rel="preload" as="image" href="images/brand/logo-hero.webp" />
+
+  <style>
+    /* Page-specific polish, safe to keep inline or move to styles.css later */
+    :root{--gold:#f4c542;--ink:#0c1b2a;--surface:#0f1318;--line:#1d232c;--muted:#9badbd}
+    .hero {
+      position: relative; isolation:isolate;
+      background: #0b0e12;
+      min-height: 52vh; display:flex; align-items:center; justify-content:center;
+      text-align:center; padding:64px 16px 40px;
+    }
+    .hero::after{
+      content:""; position:absolute; inset:0; z-index:-1;
+      background: url("images/brand/logo-hero.webp") center/cover no-repeat;
+      opacity:.18;
+    }
+    .hero h1{font-size:clamp(2rem,4vw,3.2rem); margin:.2rem 0 .6rem; color:#fff}
+    .hero p{max-width:860px; margin:0 auto 14px; color:#cfd7e1}
+    .cta-row{display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-top:8px}
+    .btn{display:inline-block; padding:12px 16px; border-radius:10px; font-weight:800; text-decoration:none; border:1px solid transparent}
+    .btn-primary{background:var(--gold); color:#111}
+    .btn-ghost{border-color:#2a3440; color:#e9edf2}
+
+    .bar {max-width:1100px; margin:14px auto 0; padding:0 16px}
+    .promo {display:flex; align-items:center; justify-content:center; gap:10px;
+      background:#131a0d; border:1px solid #294319; color:#d5f2b1; border-radius:12px; padding:12px 14px;}
+
+    .section{max-width:1100px; margin:28px auto; padding:0 16px}
+    .section h2{margin:0 0 10px}
+    .plans{display:grid; gap:18px; grid-template-columns:repeat(12,1fr)}
+    .card{grid-column:span 4; background:#111316; border:1px solid #1e2630; border-radius:14px; padding:18px; text-decoration:none; color:#e9edf2; transition:.2s ease}
+    .card:hover{transform:translateY(-2px); box-shadow:0 12px 30px rgba(0,0,0,.25); border-color:#2c3744}
+    .card .label{display:inline-block; background:var(--gold); color:#111; padding:5px 10px; border-radius:999px; font-size:.78rem; font-weight:800; letter-spacing:.3px; margin-bottom:8px}
+    .card h3{margin:.2rem 0 .5rem; font-size:1.15rem}
+    .card p{margin:0; color:#cfd7e1}
+
+    .grid{display:grid; gap:10px; grid-template-columns:repeat(12,1fr)}
+    .cell{grid-column:span 4; aspect-ratio:1/1; overflow:hidden; border-radius:10px; background:#0b0e12; border:1px solid #1d232c}
+    .cell img{width:100%; height:100%; object-fit:cover}
+
+    .posts{display:grid; gap:16px; grid-template-columns:repeat(12,1fr)}
+    .post{grid-column:span 4; background:#0f1318; border:1px solid #1d232c; border-radius:12px; padding:14px}
+    .post h3{margin:.2rem 0 .4rem; font-size:1.05rem}
+    .post p{color:#cfd7e1; margin:0 0 8px}
+    .post a{color:#e9edf2; text-decoration:none; font-weight:800}
+    .post a:hover{text-decoration:underline}
+
+    @media(max-width:990px){ .card,.cell,.post{grid-column:span 6} }
+    @media(max-width:640px){ .card,.cell,.post{grid-column:1/-1} }
+  </style>
+</head>
+<body>
+
+  <!-- Header (5 links only) -->
+  <header class="site-header">
+    <div class="brand">
+      <a href="index.html" class="brand-link">
+        <img src="images/brand/wordmark.webp" alt="The Woof of Walk Street" class="wordmark" decoding="async" />
+      </a>
+    </div>
+    <nav class="primary-nav">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="memberships.html">Memberships</a>
+      <a href="dog-walking.html">Walking</a>
+      <a href="boarding-services.html">Boarding</a>
+      <a href="contact.html">Contact us</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div>
+      <h1>Ethical Solo Dog Walking & Boutique Boarding</h1>
+      <p>Every walk is one-dog-only — never pack walked, never car-ferried. 45 minutes, GPS-tracked, with photo updates. Based in South Melbourne. Weekend Woof Club boarding available.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://www.timetopet.com/portal/woofofwalkstreet/request-services" target="_blank" rel="noopener">Book Casual in Portal</a>
+        <a class="btn btn-ghost" href="member-booking.html">Use Membership Credit</a>
+        <a class="btn btn-ghost" href="memberships.html">Explore Memberships</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dedicated promo block -->
+  <div class="bar">
+    <div class="promo">
+      <span>📈</span>
+      <strong>I.P.O.O. Offer:</strong>
+      <span>“Initial Public Offer of Walks” — new clients get <strong>50% off first walk</strong> · Unlimited upgrades: limited first-month incentive</span>
+    </div>
+  </div>
+
+  <!-- Membership teasers (NO PRICES here) -->
+  <section class="section" aria-label="Memberships">
+    <h2>Memberships (Weekdays · 7am–7pm)</h2>
+    <p class="muted" style="margin:0 0 12px">Solo 45-minute walks, GPS tracking & photos. Bookings via calendar · subject to availability.</p>
+    <div class="plans">
+      <a class="card" href="membership-starter.html">
+        <span class="label">Beginner</span>
+        <h3>💼 Starter Sniffvestment</h3>
+        <p>4 solo weekday walks / month. Dip a paw in and start a routine.</p>
+      </a>
+      <a class="card" href="membership-growth.html">
+        <span class="label">Popular</span>
+        <h3>📈 Tail Growth Plan</h3>
+        <p>10 solo weekday walks / month. Best for regular walkers.</p>
+      </a>
+      <a class="card" href="membership-unlimited.html">
+        <span class="label">Best Value</span>
+        <h3>🚀 Unlimited Pawfolio</h3>
+        <p>One solo weekday walk per day. Maximum wiggle for busy humans.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- From the Gallery -->
+  <section class="section" aria-label="From the Gallery">
+    <h2>From the Gallery</h2>
+    <div class="grid">
+      <figure class="cell"><img src="images/gallery/dog-walking-south-melbourne.jpg" alt="Solo walk along South Melbourne foreshore"></figure>
+      <figure class="cell"><img src="images/gallery/weekend-woof-club-cozy-dog.jpg" alt="Cozy Weekend Woof Club guest relaxing"></figure>
+      <figure class="cell"><img src="images/gallery/dogs-playing-together.jpg" alt="Playtime with enrichment toys"></figure>
+      <figure class="cell"><img src="images/gallery/melbourne-skyline.jpg" alt="Melbourne skyline from our walk route"></figure>
+      <figure class="cell"><img src="images/gallery/south-melbourne-beach.jpg" alt="South Melbourne beach boardwalk"></figure>
+      <figure class="cell"><img src="images/gallery/logo-hero.jpg" alt="Our hero pup overlooking the skyline"></figure>
+    </div>
+    <div class="cta-row" style="margin-top:12px">
+      <a class="btn btn-ghost" href="gallery.html">See full gallery</a>
+      <a class="btn btn-ghost" href="https://www.instagram.com/woofofwalkstreet" target="_blank" rel="noopener">Follow on Instagram</a>
+    </div>
+  </section>
+
+  <!-- From the Blog -->
+  <section class="section" aria-label="From the Blog">
+    <h2>From the Blog</h2>
+    <div class="posts">
+      <article class="post">
+        <h3><a href="blog/solo-vs-pack-walking.html">Why One-Dog-Only Beats Pack Walking</a></h3>
+        <p>Safety, focus, and real exercise — the benefits of solo walking for city dogs.</p>
+        <a href="blog/solo-vs-pack-walking.html">Read more →</a>
+      </article>
+      <article class="post">
+        <h3><a href="blog/how-to-choose-dog-walker-melbourne.html">Choosing a Dog Walker in Melbourne</a></h3>
+        <p>What to ask, what to avoid, and how to spot ethical operators.</p>
+        <a href="blog/how-to-choose-dog-walker-melbourne.html">Read more →</a>
+      </article>
+      <article class="post">
+        <h3><a href="blog/south-melbourne-walks.html">Our Favourite South Melbourne Walks</a></h3>
+        <p>Routes we love for 45-minute, leash-friendly strolls with skyline views.</p>
+        <a href="blog/south-melbourne-walks.html">Read more →</a>
+      </article>
+    </div>
+    <div class="cta-row" style="margin-top:12px">
+      <a class="btn btn-ghost" href="blog/index.html">View all posts</a>
+    </div>
+  </section>
+
+  <!-- Unified Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner container">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <img src="images/brand/mascot-skyline@2x.webp" alt="The Woof of Walk Street" style="height:56px;width:auto;">
+        </a>
+        <p>Ethical dog walking & Weekend Woof Club boarding in South Melbourne.</p>
+        <p><strong>Hours:</strong> Walks Mon–Fri, 7:00 AM–7:00 PM · Subject to calendar availability</p>
+        <!-- Donation callout intentionally omitted on homepage (as requested earlier) -->
+      </div>
+
+      <nav class="footer-links">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="memberships.html">Memberships</a></li>
+          <li><a href="dog-walking.html">Walking</a></li>
+          <li><a href="boarding-services.html">Boarding</a></li>
+          <li><a href="book-now.html">Book Now</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-links">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="sitemap.xml">Sitemap</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-links">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms &amp; Conditions</a></li>
+        </ul>
+
+        <div class="social" style="display:flex;gap:10px;margin-top:10px">
+          <a href="https://www.instagram.com/woofofwalkstreet" target="_blank" aria-label="Instagram" rel="noopener">
+            <img src="images/social/instagram.svg" alt="Instagram" width="24" height="24">
+          </a>
+          <a href="https://x.com/woofofwalkst" target="_blank" aria-label="X / Twitter" rel="noopener">
+            <img src="images/social/x.svg" alt="X" width="24" height="24">
+          </a>
+          <a href="https://www.facebook.com/woofofwalkstreet" target="_blank" aria-label="Facebook" rel="noopener">
+            <img src="images/social/facebook.svg" alt="Facebook" width="24" height="24">
+          </a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="copy container" style="margin-top:10px;border-top:1px solid #1d232c;padding:12px 0;">
+      © 2025 The Woof of Walk Street · South Melbourne · <a href="#top">Back to top</a>
+    </div>
+  </footer>
+
+</body>
+</html>

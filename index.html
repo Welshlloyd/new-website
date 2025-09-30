@@ -160,28 +160,61 @@
            loading="lazy">
     </div>
 
-    <!-- Footer Content -->
-    <div class="container footer-content">
-      <p>© <span id="year"></span> The Woof of Walk Street · 10% of profits donated to local shelters</p>
+<footer class="site-footer">
+  <div class="footer-banner">
+    <img 
+      src="/images/brand/footer-banner-1600x600.webp"
+      srcset="/images/brand/footer-banner-800x300.webp 800w,
+              /images/brand/footer-banner-1200x450.webp 1200w,
+              /images/brand/footer-banner-1600x600.webp 1600w"
+      sizes="100vw"
+      alt="Dog enjoying the South Melbourne sunset banner"
+      style="width:100%;height:auto;display:block;"
+    >
+  </div>
 
-      <div class="footer-links">
-        <a href="privacy.html">Privacy Policy</a> ·
-        <a href="terms.html">Terms & Conditions</a> ·
-        <a href="sitemap.html">Sitemap</a>
+  <div class="container footer-top">
+    <div class="footer-brand">
+      <img src="/images/brand/logo-lockup-gold-512.webp" alt="The Woof of Walk Street logo" width="56" height="56">
+      <div>
+        <strong>The Woof of Walk Street</strong><br/>
+        South Melbourne, VIC · Mon–Fri 7am–7pm
       </div>
+    </div>
 
-      <div class="social-icons">
-        <a href="https://instagram.com/woofofwalkstreet" target="_blank" rel="noopener noreferrer">
-          <img src="/images/icons/instagram.svg" alt="Instagram">
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p>Email: <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a></p>
+      <p>Phone: <a href="tel:+61456754050">0456 754 050</a></p>
+      <div class="footer-socials">
+        <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram">
+          <img src="/images/social/icon-instagram.svg" alt="Instagram" width="24" height="24">
         </a>
-        <a href="https://facebook.com/woofofwalkstreet" target="_blank" rel="noopener noreferrer">
-          <img src="/images/icons/facebook.svg" alt="Facebook">
+        <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook">
+          <img src="/images/social/icon-facebook.svg" alt="Facebook" width="24" height="24">
         </a>
-        <a href="https://x.com/woofofwalkst" target="_blank" rel="noopener noreferrer">
-          <img src="/images/icons/twitter.svg" alt="X (Twitter)">
+        <a href="https://x.com/woofofwalkstreet" aria-label="X">
+          <img src="/images/social/icon-x.svg" alt="X (Twitter)" width="24" height="24">
         </a>
       </div>
     </div>
-  </footer>
+
+    <nav aria-label="Footer">
+      <ul style="list-style:none;padding:0;margin:0;">
+        <li><a href="/memberships.html">Memberships</a></li>
+        <li><a href="/services.html">Walking</a></li>
+        <li><a href="/boarding-services.html">Boarding</a></li>
+        <li><a href="/faq.html">FAQ</a></li>
+        <li><a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></li>
+        <li><a href="/sitemap.html">Sitemap</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="container" style="text-align:center;margin-top:18px;opacity:.8;">
+    © <span id="y"></span> The Woof of Walk Street.
+  </div>
+  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</footer>
 </body>
 </html>

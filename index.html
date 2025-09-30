@@ -30,77 +30,151 @@
 <body>
  </head>
 <body>
-  <header class="site-header">
-    <nav class="navbar container">
-      <a class="brand" href="index.html"><img src="images/brand/logo-lockup-gold.webp" width="56" height="56" alt=""><strong>The Woof of Walk Street</strong></a>
-      <div class="nav-links" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="memberships.html">Memberships</a>
-        <a href="services.html">Walking</a>
-        <a href="boarding-services.html">Boarding</a>
-        <a href="contact.html" aria-current="page">Contact us</a>
-      </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Woof of Walk Street – Ethical Dog Walking & Boarding</title>
+  <meta name="description" content="The Woof of Walk Street offers premium solo dog walking and boutique weekend boarding in South Melbourne. Ethical, one-dog-only walks, GPS tracking, and photo updates." />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="icon" href="/images/brand/favicon.ico" />
+</head>
+<body>
+<header class="site-header">
+  <div class="navbar container">
+    <a class="brand" href="/"><img src="/images/brand/logo-lockup-gold.webp" width="56" height="56" alt=""><strong>The Woof of Walk Street</strong></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/" aria-current="page">Home</a>
+      <a href="/memberships.html">Memberships</a>
+      <a href="/services.html">Walking</a>
+      <a href="/boarding-services.html">Boarding</a>
+      <a href="/contact.html">Contact us</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <main>
-    <section class="intro">
-      <h2>Why Choose Us?</h2>
-      <p>At <strong>The Woof of Walk Street</strong>, we believe your dog deserves one-on-one attention. That’s why we only walk one dog at a time and dedicate the entire walk to them. No pack walks, no distractions — just pure care and quality exercise.</p>
-    </section>
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Ethical Dog Walking & Boutique Boarding</h1>
+      <p class="subhead">One dog at a time · 45-minute solo walks · GPS tracked & photo updates</p>
+      <img 
+        src="/images/brand/hero-dog-skyline-1200.webp"
+        srcset="/images/brand/hero-dog-skyline-800.webp 800w,
+                /images/brand/hero-dog-skyline-1200.webp 1200w,
+                /images/brand/hero-dog-skyline-1600.webp 1600w"
+        sizes="(max-width: 640px) 100vw, (max-width: 1200px) 90vw, 1200px"
+        alt="Dog overlooking Melbourne skyline"
+        style="max-width:920px;border-radius:12px"
+      >
+    </div>
+  </section>
 
-    <section class="services-overview">
-      <h2>Our Services</h2>
-      <div class="service-card">
-        <h3>Solo Dog Walking</h3>
-        <p>45-minute walks, GPS-tracked and photo-documented. Available Monday–Friday, 7am–7pm. Booking via calendar required, subject to availability.</p>
-        <a href="services.html" class="cta-link">Learn More</a>
+  <!-- Memberships -->
+  <section>
+    <div class="container">
+      <h2>Memberships</h2>
+      <p>Lock in priority slots with our monthly memberships. Walks are <strong>Mon–Fri, 7am–7pm</strong>, booked via calendar, subject to availability. One-dog-only, always.</p>
+      <div class="grid grid-3">
+        <article class="card">
+          <h3>Starter Sniffvestment</h3>
+          <p>4 solo walks per month</p>
+          <a class="btn button-primary" href="/memberships.html#starter">Learn More</a>
+        </article>
+        <article class="card">
+          <h3>Tail Growth Plan</h3>
+          <p>10 solo walks per month</p>
+          <a class="btn button-primary" href="/memberships.html#growth">Learn More</a>
+        </article>
+        <article class="card">
+          <h3>Unlimited Pawfolio</h3>
+          <p>One walk per weekday (Mon–Fri)</p>
+          <a class="btn button-primary" href="/memberships.html#unlimited">Learn More</a>
+        </article>
       </div>
-      <div class="service-card">
-        <h3>Weekend Woof Club (Boarding)</h3>
-        <p>Boutique-style overnight care with only one guest at a time. Stress-free, cozy, and full of cuddles. Includes photo updates for peace of mind.</p>
-        <a href="boarding-services.html" class="cta-link">Discover Boarding</a>
-      </div>
-      <div class="service-card">
-        <h3>Memberships</h3>
-        <p>Save more with flexible monthly plans. Priority booking, great discounts, and consistent care for your pup.</p>
-        <a href="memberships.html" class="cta-link">View Memberships</a>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="featured-gallery">
-      <h2>Pups in Action</h2>
-      <a href="gallery.html"><img src="images/gallery/dog-walk1.webp" alt="Happy dog walking in South Melbourne" loading="lazy"></a>
-      <a href="gallery.html"><img src="images/gallery/boarding1.webp" alt="Dog enjoying boutique boarding stay" loading="lazy"></a>
-    </section>
+  <!-- IPOO Promo -->
+  <section>
+    <div class="container">
+      <div class="promo card" style="background:#0b1420;color:#e6edf3;">
+        <h2>📈 Forget IPOs — We’re Launching the I.P.O.O.</h2>
+        <p><strong>Initial Puppy Offering Unlimited</strong> — one walk per weekday, GPS tracked, with photo updates. The smartest investment for a calmer, fitter dog.</p>
+        <a class="btn button-secondary" href="/memberships.html#unlimited">See Unlimited Plan</a>
+      </div>
+    </div>
+  </section>
 
-    <section class="from-blog">
-      <h2>From Our Blog</h2>
-      <ul>
-        <li><a href="blog/best-dog-walks-south-melbourne.html">Best Dog Walks in South Melbourne</a></li>
-        <li><a href="blog/why-solo-walks.html">Why Solo Walks Reduce Stress</a></li>
-        <li><a href="blog/ethical-dog-walker.html">How to Choose an Ethical Dog Walker</a></li>
+  <!-- Gallery teaser -->
+  <section>
+    <div class="container">
+      <h2>Happy Clients</h2>
+      <p>See our latest walks and weekend retreats.</p>
+      <div class="gallery-grid">
+        <figure><img src="/images/gallery/dog-sleeping-1.webp" alt="Dog sleeping peacefully" loading="lazy"></figure>
+        <figure><img src="/images/gallery/dog-sleeping-2.webp" alt="Relaxed dog after a walk" loading="lazy"></figure>
+        <figure><img src="/images/gallery/dog-playing-park.webp" alt="Dog playing in South Melbourne park" loading="lazy"></figure>
+      </div>
+      <p class="text-center" style="margin-top:20px"><a class="btn button-primary" href="/gallery.html">View Full Gallery</a></p>
+    </div>
+  </section>
+
+  <!-- Blog teaser -->
+  <section>
+    <div class="container">
+      <h2>From the Blog</h2>
+      <div class="blog-list">
+        <article class="blog-card">
+          <h3><a href="/blog/best-dog-walks-south-melbourne.html">Best Dog Walks in South Melbourne</a></h3>
+          <p>Explore our top picks for scenic, safe, and fun local walks.</p>
+        </article>
+        <article class="blog-card">
+          <h3><a href="/blog/why-solo-walks.html">Why Solo Walks Reduce Stress</a></h3>
+          <p>Learn why one-dog-only walks are healthier and safer.</p>
+        </article>
+        <article class="blog-card">
+          <h3><a href="/blog/ethical-dog-walker.html">How to Choose an Ethical Dog Walker</a></h3>
+          <p>Not all walkers are the same — here’s what to look for.</p>
+        </article>
+      </div>
+      <p class="text-center" style="margin-top:20px"><a class="btn button-primary" href="/blog/index.html">Read More Blogs</a></p>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container footer-top">
+    <div class="footer-brand">
+      <img src="/images/brand/logo-lockup-gold.webp" alt="">
+      <div><strong>The Woof of Walk Street</strong><br/>South Melbourne, VIC · Mon–Fri 7am–7pm</div>
+    </div>
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p>Email: <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a></p>
+      <p>Phone: <a href="tel:+61456754050">0456 754 050</a></p>
+      <div class="footer-socials">
+        <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram"><img src="/images/social/icon-instagram.svg" alt="Instagram"></a>
+        <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook"><img src="/images/social/icon-facebook.svg" alt="Facebook"></a>
+        <a href="https://x.com/woofofwalkstreet" aria-label="X"><img src="/images/social/icon-x.svg" alt="X"></a>
+      </div>
+    </div>
+    <nav aria-label="Footer">
+      <ul style="list-style:none;padding:0;margin:0;">
+        <li><a href="/memberships.html">Memberships</a></li>
+        <li><a href="/services.html">Walking</a></li>
+        <li><a href="/boarding-services.html">Boarding</a></li>
+        <li><a href="/faq.html">FAQ</a></li>
+        <li><a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></li>
+        <li><a href="/sitemap.html">Sitemap</a></li>
       </ul>
-      <a href="blog/index.html" class="cta-link">Read More Articles</a>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 The Woof of Walk Street · 10% of profits donated to local shelters</p>
-    <div class="footer-links">
-      <a href="privacy.html">Privacy Policy</a> · 
-      <a href="terms.html">Terms & Conditions</a> · 
-      <a href="sitemap.html">Sitemap</a>
-    </div>
-    <div class="social-icons">
-      <a href="https://instagram.com/woofofwalkstreet" target="_blank"><img src="images/icons/instagram.svg" alt="Instagram"></a>
-      <a href="https://facebook.com/woofofwalkstreet" target="_blank"><img src="images/icons/facebook.svg" alt="Facebook"></a>
-      <a href="https://twitter.com/woofofwalkst" target="_blank"><img src="images/icons/twitter.svg" alt="Twitter"></a>
-    </div>
-    <div class="map">
-      <iframe src="https://www.google.com/maps/embed?...South+Melbourne..." width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-      <p><strong>The Woof of Walk Street</strong><br>South Melbourne, VIC<br>Phone: +61-400-123-456</p>
-    </div>
-  </footer>
+    </nav>
+  </div>
+  <div class="container" style="text-align:center;margin-top:18px;opacity:.8;">© <span id="y"></span> The Woof of Walk Street.</div>
+  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</footer>
 </body>
 </html>

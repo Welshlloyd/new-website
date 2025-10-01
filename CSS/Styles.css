@@ -332,41 +332,69 @@ input:invalid, select:invalid, textarea:invalid { border-color: #d66; }
   font-weight: 700;
 }
 
+/* Footer Banner */
 .footer-banner img {
   width: 100%;
   height: auto;
-  display: block;
+  max-height: 250px;
   object-fit: cover;
-  max-height: 280px; /* Adjust depending on how tall you want the banner */
-  border-top: 4px solid #f5b200; /* brand accent */
-  border-bottom: 4px solid #f5b200;
+  border-bottom: 4px solid #f4c542;
 }
 
-.footer-content {
-  padding: 20px 0;
-  text-align: center;
-  background: #0b1420;
-  color: #e6edf3;
+/* Footer Layout */
+.site-footer {
+  background: #fff;
+  color: #222;
+  padding-top: 0;
 }
 
-.footer-links {
-  margin: 10px 0;
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
 }
 
-.footer-links a {
-  color: #f5b200;
-  margin: 0 6px;
+.footer-brand, .footer-contact, .footer-nav {
+  flex: 1 1 220px;
+  min-width: 200px;
+}
+
+.footer-logo {
+  max-width: 60px;
+  margin-bottom: 10px;
+}
+
+/* Footer Nav */
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-nav a {
+  display: block;
+  padding: 4px 0;
   text-decoration: none;
+  color: #333;
+}
+.footer-nav a:hover {
+  color: #f4c542;
 }
 
-.footer-links a:hover {
-  text-decoration: underline;
+/* Socials */
+.footer-socials img {
+  width: 28px;
+  margin-right: 10px;
+  vertical-align: middle;
 }
 
-.social-icons img {
-  width: 24px;
-  margin: 0 8px;
-  filter: brightness(0) invert(1); /* makes icons white */
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  padding: 12px;
+  font-size: 0.9em;
+  opacity: 0.7;
+  border-top: 1px solid #eee;
 }
 
 /* Utility */

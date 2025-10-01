@@ -1,89 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact The Woof of Walk Street | South Melbourne Dog Walking</title>
-  <meta name="description" content="Book a walk, boarding stay, or ask questions. Reach out to South Melbourne’s trusted solo dog walking service today." />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - The Woof of Walk Street</title>
+  <meta name="description" content="Contact The Woof of Walk Street — ethical solo dog walking and boutique weekend boarding in South Melbourne." />
+  <style>
+    :root{
+      --gold:#d4a017; --ink:#111; --paper:#fdfaf6;
+    }
+    *{box-sizing:border-box}
+    body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;margin:0;background:var(--paper);color:#333}
+    header{background:var(--gold);color:#fff;text-align:center;padding:48px 20px}
+    header h1{margin:0 0 6px;font-size:2.2rem}
+    header p{margin:0;font-size:1.1rem}
+    .wrap{max-width:980px;margin:40px auto;padding:0 20px}
+    h2{color:var(--gold);font-size:1.7rem;margin:10px 0 12px}
+    p{line-height:1.6}
+    #map{height:360px;width:100%;border-radius:12px;margin:16px 0 36px}
+    form{background:#fff;border-radius:12px;padding:24px;box-shadow:0 6px 20px rgba(17,17,17,.08);margin-bottom:32px}
+    label{display:block;margin:.4rem 0 .25rem;font-weight:600}
+    input,textarea{width:100%;padding:12px;border:1px solid #d9d9d9;border-radius:10px;font-size:1rem;background:#fff}
+    textarea{min-height:130px;resize:vertical}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .row > div{display:flex;flex-direction:column}
+    .actions{display:flex;gap:10px;align-items:center;margin-top:6px}
+    button{background:var(--gold);color:#000;border:0;border-radius:10px;padding:12px 18px;font-weight:700;cursor:pointer}
+    button:hover{filter:brightness(.95)}
+    .note{font-size:.9rem;color:#666}
+    .alert{display:none;margin-top:14px;padding:12px;border-radius:8px;font-size:.95rem}
+    .alert.ok{display:block;background:#eaf7ea;color:#155d27}
+    .alert.err{display:block;background:#fde8e8;color:#7a1111}
+    /* honeypot (hidden field) */
+    .hp{position:absolute;left:-5000px;opacity:0}
+    footer{background:var(--ink);color:#fff;text-align:center;padding:22px;font-size:.95rem}
+    @media (max-width:720px){.row{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <nav class="navbar container">
-      <a class="brand" href="index.html"><img src="images/brand/logo-lockup-gold.webp" width="56" height="56" alt=""><strong>The Woof of Walk Street</strong></a>
-      <div class="nav-links" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="memberships.html">Memberships</a>
-        <a href="services.html">Walking</a>
-        <a href="boarding-services.html">Boarding</a>
-        <a href="contact.html" aria-current="page">Contact us</a>
-      </div>
-    </nav>
+  <header>
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you and meet your dog 🐾</p>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="container">
-        <h1>Contact Us</h1>
-        <p class="subhead">Walking, memberships, or boarding — we’re here to help.</p>
-        <div class="cta-buttons">
-          <a href="https://www.timetopet.com/portal/woofofwalkstreet" class="cta-button">Book a Walk</a>
-          <a href="boarding-services.html" class="cta-button secondary">Book Boarding</a>
-        </div>
-      </div>
+  <main class="wrap">
+    <section aria-labelledby="findus">
+      <h2 id="findus">Find Us</h2>
+      <p>Based in <strong>South Melbourne</strong>. Service area includes South Melbourne, Albert Park, Port Melbourne, and surrounds.</p>
+      <div id="map" role="img" aria-label="Map location for The Woof of Walk Street"></div>
     </section>
 
-    <section class="container">
-      <div class="grid grid-2">
-        <article>
-          <h2>Details</h2>
-          <p>Email: <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a></p>
-          <p>Phone: <a href="tel:+61456754050">0456 754 050</a></p>
-          <p>Service Area: South Melbourne, VIC</p>
-          <p>Hours: Mon–Fri, 7:00am–7:00pm</p>
-        </article>
-
-        <article>
-          <h2>Send us a message</h2>
-          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <section aria-labelledby="form">
+      <h2 id="form">Send a Message</h2>
+      <form id="contactForm" action="YOUR_FORMSPREE_ENDPOINT" method="POST" novalidate>
+        <div class="row">
+          <div>
             <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" required />
-            <span class="error-message"></span>
-
+            <input id="name" name="name" autocomplete="name" required />
+          </div>
+          <div>
             <label for="email">Your Email</label>
-            <input type="email" id="email" name="_replyto" required />
-            <span class="error-message"></span>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+        </div>
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
-            <span class="error-message"></span>
+        <label for="subject">Subject</label>
+        <input id="subject" name="subject" placeholder="Booking enquiry, memberships, etc." />
 
-            <button type="submit">Send Message</button>
-            <p class="success-message">✅ Thank you! We’ll be in touch soon.</p>
-          </form>
-        </article>
-      </div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <!-- Honeypot for spam -->
+        <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+
+        <!-- Formspree options -->
+        <input type="hidden" name="_subject" value="New website message — The Woof of Walk Street">
+        <input type="hidden" name="_template" value="table"> <!-- nicer email layout -->
+
+        <div class="actions">
+          <button type="submit">Send Message</button>
+          <span class="note">We’ll reply within one business day.</span>
+        </div>
+
+        <div id="ok" class="alert ok" role="status">Thanks! Your message has been sent.</div>
+        <div id="err" class="alert err" role="alert">Hmm, something went wrong. Please try again or email <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a>.</div>
+      </form>
+
+      <h2>Other Ways to Reach Us</h2>
+      <p>Email: <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a><br>
+         Phone: <a href="tel:+61456754050">0456 754 050</a></p>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 The Woof of Walk Street · 10% of profits donated to local shelters</p>
-    <div class="footer-links">
-      <a href="privacy.html">Privacy Policy</a> · 
-      <a href="terms.html">Terms & Conditions</a> · 
-      <a href="sitemap.html">Sitemap</a>
-    </div>
-    <div class="social-icons">
-      <a href="https://instagram.com/woofofwalkstreet" target="_blank"><img src="images/icons/instagram.svg" alt="Instagram"></a>
-      <a href="https://facebook.com/woofofwalkstreet" target="_blank"><img src="images/icons/facebook.svg" alt="Facebook"></a>
-      <a href="https://twitter.com/woofofwalkst" target="_blank"><img src="images/icons/twitter.svg" alt="Twitter"></a>
-    </div>
-    <div class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-      <p><strong>The Woof of Walk Street</strong><br>South Melbourne, VIC<br>Phone: +61-400-123-456</p>
-    </div>
+    © 2025 The Woof of Walk Street — Happy dogs, stress-free owners.
   </footer>
 
-  <script src="/js/form-validation.js"></script>
+  <!-- Google Maps -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_KEY&callback=initMap" async defer></script>
+  <script>
+    function initMap(){
+      const loc = { lat: -37.833, lng: 144.963 }; // South Melbourne approx
+      const map = new google.maps.Map(document.getElementById('map'),{
+        zoom: 14, center: loc,
+        styles:[
+          {elementType:'geometry',stylers:[{color:'#fdfaf6'}]},
+          {featureType:'road',elementType:'geometry',stylers:[{color:'#cdb074'}]},
+          {featureType:'water',elementType:'geometry',stylers:[{color:'#111111'}]},
+          {elementType:'labels.text.fill',stylers:[{color:'#111'}]},
+          {elementType:'labels.text.stroke',stylers:[{color:'#fdfaf6'}]}
+        ]
+      });
+      new google.maps.Marker({position:loc,map,title:'The Woof of Walk Street'});
+    }
+
+    // AJAX submit to keep user on the page with a clean success state
+    const form = document.getElementById('contactForm');
+    const ok = document.getElementById('ok');
+    const err = document.getElementById('err');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      ok.style.display = 'none';
+      err.style.display = 'none';
+
+      const data = new FormData(form);
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: data
+        });
+        if (res.ok) {
+          form.reset();
+          ok.style.display = 'block';
+        } else {
+          err.style.display = 'block';
+        }
+      } catch {
+        err.style.display = 'block';
+      }
+    });
+  </script>
 </body>
 </html>

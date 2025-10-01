@@ -6,12 +6,13 @@
   <title>Memberships – The Woof of Walk Street</title>
   <meta name="description" content="Choose a walking membership that fits your routine: 4 walks ($295), 10 walks ($750), or Unlimited weekdays ($1,500). One-dog-only. Mon–Fri 7am–7pm; calendar booking required." />
   <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="/css/fixes.css" />
   <link rel="icon" href="/images/brand/favicon.ico" />
 </head>
 <body>
 <header class="site-header">
   <div class="navbar container">
-    <a class="brand" href="/"><img src="/images/brand/logo-lockup-gold.webp" width="56" height="56" alt=""><strong>The Woof of Walk Street</strong></a>
+    <a class="brand" href="/"><img src="/images/brand/logo-lockup-gold-320.webp" width="56" height="56" alt=""><strong>The Woof of Walk Street</strong></a>
     <nav class="nav-links" aria-label="Primary">
       <a href="/">Home</a>
       <a href="/memberships.html" aria-current="page">Memberships</a>
@@ -23,15 +24,15 @@
 </header>
 
 <main>
-  <!-- Hero -->
   <section class="hero">
     <div class="container">
       <h1>Memberships</h1>
-      <p class="subhead">Priority booking, predictable billing, and one-dog-only walks. Walks are <strong>Mon–Fri, 7am–7pm</strong> and must be booked in the calendar — <strong>subject to availability</strong>.</p>
+      <p class="subhead">
+        Lock in priority slots and predictable billing. Walks are <strong>Mon–Fri, 7am–7pm</strong> and must be booked in the calendar — <strong>subject to availability</strong>. One-dog-only, every time.
+      </p>
     </div>
   </section>
 
-  <!-- Tiers -->
   <section>
     <div class="container grid grid-3">
       <article id="starter" class="card">
@@ -40,7 +41,7 @@
         <ul>
           <li>GPS tracking &amp; photo updates</li>
           <li>Priority calendar access</li>
-          <li>Great for steady maintenance</li>
+          <li>Perfect for maintenance &amp; routine</li>
         </ul>
         <div class="price-row"><strong>$295 / month</strong></div>
         <div class="stack-sm">
@@ -81,49 +82,33 @@
     </div>
   </section>
 
-  <!-- Promo -->
   <section>
     <div class="container">
       <div class="promo card" style="background:#0b1420;color:#e6edf3;">
-        <h2>📈 Initial Puppy Offering — Unlimited</h2>
+        <h2>📈 I.P.O.O. – Initial Puppy Offering, Unlimited</h2>
         <p>Our most popular plan: unlimited weekday walks (1/day, Mon–Fri). GPS, photos, and a calmer, fitter dog — while you get time back.</p>
       </div>
     </div>
   </section>
 
-  <!-- Fine print -->
   <section>
     <div class="container">
-      <h2>Important details</h2>
+      <h2>Fine print (plain English)</h2>
       <ul class="muted">
-        <li>Walks available Monday–Friday 7:00am–7:00pm and must be booked in the portal calendar. All bookings are subject to availability.</li>
-        <li>Unused walks do not roll over. You can change a booking inside the change window if slots are open.</li>
+        <li>Walks are available Monday–Friday 7:00am–7:00pm and must be booked in the portal calendar. All bookings are subject to availability.</li>
+        <li>Unused walks don’t roll over. You can change a booking inside the change window if slots are open.</li>
         <li>Unlimited: one walk per weekday (Mon–Fri). Public holidays may run a reduced schedule.</li>
         <li>We never pack walk or car-ferry “for exercise”. Every walk is one-dog-only.</li>
       </ul>
-      <figure class="card" style="padding:0;overflow:hidden">
-        <img src="/images/photos/dogs-playing-after-walk.webp" alt="Happy pups after a solo routine month" loading="lazy">
-      </figure>
     </div>
   </section>
 </main>
 
-<!-- Footer -->
 <footer class="site-footer">
   <div class="container footer-top">
     <div class="footer-brand">
-      <img src="/images/brand/logo-lockup-gold.webp" alt="">
+      <img src="/images/brand/logo-lockup-gold-320.webp" alt="">
       <div><strong>The Woof of Walk Street</strong><br/>South Melbourne, VIC · Mon–Fri 7am–7pm</div>
-    </div>
-    <div class="footer-contact">
-      <h3>Contact Us</h3>
-      <p>Email: <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a></p>
-      <p>Phone: <a href="tel:+61456754050">0456 754 050</a></p>
-      <div class="footer-socials">
-        <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram"><img src="/images/social/icon-instagram.svg" alt="Instagram"></a>
-        <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook"><img src="/images/social/icon-facebook.svg" alt="Facebook"></a>
-        <a href="https://x.com/woofofwalkstreet" aria-label="X"><img src="/images/social/icon-x.svg" alt="X"></a>
-      </div>
     </div>
     <nav aria-label="Footer">
       <ul style="list-style:none;padding:0;margin:0;">
@@ -135,12 +120,18 @@
         <li><a href="/sitemap.html">Sitemap</a></li>
       </ul>
     </nav>
+    <div>
+      <div>Manage your plan:</div>
+      <p><a class="btn button-primary" href="https://www.timetopet.com/portal/woofofwalkstreet" target="_blank" rel="noopener">Open Client Portal</a></p>
+      <div class="footer-social">
+        <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram"><img src="/images/social/instagram.svg" alt=""></a>
+        <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook"><img src="/images/social/facebook.svg" alt=""></a>
+        <a href="https://x.com/woofofwalk" aria-label="X"><img src="/images/social/x.svg" alt=""></a>
+      </div>
+    </div>
   </div>
   <div class="container" style="text-align:center;margin-top:18px;opacity:.8;">© <span id="y"></span> The Woof of Walk Street.</div>
   <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </footer>
-</body>
-</html>
-
 </body>
 </html>

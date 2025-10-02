@@ -294,7 +294,40 @@ form {
   box-shadow: var(--shadow);
 }
 label { display: block; font-weight: 700; }
+/* Black IPOO banner */
+.ipoo-banner {
+  background:#0b0e12;
+  color:#fff;
+  padding:32px 18px;
+  text-align:center;
+  border-bottom:4px solid var(--brand);
+}
 
+.ipoo-banner h2 {
+  margin:0 0 12px;
+  font-size:1.6rem;
+}
+
+.ipoo-banner p {
+  margin:0 auto;
+  max-width:52ch;
+  font-size:1rem;
+  line-height:1.5;
+}
+
+/* Yellow Happy Dogs section */
+.happy-dogs {
+  background:var(--brand);
+  padding:36px 18px 28px;
+  text-align:center;
+  border-radius:0 0 40px 40px; /* smooth curve */
+  margin-top:0; /* no weird gap */
+}
+
+.happy-dogs h2 {
+  margin:0 0 8px;
+  font-size:1.4rem;
+}
 /* ---------------------------------------------------
    End stylesheet
 --------------------------------------------------- */

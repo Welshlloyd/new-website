@@ -3,51 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Unlimited Pawfolio — Weekday Walks | The Woof of Walk Street</title>
-  <meta name="description" content="Unlimited Pawfolio: a solo walk every weekday. One-dog-only, GPS-tracked, photo-proofed. Boutique care in South Melbourne." />
+  <title>Unlimited Pawfolio | The Woof of Walk Street</title>
+  <meta name="description" content="Unlimited Pawfolio: a solo walk every weekday with GPS tracking and photo updates. First month 50% off ($750), then $1,500 monthly. Auto-renews unless cancelled." />
   <link rel="canonical" href="https://www.woofofwalkstreet.com/membership-unlimited.html" />
   <link rel="icon" href="/images/brand/favicon.ico" />
   <link rel="stylesheet" href="/css/mini.css" />
+  <link rel="stylesheet" href="/assets/css/promo.css" />
 
+  <!-- Structured data: Unlimited offer -->
   <script type="application/ld+json">
   {
-    "@context":"https://schema.org",
-    "@type":"Service",
-    "name":"Unlimited Pawfolio",
-    "serviceType":"Dog Walking Membership",
-    "provider":{
-      "@type":"LocalBusiness",
-      "name":"The Woof of Walk Street",
-      "address":{"@type":"PostalAddress","addressLocality":"South Melbourne","addressRegion":"VIC","addressCountry":"AU"},
-      "url":"https://www.woofofwalkstreet.com"
-    },
-    "areaServed":"South Melbourne, VIC",
-    "description":"A solo dog walk every weekday. One-dog-only, GPS-tracked, photo updates."
+    "@context": "https://schema.org",
+    "@type": "Offer",
+    "name": "Unlimited Membership – First month 50% off",
+    "priceCurrency": "AUD",
+    "price": "1500.00",
+    "category": "PetService",
+    "availability": "https://schema.org/InStock",
+    "url": "https://www.woofofwalkstreet.com/membership-unlimited.html",
+    "validFrom": "2025-10-02",
+    "eligibleCustomerType": "https://schema.org/NewCustomer",
+    "description": "Unlimited dog walking membership. New members get 50% off the first month ($750); existing members get 50% off a month when their friend joins Unlimited. Renews monthly at $1,500 unless cancelled before the renewal date."
   }
   </script>
 
   <style>
-    .m-wrap{max-width:960px;margin:24px auto 44px;padding:0 16px}
-    .m-hero{padding:40px 16px 16px;text-align:center}
-    .m-hero h1{margin:0 0 .35rem}
-    .m-hero p{margin:.25rem auto 1rem;max-width:48ch;color:var(--muted)}
-    .m-price{font-weight:800;font-size:1.8rem;margin:.25rem 0 1rem}
-    .m-cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
-    .m-btn{display:inline-block;padding:12px 16px;border-radius:12px;border:1px solid #e5a700;font-weight:800;text-decoration:none;background:var(--brand);color:var(--brand-ink)}
-    .m-card{background:#0f1318;border:1px solid #1d232c;border-radius:14px;padding:18px;margin-top:16px;color:#e6edf3}
-    .m-card h2{color:#f3f6fb;margin:.2rem 0 .6rem}
-    .m-card li{color:#cdd7e1}
-    .edgy-strip{background:#0b0e12;color:#f7f3e8;border-block:4px solid #f5b200}
-    .edgy-inner{max-width:1100px;margin:0 auto;display:grid;gap:18px;grid-template-columns:1fr;align-items:center;padding:26px 16px}
-    .edgy-graphic{display:flex;justify-content:center}
-    .edgy-graphic img{width:min(310px,60vw);height:auto;border-radius:14px;box-shadow:var(--shadow)}
-    .edgy-copy h2{font-size:clamp(1.4rem,3.4vw,2rem);margin:.2rem 0 .4rem;color:#fff}
-    .edgy-copy p{color:#cfd6df;margin:.2rem 0}
-    .edgy-badge{display:inline-block;background:#f5b200;color:#111;font-weight:900;border-radius:999px;padding:8px 14px;box-shadow:var(--shadow);margin-top:6px}
-    @media (min-width:820px){.edgy-inner{grid-template-columns:360px 1fr}.edgy-graphic img{width:320px}}
-    .poster-wrap{max-width:1200px;margin:22px auto 6px;padding:0 16px}
-    .poster{border-radius:16px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--stroke)}
-    .poster img{width:100%;height:auto;display:block}
+    .wrap{max-width:1100px;margin:24px auto 44px;padding:0 16px}
+    .hero{padding:32px 16px 10px;text-align:center}
+    .hero h1{margin:0 0 .4rem}
+    .hero p{margin:.25rem auto 0;max-width:60ch;color:var(--muted)}
   </style>
 </head>
 <body>
@@ -59,8 +43,7 @@
       <strong>The Woof of Walk Street</strong>
     </a>
     <nav class="nav-links" aria-label="Primary">
-        <a href="/">Home</a>
-      <a href="/about.html">About Us</a>
+      <a href="/">Home</a>
       <a href="/memberships.html">Memberships</a>
       <a href="/services.html">Walking</a>
       <a href="/boarding-services.html">Boarding</a>
@@ -69,54 +52,89 @@
   </div>
 </header>
 
-<section class="m-hero">
+<section class="hero">
   <h1>Unlimited Pawfolio</h1>
-  <p>A solo walk every weekday — maximum routine, zero compromises. Built for high-energy, high-standards pups.</p>
-  <div class="m-price">A$ 1,500 / month</div>
-  <div class="m-cta">
-    <a class="m-btn" href="https://www.timetopet.com/portal/woofofwalkstreet/create-account" target="_blank" rel="noopener">Join up today</a>
-  </div>
+  <p>A solo walk every weekday. GPS-tracked routes and photo updates after every walk.</p>
 </section>
 
-<section class="edgy-strip" aria-labelledby="edgy-title">
-  <div class="edgy-inner">
-    <div class="edgy-graphic">
-      <img src="/images/memberships/membership_1.webp" alt="Graffiti MEMBERSHIPS with paw prints" loading="lazy" width="320" height="740">
-    </div>
-    <div class="edgy-copy">
-      <h2 id="edgy-title">Vibes: all-in, every weekday.</h2>
-      <p>One dog. One walker. GPS-tracked routes. Photo proof after every walk. It’s the premium routine—on repeat.</p>
-      <span class="edgy-badge">South Melbourne · Mon–Fri</span>
-    </div>
-  </div>
-</section>
+<div class="wrap">
+  <!-- Hero promo block with full details -->
+  <section class="pricing-card" id="unlimited-hero" data-base-price="1500" data-currency="AUD">
+    <div class="badge">50% OFF 1st Month</div>
+    <h2 style="margin:0 0 .3rem">Unlimited Membership</h2>
+    <p class="sub" style="margin:0 0 .6rem">More walks. More freedom. Less hassle.</p>
 
-<div class="m-wrap">
-  <div class="m-card">
-    <h2>What’s included</h2>
-    <ul>
-      <li>1 × 45-minute solo walk every weekday (Monday to Friday)</li>
-      <li>GPS tracking & photo updates after each walk</li>
-      <li>Ethical, one-dog-at-a-time service — never pack walked, never car-ferried</li>
-      <li>First access to promos and upgrades</li>
-    </ul>
-  </div>
+    <div class="price">
+      <span id="unlPromoPrice2"></span>
+      <span class="strike" id="unlBasePrice2"></span>
+    </div>
 
-  <div class="m-card">
-    <h2>Booking & availability</h2>
-    <ul>
-      <li>Walk window: <strong>7:00am–7:00pm, Monday–Friday</strong> (excl. public holidays)</li>
-      <li>Bookings via our calendar (Time To Pet), subject to availability</li>
-      <li>Unused walks don’t roll over</li>
+    <div class="sub">
+      First month half price ($750), then $1,500 monthly.
+      <br>Renews automatically at the standard price unless cancelled before the renewal date.
+    </div>
+
+    <ul class="checklist">
+      <li>Unlimited weekday solo walks</li>
+      <li>Priority scheduling + cancellations</li>
+      <li>GPS updates + photo check-ins</li>
     </ul>
-  </div>
+
+    <!-- Optional acknowledgement gating -->
+    <label style="display:flex;gap:.5rem;align-items:flex-start;margin:.75rem 0 .25rem">
+      <input type="checkbox" id="unlAck2">
+      <span style="font-size:.9rem">
+        I understand the membership renews monthly at <strong>$1,500</strong> unless cancelled before renewal.
+      </span>
+    </label>
+
+    <div class="referral-box" style="margin-top:.6rem">
+      <strong>Get 50% OFF a month for referring a friend.</strong>
+      <div style="margin-top:.4rem">
+        <label for="refInput2" style="display:block;font-size:.9rem">Who referred you? (Optional)</label>
+        <input id="refInput2" type="text" placeholder="Referrer’s name or email"
+               style="width:100%;padding:.6rem;border:1px solid #cbd5e1;border-radius:8px">
+        <div class="notice">We’ll credit their account once you join Unlimited.</div>
+      </div>
+    </div>
+
+    <div class="trust">
+      <img src="/images/social/google-reviews.svg" alt="Google Reviews">
+      <img src="/images/social/lock.svg" alt="Secure payments">
+    </div>
+
+    <div class="sticky-cta" style="margin-top:.75rem">
+      <a id="unlCta2" class="btn" href="#">Start Unlimited – 50% OFF</a>
+      <a href="/memberships.html#faq" class="btn outline" style="margin-left:8px">See FAQs</a>
+    </div>
+
+    <p class="notice" style="margin-top:.5rem">
+      By starting Unlimited you agree that the plan renews monthly at <strong>$1,500</strong> unless cancelled
+      prior to your renewal date. You can cancel anytime from your account or by contacting us.
+    </p>
+
+    <div class="notice">Use code <b>UNLIMITED50</b> if prompted at checkout.</div>
+  </section>
+
+  <!-- Optional: add more content/sections here (what's included, service area, etc.) -->
+
+  <section id="faq" class="faq" style="margin:24px 0">
+    <h3>Unlimited Promo – FAQs</h3>
+    <details><summary>Who qualifies for 50% off?</summary>
+      New Unlimited members get 50% off their first month ($750). If an existing member refers a new Unlimited member, the referrer gets 50% off one future month once the friend joins.
+    </details>
+    <details><summary>How do referrals work?</summary>
+      At sign-up, the new member adds their referrer’s name or email. We credit the referrer’s account with 50% off a month after the new member completes sign-up.
+    </details>
+    <details><summary>Can I stack multiple referral discounts?</summary>
+      You can earn multiple 50%-off months through multiple referrals, but only one discount applies per billing period.
+    </details>
+    <details><summary>Does it auto-renew?</summary>
+      Yes. After your first month at $750, Unlimited renews at the standard monthly price of $1,500 unless you cancel before your renewal date. You can cancel anytime via your account portal or by emailing
+      <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a>.
+    </details>
+  </section>
 </div>
-
-<section class="poster-wrap" aria-label="Unlimited Pawfolio poster">
-  <div class="poster">
-    <img src="/images/memberships/unlimited-pawfolio-poster.webp" width="1400" height="900" alt="Membership poster: Unlimited Pawfolio" loading="lazy">
-  </div>
-</section>
 
 <footer class="site-footer">
   <div class="footer-banner">
@@ -138,12 +156,11 @@
 
     <div class="footer-contact">
       <h3>Contact Us</h3>
-      <p>Email: <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a><br>
-        Phone: <a href="tel:+61456754050">0456 754 050</a></p>
+      <p>Email: <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a><br>Phone: <a href="tel:+61456754050">0456 754 050</a></p>
       <div class="footer-socials">
-        <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook"><img src="/images/social/facebook.svg" alt=""></a>
-        <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram"><img src="/images/social/instagram.svg" alt=""></a>
-        <a href="https://x.com/woofofwalkstreet" aria-label="Twitter/X"><img src="/images/social/twitter.svg" alt=""></a>
+        <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook"><img src="/images/social/facebook.svg" alt="Facebook"></a>
+        <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram"><img src="/images/social/instagram.svg" alt="Instagram"></a>
+        <a href="https://x.com/woofofwalkstreet" aria-label="Twitter/X"><img src="/images/social/twitter.svg" alt="Twitter/X"></a>
       </div>
     </div>
 
@@ -160,8 +177,33 @@
   </div>
 
   <div class="footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
-  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </footer>
+
+<!-- Promo JS: auto-calc $750 / strike $1,500, referral capture, CTA -->
+<script>
+  window.UNL_PROMO_CODE = 'UNLIMITED50';
+  window.UNL_CHECKOUT_BASE = 'https://www.woofofwalkstreet.com/checkout/unlimited';
+</script>
+<script src="/assets/js/promo.js" defer></script>
+
+<!-- Gate CTA until acknowledgement -->
+<script>
+  (function(){
+    const ack = document.getElementById('unlAck2');
+    const cta = document.getElementById('unlCta2');
+    if(!ack || !cta) return;
+    cta.setAttribute('aria-disabled','true');
+    cta.style.opacity = .6;
+    cta.style.pointerEvents = 'none';
+    ack.addEventListener('change', ()=>{
+      const on = ack.checked;
+      cta.style.opacity = on ? '' : .6;
+      cta.style.pointerEvents = on ? '' : 'none';
+      cta.setAttribute('aria-disabled', on ? 'false' : 'true');
+    });
+  })();
+</script>
 
 </body>
 </html>

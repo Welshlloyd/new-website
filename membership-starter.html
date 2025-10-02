@@ -26,18 +26,21 @@
   }
   </script>
 
-  <!-- Page-scoped flair (kept small + isolated) -->
+  <!-- Page-scoped styles (kept isolated) -->
   <style>
     /* Wrap + hero */
     .m-wrap{max-width:960px;margin:24px auto 44px;padding:0 16px}
-    .m-hero{padding:40px 16px 16px;text-align:center}
+    .m-hero{padding:40px 16px 16px;text-align:center;background:#fffaf1;border-bottom:1px solid #f0e6cf}
     .m-hero h1{margin:0 0 .35rem}
-    .m-hero p{margin:.25rem auto 1rem;max-width:42ch;color:var(--muted)}
-    .m-price{font-weight:800;font-size:1.8rem;margin:.25rem 0 1rem}
-
+    .m-hook{margin:.35rem auto .65rem;max-width:42ch;color:#2a2a2a;font-size:1.05rem}
+    .m-badge{display:inline-block;margin:.25rem 0 .9rem;padding:.35rem .7rem;background:var(--brand);color:var(--brand-ink);border-radius:999px;font-weight:800}
     .m-cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
     .m-btn{display:inline-block;padding:12px 16px;border-radius:12px;border:1px solid transparent;font-weight:800;text-decoration:none}
     .m-btn--primary{background:var(--brand);color:var(--brand-ink);border-color:#e5a700}
+    .m-price{font-weight:800;font-size:1.8rem;margin:.45rem 0 .6rem}
+    .m-trust{list-style:none;padding:0;margin:12px auto 10px;max-width:44ch;color:#6b6b6b}
+    .m-trust li{position:relative;padding-left:22px;margin:.25rem 0}
+    .m-trust li::before{content:"✔";position:absolute;left:0;top:0;line-height:1;color:#2a7a3a;font-weight:800}
 
     /* Dark info cards */
     .m-card{background:#0f1318;border:1px solid #1d232c;border-radius:14px;padding:18px;margin-top:16px;color:#e6edf3}
@@ -53,16 +56,83 @@
     .edgy-copy h2{font-size:clamp(1.4rem,3.4vw,2rem);margin:.2rem 0 .4rem;color:#fff}
     .edgy-copy p{color:#cfd6df;margin:.2rem 0}
     .edgy-badge{display:inline-block;background:#f5b200;color:#111;font-weight:900;border-radius:999px;padding:8px 14px;box-shadow:var(--shadow);margin-top:6px}
-
-    @media (min-width:820px){
-      .edgy-inner{grid-template-columns:360px 1fr}
-      .edgy-graphic img{width:320px}
-    }
+    @media (min-width:820px){ .edgy-inner{grid-template-columns:360px 1fr} .edgy-graphic img{width:320px} }
 
     /* Poster banner section */
     .poster-wrap{max-width:1200px;margin:22px auto 6px;padding:0 16px}
     .poster{border-radius:16px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--stroke)}
     .poster img{width:100%;height:auto;display:block}
+
+    /* Compare Plans – swipeable cards */
+    .plan-wrap{max-width:960px;margin:24px auto 44px;padding:0 16px}
+    .plan-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+    .plan-head h2{margin:0}
+    .plan-ctrls{display:flex;gap:8px}
+    .plan-btn{border:1px solid #e5a700;background:var(--brand);color:#111;font-weight:800;border-radius:10px;padding:8px 10px}
+    .plan-scroller{
+      display:grid;
+      grid-auto-flow:column;
+      grid-auto-columns:85%;
+      gap:14px;
+      overflow-x:auto;
+      scroll-snap-type:x mandatory;
+      -webkit-overflow-scrolling:touch;
+      padding-bottom:6px;
+    }
+    @media (min-width:760px){ .plan-scroller{grid-auto-columns: minmax(280px, 1fr);} }
+
+    .plan-card{
+      scroll-snap-align:start;
+      background:#fff;
+      border:1px solid #ddd;
+      border-radius:14px;
+      padding:20px;
+      text-align:center;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .plan-card:hover{ transform: translateY(-4px); box-shadow: 0 10px 18px rgba(0,0,0,0.08); }
+
+    /* Featured Growth plan */
+    .plan-card.featured{
+      border:2px solid #f4c542;
+      box-shadow:0 0 20px rgba(244,197,66,0.35);
+      transform: scale(1.04);
+      position:relative;
+      z-index:2;
+    }
+
+    .plan-card h3{font-size:1.2rem;display:flex;align-items:center;gap:6px;justify-content:center}
+    .badge{
+      background:#f4c542;color:#111;font-weight:800;
+      padding:4px 10px;margin-left:6px;border-radius:999px;font-size:.85rem;display:inline-block
+    }
+    .badge-dark{background:#222;color:#fff}
+    .badge-glow{ box-shadow:0 0 6px rgba(244,197,66,0.6); animation:pulseGlow 2s infinite; }
+    @keyframes pulseGlow{ 0%{box-shadow:0 0 6px rgba(244,197,66,.6)} 50%{box-shadow:0 0 14px rgba(244,197,66,.9)} 100%{box-shadow:0 0 6px rgba(244,197,66,.6)} }
+    .badge-urgent{ background:#d62828;color:#fff; animation:urgentPulse 1.5s infinite; }
+    @keyframes urgentPulse{ 0%{transform:scale(1); box-shadow:0 0 4px rgba(214,40,40,.6)} 50%{transform:scale(1.1); box-shadow:0 0 12px rgba(214,40,40,.9)} 100%{transform:scale(1); box-shadow:0 0 4px rgba(214,40,40,.6)} }
+
+    .plan-meta{display:flex;gap:10px;flex-wrap:wrap;margin:.25rem 0 .6rem;color:#444;justify-content:center}
+    .plan-meta span{background:#faf7ef;border:1px solid #eee;border-radius:999px;padding:6px 10px;font-weight:700}
+
+    /* Brand pill CTA + price under button */
+    .plan-cta{
+      display:inline-block;margin:12px 0 6px;padding:12px 20px;border-radius:999px;
+      background:#f4c542;color:#111;font-weight:800;text-decoration:none;
+      box-shadow:0 4px 10px rgba(0,0,0,0.08);transition:transform .1s ease;
+    }
+    .plan-cta:hover{ transform:translateY(-2px); }
+    .plan-price{ margin-top:6px; font-size:1.1rem; font-weight:700; color:#333; }
+
+    /* Spots counter */
+    .spots-row{
+      display:inline-flex;align-items:center;gap:10px;padding:8px 12px;
+      border:1px dashed rgba(0,0,0,0.15);border-radius:999px;margin:.4rem 0 .6rem;background:#fffdf3;
+    }
+    .plan-card.featured .spots-row{ border-color: rgba(244,197,66,0.5); background: #fff9e7; }
+    .spots-dot{ width:10px;height:10px;border-radius:50%;background:#d62828;box-shadow:0 0 10px rgba(214,40,40,.55);animation:dotBlink 1.6s infinite; }
+    @keyframes dotBlink{ 0%,100%{opacity:.9} 50%{opacity:.4} }
+    .spots-text{ font-weight:700; color:#222; }
   </style>
 </head>
 <body>
@@ -84,16 +154,26 @@
   </div>
 </header>
 
-<!-- HERO -->
+<!-- HERO (Option 2: benefit-led → price → CTA → trust bullets) -->
 <section class="m-hero">
-  <h1>Starter Sniffvestment</h1>
-  <p>4 solo weekday walks per month — a smart way to test the waters and build a routine.</p>
+  <h1>🐾 Starter Sniffvestment</h1>
+  <p class="m-hook">
+    4 solo weekday walks per month. Your dog’s personal walker —
+    <strong>one-dog-only</strong>, <strong>GPS tracked</strong>, with
+    <strong>photo updates after every walk</strong>.
+  </p>
+  <p class="m-badge">South Melbourne · Mon–Fri</p>
   <div class="m-price">A$ 290 / month</div>
   <div class="m-cta">
     <a class="m-btn m-btn--primary" href="https://www.timetopet.com/portal/woofofwalkstreet/create-account" target="_blank" rel="noopener">
       Join up today
     </a>
   </div>
+  <ul class="m-trust">
+    <li>45-minute solo walks</li>
+    <li>Never pack walked or car-ferried</li>
+    <li>Priority promos for members</li>
+  </ul>
 </section>
 
 <!-- ✦ Edgy / vibrant strip with vertical MEMBERSHIPS graffiti -->
@@ -131,7 +211,7 @@
     <h2>Booking & availability</h2>
     <ul>
       <li>Walk window: <strong>7:00am–7:00pm, Monday–Friday</strong> (excl. public holidays)</li>
-      <li>All bookings via our calendar (Time To Pet) and subject to availability</li>
+    <li>All bookings via our calendar (Time To Pet) and subject to availability</li>
       <li>Unused walks don’t roll over</li>
     </ul>
   </div>
@@ -141,7 +221,63 @@
   </p>
 </div>
 
-<!-- ✦ Big poster banner -->
+<!-- 📊 Compare Plans (swipeable) -->
+<div class="plan-wrap" aria-labelledby="compare-plans-heading">
+  <div class="plan-head">
+    <h2 id="compare-plans-heading">📊 Compare Plans</h2>
+    <div class="plan-ctrls" aria-hidden="true">
+      <button class="plan-btn" type="button" data-scroll="-1">‹</button>
+      <button class="plan-btn" type="button" data-scroll="1">›</button>
+    </div>
+  </div>
+
+  <div class="plan-scroller" id="planScroller">
+    <!-- Starter -->
+    <article class="plan-card" aria-label="Starter Sniffvestment">
+      <h3>🐾 Starter Sniffvestment <span class="badge badge-glow">Best for new sniffvestors</span></h3>
+      <div class="plan-meta">
+        <span>4 walks / month</span>
+        <span>Solo • GPS • Photos</span>
+      </div>
+      <a class="plan-cta" href="https://www.timetopet.com/portal/woofofwalkstreet/create-account" target="_blank" rel="noopener">Join Starter</a>
+      <div class="plan-price">A$ 290 / month</div>
+    </article>
+
+    <!-- Growth (Featured with urgency + counter) -->
+    <article class="plan-card featured" aria-label="Tail Growth Plan" id="plan-growth" data-spots-start="8">
+      <h3>📈 Tail Growth Plan 
+        <span class="badge">Most Popular</span>
+        <span class="badge badge-urgent">🔥 Selling Fast</span>
+      </h3>
+
+      <!-- Spots counter -->
+      <div class="spots-row" role="status" aria-live="polite">
+        <span class="spots-dot" aria-hidden="true"></span>
+        <span class="spots-text"><strong><span id="growthSpotsCount">8</span> spots</strong> left this month</span>
+      </div>
+
+      <div class="plan-meta">
+        <span>10 walks / month</span>
+        <span>Priority booking</span>
+      </div>
+      <a class="plan-cta" id="growthJoinCta" href="https://www.timetopet.com/portal/woofofwalkstreet/create-account" target="_blank" rel="noopener">Join Growth</a>
+      <div class="plan-price">A$ 550 / month</div>
+    </article>
+
+    <!-- Unlimited -->
+    <article class="plan-card" aria-label="Unlimited Pawfolio">
+      <h3>👑 Unlimited Pawfolio <span class="badge badge-dark">Elite Tier</span></h3>
+      <div class="plan-meta">
+        <span>Unlimited weekday</span>
+        <span>12-month bonus</span>
+      </div>
+      <a class="plan-cta" href="https://www.timetopet.com/portal/woofofwalkstreet/create-account" target="_blank" rel="noopener">Join Unlimited</a>
+      <div class="plan-price">A$ 1,500 / month</div>
+    </article>
+  </div>
+</div>
+
+<!-- ✦ Big poster banner (kept) -->
 <section class="poster-wrap" aria-label="Membership poster">
   <div class="poster">
     <picture>
@@ -200,6 +336,58 @@
   <div class="footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </footer>
+
+<!-- Compare Plans: scroller controls + monthly-limited spots counter -->
+<script>
+  (function(){
+    // Scroller arrows
+    const scroller = document.getElementById('planScroller');
+    document.querySelectorAll('[data-scroll]').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const dir = Number(btn.dataset.scroll);
+        const card = scroller.querySelector('.plan-card');
+        const step = card ? card.getBoundingClientRect().width + 14 : 320;
+        scroller.scrollBy({left: dir * step, behavior: 'smooth'});
+      });
+    });
+
+    // Growth plan monthly counter (per-visitor; resets monthly)
+    const CARD_ID = 'plan-growth';
+    const COUNT_ID = 'growthSpotsCount';
+    const CTA_ID = 'growthJoinCta';
+    const STORAGE_KEY = 'woof_growth_spots';
+    const STORAGE_MONTH_KEY = 'woof_growth_month';
+
+    const card = document.getElementById(CARD_ID);
+    const countEl = document.getElementById(COUNT_ID);
+    const cta = document.getElementById(CTA_ID);
+    if(!card || !countEl || !cta) return;
+
+    const startValue = Number(card.getAttribute('data-spots-start')) || 8;
+    const now = new Date();
+    const monthKey = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}`;
+
+    const storedMonth = localStorage.getItem(STORAGE_MONTH_KEY);
+    if (storedMonth !== monthKey) {
+      localStorage.setItem(STORAGE_MONTH_KEY, monthKey);
+      localStorage.setItem(STORAGE_KEY, String(startValue));
+    }
+
+    const current = Number(localStorage.getItem(STORAGE_KEY));
+    const spots = Number.isFinite(current) ? current : startValue;
+    countEl.textContent = Math.max(spots, 0);
+
+    cta.addEventListener('click', function() {
+      let n = Number(localStorage.getItem(STORAGE_KEY));
+      if (!Number.isFinite(n)) n = startValue;
+      if (n > 0) {
+        n -= 1;
+        localStorage.setItem(STORAGE_KEY, String(n));
+        countEl.textContent = Math.max(n, 0);
+      }
+    });
+  })();
+</script>
 
 </body>
 </html>

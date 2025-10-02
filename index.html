@@ -199,7 +199,7 @@
   </div>
 </section> 
 
-  <!-- Blog teaser -->
+   <!-- Blog teaser -->
   <section>
     <div class="container">
       <h2>From the Blog</h2>
@@ -220,75 +220,105 @@
       <p class="text-center" style="margin-top:20px"><a class="btn button-primary" href="/blog/index.html">Read More Blogs</a></p>
     </div>
   </section>
-</main>
-  <!-- Footer -->
-  <footer class="site-footer" role="contentinfo">
-    <!-- Banner -->
-    <div class="footer-banner">
-      <picture>
-        <source srcset="/images/footer/footer-desk-1600.jpg" media="(min-width: 768px)">
-        <img src="/images/footer/footer-mob-800.jpg" alt="" loading="lazy" role="presentation">
-      </picture>
-    </div>
+<!-- FOOTER (shared) -->
+<footer class="site-footer">
+  <div class="footer-banner">
+    <picture>
+      <source srcset="/images/brand/footer-banner-1600x600.webp" media="(min-width: 768px)">
+      <img src="/images/brand/footer-banner-800x300.webp" alt="Happy dogs in Melbourne" loading="lazy">
+    </picture>
+  </div>
 
-    <div class="container footer-top">
-      <!-- Brand / Address -->
-      <div class="footer-brand">
-        <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp"
-             alt="The Woof of Walk Street logo" width="60" height="60" loading="lazy">
-        <div>
-          <strong class="footer-title">The Woof of Walk Street</strong><br>
-          <a class="footer-map" href="https://maps.google.com/?q=South+Melbourne+VIC" target="_blank" rel="noopener">
-            South Melbourne, VIC
-          </a>
-          <span class="footer-dot" aria-hidden="true"> · </span>
-          <span>Mon–Fri 7am–7pm</span>
-        </div>
+  <div class="container footer-top">
+    <div class="footer-brand">
+      <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="60" height="60" loading="lazy">
+      <div>
+        <strong>The Woof of Walk Street</strong><br>
+        <a class="footer-map" href="https://maps.google.com/?q=South+Melbourne+VIC" target="_blank" rel="noopener">South Melbourne, VIC</a>
+        <span> · Mon–Fri 7am–7pm</span>
       </div>
+    </div>
 
-      <!-- Contact + Social -->
-      <div class="footer-contact">
-        <h3 class="footer-heading">Contact Us</h3>
-        <p>
-          Email: <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a><br>
-          Phone: <a href="tel:+61456754050">0456 754 050</a>
-        </p>
-        <div class="footer-socials" aria-label="Social links">
-          <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook">
-            <img src="/images/social/facebook.svg" alt="" width="28" height="28" loading="lazy">
-          </a>
-          <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram">
-            <img src="/images/social/instagram.svg" alt="" width="28" height="28" loading="lazy">
-          </a>
-          <a href="https://x.com/woofofwalkstreet" aria-label="X (Twitter)">
-            <img src="/images/social/twitter.svg" alt="" width="28" height="28" loading="lazy">
-          </a>
-        </div>
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p>
+        Email: <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a><br>
+        Phone: <a href="tel:+61456754050">0456 754 050</a>
+      </p>
+      <div class="footer-socials">
+        <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook"><img src="/images/social/facebook.svg" alt="Facebook"></a>
+        <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram"><img src="/images/social/instagram.svg" alt="Instagram"></a>
+        <a href="https://x.com/woofofwalkstreet" aria-label="Twitter/X"><img src="/images/social/twitter.svg" alt="Twitter/X"></a>
       </div>
-
-      <!-- Footer Nav -->
-      <nav class="footer-nav" aria-label="Footer">
-        <ul>
-          <li><a href="/memberships.html">Memberships</a></li>
-          <li><a href="/services.html">Walking</a></li>
-          <li><a href="/boarding-services.html">Boarding</a></li>
-          <li><a href="/faq.html">FAQ</a></li>
-          <li class="inline">
-            <a href="/privacy.html">Privacy</a>
-            <span class="sep" aria-hidden="true"> · </span>
-            <a href="/terms.html">Terms</a>
-          </li>
-          <li><a href="/sitemap.html">Sitemap</a></li>
-        </ul>
-      </nav>
     </div>
 
-    <div class="footer-bottom">
-      © <span id="y"></span> The Woof of Walk Street
-    </div>
-    <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
-  </footer>
+    <nav class="footer-nav" aria-label="Footer">
+      <ul>
+        <li><a href="/memberships.html">Memberships</a></li>
+        <li><a href="/services.html">Walking</a></li>
+        <li><a href="/boarding-services.html">Boarding</a></li>
+        <li><a href="/faq.html">FAQ</a></li>
+        <li><a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></li>
+        <li><a href="/sitemap.html">Sitemap</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</footer>
+
+<!-- Compare Plans: scroller controls + monthly-limited spots counter -->
+<script>
+  (function(){
+    // Scroller arrows
+    const scroller = document.getElementById('planScroller');
+    document.querySelectorAll('[data-scroll]').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const dir = Number(btn.dataset.scroll);
+        const card = scroller.querySelector('.plan-card');
+        const step = card ? card.getBoundingClientRect().width + 14 : 320;
+        scroller.scrollBy({left: dir * step, behavior: 'smooth'});
+      });
+    });
+
+    // Growth plan monthly counter (per-visitor; resets monthly)
+    const CARD_ID = 'plan-growth';
+    const COUNT_ID = 'growthSpotsCount';
+    const CTA_ID = 'growthJoinCta';
+    const STORAGE_KEY = 'woof_growth_spots';
+    const STORAGE_MONTH_KEY = 'woof_growth_month';
+
+    const card = document.getElementById(CARD_ID);
+    const countEl = document.getElementById(COUNT_ID);
+    const cta = document.getElementById(CTA_ID);
+    if(!card || !countEl || !cta) return;
+
+    const startValue = Number(card.getAttribute('data-spots-start')) || 8;
+    const now = new Date();
+    const monthKey = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}`;
+
+    const storedMonth = localStorage.getItem(STORAGE_MONTH_KEY);
+    if (storedMonth !== monthKey) {
+      localStorage.setItem(STORAGE_MONTH_KEY, monthKey);
+      localStorage.setItem(STORAGE_KEY, String(startValue));
+    }
+
+    const current = Number(localStorage.getItem(STORAGE_KEY));
+    const spots = Number.isFinite(current) ? current : startValue;
+    countEl.textContent = Math.max(spots, 0);
+
+    cta.addEventListener('click', function() {
+      let n = Number(localStorage.getItem(STORAGE_KEY));
+      if (!Number.isFinite(n)) n = startValue;
+      if (n > 0) {
+        n -= 1;
+        localStorage.setItem(STORAGE_KEY, String(n));
+        countEl.textContent = Math.max(n, 0);
+      }
+    });
+  })();
+</script>
 
 </body>
 </html>
-

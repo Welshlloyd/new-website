@@ -1,0 +1,26 @@
+
+/* --- Unlimited Promo Kit (drop-in) --- */
+.promo-ribbon{background:#111;color:#fff;padding:.6rem 1rem;text-align:center;font-weight:600;position:relative}
+.promo-ribbon b{background:#ffe44d;color:#111;padding:.1rem .4rem;border-radius:.25rem;margin:0 .25rem}
+.promo-timer{display:inline-block;font-variant-numeric:tabular-nums;margin-left:.5rem}
+.pricing-card{border:1px solid #e5e7eb;border-radius:12px;padding:1.25rem;background:#fff;position:relative;box-shadow:0 6px 24px rgba(0,0,0,.06)}
+.pricing-card h3{margin:.25rem 0 .5rem}
+.badge{position:absolute;top:-10px;right:-10px;background:#ff477e;color:#fff;font-weight:700;padding:.4rem .6rem;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,.15)}
+.price{font-size:2rem;font-weight:800}
+.price .strike{font-size:1rem;text-decoration:line-through;opacity:.6;margin-left:.5rem}
+.sub{color:#6b7280;font-size:.95rem}
+.cta{display:inline-block;margin-top:12px;padding:.9rem 1.1rem;border-radius:10px;font-weight:700;text-decoration:none;background:#111;color:#fff}
+.cta:hover{opacity:.9}
+.cta-secondary{background:#f3f4f6;color:#111}
+.checklist{margin:.75rem 0 0;padding:0;list-style:none}
+.checklist li{margin:.35rem 0;padding-left:1.4rem;position:relative}
+.checklist li:before{content:"✓";position:absolute;left:0;top:0;color:#10b981;font-weight:900}
+.referral-box{border:1px dashed #cbd5e1;border-radius:10px;padding:.9rem;background:#fbfefc}
+.notice{font-size:.85rem;color:#6b7280;margin-top:.5rem}
+.trust{display:flex;gap:12px;align-items:center;margin-top:.75rem}
+.trust img{height:28px;opacity:.8}
+.sticky-cta{position:sticky;bottom:10px;display:flex;justify-content:center;z-index:50}
+.sticky-cta a{box-shadow:0 10px 24px rgba(0,0,0,.18)}
+.faq details{border:1px solid #e5e7eb;border-radius:10px;padding: .75rem 1rem;margin:.5rem 0;background:#fff}
+.faq summary{cursor:pointer;font-weight:700}
+@media (max-width:680px){.price{font-size:1.6rem}}

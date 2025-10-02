@@ -117,6 +117,28 @@
   </div>
 </section>
 
+  <!-- Blog teaser -->
+  <section>
+    <div class="container">
+      <h2>From the Blog</h2>
+      <div class="blog-list">
+        <article class="blog-card">
+          <h3><a href="/blog/best-dog-walks-south-melbourne.html">Best Dog Walks in South Melbourne</a></h3>
+          <p>Explore our top picks for scenic, safe, and fun local walks.</p>
+        </article>
+        <article class="blog-card">
+          <h3><a href="/blog/why-solo-walks.html">Why Solo Walks Reduce Stress</a></h3>
+          <p>Learn why one-dog-only walks are healthier and safer.</p>
+        </article>
+        <article class="blog-card">
+          <h3><a href="/blog/ethical-dog-walker.html">How to Choose an Ethical Dog Walker</a></h3>
+          <p>Not all walkers are the same — here’s what to look for.</p>
+        </article>
+      </div>
+      <p class="text-center" style="margin-top:20px"><a class="btn button-primary" href="/blog/index.html">Read More Blogs</a></p>
+    </div>
+  </section>
+<!-- FOOTER (shared) -->
 <footer class="site-footer">
   <div class="footer-banner">
     <picture>
@@ -137,12 +159,14 @@
 
     <div class="footer-contact">
       <h3>Contact Us</h3>
-      <p>Email: <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a><br>
-        Phone: <a href="tel:+61456754050">0456 754 050</a></p>
+      <p>
+        Email: <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a><br>
+        Phone: <a href="tel:+61456754050">0456 754 050</a>
+      </p>
       <div class="footer-socials">
-        <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook"><img src="/images/social/facebook.svg" alt=""></a>
-        <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram"><img src="/images/social/instagram.svg" alt=""></a>
-        <a href="https://x.com/woofofwalkstreet" aria-label="Twitter/X"><img src="/images/social/twitter.svg" alt=""></a>
+        <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook"><img src="/images/social/facebook.svg" alt="Facebook"></a>
+        <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram"><img src="/images/social/instagram.svg" alt="Instagram"></a>
+        <a href="https://x.com/woofofwalkstreet" aria-label="Twitter/X"><img src="/images/social/twitter.svg" alt="Twitter/X"></a>
       </div>
     </div>
 
@@ -159,8 +183,60 @@
   </div>
 
   <div class="footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
-  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </footer>
+
+<!-- Compare Plans: scroller controls + monthly-limited spots counter -->
+<script>
+  (function(){
+    // Scroller arrows
+    const scroller = document.getElementById('planScroller');
+    document.querySelectorAll('[data-scroll]').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const dir = Number(btn.dataset.scroll);
+        const card = scroller.querySelector('.plan-card');
+        const step = card ? card.getBoundingClientRect().width + 14 : 320;
+        scroller.scrollBy({left: dir * step, behavior: 'smooth'});
+      });
+    });
+
+    // Growth plan monthly counter (per-visitor; resets monthly)
+    const CARD_ID = 'plan-growth';
+    const COUNT_ID = 'growthSpotsCount';
+    const CTA_ID = 'growthJoinCta';
+    const STORAGE_KEY = 'woof_growth_spots';
+    const STORAGE_MONTH_KEY = 'woof_growth_month';
+
+    const card = document.getElementById(CARD_ID);
+    const countEl = document.getElementById(COUNT_ID);
+    const cta = document.getElementById(CTA_ID);
+    if(!card || !countEl || !cta) return;
+
+    const startValue = Number(card.getAttribute('data-spots-start')) || 8;
+    const now = new Date();
+    const monthKey = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}`;
+
+    const storedMonth = localStorage.getItem(STORAGE_MONTH_KEY);
+    if (storedMonth !== monthKey) {
+      localStorage.setItem(STORAGE_MONTH_KEY, monthKey);
+      localStorage.setItem(STORAGE_KEY, String(startValue));
+    }
+
+    const current = Number(localStorage.getItem(STORAGE_KEY));
+    const spots = Number.isFinite(current) ? current : startValue;
+    countEl.textContent = Math.max(spots, 0);
+
+    cta.addEventListener('click', function() {
+      let n = Number(localStorage.getItem(STORAGE_KEY));
+      if (!Number.isFinite(n)) n = startValue;
+      if (n > 0) {
+        n -= 1;
+        localStorage.setItem(STORAGE_KEY, String(n));
+        countEl.textContent = Math.max(n, 0);
+      }
+    });
+  })();
+</script>
 
 </body>
 </html>

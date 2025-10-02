@@ -1,66 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Unlimited Pawfolio | Membership Details</title>
-  <meta name="description" content="Unlimited membership: one 45-minute solo weekday walk per day (Mon–Fri). VIP support, priority access and member perks.">
-  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unlimited Pawfolio — Weekday Walks | The Woof of Walk Street</title>
+  <meta name="description" content="Unlimited Pawfolio: a solo walk every weekday. One-dog-only, GPS-tracked, photo-proofed. Boutique care in South Melbourne." />
+  <link rel="canonical" href="https://www.woofofwalkstreet.com/membership-unlimited.html" />
+  <link rel="icon" href="/images/brand/favicon.ico" />
+  <link rel="stylesheet" href="/css/mini.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Service",
+    "name":"Unlimited Pawfolio",
+    "serviceType":"Dog Walking Membership",
+    "provider":{
+      "@type":"LocalBusiness",
+      "name":"The Woof of Walk Street",
+      "address":{"@type":"PostalAddress","addressLocality":"South Melbourne","addressRegion":"VIC","addressCountry":"AU"},
+      "url":"https://www.woofofwalkstreet.com"
+    },
+    "areaServed":"South Melbourne, VIC",
+    "description":"A solo dog walk every weekday. One-dog-only, GPS-tracked, photo updates."
+  }
+  </script>
+
   <style>
-    .wrap{max-width:960px;margin:24px auto 40px;padding:0 16px}
-    .hero{padding:40px 16px 12px;text-align:center}
-    .price{font-weight:800;font-size:1.6rem;margin:.2rem 0 1rem}
-    .cta-row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
-    .btn{display:inline-block;padding:11px 16px;border-radius:10px;border:1px solid transparent;text-decoration:none;font-weight:800}
-    .btn-primary{background:#f4c542;color:#111}
-    .btn-ghost{border-color:#2a3440;color:#e7edf5}
-    .card{background:#0f1318;border:1px solid #1d232c;border-radius:14px;padding:18px;margin-top:16px}
-    ul{margin:.4rem 0 .2rem 20px}
-    .note{color:#cfe3ff;margin-top:12px}
+    .m-wrap{max-width:960px;margin:24px auto 44px;padding:0 16px}
+    .m-hero{padding:40px 16px 16px;text-align:center}
+    .m-hero h1{margin:0 0 .35rem}
+    .m-hero p{margin:.25rem auto 1rem;max-width:48ch;color:var(--muted)}
+    .m-price{font-weight:800;font-size:1.8rem;margin:.25rem 0 1rem}
+    .m-cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+    .m-btn{display:inline-block;padding:12px 16px;border-radius:12px;border:1px solid #e5a700;font-weight:800;text-decoration:none;background:var(--brand);color:var(--brand-ink)}
+    .m-card{background:#0f1318;border:1px solid #1d232c;border-radius:14px;padding:18px;margin-top:16px;color:#e6edf3}
+    .m-card h2{color:#f3f6fb;margin:.2rem 0 .6rem}
+    .m-card li{color:#cdd7e1}
+    .edgy-strip{background:#0b0e12;color:#f7f3e8;border-block:4px solid #f5b200}
+    .edgy-inner{max-width:1100px;margin:0 auto;display:grid;gap:18px;grid-template-columns:1fr;align-items:center;padding:26px 16px}
+    .edgy-graphic{display:flex;justify-content:center}
+    .edgy-graphic img{width:min(310px,60vw);height:auto;border-radius:14px;box-shadow:var(--shadow)}
+    .edgy-copy h2{font-size:clamp(1.4rem,3.4vw,2rem);margin:.2rem 0 .4rem;color:#fff}
+    .edgy-copy p{color:#cfd6df;margin:.2rem 0}
+    .edgy-badge{display:inline-block;background:#f5b200;color:#111;font-weight:900;border-radius:999px;padding:8px 14px;box-shadow:var(--shadow);margin-top:6px}
+    @media (min-width:820px){.edgy-inner{grid-template-columns:360px 1fr}.edgy-graphic img{width:320px}}
+    .poster-wrap{max-width:1200px;margin:22px auto 6px;padding:0 16px}
+    .poster{border-radius:16px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--stroke)}
+    .poster img{width:100%;height:auto;display:block}
   </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="brand"><a href="index.html"><img src="images/brand/wordmark.svg" alt="The Woof of Walk Street" class="wordmark"></a></div>
-    <nav class="primary-nav">
-      <a href="index.html">Home</a><a href="memberships.html" aria-current="page">Memberships</a>
-      <a href="dog-walking.html">Walking</a><a href="boarding-services.html">Boarding</a><a href="contact.html">Contact us</a>
+
+<header class="site-header">
+  <div class="navbar container">
+    <a class="brand" href="/">
+      <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="56" height="56" />
+      <strong>The Woof of Walk Street</strong>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/memberships.html" aria-current="page">Memberships</a>
+      <a href="/services.html">Walking</a>
+      <a href="/boarding-services.html">Boarding</a>
+      <a href="/contact.html">Contact Us</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <section class="hero">
-    <h1>Unlimited Pawfolio</h1>
-    <p>One 45-minute solo weekday walk per day (Mon–Fri). The most freedom for busy humans.</p>
-    <div class="price">A$ 1,500 / month</div>
-    <div class="cta-row">
-      <a class="btn btn-primary" href="member-booking.html">Book with Membership Credit</a>
-      <a class="btn btn-ghost" href="https://www.timetopet.com/portal/woofofwalkstreet/create-account" target="_blank">Join & set up billing</a>
+<section class="m-hero">
+  <h1>Unlimited Pawfolio</h1>
+  <p>A solo walk every weekday — maximum routine, zero compromises. Built for high-energy, high-standards pups.</p>
+  <div class="m-price">A$ 1,500 / month</div>
+  <div class="m-cta">
+    <a class="m-btn" href="https://www.timetopet.com/portal/woofofwalkstreet/create-account" target="_blank" rel="noopener">Join up today</a>
+  </div>
+</section>
+
+<section class="edgy-strip" aria-labelledby="edgy-title">
+  <div class="edgy-inner">
+    <div class="edgy-graphic">
+      <img src="/images/memberships/membership_1.webp" alt="Graffiti MEMBERSHIPS with paw prints" loading="lazy" width="320" height="740">
     </div>
-    <p class="note">New to Unlimited? Ask about our limited-time intro incentive for first-month upgrades.</p>
-  </section>
-
-  <div class="wrap">
-    <div class="card">
-      <h2>What’s included</h2>
-      <ul>
-        <li>One 45-minute <strong>solo</strong> walk per weekday (Mon–Fri)</li>
-        <li>GPS tracking & photos after each walk</li>
-        <li>VIP support & priority slots</li>
-        <li>Perks on boarding & special events</li>
-      </ul>
+    <div class="edgy-copy">
+      <h2 id="edgy-title">Vibes: all-in, every weekday.</h2>
+      <p>One dog. One walker. GPS-tracked routes. Photo proof after every walk. It’s the premium routine—on repeat.</p>
+      <span class="edgy-badge">South Melbourne · Mon–Fri</span>
     </div>
+  </div>
+</section>
 
-    <div class="card">
-      <h2>Booking & availability</h2>
-      <ul>
-        <li>Walk window: <strong>7:00am–7:00pm, Monday–Friday</strong> (excl. public holidays)</li>
-        <li>Bookings must be placed via our calendar (Time To Pet); subject to availability</li>
-        <li>Max one walk per weekday; unused days don’t roll over</li>
-      </ul>
-    </div>
-
-    <p style="color:#9bd9c3" class="card">We donate <strong>10% of profits</strong> to The Lost Dogs’ Home (North Melbourne) and local shelters.</p>
+<div class="m-wrap">
+  <div class="m-card">
+    <h2>What’s included</h2>
+    <ul>
+      <li>1 × 45-minute solo walk every weekday (Monday to Friday)</li>
+      <li>GPS tracking & photo updates after each walk</li>
+      <li>Ethical, one-dog-at-a-time service — never pack walked, never car-ferried</li>
+      <li>First access to promos and upgrades</li>
+    </ul>
   </div>
 
-  <footer class="site-footer"><div class="copy">© 2025 The Woof of Walk Street</div></footer>
+  <div class="m-card">
+    <h2>Booking & availability</h2>
+    <ul>
+      <li>Walk window: <strong>7:00am–7:00pm, Monday–Friday</strong> (excl. public holidays)</li>
+      <li>Bookings via our calendar (Time To Pet), subject to availability</li>
+      <li>Unused walks don’t roll over</li>
+    </ul>
+  </div>
+</div>
+
+<section class="poster-wrap" aria-label="Unlimited Pawfolio poster">
+  <div class="poster">
+    <img src="/images/memberships/unlimited-pawfolio-poster.webp" width="1400" height="900" alt="Membership poster: Unlimited Pawfolio" loading="lazy">
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-banner">
+    <picture>
+      <source srcset="/images/brand/footer-banner-1600x600.webp" media="(min-width: 768px)">
+      <img src="/images/brand/footer-banner-800x300.webp" alt="Happy dogs in Melbourne" loading="lazy">
+    </picture>
+  </div>
+
+  <div class="container footer-top">
+    <div class="footer-brand">
+      <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="60" height="60" loading="lazy">
+      <div>
+        <strong>The Woof of Walk Street</strong><br>
+        <a class="footer-map" href="https://maps.google.com/?q=South+Melbourne+VIC" target="_blank" rel="noopener">South Melbourne, VIC</a>
+        <span> · Mon–Fri 7am–7pm</span>
+      </div>
+    </div>
+
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p>Email: <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a><br>
+        Phone: <a href="tel:+61456754050">0456 754 050</a></p>
+      <div class="footer-socials">
+        <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook"><img src="/images/social/facebook.svg" alt=""></a>
+        <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram"><img src="/images/social/instagram.svg" alt=""></a>
+        <a href="https://x.com/woofofwalkstreet" aria-label="Twitter/X"><img src="/images/social/twitter.svg" alt=""></a>
+      </div>
+    </div>
+
+    <nav class="footer-nav" aria-label="Footer">
+      <ul>
+        <li><a href="/memberships.html">Memberships</a></li>
+        <li><a href="/services.html">Walking</a></li>
+        <li><a href="/boarding-services.html">Boarding</a></li>
+        <li><a href="/faq.html">FAQ</a></li>
+        <li><a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></li>
+        <li><a href="/sitemap.html">Sitemap</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</footer>
+
 </body>
 </html>

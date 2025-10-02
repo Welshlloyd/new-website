@@ -1,65 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Starter Sniffvestment | Membership Details</title>
-  <meta name="description" content="4 solo weekday walks per month. Ethical, one-dog-at-a-time walking. GPS tracking & photos included.">
-  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Starter Sniffvestment — 4 Solo Walks / Month | The Woof of Walk Street</title>
+  <meta name="description" content="Starter Sniffvestment: 4 solo weekday walks per month. Ethical, one-dog-at-a-time walking with GPS tracking and photo updates. Based in South Melbourne." />
+  <link rel="canonical" href="https://www.woofofwalkstreet.com/membership-starter.html" />
+  <link rel="icon" href="/images/brand/favicon.ico" />
+  <link rel="stylesheet" href="/css/mini.css" />
   <style>
-    .wrap{max-width:960px;margin:24px auto 40px;padding:0 16px}
-    .hero{padding:40px 16px 12px;text-align:center}
-    .price{font-weight:800;font-size:1.6rem;margin:.2rem 0 1rem}
-    .cta-row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
-    .btn{display:inline-block;padding:11px 16px;border-radius:10px;border:1px solid transparent;text-decoration:none;font-weight:800}
-    .btn-primary{background:#f4c542;color:#111}
-    .btn-ghost{border-color:#2a3440;color:#e7edf5}
-    .card{background:#0f1318;border:1px solid #1d232c;border-radius:14px;padding:18px;margin-top:16px}
-    ul{margin:.4rem 0 .2rem 20px}
+    .m-wrap{max-width:960px;margin:24px auto 44px;padding:0 16px}
+    .m-hero{padding:40px 16px 16px;text-align:center}
+    .m-hero h1{margin:0 0 .35rem}
+    .m-hero p{margin:.25rem auto 1rem;max-width:42ch;color:var(--muted)}
+    .m-price{font-weight:800;font-size:1.8rem;margin:.25rem 0 1rem}
+    .m-cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+
+    /* Dark info cards */
+    .m-card{
+      background:#0f1318;
+      border:1px solid #1d232c;
+      border-radius:14px;
+      padding:18px;
+      margin-top:16px;
+      color:#e6edf3;
+    }
+    .m-card h2{color:#f3f6fb;margin:.2rem 0 .6rem}
+    .m-card li{color:#cdd7e1}
+    .m-card a{color:#8dc2ff}
+
+    /* Buttons */
+    .m-btn{display:inline-block;padding:12px 16px;border-radius:12px;
+      border:1px solid transparent;font-weight:800;text-decoration:none}
+    .m-btn--primary{background:var(--brand);color:var(--brand-ink);border-color:#e5a700}
+    .m-btn--ghost{background:transparent;border-color:#2a3440;color:#e6edf3}
   </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="brand"><a href="index.html"><img src="images/brand/wordmark.svg" alt="The Woof of Walk Street" class="wordmark"></a></div>
-    <nav class="primary-nav">
-      <a href="index.html">Home</a><a href="memberships.html" aria-current="page">Memberships</a>
-      <a href="dog-walking.html">Walking</a><a href="boarding-services.html">Boarding</a><a href="contact.html">Contact us</a>
+
+<!-- HEADER (copied from index.html) -->
+<header class="site-header">
+  <div class="navbar container">
+    <a class="brand" href="/">
+      <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="56" height="56" />
+      <strong>The Woof of Walk Street</strong>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/" >Home</a>
+      <a href="/memberships.html" aria-current="page">Memberships</a>
+      <a href="/services.html">Walking</a>
+      <a href="/boarding-services.html">Boarding</a>
+      <a href="/contact.html">Contact Us</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <section class="hero">
-    <h1>Starter Sniffvestment</h1>
-    <p>4 solo weekday walks per month — a smart way to test the waters and build a routine.</p>
-    <div class="price">A$ 290 / month</div>
-    <div class="cta-row">
-      <a class="btn btn-primary" href="member-booking.html">Book with Membership Credit</a>
-      <a class="btn btn-ghost" href="https://www.timetopet.com/portal/woofofwalkstreet/create-account" target="_blank">Join & set up billing</a>
-    </div>
-  </section>
+<!-- HERO -->
+<section class="m-hero">
+  <h1>Starter Sniffvestment</h1>
+  <p>4 solo weekday walks per month — a smart way to test the waters and build a routine.</p>
+  <div class="m-price">A$ 290 / month</div>
+  <div class="m-cta">
+    <!-- Removed "Book with Membership Credit" -->
+    <a class="m-btn m-btn--primary" href="https://www.timetopet.com/portal/woofofwalkstreet/create-account" target="_blank">
+      Join up today
+    </a>
+  </div>
+</section>
 
-  <div class="wrap">
-    <div class="card">
-      <h2>What’s included</h2>
-      <ul>
-        <li>4 × 45-minute solo walks (Mon–Fri)</li>
-        <li>GPS tracking & photos after each walk</li>
-        <li>Ethical, one-dog-at-a-time service — never pack walked, never car-ferried</li>
-        <li>Member updates & priority for promos</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h2>Booking & availability</h2>
-      <ul>
-        <li>Walk window: <strong>7:00am–7:00pm, Monday–Friday</strong> (excl. public holidays)</li>
-        <li>All bookings via our calendar (Time To Pet) and subject to availability</li>
-        <li>Unused walks don’t roll over</li>
-      </ul>
-    </div>
-
-    <p style="color:#9bd9c3" class="card">We donate <strong>10% of profits</strong> to The Lost Dogs’ Home (North Melbourne) and local shelters.</p>
+<!-- DETAILS -->
+<div class="m-wrap">
+  <div class="m-card">
+    <h2>What’s included</h2>
+    <ul>
+      <li>4 × 45-minute solo walks (Mon–Fri)</li>
+      <li>GPS tracking & photos after each walk</li>
+      <li>Ethical, one-dog-at-a-time service — never pack walked, never car-ferried</li>
+      <li>Member updates & priority for promos</li>
+    </ul>
   </div>
 
-  <footer class="site-footer"><div class="copy">© 2025 The Woof of Walk Street</div></footer>
+  <div class="m-card">
+    <h2>Booking & availability</h2>
+    <ul>
+      <li>Walk window: <strong>7:00am–7:00pm, Monday–Friday</strong> (excl. public holidays)</li>
+      <li>All bookings via our calendar (Time To Pet) and subject to availability</li>
+      <li>Unused walks don’t roll over</li>
+    </ul>
+  </div>
+
+  <p class="m-card" style="color:#9bd9c3">
+    We donate <strong>10% of profits</strong> to The Lost Dogs’ Home (North Melbourne) and local shelters.
+  </p>
+</div>
+
+<!-- FOOTER (copied from index.html) -->
+<footer class="site-footer">
+  <div class="footer-banner">
+    <picture>
+      <source srcset="/images/footer/footer-desk-1600.jpg" media="(min-width: 768px)">
+      <img src="/images/footer/footer-mob-800.jpg" alt="Happy dogs in Melbourne" loading="lazy">
+    </picture>
+  </div>
+
+  <div class="container footer-top">
+    <div class="footer-brand">
+      <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="60" height="60" loading="lazy">
+      <div>
+        <strong>The Woof of Walk Street</strong><br>
+        <a class="footer-map" href="https://maps.google.com/?q=South+Melbourne+VIC" target="_blank" rel="noopener">
+          South Melbourne, VIC
+        </a>
+        <span> · Mon–Fri 7am–7pm</span>
+      </div>
+    </div>
+
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p>
+        Email: <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a><br>
+        Phone: <a href="tel:+61456754050">0456 754 050</a>
+      </p>
+      <div class="footer-socials">
+        <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook">
+          <img src="/images/social/facebook.svg" alt="Facebook">
+        </a>
+        <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram">
+          <img src="/images/social/instagram.svg" alt="Instagram">
+        </a>
+        <a href="https://x.com/woofofwalkstreet" aria-label="Twitter/X">
+          <img src="/images/social/twitter.svg" alt="Twitter/X">
+        </a>
+      </div>
+    </div>
+
+    <nav class="footer-nav" aria-label="Footer">
+      <ul>
+        <li><a href="/memberships.html">Memberships</a></li>
+        <li><a href="/services.html">Walking</a></li>
+        <li><a href="/boarding-services.html">Boarding</a></li>
+        <li><a href="/faq.html">FAQ</a></li>
+        <li>
+          <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a>
+        </li>
+        <li><a href="/sitemap.html">Sitemap</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="footer-bottom">
+    © <span id="year"></span> The Woof of Walk Street
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</footer>
+
 </body>
 </html>

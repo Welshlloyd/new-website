@@ -9,9 +9,6 @@
   <link rel="icon" href="/images/brand/favicon.ico" />
   <link rel="stylesheet" href="/css/mini.css" />
 
-  <!-- Promo styles (drop-in) -->
-  <link rel="stylesheet" href="/assets/css/promo.css">
-
   <!-- Structured data: a list of plans -->
   <script type="application/ld+json">
   {
@@ -41,23 +38,6 @@
   }
   </script>
 
-  <!-- Structured data: Unlimited offer (for promo/SEO) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Offer",
-    "name": "Unlimited Membership – First month 50% off",
-    "priceCurrency": "AUD",
-    "price": "1500.00",
-    "category": "PetService",
-    "availability": "https://schema.org/InStock",
-    "url": "https://www.woofofwalkstreet.com/membership-unlimited.html",
-    "validFrom": "2025-10-02",
-    "eligibleCustomerType": "https://schema.org/NewCustomer",
-    "description": "Unlimited dog walking membership. New members get 50% off the first month ($750); existing members get 50% off a month when their friend joins Unlimited."
-  }
-  </script>
-
   <!-- Page-scoped layout helpers -->
   <style>
     .m-wrap{max-width:1100px;margin:24px auto 44px;padding:0 16px}
@@ -83,14 +63,12 @@
   </style>
 </head>
 <body>
-
 <!-- Promo ribbon -->
 <div class="promo-ribbon">
   🌟 Unlimited Promo: <b>50% OFF</b> first month for new members —
   and <b>50% OFF</b> one month for the referrer when their friend joins.
   <span id="promoTimer" class="promo-timer" aria-live="polite"></span>
 </div>
-
 <!-- Header (shared) -->
 <header class="site-header">
   <div class="navbar container">
@@ -99,8 +77,9 @@
       <strong>The Woof of Walk Street</strong>
     </a>
     <nav class="nav-links" aria-label="Primary">
-      <a href="/">Home</a>
-      <a href="/memberships.html" aria-current="page">Memberships</a>
+       <a href="/">Home</a>
+      <a href="/about.html">About Us</a>
+      <a href="/memberships.html">Memberships</a>
       <a href="/services.html">Walking</a>
       <a href="/boarding-services.html">Boarding</a>
       <a href="/contact.html">Contact Us</a>
@@ -152,97 +131,21 @@
       </div>
     </article>
 
-    <!-- Unlimited (dynamic promo) -->
+    <!-- Unlimited -->
     <article class="plan">
       <figure>
         <img src="images/memberships/membership-unlimited.webp" alt="Unlimited Pawfolio poster" loading="lazy" width="1200" height="800">
       </figure>
-
       <div class="body">
         <h2>Unlimited Pawfolio</h2>
         <div class="pill">Weekday every day</div>
         <p class="meta">A solo walk every weekday · GPS-tracked · photo proof</p>
-
-        <!-- Promo pricing card -->
-        <div class="pricing-card" id="plan-unlimited" data-base-price="1500" data-currency="AUD">
-          <div class="badge">50% OFF 1st Month</div>
-          <h3 style="margin-top:0">Unlimited Membership</h3>
-          <div class="price">
-            <span id="unlPromoPrice"></span>
-            <span class="strike" id="unlBasePrice"></span>
-          </div>
-
-          <div class="sub">
-            First month half price ($750), then $1,500 monthly.
-            <br>Renews automatically at the standard price unless cancelled before the renewal date.
-          </div>
-
-          <ul class="checklist">
-            <li>Unlimited weekday solo walks</li>
-            <li>Priority scheduling + cancellations</li>
-            <li>GPS walk summaries + photo updates</li>
-          </ul>
-
-          <!-- Optional acknowledgement checkbox -->
-          <label style="display:flex;gap:.5rem;align-items:flex-start;margin:.75rem 0 .25rem">
-            <input type="checkbox" id="unlAck">
-            <span style="font-size:.9rem">
-              I understand the membership renews monthly at <strong>$1,500</strong> unless cancelled before renewal.
-            </span>
-          </label>
-
-          <div class="referral-box" style="margin-top:.6rem">
-            <strong>Get 50% OFF a month for referring a friend.</strong>
-            <div style="margin-top:.4rem">
-              <label for="refInput" style="display:block;font-size:.9rem">Who referred you? (Optional)</label>
-              <input id="refInput" type="text" placeholder="Referrer’s name or email"
-                    style="width:100%;padding:.6rem;border:1px solid #cbd5e1;border-radius:8px">
-              <div class="notice">We’ll credit their account once you join Unlimited.</div>
-            </div>
-          </div>
-
-          <div class="trust">
-            <img src="/images/social/google-reviews.svg" alt="Google Reviews">
-            <img src="/images/social/lock.svg" alt="Secure payments">
-          </div>
-
-          <div class="sticky-cta" style="margin-top:.75rem">
-            <a id="unlCta" class="btn" href="#">Start Unlimited – 50% OFF</a>
-            <a class="btn outline" style="margin-left:8px" href="/membership-unlimited.html">Learn more</a>
-          </div>
-
-          <p class="notice" style="margin-top:.5rem">
-            By starting Unlimited you agree that the plan renews monthly at <strong>$1,500</strong> unless cancelled
-            prior to your renewal date. You can cancel anytime from your account or by contacting us.
-          </p>
-
-          <div class="notice">Use code <b>UNLIMITED50</b> if prompted at checkout.</div>
-        </div>
+        <a class="btn outline" href="/membership-unlimited.html">View plan</a>
       </div>
     </article>
 
   </div>
 </div>
-
-<!-- Unlimited Promo – FAQs -->
-<section id="faq" class="faq" style="margin:24px 0">
-  <div class="container">
-    <h3>Unlimited Promo – FAQs</h3>
-    <details><summary>Who qualifies for 50% off?</summary>
-      New Unlimited members get 50% off their first month ($750). If an existing member refers a new Unlimited member, the referrer gets 50% off one future month once the friend joins.
-    </details>
-    <details><summary>How do referrals work?</summary>
-      At sign-up, the new member adds their referrer’s name or email. We credit the referrer’s account with 50% off a month after the new member completes sign-up.
-    </details>
-    <details><summary>Can I stack multiple referral discounts?</summary>
-      You can earn multiple 50%-off months through multiple referrals, but only one discount applies per billing period.
-    </details>
-    <details><summary>Does it auto-renew?</summary>
-      Yes. After your first month at $750, Unlimited renews at the standard monthly price of $1,500 unless you cancel before your renewal date. You can cancel anytime via your account portal or by emailing
-      <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a>.
-    </details>
-  </div>
-</section>
 
  <!-- Gallery teaser -->
   <section>
@@ -361,34 +264,6 @@
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </footer>
 
-<!-- Promo JS (drop-in) -->
-<script>
-  // Optional overrides:
-  window.UNL_PROMO_CODE = 'UNLIMITED50';
-  window.UNL_CHECKOUT_BASE = 'https://www.woofofwalkstreet.com/checkout/unlimited';
-  // window.UNL_PROMO_END_ISO = '2025-10-31T23:59:59'; // uncomment to show countdown
-</script>
-<script src="/assets/js/promo.js" defer></script>
-
-<!-- Enable acknowledgement gating for CTA -->
-<script>
-  (function(){
-    const ack = document.getElementById('unlAck');
-    const cta = document.getElementById('unlCta');
-    if(!ack || !cta) return;
-    // gate CTA until acknowledgement
-    cta.setAttribute('aria-disabled','true');
-    cta.style.opacity = .6;
-    cta.style.pointerEvents = 'none';
-    ack.addEventListener('change', ()=>{
-      const on = ack.checked;
-      cta.style.opacity = on ? '' : .6;
-      cta.style.pointerEvents = on ? '' : 'none';
-      cta.setAttribute('aria-disabled', on ? 'false' : 'true');
-    });
-  })();
-</script>
-
 <!-- Compare Plans: scroller controls + monthly-limited spots counter -->
 <script>
   (function(){
@@ -397,9 +272,9 @@
     document.querySelectorAll('[data-scroll]').forEach(btn=>{
       btn.addEventListener('click', ()=>{
         const dir = Number(btn.dataset.scroll);
-        const card = scroller ? scroller.querySelector('.plan-card') : null;
+        const card = scroller.querySelector('.plan-card');
         const step = card ? card.getBoundingClientRect().width + 14 : 320;
-        if(scroller) scroller.scrollBy({left: dir * step, behavior: 'smooth'});
+        scroller.scrollBy({left: dir * step, behavior: 'smooth'});
       });
     });
 

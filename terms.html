@@ -59,15 +59,105 @@
   </section>
 </main>
 
+<!-- FOOTER (shared) -->
 <footer class="site-footer">
+  <div class="footer-banner">
+    <picture>
+      <source srcset="/images/brand/footer-banner-1600x600.webp" media="(min-width: 768px)">
+      <img src="/images/brand/footer-banner-800x300.webp" alt="Happy dogs in Melbourne" loading="lazy">
+    </picture>
+  </div>
+
   <div class="container footer-top">
     <div class="footer-brand">
-      <img src="/images/brand/logo-lockup-gold.webp" alt="">
-      <div><strong>The Woof of Walk Street</strong><br/>South Melbourne, VIC · Mon–Fri 7am–7pm</div>
+      <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="60" height="60" loading="lazy">
+      <div>
+        <strong>The Woof of Walk Street</strong><br>
+        <a class="footer-map" href="https://maps.google.com/?q=South+Melbourne+VIC" target="_blank" rel="noopener">South Melbourne, VIC</a>
+        <span> · Mon–Fri 7am–7pm</span>
+      </div>
     </div>
+
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p>
+        Email: <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a><br>
+        Phone: <a href="tel:+61456754050">0456 754 050</a>
+      </p>
+      <div class="footer-socials">
+        <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook"><img src="/images/social/facebook.svg" alt="Facebook"></a>
+        <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram"><img src="/images/social/instagram.svg" alt="Instagram"></a>
+        <a href="https://x.com/woofofwalkstreet" aria-label="Twitter/X"><img src="/images/social/twitter.svg" alt="Twitter/X"></a>
+      </div>
+    </div>
+
+    <nav class="footer-nav" aria-label="Footer">
+      <ul>
+        <li><a href="/gallery.html">Photos & Videos</a></li>
+        <li><a href="/terms.html">Terms and Conditions</a></li>
+        <li><a href="/testimonals.html">Testimonails</a></li>
+        <li><a href="/faq.html">FAQs</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="/sitemap.html">Sitemap</a></li>
+      </ul>
+    </nav>
   </div>
+
+  <div class="footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </footer>
 
-<script src="/js/form-validation.js"></script>
+<!-- Compare Plans: scroller controls + monthly-limited spots counter -->
+<script>
+  (function(){
+    // Scroller arrows
+    const scroller = document.getElementById('planScroller');
+    document.querySelectorAll('[data-scroll]').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const dir = Number(btn.dataset.scroll);
+        const card = scroller.querySelector('.plan-card');
+        const step = card ? card.getBoundingClientRect().width + 14 : 320;
+        scroller.scrollBy({left: dir * step, behavior: 'smooth'});
+      });
+    });
+
+    // Growth plan monthly counter (per-visitor; resets monthly)
+    const CARD_ID = 'plan-growth';
+    const COUNT_ID = 'growthSpotsCount';
+    const CTA_ID = 'growthJoinCta';
+    const STORAGE_KEY = 'woof_growth_spots';
+    const STORAGE_MONTH_KEY = 'woof_growth_month';
+
+    const card = document.getElementById(CARD_ID);
+    const countEl = document.getElementById(COUNT_ID);
+    const cta = document.getElementById(CTA_ID);
+    if(!card || !countEl || !cta) return;
+
+    const startValue = Number(card.getAttribute('data-spots-start')) || 8;
+    const now = new Date();
+    const monthKey = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}`;
+
+    const storedMonth = localStorage.getItem(STORAGE_MONTH_KEY);
+    if (storedMonth !== monthKey) {
+      localStorage.setItem(STORAGE_MONTH_KEY, monthKey);
+      localStorage.setItem(STORAGE_KEY, String(startValue));
+    }
+
+    const current = Number(localStorage.getItem(STORAGE_KEY));
+    const spots = Number.isFinite(current) ? current : startValue;
+    countEl.textContent = Math.max(spots, 0);
+
+    cta.addEventListener('click', function() {
+      let n = Number(localStorage.getItem(STORAGE_KEY));
+      if (!Number.isFinite(n)) n = startValue;
+      if (n > 0) {
+        n -= 1;
+        localStorage.setItem(STORAGE_KEY, String(n));
+        countEl.textContent = Math.max(n, 0);
+      }
+    });
+  })();
+</script>
+
 </body>
 </html>

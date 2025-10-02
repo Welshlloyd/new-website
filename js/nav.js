@@ -1,8 +1,6 @@
-
-// Accessible mobile nav: toggle + overlay + focus management
 (function(){
-  const btn = document.querySelector('.nav-toggle');
-  const nav = document.getElementById('primary-nav') || document.querySelector('.nav-links');
+  const btn  = document.querySelector('.nav-toggle');
+  const nav  = document.getElementById('primary-nav') || document.querySelector('.nav-links');
   let overlay = document.querySelector('.nav-overlay');
   if (!overlay) {
     overlay = document.createElement('div');
@@ -10,44 +8,53 @@
     overlay.hidden = true;
     document.body.appendChild(overlay);
   }
-  if (!btn || !nav || !overlay) return;
+  if (!btn || !nav) return;
 
-  const focusables = () => Array.from(nav.querySelectorAll('a,button,[tabindex]:not([tabindex="-1"])'));
-  let lastFocused = null;
+  function setNavTop(){
+    const header = document.querySelector('.site-header');
+    const promo  = document.querySelector('.promo-ribbon');
+    let top = 0;
+    const ignorePromo = document.body.classList.contains('menu-open');
+    if (!ignorePromo && promo && promo.offsetParent !== null) {
+      top += promo.getBoundingClientRect().height;
+    }
+    if (header) top += header.getBoundingClientRect().height;
+    document.documentElement.style.setProperty('--nav-top', top + 'px');
+  }
 
   function openMenu(){
-    lastFocused = document.activeElement;
+    document.body.classList.add('menu-open'); // disable promo sticky
+    setNavTop();
     nav.classList.add('is-open');
+    overlay.hidden = false;
     btn.setAttribute('aria-expanded','true');
     btn.setAttribute('aria-label','Close menu');
-    overlay.hidden = false;
     document.body.classList.add('nav-open');
-    const f = focusables()[0];
-    if (f) f.focus();
+    const first = nav.querySelector('a'); if (first) first.focus();
   }
+
   function closeMenu(){
     nav.classList.remove('is-open');
+    overlay.hidden = true;
     btn.setAttribute('aria-expanded','false');
     btn.setAttribute('aria-label','Open menu');
-    overlay.hidden = true;
     document.body.classList.remove('nav-open');
-    if (lastFocused) lastFocused.focus();
+    document.body.classList.remove('menu-open'); // restore promo sticky
   }
-  function toggleMenu(){ (nav.classList.contains('is-open') ? closeMenu : openMenu)(); }
 
-  btn.addEventListener('click', toggleMenu);
+  function toggle(){
+    nav.classList.contains('is-open') ? closeMenu() : openMenu();
+  }
+
+  btn.addEventListener('click', toggle);
   overlay.addEventListener('click', closeMenu);
-  nav.addEventListener('click', (e)=>{ if(e.target.tagName === 'A' && nav.classList.contains('is-open')) closeMenu(); });
-  document.addEventListener('keydown', (e)=>{
-    if (!nav.classList.contains('is-open')) return;
-    if (e.key === 'Escape') { e.preventDefault(); closeMenu(); }
-    else if (e.key === 'Tab') {
-      const items = focusables(); if (!items.length) return;
-      const first = items[0], last = items[items.length-1];
-      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
-      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
-    }
-  });
-  // Ensure closed on load
-  closeMenu();
+  nav.addEventListener('click', e => { if (e.target.tagName === 'A') closeMenu(); });
+
+  ['resize','orientationchange','scroll'].forEach(ev =>
+    window.addEventListener(ev, () => {
+      if (nav.classList.contains('is-open')) setNavTop();
+    })
+  );
+
+  closeMenu(); // ensure closed on load
 })();

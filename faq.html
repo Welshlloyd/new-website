@@ -131,19 +131,44 @@
 </head>
 <body>
 
-<header class="site-header">
-  <div class="navbar container">
-    <a class="brand" href="/"><img src="/images/brand/logo-lockup-gold-320.webp" width="40" height="40" alt=""> <strong>The Woof of Walk Street</strong></a>
-    <nav class="nav-links" aria-label="Primary">
-      <a href="/">Home</a>
-      <a href="/about.html">About Us</a>
-      <a href="/memberships.html">Memberships</a>
-      <a href="/dog-walking-south-melbourne">Walking</a>
-      <a href="/boarding-services.html">Boarding</a>
-      <a href="/contact.html">Contact Us</a>
-    </nav>
+ <!-- Promo ribbon -->
+  <div class="promo-ribbon">
+    🎉 <strong>50% OFF</strong> Unlimited Daily Walks
+    <span> · 45-minute solo walks · GPS tracked · Photo updates</span>
+    <a href="/membership-unlimited.html" class="promo-cta">Learn More →</a>
   </div>
-</header>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="navbar container" role="navigation" aria-label="Main">
+      <a class="brand" href="/" aria-label="Go to home">
+        <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="56" height="56">
+        <strong>The Woof of Walk Street</strong>
+      </a>
+
+      <!-- Mobile toggle (checkbox method; styled by CSS) -->
+      <input id="nav-toggle" type="checkbox" hidden aria-hidden="true">
+      <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</label>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/services.html">Services</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropbtn" aria-haspopup="true" aria-expanded="false">Walking & Boarding</button>
+          <div class="nav-dropmenu" role="menu">
+            <a role="menuitem" href="/dog-walking-south-melbourne">Dog Walking (South Melbourne)</a>
+            <a role="menuitem" href="/boarding-services.html">Boarding — Weekend Woof Club</a>
+            <a role="menuitem" href="/memberships.html">Unlimited Membership</a>
+          </div>
+        </div>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+        <a class="btn button-primary nav-cta"
+           href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=header&utm_campaign=book_now"
+           rel="noopener" target="_blank">Book Now</a>
+      </nav>
+    </div>
+  </header>
+
 
 <main>
   <section class="hero">

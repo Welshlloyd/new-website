@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dog Walking South Melbourne – Trusted Local Dog Walkers | The Woof of Walk Street</title>
+  <meta name="description" content="Professional dog walking in South Melbourne. Solo or small group walks, Unlimited Membership, and caring, insured walkers who know Albert Park Lake and St Vincent Gardens. Book via our secure Time to Pet portal." />
+  <link rel="canonical" href="https://www.wolfofwalkstreet.com/dog-walking-south-melbourne" />
+  <meta property="og:title" content="Dog Walking South Melbourne – Trusted Local Dog Walkers" />
+  <meta property="og:description" content="Local, reliable dog walking in South Melbourne. Solo or group walks, Unlimited Membership, and experienced, insured handlers. Book online." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.wolfofwalkstreet.com/dog-walking-south-melbourne" />
+  <meta property="og:site_name" content="The Woof of Walk Street" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <style>
+    :root {
+      --brand:#111827; /* near-black */
+      --accent:#ef4444; /* red accent for CTAs */
+      --muted:#6b7280;
+      --bg:#ffffff;
+      --card:#f9fafb;
+    }
+    * { box-sizing:border-box; }
+    body {
+      margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color:var(--brand); background:var(--bg); line-height:1.6;
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+    header.hero {
+      background: linear-gradient(180deg, #fff, #f7f7f7);
+      border-bottom:1px solid #eee;
+      padding: 48px 0;
+    }
+    .badge { display:inline-block; background:var(--card); color:var(--muted); padding:4px 10px; border-radius:999px; font-size:12px; letter-spacing:0.02em; }
+    h1 { font-size: clamp(28px, 3vw, 44px); margin: 12px 0 8px; }
+    p.lead { font-size: clamp(16px, 2vw, 18px); color:#374151; max-width: 75ch; }
+    .cta {
+      display:inline-block; margin-top:16px; background:var(--accent); color:#fff; text-decoration:none;
+      padding: 14px 20px; border-radius: 999px; font-weight:600;
+    }
+    .cta:hover { filter:brightness(0.95); }
+    .grid { display:grid; gap: 24px; grid-template-columns: 1fr; }
+    @media(min-width: 900px){ .grid-2 { grid-template-columns: 1.2fr 1fr; } .grid-3 { grid-template-columns: repeat(3, 1fr);} }
+    section { padding: 40px 0; }
+    section.alt { background:var(--card); border-top:1px solid #eee; border-bottom:1px solid #eee; }
+    h2 { font-size: clamp(22px, 2.4vw, 30px); margin:0 0 12px; }
+    ul.check { padding-left: 18px; }
+    ul.check li { margin: 8px 0; }
+    .card {
+      background:#fff; border:1px solid #eee; border-radius:16px; padding:20px; box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    }
+    .reviews blockquote { margin:0; padding:0; }
+    .reviews cite { display:block; color:var(--muted); font-style:normal; margin-top:6px; }
+    footer.cta {
+      text-align:center; padding: 48px 24px; background:#111827; color:#fff;
+    }
+    footer.cta a { background:#fff; color:#111827; }
+    .breadcrumbs { font-size: 12px; color: var(--muted); margin-bottom: 8px;}
+    .breadcrumbs a { color: var(--muted); text-decoration:none; }
+    .breadcrumbs a:hover{ text-decoration:underline; }
+    .muted{ color: var(--muted); }
+    .sr-only{ position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden; }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "PetService",
+    "name": "The Woof of Walk Street",
+    "url": "https://www.wolfofwalkstreet.com/dog-walking-south-melbourne",
+    "areaServed": {
+      "@type":"AdministrativeArea",
+      "name":"South Melbourne VIC"
+    },
+    "serviceType": "Dog walking",
+    "telephone": "PHONE_NUMBER",
+    "priceRange": "$$",
+    "hasOfferCatalog": {
+      "@type":"OfferCatalog",
+      "name":"Dog Walking Options",
+      "itemListElement":[
+        {
+          "@type":"Offer",
+          "name":"Solo Walks (45 mins)",
+          "itemOffered":{"@type":"Service","name":"Solo Dog Walks"}
+        },
+        
+        {
+          "@type":"Offer",
+          "name":"Unlimited Dog Walking Membership",
+          "itemOffered":{"@type":"Service","name":"Unlimited Membership","url":"https://www.wolfofwalkstreet.com/unlimited-dog-walking-membership"}
+        }
+      ]
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.wolfofwalkstreet.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Dog Walking South Melbourne",
+        "item": "https://www.wolfofwalkstreet.com/dog-walking-south-melbourne"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <nav class="breadcrumbs"><a href="/">Home</a> › Dog Walking South Melbourne</nav>
+      <span class="badge">South Melbourne · Dog Walking</span>
+      <h1>Dog Walking South Melbourne – Trusted Local Dog Walkers</h1>
+      <p class="lead">
+        Busy schedule? We’ll make sure your pup gets the exercise, love, and attention they deserve.
+        Our professional team provides reliable <strong>dog walking in South Melbourne</strong>, tailored to your dog’s energy level and personality.
+        From <strong>Albert Park Lake</strong> to <strong>St Vincent Gardens</strong>, we know the best local routes and keep your dog safe, happy, and enriched.
+        Book your first walk today through our secure Time to Pet portal.
+      </p>
+      <a class="cta" href="TIME_TO_PET_URL?utm_source=website&utm_medium=button&utm_campaign=dog_walking_south_melbourne" onclick="if(window.gtag){gtag('event','click',{event_category:'CTA',event_label:'Book Dog Walking South Melbourne'});}">Book your first walk</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="container grid grid-2">
+      <div>
+        <h2>Why Choose Woof of Walk Street for Dog Walking in South Melbourne</h2>
+        <ul class="check">
+          <li>Local dog walkers who know Albert Park Lake, St Vincent Gardens, and South Melbourne streets.</li>
+          <li>solo walks, GPS tracked with photographs to your phone.</li>
+          <li>Experienced, insured, and pet first aid trained.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Our Dog Walking Options</h2>
+        <ul class="check">
+          <li><strong>Solo Walks</strong> – 45 minutes, GPS tracked and photographs to your phone.</li>
+          <li><strong>Unlimited Membership</strong> – the best value. <a href="/unlimited-dog-walking-membership">Learn more →</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="container grid grid-3">
+        <div>
+          <h2>Benefits of Regular Walks</h2>
+          <ul class="check">
+            <li>Exercise &amp; enrichment that keeps dogs happy and healthy.</li>
+            <li>Positive socialisation to build confidence.</li>
+            <li>Improved behaviour by reducing boredom and stress.</li>
+          </ul>
+        </div>
+        <div class="card reviews">
+          <h2>Customer Reviews</h2>
+          <blockquote>
+            “Best dog walkers in South Melbourne! My Labrador loves his daily adventures.”
+            <cite>— Sarah M.</cite>
+          </blockquote>
+          <blockquote style="margin-top:12px;">
+            “Reliable, caring, and professional. Our pup can’t wait for his walks!”
+            <cite>— James T.</cite>
+          </blockquote>
+          <p class="muted" style="margin-top:8px;">Tip: replace these with embedded Google reviews that mention “South Melbourne”.</p>
+        </div>
+        <div class="card">
+          <h2>Where We Walk</h2>
+          <p>South Melbourne, Albert Park Lake, Port Melbourne, Middle Park, and nearby suburbs. Safety-first routes tailored to your dog.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="cta-bottom">
+      <h2 class="sr-only">Ready to Book?</h2>
+      <p>Give your pup the walks they deserve. Our trusted local team is ready to help.</p>
+      <a class="cta" href="TIME_TO_PET_URL?utm_source=website&utm_medium=button&utm_campaign=dog_walking_south_melbourne_bottom" onclick="if(window.gtag){gtag('event','click',{event_category:'CTA',event_label:'Book Dog Walking South Melbourne (bottom)'});}">Book Dog Walking in South Melbourne</a>
+    </section>
+  </main>
+
+  <footer class="cta">
+    <div class="container">
+      <p><strong>The Woof of Walk Street</strong> · South Melbourne · <a href="tel:0456754050" style="text-decoration:none;">PHONE_NUMBER</a></p>
+      <a class="cta" href="TIME_TO_PET_URL?utm_source=website&utm_medium=button&utm_campaign=dog_walking_footer" onclick="if(window.gtag){gtag('event','click',{event_category:'CTA',event_label:'Book (footer)'});}">Book now</a>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,6 +1,6 @@
 /* ---------------------------------------------------
-   Woof of Walk Street — Mini Styles (v3.4)
-   Unified buttons, polished cards, featured plan
+   Woof of Walk Street — Mini Styles (v4.0)
+   Unified buttons, polished cards, responsive header/footer
 --------------------------------------------------- */
 :root{
   --bg:#fffdf8;--text:#1e1e1e;--muted:#585858;--brand:#f5b200;--brand-ink:#1a1a1a;
@@ -19,6 +19,7 @@ img{max-width:100%;height:auto;display:block}
 a{color:inherit;text-decoration:none}
 a:hover,a:focus{text-decoration:underline}
 .container{max-width:var(--maxw);margin:0 auto;padding:0 16px}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
 /* Header/Nav */
 .site-header{background:#fff;border-bottom:1px solid var(--stroke)}
@@ -26,19 +27,45 @@ a:hover,a:focus{text-decoration:underline}
 .brand{display:flex;align-items:center;gap:10px;min-width:0}
 .brand img{width:40px;height:40px;border-radius:8px}
 .brand strong{font-size:1.05rem;font-weight:800;white-space:nowrap}
+
+/* Primary links */
 .nav-links{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
 .nav-links a{padding:8px 10px;border-radius:8px;font-weight:600;color:var(--muted);transition:background .2s,color .2s}
 .nav-links a[aria-current="page"]{color:var(--text);background:#f8f4ea;font-weight:700}
+
+/* Header CTA */
+.nav-cta{margin-left:.25rem}
+
+/* Dropdown (desktop hover) */
+.nav-dropdown{position:relative;display:inline-block}
+.nav-dropbtn{background:transparent;border:0;cursor:pointer;padding:8px 10px;border-radius:8px;font-weight:700;color:var(--muted)}
+.nav-dropbtn:hover{background:#f8f4ea;color:var(--text)}
+.nav-dropmenu{
+  display:none;position:absolute;top:100%;left:0;min-width:260px;background:#fff;border:1px solid var(--stroke);
+  box-shadow:0 10px 24px rgba(0,0,0,.06);border-radius:12px;padding:6px;z-index:10
+}
+.nav-dropdown:hover .nav-dropmenu{display:block}
+.nav-dropmenu a{display:block;padding:10px 10px;border-radius:8px}
+.nav-dropmenu a:hover{background:#f8f4ea;text-decoration:none}
+
+/* Mobile toggle (checkbox or JS) */
 .nav-toggle{display:none;background:transparent;border:0;font-size:1.5rem;cursor:pointer}
-@media(max-width:720px){
+@media(max-width:900px){
   .nav-toggle{display:block}
   .nav-links{
     position:absolute;top:58px;left:0;right:0;display:none;flex-direction:column;background:#fff;
     border-top:1px solid var(--stroke);box-shadow:0 10px 24px rgba(0,0,0,.06);padding:12px;z-index:1000
   }
+  /* Show when checkbox method is used */
+  #nav-toggle:checked ~ .nav-links{display:flex}
+  /* Show when JS adds class */
   .nav-links.is-open{display:flex}
-  .nav-links a{width:100%;padding:12px 8px}
+  .nav-links a,.nav-dropbtn{width:100%;padding:12px 8px;text-align:left}
+  .nav-dropdown:hover .nav-dropmenu{display:none} /* disable hover on mobile */
+  .nav-dropmenu{position:static;box-shadow:none;border:0;padding:0}
 }
+
+/* Optional overlay when menu open */
 body.nav-open{overflow:hidden}
 .nav-overlay{position:fixed;inset:0;background:rgba(0,0,0,.25);z-index:900}
 
@@ -52,25 +79,12 @@ body.nav-open{overflow:hidden}
 
 /* Promo CTA button — unified style */
 .promo-cta {
-  display:inline-block;
-  padding:10px 18px;
-  border-radius:999px;
-  background:var(--accent);   /* black */
-  color:#fff;
-  font-weight:800;
-  border:1px solid #111;
-  box-shadow:var(--shadow);
-  text-align:center;
-  white-space:nowrap;
-  transition:background .2s,color .2s,transform .15s,box-shadow .15s;
+  display:inline-block;padding:10px 18px;border-radius:999px;background:var(--accent);color:#fff;
+  font-weight:800;border:1px solid #111;box-shadow:var(--shadow);text-align:center;white-space:nowrap;
+  transition:background .2s,color .2s,transform .15s,box-shadow .15s
 }
-.promo-cta:hover,
-.promo-cta:focus {
-  background:var(--brand);    /* orange hover */
-  color:var(--brand-ink);
-  transform:scale(1.05);
-  box-shadow:0 6px 18px rgba(245,178,0,0.4);
-  text-decoration:none;
+.promo-cta:hover,.promo-cta:focus{
+  background:var(--brand);color:var(--brand-ink);transform:scale(1.05);box-shadow:0 6px 18px rgba(245,178,0,0.4);text-decoration:none
 }
 
 /* Hero */
@@ -81,44 +95,20 @@ body.nav-open{overflow:hidden}
 .hero h1{margin:0 0 10px;font-size:clamp(1.6rem,3.6vw,2.4rem);line-height:1.2}
 .hero .subhead{margin:0 0 16px;color:var(--muted);font-size:1.05rem}
 .hero img{margin:8px auto 14px;border-radius:12px}
-.hero .cta-buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}
+.hero .cta-buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px;justify-content:center}
 
 /* ---------------------------------------------------
    Global Buttons — black base, orange hover w/ pop
 --------------------------------------------------- */
-.btn,
-.cta-button,
-.button,
-.button-primary,
-.button-secondary,
-.btn-ghost,
-input[type="submit"],
-button[type="submit"] {
-  display:inline-block;
-  padding:12px 18px;
-  border-radius:999px;
-  background:var(--accent);   /* black */
-  color:#fff;
-  font-weight:800;
-  border:1px solid #111;
-  box-shadow:var(--shadow);
-  text-align:center;
-  cursor:pointer;
-  transition:background .2s,color .2s,transform .15s,box-shadow .15s;
+.btn,.cta-button,.button,.button-primary,.button-secondary,.btn-ghost,
+input[type="submit"],button[type="submit"]{
+  display:inline-block;padding:12px 18px;border-radius:999px;background:var(--accent);color:#fff;
+  font-weight:800;border:1px solid #111;box-shadow:var(--shadow);text-align:center;cursor:pointer;
+  transition:background .2s,color .2s,transform .15s,box-shadow .15s
 }
-.btn:hover,
-.cta-button:hover,
-.button:hover,
-.button-primary:hover,
-.button-secondary:hover,
-.btn-ghost:hover,
-input[type="submit"]:hover,
-button[type="submit"]:hover {
-  background:var(--brand);    /* orange */
-  color:var(--brand-ink);
-  transform:scale(1.05);
-  box-shadow:0 6px 18px rgba(245,178,0,0.4);
-  text-decoration:none;
+.btn:hover,.cta-button:hover,.button:hover,.button-primary:hover,.button-secondary:hover,.btn-ghost:hover,
+input[type="submit"]:hover,button[type="submit"]:hover{
+  background:var(--brand);color:var(--brand-ink);transform:scale(1.05);box-shadow:0 6px 18px rgba(245,178,0,0.4);text-decoration:none
 }
 
 /* Sections / Cards / Grids / Gallery */
@@ -149,9 +139,7 @@ section{padding-block:clamp(28px,4vw,48px)}
 }
 .blog-card:hover{transform:translateY(-3px);box-shadow:0 6px 16px rgba(0,0,0,.15)}
 .blog-card img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
-.blog-card h2,.blog-card h3,.blog-card a{
-  color:var(--text)!important;font-weight:700;font-size:1.05rem;margin:12px 14px 6px
-}
+.blog-card h2,.blog-card h3,.blog-card a{color:var(--text)!important;font-weight:700;font-size:1.05rem;margin:12px 14px 6px}
 .blog-card a{text-decoration:none}
 .blog-card a:hover{color:var(--brand-ink);text-decoration:underline}
 .blog-card p{margin:0 14px 14px;color:var(--muted)}
@@ -161,64 +149,79 @@ section{padding-block:clamp(28px,4vw,48px)}
 .quotes{display:grid;gap:14px}
 .quote p{margin:0 0 4px}
 
-/* Footer nav */
+/* ===================================================
+   FOOTER — compact, responsive, mobile-friendly
+=================================================== */
+.site-footer{background:#fff;border-top:1px solid var(--stroke);padding:28px 0 18px}
+.footer-banner img{width:100%}
+
+.footer-grid{
+  display:grid;gap:24px;
+  grid-template-columns:1.2fr 1fr 1fr 1fr; /* desktop */
+  align-items:start
+}
+.footer-brand img.footer-logo{border-radius:12px}
+.footer-brand p{margin:.35rem 0 0;color:var(--muted)}
+.footer-map{text-decoration:underline;text-underline-offset:2px}
+
+.footer-col h3{font-size:1rem;margin:.25rem 0 .5rem}
+.footer-col ul{list-style:none;margin:0;padding:0}
+.footer-col li{margin:.35rem 0}
+.footer-col a,.footer-brand a{line-height:1.6}
+
+.footer-socials a{display:inline-flex;align-items:center;margin-right:10px}
+.footer-socials img{width:24px;height:24px}
+
+.footer-geo,.footer-bottom{text-align:center;opacity:.9;margin-top:12px}
+.footer-bottom{opacity:.8}
+
+/* Collapsible (mobile) */
+.collapsible .collapse-btn{
+  display:none; /* visible on mobile below */
+}
+
+/* Tablet */
+@media (max-width:1024px){
+  .footer-grid{grid-template-columns:1fr 1fr 1fr}
+}
+
+/* Mobile: 2 columns + accordions collapsed */
+@media (max-width:640px){
+  .footer-grid{grid-template-columns:1fr 1fr;gap:16px}
+  .footer-brand{grid-column:1 / -1}
+  .collapsible .collapse-btn{
+    display:block;width:100%;text-align:left;background:#f7f7f7;border:1px solid #eee;border-radius:8px;
+    padding:.6rem .75rem;font-weight:700
+  }
+  .collapsible ul{padding:.5rem .75rem;border-left:2px solid #eee;margin:.25rem 0 0}
+  /* If JS sets [hidden] we respect it */
+  .collapsible ul[hidden]{display:none}
+}
+
+/* Footer nav (legacy support) */
 .footer-nav ul{display:grid;gap:8px}
 
 /* ---------------------------------------------------
    Membership Cards — polish & highlight
 --------------------------------------------------- */
-.grid-3 .card {
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-  text-align:center;
-  padding:20px;
-  gap:12px;
-  transition:transform .2s ease,box-shadow .2s ease;
+.grid-3 .card{
+  display:flex;flex-direction:column;justify-content:space-between;text-align:center;
+  padding:20px;gap:12px;transition:transform .2s ease,box-shadow .2s ease
 }
-.grid-3 .card:hover {
-  transform:translateY(-6px);
-  box-shadow:0 10px 20px rgba(0,0,0,0.12),0 4px 10px rgba(0,0,0,0.08);
-}
+.grid-3 .card:hover{transform:translateY(-6px);box-shadow:0 10px 20px rgba(0,0,0,0.12),0 4px 10px rgba(0,0,0,0.08)}
 
 /* Card titles */
-.grid-3 .card h3 {
-  font-size:1.25rem;
-  font-weight:800;
-  color:var(--brand);
-  margin:0 0 8px;
-  letter-spacing:.3px;
-  text-transform:uppercase;
-}
+.grid-3 .card h3{font-size:1.25rem;font-weight:800;color:var(--brand);margin:0 0 8px;letter-spacing:.3px;text-transform:uppercase}
 
 /* Description */
-.grid-3 .card p {margin:0 0 16px;color:var(--muted)}
+.grid-3 .card p{margin:0 0 16px;color:var(--muted)}
 
 /* Divider above button */
-.grid-3 .card .btn,
-.grid-3 .card .cta-button {
-  margin-top:16px;
-  padding-top:14px;
-  border-top:1px solid var(--stroke);
-  align-self:center;
-  width:100%;
-  max-width:220px;
-  transition:border-color .2s ease;
+.grid-3 .card .btn,.grid-3 .card .cta-button{
+  margin-top:16px;padding-top:14px;border-top:1px solid var(--stroke);align-self:center;width:100%;max-width:220px;transition:border-color .2s ease
 }
-.grid-3 .card:hover .btn,
-.grid-3 .card:hover .cta-button {
-  border-top-color:var(--brand);
-}
+.grid-3 .card:hover .btn,.grid-3 .card:hover .cta-button{border-top-color:var(--brand)}
 
 /* Featured Unlimited Pawfolio plan */
-.grid-3 .card.featured {
-  border:2px solid var(--brand);
-  background:#fffaf0;
-  transform:scale(1.02);
-  z-index:1;
-}
-.grid-3 .card.featured:hover {
-  transform:scale(1.04) translateY(-6px);
-  box-shadow:0 12px 22px rgba(0,0,0,0.15),0 5px 12px rgba(0,0,0,0.1);
-}
-
+.grid-3 .card.featured{border:2px solid var(--brand);background:#fffaf0;transform:scale(1.02);z-index:1}
+.grid-3 .card.featured:hover{transform:scale(1.04) translateY(-6px);box-shadow:0 12px 22px rgba(0,0,0,0.15),0 5px 12px rgba(0,0,0,0.1)}

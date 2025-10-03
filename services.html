@@ -17,7 +17,7 @@
   <meta property="og:url" content="https://www.woofofwalkstreet.com/services.html">
   <meta property="og:image" content="https://www.woofofwalkstreet.com/images/brand/hero-dog-skyline-1200.webp">
 
-  <!-- Breadcrumbs -->
+  <!-- Breadcrumbs JSON-LD -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -63,104 +63,183 @@
   </script>
 </head>
 <body>
-<header class="site-header">
-  <div class="navbar container">
-    <a class="brand" href="/"><img src="/images/brand/logo-lockup-gold.webp" width="56" height="56" alt="The Woof of Walk Street"><strong>The Woof of Walk Street</strong></a>
-    <nav class="nav-links" aria-label="Primary">
-      <a href="/">Home</a>
-      <a href="/about.html">About Us</a>
-      <a href="/memberships.html">Memberships</a>
-      <a href="/services.html" aria-current="page">Services</a>
-      <a href="/dog-walking-south-melbourne">Walking</a>
-      <a href="/boarding-services.html">Boarding</a>
-      <a href="/contact.html">Contact Us</a>
-    </nav>
-  </div>
-</header>
 
-<main>
-  <section class="hero">
-    <div class="container">
-      <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="/">Home</a> › Services</nav>
-      <h1>Our Services in South Melbourne</h1>
-      <p class="subhead">Two core offerings designed for calm, personalised care — backed by GPS tracking, photo updates, and local knowledge.</p>
-    </div>
-  </section>
-
-  <section>
-    <div class="container grid grid-2">
-      <!-- Dog Walking -->
-      <article class="card">
-        <h2>Solo Dog Walking (45 Minutes)</h2>
-        <p>One-on-one walks only — no packs. GPS route + photo update after every session. Local routes across South Melbourne, Albert Park Lake & nearby parks.</p>
-        <ul class="list-check">
-          <li>Solo 45-minute walks (weekday focus)</li>
-          <li>GPS tracking + photo updates</li>
-          <li>Great for anxious or reactive pups</li>
-        </ul>
-        <div class="stack-sm">
-          <a class="btn button-primary" href="/dog-walking-south-melbourne">Explore Dog Walking</a>
-          <a class="btn button-secondary" href="/unlimited-dog-walking-membership">See Unlimited Membership</a>
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="navbar container" role="navigation" aria-label="Main">
+      <a class="brand" href="/" aria-label="Go to home">
+        <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="56" height="56">
+        <strong>The Woof of Walk Street</strong>
+      </a>
+      <input id="nav-toggle" type="checkbox" hidden aria-hidden="true">
+      <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</label>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/services.html" aria-current="page">Services</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropbtn" aria-haspopup="true" aria-expanded="false">Walking & Boarding</button>
+          <div class="nav-dropmenu" role="menu">
+            <a role="menuitem" href="/dog-walking-south-melbourne">Dog Walking (South Melbourne)</a>
+            <a role="menuitem" href="/boarding-services.html">Boarding — Weekend Woof Club</a>
+            <a role="menuitem" href="/memberships.html">Unlimited Membership</a>
+          </div>
         </div>
-      </article>
-
-      <!-- Boarding -->
-      <article class="card">
-        <h2>Weekend Woof Club (Boarding — One Guest Only)</h2>
-        <p>Calm, crate-free, home-style boarding. We host <strong>one guest at a time</strong> with daily photo updates so you can truly relax.</p>
-        <ul class="list-check">
-          <li>One guest only — low-stress stays</li>
-          <li>Daily walks & updates included</li>
-          <li>Serving South Melbourne & surrounds</li>
-        </ul>
-        <div class="stack-sm">
-          <a class="btn button-primary" href="/boarding-services.html">Explore Boarding</a>
-          <a class="btn" target="_blank" rel="noopener" href="https://www.timetopet.com/portal/woofofwalkstreet">Check Availability</a>
-        </div>
-      </article>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+        <a class="btn button-primary nav-cta"
+           href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=header&utm_campaign=book_now"
+           target="_blank" rel="noopener">Book Now</a>
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <!-- Optional: quick FAQs for extra content (helps avoid “thin page”) -->
-  <section class="section alt">
-    <div class="container">
-      <h2>FAQs</h2>
-      <details><summary>Do you offer group walks?</summary><p>No — solo walks only for calm, focused outings.</p></details>
-      <details><summary>Which areas do you serve?</summary><p>South Melbourne, Albert Park, Port Melbourne, Middle Park, and Southbank.</p></details>
-      <details><summary>Do you board more than one dog at a time?</summary><p>No — boarding is one guest only for a quiet, low-stress stay.</p></details>
-    </div>
-  </section>
-</main>
-
-<footer class="site-footer">
-  <div class="container footer-top">
-    <div class="footer-brand">
-      <img src="/images/brand/logo-lockup-gold.webp" alt="">
-      <div><strong>The Woof of Walk Street</strong><br/>South Melbourne, VIC · Mon–Fri 7am–7pm</div>
-    </div>
-    <div class="footer-contact">
-      <h3>Contact Us</h3>
-      <p>Email: <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a></p>
-      <p>Phone: <a href="tel:+61456754050">0456 754 050</a></p>
-      <div class="footer-socials">
-        <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram"><img src="/images/social/icon-instagram.svg" alt=""></a>
-        <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook"><img src="/images/social/icon-facebook.svg" alt=""></a>
-        <a href="https://x.com/woofofwalkstreet" aria-label="X"><img src="/images/social/icon-x.svg" alt=""></a>
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="/">Home</a> › Services</nav>
+        <h1>Our Services in South Melbourne</h1>
+        <p class="subhead">Two core offerings designed for calm, personalised care — backed by GPS tracking, photo updates, and local knowledge.</p>
       </div>
+    </section>
+
+    <!-- SERVICES GRID -->
+    <section>
+      <div class="container grid grid-2">
+        <!-- Dog Walking -->
+        <article class="card">
+          <img src="/images/pages/dog-walking/dog-albert-park-lake-south-melbourne.jpg" alt="Dog enjoying a solo walk at Albert Park Lake" loading="lazy" style="border-radius:10px;margin-bottom:12px">
+          <h2>Solo Dog Walking (45 Minutes)</h2>
+          <p>One-on-one walks only — no packs. GPS route + photo update after every session. Local routes across South Melbourne, Albert Park Lake & nearby parks.</p>
+          <ul class="list-check">
+            <li>Solo 45-minute walks (weekday focus)</li>
+            <li>GPS tracking + photo updates</li>
+            <li>Great for anxious or reactive pups</li>
+          </ul>
+          <div class="stack-sm">
+            <a class="btn button-primary" href="/dog-walking-south-melbourne">Explore Dog Walking</a>
+            <a class="btn button-secondary" href="/unlimited-dog-walking-membership">See Unlimited Membership</a>
+          </div>
+        </article>
+
+        <!-- Boarding -->
+        <article class="card">
+          <img src="/images/photos/dog-boarding-relaxed.webp" alt="Dog resting during boutique boarding stay" loading="lazy" style="border-radius:10px;margin-bottom:12px">
+          <h2>Weekend Woof Club (Boarding — One Guest Only)</h2>
+          <p>Calm, crate-free, home-style boarding. We host <strong>one guest at a time</strong> with daily photo updates so you can truly relax.</p>
+          <ul class="list-check">
+            <li>One guest only — low-stress stays</li>
+            <li>Daily walks & updates included</li>
+            <li>Serving South Melbourne & surrounds</li>
+          </ul>
+          <div class="stack-sm">
+            <a class="btn button-primary" href="/boarding-services.html">Explore Boarding</a>
+            <a class="btn" target="_blank" rel="noopener" href="https://www.timetopet.com/portal/woofofwalkstreet">Check Availability</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXTRA PHOTOS -->
+    <section>
+      <div class="container gallery-grid">
+        <figure><img src="/images/gallery/dog-sunset-walk.jpg" alt="Sunset stroll in South Melbourne" loading="lazy"></figure>
+        <figure><img src="/images/gallery/dog-weekend-woof.jpg" alt="Relaxed dog at Weekend Woof Club" loading="lazy"></figure>
+        <figure><img src="/images/gallery/dog-digging-sand.jpg" alt="Dog enjoying playtime at the beach" loading="lazy"></figure>
+        <figure><img src="/images/highlights/dog-cozy-nap.jpg" alt="Cozy nap during boutique boarding" loading="lazy"></figure>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="section alt">
+      <div class="container">
+        <h2>FAQs</h2>
+        <details><summary>Do you offer group walks?</summary><p>No — solo walks only for calm, focused outings.</p></details>
+        <details><summary>Which areas do you serve?</summary><p>South Melbourne, Albert Park, Port Melbourne, Middle Park, and Southbank.</p></details>
+        <details><summary>Do you board more than one dog at a time?</summary><p>No — boarding is one guest only for a quiet, low-stress stay.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-banner">
+      <picture>
+        <source srcset="/images/brand/footer-banner-1600x600.webp" media="(min-width: 768px)">
+        <img src="/images/brand/footer-banner-800x300.webp" alt="Happy dogs in Melbourne" loading="lazy">
+      </picture>
     </div>
-    <nav aria-label="Footer">
-      <ul style="list-style:none;padding:0;margin:0;">
-        <li><a href="/memberships.html">Memberships</a></li>
-        <li><a href="/dog-walking-south-melbourne">Walking</a></li>
-        <li><a href="/boarding-services.html">Boarding</a></li>
-        <li><a href="/faq.html">FAQ</a></li>
-        <li><a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></li>
-        <li><a href="/sitemap.html">Sitemap</a></li>
-      </ul>
-    </nav>
-  </div>
-  <div class="container" style="text-align:center;margin-top:18px;opacity:.8;">© <span id="y"></span> The Woof of Walk Street.</div>
-  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
-</footer>
+
+    <div class="container footer-grid">
+      <!-- Brand / NAP -->
+      <section class="footer-brand">
+        <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="60" height="60" loading="lazy">
+        <p><strong>The Woof of Walk Street</strong><br>
+          <a class="footer-map" href="https://maps.app.goo.gl/YnEoSPwhGocUZyWL9?g_st=ipc" target="_blank" rel="noopener">South Melbourne, VIC</a> · Mon–Fri 7am–7pm<br>
+          <a href="tel:+61456754050">+61 456 754 050</a> · <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a>
+        </p>
+        <div class="footer-socials">
+          <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram"><img src="/images/social/instagram.svg" alt="" width="24" height="24"></a>
+          <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook"><img src="/images/social/facebook.svg" alt="" width="24" height="24"></a>
+          <a href="https://x.com/woofofwalkstreet" aria-label="X"><img src="/images/social/x.svg" alt="" width="24" height="24"></a>
+        </div>
+        <p><a class="btn button-primary" target="_blank" rel="noopener"
+          href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=footer&utm_campaign=book_now_footer">Book Now</a></p>
+      </section>
+
+      <!-- Primary links -->
+      <nav class="footer-col" aria-label="Primary">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="/services.html">All Services</a></li>
+          <li><a href="/dog-walking-south-melbourne">Dog Walking South Melbourne</a></li>
+          <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
+          <li><a href="/memberships.html">Unlimited Membership</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Support -->
+      <section class="footer-col collapsible">
+        <button class="collapse-btn" aria-expanded="false" aria-controls="support-list">Support</button>
+        <ul id="support-list">
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/testimonials.html">Testimonials</a></li>
+          <li><a href="/gallery.html">Photos & Videos</a></li>
+          <li><a href="/blog/index.html">Blog</a></li>
+          <li><a href="/faq.html">FAQs</a></li>
+        </ul>
+      </section>
+
+      <!-- Legal -->
+      <section class="footer-col collapsible">
+        <button class="collapse-btn" aria-expanded="false" aria-controls="legal-list">Legal</button>
+        <ul id="legal-list">
+          <li><a href="/privacy.html">Privacy</a></li>
+          <li><a href="/terms.html">Terms</a></li>
+          <li><a href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="container footer-geo">
+      Solo Dog Walking & Boutique Boarding across <strong>South Melbourne</strong>, <strong>Albert Park</strong>, <strong>Port Melbourne</strong>, <strong>Middle Park</strong> and <strong>Southbank</strong>.
+    </div>
+
+    <div class="container footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+    <script>
+      document.querySelectorAll('.collapsible .collapse-btn').forEach(btn=>{
+        btn.addEventListener('click', ()=>{
+          const list = document.getElementById(btn.getAttribute('aria-controls'));
+          const open = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', String(!open));
+          list.hidden = open;
+        });
+        const list = document.getElementById(btn.getAttribute('aria-controls'));
+        if (window.matchMedia('(max-width:640px)').matches) list.hidden = true;
+      });
+    </script>
+  </footer>
 </body>
 </html>

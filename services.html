@@ -61,10 +61,44 @@
     ]
   }
   </script>
+
+  <!-- FAQPage JSON-LD (matches the on-page FAQs below) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Do you offer group walks?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"No — solo walks only for calm, focused outings."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Which areas do you serve?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"South Melbourne, Albert Park, Port Melbourne, Middle Park, and Southbank."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Do you board more than one dog at a time?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"No — boarding is one guest only for a quiet, low-stress stay."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- HEADER (same as index) -->
   <header class="site-header" role="banner">
     <div class="navbar container" role="navigation" aria-label="Main">
       <a class="brand" href="/" aria-label="Go to home">
@@ -102,7 +136,7 @@
       </div>
     </section>
 
-    <!-- SERVICES GRID -->
+    <!-- SERVICES GRID (with photos) -->
     <section>
       <div class="container grid grid-2">
         <!-- Dog Walking -->
@@ -139,6 +173,59 @@
       </div>
     </section>
 
+    <!-- COMPARE SERVICES -->
+    <section>
+      <div class="container">
+        <h2>Compare Services</h2>
+        <table class="compare" aria-label="Compare dog walking and boarding services">
+          <thead>
+            <tr>
+              <th scope="col">Feature</th>
+              <th scope="col">Solo Dog Walking</th>
+              <th scope="col">Weekend Woof Club (Boarding)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Ideal For</th>
+              <td data-label="Solo Dog Walking">Busy owners; dogs who thrive on <strong>one-to-one</strong> attention; anxious or reactive pups.</td>
+              <td data-label="Boarding">Weekend getaways; dogs who prefer a <strong>quiet, home-style</strong> environment.</td>
+            </tr>
+            <tr>
+              <th scope="row">Duration / Schedule</th>
+              <td data-label="Solo Dog Walking">45 minutes · Mon–Fri · South Melbourne & surrounds</td>
+              <td data-label="Boarding">Fri–Sun (weekends) · One guest at a time</td>
+            </tr>
+            <tr>
+              <th scope="row">Updates</th>
+              <td data-label="Solo Dog Walking">GPS route + photo after every walk</td>
+              <td data-label="Boarding">Daily photos + notes (optional video check-ins)</td>
+            </tr>
+            <tr>
+              <th scope="row">Setting</th>
+              <td data-label="Solo Dog Walking">Local streets, parks, <strong>Albert Park Lake</strong></td>
+              <td data-label="Boarding">Calm, crate-free, <strong>home-style</strong> suite</td>
+            </tr>
+            <tr>
+              <th scope="row">Booking</th>
+              <td data-label="Solo Dog Walking"><a href="https://www.timetopet.com/portal/woofofwalkstreet" target="_blank" rel="noopener">Book via client portal</a></td>
+              <td data-label="Boarding"><a href="https://www.timetopet.com/portal/woofofwalkstreet" target="_blank" rel="noopener">Check weekend availability</a></td>
+            </tr>
+            <tr>
+              <th scope="row">Extras</th>
+              <td data-label="Solo Dog Walking">Unlimited weekday option via <a href="/memberships.html#unlimited">Memberships</a></td>
+              <td data-label="Boarding">Feeding & meds per routine; high-quality kibble/chicken available</td>
+            </tr>
+            <tr>
+              <th scope="row">Quick Actions</th>
+              <td data-label="Solo Dog Walking"><a class="btn button-primary" href="/dog-walking-south-melbourne">Explore Walking</a></td>
+              <td data-label="Boarding"><a class="btn button-primary" href="/boarding-services.html">Explore Boarding</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
     <!-- EXTRA PHOTOS -->
     <section>
       <div class="container gallery-grid">
@@ -149,7 +236,7 @@
       </div>
     </section>
 
-    <!-- FAQs -->
+    <!-- FAQs (content matches FAQPage JSON-LD above) -->
     <section class="section alt">
       <div class="container">
         <h2>FAQs</h2>
@@ -160,7 +247,7 @@
     </section>
   </main>
 
-  <!-- FOOTER -->
+  <!-- FOOTER (compact + responsive) -->
   <footer class="site-footer" role="contentinfo">
     <div class="footer-banner">
       <picture>
@@ -228,6 +315,7 @@
     <div class="container footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 
+    <!-- Tiny JS for footer accordion -->
     <script>
       document.querySelectorAll('.collapsible .collapse-btn').forEach(btn=>{
         btn.addEventListener('click', ()=>{

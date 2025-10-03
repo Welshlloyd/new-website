@@ -1,3 +1,11 @@
+# robots.txt for woofofwalkstreet.com
+
+# Allow all crawlers full access
 User-agent: *
 Allow: /
+
+# Block utility or duplicate pages (already set to noindex, but this adds a crawl signal)
+Disallow: /search.html
+
+# Sitemap reference
 Sitemap: https://www.woofofwalkstreet.com/sitemap.xml

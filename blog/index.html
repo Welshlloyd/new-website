@@ -1,14 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
-  <meta charset="utf-8"/>
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Dog Walking Blog | The Woof of Walk Street</title>
-  <meta name="description" content="Tips, guides, and stories about solo walking, boutique boarding, and life with dogs in South Melbourne."/>
+  <meta name="description" content="Local dog blog: guides, tips, and stories about solo dog walking, boutique boarding, and life with pets in South Melbourne."/>
+  <link rel="canonical" href="https://www.woofofwalkstreet.com/blog/index.html"/>
   <link rel="icon" href="/images/brand/favicon.ico"/>
   <link rel="stylesheet" href="/css/styles.css"/>
+  <link rel="stylesheet" href="/css/mini.css"/>
 
-  <!-- Blog collection schema -->
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Dog Walking Blog | The Woof of Walk Street"/>
+  <meta property="og:description" content="Local dog blog: guides, tips, and stories about solo dog walking, boutique boarding, and life with pets in South Melbourne."/>
+  <meta property="og:url" content="https://www.woofofwalkstreet.com/blog/index.html"/>
+  <meta property="og:image" content="https://www.woofofwalkstreet.com/images/brand/hero-dog-skyline-1200.webp"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Dog Walking Blog | The Woof of Walk Street"/>
+  <meta name="twitter:description" content="Solo walks, boutique boarding, local guides & more for South Melbourne dog parents."/>
+  <meta name="twitter:image" content="https://www.woofofwalkstreet.com/images/brand/hero-dog-skyline-1200.webp"/>
+
+  <!-- Blog schema -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -16,12 +29,15 @@
     "mainEntityOfPage":{"@type":"WebPage","@id":"https://www.woofofwalkstreet.com/blog/index.html"},
     "name":"The Woof of Walk Street Blog",
     "description":"Expert tips on solo dog walking, boutique boarding, and life with dogs in South Melbourne.",
-    "publisher":{"@type":"Organization","name":"The Woof of Walk Street","logo":{"@type":"ImageObject","url":"https://www.woofofwalkstreet.com/images/brand/logo-lockup-gold.webp"}},
+    "publisher":{
+      "@type":"Organization",
+      "name":"The Woof of Walk Street",
+      "logo":{"@type":"ImageObject","url":"https://www.woofofwalkstreet.com/images/brand/logo-lockup-gold.webp"}
+    },
     "blogPost":[
-      {"@type":"BlogPosting","headline":"Best Dog Walks in South Melbourne","url":"https://www.woofofwalkstreet.com/blog/best-dog-walks-south-melbourne.html"},
+      {"@type":"BlogPosting","headline":"Best Dog-Friendly Spots in South Melbourne","url":"https://www.woofofwalkstreet.com/blog/best-dog-walks-south-melbourne.html"},
       {"@type":"BlogPosting","headline":"Why Solo Walks Reduce Stress","url":"https://www.woofofwalkstreet.com/blog/why-solo-walks.html"},
       {"@type":"BlogPosting","headline":"How to Choose an Ethical Dog Walker","url":"https://www.woofofwalkstreet.com/blog/ethical-dog-walker.html"},
-      {"@type":"BlogPosting","headline":"Dog-Friendly Cafés in South Melbourne","url":"https://www.woofofwalkstreet.com/blog/dog-friendly-cafes-south-melbourne.html"},
       {"@type":"BlogPosting","headline":"Rainy-Day Enrichment Games","url":"https://www.woofofwalkstreet.com/blog/rainy-day-enrichment-games.html"},
       {"@type":"BlogPosting","headline":"Boarding Prep: A Handy Checklist","url":"https://www.woofofwalkstreet.com/blog/prepare-dog-for-boarding-checklist.html"}
     ]
@@ -29,37 +45,47 @@
   </script>
 </head>
 <body>
-<header class="site-header">
-  <nav class="navbar container">
-    <a class="brand" href="/"><img src="/images/brand/logo-lockup-gold.webp" width="56" height="56" alt=""><strong>The Woof of Walk Street</strong></a>
-    <div class="nav-links" aria-label="Primary">
-      <a href="/">Home</a>
-      <a href="/memberships.html">Memberships</a>
-      <a href="/services.html">Walking</a>
-      <a href="/boarding-services.html">Boarding</a>
-      <a href="/contact.html">Contact us</a>
-    </div>
-  </nav>
+
+<!-- HEADER (consistent with homepage) -->
+<header class="site-header" role="banner">
+  <div class="navbar container" role="navigation" aria-label="Main">
+    <a class="brand" href="/" aria-label="Go to home">
+      <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="56" height="56">
+      <strong>The Woof of Walk Street</strong>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/services.html">Services</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropbtn" aria-haspopup="true" aria-expanded="false">Walking & Boarding</button>
+        <div class="nav-dropmenu" role="menu">
+          <a role="menuitem" href="/dog-walking-south-melbourne">Dog Walking (South Melbourne)</a>
+          <a role="menuitem" href="/boarding-services.html">Boarding — Weekend Woof Club</a>
+          <a role="menuitem" href="/memberships.html">Unlimited Membership</a>
+        </div>
+      </div>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+      <a class="btn button-primary nav-cta" 
+         href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=header&utm_campaign=book_now" 
+         target="_blank" rel="noopener">Book Now</a>
+    </nav>
+  </div>
 </header>
 
 <main>
   <section class="hero">
     <div class="container">
       <h1>Our Blog</h1>
-      <p class="subhead">Insights, advice, and updates for South Melbourne dog owners.</p>
-      <div class="cta-buttons">
-        <a href="https://www.timetopet.com/portal/woofofwalkstreet" class="cta-button">Book a Walk</a>
-        <a href="/boarding-services.html" class="cta-button secondary">Book Boarding</a>
-      </div>
+      <p class="subhead">Insights, advice, and updates for South Melbourne dog parents.</p>
     </div>
   </section>
 
   <section>
     <div class="container blog-list">
       <article class="blog-card">
-        <img src="/images/blog/blog-dog-walks-south-melbourne.webp" alt="Dog walking along South Melbourne beach" loading="lazy">
-        <h2><a href="/blog/best-dog-walks-south-melbourne.html">Best Dog Walks in South Melbourne</a></h2>
-        <p>Explore our favourite local routes for safe and fun walks.</p>
+        <img src="/images/blog/blog-dog-friendly-spots-south-melbourne.webp" alt="Dog enjoying a walk in South Melbourne park" loading="lazy">
+        <h2><a href="/blog/best-dog-walks-south-melbourne.html">Best Dog-Friendly Spots in South Melbourne</a></h2>
+        <p>A local’s guide to the best parks, scenic routes, and cafés like Nanna’s Place & PhiloCoffee where dogs feel welcome.</p>
       </article>
       <article class="blog-card">
         <img src="/images/blog/blog-solo-walks.webp" alt="Dog on leash during solo walk" loading="lazy">
@@ -70,11 +96,6 @@
         <img src="/images/blog/blog-ethical-dog-walker.webp" alt="Dog with walker in Melbourne streets" loading="lazy">
         <h2><a href="/blog/ethical-dog-walker.html">How to Choose an Ethical Dog Walker</a></h2>
         <p>Not all walkers are equal — here’s what makes the difference.</p>
-      </article>
-      <article class="blog-card">
-        <img src="/images/blog/blog-dog-friendly-cafes.webp" alt="Dog sitting outside a café in South Melbourne" loading="lazy">
-        <h2><a href="/blog/dog-friendly-cafes-south-melbourne.html">Dog-Friendly Cafés in South Melbourne</a></h2>
-        <p>Our favourite local spots where pups are genuinely welcome.</p>
       </article>
       <article class="blog-card">
         <img src="/images/blog/blog-rainy-day-enrichment.webp" alt="Dog playing enrichment games indoors" loading="lazy">
@@ -90,24 +111,69 @@
   </section>
 </main>
 
-<footer>
-  <p>© 2025 The Woof of Walk Street · 10% of profits donated to local shelters</p>
-  <div class="footer-links">
-    <a href="/privacy.html">Privacy Policy</a> · 
-    <a href="/terms.html">Terms & Conditions</a> · 
-    <a href="/sitemap.html">Sitemap</a>
+<!-- FOOTER (consistent with homepage) -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-banner">
+    <picture>
+      <source srcset="/images/brand/footer-banner-1600x600.webp" media="(min-width: 768px)">
+      <img src="/images/brand/footer-banner-800x300.webp" alt="Happy dogs in Melbourne" loading="lazy" width="800" height="300">
+    </picture>
   </div>
-  <div class="social-icons">
-    <a href="https://instagram.com/woofofwalkstreet" target="_blank"><img src="/images/icons/instagram.svg" alt="Instagram"></a>
-    <a href="https://facebook.com/woofofwalkstreet" target="_blank"><img src="/images/icons/facebook.svg" alt="Facebook"></a>
-    <a href="https://twitter.com/woofofwalkst" target="_blank"><img src="/images/icons/twitter.svg" alt="Twitter"></a>
+  <div class="container footer-grid">
+    <section class="footer-brand">
+      <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="60" height="60" loading="lazy">
+      <p><strong>The Woof of Walk Street</strong><br>
+        <a class="footer-map" href="https://maps.app.goo.gl/YnEoSPwhGocUZyWL9" target="_blank" rel="noopener">South Melbourne, VIC</a> · Mon–Fri 7am–7pm<br>
+        <a href="tel:+61456754050">+61 456 754 050</a> · <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a>
+      </p>
+      <div class="footer-socials">
+        <a href="https://instagram.com/woofofwalkstreet"><img src="/images/social/instagram.svg" alt="Instagram" width="24" height="24"></a>
+        <a href="https://facebook.com/woofofwalkstreet"><img src="/images/social/facebook.svg" alt="Facebook" width="24" height="24"></a>
+        <a href="https://x.com/woofofwalkstreet"><img src="/images/social/x.svg" alt="X" width="24" height="24"></a>
+      </div>
+      <p><a class="btn button-primary" target="_blank" rel="noopener"
+        href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=footer&utm_campaign=book_now_footer">Book Now</a></p>
+    </section>
+
+    <nav class="footer-col" aria-label="Primary">
+      <h3>Services</h3>
+      <ul>
+        <li><a href="/services.html">All Services</a></li>
+        <li><a href="/dog-walking-south-melbourne">Dog Walking</a></li>
+        <li><a href="/boarding-services.html">Boarding</a></li>
+        <li><a href="/memberships.html">Memberships</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section class="footer-col collapsible">
+      <button class="collapse-btn" aria-expanded="false" aria-controls="support-list">Support</button>
+      <ul id="support-list">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/testimonials.html">Testimonials</a></li>
+        <li><a href="/gallery.html">Photos & Videos</a></li>
+        <li><a href="/blog/index.html">Blog</a></li>
+        <li><a href="/faq.html">FAQs</a></li>
+      </ul>
+    </section>
+
+    <section class="footer-col collapsible">
+      <button class="collapse-btn" aria-expanded="false" aria-controls="legal-list">Legal</button>
+      <ul id="legal-list">
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="/terms.html">Terms</a></li>
+        <li><a href="/sitemap.html">Sitemap</a></li>
+      </ul>
+    </section>
   </div>
-  <div class="map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    <p><strong>The Woof of Walk Street</strong><br>South Melbourne, VIC<br>Phone: +61-400-123-456</p>
+
+  <div class="container footer-geo">
+    Solo Dog Walking & Boutique Boarding across <strong>South Melbourne</strong>, <strong>Albert Park</strong>, <strong>Port Melbourne</strong>, <strong>Middle Park</strong>, and <strong>Southbank</strong>.
   </div>
+  <div class="container footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </footer>
 
-<script src="/js/form-validation.js"></script>
 </body>
 </html>
+

@@ -147,37 +147,85 @@
 </main>
 
 <!-- Footer -->
-<footer class="site-footer">
+<<footer class="site-footer" role="contentinfo">
+  <div class="footer-banner">
+    <picture>
+      <source srcset="/images/brand/footer-banner-1600x600.webp" media="(min-width: 768px)">
+      <img src="/images/brand/footer-banner-800x300.webp" alt="Happy dogs in Melbourne" loading="lazy" width="800" height="300">
+    </picture>
+  </div>
+
   <div class="container footer-top">
+    <!-- NAP + Hours (consistent with GBP) -->
     <div class="footer-brand">
-      <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street">
-      <div><strong>The Woof of Walk Street</strong><br/>South Melbourne, VIC · Mon–Fri 7am–7pm</div>
+      <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="60" height="60" loading="lazy">
+      <div>
+        <strong>The Woof of Walk Street</strong><br>
+        <a class="footer-map" href="https://maps.app.goo.gl/YnEoSPwhGocUZyWL9?g_st=ipc" target="_blank" rel="noopener">South Melbourne, VIC</a>
+        <span> · Mon–Fri 7am–7pm</span><br>
+        <a href="tel:+61456754050">+61 456 754 050</a> ·
+        <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a>
+      </div>
     </div>
+
+    <!-- Primary links (money pages) -->
+    <nav class="footer-nav" aria-label="Primary footer">
+      <ul>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/dog-walking-south-melbourne">Dog Walking South Melbourne</a></li>
+        <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
+        <li><a href="/memberships.html">Unlimited Membership</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Trust / Content links -->
+    <nav class="footer-nav" aria-label="Support">
+      <ul>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/testimonials.html">Testimonials</a></li>
+        <li><a href="/gallery.html">Photos & Videos</a></li>
+        <li><a href="/blog/index.html">Blog</a></li>
+        <li><a href="/faq.html">FAQs</a></li>
+      </ul>
+    </nav>
+
+    <!-- Legal -->
+    <nav class="footer-nav" aria-label="Legal">
+      <ul>
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="/terms.html">Terms</a></li>
+        <li><a href="/sitemap.html">Sitemap</a></li>
+      </ul>
+    </nav>
+
+    <!-- Social + Book -->
     <div class="footer-contact">
-      <h3>Contact Us</h3>
-      <p>Email: <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a></p>
-      <p>Phone: <a href="tel:+61456754050">0456 754 050</a></p>
-      <div class="footer-socials" aria-label="Social links">
+      <h3>Follow & Book</h3>
+      <div class="footer-socials">
         <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram"><img src="/images/social/icon-instagram.svg" alt=""></a>
         <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook"><img src="/images/social/icon-facebook.svg" alt=""></a>
         <a href="https://x.com/woofofwalkstreet" aria-label="X"><img src="/images/social/icon-x.svg" alt=""></a>
       </div>
+      <p style="margin:.75rem 0 0">
+        <a class="btn button-primary" target="_blank" rel="noopener"
+           href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=footer&utm_campaign=book_now_footer">
+           Book Now
+        </a>
+      </p>
     </div>
-    <nav aria-label="Footer">
-      <ul style="list-style:none;padding:0;margin:0;">
-        <li><a href="/memberships.html">Memberships</a></li>
-        <li><a href="/services.html">Walking</a></li>
-        <li><a href="/boarding-services.html" aria-current="page">Boarding</a></li>
-        <li><a href="/faq.html">FAQ</a></li>
-        <li><a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></li>
-        <li><a href="/sitemap.html">Sitemap</a></li>
-      </ul>
-    </nav>
   </div>
-  <div class="container" style="text-align:center;margin-top:18px;opacity:.8;">© <span id="y"></span> The Woof of Walk Street.</div>
-  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
-</footer>
 
+  <!-- Geo reinforcement (quiet SEO win) -->
+  <div class="container" style="margin-top:18px;opacity:.9;text-align:center">
+    Solo Dog Walking & Boutique Boarding across <strong>South Melbourne</strong>, <strong>Albert Park</strong>, <strong>Port Melbourne</strong>, <strong>Middle Park</strong> and <strong>Southbank</strong>.
+  </div>
+
+  <div class="container footer-bottom" style="text-align:center;margin-top:10px;opacity:.8;">
+    © <span id="year"></span> The Woof of Walk Street
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</footer>
 <!-- JSON-LD: Breadcrumbs, LocalBusiness/Service, FAQ -->
 <script type="application/ld+json">
 {

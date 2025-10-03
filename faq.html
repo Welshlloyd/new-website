@@ -1,13 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>FAQ – The Woof of Walk Street</title>
-  <meta name="description" content="Answers about our one-dog-only walking, memberships, and Weekend Woof Club boarding." />
+  <meta name="description" content="Answers about our one-dog-only walking, memberships, and Weekend Woof Club boarding in South Melbourne. GPS-tracked walks with photo updates." />
+  <link rel="canonical" href="https://www.woofofwalkstreet.com/faq.html" />
+  <link rel="icon" href="/images/brand/favicon.ico">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="/css/styles.css" />
   <link rel="stylesheet" href="/css/fixes.css" />
-  <link rel="icon" href="/images/brand/favicon.ico">
+
+  <!-- FAQPage JSON-LD (matches questions/answers below) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do you ever walk more than one dog?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. We are strictly one-dog-only. It’s safer, calmer, and delivers proper exercise and focus."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long is a walk and what’s included?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our casual walk is 45 minutes and includes GPS tracking, photo updates, and notes after each session."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When are walks available?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Walks are available Monday–Friday, 7:00am–7:00pm. All walks must be booked in the portal calendar and are subject to availability."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much is a casual walk?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "$80 per 45-minute walk (incl. GST). Frequent walkers usually save with a membership."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What plans do you offer and pricing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Starter Sniffvestment: 4 solo walks/month – $295. Tail Growth Plan: 10 solo walks/month – $750. Unlimited Pawfolio: weekdays, 1 walk/day (Mon–Fri) – $1,500. All memberships: Mon–Fri 7am–7pm, calendar booking required, subject to availability, unused walks don’t roll over."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I change times or skip a week?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can move bookings inside our change window if a slot is available. Unused walks don’t roll over to the next month."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does Unlimited work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Unlimited allows one walk per weekday (Mon–Fri) for that dog in the membership month. It offers the biggest flexibility and best value if you walk frequently."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many dogs stay at once?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "One guest only. It’s calmer, cleaner, and feels like staying with family."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What do you feed during boarding?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We can feed your dog’s own food or supply high-quality kibble and cooked chicken on request."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you support local shelters?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We donate 10% of profits to The Lost Dogs’ Home North Melbourne and other local dog charities."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Optional: LocalBusiness JSON-LD for consistency -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://www.woofofwalkstreet.com/#business",
+    "name": "The Woof of Walk Street",
+    "image": "https://www.woofofwalkstreet.com/images/brand/logo-lockup-gold.webp",
+    "url": "https://www.woofofwalkstreet.com/",
+    "telephone": "+61456754050",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "South Melbourne",
+      "addressRegion": "VIC",
+      "addressCountry": "AU"
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "07:00",
+      "closes": "19:00"
+    }],
+    "description": "Solo dog walking with GPS tracking and photo updates, plus boutique one-dog boarding in South Melbourne."
+  }
+  </script>
 </head>
 <body>
 
@@ -15,10 +135,10 @@
   <div class="navbar container">
     <a class="brand" href="/"><img src="/images/brand/logo-lockup-gold-320.webp" width="40" height="40" alt=""> <strong>The Woof of Walk Street</strong></a>
     <nav class="nav-links" aria-label="Primary">
-     <a href="/">Home</a>
+      <a href="/">Home</a>
       <a href="/about.html">About Us</a>
       <a href="/memberships.html">Memberships</a>
-      <a href="/services.html">Walking</a>
+      <a href="/dog-walking-south-melbourne">Walking</a>
       <a href="/boarding-services.html">Boarding</a>
       <a href="/contact.html">Contact Us</a>
     </nav>
@@ -62,14 +182,17 @@
       <div class="promo card" style="margin-top:28px;">
         <h3>New here?</h3>
         <p>Create your account and book in seconds.</p>
-        <a class="btn button-primary" target="_blank" rel="noopener" href="https://www.timetopet.com/portal/woofofwalkstreet">Open Client Portal</a>
+        <div class="stack-sm">
+          <a class="btn button-primary" target="_blank" rel="noopener" href="https://www.timetopet.com/portal/woofofwalkstreet">Open Client Portal</a>
+          <a class="btn" href="/membership-unlimited.html">Unlimited Membership – 50% OFF</a>
+        </div>
       </div>
 
     </div>
   </section>
 </main>
 
-<!-- FOOTER (shared) -->
+<!-- FOOTER -->
 <footer class="site-footer">
   <div class="footer-banner">
     <picture>
@@ -105,7 +228,7 @@
       <ul>
         <li><a href="/gallery.html">Photos & Videos</a></li>
         <li><a href="/terms.html">Terms and Conditions</a></li>
-        <li><a href="/testimonals.html">Testimonails</a></li>
+        <li><a href="/testimonials.html">Testimonials</a></li>
         <li><a href="/faq.html">FAQs</a></li>
         <li><a href="/privacy.html">Privacy</a></li>
         <li><a href="/sitemap.html">Sitemap</a></li>
@@ -117,57 +240,6 @@
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </footer>
 
-<!-- Compare Plans: scroller controls + monthly-limited spots counter -->
-<script>
-  (function(){
-    // Scroller arrows
-    const scroller = document.getElementById('planScroller');
-    document.querySelectorAll('[data-scroll]').forEach(btn=>{
-      btn.addEventListener('click', ()=>{
-        const dir = Number(btn.dataset.scroll);
-        const card = scroller.querySelector('.plan-card');
-        const step = card ? card.getBoundingClientRect().width + 14 : 320;
-        scroller.scrollBy({left: dir * step, behavior: 'smooth'});
-      });
-    });
-
-    // Growth plan monthly counter (per-visitor; resets monthly)
-    const CARD_ID = 'plan-growth';
-    const COUNT_ID = 'growthSpotsCount';
-    const CTA_ID = 'growthJoinCta';
-    const STORAGE_KEY = 'woof_growth_spots';
-    const STORAGE_MONTH_KEY = 'woof_growth_month';
-
-    const card = document.getElementById(CARD_ID);
-    const countEl = document.getElementById(COUNT_ID);
-    const cta = document.getElementById(CTA_ID);
-    if(!card || !countEl || !cta) return;
-
-    const startValue = Number(card.getAttribute('data-spots-start')) || 8;
-    const now = new Date();
-    const monthKey = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}`;
-
-    const storedMonth = localStorage.getItem(STORAGE_MONTH_KEY);
-    if (storedMonth !== monthKey) {
-      localStorage.setItem(STORAGE_MONTH_KEY, monthKey);
-      localStorage.setItem(STORAGE_KEY, String(startValue));
-    }
-
-    const current = Number(localStorage.getItem(STORAGE_KEY));
-    const spots = Number.isFinite(current) ? current : startValue;
-    countEl.textContent = Math.max(spots, 0);
-
-    cta.addEventListener('click', function() {
-      let n = Number(localStorage.getItem(STORAGE_KEY));
-      if (!Number.isFinite(n)) n = startValue;
-      if (n > 0) {
-        n -= 1;
-        localStorage.setItem(STORAGE_KEY, String(n));
-        countEl.textContent = Math.max(n, 0);
-      }
-    });
-  })();
-</script>
-
 </body>
 </html>
+

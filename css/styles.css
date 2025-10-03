@@ -367,6 +367,20 @@ label { display: block; font-weight: 700; }
 }
 .happy-dogs h2 { margin:0 0 8px; font-size:1.4rem; }
 
+/* Services page: equal image sizes */
+.service-img{
+  width:100%;
+  aspect-ratio:4/3;
+  object-fit:cover;
+  border-radius:10px;
+  display:block;
+  margin-bottom:12px;
+  box-shadow:var(--shadow);
+}
+@media (min-width:900px){
+  .service-img{ height:320px; }    /* equal height on desktop */
+}
+
 /* ---------------------------------------------------
    Extra polish (matches mini.css patch)
 --------------------------------------------------- */

@@ -54,35 +54,42 @@
   </div>
 
   <!-- HEADER -->
-  <header class="site-header" role="banner">
-    <div class="navbar container" role="navigation" aria-label="Main">
-      <a class="brand" href="/" aria-label="Go to home">
-        <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="56" height="56">
-        <strong>The Woof of Walk Street</strong>
-      </a>
+<header class="site-header" role="banner">
+  <div class="navbar container" role="navigation" aria-label="Main">
+    <a class="brand" href="/" aria-label="Go to home">
+      <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="56" height="56">
+      <strong>The Woof of Walk Street</strong>
+    </a>
 
-      <!-- Mobile toggle (checkbox method; styled by CSS) -->
-      <input id="nav-toggle" type="checkbox" hidden aria-hidden="true">
-      <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</label>
+    <!-- mobile hamburger -->
+    <input id="nav-toggle" type="checkbox" hidden>
+    <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</label>
 
-      <nav class="nav-links" aria-label="Primary">
-        <a href="/services.html">Services</a>
-        <div class="nav-dropdown">
-          <button class="nav-dropbtn" aria-haspopup="true" aria-expanded="false">Walking & Boarding</button>
-          <div class="nav-dropmenu" role="menu">
-            <a role="menuitem" href="/dog-walking-south-melbourne">Dog Walking (South Melbourne)</a>
-            <a role="menuitem" href="/boarding-services.html">Boarding — Weekend Woof Club</a>
-            <a role="menuitem" href="/memberships.html">Unlimited Membership</a>
-          </div>
-        </div>
-        <a href="/about.html">About</a>
-        <a href="/contact.html">Contact</a>
-        <a class="btn button-primary nav-cta"
-           href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=header&utm_campaign=book_now"
-           rel="noopener" target="_blank">Book Now</a>
-      </nav>
-    </div>
-  </header>
+    <nav class="nav-links" aria-label="Primary">
+      <!-- SERVICES group (matches footer) -->
+      <section class="nav-group">
+        <button class="nav-group-btn" aria-expanded="false" aria-controls="nav-services">Services</button>
+        <ul id="nav-services" class="nav-group-list">
+          <li><a href="/services.html">All Services</a></li>
+          <li><a href="/dog-walking-south-melbourne">Dog Walking South Melbourne</a></li>
+          <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
+          <li><a href="/memberships.html">Unlimited Membership</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </section>
+
+      <!-- simple links -->
+      <a href="/about.html">About</a>
+      <a href="/blog/index.html">Blog</a>
+      <a href="/faq.html">FAQs</a>
+      <a href="/search.html">Search</a>
+
+      <a class="btn button-primary nav-cta"
+         href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=header&utm_campaign=book_now"
+         target="_blank" rel="noopener">Book Now</a>
+    </nav>
+  </div>
+</header>
 
   <main>
     <!-- HERO -->

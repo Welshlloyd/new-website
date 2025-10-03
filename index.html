@@ -84,9 +84,10 @@
       <a href="/faq.html">FAQs</a>
       <a href="/search.html">Search</a>
 
+      <!-- BOOK NOW (header) -->
       <a class="btn button-primary nav-cta"
          href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=header&utm_campaign=book_now"
-         target="_blank" rel="noopener">Book Now</a>
+         target="_blank" rel="noopener" data-conversion="book-now">Book Now</a>
     </nav>
   </div>
 </header>
@@ -108,8 +109,9 @@
           width="1200" height="675" loading="eager" decoding="async">
         <div class="cta-buttons">
           <a href="/dog-walking-south-melbourne" class="cta-button">Dog Walking South Melbourne</a>
+          <!-- BOOK A WALK (hero) -->
           <a href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=hero&utm_campaign=book_walk"
-             class="cta-button secondary" target="_blank" rel="noopener">Book a Walk</a>
+             class="cta-button secondary" target="_blank" rel="noopener" data-conversion="book-now">Book a Walk</a>
           <a href="/boarding-services.html" class="cta-button secondary">Weekend Boarding</a>
         </div>
       </div>
@@ -145,8 +147,9 @@
       <div class="container">
         <div class="cta-buttons" style="justify-content:center;flex-wrap:wrap">
           <a href="/dog-walking-south-melbourne" class="cta-button">Dog Walking South Melbourne</a>
+          <!-- BOOK A WALK (CTA row) -->
           <a href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=cta_row&utm_campaign=book_walk"
-             class="cta-button secondary" target="_blank" rel="noopener">Book a Walk</a>
+             class="cta-button secondary" target="_blank" rel="noopener" data-conversion="book-now">Book a Walk</a>
           <a href="/boarding-services.html" class="cta-button secondary">Book Boarding</a>
         </div>
       </div>
@@ -274,8 +277,10 @@
           <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook"><img src="/images/social/facebook.svg" alt="" width="24" height="24"></a>
           <a href="https://x.com/woofofwalkstreet" aria-label="X"><img src="/images/social/twitter.svg" alt="" width="24" height="24"></a>
         </div>
+        <!-- BOOK NOW (footer) -->
         <p><a class="btn button-primary" target="_blank" rel="noopener"
-          href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=footer&utm_campaign=book_now_footer">Book Now</a></p>
+          href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=footer&utm_campaign=book_now_footer"
+          data-conversion="book-now">Book Now</a></p>
       </section>
 
       <!-- Primary links -->
@@ -335,6 +340,27 @@
         const list = document.getElementById(btn.getAttribute('aria-controls'));
         if (window.matchMedia('(max-width:640px)').matches) list.hidden = true;
       });
+    </script>
+
+    <!-- Google Ads conversion on Book Now clicks -->
+    <script>
+      (function(){
+        // TODO: Replace with your exact send_to from the Ads event snippet:
+        // Example format: 'AW-17527927259/abcDEFghiJKLmnOPqr'
+        const SEND_TO = 'AW-17527927259/XXXXXXXXXXXX';
+
+        function fireBookNowConversion() {
+          if (typeof gtag === 'function' && SEND_TO.indexOf('AW-') === 0) {
+            gtag('event', 'conversion', {'send_to': SEND_TO});
+          }
+        }
+
+        // Attach to any link that goes to Time To Pet or has data-conversion="book-now"
+        const selector = 'a[data-conversion="book-now"], a[href*="timetopet.com/portal/woofofwalkstreet"]';
+        document.querySelectorAll(selector).forEach(a => {
+          a.addEventListener('click', fireBookNowConversion, {passive: true});
+        });
+      })();
     </script>
   </footer>
 

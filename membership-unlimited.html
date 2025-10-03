@@ -3,144 +3,265 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Unlimited Pawfolio | The Woof of Walk Street</title>
-  <meta name="description" content="Unlimited Pawfolio: a solo walk every weekday with GPS tracking and photo updates. First month 50% off ($750), then $1,500 monthly. Auto-renews unless cancelled." />
+  <title>Unlimited Pawfolio — Weekday Solo Walks | The Woof of Walk Street</title>
+  <meta name="description" content="Unlimited Pawfolio: one solo 45-minute walk per weekday. Ethical, one-dog-at-a-time walking with GPS tracking and photo updates. Half price first month promo." />
   <link rel="canonical" href="https://www.woofofwalkstreet.com/membership-unlimited.html" />
   <link rel="icon" href="/images/brand/favicon.ico" />
   <link rel="stylesheet" href="/css/mini.css" />
-  <link rel="stylesheet" href="/assets/css/promo.css" />
 
-  <!-- Structured data: Unlimited offer -->
+  <!-- JSON-LD: Service (Unlimited Membership) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Offer",
-    "name": "Unlimited Membership – First month 50% off",
-    "priceCurrency": "AUD",
-    "price": "1500.00",
-    "category": "PetService",
-    "availability": "https://schema.org/InStock",
-    "url": "https://www.woofofwalkstreet.com/membership-unlimited.html",
-    "validFrom": "2025-10-02",
-    "eligibleCustomerType": "https://schema.org/NewCustomer",
-    "description": "Unlimited dog walking membership. New members get 50% off the first month ($750); existing members get 50% off a month when their friend joins Unlimited. Renews monthly at $1,500 unless cancelled before the renewal date."
+    "@type": "Service",
+    "serviceType": "Unlimited Dog Walking Membership",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "The Woof of Walk Street",
+      "address": {"@type":"PostalAddress","addressLocality":"South Melbourne","addressRegion":"VIC","addressCountry":"AU"},
+      "url": "https://www.woofofwalkstreet.com",
+      "telephone": "+61-456-754-050"
+    },
+    "areaServed": "South Melbourne, VIC",
+    "description": "Unlimited Pawfolio: one 45-minute solo walk per weekday (Mon–Fri). GPS tracked with photo updates. Ethical, one-dog-only service.",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "AUD",
+      "price": "1500",
+      "url": "https://www.timetopet.com/portal/woofofwalkstreet/create-account",
+      "availability": "https://schema.org/InStock"
+    }
   }
   </script>
 
+  <!-- Page-scoped styles (kept light; uses same Starter classes) -->
   <style>
-    .wrap{max-width:1100px;margin:24px auto 44px;padding:0 16px}
-    .hero{padding:32px 16px 10px;text-align:center}
-    .hero h1{margin:0 0 .4rem}
-    .hero p{margin:.25rem auto 0;max-width:60ch;color:var(--muted)}
+    .m-wrap{max-width:960px;margin:24px auto 44px;padding:0 16px}
+    .m-hero{padding:40px 16px 16px;text-align:center;background:#fffaf1;border-bottom:1px solid #f0e6cf}
+    .m-hero h1{margin:0 0 .35rem}
+    .m-hook{margin:.35rem auto .65rem;max-width:48ch;color:#2a2a2a;font-size:1.05rem}
+    .m-badge{display:inline-block;margin:.25rem 0 .9rem;padding:.35rem .7rem;background:var(--brand);color:var(--brand-ink);border-radius:999px;font-weight:800}
+    .m-cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+    .m-price{font-weight:800;font-size:1.8rem;margin:.45rem 0 .2rem}
+    .m-price-sub{font-size:.95rem;color:#5b5b5b;margin:0 0 .6rem}
+    .m-trust{list-style:none;padding:0;margin:12px auto 10px;max-width:44ch;color:#6b6b6b}
+    .m-trust li{position:relative;padding-left:22px;margin:.25rem 0}
+    .m-trust li::before{content:"✔";position:absolute;left:0;top:0;line-height:1;color:#2a7a3a;font-weight:800}
+
+    /* Dark info cards */
+    .m-card{background:#0f1318;border:1px solid #1d232c;border-radius:14px;padding:18px;margin-top:16px;color:#e6edf3}
+    .m-card h2{color:#f3f6fb;margin:.2rem 0 .6rem}
+    .m-card li{color:#cdd7e1}
+    .m-card a{color:#8dc2ff}
+
+    /* Promo strip for Unlimited (I.P.O.O. half price) */
+    .ipoo-strip{background:#0b0e12;color:#f7f3e8;border-block:4px solid var(--brand)}
+    .ipoo-inner{max-width:1100px;margin:0 auto;display:grid;gap:18px;grid-template-columns:1fr;align-items:center;padding:26px 16px}
+    .ipoo-copy h2{font-size:clamp(1.4rem,3.4vw,2rem);margin:.2rem 0 .4rem;color:#fff}
+    .ipoo-copy p{color:#cfd6df;margin:.2rem 0}
+    .ipoo-badge{display:inline-block;background:var(--brand);color:#111;font-weight:900;border-radius:999px;padding:8px 14px;box-shadow:var(--shadow);margin-top:6px}
+    @media (min-width:820px){ .ipoo-inner{grid-template-columns:360px 1fr} }
+
+    .ipoo-graphic{display:flex;justify-content:center}
+    .ipoo-graphic img{width:min(310px,60vw);height:auto;border-radius:14px;box-shadow:var(--shadow)}
+
+    /* Spots/urgency row (optional visual nudge) */
+    .spots-row{display:inline-flex;align-items:center;gap:10px;padding:8px 12px;border:1px dashed rgba(255,255,255,0.25);border-radius:999px;margin:.4rem 0 .6rem;background:#0f1318}
+    .spots-dot{width:10px;height:10px;border-radius:50%;background:#d62828;box-shadow:0 0 10px rgba(214,40,40,.55);animation:dotBlink 1.6s infinite}
+    @keyframes dotBlink{0%,100%{opacity:.9}50%{opacity:.4}}
+
+    /* Poster banner */
+    .poster-wrap{max-width:1200px;margin:22px auto 6px;padding:0 16px}
+    .poster{border-radius:16px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--stroke)}
+    .poster img{width:100%;height:auto;display:block}
   </style>
 </head>
 <body>
 
+<!-- HEADER (shared) -->
 <header class="site-header">
   <div class="navbar container">
     <a class="brand" href="/">
       <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="56" height="56" />
       <strong>The Woof of Walk Street</strong>
     </a>
-    <nav class="footer-nav" aria-label="Footer">
-  <ul>
-    <li><a href="/dog-walking-south-melbourne">Dog Walking South Melbourne</a></li>
-    <li><a href="/gallery.html">Photos & Videos</a></li>
-    <li><a href="/terms.html">Terms and Conditions</a></li>
-    <li><a href="/testimonials.html">Testimonials</a></li>
-    <li><a href="/faq.html">FAQs</a></li>
-    <li><a href="/privacy.html">Privacy</a></li>
-    <li><a href="/sitemap.html">Sitemap</a></li>
-  </ul>
-</nav>
-
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/about.html">About Us</a>
+      <a href="/memberships.html" aria-current="page">Memberships</a>
+      <a href="/services.html">Walking</a>
+      <a href="/boarding-services.html">Boarding</a>
+      <a href="/contact.html">Contact Us</a>
+    </nav>
   </div>
 </header>
 
-<section class="hero">
-  <h1>Unlimited Pawfolio</h1>
-  <p>A solo walk every weekday. GPS-tracked routes and photo updates after every walk.</p>
+<!-- HERO -->
+<section class="m-hero">
+  <h1>👑 Unlimited Pawfolio</h1>
+  <p class="m-hook">
+    One <strong>45-minute solo walk</strong> every weekday (Mon–Fri). Ethical, one-dog-only walking with
+    <strong>GPS tracking</strong> and <strong>photo updates</strong> after every walk.
+  </p>
+
+  <!-- Price + Promo -->
+  <div class="m-price">A$1,500 / month</div>
+  <div class="m-price-sub">🎉 <strong>HALF PRICE first month</strong> — just A$750, then A$1,500 unless cancelled.</div>
+
+  <p class="m-badge">South Melbourne · Monday–Friday</p>
+
+  <div class="m-cta">
+    <a class="cta-button" href="https://www.timetopet.com/portal/woofofwalkstreet/create-account" target="_blank" rel="noopener">
+      Join Unlimited
+    </a>
+    <a class="cta-button" href="https://www.timetopet.com/portal/woofofwalkstreet" target="_blank" rel="noopener">
+      Existing Member Login
+    </a>
+  </div>
+
+  <ul class="m-trust">
+    <li>Always <strong>solo</strong>, never pack walked or car-ferried</li>
+    <li><strong>GPS-tracked</strong> routes + <strong>photo updates</strong> after every walk</li>
+    <li>Weekday schedule (Mon–Fri), public holidays excluded</li>
+  </ul>
 </section>
 
-<div class="wrap">
-  <!-- Hero promo block with full details -->
-  <section class="pricing-card" id="unlimited-hero" data-base-price="1500" data-currency="AUD">
-    <div class="badge">50% OFF 1st Month</div>
-    <h2 style="margin:0 0 .3rem">Unlimited Membership</h2>
-    <p class="sub" style="margin:0 0 .6rem">More walks. More freedom. Less hassle.</p>
-
-    <div class="price">
-      <span id="unlPromoPrice2"></span>
-      <span class="strike" id="unlBasePrice2"></span>
+<!-- I.P.O.O. PROMO STRIP -->
+<section class="ipoo-strip" aria-labelledby="ipoo-title">
+  <div class="ipoo-inner">
+    <div class="ipoo-graphic" aria-hidden="true">
+      <picture>
+        <source srcset="/images/memberships/membership_hero.webp" type="image/webp" />
+        <img src="/images/memberships/membership_hero.webp" width="320" height="420" alt="Bold Unlimited membership graphic" loading="lazy">
+      </picture>
     </div>
-
-    <div class="sub">
-      First month half price ($750), then $1,500 monthly.
-      <br>Renews automatically at the standard price unless cancelled before the renewal date.
-    </div>
-
-    <ul class="checklist">
-      <li>Unlimited weekday solo walks</li>
-      <li>Priority scheduling + cancellations</li>
-      <li>GPS updates + photo check-ins</li>
-    </ul>
-
-    <!-- Optional acknowledgement gating -->
-    <label style="display:flex;gap:.5rem;align-items:flex-start;margin:.75rem 0 .25rem">
-      <input type="checkbox" id="unlAck2">
-      <span style="font-size:.9rem">
-        I understand the membership renews monthly at <strong>$1,500</strong> unless cancelled before renewal.
-      </span>
-    </label>
-
-    <div class="referral-box" style="margin-top:.6rem">
-      <strong>Get 50% OFF a month for referring a friend.</strong>
-      <div style="margin-top:.4rem">
-        <label for="refInput2" style="display:block;font-size:.9rem">Who referred you? (Optional)</label>
-        <input id="refInput2" type="text" placeholder="Referrer’s name or email"
-               style="width:100%;padding:.6rem;border:1px solid #cbd5e1;border-radius:8px">
-        <div class="notice">We’ll credit their account once you join Unlimited.</div>
+    <div class="ipoo-copy">
+      <h2 id="ipoo-title">📈 The I.P.O.O. — Initial Puppy Offering: Unlimited</h2>
+      <p>Go all-in on your dog’s health and happiness: one solo walk every weekday with full transparency.</p>
+      <div class="spots-row" role="status" aria-live="polite">
+        <span class="spots-dot" aria-hidden="true"></span>
+        <span><strong>Limited onboarding spots</strong> open this month.</span>
       </div>
+      <span class="ipoo-badge">First month 50% OFF · A$750</span>
     </div>
+  </div>
+</section>
 
-    <div class="trust">
-      <img src="/images/social/google-reviews.svg" alt="Google Reviews">
-      <img src="/images/social/lock.svg" alt="Secure payments">
-    </div>
+<!-- DETAILS -->
+<div class="m-wrap">
+  <div class="m-card">
+    <h2>What’s included</h2>
+    <ul>
+      <li>One <strong>45-minute solo walk</strong> every weekday (Mon–Fri)</li>
+      <li><strong>GPS tracking</strong> + <strong>photo updates</strong> after each walk</li>
+      <li><strong>Ethical, one-dog-at-a-time</strong> service — never pack walked, never car-ferried</li>
+      <li><strong>Priority</strong> calendar access for Unlimited members</li>
+    </ul>
+  </div>
 
-    <div class="sticky-cta" style="margin-top:.75rem">
-      <a id="unlCta2" class="btn" href="#">Start Unlimited – 50% OFF</a>
-      <a href="/memberships.html#faq" class="btn outline" style="margin-left:8px">See FAQs</a>
-    </div>
+  <div class="m-card">
+    <h2>Booking & availability</h2>
+    <ul>
+      <li>Walk window: <strong>7:00am–7:00pm, Monday–Friday</strong> (excl. public holidays)</li>
+      <li>All bookings via our calendar (Time To Pet) and subject to availability</li>
+      <li>Unlimited = one walk per weekday. Skipped days do not roll over</li>
+      <li>South Melbourne service area</li>
+    </ul>
+  </div>
 
-    <p class="notice" style="margin-top:.5rem">
-      By starting Unlimited you agree that the plan renews monthly at <strong>$1,500</strong> unless cancelled
-      prior to your renewal date. You can cancel anytime from your account or by contacting us.
-    </p>
+  <div class="m-card">
+    <h2>Member perks</h2>
+    <ul>
+      <li><strong>Priority scheduling</strong> on peak days</li>
+      <li>Surprise <strong>member-only promos</strong> & occasional goodies</li>
+      <li>Direct line to your walker for tailored routines</li>
+    </ul>
+  </div>
 
-    <div class="notice">Use code <b>UNLIMITED50</b> if prompted at checkout.</div>
-  </section>
+  <p class="m-card" style="color:#9bd9c3">
+    We donate <strong>10% of profits</strong> to The Lost Dogs’ Home (North Melbourne) and local shelters.
+  </p>
 
-  <!-- Optional: add more content/sections here (what's included, service area, etc.) -->
-
-  <section id="faq" class="faq" style="margin:24px 0">
-    <h3>Unlimited Promo – FAQs</h3>
-    <details><summary>Who qualifies for 50% off?</summary>
-      New Unlimited members get 50% off their first month ($750). If an existing member refers a new Unlimited member, the referrer gets 50% off one future month once the friend joins.
-    </details>
-    <details><summary>How do referrals work?</summary>
-      At sign-up, the new member adds their referrer’s name or email. We credit the referrer’s account with 50% off a month after the new member completes sign-up.
-    </details>
-    <details><summary>Can I stack multiple referral discounts?</summary>
-      You can earn multiple 50%-off months through multiple referrals, but only one discount applies per billing period.
-    </details>
-    <details><summary>Does it auto-renew?</summary>
-      Yes. After your first month at $750, Unlimited renews at the standard monthly price of $1,500 unless you cancel before your renewal date. You can cancel anytime via your account portal or by emailing
-      <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a>.
-    </details>
-  </section>
+  <!-- Inline CTA -->
+  <div class="m-card" style="text-align:center">
+    <p style="margin:.2rem 0 .8rem;font-weight:800">Ready to secure your Unlimited spot?</p>
+    <a class="cta-button" href="https://www.timetopet.com/portal/woofofwalkstreet/create-account" target="_blank" rel="noopener">Join Unlimited Now</a>
+    <p style="margin:.6rem 0 0;color:#cdd7e1">First month <strong>50% OFF</strong> — A$750, then A$1,500 unless cancelled.</p>
+  </div>
 </div>
 
+<!-- Big Poster (kept for visual brand impact) -->
+<section class="poster-wrap" aria-label="Unlimited poster">
+  <div class="poster">
+    <picture>
+      <source srcset="/images/memberships/membership_2.webp" type="image/webp" />
+      <img src="/images/memberships/membership_2.webp" width="1400" height="900" alt="Woof of Walk Street — bold membership poster" loading="lazy">
+    </picture>
+  </div>
+</section>
+
+<!-- Optional: Cross-link to other plans -->
+<div class="m-wrap">
+  <div class="m-card" style="text-align:center">
+    <h2>Compare Plans</h2>
+    <p>Prefer fewer walks? Explore our other memberships:</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
+      <a class="cta-button" href="/membership-starter.html">Starter — 4 walks / month</a>
+      <a class="cta-button" href="/membership-growth.html">Growth — 10 walks / month</a>
+    </div>
+  </div>
+</div>
+
+<!-- HAPPY DOGS / SOCIAL (kept consistent with site) -->
+<section>
+  <div class="container">
+    <h2>Happy Dogs</h2>
+    <p>See our latest walks and weekend retreats.</p>
+    <section class="container" aria-label="Instagram feed">
+      <h2 class="visually-hidden">Instagram Feed</h2>
+      <div class="embed-1x1">
+        <iframe src="https://snapwidget.com/embed/1108836" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none;overflow:hidden;width:100%;height:500px" title="Posts from Instagram" loading="lazy"></iframe>
+      </div>
+    </section>
+    <section class="container">
+      <h2>Highlights</h2>
+      <div class="gallery-grid">
+        <figure><img src="/images/gallery/dog-digging-sand.jpg" alt="Dog playing at the park in South Melbourne" loading="lazy"></figure>
+        <figure><img src="/images/gallery/dog-sunset-walk.jpg" alt="Sunset stroll by South Melbourne beach" loading="lazy"></figure>
+        <figure><img src="/images/highlights/dog-cozy-nap.jpg" alt="Cozy nap during Weekend Woof Club boarding" loading="lazy"></figure>
+        <figure><img src="/images/gallery/dog-weekend-woof.jpg" alt="Relaxed dog, lights out and zen" loading="lazy"></figure>
+      </div>
+    </section>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="section alt">
+  <div class="container">
+    <h2>What Our Clients Say</h2>
+    <div class="quotes">
+      <blockquote class="quote">
+        <p>“The best walks in Melbourne. My Cavoodle comes home happy every time!”</p>
+        <footer>— Sarah, South Melbourne</footer>
+      </blockquote>
+      <blockquote class="quote">
+        <p>“One dog at a time means my dog gets the full attention he deserves.”</p>
+        <footer>— Daniel, Port Melbourne</footer>
+      </blockquote>
+      <blockquote class="quote">
+        <p>“GPS tracking and photo updates made me feel so confident.”</p>
+        <footer>— Priya, Albert Park</footer>
+      </blockquote>
+    </div>
+    <p class="center" style="margin-top:1rem">
+      <a class="btn btn-ghost" href="https://share.google/dqB4DFK00sC9OZyEe" target="_blank" rel="noopener">
+        ⭐ Read More Reviews on Google
+      </a>
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER (shared) -->
 <footer class="site-footer">
   <div class="footer-banner">
     <picture>
@@ -161,7 +282,10 @@
 
     <div class="footer-contact">
       <h3>Contact Us</h3>
-      <p>Email: <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a><br>Phone: <a href="tel:+61456754050">0456 754 050</a></p>
+      <p>
+        Email: <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a><br>
+        Phone: <a href="tel:+61456754050">0456 754 050</a>
+      </p>
       <div class="footer-socials">
         <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook"><img src="/images/social/facebook.svg" alt="Facebook"></a>
         <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram"><img src="/images/social/instagram.svg" alt="Instagram"></a>
@@ -171,9 +295,10 @@
 
     <nav class="footer-nav" aria-label="Footer">
       <ul>
-         <li><a href="/gallery.html">Photos & Videos</a></li>
+        <li><a href="/dog-walking-south-melbourne">Dog Walking South Melbourne</a></li>
+        <li><a href="/gallery.html">Photos & Videos</a></li>
         <li><a href="/terms.html">Terms and Conditions</a></li>
-        <li><a href="/testimonals.html">Testimonails</a></li>
+        <li><a href="/testimonials.html">Testimonials</a></li>
         <li><a href="/faq.html">FAQs</a></li>
         <li><a href="/privacy.html">Privacy</a></li>
         <li><a href="/sitemap.html">Sitemap</a></li>
@@ -184,31 +309,6 @@
   <div class="footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </footer>
-
-<!-- Promo JS: auto-calc $750 / strike $1,500, referral capture, CTA -->
-<script>
-  window.UNL_PROMO_CODE = 'UNLIMITED50';
-  window.UNL_CHECKOUT_BASE = 'https://www.woofofwalkstreet.com/checkout/unlimited';
-</script>
-<script src="/assets/js/promo.js" defer></script>
-
-<!-- Gate CTA until acknowledgement -->
-<script>
-  (function(){
-    const ack = document.getElementById('unlAck2');
-    const cta = document.getElementById('unlCta2');
-    if(!ack || !cta) return;
-    cta.setAttribute('aria-disabled','true');
-    cta.style.opacity = .6;
-    cta.style.pointerEvents = 'none';
-    ack.addEventListener('change', ()=>{
-      const on = ack.checked;
-      cta.style.opacity = on ? '' : .6;
-      cta.style.pointerEvents = on ? '' : 'none';
-      cta.setAttribute('aria-disabled', on ? 'false' : 'true');
-    });
-  })();
-</script>
 
 </body>
 </html>

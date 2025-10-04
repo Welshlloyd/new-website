@@ -1,80 +1,64 @@
 <!DOCTYPE html>
 <html lang="en-AU">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Boarding – Weekend Woof Club | The Woof of Walk Street</title>
-  <meta name="description" content="Boutique weekend boarding for one guest at a time. Calm, crate-free environment, photo updates, and personalised care in South Melbourne." />
+  <title>Dog Boarding South Melbourne | Boutique Weekend Stays</title>
+  <meta name="description" content="Boutique weekend dog boarding in South Melbourne. One guest at a time, home-style care with daily walks, photo updates and plenty of cuddles. Book your pup’s stay now." />
   <link rel="canonical" href="https://www.woofofwalkstreet.com/boarding-services.html" />
   <link rel="icon" href="/images/brand/favicon.ico" />
-  <link rel="stylesheet" href="/css/mini.css" />
-  <link rel="stylesheet" href="/css/styles.css" />
 
-  <!-- Open Graph -->
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/mini.css">
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Weekend Woof Club – Boutique Dog Boarding (One Guest Only)">
-  <meta property="og:description" content="Crate-free, calm weekend boarding in South Melbourne with daily photo updates. One guest at a time.">
+  <meta property="og:title" content="Dog Boarding South Melbourne | Boutique Weekend Stays">
+  <meta property="og:description" content="One guest only. Home-style weekend dog boarding in South Melbourne with walks and photo updates.">
   <meta property="og:url" content="https://www.woofofwalkstreet.com/boarding-services.html">
-  <meta property="og:image" content="https://www.woofofwalkstreet.com/images/brand/hero-dog-skyline-1200.webp">
+  <meta property="og:image" content="https://www.woofofwalkstreet.com/images/gallery/dog-weekend-woof.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dog Boarding South Melbourne">
+  <meta name="twitter:description" content="Boutique, home-style boarding. One guest only.">
+  <meta name="twitter:image" content="https://www.woofofwalkstreet.com/images/gallery/dog-weekend-woof.jpg">
+
+  <!-- Breadcrumbs JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
+      {"@type":"ListItem","position":2,"name":"Dog Boarding South Melbourne","item":"https://www.woofofwalkstreet.com/boarding-services.html"}
+    ]
+  }
+  </script>
 
   <!-- Service JSON-LD -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"Service",
-    "name":"Weekend Woof Club (Dog Boarding — One Guest Only)",
+    "name":"Weekend Woof Club (Boutique Dog Boarding)",
     "provider":{"@type":"LocalBusiness","name":"The Woof of Walk Street"},
-    "areaServed":{"@type":"AdministrativeArea","name":"South Melbourne VIC"},
+    "areaServed":["South Melbourne","Albert Park","Port Melbourne","Middle Park","Southbank"],
     "serviceType":"Dog Boarding",
     "url":"https://www.woofofwalkstreet.com/boarding-services.html",
-    "telephone":"+61 456 754 050"
-  }
-  </script>
-
-  <!-- FAQPage JSON-LD (matches FAQs on this page) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {
-        "@type":"Question",
-        "name":"Do you board more than one dog at a time?",
-        "acceptedAnswer":{"@type":"Answer","text":"No — we host one guest at a time for a quiet, low-stress stay."}
-      },
-      {
-        "@type":"Question",
-        "name":"Are stays crate-free?",
-        "acceptedAnswer":{"@type":"Answer","text":"Yes — crate-free by default, though we can use a crate upon request if it’s part of your dog’s routine."}
-      },
-      {
-        "@type":"Question",
-        "name":"What are check-in and check-out times?",
-        "acceptedAnswer":{"@type":"Answer","text":"Weekend stays typically run Friday to Sunday. Exact drop-off and pick-up times are confirmed via the client portal when booking."}
-      },
-      {
-        "@type":"Question",
-        "name":"What should I pack?",
-        "acceptedAnswer":{"@type":"Answer","text":"Food, any medications with instructions, lead/harness, and optionally your dog’s bed or a familiar blanket."}
-      },
-      {
-        "@type":"Question",
-        "name":"Do you provide updates?",
-        "acceptedAnswer":{"@type":"Answer","text":"Yes — daily photos and notes, with optional video check-ins so you can relax."}
-      }
-    ]
+    "description":"Boutique, one-guest-only, home-style weekend boarding with local walks and daily photo updates."
   }
   </script>
 </head>
 <body>
- <!-- Promo ribbon -->
+
+  <!-- Promo ribbon -->
   <div class="promo-ribbon">
     🎉 <strong>50% OFF</strong> Unlimited Daily Walks
     <span> · 45-minute solo walks · GPS tracked · Photo updates</span>
     <a href="/membership-unlimited.html" class="promo-cta">Learn More →</a>
   </div>
 
-  <!-- HEADER -->
+  <!-- HEADER (same as home) -->
   <header class="site-header" role="banner">
     <div class="navbar container" role="navigation" aria-label="Main">
       <a class="brand" href="/" aria-label="Go to home">
@@ -82,103 +66,111 @@
         <strong>The Woof of Walk Street</strong>
       </a>
 
-      <!-- Mobile toggle (checkbox method; styled by CSS) -->
-      <input id="nav-toggle" type="checkbox" hidden aria-hidden="true">
+      <input id="nav-toggle" type="checkbox" hidden>
       <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</label>
 
       <nav class="nav-links" aria-label="Primary">
-        <a href="/services.html">Services</a>
-        <div class="nav-dropdown">
-          <button class="nav-dropbtn" aria-haspopup="true" aria-expanded="false">Walking & Boarding</button>
-          <div class="nav-dropmenu" role="menu">
-            <a role="menuitem" href="/dog-walking-south-melbourne">Dog Walking (South Melbourne)</a>
-            <a role="menuitem" href="/boarding-services.html">Boarding — Weekend Woof Club</a>
-            <a role="menuitem" href="/memberships.html">Unlimited Membership</a>
-          </div>
-        </div>
+        <section class="nav-group">
+          <button class="nav-group-btn" aria-expanded="false" aria-controls="nav-services">Services</button>
+          <ul id="nav-services" class="nav-group-list">
+            <li><a href="/services.html">All Services</a></li>
+            <li><a href="/dog-walking-south-melbourne">Dog Walking South Melbourne</a></li>
+            <li><a href="/boarding-services.html" aria-current="page">Boarding — Weekend Woof Club</a></li>
+            <li><a href="/memberships.html">Unlimited Membership</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </section>
+
         <a href="/about.html">About</a>
-        <a href="/contact.html">Contact</a>
-        <a class="btn button-primary nav-cta"
+        <a href="/blog/index.html">Blog</a>
+        <a href="/faq.html">FAQs</a>
+        <a href="/search.html">Search</a>
+
+        <a id="book-now-header-boarding"
+           class="btn button-primary nav-cta"
            href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=header&utm_campaign=book_now"
-           rel="noopener" target="_blank">Book Now</a>
+           target="_blank" rel="noopener">Book Now</a>
       </nav>
     </div>
   </header>
 
-
   <main>
-    <!-- HERO -->
+    <!-- Hero -->
     <section class="hero">
       <div class="container">
-        <h1>Weekend Woof Club (Boarding)</h1>
-        <p class="subhead">One guest. One suite. One calm, cosy stay — with daily photos and updates.</p>
-        <img 
-          src="/images/brand/hero-dog-skyline-1200.webp"
-          srcset="/images/brand/hero-dog-skyline-800.webp 800w,
-                  /images/brand/hero-dog-skyline-1200.webp 1200w,
-                  /images/brand/hero-dog-skyline-1600.webp 1600w"
-          sizes="(max-width: 640px) 100vw, (max-width: 1200px) 90vw, 1200px"
-          alt="Dog enjoying a calm boutique stay" style="max-width:920px;border-radius:12px">
+        <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="/">Home</a> › Dog Boarding South Melbourne</nav>
+        <h1>Dog Boarding in South Melbourne</h1>
+        <p class="subhead">Boutique weekend stays · One guest only · Home-style comfort</p>
+        <img
+          src="/images/gallery/dog-weekend-woof.jpg"
+          alt="Happy pup relaxing during boutique weekend boarding"
+          style="max-width:920px;border-radius:12px;display:block;margin:0 auto"
+          loading="eager" width="1200" height="800">
+        <div class="cta-buttons" style="justify-content:center;flex-wrap:wrap;margin-top:14px">
+          <a id="book-boarding-hero"
+             class="cta-button secondary"
+             href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=hero&utm_campaign=book_boarding"
+             target="_blank" rel="noopener">Check Availability</a>
+        </div>
       </div>
     </section>
 
-    <!-- HIGHLIGHTS -->
+    <!-- Core copy -->
     <section>
-      <div class="container grid grid-3">
-        <article class="card"><h3>Solo Stays</h3><p>We only host one guest at a time for a quiet, low-stress weekend.</p></article>
-        <article class="card"><h3>Comfy &amp; Crate-Free</h3><p>Cosy bed, safe indoor space, and personalised routines.</p></article>
-        <article class="card"><h3>Daily Updates</h3><p>Photos, notes, and optional video check-ins so you can relax.</p></article>
+      <div class="container">
+        <p>Heading away for the weekend? At <strong>The Woof of Walk Street</strong>, we offer <strong>boutique, home-style boarding</strong> in South Melbourne — designed for owners who want their dogs treated like family.</p>
+
+        <div class="grid grid-2">
+          <article class="card">
+            <h2>What makes us different</h2>
+            <ul class="list-check">
+              <li>🐾 <strong>One guest only</strong> — no kennels, no crowding, just your pup and us</li>
+              <li>🛋️ A calm, comfortable home environment with plenty of cuddles</li>
+              <li>🌳 Local walks included (Albert Park, South Melbourne parks)</li>
+              <li>📸 Daily photo updates for total peace of mind</li>
+            </ul>
+            <p>Spaces are intentionally limited because we host <em>one</em> dog per stay. Perfect for weekends away, short trips, or when life gets busy.</p>
+            <p class="stack-sm">
+              <a id="book-boarding-body"
+                 class="btn button-primary"
+                 href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=body&utm_campaign=book_boarding"
+                 target="_blank" rel="noopener">Reserve a Weekend Stay</a>
+              <a class="btn button-secondary" href="/dog-walking-south-melbourne">Need weekday walks?</a>
+            </p>
+          </article>
+
+          <article class="card">
+            <h2>How it works</h2>
+            <ol class="list-steps">
+              <li>Send a request to confirm your dates</li>
+              <li>Quick meet & greet (virtual or in person)</li>
+              <li>Pack the essentials — food, favourite toy, and routine notes</li>
+              <li>Drop off Friday, pick up Sunday (or ask about custom dates)</li>
+            </ol>
+            <figure style="margin-top:12px">
+              <img src="/images/highlights/dog-cozy-nap.jpg" alt="Cozy nap during Weekend Woof Club" loading="lazy" style="border-radius:10px;width:100%;height:auto">
+            </figure>
+          </article>
+        </div>
       </div>
     </section>
 
-    <!-- GALLERY -->
-    <section>
-      <div class="container gallery-grid">
-        <figure><img src="/images/photos/dog-boarding-relaxed.webp" alt="Cozy boarding guest resting" loading="lazy"></figure>
-        <figure><img src="/images/gallery/gallery-south-melbourne-beach-1200.webp" alt="Weekend stroll near South Melbourne beach" loading="lazy"></figure>
-        <figure><img src="/images/gallery/gallery-candid-1-1200.webp" alt="Calm cuddles during weekend stay" loading="lazy"></figure>
-        <figure><img src="/images/gallery/dog-weekend-woof.jpg" alt="Zen evening with a relaxed pup" loading="lazy"></figure>
-      </div>
-    </section>
-
-    <!-- HOW IT WORKS / BOOKING -->
-    <section>
-      <div class="container grid grid-2">
-        <article class="card">
-          <h2>How it works</h2>
-          <ul>
-            <li>Check availability via the client portal calendar</li>
-            <li>We’ll confirm details and routine (feeding, meds, preferences)</li>
-            <li>Updates daily — photos, notes, and optional video</li>
-          </ul>
-          <p class="muted">We can supply high-quality kibble and cooked chicken if preferred.</p>
-        </article>
-        <article class="card">
-          <h2>Book a Weekend Stay</h2>
-          <p>New clients: please create an account first. Returning clients can book directly.</p>
-          <div class="stack-sm">
-            <a class="btn button-primary" target="_blank" rel="noopener" href="https://www.timetopet.com/portal/woofofwalkstreet/create-account">Create new client account</a>
-            <a class="btn button-secondary" target="_blank" rel="noopener" href="https://www.timetopet.com/portal/woofofwalkstreet">Open client portal</a>
-          </div>
-          <p class="muted" style="margin-top:10px">All bookings are <strong>subject to availability</strong>.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- FAQs (matches JSON-LD) -->
+    <!-- Note / reassurance -->
     <section class="section alt">
       <div class="container">
-        <h2>Boarding FAQs</h2>
-        <details><summary>Do you board more than one dog at a time?</summary><p>No — we host one guest at a time for a quiet, low-stress stay.</p></details>
-        <details><summary>Are stays crate-free?</summary><p>Yes — crate-free by default, though we can use a crate on request if it’s part of your dog’s routine.</p></details>
-        <details><summary>What are check-in and check-out times?</summary><p>Weekend stays typically run Friday to Sunday. Exact times are confirmed via the client portal when booking.</p></details>
-        <details><summary>What should I pack?</summary><p>Food, any medications with instructions, lead/harness, and optionally a familiar bed/blanket.</p></details>
-        <details><summary>Do you provide updates?</summary><p>Yes — daily photos and notes, plus optional video check-ins.</p></details>
+        <h2>Safe, loving, reliable</h2>
+        <p>Your dog stays in a comfortable home, never a kennel. We’re local to <strong>South Melbourne</strong> and keep routines calm and familiar with daily walks and updates.</p>
+        <p class="center" style="margin-top:14px">
+          <a id="book-boarding-bottom"
+             class="btn button-primary"
+             href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=bottom&utm_campaign=book_boarding"
+             target="_blank" rel="noopener">Check Weekend Availability</a>
+        </p>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER (same compact version) -->
+  <!-- FOOTER (same as home) -->
   <footer class="site-footer" role="contentinfo">
     <div class="footer-banner">
       <picture>
@@ -197,10 +189,10 @@
         <div class="footer-socials">
           <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram"><img src="/images/social/instagram.svg" alt="" width="24" height="24"></a>
           <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook"><img src="/images/social/facebook.svg" alt="" width="24" height="24"></a>
-          <a href="https://x.com/woofofwalkstreet" aria-label="X"><img src="/images/social/x.svg" alt="" width="24" height="24"></a>
+          <a href="https://x.com/woofofwalkstreet" aria-label="X"><img src="/images/social/twitter.svg" alt="" width="24" height="24"></a>
         </div>
         <p><a class="btn button-primary" target="_blank" rel="noopener"
-           href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=footer&utm_campaign=book_now_footer">Book Now</a></p>
+          href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=footer&utm_campaign=book_now_footer">Book Now</a></p>
       </section>
 
       <nav class="footer-col" aria-label="Primary">
@@ -236,11 +228,13 @@
     </div>
 
     <div class="container footer-geo">
-      Solo Dog Walking & Boutique Boarding across <strong>South Melbourne</strong>, <strong>Albert Park</strong>, <strong>Port Melbourne</strong>, <strong>Middle Park</strong> and <strong>Southbank</strong>.
+      Solo Dog Walking & Boutique Boarding across <strong>South Melbourne</strong>, <strong>Albert Park</strong>,
+      <strong>Port Melbourne</strong>, <strong>Middle Park</strong> and <strong>Southbank</strong>.
     </div>
 
     <div class="container footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
-    <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
     <script>
       document.querySelectorAll('.collapsible .collapse-btn').forEach(btn=>{
         btn.addEventListener('click', ()=>{

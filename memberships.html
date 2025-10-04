@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="/css/mini.css">
   <link rel="stylesheet" href="/css/styles.css">
 
-
   <!-- Structured data: a list of plans -->
   <script type="application/ld+json">
   {
@@ -18,24 +17,9 @@
     "@type": "ItemList",
     "name": "Dog Walking Memberships",
     "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Starter Sniffvestment",
-        "url": "https://www.woofofwalkstreet.com/membership-starter.html"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Tail Growth Plan",
-        "url": "https://www.woofofwalkstreet.com/membership-growth.html"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Unlimited Pawfolio",
-        "url": "https://www.woofofwalkstreet.com/membership-unlimited.html"
-      }
+      {"@type":"ListItem","position":1,"name":"Starter Sniffvestment","url":"https://www.woofofwalkstreet.com/membership-starter.html"},
+      {"@type":"ListItem","position":2,"name":"Tail Growth Plan","url":"https://www.woofofwalkstreet.com/membership-growth.html"},
+      {"@type":"ListItem","position":3,"name":"Unlimited Pawfolio","url":"https://www.woofofwalkstreet.com/membership-unlimited.html"}
     ]
   }
   </script>
@@ -65,8 +49,8 @@
   </style>
 </head>
 <body>
-<!-- Promo ribbon -->
- <!-- Promo ribbon -->
+
+  <!-- Promo ribbon -->
   <div class="promo-ribbon">
     🎉 <strong>50% OFF</strong> Unlimited Daily Walks
     <span> · 45-minute solo walks · GPS tracked · Photo updates</span>
@@ -81,7 +65,7 @@
         <strong>The Woof of Walk Street</strong>
       </a>
 
-      <!-- Mobile toggle (checkbox method; styled by CSS) -->
+      <!-- Mobile toggle -->
       <input id="nav-toggle" type="checkbox" hidden aria-hidden="true">
       <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</label>
 
@@ -92,7 +76,7 @@
           <div class="nav-dropmenu" role="menu">
             <a role="menuitem" href="/dog-walking-south-melbourne">Dog Walking (South Melbourne)</a>
             <a role="menuitem" href="/boarding-services.html">Boarding — Weekend Woof Club</a>
-            <a role="menuitem" href="/memberships.html">Unlimited Membership</a>
+            <a role="menuitem" href="/memberships.html" aria-current="page">Unlimited Membership</a>
           </div>
         </div>
         <a href="/about.html">About</a>
@@ -104,113 +88,116 @@
     </div>
   </header>
 
-<!-- Hero -->
-<section class="m-hero">
-  <h1>Memberships</h1>
-  <p>Bold, ethical, one-dog-only. Pick the plan that fits your pup’s routine—GPS-tracked routes and photo proof after every walk.</p>
-</section>
+  <!-- Hero -->
+  <section class="m-hero">
+    <h1>Memberships</h1>
+    <p>Bold, ethical, one-dog-only. Pick the plan that fits your pup’s routine—GPS-tracked routes and photo proof after every walk.</p>
+  </section>
 
-<!-- USP strip -->
-<section class="usp" aria-labelledby="usp-title">
-  <div class="usp-inner">
-    <h2 id="usp-title">Melbourne’s most exclusive dog walking club</h2>
-    <p>One pup at a time · No pack walks · No car shuttles · South Melbourne · Mon–Fri 7am–7pm</p>
-  </div>
-</section>
-
-<!-- Plans -->
-<div class="m-wrap">
-  <div class="plans">
-
-    <!-- Starter (featured) -->
-    <article class="plan featured">
-      <figure>
-        <img src="images/memberships/membership-starter.webp" alt="Starter Sniffvestment poster" loading="lazy" width="1200" height="800">
-      </figure>
-      <div class="body">
-        <h2>Starter Sniffvestment</h2>
-        <div class="pill">Best for new sniffvestors</div>
-        <p class="meta">4 solo weekday walks / month · GPS-tracked · photo updates</p>
-        <a class="btn" href="/membership-starter.html">View plan</a>
-      </div>
-    </article>
-
-    <!-- Tail Growth -->
-    <article class="plan">
-      <figure>
-        <img src="images/memberships/membership-growth.webp" alt="Tail Growth Plan poster" loading="lazy" width="1200" height="800">
-      </figure>
-      <div class="body">
-        <h2>Tail Growth Plan</h2>
-        <div class="pill">Routine builder</div>
-        <p class="meta">10 solo weekday walks / month · GPS-tracked · priority booking</p>
-        <a class="btn outline" href="/membership-growth.html">View plan</a>
-      </div>
-    </article>
-
-    <!-- Unlimited -->
-    <article class="plan">
-      <figure>
-        <img src="images/memberships/membership-unlimited.webp" alt="Unlimited Pawfolio poster" loading="lazy" width="1200" height="800">
-      </figure>
-      <div class="body">
-        <h2>Unlimited Pawfolio</h2>
-        <div class="pill">Weekday every day</div>
-        <p class="meta">A solo walk every weekday · GPS-tracked · photo proof</p>
-        <a class="btn outline" href="/membership-unlimited.html">View plan</a>
-      </div>
-    </article>
-
-  </div>
-</div>
-
- <!-- Gallery teaser -->
-  <section>
-    <div class="Follow our walks, boarding and more">
-      <h2>Happy Dogs</h2>
-      <p>See our latest walks and weekend retreats.</p>
-        <section class="container">
-    <h2>Instagram Feed</h2>
-    <div class="embed-1x1">
-      <!-- SnapWidget -->
-      <iframe src="https://snapwidget.com/embed/1108836" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none;overflow:hidden;width:100%;height:500px" title="Posts from Instagram" loading="lazy"></iframe>
+  <!-- USP strip -->
+  <section class="usp" aria-labelledby="usp-title">
+    <div class="usp-inner">
+      <h2 id="usp-title">Melbourne’s most exclusive dog walking club</h2>
+      <p>One pup at a time · No pack walks · No car shuttles · South Melbourne · Mon–Fri 7am–7pm</p>
     </div>
   </section>
 
-  <section class="container">
-    <h2>Highlights</h2>
-    <div class="gallery-grid">
-      <figure><img src="/images/gallery/dog-playing-park.webp" alt="Dog playing at the park in South Melbourne" loading="lazy"></figure>
-      <figure><img src="/images/gallery/dog-on-beach.webp" alt="Sunset stroll by South Melbourne beach" loading="lazy"></figure>
-      <figure><img src="/images/gallery/dog-sleeping-1.webp" alt="Cozy nap during Weekend Woof Club boarding" loading="lazy"></figure>
-      <figure><img src="/images/gallery/dog-sleeping-2.webp" alt="Relaxed dog, lights out and zen" loading="lazy"></figure>
+  <!-- Plans -->
+  <div class="m-wrap">
+    <div class="plans">
+
+      <!-- Starter (featured) -->
+      <article class="plan featured">
+        <figure>
+          <img src="/images/memberships/membership-starter.webp" alt="Starter Sniffvestment poster" loading="lazy" width="1200" height="800">
+        </figure>
+        <div class="body">
+          <h2>Starter Sniffvestment</h2>
+          <div class="pill">Best for new sniffvestors</div>
+          <p class="meta">4 solo weekday walks / month · GPS-tracked · photo updates</p>
+          <a class="btn" href="/membership-starter.html">View plan</a>
+        </div>
+      </article>
+
+      <!-- Tail Growth -->
+      <article class="plan">
+        <figure>
+          <img src="/images/memberships/membership-growth.webp" alt="Tail Growth Plan poster" loading="lazy" width="1200" height="800">
+        </figure>
+        <div class="body">
+          <h2>Tail Growth Plan</h2>
+          <div class="pill">Routine builder</div>
+          <p class="meta">10 solo weekday walks / month · GPS-tracked · priority booking</p>
+          <a class="btn outline" href="/membership-growth.html">View plan</a>
+        </div>
+      </article>
+
+      <!-- Unlimited -->
+      <article class="plan">
+        <figure>
+          <img src="/images/memberships/membership-unlimited.webp" alt="Unlimited Pawfolio poster" loading="lazy" width="1200" height="800">
+        </figure>
+        <div class="body">
+          <h2>Unlimited Pawfolio</h2>
+          <div class="pill">Weekday every day</div>
+          <p class="meta">A solo walk every weekday · GPS-tracked · photo proof</p>
+          <a class="btn outline" href="/membership-unlimited.html">View plan</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- Gallery & Instagram -->
+  <section class="m-wrap" aria-labelledby="happy-dogs">
+    <h2 id="happy-dogs">Happy Dogs</h2>
+    <p>See our latest walks and weekend retreats.</p>
+
+    <section aria-labelledby="instagram-title">
+      <h3 id="instagram-title" class="sr-only">Instagram Feed</h3>
+      <div class="embed-1x1">
+        <iframe src="https://snapwidget.com/embed/1108836" class="snapwidget-widget" allowtransparency="true"
+                frameborder="0" scrolling="no" style="border:none;overflow:hidden;width:100%;height:500px"
+                title="Posts from Instagram" loading="lazy"></iframe>
+      </div>
+    </section>
+
+    <section aria-labelledby="highlights-title" style="margin-top:18px">
+      <h3 id="highlights-title" class="sr-only">Highlights</h3>
+      <div class="gallery-grid">
+        <figure><img src="/images/gallery/dog-playing-park.webp" alt="Dog playing at the park in South Melbourne" loading="lazy" width="800" height="600"></figure>
+        <figure><img src="/images/gallery/dog-on-beach.webp" alt="Sunset stroll by South Melbourne beach" loading="lazy" width="800" height="600"></figure>
+        <figure><img src="/images/gallery/dog-sleeping-1.webp" alt="Cozy nap during Weekend Woof Club boarding" loading="lazy" width="800" height="600"></figure>
+        <figure><img src="/images/gallery/dog-sleeping-2.webp" alt="Relaxed dog, lights out and zen" loading="lazy" width="800" height="600"></figure>
+      </div>
+    </section>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="section alt">
+    <div class="container">
+      <h2>What Our Clients Say</h2>
+      <div class="quotes">
+        <blockquote class="quote">
+          <p>“The best walks in Melbourne. My Cavoodle comes home happy every time!”</p>
+          <footer>— Sarah, South Melbourne</footer>
+        </blockquote>
+        <blockquote class="quote">
+          <p>“One dog at a time means my dog gets the full attention he deserves.”</p>
+          <footer>— Daniel, Port Melbourne</footer>
+        </blockquote>
+        <blockquote class="quote">
+          <p>“GPS tracking and photo updates made me feel so confident.”</p>
+          <footer>— Priya, Albert Park</footer>
+        </blockquote>
+      </div>
+      <p class="center" style="margin-top:1rem">
+        <a class="btn btn-ghost" href="https://share.google/dqB4DFK00sC9OZyEe" target="_blank" rel="noopener">
+          ⭐ Read More Reviews on Google
+        </a>
+      </p>
     </div>
   </section>
-<!-- TESTIMONIALS -->
-<section id="testimonials" class="section alt">
-  <div class="container">
-    <h2>What Our Clients Say</h2>
-    <div class="quotes">
-      <blockquote class="quote">
-        <p>“The best walks in Melbourne. My Cavoodle comes home happy every time!”</p>
-        <footer>— Sarah, South Melbourne</footer>
-      </blockquote>
-      <blockquote class="quote">
-        <p>“One dog at a time means my dog gets the full attention he deserves.”</p>
-        <footer>— Daniel, Port Melbourne</footer>
-      </blockquote>
-      <blockquote class="quote">
-        <p>“GPS tracking and photo updates made me feel so confident.”</p>
-        <footer>— Priya, Albert Park</footer>
-      </blockquote>
-    </div>
-    <p class="center" style="margin-top:1rem">
-      <a class="btn btn-ghost" href="https://share.google/dqB4DFK00sC9OZyEe" target="_blank" rel="noopener">
-        ⭐ Read More Reviews on Google
-      </a>
-    </p>
-  </div>
-</section> 
 
   <!-- Blog teaser -->
   <section>
@@ -233,107 +220,109 @@
       <p class="text-center" style="margin-top:20px"><a class="btn button-primary" href="/blog/index.html">Read More Blogs</a></p>
     </div>
   </section>
-<!-- FOOTER (shared) -->
-<footer class="site-footer">
-  <div class="footer-banner">
-    <picture>
-      <source srcset="/images/brand/footer-banner-1600x600.webp" media="(min-width: 768px)">
-      <img src="/images/brand/footer-banner-800x300.webp" alt="Happy dogs in Melbourne" loading="lazy">
-    </picture>
-  </div>
 
-  <div class="container footer-top">
-    <div class="footer-brand">
-      <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="60" height="60" loading="lazy">
-      <div>
-        <strong>The Woof of Walk Street</strong><br>
-        <a class="footer-map" href="https://maps.google.com/?q=South+Melbourne+VIC" target="_blank" rel="noopener">South Melbourne, VIC</a>
-        <span> · Mon–Fri 7am–7pm</span>
-      </div>
+  <!-- FOOTER (shared) -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-banner">
+      <picture>
+        <source srcset="/images/brand/footer-banner-1600x600.webp" media="(min-width: 768px)">
+        <img src="/images/brand/footer-banner-800x300.webp" alt="Happy dogs in Melbourne" loading="lazy" width="800" height="300">
+      </picture>
     </div>
 
-    <div class="footer-contact">
-      <h3>Contact Us</h3>
-      <p>
-        Email: <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a><br>
-        Phone: <a href="tel:+61456754050">0456 754 050</a>
-      </p>
-      <div class="footer-socials">
-        <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook"><img src="/images/social/facebook.svg" alt="Facebook"></a>
-        <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram"><img src="/images/social/instagram.svg" alt="Instagram"></a>
-        <a href="https://x.com/woofofwalkstreet" aria-label="Twitter/X"><img src="/images/social/twitter.svg" alt="Twitter/X"></a>
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="60" height="60" loading="lazy">
+        <div>
+          <strong>The Woof of Walk Street</strong><br>
+          <a class="footer-map" href="https://maps.google.com/?q=South+Melbourne+VIC" target="_blank" rel="noopener">South Melbourne, VIC</a>
+          <span> · Mon–Fri 7am–7pm</span>
+        </div>
       </div>
+
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>
+          Email: <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a><br>
+          Phone: <a href="tel:+61456754050">0456 754 050</a>
+        </p>
+        <div class="footer-socials">
+          <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook"><img src="/images/social/facebook.svg" alt="" width="24" height="24"></a>
+          <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram"><img src="/images/social/instagram.svg" alt="" width="24" height="24"></a>
+          <a href="https://x.com/woofofwalkstreet" aria-label="Twitter/X"><img src="/images/social/twitter.svg" alt="" width="24" height="24"></a>
+        </div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="/dog-walking-south-melbourne">Dog Walking South Melbourne</a></li>
+          <li><a href="/gallery.html">Photos & Videos</a></li>
+          <li><a href="/terms.html">Terms and Conditions</a></li>
+          <li><a href="/testimonials.html">Testimonials</a></li>
+          <li><a href="/faq.html">FAQs</a></li>
+          <li><a href="/privacy.html">Privacy</a></li>
+          <li><a href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
     </div>
 
-   <nav class="footer-nav" aria-label="Footer">
-  <ul>
-    <li><a href="/dog-walking-south-melbourne">Dog Walking South Melbourne</a></li>
-    <li><a href="/gallery.html">Photos & Videos</a></li>
-    <li><a href="/terms.html">Terms and Conditions</a></li>
-    <li><a href="/testimonials.html">Testimonials</a></li>
-    <li><a href="/faq.html">FAQs</a></li>
-    <li><a href="/privacy.html">Privacy</a></li>
-    <li><a href="/sitemap.html">Sitemap</a></li>
-  </ul>
-</nav>
+    <div class="footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </footer>
 
-  </div>
-
-  <div class="footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-</footer>
-
-<!-- Compare Plans: scroller controls + monthly-limited spots counter -->
-<script>
-  (function(){
-    // Scroller arrows
-    const scroller = document.getElementById('planScroller');
-    document.querySelectorAll('[data-scroll]').forEach(btn=>{
-      btn.addEventListener('click', ()=>{
-        const dir = Number(btn.dataset.scroll);
-        const card = scroller.querySelector('.plan-card');
-        const step = card ? card.getBoundingClientRect().width + 14 : 320;
-        scroller.scrollBy({left: dir * step, behavior: 'smooth'});
-      });
-    });
-
-    // Growth plan monthly counter (per-visitor; resets monthly)
-    const CARD_ID = 'plan-growth';
-    const COUNT_ID = 'growthSpotsCount';
-    const CTA_ID = 'growthJoinCta';
-    const STORAGE_KEY = 'woof_growth_spots';
-    const STORAGE_MONTH_KEY = 'woof_growth_month';
-
-    const card = document.getElementById(CARD_ID);
-    const countEl = document.getElementById(COUNT_ID);
-    const cta = document.getElementById(CTA_ID);
-    if(!card || !countEl || !cta) return;
-
-    const startValue = Number(card.getAttribute('data-spots-start')) || 8;
-    const now = new Date();
-    const monthKey = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}`;
-
-    const storedMonth = localStorage.getItem(STORAGE_MONTH_KEY);
-    if (storedMonth !== monthKey) {
-      localStorage.setItem(STORAGE_MONTH_KEY, monthKey);
-      localStorage.setItem(STORAGE_KEY, String(startValue));
-    }
-
-    const current = Number(localStorage.getItem(STORAGE_KEY));
-    const spots = Number.isFinite(current) ? current : startValue;
-    countEl.textContent = Math.max(spots, 0);
-
-    cta.addEventListener('click', function() {
-      let n = Number(localStorage.getItem(STORAGE_KEY));
-      if (!Number.isFinite(n)) n = startValue;
-      if (n > 0) {
-        n -= 1;
-        localStorage.setItem(STORAGE_KEY, String(n));
-        countEl.textContent = Math.max(n, 0);
+  <!-- Compare Plans: scroller controls + monthly-limited spots counter -->
+  <script>
+    (function(){
+      // Scroller arrows (if you add them later)
+      const scroller = document.getElementById('planScroller');
+      if (scroller) {
+        document.querySelectorAll('[data-scroll]').forEach(btn=>{
+          btn.addEventListener('click', ()=>{
+            const dir = Number(btn.dataset.scroll);
+            const card = scroller.querySelector('.plan-card');
+            const step = card ? card.getBoundingClientRect().width + 14 : 320;
+            scroller.scrollBy({left: dir * step, behavior: 'smooth'});
+          });
+        });
       }
-    });
-  })();
-</script>
+
+      // Growth plan monthly counter (per-visitor; resets monthly)
+      const CARD_ID = 'plan-growth';
+      const COUNT_ID = 'growthSpotsCount';
+      const CTA_ID = 'growthJoinCta';
+      const STORAGE_KEY = 'woof_growth_spots';
+      const STORAGE_MONTH_KEY = 'woof_growth_month';
+
+      const card = document.getElementById(CARD_ID);
+      const countEl = document.getElementById(COUNT_ID);
+      const cta = document.getElementById(CTA_ID);
+      if(!card || !countEl || !cta) return;
+
+      const startValue = Number(card.getAttribute('data-spots-start')) || 8;
+      const now = new Date();
+      const monthKey = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}`;
+
+      const storedMonth = localStorage.getItem(STORAGE_MONTH_KEY);
+      if (storedMonth !== monthKey) {
+        localStorage.setItem(STORAGE_MONTH_KEY, monthKey);
+        localStorage.setItem(STORAGE_KEY, String(startValue));
+      }
+
+      const current = Number(localStorage.getItem(STORAGE_KEY));
+      const spots = Number.isFinite(current) ? current : startValue;
+      countEl.textContent = Math.max(spots, 0);
+
+      cta.addEventListener('click', function() {
+        let n = Number(localStorage.getItem(STORAGE_KEY));
+        if (!Number.isFinite(n)) n = startValue;
+        if (n > 0) {
+          n -= 1;
+          localStorage.setItem(STORAGE_KEY, String(n));
+          countEl.textContent = Math.max(n, 0);
+        }
+      });
+    })();
+  </script>
 
 </body>
 </html>

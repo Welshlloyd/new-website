@@ -1,402 +1,195 @@
-/* ---------------------------------------------------
-   The Woof of Walk Street — Global Styles (v3.1)
-   Mobile-first, responsive, accessible
-   - Aligned with mini.css v3.4
-   - Unified buttons (black → orange hover)
-   - Spacing/format polish
-   - Deduped promo/nav rules
---------------------------------------------------- */
+/* =========================================================
+   The Woof of Walk Street – styles.css
+   Mobile-first. Keep mini.css loaded BEFORE this file.
+   ========================================================= */
 
-/* Base / Reset-ish */
-*,
-*::before,
-*::after { box-sizing: border-box; }
-
-:root {
-  --bg: #fffdf8;
-  --text: #1e1e1e;
-  --muted: #585858;
-  --brand: #f5b200;
-  --brand-ink: #1a1a1a;
-  --accent: #2f2f2f;
-  --stroke: #eae6de;
-  --card: #ffffff;
-  --shadow: 0 10px 18px rgba(0,0,0,0.07), 0 2px 6px rgba(0,0,0,0.06);
-  --radius: 14px;
-  --radius-sm: 10px;
-  --radius-lg: 22px;
-  --maxw: 1100px;
-  --gap: 20px;
-
-  /* Promo colors (background only; CTA is unified via button rules) */
-  --promo-bg: #fff9e5;
-  --promo-border: #f3e2a8;
-  --promo-btn-bg: #ffe44d;   /* legacy kept for reference, not used */
-  --promo-btn-color: #111;   /* legacy kept for reference, not used */
+/* ---------- CSS Variables ---------- */
+:root{
+  --brand:#111824;
+  --brand-2:#2b3645;
+  --accent:#111;                 /* primary button text */
+  --gold:#b59b5a;
+  --bg:#ffffff;
+  --bg-alt:#fafbfc;
+  --ink:#1f2a37;
+  --muted:#5b6775;
+  --line:#eceff3;
+  --shadow:0 12px 30px rgba(0,0,0,.08);
+  --radius:12px;
+  --btn-radius:28px;
+  --container:1120px;
+  --promo-h:0px;                 /* set via JS if promo ribbon exists */
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Inter, Arial, sans-serif;
-  line-height: 1.55;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
+/* ---------- Base / Reset ---------- */
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;line-height:1.45;overflow-x:hidden}
+img{max-width:100%;height:auto}
+a{color:var(--brand-2);text-decoration:none}
+a:hover{text-decoration:underline}
+strong{font-weight:700}
+.container{max-width:var(--container);margin:0 auto;padding:0 16px}
 
-img { max-width: 100%; height: auto; display: block; }
-a { color: inherit; text-decoration: none; }
-a:hover, a:focus { text-decoration: underline; }
+/* ---------- Utilities ---------- */
+.center{text-align:center}
+.muted{color:var(--muted)}
+.visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
 
-/* Containers */
-.container {
-  width: 100%;
-  max-width: var(--maxw);
-  margin: 0 auto;
-  padding: 0 16px;
-}
-
-/* ---------------------------------------------------
-   Header / Nav
---------------------------------------------------- */
-.site-header {
-  background: #fff;
-  border-bottom: 1px solid var(--stroke);
-}
-
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 12px 16px;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  min-width: 0;
-}
-
-.brand img {
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
-}
-
-.brand strong {
-  font-size: 1.05rem;
-  font-weight: 800;
-  white-space: nowrap;
-  letter-spacing: 0.2px;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
-.nav-links a {
-  padding: 8px 10px;
-  border-radius: 8px;
-  font-weight: 600;
-  color: var(--muted);
-  transition: background .2s ease, color .2s ease;
-}
-
-.nav-links a:hover,
-.nav-links a:focus {
-  background: #f5f5f5;
-  color: var(--text);
-}
-
-.nav-links a[aria-current="page"] {
-  color: var(--text);
-  background: #f8f4ea;
-  font-weight: 700;
-}
-
-/* Mobile hamburger toggle */
-.nav-toggle { display: none; background: transparent; border: 0; font-size: 1.5rem; cursor: pointer; }
-
-@media (max-width: 720px) {
-  .nav-toggle { display: block; }
-  .nav-links {
-    position: absolute; top: 58px; left: 0; right: 0; display: none; flex-direction: column;
-    background: #fff; border-top: 1px solid var(--stroke); box-shadow: 0 10px 24px rgba(0,0,0,.06);
-    padding: 12px; z-index: 1000;
-  }
-  .nav-links.is-open { display: flex; }
-  .nav-links a { width: 100%; padding: 12px 8px; }
-}
-body.nav-open { overflow: hidden; }
-.nav-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.25); z-index: 900; }
-/* Header: don't style buttons like plain links */
-.nav-links a:not(.btn) {
-  padding:8px 10px;
-  border-radius:8px;
-  font-weight:600;
-  color:var(--muted);
-  transition:background .2s,color .2s;
-}
-
-/* Ensure the header CTA uses the standard button style */
-.nav-links .btn,
-.nav-cta {
-  padding:12px 18px;               /* same as .btn */
-  border-radius:999px;
-  background:var(--accent);        /* black */
-  color:#fff !important;
-  border:1px solid #111;
-  box-shadow:var(--shadow);
-  font-weight:800;
-}
-.nav-links .btn:hover,
-.nav-cta:hover {
-  background:var(--brand);         /* orange hover */
-  color:var(--brand-ink) !important;
-  transform:scale(1.05);
-  box-shadow:0 6px 18px rgba(245,178,0,0.4);
-  text-decoration:none;
-}
-
-/* ---------------------------------------------------
-   Promo Ribbon (CTA button unified below)
---------------------------------------------------- */
+/* ---------- Promo Ribbon ---------- */
 .promo-ribbon{
-  background: var(--promo-bg);
-  border-bottom: 1px solid var(--promo-border);
-  display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: .6rem;
-  padding: .6rem .8rem; text-align: center; line-height: 1.35;
+  position:sticky;top:0;z-index:1100;
+  background:#fff4df;color:#473816;border-bottom:1px solid #f5e7c8;
+  padding:10px 16px;text-align:center
 }
-.promo-line { font-weight: 600; }
-.promo-fine { opacity: .9; font-size: .92rem; }
+.promo-ribbon .promo-cta{
+  display:inline-block;margin-top:8px;background:#111;color:#fff;border-radius:var(--btn-radius);
+  padding:10px 16px;font-weight:700;text-decoration:none;box-shadow:var(--shadow)
+}
+.promo-ribbon .promo-cta:hover{opacity:.95}
 
-/* Promo CTA uses global button style via .promo-cta class */
-.promo-cta {
-  display: inline-block;
-  padding: 10px 18px;
-  border-radius: 999px;
-  background: var(--accent);     /* black base */
-  color: #fff;
-  font-weight: 800;
-  border: 1px solid #111;
-  box-shadow: var(--shadow);
-  text-align: center;
-  white-space: nowrap;
-  transition: background .2s ease, color .2s ease, transform .15s ease, box-shadow .15s ease;
+/* ---------- Header / Nav ---------- */
+.site-header{
+  position:sticky;top:var(--promo-h);z-index:1000;
+  background:#fff;border-bottom:1px solid #f1f3f5
 }
-.promo-cta:hover,
-.promo-cta:focus {
-  background: var(--brand);      /* orange hover */
-  color: var(--brand-ink);
-  transform: scale(1.05);
-  box-shadow: 0 6px 18px rgba(245,178,0,0.4);
-  text-decoration: none;
-}
+.navbar{display:flex;align-items:center;justify-content:space-between;padding:10px 16px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--brand);text-decoration:none}
+.brand img{display:block;border-radius:8px}
+.brand strong{font-size:1.15rem}
 
-/* ---------------------------------------------------
-   Hero
---------------------------------------------------- */
-.hero {
-  background: linear-gradient(180deg, #fffaf0, #fffdfa);
-  padding: 48px 0 36px;
-  border-bottom: 1px solid var(--stroke);
-  text-align: left;
-}
+.nav-links{display:flex;align-items:center;gap:16px}
+.nav-links a{color:var(--brand-2);font-weight:500}
+.nav-cta.btn,.nav-cta.button-primary{padding:8px 14px}
 
-.hero h1 {
-  margin: 0 0 10px;
-  font-size: clamp(1.6rem, 3.6vw, 2.4rem);
-  line-height: 1.2;
+/* --- Dropdown (desktop) --- */
+.nav-group,.nav-dropdown{position:relative}
+.nav-dropbtn,.nav-group-btn{
+  background:transparent;border:0;font:inherit;color:var(--brand-2);cursor:pointer;font-weight:600
 }
+.nav-dropmenu,.nav-group-list{
+  position:absolute;top:100%;left:0;background:#fff;border:1px solid var(--line);border-radius:10px;
+  min-width:240px;padding:8px;box-shadow:var(--shadow);display:none;z-index:1001
+}
+.nav-dropdown:hover .nav-dropmenu{display:block}
+.nav-group-list li{list-style:none}
+.nav-group-list a,.nav-dropmenu a{display:block;padding:8px;border-radius:8px;color:var(--brand-2)}
+.nav-group-list a:hover,.nav-dropmenu a:hover{background:#f6f8fb}
 
-.hero .subhead {
-  margin: 0 0 16px;
-  color: var(--muted);
-  font-size: 1.05rem;
+/* --- Mobile hamburger (About/others use checkbox hack) --- */
+#nav-toggle{display:none}
+.nav-toggle{display:none;cursor:pointer;font-size:1.6rem}
+@media (max-width:880px){
+  .nav-links{display:none;position:absolute;left:0;right:0;top:100%;background:#fff;border-bottom:1px solid var(--line);padding:12px 16px;flex-direction:column;gap:10px}
+  #nav-toggle:checked ~ .nav-links{display:flex}
+  .nav-toggle{display:block;margin-left:auto}
 }
 
-.hero img {
-  margin: 8px auto 14px;
-  display: block;
-  border-radius: 12px;
+/* ---------- Buttons ---------- */
+.btn,.button-primary{
+  display:inline-block;border-radius:var(--btn-radius);padding:12px 18px;font-weight:700;
+  background:#111;color:#fff;border:1px solid #111;text-decoration:none;transition:.15s ease box-shadow,.15s ease transform
+}
+.btn:hover,.button-primary:hover{box-shadow:var(--shadow);text-decoration:none}
+.btn-ghost{background:#fff;color:#111;border:1px solid #111}
+.btn-ghost:hover{background:#111;color:#fff}
+
+/* ---------- Sections ---------- */
+.hero{background:var(--bg-alt);padding:24px 0 26px}
+.hero h1{font-size:clamp(1.6rem,4.5vw + .6rem,2.6rem);line-height:1.15;margin:.4rem 0 .2rem}
+.subhead{font-size:clamp(1rem,2.2vw + .6rem,1.2rem);color:#46505a;margin:.25rem 0 0}
+.section{padding:28px 0}
+.section.alt{background:var(--bg-alt)}
+
+/* ---------- Cards / Grids ---------- */
+.card{border:1px solid var(--line);border-radius:var(--radius);padding:14px;background:#fff}
+.grid{display:grid;gap:18px}
+.grid-2{grid-template-columns:1fr}
+.grid-3{grid-template-columns:1fr}
+@media (min-width:880px){
+  .grid-2{grid-template-columns:1fr 1fr}
+  .grid-3{grid-template-columns:repeat(3,1fr)}
 }
 
-.hero .cta-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 14px;
+/* ---------- Proof / About helpers ---------- */
+.proof{padding:36px 0}
+.proof-wrap{display:grid;gap:24px;align-items:center}
+.proof-figure img{border-radius:14px;box-shadow:var(--shadow)}
+
+/* ---------- Blog Index & Posts ---------- */
+.page-header{background:var(--bg-alt);padding:28px 0;border-bottom:1px solid #eef1f4}
+.blog-grid{display:grid;gap:18px}
+@media(min-width:860px){.blog-grid{grid-template-columns:repeat(2,1fr)}}
+
+.blog-card{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.blog-card img{display:block;width:100%;height:auto}
+.blog-card .body{padding:14px}
+.blog-card h2{margin:.2rem 0 .4rem;font-size:1.2rem}
+.blog-card p{margin:.35rem 0 .25rem;color:#444}
+.blog-card .meta{color:#778;font-size:.9rem}
+.blog-card .read-more{display:inline-block;margin-top:.35rem}
+
+.post-hero img{max-width:100%;height:auto;border-radius:12px;display:block;margin:12px auto}
+.intro{font-size:1.1rem;color:#444;margin:.5rem 0 1.25rem}
+
+.benefits{display:grid;gap:14px}
+.benefit{border:1px solid var(--line);border-radius:12px;padding:14px;background:#fff}
+.benefit h3{margin:.25rem 0 .35rem;font-size:1.05rem}
+
+.callout{background:#eef6ff;border:1px solid #cfe5ff;border-radius:10px;padding:14px;margin:1rem 0}
+
+.faq details{border-top:1px solid #eee;padding:.6rem 0}
+.faq summary{cursor:pointer;font-weight:600}
+
+/* ---------- Blog CTA ---------- */
+.blog-cta{background:#eef6ff;border-top:1px solid #dcecff;border-bottom:1px solid #dcecff;padding:28px 0;margin-top:12px}
+.blog-cta .btn{margin:0 .4rem}
+
+/* ---------- Footer ---------- */
+.site-footer{background:#fff;border-top:1px solid var(--line);margin-top:24px}
+.footer-banner img{display:block;width:100%;height:auto}
+.footer-grid{display:grid;gap:18px;padding:18px 0}
+.footer-brand .footer-logo{border-radius:8px}
+.footer-brand p{margin:.4rem 0}
+.footer-socials a{display:inline-block;margin-right:8px}
+.footer-col h3{margin:.25rem 0 .5rem}
+.footer-col ul{margin:0;padding:0;list-style:none}
+.footer-col li{margin:.35rem 0}
+.footer-geo{padding:12px 0;color:#46505a}
+.footer-bottom{padding:12px 0;border-top:1px solid var(--line);color:#66707c}
+.collapsible .collapse-btn{background:transparent;border:0;font:inherit;font-weight:700;cursor:pointer;padding:0}
+@media(min-width:860px){
+  .footer-grid{grid-template-columns:1.2fr 1fr 1fr 1fr}
 }
 
-/* ---------------------------------------------------
-   Buttons — unified black base, orange hover w/ pop
-   (Matches mini.css v3.4)
---------------------------------------------------- */
-.cta-button,
-.btn,
-button[type="submit"],
-.button,
-.button-primary,
-.button-secondary,
-.btn-ghost,
-input[type="submit"] {
-  display: inline-block;
-  padding: 12px 18px;
-  border-radius: 999px;
-  background: var(--accent);     /* black */
-  color: #fff;
-  font-weight: 800;
-  border: 1px solid #111;
-  box-shadow: var(--shadow);
-  text-align: center;
-  cursor: pointer;
-  transition: background .2s ease, color .2s ease, transform .15s ease, box-shadow .15s ease;
+/* ---------- Forms / Inputs (basic) ---------- */
+input,select,textarea{font:inherit;border:1px solid var(--line);border-radius:10px;padding:10px;width:100%}
+label{display:block;margin:.2rem 0 .25rem;color:#475467}
+
+/* ---------- Mobile Tweaks ---------- */
+@media (max-width:420px){
+  .navbar{padding:10px 16px}
+  .brand strong{font-size:1.05rem}
+  .btn,.button-primary{padding:10px 16px;font-size:1rem}
+  .promo-ribbon .promo-cta{padding:8px 12px;font-size:.95rem}
 }
 
-/* Remove legacy waggle animation & yellow primary styles by replacing hover */
-.cta-button:hover,
-.btn:hover,
-button[type="submit"]:hover,
-.button:hover,
-.button-primary:hover,
-.button-secondary:hover,
-.btn-ghost:hover,
-input[type="submit"]:hover {
-  background: var(--brand);      /* orange */
-  color: var(--brand-ink);
-  transform: scale(1.05);
-  box-shadow: 0 6px 18px rgba(245,178,0,0.4);
-  text-decoration: none;
-}
+/* ---------- Accessibility helpers ---------- */
+:focus-visible{outline:2px solid #2563eb;outline-offset:2px}
 
-/* ---------------------------------------------------
-   Sections / Cards / Grids / Blog / Gallery
---------------------------------------------------- */
-section { padding-block: clamp(28px, 4vw, 48px); }
+/* ---------- Optional: small helpers reused across pages ---------- */
+.cta-buttons{display:flex;flex-wrap:wrap;gap:10px}
+.list-check{padding-left:1.25rem}
+.list-check li{margin:.35rem 0}
+.quotes{display:grid;gap:14px}
+.quote{border-left:4px solid var(--gold);padding-left:12px;color:#3c4550}
 
-.card {
-  background: var(--card);
-  border: 1px solid var(--stroke);
-  border-radius: var(--radius);
-  padding: 18px;
-  box-shadow: var(--shadow);
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-.card:hover { transform: translateY(-2px); }
+/* ---------- Search page minimal ---------- */
+.search-results .result{border-bottom:1px solid var(--line);padding:12px 0}
+.search-results .result:last-child{border-bottom:0}
 
-.grid { display: grid; gap: clamp(14px, 2.5vw, 24px); }
-.grid-2 { grid-template-columns: 1fr; }
-.grid-3 { grid-template-columns: 1fr; }
-@media (min-width: 720px) {
-  .grid-2 { grid-template-columns: 1.2fr .8fr; }
-  .grid-3 { grid-template-columns: repeat(3, 1fr); }
-}
+/* ---------- Sitemap / Legal pages ---------- */
+.legal h1,.legal h2{margin-top:1rem}
 
-/* Blog cards */
-.section-blog h2{ color:#fff; font-weight:800; }
-.blog-card{
-  background:#fff; border:1px solid var(--stroke); border-radius:var(--radius);
-  overflow:hidden; box-shadow:0 3px 8px rgba(0,0,0,.1); transition:transform .12s, box-shadow .12s;
-}
-.blog-card:hover{ transform:translateY(-3px); box-shadow:0 6px 16px rgba(0,0,0,.15); }
-.blog-card img{ width:100%; height:auto; aspect-ratio:16/9; object-fit:cover; }
-.blog-card h2,
-.blog-card h3,
-.blog-card a{
-  color: var(--text) !important;
-  font-weight:700;
-  font-size:1.05rem;
-  margin:12px 14px 6px;
-}
-.blog-card a{ text-decoration:none; }
-.blog-card a:hover{ color:var(--brand-ink); text-decoration:underline; }
-.blog-card p{ margin:0 14px 14px; color:var(--muted); }
-@media (max-width:640px){
-  .blog-card h2{ font-size:1rem; }
-  .blog-list{ gap:16px; }
-}
-
-/* Gallery */
-.gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-@media (min-width: 860px) {
-  .gallery-grid { grid-template-columns: repeat(4, 1fr); }
-}
-.gallery-grid img {
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  width: 100%; aspect-ratio: 4/3; object-fit: cover;
-}
-
-/* ---------------------------------------------------
-   Forms
---------------------------------------------------- */
-form {
-  background: var(--card);
-  border: 1px solid var(--stroke);
-  border-radius: var(--radius);
-  padding: 18px;
-  box-shadow: var(--shadow);
-}
-label { display: block; font-weight: 700; }
-
-/* IPOO banner */
-.ipoo-banner {
-  background:#0b0e12;
-  color:#fff;
-  padding:32px 18px;
-  text-align:center;
-  border-bottom:4px solid var(--brand);
-}
-.ipoo-banner h2 { margin:0 0 12px; font-size:1.6rem; }
-.ipoo-banner p { margin:0 auto; max-width:52ch; font-size:1rem; line-height:1.5; }
-
-/* Yellow Happy Dogs section */
-.happy-dogs {
-  background:var(--brand);
-  padding:36px 18px 28px;
-  text-align:center;
-  border-radius:0 0 40px 40px;
-  margin-top:0;
-}
-.happy-dogs h2 { margin:0 0 8px; font-size:1.4rem; }
-
-/* Services page: equal image sizes */
-.service-img{
-  width:100%;
-  aspect-ratio:4/3;
-  object-fit:cover;
-  border-radius:10px;
-  display:block;
-  margin-bottom:12px;
-  box-shadow:var(--shadow);
-}
-@media (min-width:900px){
-  .service-img{ height:320px; }    /* equal height on desktop */
-}
-
-/* ---------------------------------------------------
-   Extra polish (matches mini.css patch)
---------------------------------------------------- */
-
-/* Prevent section collisions + tidy grids already covered above */
-
-/* Quotes/testimonials spacing */
-.quotes { display: grid; gap: 14px; }
-.quote p { margin: 0 0 4px; }
-
-/* Footer nav — clean stack on mobile, tidy gaps */
-.footer-nav ul { display: grid; gap: 8px; }
-
-/* Typographic margins */
-p { margin: 0 0 12px; }
-
-/* Membership cards layout tweaks (if used on pages loading styles.css) */
-.grid-3 .card { height: 100%; }
-.hero + section { margin-top: 0; } /* no extra gap after hero */
+/* =========================================================
+   End – styles.css
+   ========================================================= */

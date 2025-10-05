@@ -21,7 +21,7 @@
   <meta name="twitter:description" content="Solo walks, boutique boarding, local guides & more for South Melbourne dog parents."/>
   <meta name="twitter:image" content="https://www.woofofwalkstreet.com/images/brand/hero-dog-skyline-1200.webp"/>
 
-  <!-- Blog schema -->
+  <!-- Blog schema (updated to include all posts) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -36,12 +36,23 @@
     },
     "blogPost":[
       {"@type":"BlogPosting","headline":"Best Dog-Friendly Spots in South Melbourne","url":"https://www.woofofwalkstreet.com/blog/best-dog-walks-south-melbourne.html"},
+      {"@type":"BlogPosting","headline":"Dog-Friendly Cafés in South Melbourne","url":"https://www.woofofwalkstreet.com/blog/dog-friendly-cafes-south-melbourne.html"},
       {"@type":"BlogPosting","headline":"Why Solo Walks Reduce Stress","url":"https://www.woofofwalkstreet.com/blog/why-solo-walks.html"},
       {"@type":"BlogPosting","headline":"How to Choose an Ethical Dog Walker","url":"https://www.woofofwalkstreet.com/blog/ethical-dog-walker.html"},
       {"@type":"BlogPosting","headline":"Rainy-Day Enrichment Games","url":"https://www.woofofwalkstreet.com/blog/rainy-day-enrichment-games.html"},
-      {"@type":"BlogPosting","headline":"Boarding Prep: A Handy Checklist","url":"https://www.woofofwalkstreet.com/blog/prepare-dog-for-boarding-checklist.html"}
+      {"@type":"BlogPosting","headline":"Boarding Prep: A Handy Checklist","url":"https://www.woofofwalkstreet.com/blog/prepare-dog-for-boarding-checklist.html"},
+      {"@type":"BlogPosting","headline":"Weekend Woof Club – What To Pack Checklist","url":"https://www.woofofwalkstreet.com/blog/weekend-woof-club-checklist.html"}
     ]
   }
+  </script>
+
+  <!-- ✅ Google Global Site Tag (Google Ads) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'AW-17527927259');
   </script>
 </head>
 <body>
@@ -67,7 +78,12 @@
       <a href="/contact.html">Contact</a>
       <a class="btn button-primary nav-cta" 
          href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=header&utm_campaign=book_now" 
-         target="_blank" rel="noopener">Book Now</a>
+         target="_blank" rel="noopener"
+         onclick="gtag('event', 'ttp_booking_click', {
+           'send_to': 'AW-17527927259/ePjJCLT8p6cbENvj-6VB',
+           'value': 1.0,
+           'currency': 'AUD'
+         });">Book Now</a>
     </nav>
   </div>
 </header>
@@ -82,28 +98,45 @@
 
   <section>
     <div class="container blog-list">
+      <!-- Keep newest posts near the top -->
       <article class="blog-card">
-        <img src="/images/blog/blog-dog-friendly-spots-south-melbourne.webp" alt="Dog enjoying a walk in South Melbourne park" loading="lazy">
-        <h2><a href="/blog/best-dog-walks-south-melbourne.html">Best Dog-Friendly Spots in South Melbourne</a></h2>
-        <p>A local’s guide to the best parks, scenic routes, and cafés like Nanna’s Place & PhiloCoffee where dogs feel welcome.</p>
+        <img src="/images/blog/blog-dog-friendly-cafes-south-melbourne.webp" alt="Dog beside coffee cup at a South Melbourne café" loading="lazy" width="400" height="250">
+        <h2><a href="/blog/dog-friendly-cafes-south-melbourne.html">Dog-Friendly Cafés in South Melbourne</a></h2>
+        <p>Our shortlist of cafés that truly welcome dogs — with outdoor seating, water bowls, and friendly staff.</p>
       </article>
+
       <article class="blog-card">
-        <img src="/images/blog/blog-solo-dog-walks-reduce-stress.webp" alt="Dog on leash during solo walk" loading="lazy">
+        <img src="/images/blog/blog-weekend-woof-club-checklist.webp" alt="Packed dog bag for weekend boarding" loading="lazy" width="400" height="250">
+        <h2><a href="/blog/weekend-woof-club-checklist.html">Weekend Woof Club – What To Pack Checklist</a></h2>
+        <p>Exactly what to bring for a calm, comfortable weekend stay — from meals to comfort items.</p>
+      </article>
+
+      <article class="blog-card">
+        <img src="/images/blog/blog-dog-friendly-spots-south-melbourne.webp" alt="Dog enjoying a walk in South Melbourne park" loading="lazy" width="400" height="250">
+        <h2><a href="/blog/best-dog-walks-south-melbourne.html">Best Dog-Friendly Spots in South Melbourne</a></h2>
+        <p>A local’s guide to the best parks, scenic routes, and cafés where dogs feel welcome.</p>
+      </article>
+
+      <article class="blog-card">
+        <img src="/images/blog/blog-solo-dog-walks-reduce-stress.webp" alt="Dog on leash during solo walk" loading="lazy" width="400" height="250">
         <h2><a href="/blog/why-solo-walks.html">Why Solo Walks Reduce Stress</a></h2>
         <p>Learn why one-dog-only walks create calmer, happier pets.</p>
       </article>
+
       <article class="blog-card">
-        <img src="/images/blog/blog-ethical-dog-walker-melbourne.webp" alt="Dog with walker in Melbourne streets" loading="lazy">
+        <img src="/images/blog/blog-ethical-dog-walker-melbourne.webp" alt="Dog with walker in Melbourne streets" loading="lazy" width="400" height="250">
         <h2><a href="/blog/ethical-dog-walker.html">How to Choose an Ethical Dog Walker</a></h2>
         <p>Not all walkers are equal — here’s what makes the difference.</p>
       </article>
+
       <article class="blog-card">
-        <img src="/images/blog/blog-rainy-day-dog-enrichment-games.webp" alt="Dog playing enrichment games indoors" loading="lazy">
+        <img src="/images/blog/blog-rainy-day-dog-enrichment-games.webp" alt="Dog playing enrichment games indoors" loading="lazy" width="400" height="250">
         <h2><a href="/blog/rainy-day-enrichment-games.html">Rainy-Day Enrichment Games</a></h2>
         <p>Keep your dog’s brain busy when the weather won’t cooperate.</p>
       </article>
+
       <article class="blog-card">
-        <img src="/images/blog/blog-dog-boarding-checklist-south-melbourne.webp" alt="Dog bag packed with essentials for boarding" loading="lazy">
+        <img src="/images/blog/blog-dog-boarding-checklist-south-melbourne.webp" alt="Dog bag packed with essentials for boarding" loading="lazy" width="400" height="250">
         <h2><a href="/blog/prepare-dog-for-boarding-checklist.html">Boarding Prep: A Handy Checklist</a></h2>
         <p>What to pack and how to set your dog up for a calm stay.</p>
       </article>
@@ -132,7 +165,12 @@
         <a href="https://x.com/woofofwalkstreet"><img src="/images/social/x.svg" alt="X" width="24" height="24"></a>
       </div>
       <p><a class="btn button-primary" target="_blank" rel="noopener"
-        href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=footer&utm_campaign=book_now_footer">Book Now</a></p>
+        href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=footer&utm_campaign=book_now_footer"
+        onclick="gtag('event', 'ttp_booking_click', {
+          'send_to': 'AW-17527927259/ePjJCLT8p6cbENvj-6VB',
+          'value': 1.0,
+          'currency': 'AUD'
+        });">Book Now</a></p>
     </section>
 
     <nav class="footer-col" aria-label="Primary">
@@ -152,7 +190,7 @@
         <li><a href="/about.html">About</a></li>
         <li><a href="/testimonials.html">Testimonials</a></li>
         <li><a href="/gallery.html">Photos & Videos</a></li>
-        <li><a href="/blog/index.html">Blog</a></li>
+        <li><a href="/blog/index.html" aria-current="page">Blog</a></li>
         <li><a href="/faq.html">FAQs</a></li>
       </ul>
     </section>
@@ -176,4 +214,3 @@
 
 </body>
 </html>
-

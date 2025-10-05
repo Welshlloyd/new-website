@@ -1,0 +1,13 @@
+# --- Canonical host: force HTTPS + WWW ---
+http://woofofwalkstreet.com/*          https://www.woofofwalkstreet.com/:splat  301!
+http://www.woofofwalkstreet.com/*      https://www.woofofwalkstreet.com/:splat  301!
+https://woofofwalkstreet.com/*         https://www.woofofwalkstreet.com/:splat  301!
+
+# --- Legacy / tidy URLs (Screaming Frog 404s & variants) ---
+/walking-services.html                  /services.html                                      301
+/book-now.html                          /book-now/                                          301
+/post-weekend-woof-club-checklist.html  /blog/weekend-woof-club-checklist.html             301
+/blog/index                             /blog/index.html                                    301
+
+# (Optional) Nice short path for booking
+/book                                   /book-now/                                          302

@@ -7,9 +7,12 @@ https://woofofwalkstreet.com/*     https://www.woofofwalkstreet.com/:splat   301
 # ----------------------------
 # Fix broken/legacy URLs
 # ----------------------------
-/book                              /book-now/                                301
-/blog                              /blog/                                    301
-/blog/index                        /blog/                                    301
+http://woofofwalkstreet.com/    https://www.woofofwalkstreet.com/    301
+https://woofofwalkstreet.com/*  https://www.woofofwalkstreet.com/:splat  301
+
+/book    /book-now/    301
+/blog    /blog/        301
+/blog/index   /blog/   301
 
 # ----------------------------
 # Clean URL rules

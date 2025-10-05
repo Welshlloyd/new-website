@@ -58,6 +58,18 @@
     }
   }
   </script>
+
+  <!-- Page-scoped helpers for proof block -->
+  <style>
+    .proof { padding: 36px 0; }
+    .proof-wrap { display: grid; gap: 24px; align-items: center; }
+    .proof-copy p { margin:.6rem 0; }
+    .proof-list { margin:.6rem 0 1rem; padding-left:1.25rem; }
+    .proof-figure img { width:100%; height:auto; border-radius:14px; box-shadow: var(--shadow, 0 12px 30px rgba(0,0,0,.08)); }
+    @media (min-width: 880px){
+      .proof-wrap { grid-template-columns: 1.1fr 1fr; gap: 32px; }
+    }
+  </style>
 </head>
 <body>
 
@@ -148,6 +160,35 @@
             <li>Local knowledge of South Melbourne</li>
           </ul>
         </aside>
+      </div>
+    </section>
+
+    <!-- ★ PROOF YOU CAN SEE (Trust Block) -->
+    <section class="proof" aria-labelledby="proof-title">
+      <div class="container proof-wrap">
+        <div class="proof-copy">
+          <h2 id="proof-title">GPS + Photo Proof After Every Walk</h2>
+          <p>Transparency matters. After each solo walk, we send a GPS route and a photo update straight to your phone — so you can see exactly where your dog went and how happy they looked along the way.</p>
+          <ul class="proof-list">
+            <li>One-dog-only — never pack walks</li>
+            <li>Live GPS route + post-walk summary</li>
+            <li>Photo proof (we love a tongue-out smile!)</li>
+          </ul>
+          <p><a class="btn button-primary" href="/dog-walking-south-melbourne">See Our Walks</a></p>
+        </div>
+
+        <figure class="proof-figure">
+          <picture>
+            <source
+              type="image/webp"
+              srcset="/images/about/gps-photo-proof.webp 1x,
+                      /images/about/gps-photo-proof@2x.webp 2x">
+            <img
+              src="/images/about/gps-photo-proof.jpg"
+              alt="Phone with dog photo beside the GPS route around Albert Park"
+              loading="lazy" width="1200" height="1500">
+          </picture>
+        </figure>
       </div>
     </section>
 

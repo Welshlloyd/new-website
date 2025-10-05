@@ -190,6 +190,99 @@ label{display:block;margin:.2rem 0 .25rem;color:#475467}
 /* ---------- Sitemap / Legal pages ---------- */
 .legal h1,.legal h2{margin-top:1rem}
 
+/* ===============================
+   Mobile-first bold / edgy tweaks
+   =============================== */
+
+/* Hero section */
+.hero.hero--edge {
+  text-align: center;
+  padding: 2.2rem 1rem 2.8rem;
+  background: linear-gradient(160deg, #0b1420 0%, #1c2430 100%);
+  color: #f8f9fa;
+}
+
+.hero.hero--edge h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 900;
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+}
+
+.hero.hero--edge .subhead {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  max-width: 34ch;
+  margin: 0 auto 1.5rem;
+  color: #d9e1e8;
+}
+
+/* Buttons */
+.cta-buttons .cta-button,
+.promo-cta,
+.btn {
+  border-radius: 10px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.cta-buttons .cta-button:hover,
+.promo-cta:hover,
+.btn:hover {
+  transform: translateY(-2px);
+  background: #f5b200;
+  color: #111;
+}
+
+/* Section titles */
+section h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: -0.3px;
+}
+
+/* Promo (IPOO) card */
+.promo.card {
+  border-radius: 14px;
+  padding: 1.6rem;
+  text-align: center;
+  font-size: 1.05rem;
+}
+
+.promo.card h2 {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #f5b200;
+  margin-bottom: 0.6rem;
+}
+
+/* Testimonials */
+#testimonials .quote p {
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+/* Mobile-specific tweaks */
+@media (max-width: 640px) {
+  .hero.hero--edge h1 {
+    font-size: 1.8rem;
+  }
+  .hero.hero--edge .subhead {
+    font-size: 1rem;
+  }
+  .cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
 /* =========================================================
    End – styles.css
    ========================================================= */

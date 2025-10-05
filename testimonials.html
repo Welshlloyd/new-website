@@ -1,14 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Testimonials | The Woof of Walk Street</title>
-  <meta name="description" content="Real stories from South Melbourne clients who trust our solo dog walks and boutique boarding."/>
+  <meta name="description" content="Real stories from South Melbourne clients who trust our solo dog walks and boutique boarding for calm, one-on-one care."/>
+  <link rel="canonical" href="https://www.woofofwalkstreet.com/testimonials.html"/>
+
   <link rel="icon" href="/images/brand/favicon.ico"/>
+  <link rel="stylesheet" href="/css/mini.css"/>
   <link rel="stylesheet" href="/css/styles.css"/>
 
-  <!-- Review/LocalBusiness Schema -->
+  <!-- Open Graph -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Testimonials | The Woof of Walk Street"/>
+  <meta property="og:description" content="Read what local South Melbourne dog owners say about our solo walks and boutique weekend boarding."/>
+  <meta property="og:url" content="https://www.woofofwalkstreet.com/testimonials.html"/>
+  <meta property="og:image" content="https://www.woofofwalkstreet.com/images/brand/hero-dog-skyline-1200.webp"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+
+  <!-- LocalBusiness + reviews -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -17,41 +28,67 @@
     "image":"https://www.woofofwalkstreet.com/images/brand/logo-lockup-gold.webp",
     "address":{"@type":"PostalAddress","addressLocality":"South Melbourne","addressRegion":"VIC","addressCountry":"Australia"},
     "url":"https://www.woofofwalkstreet.com",
-    "telephone":"+61-400-123-456",
+    "telephone":"+61-456-754-050",
     "aggregateRating":{"@type":"AggregateRating","ratingValue":"5","reviewCount":"12"},
     "review":[
-      {"@type":"Review","author":"Sarah P.","reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"My Lab is calmer and happier with solo walks and the photo updates are brilliant."},
-      {"@type":"Review","author":"James K.","reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"No group walks — exactly what we wanted. Totally worth it."}
+      {"@type":"Review","author":{"@type":"Person","name":"Sarah"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"My Labrador gets one-on-one attention and daily updates. Huge peace of mind."},
+      {"@type":"Review","author":{"@type":"Person","name":"James"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Finally a walker who doesn’t bundle dogs together. My Cavoodle is calmer and happier now."},
+      {"@type":"Review","author":{"@type":"Person","name":"Emma"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"The weekend boarding is amazing. I got photos every day and my dog looked so relaxed."},
+      {"@type":"Review","author":{"@type":"Person","name":"Daniel"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Worth every cent. GPS tracking and notes after each walk make it so transparent."}
     ]
   }
   </script>
 </head>
 <body>
+
 <header class="site-header">
-  <nav class="navbar container">
-    <a class="brand" href="/"><img src="/images/brand/logo-lockup-gold.webp" width="56" height="56" alt=""><strong>The Woof of Walk Street</strong></a>
-    <div class="nav-links" aria-label="Primary">
+  <nav class="navbar container" aria-label="Main">
+    <a class="brand" href="/"><img src="/images/brand/logo-lockup-gold.webp" width="56" height="56" alt="The Woof of Walk Street logo"><strong>The Woof of Walk Street</strong></a>
+    <div class="nav-links">
       <a href="/">Home</a>
       <a href="/memberships.html">Memberships</a>
       <a href="/services.html">Walking</a>
       <a href="/boarding-services.html">Boarding</a>
-      <a href="/contact.html">Contact us</a>
+      <a href="/contact.html">Contact</a>
     </div>
   </nav>
 </header>
 
 <main>
+  <!-- HERO -->
   <section class="hero">
     <div class="container">
       <h1>Testimonials</h1>
-      <p class="subhead">Why local dog owners choose one-on-one walks and boutique boarding.</p>
+      <p class="subhead">Why South Melbourne dog owners choose one-on-one walks and boutique weekend boarding.</p>
       <div class="cta-buttons">
-        <a href="https://www.timetopet.com/portal/woofofwalkstreet" class="cta-button">Book a Walk</a>
-        <a href="/boarding-services.html" class="cta-button secondary">Book Boarding</a>
+        <a href="https://www.timetopet.com/portal/woofofwalkstreet" class="cta-button" target="_blank" rel="noopener">Book a Walk</a>
+        <a href="/boarding-services.html" class="cta-button secondary">Weekend Boarding</a>
+        <a class="cta-button secondary" target="_blank" rel="noopener"
+           href="https://search.google.com/local/writereview?placeid=ChIJrc0ZDNAN1GoR3oOD5aHDy-s">★ Leave us a Google Review</a>
       </div>
     </div>
   </section>
 
+  <!-- INTRO COPY (adds topical relevance + keywords) -->
+  <section>
+    <div class="container">
+      <p style="max-width:880px">
+        Dog owners across <strong>South Melbourne</strong>, <strong>Albert Park</strong> and <strong>Port Melbourne</strong>
+        trust <strong>The Woof of Walk Street</strong> for calm, <strong>solo dog walks</strong> and boutique
+        <strong>weekend boarding</strong>. With GPS-tracked routes, photo updates and one-on-one attention,
+        our focus is simple: lower stress, clear communication and consistent care. Here’s what local clients say.
+      </p>
+
+      <h2 style="margin-top:1.25rem">Why reviews matter</h2>
+      <p style="max-width:880px">
+        Reviews keep us accountable and help new clients understand our approach. We’re transparent about routes,
+        routines and progress, and we tailor every session to the dog in front of us. The results show up in calmer
+        walks, happier pups — and feedback we’re proud to share below.
+      </p>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS GRID -->
   <section class="container grid grid-2">
     <article class="card">
       <blockquote>“I love that my Labrador gets one-on-one attention and daily updates. Huge peace of mind.”</blockquote>
@@ -70,9 +107,23 @@
       <p>— Daniel, St Kilda</p>
     </article>
   </section>
+
+  <!-- CLOSING CTA COPY -->
+  <section>
+    <div class="container" style="text-align:center">
+      <p style="max-width:820px;margin:0 auto 12px">
+        Want the same peace of mind? Try a <strong>45-minute solo walk</strong> with GPS + photo update, or book a
+        <strong>one-guest weekend stay</strong>. New clients can create an account in minutes.
+      </p>
+      <div class="cta-buttons" style="justify-content:center">
+        <a class="btn button-primary" href="https://www.timetopet.com/portal/woofofwalkstreet" target="_blank" rel="noopener">Book Your First Walk →</a>
+        <a class="btn" href="/boarding-services.html">Explore Boarding</a>
+      </div>
+    </div>
+  </section>
 </main>
 
-<!-- FOOTER (matches home) -->
+<!-- FOOTER -->
 <footer class="site-footer" role="contentinfo">
   <div class="footer-banner">
     <picture>
@@ -86,7 +137,7 @@
     <section class="footer-brand">
       <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="60" height="60" loading="lazy">
       <p><strong>The Woof of Walk Street</strong><br>
-        <a class="footer-map" href="https://maps.app.goo.gl/YnEoSPwhGocUZyWL9?g_st=ipc" target="_blank" rel="noopener">South Melbourne, VIC</a> · Mon–Fri 7am–7pm<br>
+        <a class="footer-map" href="https://maps.app.goo.gl/6QyhfqivSA4iv4ZT8?g_st=ipc" target="_blank" rel="noopener">South Melbourne, VIC</a> · Mon–Fri 7am–7pm<br>
         <a href="tel:+61456754050">+61 456 754 050</a> · <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a>
       </p>
       <div class="footer-socials">
@@ -96,12 +147,15 @@
       </div>
       <p>
         <a class="btn button-primary" target="_blank" rel="noopener"
-           href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=footer&utm_campaign=book_now_footer"
-           onclick="gtag('event', 'ttp_booking_click', {
-             'send_to': 'AW-17527927259/ePjJCLT8p6cbENvj-6VB',
-             'value': 1.0,
-             'currency': 'AUD'
-           });">Book Now</a>
+           href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=footer&utm_campaign=book_now_footer">
+          Book Now
+        </a>
+      </p>
+      <p>
+        <a class="btn button-secondary" target="_blank" rel="noopener"
+           href="https://search.google.com/local/writereview?placeid=ChIJrc0ZDNAN1GoR3oOD5aHDy-s">
+          ★ Leave us a Google Review
+        </a>
       </p>
     </section>
 
@@ -121,8 +175,8 @@
     <section class="footer-col collapsible">
       <button class="collapse-btn" aria-expanded="false" aria-controls="support-list">Support</button>
       <ul id="support-list">
-        <li><a href="/about.html" aria-current="page">About</a></li>
-        <li><a href="/testimonials.html">Testimonials</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/testimonials.html" aria-current="page">Testimonials</a></li>
         <li><a href="/gallery.html">Photos & Videos</a></li>
         <li><a href="/blog/index.html">Blog</a></li>
         <li><a href="/faq.html">FAQs</a></li>
@@ -163,5 +217,6 @@
   </script>
 </footer>
 
+</main>
 </body>
 </html>

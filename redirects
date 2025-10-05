@@ -1,25 +1,36 @@
-# ----------------------------
-# Canonicalisation (force https + www)
-# ----------------------------
-http://woofofwalkstreet.com/*      https://www.woofofwalkstreet.com/:splat   301!
-https://woofofwalkstreet.com/*     https://www.woofofwalkstreet.com/:splat   301!
+# Canonical: HTTPS + www
+http://woofofwalkstreet.com/      https://www.woofofwalkstreet.com/              301
+https://woofofwalkstreet.com/*    https://www.woofofwalkstreet.com/:splat        301
 
-# ----------------------------
-# Fix broken/legacy URLs
-# ----------------------------
-http://woofofwalkstreet.com/    https://www.woofofwalkstreet.com/    301
-https://woofofwalkstreet.com/*  https://www.woofofwalkstreet.com/:splat  301
+# Key fixes
+/book                              /book-now/                                     301
+/blog                              /blog/                                         301
+/blog/index                        /blog/                                         301
 
-/book    /book-now/    301
-/blog    /blog/        301
-/blog/index   /blog/   301
+# Common legacy/typo variants
+/book-now                          /book-now/                                     301
+/book-now.html                     /book-now/                                     301
+/blog/index.html                   /blog/                                         301
+/sitemap                           /sitemap.html                                  301
+/services                          /services.html                                 301
+/about                             /about.html                                    301
+/contact                           /contact.html                                  301
+/privacy                           /privacy.html                                  301
+/terms                             /terms.html                                    301
 
-# ----------------------------
-# Clean URL rules
-# ----------------------------
-# Remove index.html (so /about/index.html → /about/)
-*/index.html                       /:splat/                                  301
+# Strip index.html → pretty links
+*/index.html                       /:splat/                                       301
 
-# Enforce trailing slashes (so /about → /about/)
-# This ensures all directories are consistent
-/:slug                             /:slug/                                   301
+# Enforce trailing slash on directory-style paths
+/:slug                             /:slug/                                        301
+/:slug/:child                      /:slug/:child/                                 301
+
+# === Clean removals (410 Gone) ===
+# Old/unused or security-sensitive endpoints — tell Google they're gone
+/wp-admin/*                        -                                               410
+/wp-login.php                      -                                               410
+/cgi-bin/*                         -                                               410
+/phpmyadmin/*                      -                                               410
+/searchreplacedb2.php              -                                               410
+/old-page                          -                                               410
+/test-page                         -                                               410

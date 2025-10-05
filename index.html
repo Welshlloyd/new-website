@@ -472,6 +472,43 @@
         if (window.matchMedia('(max-width:640px)').matches) list.hidden = true;
       });
     </script>
+      <!-- Tiny JS for footer accordions (mobile) -->
+  <script>
+    document.querySelectorAll('.collapsible .collapse-btn').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const list = document.getElementById(btn.getAttribute('aria-controls'));
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        list.hidden = open;
+      });
+      const list = document.getElementById(btn.getAttribute('aria-controls'));
+      if (window.matchMedia('(max-width:640px)').matches) list.hidden = true;
+    });
+  </script>
+
+  <!-- Global TTP booking click tracker -->
+  <script>
+    // Fire Google Ads conversion on any outbound Time To Pet link
+    (function () {
+      document.addEventListener('click', function (e) {
+        const a = e.target.closest('a');
+        if (!a) return;
+        const href = (a.getAttribute('href') || '').toLowerCase();
+        if (href.includes('timetopet.com/portal/woofofwalkstreet')) {
+          try {
+            gtag('event', 'ttp_booking_click', {
+              'send_to': 'AW-17527927259/ePjJCLT8p6cbENvj-6VB',
+              'value': 1.0,
+              'currency': 'AUD'
+            });
+          } catch (err) { /* fail silently */ }
+        }
+      }, { capture: true });
+    })();
+  </script>
+</body>
+</html>
+    
   </footer>
 </body>
 </html>

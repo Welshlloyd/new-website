@@ -1,0 +1,76 @@
+/* ===================================================
+   Home – Edge Refresh (mobile-first)
+   File: /css/home-edge.css
+   Only include on the homepage
+=================================================== */
+
+/* Stronger hero */
+.hero.hero--edge{
+  background: radial-gradient(1200px 300px at 50% -100px,#111 0%,#1a1a1a 30%,#fffdf8 70%);
+  padding: 28px 0 18px;
+  border-bottom: 1px solid var(--stroke);
+}
+.hero.hero--edge h1{
+  font-size: clamp(1.6rem, 6.4vw, 2.4rem);
+  line-height: 1.15;
+  letter-spacing: 0.1px;
+}
+.hero.hero--edge .subhead{color:#2a2a2a;font-weight:600;margin-top:8px}
+
+/* Tame hero image height on phones */
+.hero img{max-height:52vh;object-fit:cover;border-radius:16px}
+
+/* Kicker chip */
+.section-kicker{
+  display:inline-block;background:#111;color:#fff;border:1px solid #000;
+  padding:6px 10px;border-radius:999px;font-size:.82rem;font-weight:800;letter-spacing:.3px
+}
+
+/* Punchier CTAs */
+.cta-pill{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:12px 18px;border-radius:999px;font-weight:900;
+  border:1px solid #111;background:#111;color:#fff;
+  box-shadow:0 6px 18px rgba(0,0,0,.18);
+  transition:transform .15s, box-shadow .15s, background .15s, color .15s;
+}
+.cta-pill.secondary{background:#fff;color:#111;border-color:#111}
+.cta-pill:hover{transform:translateY(-1px) scale(1.03);box-shadow:0 12px 24px rgba(0,0,0,.22)}
+.cta-pill.secondary:hover{background:var(--brand);color:#111}
+
+/* Cards with more lift */
+.card.card--lift{border-radius:18px;box-shadow:0 10px 28px rgba(0,0,0,.12)}
+.card.card--lift:hover{transform:translateY(-3px)}
+
+/* Dark “ink” section to break rhythm */
+.section--ink{background:#0b0e12;color:#e7ecf2;border-block:4px solid var(--brand)}
+.section--ink h2{color:#fff}
+.section--ink .btn,.section--ink .cta-pill{background:#fff;color:#111}
+
+/* Gallery pop */
+.gallery-tile{
+  border-radius:16px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.14);
+  aspect-ratio:4/3;object-fit:cover;width:100%;
+  transition:transform .2s ease, box-shadow .2s ease
+}
+.gallery-tile:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(0,0,0,.2)}
+
+/* Testimonials stripe */
+.quotes .quote{position:relative;padding-left:16px;margin:0 0 14px}
+.quotes .quote:before{content:"";position:absolute;left:0;top:.3rem;bottom:.3rem;width:4px;border-radius:2px;background:var(--brand)}
+
+/* Sticky bottom CTA */
+.sticky-cta{
+  position:fixed;left:12px;right:12px;bottom:12px;z-index:999;
+  display:flex;gap:10px;justify-content:center;align-items:center;
+  background:rgba(255,255,255,.82);backdrop-filter:blur(8px);
+  padding:10px;border:1px solid rgba(0,0,0,.08);border-radius:16px;
+  box-shadow:0 8px 24px rgba(0,0,0,.14);
+  opacity:0;pointer-events:none;transform:translateY(12px);
+  transition:opacity .2s, transform .2s
+}
+.sticky-cta.is-visible{opacity:1;pointer-events:auto;transform:translateY(0)}
+.sticky-cta .cta-pill{padding:10px 14px}
+
+/* Slightly tighter sections on mobile */
+section{padding-block:clamp(22px,5vw,40px)}

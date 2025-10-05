@@ -283,6 +283,35 @@ section h2 {
   }
 }
 
+
+/* WHY LOCAL SECTION */
+.why-local {
+  background: #0b0e12;
+  color: #f7f3e8;
+  border-block: 4px solid #f5b200;
+  margin-top: 32px;
+}
+
+.why-local .container {
+  padding: 32px 16px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.why-local h2 {
+  color: #fff;
+  font-size: 1.9rem;
+  margin-bottom: 12px;
+}
+
+.why-local p {
+  margin: 0 auto;
+  max-width: 60ch;
+  color: #cfd6df;
+  line-height: 1.6;
+}
+
 /* =========================================================
    End – styles.css
    ========================================================= */

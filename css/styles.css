@@ -431,6 +431,98 @@ body.with-mini-offset { padding-top: 0; }
 /* Tighter media blocks on membership pages */
 .embed-1x1 iframe{height:360px!important}
 .poster img{max-height:520px;object-fit:cover}
+
+/* =========================================================
+   Edgy CTA refresh (global) – paste at END of styles.css
+   ========================================================= */
+
+/* Primary CTAs (gold, tactile) */
+.btn,
+.button-primary,
+.cta-button:not(.secondary) {
+  border: 0;
+  background: linear-gradient(180deg, #ffdd6a 0%, #f5b200 100%);
+  color: #111;
+  font-weight: 900;
+  border-radius: 999px;
+  padding: 12px 20px;
+  box-shadow: 0 6px 18px rgba(245, 178, 0, .40);
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease, color .15s ease;
+  text-decoration: none;
+}
+.btn:hover,
+.button-primary:hover,
+.cta-button:not(.secondary):hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 10px 24px rgba(245, 178, 0, .45);
+  text-decoration: none;
+}
+
+/* Secondary CTAs (high-contrast on light & dark) */
+.cta-button.secondary,
+.btn.button-secondary {
+  background: #fff;
+  color: #111;
+  border: 2px solid #111;
+  border-radius: 999px;
+  font-weight: 800;
+  padding: 12px 20px;
+  box-shadow: 0 4px 14px rgba(0,0,0,.10);
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease, color .15s ease;
+}
+.cta-button.secondary:hover,
+.btn.button-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0,0,0,.18);
+  text-decoration: none;
+}
+
+/* Extra contrast for white button when placed on dark cards/sections */
+.m-card .cta-button.secondary,
+.section--ink .cta-button.secondary {
+  border-color: #fff;
+  color: #111; /* keep readable against white */
+  background: #fff;
+}
+
+/* Sticky CTA bar buttons (if present) */
+.sticky-cta .cta-pill,
+.sticky-cta .cta-button {
+  border-radius: 999px;
+  font-weight: 900;
+  box-shadow: 0 8px 24px rgba(0,0,0,.18);
+}
+.sticky-cta .cta-button:not(.secondary) {
+  background: linear-gradient(180deg, #ffdd6a 0%, #f5b200 100%);
+  color: #111;
+  border: 0;
+}
+
+/* Slight bump to big headings on mobile for scannability */
+@media (max-width: 640px) {
+  .m-hero h1,
+  .hero h1 {
+    letter-spacing: -0.2px;
+    line-height: 1.18;
+    margin-bottom: .35rem;
+  }
+}
+
+/* Promo ribbon: a touch more pop without being loud */
+.promo-ribbon {
+  box-shadow: 0 6px 14px rgba(0,0,0,.06);
+}
+.promo-ribbon .promo-cta {
+  border: 0;
+  background: linear-gradient(180deg, #ffdd6a 0%, #f5b200 100%);
+  color: #111;
+  font-weight: 900;
+  border-radius: 999px;
+  padding: 10px 16px;
+  box-shadow: 0 6px 18px rgba(245,178,0,.35);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.promo-ribbon .promo-cta:hover { transform: translateY(-2px) }
 /* =========================================================
    End – styles.css
    ========================================================= */

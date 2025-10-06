@@ -541,6 +541,24 @@ body.with-mini-offset { padding-top: 0; }
 .m-badge {
   box-shadow:0 3px 8px rgba(0,0,0,.25);
 }
+.ipoo-copy a {
+  color: var(--brand); /* your gold */
+  font-weight: 700;
+  text-decoration: underline;
+}
+/* Membership badge — gold version */
+.m-badge {
+  display:inline-block;
+  margin:.25rem 0 .8rem;
+  padding:.4rem .9rem;
+  background: linear-gradient(180deg, #ffdd6a 0%, #f5b200 100%);
+  color:#111;          /* dark text for contrast */
+  border-radius:999px;
+  font-weight:900;
+  font-size:.95rem;
+  letter-spacing:.2px;
+  box-shadow:0 4px 12px rgba(245,178,0,.35);
+}
 /* =========================================================
    End – styles.css
    ========================================================= */

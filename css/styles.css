@@ -376,6 +376,13 @@ body.with-mini-offset { padding-top: 0; }
   .promo-copy{ font-size:.95rem }
   .promo-dog{ width:24px; height:24px }
 }
+/* tighter mobile paddings + smaller images */
+.m-hero{padding:28px 14px 12px}
+.m-hook{max-width:50ch}
+.ipoo-inner{padding:18px 14px}
+.ipoo-graphic img{width:min(220px,46vw);height:auto}
+.m-card{padding:14px;margin-top:12px}
+.gallery-grid figure{margin:0}
 /* =========================================================
    End – styles.css
    ========================================================= */

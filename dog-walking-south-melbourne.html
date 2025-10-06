@@ -48,6 +48,14 @@
     "description":"Solo, one-at-a-time dog walking with GPS route and photo updates."
   }
   </script>
+
+  <!-- ✅ Preload LCP hero image -->
+  <link
+    rel="preload"
+    as="image"
+    href="/images/pages/dog-walking/dog-albert-park-lake-south-melbourne.jpg"
+    imagesizes="(max-width: 640px) 100vw, (max-width: 1200px) 90vw, 1200px"
+  >
 </head>
 <body>
 
@@ -105,7 +113,8 @@
           src="/images/pages/dog-walking/dog-albert-park-lake-south-melbourne.jpg"
           alt="Happy dog at Albert Park Lake during a solo walk"
           style="max-width:920px;border-radius:12px;display:block;margin:0 auto"
-          loading="eager" width="1200" height="800">
+          width="1200" height="800"
+          loading="eager" decoding="async" fetchpriority="high">
         <div class="cta-buttons" style="justify-content:center;flex-wrap:wrap;margin-top:14px">
           <a class="cta-button" href="/memberships.html#unlimited">See Unlimited Membership</a>
           <a id="book-now-hero"
@@ -218,6 +227,4 @@
   </main>
 
   <!-- FOOTER (same as home) -->
-  ... <!-- (unchanged footer code from your version) -->
-</body>
-</html>
+  <footer class="site-footer"

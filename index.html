@@ -11,8 +11,6 @@
   <!-- Styles -->
   <link rel="stylesheet" href="/css/mini.css" />
   <link rel="stylesheet" href="/css/styles.css" />
-  <!-- Optional: homepage-only edge styling -->
-  <link rel="stylesheet" href="/css/home-edge.css" />
 
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website">
@@ -79,24 +77,22 @@
     gtag('config', 'AW-17527927259');
   </script>
 
-  <!-- Preload hero image (LCP) -->
-  <link rel="preload" as="image"
-        href="/images/brand/hero-dog-skyline-1200.webp"
-        imagesrcset="/images/brand/hero-dog-skyline-800.webp 800w, /images/brand/hero-dog-skyline-1200.webp 1200w, /images/brand/hero-dog-skyline-1600.webp 1600w"
-        imagesizes="(max-width: 640px) 100vw, (max-width: 1200px) 90vw, 1200px">
+  <!-- ✅ Preload LCP hero image (with srcset + sizes) -->
+  <link
+    rel="preload"
+    as="image"
+    href="/images/brand/hero-dog-skyline-1200.webp"
+    imagesrcset="/images/brand/hero-dog-skyline-800.webp 800w, /images/brand/hero-dog-skyline-1200.webp 1200w, /images/brand/hero-dog-skyline-1600.webp 1600w"
+    imagesizes="(max-width: 640px) 100vw, (max-width: 1200px) 90vw, 1200px"
+  >
 </head>
 
 <body>
-  <!-- Promo ribbon (edgier) -->
-  <div id="promo" class="promo-ribbon promo--edge" role="region" aria-label="Promo: 50% off">
-    <div class="promo-inner container">
-      <img class="promo-dog" src="/images/brand/dog-in-suit.webp" alt="" width="28" height="28" decoding="async" />
-      <span class="promo-copy">
-        <strong>50% OFF</strong> Unlimited Daily Walks — 45-minute solo walks · GPS tracked · Photo updates
-      </span>
-      <a href="/membership-unlimited.html" class="promo-cta">Learn More →</a>
-      <button id="promo-close" class="promo-close" aria-label="Dismiss promo">✕</button>
-    </div>
+  <!-- Promo ribbon -->
+  <div class="promo-ribbon">
+    🎉 <strong>50% OFF</strong> Unlimited Daily Walks
+    <span> · 45-minute solo walks · GPS tracked · Photo updates</span>
+    <a href="/membership-unlimited.html" class="promo-cta">Learn More →</a>
   </div>
 
   <!-- HEADER -->
@@ -155,7 +151,8 @@
           sizes="(max-width: 640px) 100vw, (max-width: 1200px) 90vw, 1200px"
           alt="Dog overlooking the Melbourne skyline during a solo walk"
           style="max-width:920px;border-radius:12px;display:block;margin:0 auto"
-          width="1200" height="675" loading="eager" decoding="async" fetchpriority="high">
+          width="1200" height="675"
+          loading="eager" decoding="async" fetchpriority="high">
         <div class="cta-buttons">
           <a href="/dog-walking-south-melbourne" class="cta-button">Dog Walking South Melbourne</a>
           <a href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=hero&utm_campaign=book_walk"
@@ -479,95 +476,26 @@
         if (window.matchMedia('(max-width:640px)').matches) list.hidden = true;
       });
     </script>
+
+    <!-- Global TTP booking click tracker -->
+    <script>
+      (function () {
+        document.addEventListener('click', function (e) {
+          const a = e.target.closest('a');
+          if (!a) return;
+          const href = (a.getAttribute('href') || '').toLowerCase();
+          if (href.includes('timetopet.com/portal/woofofwalkstreet')) {
+            try {
+              gtag('event', 'ttp_booking_click', {
+                'send_to': 'AW-17527927259/ePjJCLT8p6cbENvj-6VB',
+                'value': 1.0,
+                'currency': 'AUD'
+              });
+            } catch (err) { /* silent */ }
+          }
+        }, { capture: true });
+      })();
+    </script>
   </footer>
-
-  <!-- Promo ribbon behavior (hide on scroll down, show on up) -->
-  <script>
-  (function(){
-    const promo = document.getElementById('promo');
-    const closeBtn = document.getElementById('promo-close');
-    if(!promo) return;
-
-    let last = 0, ticking = false;
-    function onScroll(){
-      const y = window.scrollY || 0;
-      const goingDown = y > last;
-      const past = y > 120;
-      if (goingDown && past){
-        promo.style.transform = 'translateY(-100%)';
-      } else {
-        promo.style.transform = 'translateY(0)';
-      }
-      last = y;
-      ticking = false;
-    }
-    window.addEventListener('scroll', ()=>{
-      if(!ticking){ requestAnimationFrame(onScroll); ticking = true; }
-    });
-
-    if (closeBtn){
-      closeBtn.addEventListener('click', ()=>{
-        promo.style.transform = 'translateY(-100%)';
-      });
-    }
-  })();
-  </script>
-
-  <!-- Services dropdown: click/keyboard support -->
-  <script>
-  (function(){
-    const btn = document.querySelector('.nav-group-btn');
-    const group = btn ? btn.closest('.nav-group') : null;
-    const menu = document.getElementById(btn ? btn.getAttribute('aria-controls') : '');
-
-    if(!btn || !group || !menu) return;
-
-    function closeMenu(){
-      group.classList.remove('is-open');
-      btn.setAttribute('aria-expanded','false');
-    }
-    function openMenu(){
-      group.classList.add('is-open');
-      btn.setAttribute('aria-expanded','true');
-    }
-    function toggleMenu(){
-      const open = btn.getAttribute('aria-expanded') === 'true';
-      open ? closeMenu() : openMenu();
-    }
-
-    btn.addEventListener('click', (e)=>{
-      e.preventDefault();
-      toggleMenu();
-    });
-
-    document.addEventListener('click', (e)=>{
-      if (!group.contains(e.target)) closeMenu();
-    });
-    document.addEventListener('keydown', (e)=>{
-      if (e.key === 'Escape') closeMenu();
-    });
-  })();
-  </script>
-
-  <!-- Global TTP booking click tracker -->
-  <script>
-    // Fire Google Ads conversion on any outbound Time To Pet link
-    (function () {
-      document.addEventListener('click', function (e) {
-        const a = e.target.closest('a');
-        if (!a) return;
-        const href = (a.getAttribute('href') || '').toLowerCase();
-        if (href.includes('timetopet.com/portal/woofofwalkstreet')) {
-          try {
-            gtag('event', 'ttp_booking_click', {
-              'send_to': 'AW-17527927259/ePjJCLT8p6cbENvj-6VB',
-              'value': 1.0,
-              'currency': 'AUD'
-            });
-          } catch (err) { /* fail silently */ }
-        }
-      }, { capture: true });
-    })();
-  </script>
 </body>
 </html>

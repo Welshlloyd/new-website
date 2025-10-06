@@ -559,6 +559,59 @@ body.with-mini-offset { padding-top: 0; }
   letter-spacing:.2px;
   box-shadow:0 4px 12px rgba(245,178,0,.35);
 }
+/* Edgy promo ribbon */
+.promo-ribbon.promo--edge {
+  background: linear-gradient(135deg, #ff1f3d, #ff6f00);
+  color: #fff;
+  font-weight: 600;
+  padding: .65rem 0;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.promo-ribbon .promo-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .75rem;
+  flex-wrap: wrap;
+}
+
+.promo-ribbon .promo-dog {
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #fff;
+  padding: 2px;
+}
+
+.promo-ribbon .promo-copy {
+  font-size: .95rem;
+  letter-spacing: .2px;
+}
+
+.promo-ribbon .promo-cta {
+  background: #fff;
+  color: #d6001c;
+  padding: .35rem .75rem;
+  border-radius: 4px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all .2s ease;
+}
+.promo-ribbon .promo-cta:hover {
+  background: #ffe5e9;
+}
+
+.promo-ribbon .promo-close {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: .5rem;
+}
+
 /* =========================================================
    End – styles.css
    ========================================================= */

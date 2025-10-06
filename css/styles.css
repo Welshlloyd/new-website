@@ -617,6 +617,48 @@ body.with-mini-offset { padding-top: 0; }
   color: #d4af37; /* brand gold */
   text-shadow: 1px 1px 2px rgba(0,0,0,.25); /* optional for contrast */
 }
+/* Impact ribbon */
+.impact-ribbon {
+  background: linear-gradient(90deg,#0c1117,#0c1117 60%,#122034);
+  color:#e8fff7;
+  border-block: 3px solid #40e0c2;
+  font-size: clamp(.95rem, 1.6vw, 1.05rem);
+}
+.impact-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 12px 16px;
+  display: flex;
+  gap: .6rem;
+  align-items: center;
+  flex-wrap: wrap;
+  line-height: 1.45;
+}
+.impact-emoji {
+  font-size:1.1em;
+  filter: drop-shadow(0 0 0 rgba(0,0,0,.15));
+}
+.impact-ribbon a {
+  color:#7bf0dc;
+  text-underline-offset: 2px;
+}
+.impact-ribbon a:hover {
+  text-decoration: underline;
+}
+.impact-cta {
+  margin-left: .4rem;
+  background: #1a2b3f;
+  border: 1px solid rgba(64,224,194,.35);
+  color:#cffff4;
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.impact-cta:hover {
+  background:#203550;
+}
+
 /* =========================================================
    End – styles.css
    ========================================================= */

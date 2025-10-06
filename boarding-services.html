@@ -23,6 +23,13 @@
   <meta name="twitter:description" content="One-guest-only, calm, boutique weekend boarding.">
   <meta name="twitter:image" content="https://www.woofofwalkstreet.com/images/gallery/dog-weekend-woof.jpg">
 
+  <!-- LCP image preload (hero) -->
+  <link
+    rel="preload"
+    as="image"
+    href="/images/gallery/dog-weekend-woof.jpg"
+    imagesizes="(max-width: 640px) 100vw, (max-width: 1200px) 90vw, 1200px">
+
   <!-- Breadcrumbs JSON-LD -->
   <script type="application/ld+json">
   {
@@ -146,7 +153,8 @@
           src="/images/gallery/dog-weekend-woof.jpg"
           alt="Relaxed pup during boutique weekend boarding in South Melbourne"
           style="max-width:920px;border-radius:12px;display:block;margin:0 auto"
-          loading="eager" width="1200" height="800">
+          width="1200" height="800"
+          loading="eager" decoding="async" fetchpriority="high">
         <div class="cta-buttons" style="justify-content:center;flex-wrap:wrap;margin-top:14px">
           <a id="book-boarding-hero"
              class="cta-button secondary"

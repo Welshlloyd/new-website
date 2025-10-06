@@ -7,10 +7,12 @@
   <meta name="description" content="Unlimited Pawfolio: one solo 45-minute walk per weekday in South Melbourne. Ethical, one-dog-at-a-time walking with GPS tracking and photo updates. First month 50% OFF." />
   <link rel="canonical" href="https://www.woofofwalkstreet.com/membership-unlimited.html" />
   <link rel="icon" href="/images/brand/favicon.ico" />
+
+  <!-- Styles -->
   <link rel="stylesheet" href="/css/mini.css" />
   <link rel="stylesheet" href="/css/styles.css" />
 
-  <!-- (Optional) Google Ads gtag if not already in base layout -->
+  <!-- Google Ads Global Site Tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -19,7 +21,7 @@
     gtag('config', 'AW-17527927259');
   </script>
 
-  <!-- JSON-LD: Service + Offer (keeps price visible to Google even if below fold) -->
+  <!-- JSON-LD: Service + Offer -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -44,6 +46,7 @@
   }
   </script>
 
+  <!-- Page-scoped helpers (matches Starter/Growth) -->
   <style>
     .m-wrap{max-width:960px;margin:24px auto 44px;padding:0 16px}
     .m-hero{padding:40px 16px 16px;text-align:center;background:#fffaf1;border-bottom:1px solid #f0e6cf}
@@ -76,7 +79,7 @@
 
     .highlight-unlimited{color:#0b0e12;background:#ffd166;padding:.1rem .35rem;border-radius:.4rem;font-weight:900}
 
-    /* Sticky bottom CTA for mobile persuasion */
+    /* Sticky mobile CTA */
     @media (max-width: 820px){
       .sticky-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:999;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border:1px solid rgba(0,0,0,.08);border-radius:16px;box-shadow:0 8px 24px rgba(0,0,0,.14);display:flex;gap:10px;justify-content:center;align-items:center;padding:10px}
       .sticky-cta .cta-button{padding:10px 14px}
@@ -85,202 +88,344 @@
 </head>
 <body>
 
-<header class="site-header">
-  <div class="navbar container">
-    <a class="brand" href="/">
-      <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="56" height="56" />
-      <strong>The Woof of Walk Street</strong>
-    </a>
-    <nav class="nav-links" aria-label="Primary">
-      <a href="/">Home</a>
-      <a href="/about.html">About</a>
-      <a href="/memberships.html" aria-current="page">Memberships</a>
-      <a href="/services.html">Walking</a>
-      <a href="/boarding-services.html">Boarding</a>
-      <a href="/contact.html">Contact</a>
-      <a class="btn button-primary nav-cta"
-         href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=header&utm_campaign=book_now"
-         target="_blank" rel="noopener">Book Now</a>
-    </nav>
+  <!-- Promo ribbon (same as index) -->
+  <div class="promo-ribbon">
+    🎉 <strong>50% OFF</strong> Unlimited Daily Walks
+    <span> · 45-minute solo walks · GPS tracked · Photo updates</span>
+    <a href="/membership-unlimited.html" class="promo-cta">Learn More →</a>
   </div>
-</header>
 
-<main>
-  <!-- HERO -->
-  <section class="m-hero">
-    <h1>👑 <span class="highlight-unlimited">Unlimited</span> Pawfolio</h1>
-    <p class="m-hook">
-      One <strong>45-minute solo walk</strong> every weekday (Mon–Fri). Ethical, one-dog-only walking with
-      <strong>GPS tracking</strong> and <strong>photo updates<<strong>
-    </p>
-
-    <p class="m-badge">South Melbourne · Monday–Friday</p>
-
-    <div class="m-cta">
-      <a class="cta-button"
-         href="https://www.timetopet.com/portal/woofofwalkstreet/create-account"
-         target="_blank" rel="noopener"
-         onclick="gtag && gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
-        🎉 First month 50% OFF — Join for A$750
+  <!-- HEADER (same as index) -->
+  <header class="site-header" role="banner">
+    <div class="navbar container" role="navigation" aria-label="Main">
+      <a class="brand" href="/" aria-label="Go to home">
+        <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="56" height="56">
+        <strong>The Woof of Walk Street</strong>
       </a>
-      <a class="cta-button secondary" href="https://www.timetopet.com/portal/woofofwalkstreet" target="_blank" rel="noopener">
-        Existing Member Login
-      </a>
+
+      <!-- mobile hamburger -->
+      <input id="nav-toggle" type="checkbox" hidden>
+      <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</label>
+
+      <nav class="nav-links" aria-label="Primary">
+        <section class="nav-group">
+          <button class="nav-group-btn" aria-expanded="false" aria-controls="nav-services">Services</button>
+          <ul id="nav-services" class="nav-group-list">
+            <li><a href="/services.html">All Services</a></li>
+            <li><a href="/dog-walking-south-melbourne">Dog Walking South Melbourne</a></li>
+            <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
+            <li><a href="/memberships.html" aria-current="page">Memberships</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </section>
+
+        <a href="/about.html">About</a>
+        <a href="/blog/index.html">Blog</a>
+        <a href="/faq.html">FAQs</a>
+        <a href="/search.html">Search</a>
+
+        <a class="btn button-primary nav-cta"
+           href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=header&utm_campaign=book_now"
+           target="_blank" rel="noopener">Book Now</a>
+      </nav>
     </div>
+  </header>
 
-    <ul class="m-trust">
-      <li>Always <strong>solo</strong> — never pack walked or car-ferried</li>
-      <li><strong>GPS-tracked</strong> routes + <strong>photo updates</strong> after every walk</li>
-      <li>Weekday schedule (Mon–Fri), public holidays excluded</li>
-    </ul>
-  </section>
+  <main>
+    <!-- HERO -->
+    <section class="m-hero">
+      <h1>👑 <span class="highlight-unlimited">Unlimited</span> Pawfolio</h1>
+      <p class="m-hook">
+        One <strong>45-minute solo walk</strong> every weekday (Mon–Fri). Ethical, one-dog-only walking with
+        <strong>GPS tracking</strong> and <strong>photo updates</strong> after every walk.
+      </p>
 
-  <!-- I.P.O.O. STRIP -->
-  <section class="ipoo-strip" aria-labelledby="ipoo-title">
-    <div class="ipoo-inner">
-      <div class="ipoo-graphic" aria-hidden="true">
-        <picture>
-          <source srcset="/images/brand/dog-in-suit.webp" type="image/webp" />
-          <img src="/images/brand/dog-in-suit.webp" width="300" height="300" alt="Smiling dog in a suit — 50% OFF icon" loading="lazy">
-        </picture>
-      </div>
-      <div class="ipoo-copy">
-        <h2 id="ipoo-title">📈 The I.P.O.O. — Initial Puppy Offering: <span class="highlight-unlimited">Unlimited</span></h2>
-        <p>Go all-in on your dog’s health and happiness: one solo walk every weekday with full transparency.</p>
-        <a class="ipoo-badge"
+      <p class="m-badge">South Melbourne · Monday–Friday</p>
+
+      <div class="m-cta">
+        <a class="cta-button"
            href="https://www.timetopet.com/portal/woofofwalkstreet/create-account"
            target="_blank" rel="noopener"
            onclick="gtag && gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
-          First month 50% OFF · Join for A$750
+          🎉 First month 50% OFF — Join for A$750
+        </a>
+        <a class="cta-button secondary" href="https://www.timetopet.com/portal/woofofwalkstreet" target="_blank" rel="noopener">
+          Existing Member Login
         </a>
       </div>
-    </div>
-  </section>
 
-  <!-- CONTENT -->
-  <div class="m-wrap">
-    <div class="m-card">
-      <h2>Unlimited Dog Walking — South Melbourne</h2>
-      <p>Daily one-to-one walks build calm, fitness and confidence — especially for dogs that don’t love group settings. Our routes cover <strong>South Melbourne</strong>, <strong>Albert Park Lake</strong> and nearby parks, keeping your pup in their local environment and routine.</p>
-    </div>
-
-    <div class="m-card">
-      <h2>What’s included</h2>
-      <ul>
-        <li>One <strong>45-minute solo walk</strong> every weekday (Mon–Fri)</li>
-        <li><strong>GPS tracking</strong> + <strong>photo updates</strong></li>
-        <li><strong>Ethical, one-dog-at-a-time</strong> handling — never pack walked, never car-ferried</li>
-        <li><strong>Priority</strong> calendar access for Unlimited members</li>
-        <li><strong>Credits towards Boarding</strong> Hold for 12 months and get x2 Weekend Woof Club staysli>
+      <ul class="m-trust">
+        <li>Always <strong>solo</strong> — never pack walked or car-ferried</li>
+        <li><strong>GPS-tracked</strong> routes + <strong>photo updates</strong> after every walk</li>
+        <li>Weekday schedule (Mon–Fri), public holidays excluded</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="m-card">
-      <h2>Booking & availability</h2>
-      <ul>
-        <li>Walk window: <strong>7:00am–7:00pm, Monday–Friday</strong> (excl. public holidays)</li>
-        <li>All bookings via our calendar (Time To Pet), subject to availability</li>
-        <li>Unlimited = one walk per weekday. Skipped days do not roll over</li>
-        <li>Service area: South Melbourne and surrounds</li>
-      </ul>
-      <a class="cta-button"
-         href="https://www.timetopet.com/portal/woofofwalkstreet/create-account"
-         target="_blank" rel="noopener"
-         onclick="gtag && gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
-        Create Account
-      </a>
-    </div>
-
-    <div class="m-card">
-      <h2>Member perks</h2>
-      <ul>
-        <li><strong>Priority scheduling</strong> on peak days</li>
-        <li>Occasional <strong>member-only promos</strong> & goodies</li>
-        <li>Direct line to your walker for tailored routines</li>
-      </ul>
-    </div>
-
-    <!-- Pricing moved below for persuasion -->
-    <div class="m-card" id="pricing">
-      <h2>Pricing</h2>
-      <p><strong>First month 50% OFF — A$750.</strong></p>
-      <p>Then <strong>A$1,500 / month</strong> — about <strong>A$75 per weekday walk</strong>, fully solo, GPS-tracked, with photo updates.</p>
-      <p style="opacity:.85">Cancel anytime. No lock-ins.</p>
-      <a class="cta-button"
-         href="https://www.timetopet.com/portal/woofofwalkstreet/create-account"
-         target="_blank" rel="noopener"
-         onclick="gtag && gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
-        Join Unlimited
-      </a>
-    </div>
-
-    <!-- SEO Win: compact FAQ -->
-    <div class="m-card" itemscope itemtype="https://schema.org/FAQPage">
-      <h2>Unlimited Membership — FAQs</h2>
-      <details>
-        <summary>Can I cancel anytime?</summary>
-        <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-          <meta itemprop="name" content="Can I cancel anytime?">
-          <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-            <p itemprop="text">Yes — there are no lock-ins. You can cancel before your next billing cycle.</p>
-          </div>
+    <!-- I.P.O.O. STRIP -->
+    <section class="ipoo-strip" aria-labelledby="ipoo-title">
+      <div class="ipoo-inner">
+        <div class="ipoo-graphic" aria-hidden="true">
+          <picture>
+            <source srcset="/images/brand/dog-in-suit.webp" type="image/webp" />
+            <img src="/images/brand/dog-in-suit.webp" width="300" height="300" alt="Smiling dog in a suit — 50% OFF icon" loading="lazy">
+          </picture>
         </div>
-      </details>
-      <details>
-        <summary>Do skipped days roll over?</summary>
-        <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-          <meta itemprop="name" content="Do skipped days roll over?">
-          <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-            <p itemprop="text">No — Unlimited covers one walk per weekday. Keeping a steady rhythm is best for most dogs.</p>
-          </div>
+        <div class="ipoo-copy">
+          <h2 id="ipoo-title">📈 The I.P.O.O. — Initial Puppy Offering: <span class="highlight-unlimited">Unlimited</span></h2>
+          <p>Go all-in on your dog’s health and happiness: one solo walk every weekday with full transparency.</p>
+          <a class="ipoo-badge"
+             href="https://www.timetopet.com/portal/woofofwalkstreet/create-account"
+             target="_blank" rel="noopener"
+             onclick="gtag && gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
+            First month 50% OFF · Join for A$750
+          </a>
         </div>
-      </details>
-      <details>
-        <summary>Are walks really one-dog only?</summary>
-        <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-          <meta itemprop="name" content="Are walks really one-dog only?">
-          <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-            <p itemprop="text">Always. Your dog receives our full attention — never group or pack walked, and never car-ferried.</p>
-          </div>
-        </div>
-      </details>
-      <details>
-        <summary>Where do you walk?</summary>
-        <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-          <meta itemprop="name" content="Where do you walk?">
-          <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-            <p itemprop="text">Locally around South Melbourne — common routes include Albert Park Lake, St Vincent Gardens, and nearby parks.</p>
-          </div>
-        </div>
-      </details>
-    </div>
+      </div>
+    </section>
 
-    <p class="m-card" style="color:#9bd9c3">
-      We donate <strong>10% of profits</strong> to The Lost Dogs’ Home (North Melbourne) and local shelters.
-    </p>
+    <!-- CONTENT -->
+    <div class="m-wrap">
+      <div class="m-card">
+        <h2>Unlimited Dog Walking — South Melbourne</h2>
+        <p>Daily one-to-one walks build calm, fitness and confidence — especially for dogs that don’t love group settings. Our routes cover <strong>South Melbourne</strong>, <strong>Albert Park Lake</strong> and nearby parks, keeping your pup in their local environment and routine.</p>
+      </div>
+
+      <div class="m-card">
+        <h2>What’s included</h2>
+        <ul>
+          <li>One <strong>45-minute solo walk</strong> every weekday (Mon–Fri)</li>
+          <li><strong>GPS tracking</strong> + <strong>photo updates</strong> after each walk</li>
+          <li><strong>Ethical, one-dog-at-a-time</strong> handling — never pack walked, never car-ferried</li>
+          <li><strong>Priority</strong> calendar access for Unlimited members</li>
+          <li><strong>Boarding credits</strong> — hold for 12 months to earn two Weekend Woof Club stays</li>
+        </ul>
+      </div>
+
+      <div class="m-card">
+        <h2>Booking & availability</h2>
+        <ul>
+          <li>Walk window: <strong>7:00am–7:00pm, Monday–Friday</strong> (excl. public holidays)</li>
+          <li>All bookings via our calendar (Time To Pet), subject to availability</li>
+          <li>Unlimited = one walk per weekday. Skipped days do not roll over</li>
+          <li>Service area: South Melbourne and surrounds</li>
+        </ul>
+        <a class="cta-button"
+           href="https://www.timetopet.com/portal/woofofwalkstreet/create-account"
+           target="_blank" rel="noopener"
+           onclick="gtag && gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
+          Create Account
+        </a>
+      </div>
+
+      <div class="m-card">
+        <h2>Member perks</h2>
+        <ul>
+          <li><strong>Priority scheduling</strong> on peak days</li>
+          <li>Occasional <strong>member-only promos</strong> & goodies</li>
+          <li>Direct line to your walker for tailored routines</li>
+        </ul>
+      </div>
+
+      <!-- Pricing moved below for persuasion -->
+      <div class="m-card" id="pricing">
+        <h2>Pricing</h2>
+        <p><strong>First month 50% OFF — A$750.</strong></p>
+        <p>Then <strong>A$1,500 / month</strong> — about <strong>A$75 per weekday walk</strong>, fully solo, GPS-tracked, with photo updates.</p>
+        <p style="opacity:.85">Cancel anytime. No lock-ins.</p>
+        <a class="cta-button"
+           href="https://www.timetopet.com/portal/woofofwalkstreet/create-account"
+           target="_blank" rel="noopener"
+           onclick="gtag && gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
+          Join Unlimited
+        </a>
+      </div>
+
+      <!-- Testimonials -->
+      <section class="section alt" aria-labelledby="testimonials-heading">
+        <div class="container">
+          <h2 id="testimonials-heading">What Unlimited Members Say</h2>
+          <div class="quotes">
+            <blockquote class="quote">
+              <p>“Daily solo walks changed everything — calmer evenings, happier dog.”</p>
+              <footer>— Amelia, South Melbourne</footer>
+            </blockquote>
+            <blockquote class="quote">
+              <p>“The GPS + photos after each walk are gold. Super reliable.”</p>
+              <footer>— Marco, Albert Park</footer>
+            </blockquote>
+            <blockquote class="quote">
+              <p>“Worth it for the routine alone — our reactive pup is thriving.”</p>
+              <footer>— Priya, Port Melbourne</footer>
+            </blockquote>
+          </div>
+          <p class="center" style="margin-top:1rem">
+            <a class="btn btn-ghost" href="https://maps.app.goo.gl/YnEoSPwhGocUZyWL9?g_st=ipc" target="_blank" rel="noopener">
+              ⭐ Read More Reviews on Google
+            </a>
+          </p>
+        </div>
+      </section>
+
+      <!-- Compact FAQ for SEO -->
+      <div class="m-card" itemscope itemtype="https://schema.org/FAQPage">
+        <h2>Unlimited Membership — FAQs</h2>
+        <details>
+          <summary>Can I cancel anytime?</summary>
+          <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+            <meta itemprop="name" content="Can I cancel anytime?">
+            <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+              <p itemprop="text">Yes — there are no lock-ins. You can cancel before your next billing cycle.</p>
+            </div>
+          </div>
+        </details>
+        <details>
+          <summary>Do skipped days roll over?</summary>
+          <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+            <meta itemprop="name" content="Do skipped days roll over?">
+            <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+              <p itemprop="text">No — Unlimited covers one walk per weekday. Keeping a steady rhythm is best for most dogs.</p>
+            </div>
+          </div>
+        </details>
+        <details>
+          <summary>Are walks really one-dog only?</summary>
+          <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+            <meta itemprop="name" content="Are walks really one-dog only?">
+            <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+              <p itemprop="text">Always. Your dog receives our full attention — never group or pack walked, and never car-ferried.</p>
+            </div>
+          </div>
+        </details>
+        <details>
+          <summary>Where do you walk?</summary>
+          <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+            <meta itemprop="name" content="Where do you walk?">
+            <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+              <p itemprop="text">Locally around South Melbourne — common routes include Albert Park Lake, St Vincent Gardens, and nearby parks.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <p class="m-card" style="color:#9bd9c3">
+        We donate <strong>10% of profits</strong> to The Lost Dogs’ Home (North Melbourne) and local shelters.
+      </p>
+    </div>
+  </main>
+
+  <!-- Mobile sticky CTA -->
+  <div class="sticky-cta">
+    <a class="cta-button"
+       href="https://www.timetopet.com/portal/woofofwalkstreet/create-account"
+       target="_blank" rel="noopener"
+       onclick="gtag && gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
+       🎉 First month 50% OFF — Join for A$750
+    </a>
   </div>
-</main>
 
-<!-- Mobile sticky CTA (appears at bottom on small screens) -->
-<div class="sticky-cta">
-  <a class="cta-button"
-     href="https://www.timetopet.com/portal/woofofwalkstreet/create-account"
-     target="_blank" rel="noopener"
-     onclick="gtag && gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
-     🎉 First month 50% OFF — Join for A$750
-  </a>
-</div>
+  <!-- FOOTER (same as index) -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-banner">
+      <picture>
+        <source srcset="/images/brand/footer-banner-1600x600.webp" media="(min-width: 768px)">
+        <img src="/images/brand/footer-banner-800x300.webp" alt="Happy dogs in Melbourne" loading="lazy" width="800" height="300">
+      </picture>
+    </div>
 
-<footer class="site-footer">
-  <div class="footer-banner">
-    <picture>
-      <source srcset="/images/brand/footer-banner-1600x600.webp" media="(min-width: 768px)">
-      <img src="/images/brand/footer-banner-800x300.webp" alt="Happy dogs in Melbourne" loading="lazy">
-    </picture>
-  </div>
-  <div class="container footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-</footer>
+    <div class="container footer-grid">
+      <section class="footer-brand">
+        <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="60" height="60" loading="lazy">
+        <p><strong>The Woof of Walk Street</strong><br>
+          <a class="footer-map" href="https://maps.app.goo.gl/YnEoSPwhGocUZyWL9?g_st=ipc" target="_blank" rel="noopener">South Melbourne, VIC</a> · Mon–Fri 7am–7pm<br>
+          <a href="tel:+61456754050">+61 456 754 050</a> · <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a>
+        </p>
+        <div class="footer-socials">
+          <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram"><img src="/images/social/instagram.svg" alt="" width="24" height="24"></a>
+          <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook"><img src="/images/social/facebook.svg" alt="" width="24" height="24"></a>
+          <a href="https://x.com/woofofwalkstreet" aria-label="X"><img src="/images/social/twitter.svg" alt="" width="24" height="24"></a>
+        </div>
+        <p>
+          <a class="btn button-primary" target="_blank" rel="noopener"
+             href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=footer&utm_campaign=book_now_footer"
+             onclick="gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
+            Book Now
+          </a>
+        </p>
+      </section>
 
+      <nav class="footer-col" aria-label="Primary">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="/services.html">All Services</a></li>
+          <li><a href="/dog-walking-south-melbourne">Dog Walking South Melbourne</a></li>
+          <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
+          <li><a href="/memberships.html" aria-current="page">Memberships</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <section class="footer-col collapsible">
+        <button class="collapse-btn" aria-expanded="false" aria-controls="support-list">Support</button>
+        <ul id="support-list">
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/testimonials.html">Testimonials</a></li>
+          <li><a href="/gallery.html">Photos & Videos</a></li>
+          <li><a href="/blog/index.html">Blog</a></li>
+          <li><a href="/faq.html">FAQs</a></li>
+        </ul>
+      </section>
+
+      <section class="footer-col collapsible">
+        <button class="collapse-btn" aria-expanded="false" aria-controls="legal-list">Legal</button>
+        <ul id="legal-list">
+          <li><a href="/privacy.html">Privacy</a></li>
+          <li><a href="/terms.html">Terms</a></li>
+          <li><a href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="container footer-geo">
+      Solo Dog Walking & Boutique Boarding across <strong>South Melbourne</strong>, <strong>Albert Park</strong>,
+      <strong>Port Melbourne</strong>, <strong>Middle Park</strong> and <strong>Southbank</strong>.
+    </div>
+
+    <div class="container footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+    <!-- Tiny JS for footer accordions (mobile) -->
+    <script>
+      document.querySelectorAll('.collapsible .collapse-btn').forEach(btn=>{
+        btn.addEventListener('click', ()=>{
+          const list = document.getElementById(btn.getAttribute('aria-controls'));
+          const open = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', String(!open));
+          list.hidden = open;
+        });
+        const list = document.getElementById(btn.getAttribute('aria-controls'));
+        if (window.matchMedia('(max-width:640px)').matches) list.hidden = true;
+      });
+    </script>
+  </footer>
+
+  <!-- Global TTP booking click tracker -->
+  <script>
+    (function () {
+      document.addEventListener('click', function (e) {
+        const a = e.target.closest('a');
+        if (!a) return;
+        const href = (a.getAttribute('href') || '').toLowerCase();
+        if (href.includes('timetopet.com/portal/woofofwalkstreet')) {
+          try {
+            gtag('event', 'ttp_booking_click', {
+              'send_to': 'AW-17527927259/ePjJCLT8p6cbENvj-6VB',
+              'value': 1.0,
+              'currency': 'AUD'
+            });
+          } catch (err) {}
+        }
+      }, { capture: true });
+    })();
+  </script>
 </body>
 </html>

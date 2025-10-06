@@ -88,11 +88,45 @@
 </head>
 
 <body>
-  <!-- Promo ribbon -->
-  <div class="promo-ribbon">
-    🎉 <strong>50% OFF</strong> Unlimited Daily Walks
-    <span> · 45-minute solo walks · GPS tracked · Photo updates</span>
-    <a href="/membership-unlimited.html" class="promo-cta">Learn More →</a>
+      /* Edgier promo ribbon (overrides base .promo-ribbon) */
+    .promo-ribbon.promo--edge{
+      position: sticky;
+      top: 0;
+      z-index: 1100;
+      background: linear-gradient(135deg, #ff1f3d, #ff6f00);
+      color:#fff;
+      border-bottom:1px solid rgba(255,255,255,.25);
+      padding:.65rem 0;
+    }
+    .promo-ribbon .promo-inner{
+      display:flex;align-items:center;justify-content:center;gap:.75rem;flex-wrap:wrap
+    }
+    .promo-ribbon .promo-dog{
+      width:28px;height:28px;border-radius:50%;background:#fff;padding:2px;flex-shrink:0
+    }
+    .promo-ribbon .promo-copy{font-size:.95rem;letter-spacing:.2px}
+    .promo-ribbon .promo-cta{
+      display:inline-block;background:#fff;color:#111;border-radius:999px;padding:.4rem .8rem;
+      font-weight:800;text-decoration:none;transition:transform .15s ease, background .15s ease, color .15s ease
+    }
+    .promo-ribbon .promo-cta:hover{transform:translateY(-1px)}
+    .promo-ribbon .promo-close{
+      background:transparent;border:0;color:#fff;font-size:1rem;cursor:pointer;margin-left:.25rem
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Promo ribbon (edgier) -->
+  <div id="promo" class="promo-ribbon promo--edge" role="region" aria-label="Promo: 50% off">
+    <div class="promo-inner container">
+      <img class="promo-dog" src="/images/brand/dog-in-suit.webp" alt="" width="28" height="28" decoding="async" />
+      <span class="promo-copy">
+        <strong>50% OFF</strong> Unlimited Daily Walks — 45-minute solo walks · GPS tracked · Photo updates
+      </span>
+      <a href="/membership-unlimited.html" class="promo-cta">Learn More →</a>
+      <button id="promo-close" class="promo-close" aria-label="Dismiss promo">✕</button>
+    </div>
   </div>
 
   <!-- HEADER -->

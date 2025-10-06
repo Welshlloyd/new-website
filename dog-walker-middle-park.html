@@ -24,14 +24,51 @@
     {"@type":"ListItem","position":2,"name":"Dog Walker Middle Park","item":"https://www.woofofwalkstreet.com/dog-walker-middle-park.html"}
   ]}
   </script>
-</head>
-<body>
-  <header class="site-header">
-    <div class="navbar container">
-      <a class="brand" href="/"><img src="/images/brand/logo-lockup-gold.webp" alt="" width="56" height="56"><strong>The Woof of Walk Street</strong></a>
-      <input id="nav-toggle" type="checkbox" hidden><label for="nav-toggle" class="nav-toggle">☰</label>
-      <nav class="nav-links"><a href="/services.html">All Services</a><a href="/dog-walking-south-melbourne">Dog Walking</a><a href="/boarding-services.html">Boarding</a><a href="/memberships.html">Memberships</a><a href="/contact.html">Contact</a>
-        <a class="btn button-primary nav-cta" target="_blank" rel="noopener" href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=suburb_page&utm_campaign=book_now_middle_park">Book Now</a>
+ <!-- Promo ribbon (edgier) -->
+  <div id="promo" class="promo-ribbon promo--edge" role="region" aria-label="Promo: 50% off">
+    <div class="promo-inner container">
+      <img class="promo-dog" src="/images/brand/dog-in-suit.webp" alt="" width="28" height="28" decoding="async" />
+      <span class="promo-copy">
+        <strong>50% OFF</strong> Unlimited Daily Walks — 45-minute solo walks · GPS tracked · Photo updates
+      </span>
+      <a href="/membership-unlimited.html" class="promo-cta">Learn More →</a>
+      <button id="promo-close" class="promo-close" aria-label="Dismiss promo">✕</button>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="navbar container" role="navigation" aria-label="Main">
+      <a class="brand" href="/" aria-label="Go to home">
+        <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="56" height="56">
+        <strong>The Woof of Walk Street</strong>
+      </a>
+
+      <!-- mobile hamburger -->
+      <input id="nav-toggle" type="checkbox" hidden>
+      <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</label>
+
+      <nav class="nav-links" aria-label="Primary">
+        <section class="nav-group">
+          <button class="nav-group-btn" aria-expanded="false" aria-controls="nav-services">Services</button>
+          <ul id="nav-services" class="nav-group-list">
+            <li><a href="/services.html">All Services</a></li>
+            <li><a href="/dog-walking-south-melbourne">Dog Walking South Melbourne</a></li>
+            <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
+            <li><a href="/memberships.html">Unlimited Membership</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </section>
+        <a href="/about.html">About</a>
+        <a href="/blog/index.html">Blog</a>
+        <a href="/faq.html">FAQs</a>
+        <a href="/search.html">Search</a>
+        <a class="btn button-primary nav-cta"
+           href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=header&utm_campaign=book_now"
+           target="_blank" rel="noopener"
+           onclick="gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
+           Book Now
+        </a>
       </nav>
     </div>
   </header>

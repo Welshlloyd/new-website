@@ -237,6 +237,7 @@
         </ul>
       </section>
 
+   
       <!-- Legal -->
       <section class="footer-col collapsible">
         <button class="collapse-btn" aria-expanded="false" aria-controls="legal-list">Legal</button>
@@ -271,8 +272,77 @@
     </script>
   </footer>
 
+  <!-- Promo ribbon behavior (hide on scroll down, show on up) -->
+  <script>
+  (function(){
+    const promo = document.getElementById('promo');
+    const closeBtn = document.getElementById('promo-close');
+    if(!promo) return;
+
+    let last = 0, ticking = false;
+    function onScroll(){
+      const y = window.scrollY || 0;
+      const goingDown = y > last;
+      const past = y > 120;
+      if (goingDown && past){
+        promo.style.transform = 'translateY(-100%)';
+      } else {
+        promo.style.transform = 'translateY(0)';
+      }
+      last = y;
+      ticking = false;
+    }
+    window.addEventListener('scroll', ()=>{
+      if(!ticking){ requestAnimationFrame(onScroll); ticking = true; }
+    });
+
+    if (closeBtn){
+      closeBtn.addEventListener('click', ()=>{
+        promo.style.transform = 'translateY(-100%)';
+      });
+    }
+  })();
+  </script>
+
+  <!-- Services dropdown: click/keyboard support -->
+  <script>
+  (function(){
+    const btn = document.querySelector('.nav-group-btn');
+    const group = btn ? btn.closest('.nav-group') : null;
+    const menu = document.getElementById(btn ? btn.getAttribute('aria-controls') : '');
+
+    if(!btn || !group || !menu) return;
+
+    function closeMenu(){
+      group.classList.remove('is-open');
+      btn.setAttribute('aria-expanded','false');
+    }
+    function openMenu(){
+      group.classList.add('is-open');
+      btn.setAttribute('aria-expanded','true');
+    }
+    function toggleMenu(){
+      const open = btn.getAttribute('aria-expanded') === 'true';
+      open ? closeMenu() : openMenu();
+    }
+
+    btn.addEventListener('click', (e)=>{
+      e.preventDefault();
+      toggleMenu();
+    });
+
+    document.addEventListener('click', (e)=>{
+      if (!group.contains(e.target)) closeMenu();
+    });
+    document.addEventListener('keydown', (e)=>{
+      if (e.key === 'Escape') closeMenu();
+    });
+  })();
+  </script>
+
   <!-- Global TTP booking click tracker -->
   <script>
+    // Fire Google Ads conversion on any outbound Time To Pet link
     (function () {
       document.addEventListener('click', function (e) {
         const a = e.target.closest('a');
@@ -282,4 +352,13 @@
           try {
             gtag('event', 'ttp_booking_click', {
               'send_to': 'AW-17527927259/ePjJCLT8p6cbENvj-6VB',
-              '
+              'value': 1.0,
+              'currency': 'AUD'
+            });
+          } catch (err) { /* fail silently */ }
+        }
+      }, { capture: true });
+    })();
+  </script>
+</body>
+</html>

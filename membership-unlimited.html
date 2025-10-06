@@ -10,50 +10,14 @@
   <link rel="stylesheet" href="/css/mini.css" />
   <link rel="stylesheet" href="/css/styles.css" />
 
-  <!-- Google Ads Global Site Tag -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'AW-17527927259');
-  </script>
-
-  <!-- JSON-LD: Service (Unlimited Membership) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "Unlimited Dog Walking Membership",
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "The Woof of Walk Street",
-      "address": {"@type":"PostalAddress","addressLocality":"South Melbourne","addressRegion":"VIC","addressCountry":"AU"},
-      "url": "https://www.woofofwalkstreet.com",
-      "telephone": "+61-456-754-050"
-    },
-    "areaServed": "South Melbourne, VIC",
-    "description": "Unlimited: one 45-minute solo walk per weekday (Mon–Fri). GPS tracked with photo updates. Ethical, one-dog-only service.",
-    "offers": {
-      "@type": "Offer",
-      "priceCurrency": "AUD",
-      "price": "1500",
-      "url": "https://www.timetopet.com/portal/woofofwalkstreet/create-account",
-      "availability": "https://schema.org/InStock"
-    }
-  }
-  </script>
-
   <style>
     .m-wrap{max-width:960px;margin:24px auto 44px;padding:0 16px}
     .m-hero{padding:40px 16px 16px;text-align:center;background:#fffaf1;border-bottom:1px solid #f0e6cf}
     .m-hero h1{margin:0 0 .35rem}
-    .m-hook{margin:.35rem auto .65rem;max-width:48ch;color:#2a2a2a;font-size:1.06rem}
+    .m-hook{margin:.35rem auto .65rem;max-width:48ch;color:#2a2a2a;font-size:1.08rem}
     .m-badge{display:inline-block;margin:.25rem 0 .9rem;padding:.45rem .9rem;background:#f5b200;color:#111;border-radius:999px;font-weight:900}
 
     .m-cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
-    .m-price{font-weight:900;font-size:1.9rem;margin:.4rem 0 .2rem}
-    .m-price-sub{font-size:1rem;color:#333;margin:0 0 .6rem}
     .m-trust{list-style:none;padding:0;margin:12px auto 10px;max-width:44ch;color:#6b6b6b}
     .m-trust li{position:relative;padding-left:22px;margin:.25rem 0}
     .m-trust li::before{content:"✔";position:absolute;left:0;top:0;line-height:1;color:#2a7a3a;font-weight:800}
@@ -71,7 +35,6 @@
     .ipoo-graphic{display:flex;justify-content:center}
     .ipoo-graphic img{width:min(280px,60vw);height:auto;border-radius:14px;box-shadow:var(--shadow)}
 
-    /* Ensure “Unlimited” is high contrast anywhere */
     .highlight-unlimited{color:#0b0e12;background:#ffd166;padding:.1rem .35rem;border-radius:.4rem;font-weight:900}
   </style>
 </head>
@@ -98,6 +61,7 @@
 </header>
 
 <main>
+  <!-- HERO -->
   <section class="m-hero">
     <h1>👑 <span class="highlight-unlimited">Unlimited</span> Pawfolio</h1>
     <p class="m-hook">
@@ -105,13 +69,12 @@
       <strong>GPS tracking</strong> and <strong>photo updates</strong> after every walk.
     </p>
 
-    <div class="m-price">A$1,500 / month</div>
-    <div class="m-price-sub">🎉 <strong>HALF PRICE first month</strong> — just A$750, then A$1,500 unless cancelled.</div>
-
     <p class="m-badge">South Melbourne · Monday–Friday</p>
 
     <div class="m-cta">
-      <a class="cta-button" href="https://www.timetopet.com/portal/woofofwalkstreet/create-account" target="_blank" rel="noopener">Join Unlimited</a>
+      <a class="cta-button" href="https://www.timetopet.com/portal/woofofwalkstreet/create-account" target="_blank" rel="noopener">
+        🎉 First month 50% OFF — Join for A$750
+      </a>
       <a class="cta-button" href="https://www.timetopet.com/portal/woofofwalkstreet" target="_blank" rel="noopener">Existing Member Login</a>
     </div>
 
@@ -122,6 +85,7 @@
     </ul>
   </section>
 
+  <!-- IPOO STRIP -->
   <section class="ipoo-strip" aria-labelledby="ipoo-title">
     <div class="ipoo-inner">
       <div class="ipoo-graphic" aria-hidden="true">
@@ -133,11 +97,14 @@
       <div class="ipoo-copy">
         <h2 id="ipoo-title">📈 The I.P.O.O. — Initial Puppy Offering: <span class="highlight-unlimited">Unlimited</span></h2>
         <p>Go all-in on your dog’s health and happiness: one solo walk every weekday with full transparency.</p>
-        <a class="ipoo-badge" href="https://www.timetopet.com/portal/woofofwalkstreet/create-account" target="_blank" rel="noopener">First month 50% OFF · Join for A$750</a>
+        <a class="ipoo-badge" href="https://www.timetopet.com/portal/woofofwalkstreet/create-account" target="_blank" rel="noopener">
+          First month 50% OFF · Join for A$750
+        </a>
       </div>
     </div>
   </section>
 
+  <!-- CONTENT -->
   <div class="m-wrap">
     <div class="m-card">
       <h2>What’s included</h2>
@@ -169,6 +136,15 @@
       </ul>
     </div>
 
+    <!-- PRICING MOVED HERE -->
+    <div class="m-card" id="pricing">
+      <h2>Pricing</h2>
+      <p><strong>First month 50% OFF — A$750.</strong></p>
+      <p>Afterwards: <strong>A$1,500 / month</strong> — equivalent to just <strong>A$75 per weekday walk</strong>, fully solo, GPS-tracked, with photo updates.</p>
+      <p style="opacity:.8">Cancel anytime. No lock-ins. Peace of mind guaranteed.</p>
+      <a class="cta-button" href="https://www.timetopet.com/portal/woofofwalkstreet/create-account" target="_blank" rel="noopener">Join Unlimited</a>
+    </div>
+
     <p class="m-card" style="color:#9bd9c3">
       We donate <strong>10% of profits</strong> to The Lost Dogs’ Home (North Melbourne) and local shelters.
     </p>
@@ -185,29 +161,6 @@
   <div class="container footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </footer>
-
-<!-- Global TTP booking click tracker -->
-<script>
-(function () {
-  document.addEventListener('click', function (e) {
-    const a = e.target.closest('a');
-    if (!a) return;
-    const href = (a.getAttribute('href') || '').toLowerCase();
-    if (href.includes('timetopet.com/portal/woofofwalkstreet')) {
-      try {
-        gtag('event', 'ttp_booking_click', {
-          'send_to': 'AW-17527927259/ePjJCLT8p6cbENvj-6VB',
-          'value': 1.0,
-          'currency': 'AUD'
-        });
-      } catch (err) {}
-    }
-  }, { capture: true });
-})();
-</script>
-
-</body>
-</html>
 
 </body>
 </html>

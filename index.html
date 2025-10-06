@@ -97,6 +97,80 @@
   <button class="mini-btn" aria-label="Show promo">50% OFF — Tap for details</button>
 </div>
 
+<script>
+(function(){
+  const promo   = document.getElementById('promo');       // big ribbon
+  const mini    = document.getElementById('promo-mini');  // mini bar
+  if (!promo || !mini) return;
+
+  const DISMISS_KEY = 'woof_promo_dismissed_until'; // if you use a 14-day dismissal elsewhere
+
+  function promoDismissed(){
+    try {
+      const v = localStorage.getItem(DISMISS_KEY);
+      return v && Date.now() < Number(v);
+    } catch(e){ return false; }
+  }
+
+  // scroll-driven show/hide
+  let last = 0, ticking = false;
+  function updateBars(){
+    const y = window.scrollY || 0;
+    const goingDown = y > last;
+    const scrolledPast = y > 120;
+
+    if (!promoDismissed()){
+      if (goingDown && scrolledPast){
+        // hide big, show mini
+        promo.style.transform = 'translateY(-100%)';
+        mini.hidden = false;
+        document.body.classList.add('with-mini-offset');
+      } else {
+        // show big, hide mini near top / on scroll up
+        promo.style.transform = 'translateY(0)';
+        if (y < 40) {
+          mini.hidden = true;
+          document.body.classList.remove('with-mini-offset');
+        }
+      }
+    } else {
+      // fully dismissed: keep both hidden
+      promo.style.transform = 'translateY(-100%)';
+      mini.hidden = true;
+      document.body.classList.remove('with-mini-offset');
+    }
+
+    last = y;
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', ()=>{
+    if (!ticking){ requestAnimationFrame(updateBars); ticking = true; }
+  });
+  updateBars();
+
+  // Expand from mini → show big ribbon and scroll to top
+  mini.addEventListener('click', ()=>{
+    mini.hidden = true;
+    document.body.classList.remove('with-mini-offset');
+    promo.style.transform = 'translateY(0)';
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  });
+
+  // If you have a close button on the big promo, wire it up:
+  const closeBtn = document.getElementById('promo-close');
+  if (closeBtn){
+    closeBtn.addEventListener('click', ()=>{
+      // optional 14-day snooze
+      try { localStorage.setItem(DISMISS_KEY, String(Date.now() + 14*24*60*60*1000)); } catch(e){}
+      promo.style.transform = 'translateY(-100%)';
+      mini.hidden = true;
+      document.body.classList.remove('with-mini-offset');
+    });
+  }
+})();
+</script>
+
   <!-- HEADER -->
   <header class="site-header" role="banner">
     <div class="navbar container" role="navigation" aria-label="Main">

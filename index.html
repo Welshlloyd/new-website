@@ -11,6 +11,8 @@
   <!-- Styles -->
   <link rel="stylesheet" href="/css/mini.css" />
   <link rel="stylesheet" href="/css/styles.css" />
+  <!-- Optional: homepage-only edge styling -->
+  <link rel="stylesheet" href="/css/home-edge.css" />
 
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website">
@@ -85,96 +87,17 @@
 </head>
 
 <body>
-<!-- Promo ribbon -->
-<div id="promo" class="promo-ribbon promo--edge" role="region" aria-label="Promo: 50% off">
-  <div class="promo-inner container">
-    <img class="promo-dog" src="/images/brand/dog-in-suit.webp" alt="" width="28" height="28" decoding="async" />
-    <span class="promo-copy">
-      <strong>50% OFF</strong> Unlimited Daily Walks — 45-minute solo walks · GPS tracked · Photo updates
-    </span>
-    <a href="/membership-unlimited.html" class="promo-cta">Learn More →</a>
-    <button id="promo-close" class="promo-close" aria-label="Dismiss promo">✕</button>
+  <!-- Promo ribbon (edgier) -->
+  <div id="promo" class="promo-ribbon promo--edge" role="region" aria-label="Promo: 50% off">
+    <div class="promo-inner container">
+      <img class="promo-dog" src="/images/brand/dog-in-suit.webp" alt="" width="28" height="28" decoding="async" />
+      <span class="promo-copy">
+        <strong>50% OFF</strong> Unlimited Daily Walks — 45-minute solo walks · GPS tracked · Photo updates
+      </span>
+      <a href="/membership-unlimited.html" class="promo-cta">Learn More →</a>
+      <button id="promo-close" class="promo-close" aria-label="Dismiss promo">✕</button>
+    </div>
   </div>
-</div>
-
-<!-- Mini promo (collapsed state) -->
-<div id="promo-mini" class="promo-mini" hidden>
-  <button class="mini-btn" aria-label="Show promo">50% OFF — Tap for details</button>
-</div>
-
-<script>
-(function(){
-  const promo   = document.getElementById('promo');       // big ribbon
-  const mini    = document.getElementById('promo-mini');  // mini bar
-  if (!promo || !mini) return;
-
-  const DISMISS_KEY = 'woof_promo_dismissed_until'; // if you use a 14-day dismissal elsewhere
-
-  function promoDismissed(){
-    try {
-      const v = localStorage.getItem(DISMISS_KEY);
-      return v && Date.now() < Number(v);
-    } catch(e){ return false; }
-  }
-
-  // scroll-driven show/hide
-  let last = 0, ticking = false;
-  function updateBars(){
-    const y = window.scrollY || 0;
-    const goingDown = y > last;
-    const scrolledPast = y > 120;
-
-    if (!promoDismissed()){
-      if (goingDown && scrolledPast){
-        // hide big, show mini
-        promo.style.transform = 'translateY(-100%)';
-        mini.hidden = false;
-        document.body.classList.add('with-mini-offset');
-      } else {
-        // show big, hide mini near top / on scroll up
-        promo.style.transform = 'translateY(0)';
-        if (y < 40) {
-          mini.hidden = true;
-          document.body.classList.remove('with-mini-offset');
-        }
-      }
-    } else {
-      // fully dismissed: keep both hidden
-      promo.style.transform = 'translateY(-100%)';
-      mini.hidden = true;
-      document.body.classList.remove('with-mini-offset');
-    }
-
-    last = y;
-    ticking = false;
-  }
-
-  window.addEventListener('scroll', ()=>{
-    if (!ticking){ requestAnimationFrame(updateBars); ticking = true; }
-  });
-  updateBars();
-
-  // Expand from mini → show big ribbon and scroll to top
-  mini.addEventListener('click', ()=>{
-    mini.hidden = true;
-    document.body.classList.remove('with-mini-offset');
-    promo.style.transform = 'translateY(0)';
-    window.scrollTo({top: 0, behavior: 'smooth'});
-  });
-
-  // If you have a close button on the big promo, wire it up:
-  const closeBtn = document.getElementById('promo-close');
-  if (closeBtn){
-    closeBtn.addEventListener('click', ()=>{
-      // optional 14-day snooze
-      try { localStorage.setItem(DISMISS_KEY, String(Date.now() + 14*24*60*60*1000)); } catch(e){}
-      promo.style.transform = 'translateY(-100%)';
-      mini.hidden = true;
-      document.body.classList.remove('with-mini-offset');
-    });
-  }
-})();
-</script>
 
   <!-- HEADER -->
   <header class="site-header" role="banner">
@@ -301,21 +224,21 @@
         </div>
       </div>
     </section>
-    
+
     <!-- WHY SOUTH MELBOURNE LOVES US -->
-<section class="why-local" style="background:#0b0e12;color:#f7f3e8;border-block:4px solid #f5b200;margin-top:32px">
-  <div class="container" style="padding:32px 16px;text-align:center;max-width:900px">
-    <h2 style="color:#fff;font-size:1.9rem;margin-bottom:12px">Why South Melbourne Dogs Love Us</h2>
-    <p style="margin:0 auto;max-width:60ch;color:#cfd6df;line-height:1.6">
-      From quiet strolls around <strong>Albert Park Lake</strong> to energetic sniff sessions at 
-      <strong>South Melbourne Market</strong> and sunset laps along <strong>Port Melbourne beach</strong>, 
-      our pups enjoy a safe, one-on-one adventure every time. With <strong>GPS tracking</strong>, 
-      <strong>photo updates</strong> and a calm, reliable routine, we’re the trusted choice for 
-      families in <strong>South Melbourne</strong>, <strong>Albert Park</strong>, 
-      <strong>Middle Park</strong> and <strong>Southbank</strong>.
-    </p>
-  </div>
-</section>
+    <section class="why-local" style="background:#0b0e12;color:#f7f3e8;border-block:4px solid #f5b200;margin-top:32px">
+      <div class="container" style="padding:32px 16px;text-align:center;max-width:900px">
+        <h2 style="color:#fff;font-size:1.9rem;margin-bottom:12px">Why South Melbourne Dogs Love Us</h2>
+        <p style="margin:0 auto;max-width:60ch;color:#cfd6df;line-height:1.6">
+          From quiet strolls around <strong>Albert Park Lake</strong> to energetic sniff sessions at 
+          <strong>South Melbourne Market</strong> and sunset laps along <strong>Port Melbourne beach</strong>, 
+          our pups enjoy a safe, one-on-one adventure every time. With <strong>GPS tracking</strong>, 
+          <strong>photo updates</strong> and a calm, reliable routine, we’re the trusted choice for 
+          families in <strong>South Melbourne</strong>, <strong>Albert Park</strong>, 
+          <strong>Middle Park</strong> and <strong>Southbank</strong>.
+        </p>
+      </div>
+    </section>
 
     <!-- Quick CTA row -->
     <section>
@@ -556,18 +479,74 @@
         if (window.matchMedia('(max-width:640px)').matches) list.hidden = true;
       });
     </script>
-      <!-- Tiny JS for footer accordions (mobile) -->
+  </footer>
+
+  <!-- Promo ribbon behavior (hide on scroll down, show on up) -->
   <script>
-    document.querySelectorAll('.collapsible .collapse-btn').forEach(btn=>{
-      btn.addEventListener('click', ()=>{
-        const list = document.getElementById(btn.getAttribute('aria-controls'));
-        const open = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', String(!open));
-        list.hidden = open;
-      });
-      const list = document.getElementById(btn.getAttribute('aria-controls'));
-      if (window.matchMedia('(max-width:640px)').matches) list.hidden = true;
+  (function(){
+    const promo = document.getElementById('promo');
+    const closeBtn = document.getElementById('promo-close');
+    if(!promo) return;
+
+    let last = 0, ticking = false;
+    function onScroll(){
+      const y = window.scrollY || 0;
+      const goingDown = y > last;
+      const past = y > 120;
+      if (goingDown && past){
+        promo.style.transform = 'translateY(-100%)';
+      } else {
+        promo.style.transform = 'translateY(0)';
+      }
+      last = y;
+      ticking = false;
+    }
+    window.addEventListener('scroll', ()=>{
+      if(!ticking){ requestAnimationFrame(onScroll); ticking = true; }
     });
+
+    if (closeBtn){
+      closeBtn.addEventListener('click', ()=>{
+        promo.style.transform = 'translateY(-100%)';
+      });
+    }
+  })();
+  </script>
+
+  <!-- Services dropdown: click/keyboard support -->
+  <script>
+  (function(){
+    const btn = document.querySelector('.nav-group-btn');
+    const group = btn ? btn.closest('.nav-group') : null;
+    const menu = document.getElementById(btn ? btn.getAttribute('aria-controls') : '');
+
+    if(!btn || !group || !menu) return;
+
+    function closeMenu(){
+      group.classList.remove('is-open');
+      btn.setAttribute('aria-expanded','false');
+    }
+    function openMenu(){
+      group.classList.add('is-open');
+      btn.setAttribute('aria-expanded','true');
+    }
+    function toggleMenu(){
+      const open = btn.getAttribute('aria-expanded') === 'true';
+      open ? closeMenu() : openMenu();
+    }
+
+    btn.addEventListener('click', (e)=>{
+      e.preventDefault();
+      toggleMenu();
+    });
+
+    document.addEventListener('click', (e)=>{
+      if (!group.contains(e.target)) closeMenu();
+    });
+    document.addEventListener('keydown', (e)=>{
+      if (e.key === 'Escape') closeMenu();
+    });
+  })();
   </script>
 
   <!-- Global TTP booking click tracker -->
@@ -590,9 +569,5 @@
       }, { capture: true });
     })();
   </script>
-</body>
-</html>
-    
-  </footer>
 </body>
 </html>

@@ -39,13 +39,32 @@ strong{font-weight:700}
 .promo-ribbon{
   position:sticky;top:0;z-index:1100;
   background:#fff4df;color:#473816;border-bottom:1px solid #f5e7c8;
-  padding:10px 16px;text-align:center
+  padding:10px 16px;text-align:center;
+  /* NEW: smooth hide/show when we slide it up */
+  transition: transform .35s ease; will-change: transform;
 }
 .promo-ribbon .promo-cta{
   display:inline-block;margin-top:8px;background:#111;color:#fff;border-radius:var(--btn-radius);
   padding:10px 16px;font-weight:700;text-decoration:none;box-shadow:var(--shadow)
 }
 .promo-ribbon .promo-cta:hover{opacity:.95}
+
+/* ---------- Mini promo bar (collapsed ribbon) ---------- */
+.promo-mini{
+  position:fixed;top:0;left:0;right:0;height:32px;
+  display:flex;align-items:center;justify-content:center;
+  z-index:1200;
+  background:radial-gradient(120% 120% at 50% 0%, #FFF6D9 0%, #FBE9B0 40%, #14161A 100%);
+  box-shadow:0 6px 16px rgba(0,0,0,.18);
+  border-bottom:1px solid rgba(0,0,0,.06);
+}
+.promo-mini .mini-btn{
+  appearance:none;border:0;background:#111;color:#fff;
+  font-weight:800;font-size:13px;line-height:1;
+  padding:8px 12px;border-radius:999px;
+  box-shadow:0 4px 12px rgba(0,0,0,.25);
+}
+body.with-mini-offset{ padding-top:32px; } /* prevents header jump when mini visible */
 
 /* ---------- Header / Nav ---------- */
 .site-header{
@@ -75,13 +94,22 @@ strong{font-weight:700}
 .nav-group-list a,.nav-dropmenu a{display:block;padding:8px;border-radius:8px;color:var(--brand-2)}
 .nav-group-list a:hover,.nav-dropmenu a:hover{background:#f6f8fb}
 
-/* --- Mobile hamburger (About/others use checkbox hack) --- */
+/* NEW: show dropdown when aria-expanded=true */
+.nav-group-btn[aria-expanded="true"] + .nav-group-list{display:block}
+
+/* --- Mobile hamburger (checkbox hack) --- */
 #nav-toggle{display:none}
 .nav-toggle{display:none;cursor:pointer;font-size:1.6rem}
 @media (max-width:880px){
   .nav-links{display:none;position:absolute;left:0;right:0;top:100%;background:#fff;border-bottom:1px solid var(--line);padding:12px 16px;flex-direction:column;gap:10px}
   #nav-toggle:checked ~ .nav-links{display:flex}
   .nav-toggle{display:block;margin-left:auto}
+
+  /* NEW: make dropdown list flow naturally inside mobile panel */
+  .nav-group-list{
+    position:static; min-width:unset; padding:6px 0;
+    border:0; box-shadow:none;
+  }
 }
 
 /* ---------- Buttons ---------- */
@@ -282,7 +310,6 @@ section h2 {
     gap: 0.75rem;
   }
 }
-
 
 /* WHY LOCAL SECTION */
 .why-local {

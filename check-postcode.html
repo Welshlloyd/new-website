@@ -69,7 +69,7 @@
 </head>
 <body>
 
-   <!-- Google Ads Global Site Tag -->
+<!-- Google Ads Global Site Tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -111,15 +111,20 @@
       <a class="impact-cta" href="/community.html">See our impact →</a>
     </div>
   </div>
-  <!-- HEADER (matches site) -->
+
+
+  <!-- HEADER -->
   <header class="site-header" role="banner">
     <div class="navbar container" role="navigation" aria-label="Main">
       <a class="brand" href="/" aria-label="Go to home">
         <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="56" height="56">
         <strong>The Woof of Walk Street</strong>
       </a>
+
+      <!-- mobile hamburger -->
       <input id="nav-toggle" type="checkbox" hidden>
       <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</label>
+
       <nav class="nav-links" aria-label="Primary">
         <section class="nav-group">
           <button class="nav-group-btn" aria-expanded="false" aria-controls="nav-services">Services</button>
@@ -128,8 +133,6 @@
             <li><a href="/dog-walking-south-melbourne">Dog Walking South Melbourne</a></li>
             <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
             <li><a href="/memberships.html">Unlimited Membership</a></li>
-            <li><a href="/service-areas.html">Service Areas</a></li>
-            <li><a href="/community.html">Community</a></li>
             <li><a href="/contact.html">Contact</a></li>
           </ul>
         </section>
@@ -137,7 +140,12 @@
         <a href="/blog/index.html">Blog</a>
         <a href="/faq.html">FAQs</a>
         <a href="/search.html">Search</a>
-        <a class="btn button-primary nav-cta" href="https://www.timetopet.com/portal/woofofwalkstreet" target="_blank" rel="noopener">Book Now</a>
+        <a class="btn button-primary nav-cta"
+           href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=header&utm_campaign=book_now"
+           target="_blank" rel="noopener"
+           onclick="gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
+           Book Now
+        </a>
       </nav>
     </div>
   </header>

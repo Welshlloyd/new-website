@@ -1,4 +1,4 @@
-l<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-AU">
 <head>
   <meta charset="UTF-8" />
@@ -11,6 +11,19 @@ l<!DOCTYPE html>
   <!-- Styles -->
   <link rel="stylesheet" href="/css/mini.css" />
   <link rel="stylesheet" href="/css/styles.css" />
+
+  <!-- Small page-scoped styles for the icon grid -->
+  <style>
+    .area-icons { padding: 8px 0 22px; }
+    .area-grid { display:grid; gap:14px; grid-template-columns:repeat(2,1fr); }
+    .area-card { background:#fff; border:1px solid var(--stroke, #e6e6e6); border-radius:12px; overflow:hidden; text-align:center; box-shadow:var(--shadow, 0 1px 2px rgb(0 0 0 / 6%)); }
+    .area-card img { width:100%; height:140px; object-fit:cover; display:block; }
+    .area-card a { display:block; padding:10px 12px; font-weight:700; text-decoration:none; }
+    @media (min-width:760px){ .area-grid{grid-template-columns:repeat(4,1fr)} .area-card img{height:120px} }
+    .h2-link { text-decoration:none; }
+    .h2-link:hover, .h2-link:focus { text-decoration:underline; }
+    #postcode-input{ font-size:1.05rem; padding:.55rem .8rem; border-radius:10px; border:1px solid var(--stroke,#dfe3e8); width:min(420px,90%); }
+  </style>
 
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website">
@@ -48,18 +61,16 @@ l<!DOCTYPE html>
   <div id="promo" class="promo-ribbon promo--edge">
     <div class="promo-inner container">
       <img class="promo-dog" src="/images/brand/dog-in-suit.webp" alt="" width="28" height="28" decoding="async" />
-      <span class="promo-copy">
-        <strong>50% OFF</strong> Unlimited Daily Walks — 45-minute solo walks · GPS tracked · Photo updates
-      </span>
+      <span class="promo-copy"><strong>50% OFF</strong> Unlimited Daily Walks — 45-minute solo walks · GPS tracked · Photo updates</span>
       <a href="/membership-unlimited.html" class="promo-cta">Learn More →</a>
       <button id="promo-close" class="promo-close" aria-label="Dismiss promo">✕</button>
     </div>
   </div>
-  
+
   <!-- Impact ribbon -->
   <div class="impact-ribbon" role="note">
     <div class="impact-inner">
-      <span class="impact-emoji">💛</span>
+      <span class="impact-emoji" aria-hidden="true">💛</span>
       <strong>Walks That Do More:</strong>
       We donate <strong>10% of profits</strong> to support local dog rescue and community impact.
       <a class="impact-cta" href="/community.html">See our Community →</a>
@@ -69,14 +80,15 @@ l<!DOCTYPE html>
   <!-- HEADER -->
   <header class="site-header">
     <div class="navbar container">
-      <a class="brand" href="/">
+      <a class="brand" href="/" aria-label="Go to home">
         <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="56" height="56">
         <strong>The Woof of Walk Street</strong>
       </a>
-      <input id="nav-toggle" type="checkbox" hidden>
-      <label for="nav-toggle" class="nav-toggle">☰</label>
 
-      <nav class="nav-links">
+      <input id="nav-toggle" type="checkbox" hidden>
+      <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</label>
+
+      <nav class="nav-links" aria-label="Primary">
         <section class="nav-group">
           <button class="nav-group-btn" aria-expanded="false" aria-controls="nav-services">Services</button>
           <ul id="nav-services" class="nav-group-list">
@@ -105,93 +117,123 @@ l<!DOCTYPE html>
       <div class="container">
         <h1>Dog Walking & Boutique Boarding — Service Areas</h1>
         <p class="subhead">
-          One-dog-only walks and one-guest weekend boarding across <strong>South Melbourne</strong>, <strong>Albert Park</strong>,
-          <strong>Port Melbourne</strong>, <strong>Middle Park</strong> and <strong>Southbank</strong>.
+          One-dog-only walks and one-guest weekend boarding across <strong>South Melbourne</strong>,
+          <strong> Albert Park</strong>, <strong>Port Melbourne</strong>, <strong>Middle Park</strong> and
+          <strong> Southbank</strong>.
         </p>
       </div>
     </section>
 
+    <!-- LOCAL HIGHLIGHTS (icon strip) -->
+    <section class="area-icons">
+      <div class="container">
+        <div class="area-grid">
+          <figure class="area-card">
+            <img src="/images/service-areas/south-melbourne-market.webp"
+                 alt="South Melbourne Market night scene with diners" loading="lazy" width="600" height="400">
+            <a href="/dog-walking-south-melbourne">South Melbourne Market</a>
+          </figure>
+          <figure class="area-card">
+            <img src="/images/service-areas/albert-park-lake.webp"
+                 alt="Albert Park Lake loop with palms and water" loading="lazy" width="600" height="400">
+            <a href="/dog-walker-albert-park.html">Albert Park Lake</a>
+          </figure>
+          <figure class="area-card">
+            <img src="/images/service-areas/middle-park-beach-dog.webp"
+                 alt="Dog at Middle Park Beach in shallow water" loading="lazy" width="600" height="400">
+            <a href="/dog-walker-middle-park.html">Middle Park Beach</a>
+          </figure>
+          <figure class="area-card">
+            <img src="/images/service-areas/southbank-river.webp"
+                 alt="Southbank skyline along the Yarra River" loading="lazy" width="600" height="400">
+            <a href="/dog-walker-southbank.html">Southbank River Walk</a>
+          </figure>
+        </div>
+      </div>
+    </section>
+
     <!-- SOUTH MELBOURNE -->
-<section>
-  <div class="container">
-    <h2 id="south-melbourne">
-      <a class="h2-link" href="/dog-walking-south-melbourne">Dog Walking & Boarding in South Melbourne</a>
-    </h2>
-    <p>
-      Our home base. Calm, <strong>one-dog-only walks</strong> around St Vincent Gardens, the Market laneways and nearby
-      streets. Every outing includes <strong>GPS tracking</strong> and <strong>photo updates</strong>. Weekend boarding is
-      <strong>one guest only</strong> in a quiet, home-style setting.
-    </p>
-    <p class="cta-buttons">
-      <a class="btn button-primary" href="/dog-walking-south-melbourne">See South Melbourne Walking</a>
-      <a class="btn" href="/boarding-services.html">Weekend Boarding</a>
-    </p>
-  </div>
-</section>
+    <section>
+      <div class="container">
+        <h2 id="south-melbourne">
+          <a class="h2-link" href="/dog-walking-south-melbourne">Dog Walking & Boarding in South Melbourne</a>
+        </h2>
+        <p>
+          Our home base. Calm, <strong>one-dog-only walks</strong> around St Vincent Gardens, the Market laneways and nearby
+          streets. Every outing includes <strong>GPS tracking</strong> and <strong>photo updates</strong>. Weekend boarding is
+          <strong> one guest only</strong> in a quiet, home-style setting.
+        </p>
+        <p class="cta-buttons">
+          <a class="btn button-primary" href="/dog-walking-south-melbourne">See South Melbourne Walking</a>
+          <a class="btn" href="/boarding-services.html">Weekend Boarding</a>
+        </p>
+      </div>
+    </section>
 
-<!-- ALBERT PARK -->
-<section>
-  <div class="container">
-    <h2 id="albert-park">
-      <a class="h2-link" href="#albert-park">Dog Walking in Albert Park</a>
-    </h2>
-    <p>
-      Tailored routes around <strong>Albert Park Lake</strong> with clear sight-lines and space to decompress — great for
-      sensitive or reactive pups. Solo pace, enrichment-led, and always followed by GPS + photo proof.
-    </p>
-  </div>
-</section>
+    <!-- ALBERT PARK -->
+    <section>
+      <div class="container">
+        <h2 id="albert-park">
+          <a class="h2-link" href="/dog-walker-albert-park.html">Dog Walking in Albert Park</a>
+        </h2>
+        <p>
+          Tailored routes around <strong>Albert Park Lake</strong> with clear sight-lines and space to decompress — great for
+          sensitive or reactive pups. Solo pace, enrichment-led, and always followed by GPS + photo proof.
+        </p>
+      </div>
+    </section>
 
-<!-- PORT MELBOURNE -->
-<section>
-  <div class="container">
-    <h2 id="port-melbourne">
-      <a class="h2-link" href="#port-melbourne">Dog Walking in Port Melbourne</a>
-    </h2>
-    <p>
-      Breezy foreshore strolls and wide residential streets make Port Melbourne perfect for relaxed, predictable walks.
-      One-to-one means fewer triggers and a calmer dog at home afterwards.
-    </p>
-  </div>
-</section>
+    <!-- PORT MELBOURNE -->
+    <section>
+      <div class="container">
+        <h2 id="port-melbourne">
+          <a class="h2-link" href="/dog-walker-port-melbourne.html">Dog Walking in Port Melbourne</a>
+        </h2>
+        <p>
+          Breezy foreshore strolls and wide residential streets make Port Melbourne perfect for relaxed, predictable walks.
+          One-to-one means fewer triggers and a calmer dog at home afterwards.
+        </p>
+      </div>
+    </section>
 
-<!-- MIDDLE PARK -->
-<section>
-  <div class="container">
-    <h2 id="middle-park">
-      <a class="h2-link" href="#middle-park">Dog Walking in Middle Park</a>
-    </h2>
-    <p>
-      Quiet streets and pocket parks suit seniors and chill-tempered pups. We adjust distance and tempo for joints,
-      weather and mood, prioritising sniffing and steady movement over speed.
-    </p>
-  </div>
-</section>
+    <!-- MIDDLE PARK -->
+    <section>
+      <div class="container">
+        <h2 id="middle-park">
+          <a class="h2-link" href="/dog-walker-middle-park.html">Dog Walking in Middle Park</a>
+        </h2>
+        <p>
+          Quiet streets and pocket parks suit seniors and chill-tempered pups. We adjust distance and tempo for joints,
+          weather and mood, prioritising sniffing and steady movement over speed.
+        </p>
+      </div>
+    </section>
 
-<!-- SOUTHBANK -->
-<section>
-  <div class="container">
-    <h2 id="southbank">
-      <a class="h2-link" href="#southbank">Dog Walking in Southbank</a>
-    </h2>
-    <p>
-      For apartment dogs, structure is everything. We use riverside paths and quieter backstreets to keep arousal low and
-      skills sharp — then send the <strong>GPS route</strong> and <strong>photos</strong> straight to your phone.
-    </p>
-  </div>
-</section>
-
+    <!-- SOUTHBANK -->
+    <section>
+      <div class="container">
+        <h2 id="southbank">
+          <a class="h2-link" href="/dog-walker-southbank.html">Dog Walking in Southbank</a>
+        </h2>
+        <p>
+          For apartment dogs, structure is everything. We use riverside paths and quieter backstreets to keep arousal low and
+          skills sharp — then send the <strong>GPS route</strong> and <strong>photos</strong> straight to your phone.
+        </p>
+      </div>
+    </section>
 
     <!-- Postcode Checker -->
     <section class="section alt">
       <div class="container center">
         <h2>Do We Cover Your Area?</h2>
         <p>Enter your postcode below to check if we walk in your area.</p>
-        <form id="postcode-form" onsubmit="return false;">
-          <input type="text" id="postcode-input" placeholder="Enter your postcode">
+        <form id="postcode-form" onsubmit="return false;" aria-describedby="pc-help">
+          <input type="tel" id="postcode-input" inputmode="numeric" pattern="[0-9]{4}" maxlength="4"
+                 placeholder="e.g. 3205" aria-label="Postcode">
           <button type="submit" class="btn button-primary">Check</button>
+          <div id="pc-help" class="sr-only">Enter a 4-digit Victorian postcode.</div>
         </form>
-        <p id="postcode-result" style="margin-top:10px;font-weight:bold"></p>
+        <p id="postcode-result" style="margin-top:10px;font-weight:bold" aria-live="polite"></p>
       </div>
     </section>
 
@@ -210,7 +252,7 @@ l<!DOCTYPE html>
   </main>
 
   <!-- FOOTER -->
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo">
     <div class="footer-banner">
       <picture>
         <source srcset="/images/brand/footer-banner-1600x600.webp" media="(min-width: 768px)">
@@ -220,11 +262,14 @@ l<!DOCTYPE html>
 
     <div class="container footer-grid">
       <section class="footer-brand">
-        <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="60" height="60">
-        <p><strong>The Woof of Walk Street</strong><br>South Melbourne, VIC · Mon–Fri 7am–7pm<br><a href="tel:+61456754050">+61 456 754 050</a></p>
+        <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="60" height="60" loading="lazy">
+        <p><strong>The Woof of Walk Street</strong><br>
+          <a class="footer-map" href="https://maps.app.goo.gl/YnEoSPwhGocUZyWL9?g_st=ipc" target="_blank" rel="noopener">South Melbourne, VIC</a> · Mon–Fri 7am–7pm<br>
+          <a href="tel:+61456754050">+61 456 754 050</a> · <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a>
+        </p>
       </section>
 
-      <nav class="footer-col">
+      <nav class="footer-col" aria-label="Primary">
         <h3>Services</h3>
         <ul>
           <li><a href="/services.html">All Services</a></li>
@@ -255,16 +300,19 @@ l<!DOCTYPE html>
 
   <!-- Postcode Checker JS -->
   <script>
-    const coveredPostcodes = ["3205","3206","3207","3006","3004"];
+    const coveredPostcodes = ["3205","3206","3207","3006","3004"]; // South Melbourne, Albert Park/Middle Park, Port Melbourne, Southbank, St Kilda Rd
     document.getElementById('postcode-form').addEventListener('submit', () => {
       const input = document.getElementById('postcode-input').value.trim();
       const result = document.getElementById('postcode-result');
-      if (coveredPostcodes.includes(input)) {
+      if (/^\d{4}$/.test(input) && coveredPostcodes.includes(input)) {
         result.textContent = "✅ Yes! We cover your area.";
         result.style.color = "green";
-      } else {
+      } else if (/^\d{4}$/.test(input)) {
         result.textContent = "❌ Sorry, we don’t currently cover that postcode.";
         result.style.color = "red";
+      } else {
+        result.textContent = "ℹ️ Please enter a 4-digit postcode (e.g. 3205).";
+        result.style.color = "#555";
       }
     });
   </script>

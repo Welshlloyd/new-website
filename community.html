@@ -36,7 +36,7 @@
 </head>
 <body>
 
-    <!-- Google Ads Global Site Tag -->
+  <!-- Google Ads Global Site Tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -78,7 +78,6 @@
       <a class="impact-cta" href="/community.html">See our impact →</a>
     </div>
   </div>
-  
 
 
   <!-- HEADER -->
@@ -107,16 +106,19 @@
         <a href="/about.html">About</a>
         <a href="/blog/index.html">Blog</a>
         <a href="/faq.html">FAQs</a>
-        <a href="/community.html" aria-current="page">Community</a>
         <a href="/search.html">Search</a>
         <a class="btn button-primary nav-cta"
            href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=header&utm_campaign=book_now"
-           target="_blank" rel="noopener">Book Now</a>
+           target="_blank" rel="noopener"
+           onclick="gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
+           Book Now
+        </a>
       </nav>
     </div>
   </header>
 
   <main>
+    
     <!-- HERO -->
     <section class="hero">
       <div class="container">

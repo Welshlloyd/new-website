@@ -658,6 +658,28 @@ body.with-mini-offset { padding-top: 0; }
 .impact-cta:hover {
   background:#203550;
 }
+/* --- Service Areas mobile polish --- */
+@media (max-width: 640px){
+  .hero { padding: 18px 0 8px; }
+  .hero .subhead { font-size: 1rem; line-height: 1.5; }
+
+  h1 { font-size: clamp(1.6rem, 5.5vw, 2.1rem); line-height: 1.2; margin: 10px 0 8px; }
+  h2 { font-size: clamp(1.25rem, 4.8vw, 1.6rem); line-height: 1.25; margin: 22px 0 10px; }
+
+  .cta-buttons .btn,
+  .cta-button { width: 100%; margin: 8px 0; }
+
+  .section.alt { padding: 20px 0; }
+  section { padding: 18px 0; }
+}
+/* Impact ribbon: mobile fit */
+.impact-ribbon { padding: 10px 12px; }
+.impact-inner { gap: 8px; flex-wrap: wrap; }
+.impact-cta { white-space: nowrap; }
+@media (max-width:640px){
+  .impact-inner { font-size: .95rem; }
+  .impact-emoji{ font-size: 1rem; }
+}
 
 /* =========================================================
    End – styles.css

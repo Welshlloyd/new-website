@@ -680,6 +680,12 @@ body.with-mini-offset { padding-top: 0; }
   .impact-inner { font-size: .95rem; }
   .impact-emoji{ font-size: 1rem; }
 }
+<style>
+  /* Keep ribbons behind the header so clicks reach the nav */
+  #promo { position: relative; z-index: 1; }
+  .impact-ribbon { position: relative; z-index: 2; }
+  .site-header { position: relative; z-index: 3; }
+</style>
 
 /* =========================================================
    End – styles.css

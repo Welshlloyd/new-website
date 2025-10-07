@@ -292,5 +292,32 @@
     ]
   }
   </script>
+  <script>
+  (function () {
+    const btn  = document.querySelector('.nav-group-btn[aria-controls="nav-services"]');
+    const list = document.getElementById('nav-services');
+    if (!btn || !list) return;
+
+    // Start closed on mobile; respect aria-expanded
+    const sync = () => { list.hidden = btn.getAttribute('aria-expanded') !== 'true'; };
+    sync();
+
+    btn.addEventListener('click', () => {
+      const open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      sync();
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!btn.contains(e.target) && !list.contains(e.target)) {
+        btn.setAttribute('aria-expanded', 'false'); sync();
+      }
+    }, { capture: true });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') { btn.setAttribute('aria-expanded', 'false'); sync(); }
+    });
+  })();
+</script>
 </body>
 </html>

@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dog Boarding South Melbourne | Weekend Woof Club</title>
-  <meta name="description" content="Boutique, home-style dog boarding in South Melbourne. One guest at a time, calm environment, daily walks, photo updates and plenty of cuddles. Reserve your pup’s weekend stay." />
+
+  <title>Dog Boarding South Melbourne | Boutique Weekend Dog Stays</title>
+  <meta name="description" content="Boutique, home-style dog boarding in South Melbourne. One dog per stay, calm environment, daily walks, photo updates and plenty of cuddles. Reserve your pup’s weekend stay." />
   <link rel="canonical" href="https://www.woofofwalkstreet.com/boarding-services.html" />
   <link rel="icon" href="/images/brand/favicon.ico" />
 
@@ -18,12 +19,13 @@
   <meta property="og:description" content="Boutique, home-style weekend boarding in South Melbourne. One guest only, with walks and daily photo updates.">
   <meta property="og:url" content="https://www.woofofwalkstreet.com/boarding-services.html">
   <meta property="og:image" content="https://www.woofofwalkstreet.com/images/gallery/dog-weekend-woof.jpg">
+  <meta property="og:locale" content="en_AU">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Dog Boarding South Melbourne">
   <meta name="twitter:description" content="One-guest-only, calm, boutique weekend boarding.">
   <meta name="twitter:image" content="https://www.woofofwalkstreet.com/images/gallery/dog-weekend-woof.jpg">
 
-  <!-- LCP image preload (hero) -->
+  <!-- Preload LCP hero image -->
   <link
     rel="preload"
     as="image"
@@ -58,7 +60,7 @@
 
   <!-- Page-only tweaks -->
   <style>
-    /* Add 5-star decoration before quotes */
+    /* 5-star decoration before quotes */
     .quotes .quote::before {
       content:"★★★★★";
       display:block;
@@ -70,8 +72,7 @@
 </head>
 
 <body>
-
-  <!-- Google Ads Global Site Tag -->
+  <!-- Google Ads Global Site Tag (optional if already site-wide) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -80,18 +81,7 @@
     gtag('config', 'AW-17527927259');
   </script>
 
-  <!-- ✅ Preload LCP hero image (with srcset + sizes) -->
-  <link
-    rel="preload"
-    as="image"
-    href="/images/brand/hero-dog-skyline-1200.webp"
-    imagesrcset="/images/brand/hero-dog-skyline-800.webp 800w, /images/brand/hero-dog-skyline-1200.webp 1200w, /images/brand/hero-dog-skyline-1600.webp 1600w"
-    imagesizes="(max-width: 640px) 100vw, (max-width: 1200px) 90vw, 1200px"
-  >
-</head>
-
-<body>
-  <!-- Promo ribbon (edgier) -->
+  <!-- Promo ribbon -->
   <div id="promo" class="promo-ribbon promo--edge" role="region" aria-label="Promo: 50% off">
     <div class="promo-inner container">
       <img class="promo-dog" src="/images/brand/dog-in-suit.webp" alt="" width="28" height="28" decoding="async" />
@@ -102,7 +92,7 @@
       <button id="promo-close" class="promo-close" aria-label="Dismiss promo">✕</button>
     </div>
   </div>
-  
+
   <!-- Impact ribbon (charity) -->
   <div class="impact-ribbon" role="note" aria-label="Walks that do more: 10% donated">
     <div class="impact-inner">
@@ -113,7 +103,6 @@
       <a class="impact-cta" href="/community.html">See our impact →</a>
     </div>
   </div>
-
 
   <!-- HEADER -->
   <header class="site-header" role="banner">
@@ -133,7 +122,7 @@
           <ul id="nav-services" class="nav-group-list">
             <li><a href="/services.html">All Services</a></li>
             <li><a href="/dog-walking-south-melbourne">Dog Walking South Melbourne</a></li>
-            <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
+            <li><a href="/boarding-services.html" aria-current="page">Boarding — Weekend Woof Club</a></li>
             <li><a href="/memberships.html">Unlimited Membership</a></li>
             <li><a href="/contact.html">Contact</a></li>
           </ul>
@@ -181,7 +170,7 @@
 
         <div class="grid grid-2">
           <article class="card">
-            <h2>Why our Weekend Woof Club?</h2>
+            <h2>Why Our Weekend Woof Club?</h2>
             <ul class="list-check">
               <li>🐾 <strong>One guest only</strong> — zero kennels, zero stress</li>
               <li>🛋️ Home-style care with a calm daily routine</li>
@@ -199,7 +188,7 @@
           </article>
 
           <article class="card">
-            <h2>How it works</h2>
+            <h2>How Our Boarding Works</h2>
             <ol class="list-steps">
               <li>Send us your preferred dates</li>
               <li>Meet & greet (virtual or local catch-up)</li>
@@ -247,7 +236,7 @@
     <!-- Local reassurance -->
     <section class="section alt">
       <div class="container">
-        <h2>Safe, loving, reliable</h2>
+        <h2>Safe, Loving, Reliable</h2>
         <p>Your dog will stay in a comfortable home, not a kennel. We’re proudly local to <strong>South Melbourne</strong>, also serving <strong>Albert Park</strong>, <strong>Port Melbourne</strong>, <strong>Middle Park</strong> and <strong>Southbank</strong>. Walks, naps, cuddles, and updates — everything your pup needs to feel relaxed and cared for.</p>
         <p class="center" style="margin-top:14px">
           <a id="book-boarding-bottom"
@@ -377,34 +366,35 @@
       })();
     </script>
   </footer>
-  
+
+  <!-- Services dropdown accessibility + close-on-outside/Escape -->
   <script>
-  (function () {
-    const btn  = document.querySelector('.nav-group-btn[aria-controls="nav-services"]');
-    const list = document.getElementById('nav-services');
-    if (!btn || !list) return;
+    (function () {
+      const btn  = document.querySelector('.nav-group-btn[aria-controls="nav-services"]');
+      const list = document.getElementById('nav-services');
+      if (!btn || !list) return;
 
-    // Start closed on mobile; respect aria-expanded
-    const sync = () => { list.hidden = btn.getAttribute('aria-expanded') !== 'true'; };
-    sync();
-
-    btn.addEventListener('click', () => {
-      const open = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!open));
+      const sync = () => { list.hidden = btn.getAttribute('aria-expanded') !== 'true'; };
+      // Start collapsed on mobile
       sync();
-    });
 
-    document.addEventListener('click', (e) => {
-      if (!btn.contains(e.target) && !list.contains(e.target)) {
-        btn.setAttribute('aria-expanded', 'false'); sync();
-      }
-    }, { capture: true });
+      btn.addEventListener('click', () => {
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        sync();
+      });
 
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') { btn.setAttribute('aria-expanded', 'false'); sync(); }
-    });
-  })();
-</script>
+      document.addEventListener('click', (e) => {
+        if (!btn.contains(e.target) && !list.contains(e.target)) {
+          btn.setAttribute('aria-expanded', 'false'); sync();
+        }
+      }, { capture: true });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') { btn.setAttribute('aria-expanded', 'false'); sync(); }
+      });
+    })();
+  </script>
 
   <!-- Promo close (session) -->
   <script>

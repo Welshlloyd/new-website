@@ -131,6 +131,26 @@
 </head>
 <body>
 
+<!-- Google Ads Global Site Tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'AW-17527927259');
+  </script>
+
+  <!-- ✅ Preload LCP hero image (with srcset + sizes) -->
+  <link
+    rel="preload"
+    as="image"
+    href="/images/brand/hero-dog-skyline-1200.webp"
+    imagesrcset="/images/brand/hero-dog-skyline-800.webp 800w, /images/brand/hero-dog-skyline-1200.webp 1200w, /images/brand/hero-dog-skyline-1600.webp 1600w"
+    imagesizes="(max-width: 640px) 100vw, (max-width: 1200px) 90vw, 1200px"
+  >
+</head>
+
+<body>
   <!-- Promo ribbon (edgier) -->
   <div id="promo" class="promo-ribbon promo--edge" role="region" aria-label="Promo: 50% off">
     <div class="promo-inner container">
@@ -153,6 +173,8 @@
       <a class="impact-cta" href="/community.html">See our impact →</a>
     </div>
   </div>
+
+
   <!-- HEADER -->
   <header class="site-header" role="banner">
     <div class="navbar container" role="navigation" aria-label="Main">
@@ -161,29 +183,34 @@
         <strong>The Woof of Walk Street</strong>
       </a>
 
-      <!-- Mobile toggle (checkbox method; styled by CSS) -->
-      <input id="nav-toggle" type="checkbox" hidden aria-hidden="true">
+      <!-- mobile hamburger -->
+      <input id="nav-toggle" type="checkbox" hidden>
       <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</label>
 
       <nav class="nav-links" aria-label="Primary">
-        <a href="/services.html">Services</a>
-        <div class="nav-dropdown">
-          <button class="nav-dropbtn" aria-haspopup="true" aria-expanded="false">Walking & Boarding</button>
-          <div class="nav-dropmenu" role="menu">
-            <a role="menuitem" href="/dog-walking-south-melbourne">Dog Walking (South Melbourne)</a>
-            <a role="menuitem" href="/boarding-services.html">Boarding — Weekend Woof Club</a>
-            <a role="menuitem" href="/memberships.html">Unlimited Membership</a>
-          </div>
-        </div>
+        <section class="nav-group">
+          <button class="nav-group-btn" aria-expanded="false" aria-controls="nav-services">Services</button>
+          <ul id="nav-services" class="nav-group-list">
+            <li><a href="/services.html">All Services</a></li>
+            <li><a href="/dog-walking-south-melbourne">Dog Walking South Melbourne</a></li>
+            <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
+            <li><a href="/memberships.html">Unlimited Membership</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </section>
         <a href="/about.html">About</a>
-        <a href="/contact.html">Contact</a>
+        <a href="/blog/index.html">Blog</a>
+        <a href="/faq.html">FAQs</a>
+        <a href="/search.html">Search</a>
         <a class="btn button-primary nav-cta"
            href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=header&utm_campaign=book_now"
-           rel="noopener" target="_blank">Book Now</a>
+           target="_blank" rel="noopener"
+           onclick="gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
+           Book Now
+        </a>
       </nav>
     </div>
   </header>
-
 
 <main>
   <section class="hero">

@@ -43,7 +43,7 @@
   }
   </script>
 
-  <!-- Google Ads Global Site Tag -->
+<!-- Google Ads Global Site Tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -52,43 +52,79 @@
     gtag('config', 'AW-17527927259');
   </script>
 
-  <style>
-    /* light polish specifically for the blog landing */
-    .page-header{background:var(--bg-alt,#fafbfc);padding:28px 0;border-bottom:1px solid #eef1f4}
-    .blog-grid{display:grid;gap:18px}
-    @media(min-width:860px){ .blog-grid{grid-template-columns:repeat(2,1fr)} }
-    .blog-card{border:1px solid #eceff3;border-radius:12px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
-    .blog-card img{width:100%;height:auto;display:block}
-    .blog-card .body{padding:14px}
-    .blog-card h2{margin:.2rem 0 .4rem;font-size:1.2rem}
-    .blog-card p{color:#444;margin:.35rem 0 .25rem}
-    .blog-card .meta{color:#778; font-size:.9rem}
-    .blog-card .read-more{display:inline-block;margin-top:.35rem}
-    .blog-cta{background:#eef6ff;border-top:1px solid #dcecff;border-bottom:1px solid #dcecff;padding:28px 0;margin-top:12px}
-    .blog-cta .btn{margin:0 .4rem}
-  </style>
+  <!-- ✅ Preload LCP hero image (with srcset + sizes) -->
+  <link
+    rel="preload"
+    as="image"
+    href="/images/brand/hero-dog-skyline-1200.webp"
+    imagesrcset="/images/brand/hero-dog-skyline-800.webp 800w, /images/brand/hero-dog-skyline-1200.webp 1200w, /images/brand/hero-dog-skyline-1600.webp 1600w"
+    imagesizes="(max-width: 640px) 100vw, (max-width: 1200px) 90vw, 1200px"
+  >
 </head>
+
 <body>
-
-<!-- SITE HEADER -->
-<header class="site-header" role="banner">
-  <div class="navbar container" role="navigation" aria-label="Main">
-    <a class="brand" href="/" aria-label="Go to home">
-      <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="56" height="56">
-      <strong>The Woof of Walk Street</strong>
-    </a>
-    <nav class="nav-links" aria-label="Primary">
-      <a href="/services.html">Services</a>
-      <a href="/about.html">About</a>
-      <a href="/contact.html">Contact</a>
-      <a class="btn button-primary nav-cta"
-         href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=header&utm_campaign=book_now"
-         target="_blank" rel="noopener"
-         onclick="gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">Book Now</a>
-    </nav>
+  <!-- Promo ribbon (edgier) -->
+  <div id="promo" class="promo-ribbon promo--edge" role="region" aria-label="Promo: 50% off">
+    <div class="promo-inner container">
+      <img class="promo-dog" src="/images/brand/dog-in-suit.webp" alt="" width="28" height="28" decoding="async" />
+      <span class="promo-copy">
+        <strong>50% OFF</strong> Unlimited Daily Walks — 45-minute solo walks · GPS tracked · Photo updates
+      </span>
+      <a href="/membership-unlimited.html" class="promo-cta">Learn More →</a>
+      <button id="promo-close" class="promo-close" aria-label="Dismiss promo">✕</button>
+    </div>
   </div>
-</header>
+  
+  <!-- Impact ribbon (charity) -->
+  <div class="impact-ribbon" role="note" aria-label="Walks that do more: 10% donated">
+    <div class="impact-inner">
+      <span class="impact-emoji" aria-hidden="true">💛</span>
+      <strong>Walks That Do More:</strong>
+      When you choose us, you’re not just booking a dog walk — you’re helping rescue dogs too.
+      <strong>We donate 10% of profits</strong> to local shelters.
+      <a class="impact-cta" href="/community.html">See our impact →</a>
+    </div>
+  </div>
 
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="navbar container" role="navigation" aria-label="Main">
+      <a class="brand" href="/" aria-label="Go to home">
+        <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="56" height="56">
+        <strong>The Woof of Walk Street</strong>
+      </a>
+
+      <!-- mobile hamburger -->
+      <input id="nav-toggle" type="checkbox" hidden>
+      <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</label>
+
+      <nav class="nav-links" aria-label="Primary">
+        <section class="nav-group">
+          <button class="nav-group-btn" aria-expanded="false" aria-controls="nav-services">Services</button>
+          <ul id="nav-services" class="nav-group-list">
+            <li><a href="/services.html">All Services</a></li>
+            <li><a href="/dog-walking-south-melbourne">Dog Walking South Melbourne</a></li>
+            <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
+            <li><a href="/memberships.html">Unlimited Membership</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </section>
+        <a href="/about.html">About</a>
+        <a href="/blog/index.html">Blog</a>
+        <a href="/faq.html">FAQs</a>
+        <a href="/search.html">Search</a>
+        <a class="btn button-primary nav-cta"
+           href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=header&utm_campaign=book_now"
+           target="_blank" rel="noopener"
+           onclick="gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
+           Book Now
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
 <main>
   <!-- ✅ CLEAR PAGE HEADER -->
   <header class="page-header">

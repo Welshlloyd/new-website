@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Do We Cover Your Postcode? | The Woof of Walk Street (South Melbourne)</title>
+  <meta name="description" content="Enter your postcode to see if we walk in your area. Solo dog walking and boutique weekend boarding across South Melbourne, Albert Park, Port Melbourne, Middle Park and Southbank." />
+  <link rel="canonical" href="https://www.woofofwalkstreet.com/check-postcode.html" />
+  <link rel="icon" href="/images/brand/favicon.ico" />
+  <link rel="stylesheet" href="/css/mini.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Do We Cover Your Postcode? | The Woof of Walk Street">
+  <meta property="og:description" content="Check if your postcode is covered for solo dog walking and boutique boarding in South Melbourne.">
+  <meta property="og:url" content="https://www.woofofwalkstreet.com/check-postcode.html">
+  <meta property="og:image" content="https://www.woofofwalkstreet.com/images/brand/hero-dog-skyline-1200.webp">
+  <meta property="og:locale" content="en_AU">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Breadcrumbs JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
+      {"@type":"ListItem","position":2,"name":"Postcode Checker","item":"https://www.woofofwalkstreet.com/check-postcode.html"}
+    ]
+  }
+  </script>
+
+  <!-- FAQ JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Which postcodes do you cover?",
+        "acceptedAnswer":{"@type":"Answer","text":"We currently cover 3205 (South Melbourne), 3206 (Albert Park & Middle Park), 3207 (Port Melbourne), 3006 (Southbank) and 3004 (nearby sections)."}
+      },
+      {
+        "@type":"Question",
+        "name":"What if my postcode isn’t covered?",
+        "acceptedAnswer":{"@type":"Answer","text":"Tell us your postcode and we’ll let you know when routes expand. You can also meet us at Albert Park Lake for a walk if that suits."}
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .pc-wrap{max-width:960px;margin:0 auto;padding:0 16px}
+    .pc-hero{padding:36px 0 10px;text-align:center}
+    .pc-hero h1{margin:0 0 .4rem}
+    .pc-card{background:#fff;border:1px solid var(--stroke);border-radius:14px;box-shadow:var(--shadow);padding:18px}
+    .pc-form{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:10px}
+    .pc-form input{min-width:220px}
+    .pc-result{font-weight:800;margin-top:12px}
+    .pc-good{color:#18794e}
+    .pc-bad{color:#b00020}
+    .pc-links{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:14px}
+    .pc-small{opacity:.85;margin-top:10px}
+    .list-cols{columns:2;column-gap:22px}
+    @media (max-width:680px){.list-cols{columns:1}}
+  </style>
+</head>
+<body>
+
+  <!-- Promo ribbon (optional, match site) -->
+  <div class="promo-ribbon">
+    🎉 <strong>50% OFF</strong> Unlimited Daily Walks
+    <span> · 45-minute solo walks · GPS tracked · Photo updates</span>
+    <a href="/membership-unlimited.html" class="promo-cta">Learn More →</a>
+  </div>
+
+  <!-- HEADER (matches site) -->
+  <header class="site-header" role="banner">
+    <div class="navbar container" role="navigation" aria-label="Main">
+      <a class="brand" href="/" aria-label="Go to home">
+        <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="56" height="56">
+        <strong>The Woof of Walk Street</strong>
+      </a>
+      <input id="nav-toggle" type="checkbox" hidden>
+      <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</label>
+      <nav class="nav-links" aria-label="Primary">
+        <section class="nav-group">
+          <button class="nav-group-btn" aria-expanded="false" aria-controls="nav-services">Services</button>
+          <ul id="nav-services" class="nav-group-list">
+            <li><a href="/services.html">All Services</a></li>
+            <li><a href="/dog-walking-south-melbourne">Dog Walking South Melbourne</a></li>
+            <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
+            <li><a href="/memberships.html">Unlimited Membership</a></li>
+            <li><a href="/service-areas.html">Service Areas</a></li>
+            <li><a href="/community.html">Community</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </section>
+        <a href="/about.html">About</a>
+        <a href="/blog/index.html">Blog</a>
+        <a href="/faq.html">FAQs</a>
+        <a href="/search.html">Search</a>
+        <a class="btn button-primary nav-cta" href="https://www.timetopet.com/portal/woofofwalkstreet" target="_blank" rel="noopener">Book Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="pc-hero">
+      <div class="pc-wrap">
+        <h1>Do We Cover Your Postcode?</h1>
+        <p class="subhead">Enter your postcode to check coverage for solo dog walking and boutique weekend boarding.</p>
+      </div>
+    </section>
+
+    <!-- CHECKER -->
+    <section>
+      <div class="pc-wrap">
+        <div class="pc-card">
+          <form id="postcode-form" class="pc-form" onsubmit="return false;" aria-label="Postcode coverage checker">
+            <label class="sr-only" for="postcode-input">Postcode</label>
+            <input id="postcode-input" class="input" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="e.g. 3205" aria-describedby="pc-help">
+            <button type="submit" class="btn button-primary">Check Coverage</button>
+          </form>
+          <p id="pc-help" class="pc-small">We currently focus on South Melbourne and surrounds. If you’re nearby, we may still be able to help.</p>
+          <p id="postcode-result" class="pc-result" role="status" aria-live="polite"></p>
+
+          <div class="pc-links">
+            <a class="btn" href="/service-areas.html">View Service Areas</a>
+            <a class="btn" href="/dog-walking-south-melbourne">Explore Dog Walking</a>
+            <a class="btn" href="/boarding-services.html">Explore Boarding</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUPPORTED POSTCODES (SEO helper) -->
+    <section>
+      <div class="pc-wrap">
+        <h2>Postcodes We Cover</h2>
+        <p>These postcodes are currently within our day-to-day walking routes:</p>
+        <ul class="list-cols">
+          <li><strong>3205</strong> — South Melbourne</li>
+          <li><strong>3206</strong> — Albert Park & Middle Park</li>
+          <li><strong>3207</strong> — Port Melbourne</li>
+          <li><strong>3006</strong> — Southbank</li>
+          <li><strong>3004</strong> — Nearby sections (by request)</li>
+        </ul>
+        <p class="pc-small">Borderline? Pop your postcode in the checker above — we’ll let you know if we can help or arrange a nearby meetup (e.g. Albert Park Lake).</p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section alt">
+      <div class="pc-wrap center">
+        <h2>Ready to Book?</h2>
+        <p>Choose a solo walk or reserve a one-guest weekend stay. New clients can create an account in minutes.</p>
+        <div class="cta-buttons" style="justify-content:center">
+          <a class="btn button-primary" href="https://www.timetopet.com/portal/woofofwalkstreet" target="_blank" rel="noopener">Book Now</a>
+          <a class="btn" href="/memberships.html">See Memberships</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (matches site) -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-banner">
+      <picture>
+        <source srcset="/images/brand/footer-banner-1600x600.webp" media="(min-width: 768px)">
+        <img src="/images/brand/footer-banner-800x300.webp" alt="Happy dogs in Melbourne" loading="lazy" width="800" height="300">
+      </picture>
+    </div>
+
+    <div class="container footer-grid">
+      <section class="footer-brand">
+        <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="60" height="60" loading="lazy">
+        <p><strong>The Woof of Walk Street</strong><br>
+          <a class="footer-map" href="https://maps.app.goo.gl/YnEoSPwhGocUZyWL9?g_st=ipc" target="_blank" rel="noopener">South Melbourne, VIC</a> · Mon–Fri 7am–7pm<br>
+          <a href="tel:+61456754050">+61 456 754 050</a> · <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a>
+        </p>
+        <p><a class="btn button-primary" target="_blank" rel="noopener" href="https://www.timetopet.com/portal/woofofwalkstreet">Book Now</a></p>
+      </section>
+
+      <nav class="footer-col" aria-label="Primary">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="/services.html">All Services</a></li>
+          <li><a href="/dog-walking-south-melbourne">Dog Walking South Melbourne</a></li>
+          <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
+          <li><a href="/memberships.html">Unlimited Membership</a></li>
+          <li><a href="/service-areas.html">Service Areas</a></li>
+          <li><a href="/community.html">Community</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <section class="footer-col collapsible">
+        <button class="collapse-btn" aria-expanded="false" aria-controls="support-list">Support</button>
+        <ul id="support-list">
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/testimonials.html">Testimonials</a></li>
+          <li><a href="/gallery.html">Photos & Videos</a></li>
+          <li><a href="/blog/index.html">Blog</a></li>
+          <li><a href="/faq.html">FAQs</a></li>
+          <li><a href="/community.html">Community</a></li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="container footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </footer>
+
+  <!-- Postcode Checker JS -->
+  <script>
+    (function(){
+      const covered = ["3205","3206","3207","3006","3004"];
+      const form = document.getElementById('postcode-form');
+      const input = document.getElementById('postcode-input');
+      const result = document.getElementById('postcode-result');
+
+      // Prefill from query param ?pc=#### or ?postcode=####
+      const params = new URLSearchParams(location.search);
+      const qp = params.get('pc') || params.get('postcode');
+      if (qp) { input.value = qp.replace(/\D/g,'').slice(0,4); }
+
+      function check() {
+        const pc = (input.value || '').replace(/\D/g,'').slice(0,4);
+        input.value = pc;
+        if (!pc) { result.textContent = ''; return; }
+        const ok = covered.includes(pc);
+        result.className = 'pc-result ' + (ok ? 'pc-good' : 'pc-bad');
+        result.textContent = ok
+          ? '✅ Yes! We cover ' + pc + '.'
+          : '❌ Sorry, we don’t currently cover ' + pc + '. Try a nearby meetup (Albert Park Lake) or contact us.';
+      }
+
+      form.addEventListener('submit', check);
+      // Auto-check if prefilled
+      if (input.value) check();
+    })();
+  </script>
+</body>
+</html>

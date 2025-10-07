@@ -1,69 +1,79 @@
 <!DOCTYPE html>
 <html lang="en-AU">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dog Walker Albert Park | Solo 45-Minute Walks</title>
-  <meta name="description" content="One-dog-only walking in Albert Park with GPS tracking and photo updates. Calm 45-minute solo walks near Albert Park Lake and St Vincent Gardens." />
+  <title>Dog Walker Albert Park | Solo Dog Walking Near Albert Park Lake</title>
+  <meta name="description" content="Solo, one-dog-at-a-time walks around Albert Park & the Lake. GPS tracking, photo updates, and calm enrichment. Book your dog’s walk today." />
   <link rel="canonical" href="https://www.woofofwalkstreet.com/dog-walker-albert-park.html" />
   <link rel="icon" href="/images/brand/favicon.ico" />
-  <link rel="stylesheet" href="/css/mini.css" />
-  <link rel="stylesheet" href="/css/styles.css" />
 
-  <!-- JSON-LD: Service (Albert Park) -->
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/mini.css">
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dog Walker Albert Park | Solo Dog Walking Near Albert Park Lake">
+  <meta property="og:description" content="One-at-a-time walks with GPS routes & photo updates in Albert Park.">
+  <meta property="og:url" content="https://www.woofofwalkstreet.com/dog-walker-albert-park.html">
+  <meta property="og:image" content="https://www.woofofwalkstreet.com/images/service-areas/albert-park-lake.webp">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Breadcrumbs JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
+      {"@type":"ListItem","position":2,"name":"Albert Park Dog Walker","item":"https://www.woofofwalkstreet.com/dog-walker-albert-park.html"}
+    ]
+  }
+  </script>
+
+  <!-- Service JSON-LD -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"Service",
+    "name":"Solo Dog Walking — Albert Park",
+    "provider":{"@type":"LocalBusiness","name":"The Woof of Walk Street"},
+    "areaServed":["Albert Park","South Melbourne","Port Melbourne","Middle Park","Southbank"],
     "serviceType":"Dog Walking",
-    "areaServed":"Albert Park, VIC",
-    "provider":{
-      "@type":"LocalBusiness",
-      "name":"The Woof of Walk Street",
-      "url":"https://www.woofofwalkstreet.com",
-      "address":{"@type":"PostalAddress","addressLocality":"South Melbourne","addressRegion":"VIC","addressCountry":"AU"},
-      "telephone":"+61 456 754 050"
-    },
-    "description":"One-dog-only, 45-minute solo walks in Albert Park with GPS tracking and photo updates."
+    "url":"https://www.woofofwalkstreet.com/dog-walker-albert-park.html",
+    "description":"One-dog-only walks with GPS route & photo updates near Albert Park Lake."
   }
   </script>
 
-  <!-- Breadcrumbs -->
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
-    {"@type":"ListItem","position":2,"name":"Dog Walker Albert Park","item":"https://www.woofofwalkstreet.com/dog-walker-albert-park.html"}
-  ]}
-  </script>
+  <!-- Preload hero -->
+  <link rel="preload" as="image" href="/images/service-areas/albert-park-lake.webp" />
 </head>
 <body>
+  <!-- gtag base -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-17527927259');</script>
 
-  <!-- Promo ribbon (edgier) -->
-  <div id="promo" class="promo-ribbon promo--edge" role="region" aria-label="Promo: 50% off">
+  <!-- Promo ribbon -->
+  <div id="promo" class="promo-ribbon promo--edge" role="region" aria-label="Promo">
     <div class="promo-inner container">
       <img class="promo-dog" src="/images/brand/dog-in-suit.webp" alt="" width="28" height="28" decoding="async" />
-      <span class="promo-copy">
-        <strong>50% OFF</strong> Unlimited Daily Walks — 45-minute solo walks · GPS tracked · Photo updates
-      </span>
+      <span class="promo-copy"><strong>50% OFF</strong> Unlimited Daily Walks — Solo · GPS · Photos</span>
       <a href="/membership-unlimited.html" class="promo-cta">Learn More →</a>
       <button id="promo-close" class="promo-close" aria-label="Dismiss promo">✕</button>
     </div>
   </div>
-  
-  <!-- Impact ribbon (charity) -->
-  <div class="impact-ribbon" role="note" aria-label="Walks that do more: 10% donated">
+
+  <!-- Impact ribbon -->
+  <div class="impact-ribbon" role="note" aria-label="Walks that do more">
     <div class="impact-inner">
       <span class="impact-emoji" aria-hidden="true">💛</span>
-      <strong>Walks That Do More:</strong>
-      When you choose us, you’re not just booking a dog walk — you’re helping rescue dogs too.
-      <strong>We donate 10% of profits</strong> to local shelters.
+      <strong>Walks That Do More:</strong> We donate <strong>10% of profits</strong> to local rescue. 
       <a class="impact-cta" href="/community.html">See our impact →</a>
     </div>
   </div>
 
-  </div>
-
-  <!-- HEADER -->
+  <!-- Header -->
   <header class="site-header" role="banner">
     <div class="navbar container" role="navigation" aria-label="Main">
       <a class="brand" href="/" aria-label="Go to home">
@@ -71,7 +81,6 @@
         <strong>The Woof of Walk Street</strong>
       </a>
 
-      <!-- mobile hamburger -->
       <input id="nav-toggle" type="checkbox" hidden>
       <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</label>
 
@@ -83,6 +92,7 @@
             <li><a href="/dog-walking-south-melbourne">Dog Walking South Melbourne</a></li>
             <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
             <li><a href="/memberships.html">Unlimited Membership</a></li>
+            <li><a href="/service-areas.html">Service Areas</a></li>
             <li><a href="/contact.html">Contact</a></li>
           </ul>
         </section>
@@ -90,88 +100,142 @@
         <a href="/blog/index.html">Blog</a>
         <a href="/faq.html">FAQs</a>
         <a href="/search.html">Search</a>
-        <a class="btn button-primary nav-cta"
-           href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=header&utm_campaign=book_now"
-           target="_blank" rel="noopener"
-           onclick="gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
-           Book Now
-        </a>
+        <a class="btn button-primary nav-cta" target="_blank" rel="noopener"
+           href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=header&utm_campaign=book_now">Book Now</a>
       </nav>
     </div>
   </header>
 
   <main>
+    <!-- Hero -->
     <section class="hero">
       <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="/">Home</a> › Albert Park Dog Walker</nav>
         <h1>Dog Walker in Albert Park</h1>
-        <p class="subhead">One-dog-only, 45-minute solo walks with <strong>GPS tracking</strong> and <strong>photo updates</strong>.</p>
-        <div class="cta-buttons" style="justify-content:center;flex-wrap:wrap">
-          <a class="cta-button" href="/dog-walking-south-melbourne">See Dog Walking</a>
-          <a class="cta-button secondary" href="/memberships.html">Memberships</a>
+        <p class="subhead">Solo walks by Albert Park Lake · GPS tracking · Photo updates</p>
+        <img src="/images/service-areas/albert-park-lake.webp" alt="Albert Park Lake palms and pathway"
+             width="1200" height="800" style="max-width:920px;border-radius:12px;display:block;margin:0 auto"
+             loading="eager" decoding="async" fetchpriority="high">
+        <div class="cta-buttons" style="justify-content:center;flex-wrap:wrap;margin-top:14px">
+          <a class="cta-button" href="/memberships.html#unlimited">See Unlimited Membership</a>
+          <a class="cta-button secondary" target="_blank" rel="noopener"
+             href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=hero&utm_campaign=book_walk">Book a Walk</a>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <!-- Body -->
+    <section>
+      <div class="container grid grid-2">
+        <article class="card">
+          <h2>Why Albert Park works for calmer walks</h2>
+          <p>Broad paths, open sight-lines and varied textures make Albert Park Lake ideal for one-on-one, decompression-focused walks. Your dog sets the tempo — we provide space, structure and enrichment.</p>
+          <ul class="list-check">
+            <li>Solo, 45-minute sessions</li>
+            <li>GPS route + photo proof after every walk</li>
+            <li>No packs, no car shuttles</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h2>Perfect for</h2>
+          <ul class="list-dash">
+            <li>Shy or reactive pups who need space</li>
+            <li>Owners who want transparent updates</li>
+            <li>Weekday routines or <a href="/memberships.html#unlimited">Unlimited</a> plans</li>
+          </ul>
+          <p class="stack-sm">
+            <a class="btn button-primary" target="_blank" rel="noopener"
+               href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=body&utm_campaign=book_walk">Book a Walk</a>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
       <div class="container">
-        <h2>Why Albert Park Dogs Love Us</h2>
-        <p>We walk locally and calmly—no pack walks, no car shuttles. After each solo walk you’ll receive the GPS route and a photo update. It’s ideal for anxious or reactive dogs who need predictable, one-on-one attention.</p>
-        <ul class="list-check">
-          <li>Solo walks (never group walks)</li>
-          <li>Transparent GPS + photo proof</li>
-          <li>Insured, local, weekday 7am–7pm</li>
-        </ul>
-
-        <h2>Popular Local Routes</h2>
-        <p>Albert Park Lake circuits, St Vincent Gardens loops, and quiet side streets to keep things calm and enriching. Routes are tailored to your dog’s pace and energy.</p>
-
         <h2>FAQs</h2>
-        <details><summary>Do you collect by car?</summary><p>No—walks are local and on-foot for a calmer experience.</p></details>
-        <details><summary>How do I book?</summary><p>Use our portal for calendar bookings or choose a monthly membership for priority slots.</p></details>
-
-        <div class="cta-buttons" style="margin-top:10px">
-          <a class="btn button-primary" href="/dog-walking-south-melbourne">Explore Walks</a>
-          <a class="btn" href="/membership-unlimited.html">Unlimited Weekday Walks</a>
-        </div>
+        <dl>
+          <dt>Do you walk in the park itself?</dt>
+          <dd>Yes — we use the Lake loop and nearby streets, tailoring the route to your dog’s comfort.</dd>
+          <dt>How will I know how it went?</dt>
+          <dd>You’ll get GPS tracking and photo updates after every session.</dd>
+        </dl>
       </div>
     </section>
+
+    <!-- FAQ JSON-LD -->
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"Do you walk in the park itself?","acceptedAnswer":{"@type":"Answer","text":"Yes — we use the Lake loop and nearby streets, tailoring the route to your dog’s comfort."}},
+      {"@type":"Question","name":"How will I know how it went?","acceptedAnswer":{"@type":"Answer","text":"You’ll get GPS tracking and photo updates after every session."}}
+    ]}
+    </script>
   </main>
 
-  <!-- FOOTER -->
+  <!-- Footer -->
   <footer class="site-footer" role="contentinfo">
     <div class="footer-banner">
-      <img src="/images/brand/footer-banner-800x300.webp" alt="Happy dogs in Melbourne" loading="lazy" width="800" height="300">
+      <picture>
+        <source srcset="/images/brand/footer-banner-1600x600.webp" media="(min-width:768px)">
+        <img src="/images/brand/footer-banner-800x300.webp" alt="Happy dogs in Melbourne" width="800" height="300" loading="lazy">
+      </picture>
     </div>
+
+    <div class="container footer-grid">
+      <section class="footer-brand">
+        <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="60" height="60" loading="lazy">
+        <p><strong>The Woof of Walk Street</strong><br><a class="footer-map" href="https://maps.app.goo.gl/YnEoSPwhGocUZyWL9?g_st=ipc" target="_blank" rel="noopener">South Melbourne, VIC</a> · Mon–Fri 7am–7pm<br>
+          <a href="tel:+61456754050">+61 456 754 050</a> · <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a></p>
+        <p><a class="btn button-primary" target="_blank" rel="noopener" href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=footer&utm_campaign=book_now_footer">Book Now</a></p>
+      </section>
+
+      <nav class="footer-col" aria-label="Primary">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="/services.html">All Services</a></li>
+          <li><a href="/dog-walking-south-melbourne">Dog Walking South Melbourne</a></li>
+          <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
+          <li><a href="/memberships.html">Unlimited Membership</a></li>
+          <li><a href="/service-areas.html">Service Areas</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <section class="footer-col collapsible">
+        <button class="collapse-btn" aria-expanded="false" aria-controls="support-list">Support</button>
+        <ul id="support-list">
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/community.html">Community</a></li>
+          <li><a href="/testimonials.html">Testimonials</a></li>
+          <li><a href="/gallery.html">Photos & Videos</a></li>
+          <li><a href="/blog/index.html">Blog</a></li>
+          <li><a href="/faq.html">FAQs</a></li>
+        </ul>
+      </section>
+    </div>
+
     <div class="container footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
   </footer>
-  
+
+  <!-- Services dropdown JS -->
   <script>
   (function () {
-    const btn  = document.querySelector('.nav-group-btn[aria-controls="nav-services"]');
-    const list = document.getElementById('nav-services');
-    if (!btn || !list) return;
-
-    // Start closed on mobile; respect aria-expanded
-    const sync = () => { list.hidden = btn.getAttribute('aria-expanded') !== 'true'; };
+    const btn=document.querySelector('.nav-group-btn[aria-controls="nav-services"]');
+    const list=document.getElementById('nav-services'); if(!btn||!list) return;
+    const sync=()=>{list.hidden=btn.getAttribute('aria-expanded')!=='true';};
     sync();
-
-    btn.addEventListener('click', () => {
-      const open = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!open));
-      sync();
-    });
-
-    document.addEventListener('click', (e) => {
-      if (!btn.contains(e.target) && !list.contains(e.target)) {
-        btn.setAttribute('aria-expanded', 'false'); sync();
-      }
-    }, { capture: true });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') { btn.setAttribute('aria-expanded', 'false'); sync(); }
-    });
+    btn.addEventListener('click',()=>{const open=btn.getAttribute('aria-expanded')==='true';btn.setAttribute('aria-expanded',String(!open));sync();});
+    document.addEventListener('click',(e)=>{if(!btn.contains(e.target)&&!list.contains(e.target)){btn.setAttribute('aria-expanded','false');sync();}},{capture:true});
+    document.addEventListener('keydown',(e)=>{if(e.key==='Escape'){btn.setAttribute('aria-expanded','false');sync();}});
   })();
-</script>
+  </script>
+
+  <!-- Promo close -->
+  <script>
+    document.getElementById('promo-close')?.addEventListener('click',()=>{document.getElementById('promo').style.display='none';try{sessionStorage.setItem('promoDismissed','1');}catch(e){}});
+    try{if(sessionStorage.getItem('promoDismissed')==='1'){document.getElementById('promo').style.display='none';}}catch(e){}
+  </script>
 </body>
 </html>

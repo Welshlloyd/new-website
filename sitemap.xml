@@ -4,91 +4,157 @@
   <!-- Core pages -->
   <url>
     <loc>https://www.woofofwalkstreet.com/</loc>
-    <lastmod>2025-10-06</lastmod>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.woofofwalkstreet.com/services.html</loc>
-    <lastmod>2025-10-06</lastmod>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.woofofwalkstreet.com/dog-walking-south-melbourne</loc>
-    <lastmod>2025-10-06</lastmod>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.woofofwalkstreet.com/boarding-services.html</loc>
-    <lastmod>2025-10-06</lastmod>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.woofofwalkstreet.com/memberships.html</loc>
-    <lastmod>2025-10-06</lastmod>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <!-- Membership sub-pages -->
   <url>
     <loc>https://www.woofofwalkstreet.com/membership-starter.html</loc>
-    <lastmod>2025-10-06</lastmod>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.woofofwalkstreet.com/membership-growth.html</loc>
-    <lastmod>2025-10-06</lastmod>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.woofofwalkstreet.com/membership-unlimited.html</loc>
-    <lastmod>2025-10-06</lastmod>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Suburb landing pages (NEW) -->
+  <url>
+    <loc>https://www.woofofwalkstreet.com/dog-walker-albert-park.html</loc>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.woofofwalkstreet.com/dog-walker-middle-park.html</loc>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.woofofwalkstreet.com/dog-walker-southbank.html</loc>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.woofofwalkstreet.com/dog-walker-port-melbourne.html</loc>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <!-- Company pages -->
   <url>
     <loc>https://www.woofofwalkstreet.com/about.html</loc>
-    <lastmod>2025-10-06</lastmod>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.woofofwalkstreet.com/testimonials.html</loc>
-    <lastmod>2025-10-06</lastmod>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.woofofwalkstreet.com/gallery.html</loc>
-    <lastmod>2025-10-06</lastmod>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.woofofwalkstreet.com/contact.html</loc>
-    <lastmod>2025-10-06</lastmod>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
   </url>
   <url>
     <loc>https://www.woofofwalkstreet.com/faq.html</loc>
-    <lastmod>2025-10-06</lastmod>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
   </url>
 
   <!-- Blog -->
   <url>
     <loc>https://www.woofofwalkstreet.com/blog/index.html</loc>
-    <lastmod>2025-10-06</lastmod>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.woofofwalkstreet.com/blog/best-dog-walks-south-melbourne.html</loc>
-    <lastmod>2025-10-06</lastmod>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.woofofwalkstreet.com/blog/why-solo-walks.html</loc>
-    <lastmod>2025-10-06</lastmod>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.woofofwalkstreet.com/blog/rainy-day-enrichment-games.html</loc>
-    <lastmod>2025-10-06</lastmod>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
 
   <!-- Legal -->
   <url>
     <loc>https://www.woofofwalkstreet.com/privacy.html</loc>
-    <lastmod>2025-10-06</lastmod>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
   </url>
   <url>
     <loc>https://www.woofofwalkstreet.com/terms.html</loc>
-    <lastmod>2025-10-06</lastmod>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
   </url>
   <url>
     <loc>https://www.woofofwalkstreet.com/sitemap.html</loc>
-    <lastmod>2025-10-06</lastmod>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
   </url>
 
 </urlset>

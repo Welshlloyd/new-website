@@ -21,7 +21,7 @@
     gtag('config', 'AW-17527927259');
   </script>
 
-  <!-- JSON-LD: Service + Offer -->
+  <!-- JSON-LD: Service -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -41,8 +41,56 @@
       "priceCurrency":"AUD",
       "price":"750",
       "availability":"https://schema.org/InStock",
-      "url":"https://www.timetopet.com/portal/woofofwalkstreet/create-account"
+      "url":"https://www.timetopet.com/portal/woofofwalkstreet/create-account",
+      "priceValidUntil":"2026-12-31"
+    },
+    "url":"https://www.woofofwalkstreet.com/membership-growth.html"
+  }
+  </script>
+
+  <!-- JSON-LD: Product (mirrors the plan for richer SERP) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Product",
+    "name":"Growth Membership — 10 Solo Walks / Month",
+    "brand":{"@type":"Brand","name":"The Woof of Walk Street"},
+    "description":"Ten 45-minute solo dog walks per month in South Melbourne. GPS-tracked with photo updates after every walk.",
+    "url":"https://www.woofofwalkstreet.com/membership-growth.html",
+    "image":"https://www.woofofwalkstreet.com/images/memberships/membership-growth.webp",
+    "offers":{
+      "@type":"Offer",
+      "priceCurrency":"AUD",
+      "price":"750.00",
+      "availability":"https://schema.org/InStock",
+      "url":"https://www.timetopet.com/portal/woofofwalkstreet/create-account",
+      "priceValidUntil":"2026-12-31"
     }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage (matches on-page FAQ below) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Can I choose any weekdays each month?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes. You can pick any weekdays across the month within our 7:00am–7:00pm window, subject to availability."}
+      },
+      {
+        "@type":"Question",
+        "name":"Do unused walks roll over?",
+        "acceptedAnswer":{"@type":"Answer","text":"No. Walks don’t roll over — keeping a steady rhythm is best for most dogs."}
+      },
+      {
+        "@type":"Question",
+        "name":"Are the walks truly one-dog-only?",
+        "acceptedAnswer":{"@type":"Answer","text":"Always. We never group or pack walk unfamiliar dogs, and we don’t car-ferry for loops."}
+      }
+    ]
   }
   </script>
 
@@ -86,7 +134,7 @@
 </head>
 <body>
 
-    <!-- Promo ribbon (edgier) -->
+  <!-- Promo ribbon -->
   <div id="promo" class="promo-ribbon promo--edge" role="region" aria-label="Promo: 50% off">
     <div class="promo-inner container">
       <img class="promo-dog" src="/images/brand/dog-in-suit.webp" alt="" width="28" height="28" decoding="async" />
@@ -98,7 +146,7 @@
     </div>
   </div>
   
-  <!-- Impact ribbon (charity) -->
+  <!-- Impact ribbon -->
   <div class="impact-ribbon" role="note" aria-label="Walks that do more: 10% donated">
     <div class="impact-inner">
       <span class="impact-emoji" aria-hidden="true">💛</span>
@@ -109,7 +157,7 @@
     </div>
   </div>
 
-  <!-- HEADER (same as index) -->
+  <!-- HEADER -->
   <header class="site-header" role="banner">
     <div class="navbar container" role="navigation" aria-label="Main">
       <a class="brand" href="/" aria-label="Go to home">
@@ -117,7 +165,6 @@
         <strong>The Woof of Walk Street</strong>
       </a>
 
-      <!-- mobile hamburger -->
       <input id="nav-toggle" type="checkbox" hidden>
       <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</label>
 
@@ -156,14 +203,12 @@
       <p class="m-badge">South Melbourne · One-to-one walks</p>
 
       <div class="m-cta">
-        <!-- Growth = primary (active) -->
         <a class="cta-button"
            href="https://www.timetopet.com/portal/woofofwalkstreet/create-account"
            target="_blank" rel="noopener"
            onclick="gtag && gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
           Join Growth — A$750 / month
         </a>
-        <!-- Starter & Unlimited = secondary -->
         <a class="cta-button secondary" href="/membership-starter.html">Just starting? Try Starter</a>
         <a class="cta-button secondary" href="/membership-unlimited.html">Need daily walks? Unlimited</a>
       </div>
@@ -244,45 +289,39 @@
           <li>Dogs who love routine around familiar South Melbourne routes</li>
         </ul>
       </div>
+
+      <!-- On-page FAQ (matches FAQPage JSON-LD) -->
+      <div class="m-card" itemscope itemtype="https://schema.org/FAQPage">
+        <h2>Growth Membership — FAQs</h2>
+        <details>
+          <summary>Can I choose any weekdays each month?</summary>
+          <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+            <meta itemprop="name" content="Can I choose any weekdays each month?">
+            <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+              <p itemprop="text">Yes. You can pick any weekdays across the month within our 7:00am–7:00pm window, subject to availability.</p>
+            </div>
+          </div>
+        </details>
+        <details>
+          <summary>Do unused walks roll over?</summary>
+          <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+            <meta itemprop="name" content="Do unused walks roll over?">
+            <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+              <p itemprop="text">No. Walks don’t roll over — keeping a steady rhythm is best for most dogs.</p>
+            </div>
+          </div>
+        </details>
+        <details>
+          <summary>Are the walks truly one-dog-only?</summary>
+          <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+            <meta itemprop="name" content="Are the walks truly one-dog-only?">
+            <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+              <p itemprop="text">Always. We never group or pack walk unfamiliar dogs, and we don’t car-ferry for loops.</p>
+            </div>
+          </div>
+        </details>
+      </div>
     </div>
-
-    <!-- Testimonials -->
-    <section class="section alt" aria-labelledby="testimonials-heading">
-      <div class="container">
-        <h2 id="testimonials-heading">What Growth Members Say</h2>
-        <div class="quotes">
-          <blockquote class="quote">
-            <p>“Ten walks a month struck the right balance — our dog is calmer and fitter.”</p>
-            <footer>— Jess, South Melbourne</footer>
-          </blockquote>
-          <blockquote class="quote">
-            <p>“One-to-one walks + photo proof every time — exactly what we wanted.”</p>
-            <footer>— Tom, Albert Park</footer>
-          </blockquote>
-          <blockquote class="quote">
-            <p>“Professional, reliable, and always local. The GPS routes are great.”</p>
-            <footer>— Maya, Port Melbourne</footer>
-          </blockquote>
-        </div>
-        <p class="center" style="margin-top:1rem">
-          <a class="btn btn-ghost" href="https://maps.app.goo.gl/YnEoSPwhGocUZyWL9?g_st=ipc" target="_blank" rel="noopener">
-            ⭐ Read More Reviews on Google
-          </a>
-        </p>
-      </div>
-    </section>
-
-    <!-- Light gallery -->
-    <section>
-      <div class="container">
-        <h2>Happy Dogs</h2>
-        <p>Recent walks around South Melbourne and nearby parks.</p>
-        <div class="gallery-grid" style="display:grid;gap:12px;grid-template-columns:1fr 1fr">
-          <figure><img src="/images/gallery/dog-sunset-walk.jpg" alt="Sunset stroll by Port Melbourne" loading="lazy"></figure>
-          <figure><img src="/images/highlights/dog-cozy-nap.jpg" alt="Cozy nap during Weekend Woof Club boarding" loading="lazy"></figure>
-        </div>
-      </div>
-    </section>
   </main>
 
   <!-- Sticky mobile CTA -->
@@ -385,7 +424,7 @@
     </script>
   </footer>
 
-  <!-- Global TTP booking click tracker (sends Google Ads conversion) -->
+  <!-- Global TTP booking click tracker -->
   <script>
     (function () {
       document.addEventListener('click', function (e) {

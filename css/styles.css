@@ -687,6 +687,23 @@ body.with-mini-offset { padding-top: 0; }
   .site-header { position: relative; z-index: 3; }
 </style>
 
+.badge {
+  display:inline-block;
+  padding:.35rem .6rem;
+  border:1px solid var(--border, #ddd);
+  border-radius:999px;
+  font-size:.9rem;
+  line-height:1;
+  text-decoration:none;
+}
+.badge[aria-current="page"] {
+  background: var(--bg-muted, #f6f6f6);
+  font-weight:600;
+  pointer-events:none;
+  cursor:default;
+}
+.badge-row { display:flex; gap:.5rem; flex-wrap:wrap; margin-top:.75rem; }
+}
 /* =========================================================
    End – styles.css
    ========================================================= */

@@ -21,7 +21,7 @@
     gtag('config', 'AW-17527927259');
   </script>
 
-  <!-- JSON-LD: Service + Offer -->
+  <!-- JSON-LD: Service + Offer (with priceValidUntil) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -40,9 +40,62 @@
       "@type":"Offer",
       "priceCurrency":"AUD",
       "price":"1500",
+      "priceValidUntil":"2026-12-31",
       "availability":"https://schema.org/InStock",
       "url":"https://www.timetopet.com/portal/woofofwalkstreet/create-account"
     }
+  }
+  </script>
+
+  <!-- JSON-LD: Product (mirrors membership as a product for rich results) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Product",
+    "name":"Unlimited Pawfolio",
+    "description":"One 45-minute solo dog walk every weekday (Mon–Fri) in South Melbourne. GPS tracking + photo updates. Ethical, one-dog-only walks.",
+    "brand":{"@type":"Brand","name":"The Woof of Walk Street"},
+    "image":"https://www.woofofwalkstreet.com/images/memberships/membership-unlimited.webp",
+    "url":"https://www.woofofwalkstreet.com/membership-unlimited.html",
+    "offers":{
+      "@type":"Offer",
+      "priceCurrency":"AUD",
+      "price":"1500",
+      "priceValidUntil":"2026-12-31",
+      "availability":"https://schema.org/InStock",
+      "url":"https://www.timetopet.com/portal/woofofwalkstreet/create-account"
+    },
+    "aggregateRating":{"@type":"AggregateRating","ratingValue":"5","reviewCount":"12"}
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage (matches on-page FAQs) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Can I cancel anytime?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes — there are no lock-ins. You can cancel before your next billing cycle."}
+      },
+      {
+        "@type":"Question",
+        "name":"Do skipped days roll over?",
+        "acceptedAnswer":{"@type":"Answer","text":"No — Unlimited covers one walk per weekday. Keeping a steady rhythm is best for most dogs."}
+      },
+      {
+        "@type":"Question",
+        "name":"Are walks really one-dog only?",
+        "acceptedAnswer":{"@type":"Answer","text":"Always. Your dog receives our full attention — never group or pack walked, and never car-ferried."}
+      },
+      {
+        "@type":"Question",
+        "name":"Where do you walk?",
+        "acceptedAnswer":{"@type":"Answer","text":"Locally around South Melbourne — common routes include Albert Park Lake, St Vincent Gardens, and nearby parks."}
+      }
+    ]
   }
   </script>
 
@@ -230,7 +283,7 @@
         </ul>
       </div>
 
-      <!-- Pricing moved below for persuasion -->
+      <!-- Pricing -->
       <div class="m-card" id="pricing">
         <h2>Pricing</h2>
         <p><strong>First month 50% OFF — A$750.</strong></p>
@@ -270,7 +323,7 @@
         </div>
       </section>
 
-      <!-- Compact FAQ for SEO -->
+      <!-- Compact FAQ for SEO (kept inline) -->
       <div class="m-card" itemscope itemtype="https://schema.org/FAQPage">
         <h2>Unlimited Membership — FAQs</h2>
         <details>

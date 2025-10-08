@@ -23,7 +23,7 @@
   <meta name="twitter:description" content="Solo, GPS-tracked dog walks with photo updates.">
   <meta name="twitter:image" content="https://www.woofofwalkstreet.com/images/brand/hero-dog-skyline-1200.webp">
 
-  <!-- Breadcrumbs JSON-LD (keep) -->
+  <!-- Breadcrumbs JSON-LD -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -35,7 +35,7 @@
   }
   </script>
 
-  <!-- Consolidated Business + Services + FAQ JSON-LD -->
+  <!-- Business + Services + Offers + FAQ JSON-LD (with prices) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -87,6 +87,7 @@
               },
               "url": "https://www.woofofwalkstreet.com/memberships.html#unlimited",
               "priceCurrency": "AUD",
+              "price": "800.00",
               "availability": "https://schema.org/InStock",
               "priceValidUntil": "2025-10-31"
             }
@@ -105,7 +106,9 @@
         "offers": {
           "@type": "Offer",
           "availability": "https://schema.org/InStock",
-          "url": "https://www.woofofwalkstreet.com/dog-walking-south-melbourne"
+          "url": "https://www.woofofwalkstreet.com/dog-walking-south-melbourne",
+          "price": "80.00",
+          "priceCurrency": "AUD"
         }
       },
       {
@@ -153,7 +156,7 @@
 </head>
 <body>
 
-  <!-- Promo ribbon (edgier) -->
+  <!-- Promo ribbon -->
   <div id="promo" class="promo-ribbon promo--edge" role="region" aria-label="Promo: 50% off">
     <div class="promo-inner container">
       <img class="promo-dog" src="/images/brand/dog-in-suit.webp" alt="" width="28" height="28" decoding="async" />
@@ -165,7 +168,7 @@
     </div>
   </div>
   
-  <!-- Impact ribbon (charity) -->
+  <!-- Impact ribbon -->
   <div class="impact-ribbon" role="note" aria-label="Walks that do more: 10% donated">
     <div class="impact-inner">
       <span class="impact-emoji" aria-hidden="true">💛</span>
@@ -237,14 +240,14 @@
       </div>
     </section>
 
-    <!-- Intro copy -->
+    <!-- Intro -->
     <section>
       <div class="container">
         <p>At <strong>The Woof of Walk Street</strong>, we believe every dog deserves a safe, steady, and personal walk — never part of a pack. Based in <strong>South Melbourne</strong>, our one-on-one dog walking is built for calmer outings, better manners, and real-world enrichment. You’ll get GPS routes, photo proof, and notes after each session, so you always know where your pup went and how they did.</p>
       </div>
     </section>
 
-    <!-- Why Solo Walking (benefit explainer) -->
+    <!-- Why Solo Walking -->
     <section class="section alt">
       <div class="container">
         <h2>Why Choose Solo Dog Walking in South Melbourne?</h2>
@@ -271,7 +274,7 @@
     <!-- Core content -->
     <section>
       <div class="container grid grid-2">
-        <!-- Card 1: Membership Benefits -->
+        <!-- Card 1 -->
         <article class="card">
           <h2>What’s included with every membership</h2>
           <ul class="list-check">
@@ -291,7 +294,7 @@
           </p>
         </article>
 
-        <!-- Card 2: Who Should Join Unlimited -->
+        <!-- Card 2 -->
         <article class="card">
           <h2>Who Unlimited is perfect for</h2>
           <ul class="list-dash">
@@ -337,7 +340,7 @@
       </div>
     </section>
 
-    <!-- New FAQ block (content for users; schema already in head) -->
+    <!-- FAQ -->
     <section class="faq" id="faq">
       <div class="container">
         <h2>Dog Walking FAQs</h2>
@@ -379,8 +382,7 @@
         </div>
         <p>
           <a class="btn button-primary" target="_blank" rel="noopener"
-             href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=footer&utm_campaign=book_now_footer"
-             onclick="gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
+             href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=footer&utm_campaign=book_now_footer">
             Book Now
           </a>
         </p>
@@ -428,41 +430,6 @@
 
     <div class="container footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-
-    <!-- Tiny JS for footer accordions (mobile) -->
-    <script>
-      document.querySelectorAll('.collapsible .collapse-btn').forEach(btn=>{
-        btn.addEventListener('click', ()=>{
-          const list = document.getElementById(btn.getAttribute('aria-controls'));
-          const open = btn.getAttribute('aria-expanded') === 'true';
-          btn.setAttribute('aria-expanded', String(!open));
-          list.hidden = open;
-        });
-        const list = document.getElementById(btn.getAttribute('aria-controls'));
-        if (window.matchMedia('(max-width:640px)').matches) list.hidden = true;
-      });
-    </script>
-
-    <!-- Global TTP booking click tracker -->
-    <script>
-      (function () {
-        document.addEventListener('click', function (e) {
-          const a = e.target.closest('a');
-          if (!a) return;
-          const href = (a.getAttribute('href') || '').toLowerCase();
-          if (href.includes('timetopet.com/portal/woofofwalkstreet')) {
-            try {
-              gtag('event', 'ttp_booking_click', {
-                'send_to': 'AW-17527927259/ePjJCLT8p6cbENvj-6VB',
-                'value': 1.0,
-                'currency': 'AUD'
-              });
-            } catch (err) { /* silent */ }
-          }
-        }, { capture: true });
-      })();
-    </script>
   </footer>
 </body>
 </html>
-

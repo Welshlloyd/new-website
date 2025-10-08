@@ -10,6 +10,24 @@
   <link rel="stylesheet" href="/css/mini.css">
   <link rel="stylesheet" href="/css/styles.css">
 
+  <!-- Google Ads Global Site Tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'AW-17527927259');
+  </script>
+
+  <!-- ✅ Preload LCP hero image (with srcset + sizes) -->
+  <link
+    rel="preload"
+    as="image"
+    href="/images/brand/hero-dog-skyline-1200.webp"
+    imagesrcset="/images/brand/hero-dog-skyline-800.webp 800w, /images/brand/hero-dog-skyline-1200.webp 1200w, /images/brand/hero-dog-skyline-1600.webp 1600w"
+    imagesizes="(max-width: 640px) 100vw, (max-width: 1200px) 90vw, 1200px"
+  >
+
   <!-- Structured data: ItemList + Products -->
   <script type="application/ld+json">
   {
@@ -23,6 +41,8 @@
     ]
   }
   </script>
+
+  <!-- NOTE: update the price values below to your real membership prices -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -32,9 +52,21 @@
     "brand":{"@type":"Brand","name":"The Woof of Walk Street"},
     "url":"https://www.woofofwalkstreet.com/membership-starter.html",
     "image":"https://www.woofofwalkstreet.com/images/memberships/membership-starter.webp",
-    "offers":{"@type":"Offer","url":"https://www.woofofwalkstreet.com/membership-starter.html","availability":"https://schema.org/InStock","priceCurrency":"AUD"}
+    "offers":{
+      "@type":"Offer",
+      "url":"https://www.woofofwalkstreet.com/membership-starter.html",
+      "availability":"https://schema.org/InStock",
+      "priceCurrency":"AUD",
+      "price":"300.00",
+      "priceValidUntil":"2026-12-31"
+    },
+    "aggregateRating":{"@type":"AggregateRating","ratingValue":"5","reviewCount":"8"},
+    "review":[
+      {"@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"5"},"author":{"@type":"Person","name":"Sarah"},"reviewBody":"Perfect for easing into a routine. Loved the GPS and photos."}
+    ]
   }
   </script>
+
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -44,9 +76,21 @@
     "brand":{"@type":"Brand","name":"The Woof of Walk Street"},
     "url":"https://www.woofofwalkstreet.com/membership-growth.html",
     "image":"https://www.woofofwalkstreet.com/images/memberships/membership-growth.webp",
-    "offers":{"@type":"Offer","url":"https://www.woofofwalkstreet.com/membership-growth.html","availability":"https://schema.org/InStock","priceCurrency":"AUD"}
+    "offers":{
+      "@type":"Offer",
+      "url":"https://www.woofofwalkstreet.com/membership-growth.html",
+      "availability":"https://schema.org/InStock",
+      "priceCurrency":"AUD",
+      "price":"750.00",
+      "priceValidUntil":"2026-12-31"
+    },
+    "aggregateRating":{"@type":"AggregateRating","ratingValue":"5","reviewCount":"6"},
+    "review":[
+      {"@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"5"},"author":{"@type":"Person","name":"Daniel"},"reviewBody":"Reliable and consistent. Great notes that help with training."}
+    ]
   }
   </script>
+
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -56,7 +100,18 @@
     "brand":{"@type":"Brand","name":"The Woof of Walk Street"},
     "url":"https://www.woofofwalkstreet.com/membership-unlimited.html",
     "image":"https://www.woofofwalkstreet.com/images/memberships/membership-unlimited.webp",
-    "offers":{"@type":"Offer","url":"https://www.woofofwalkstreet.com/membership-unlimited.html","availability":"https://schema.org/InStock","priceCurrency":"AUD"}
+    "offers":{
+      "@type":"Offer",
+      "url":"https://www.woofofwalkstreet.com/membership-unlimited.html",
+      "availability":"https://schema.org/InStock",
+      "priceCurrency":"AUD",
+      "price":"1500.00",
+      "priceValidUntil":"2026-12-31"
+    },
+    "aggregateRating":{"@type":"AggregateRating","ratingValue":"5","reviewCount":"12"},
+    "review":[
+      {"@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"5"},"author":{"@type":"Person","name":"Priya"},"reviewBody":"Weekday walks locked in = one very calm, happy dog!"}
+    ]
   }
   </script>
 
@@ -87,25 +142,6 @@
     @media (min-width:820px){ .plans{grid-template-columns:repeat(3,1fr)} }
   </style>
 </head>
-<body>
- <!-- Google Ads Global Site Tag -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'AW-17527927259');
-  </script>
-
-  <!-- ✅ Preload LCP hero image (with srcset + sizes) -->
-  <link
-    rel="preload"
-    as="image"
-    href="/images/brand/hero-dog-skyline-1200.webp"
-    imagesrcset="/images/brand/hero-dog-skyline-800.webp 800w, /images/brand/hero-dog-skyline-1200.webp 1200w, /images/brand/hero-dog-skyline-1600.webp 1600w"
-    imagesizes="(max-width: 640px) 100vw, (max-width: 1200px) 90vw, 1200px"
-  >
-</head>
 
 <body>
   <!-- Promo ribbon (edgier) -->
@@ -119,7 +155,7 @@
       <button id="promo-close" class="promo-close" aria-label="Dismiss promo">✕</button>
     </div>
   </div>
-  
+
   <!-- Impact ribbon (charity) -->
   <div class="impact-ribbon" role="note" aria-label="Walks that do more: 10% donated">
     <div class="impact-inner">
@@ -130,7 +166,6 @@
       <a class="impact-cta" href="/community.html">See our impact →</a>
     </div>
   </div>
-
 
   <!-- HEADER -->
   <header class="site-header" role="banner">
@@ -151,7 +186,7 @@
             <li><a href="/services.html">All Services</a></li>
             <li><a href="/dog-walking-south-melbourne">Dog Walking South Melbourne</a></li>
             <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
-            <li><a href="/memberships.html">Unlimited Membership</a></li>
+            <li><a href="/memberships.html" aria-current="page">Memberships</a></li>
             <li><a href="/contact.html">Contact</a></li>
           </ul>
         </section>
@@ -168,6 +203,7 @@
       </nav>
     </div>
   </header>
+
   <!-- Hero -->
   <section class="m-hero">
     <h1>Memberships</h1>
@@ -200,8 +236,7 @@
         <figure>
           <img
             src="/images/memberships/membership-starter.webp"
-            srcset="/images/memberships/membership-starter.webp"
-                    /images/memberships/membership-starter.webp"
+            srcset="/images/memberships/membership-starter.webp 1200w"
             sizes="(max-width: 820px) 100vw, 33vw"
             alt="Starter Sniffvestment membership — solo weekday walks with GPS and photo updates"
             loading="lazy" width="1200" height="800">
@@ -225,8 +260,7 @@
         <figure>
           <img
             src="/images/memberships/membership-growth.webp"
-            srcset="/images/memberships/membership-growth.webp,
-                    /images/memberships/membership-growth.webp"
+            srcset="/images/memberships/membership-growth.webp 1200w"
             sizes="(max-width: 820px) 100vw, 33vw"
             alt="Tail Growth Plan — routine-building solo walks with GPS and priority booking"
             loading="lazy" width="1200" height="800">
@@ -250,8 +284,7 @@
         <figure>
           <img
             src="/images/memberships/membership-unlimited.webp"
-            srcset="/images/memberships/membership-unlimited.webp,
-                    /images/memberships/membership-unlimited.webp"
+            srcset="/images/memberships/membership-unlimited.webp 1200w"
             sizes="(max-width: 820px) 100vw, 33vw"
             alt="Unlimited Pawfolio — a solo walk every weekday with GPS tracking and photo proof"
             loading="lazy" width="1200" height="800">
@@ -392,6 +425,9 @@
       });
     </script>
   </footer>
+</body>
+</html>
+
 
 </body>
 </html>

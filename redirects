@@ -25,6 +25,13 @@ https://woofofwalkstreet.com/*    https://www.woofofwalkstreet.com/:splat       
 /:slug                             /:slug/                                        301
 /:slug/:child                      /:slug/:child/                                 301
 
+# === Membership Pages ===
+/membership-credit-booking.html        /membership-credit-booking-south-melbourne.html    301
+/membership-sniffvestment.html         /membership-starter.html                          301
+/membership-starter-sniffvestment.html /membership-starter.html                          301
+/membership-growth-plan.html           /membership-growth.html                           301
+/membership-unlimited-plan.html        /membership-unlimited.html                        301
+
 # === Clean removals (410 Gone) ===
 # Old/unused or security-sensitive endpoints — tell Google they're gone
 /wp-admin/*                        -                                               410

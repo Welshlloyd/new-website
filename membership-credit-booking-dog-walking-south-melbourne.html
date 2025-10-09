@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Membership Credit Booking — Dog Walking South Melbourne | The Woof of Walk Street</title>
+  <meta name="description" content="Book your solo dog walk in South Melbourne using your Starter, Growth, or Unlimited membership credits. 45-minute one-dog-only walks with GPS tracking and photo updates. Not a member? Try Casual Dog Walking." />
+  <link rel="canonical" href="https://www.woofofwalkstreet.com/membership-credit-booking.html" />
+  <link rel="icon" href="/images/brand/favicon.ico" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/mini.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Membership Credit Booking — Dog Walking South Melbourne" />
+  <meta property="og:description" content="Use your Starter, Growth, or Unlimited credits to book a 45-minute solo walk. GPS-tracked with photo updates." />
+  <meta property="og:url" content="https://www.woofofwalkstreet.com/membership-credit-booking.html" />
+  <meta property="og:image" content="https://www.woofofwalkstreet.com/images/brand/og-membership-credit.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Google Ads Global Site Tag (kept consistent) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'AW-17527927259');
+  </script>
+
+  <!-- JSON-LD: Breadcrumbs -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
+      {"@type":"ListItem","position":2,"name":"Memberships","item":"https://www.woofofwalkstreet.com/memberships.html"},
+      {"@type":"ListItem","position":3,"name":"Membership Credit Booking","item":"https://www.woofofwalkstreet.com/membership-credit-booking.html"}
+    ]
+  }
+  </script>
+
+  <!-- Page-scoped helpers -->
+  <style>
+    :root{--gold:#f5b200;--line:#1d232c}
+    .wrap{max-width:920px;margin:24px auto 44px;padding:0 16px}
+    .form-card{background:#0f1318;border:1px solid var(--line);border-radius:16px;padding:18px}
+    label{display:block;margin:.85rem 0 .35rem}
+    input,select,textarea{width:100%;padding:12px;border-radius:10px;border:1px solid #2a3440;background:#0b0e12;color:#e6edf3}
+    button{margin-top:14px;background:var(--gold);color:#111;border:0;border-radius:999px;padding:12px 18px;font-weight:900;cursor:pointer}
+    .note{margin-top:10px;color:#cfd7e1}
+    .success{display:none;margin-top:16px;background:#0e1a12;border:1px solid #214d33;color:#c9f1dd;border-radius:12px;padding:14px}
+    .info-card{background:#0f1318;border:1px solid #1d232c;border-radius:14px;padding:18px;margin-top:16px;color:#e6edf3}
+    .info-card h2{color:#f3f6fb;margin:.2rem 0 .6rem}
+    .info-card li{color:#cdd7e1}
+    .m-hero{padding:36px 16px 16px;text-align:center;background:#fffaf1;border-bottom:1px solid #f0e6cf}
+    .m-hero h1{margin:0 0 .35rem}
+    .m-hook{margin:.35rem auto .75rem;max-width:60ch;color:#2a2a2a;font-size:1.06rem}
+    .m-badge{display:inline-block;margin:.25rem 0 .9rem;padding:.45rem .9rem;background:var(--gold);color:#111;border-radius:999px;font-weight:900}
+    @media (max-width: 820px){
+      .sticky-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:999;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border:1px solid rgba(0,0,0,.08);border-radius:16px;box-shadow:0 8px 24px rgba(0,0,0,.14);display:flex;gap:10px;justify-content:center;align-items:center;padding:10px}
+      .sticky-cta .cta-button{padding:10px 14px}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Promo ribbon (optional; consistent with site) -->
+  <div id="promo" class="promo-ribbon promo--edge" role="region" aria-label="Promo: 50% off">
+    <div class="promo-inner container">
+      <img class="promo-dog" src="/images/brand/dog-in-suit.webp" alt="" width="28" height="28" decoding="async" />
+      <span class="promo-copy">
+        <strong>50% OFF</strong> Unlimited Daily Walks — 45-minute solo walks · GPS tracked · Photo updates
+      </span>
+      <a href="/membership-unlimited.html" class="promo-cta">Learn More →</a>
+      <button id="promo-close" class="promo-close" aria-label="Dismiss promo">✕</button>
+    </div>
+  </div>
+
+  <!-- Impact ribbon -->
+  <div class="impact-ribbon" role="note" aria-label="Walks that do more: 10% donated">
+    <div class="impact-inner">
+      <span class="impact-emoji" aria-hidden="true">💛</span>
+      <strong>Walks That Do More:</strong>
+      We donate <strong>10% of profits</strong> to local shelters.
+      <a class="impact-cta" href="/community.html">See our impact →</a>
+    </div>
+  </div>
+
+  <!-- HEADER (same as index) -->
+  <header class="site-header" role="banner">
+    <div class="navbar container" role="navigation" aria-label="Main">
+      <a class="brand" href="/" aria-label="Go to home">
+        <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="56" height="56">
+        <strong>The Woof of Walk Street</strong>
+      </a>
+
+      <!-- mobile hamburger -->
+      <input id="nav-toggle" type="checkbox" hidden>
+      <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</label>
+
+      <nav class="nav-links" aria-label="Primary">
+        <section class="nav-group">
+          <button class="nav-group-btn" aria-expanded="false" aria-controls="nav-services">Services</button>
+          <ul id="nav-services" class="nav-group-list">
+            <li><a href="/services.html">All Services</a></li>
+            <li><a href="/dog-walking-south-melbourne">Dog Walking South Melbourne</a></li>
+            <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
+            <li><a href="/memberships.html">Memberships</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </section>
+
+        <a href="/about.html">About</a>
+        <a href="/blog/index.html">Blog</a>
+        <a href="/faq.html">FAQs</a>
+        <a href="/search.html">Search</a>
+
+        <a class="btn button-primary nav-cta"
+           href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=header&utm_campaign=book_now"
+           target="_blank" rel="noopener">Book Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="m-hero">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="/">Home</a> › <a href="/memberships.html">Memberships</a> › Membership Credit Booking</nav>
+      <h1>Membership Credit Booking — Dog Walking South Melbourne</h1>
+      <p class="m-hook">
+        Use your <strong>Starter (4 walks)</strong>, <strong>Growth (10 walks)</strong>, or <strong>Unlimited (weekday)</strong> credits to book a
+        <strong>45-minute solo dog walk</strong> in South Melbourne. Every walk is <strong>one-dog-only</strong>, <strong>GPS-tracked</strong>,
+        and followed by <strong>photo updates</strong>.
+      </p>
+      <p class="m-badge">South Melbourne · One-to-one walks</p>
+    </section>
+
+    <div class="wrap">
+      <!-- FORM -->
+      <div class="form-card" role="region" aria-label="Membership credit booking form">
+        <h2 style="margin-top:0">Request a Walk Using Your Credits</h2>
+
+        <form id="creditForm" novalidate>
+          <label for="name">Your name</label>
+          <input id="name" name="name" autocomplete="name" required>
+
+          <label for="dog">Dog’s name</label>
+          <input id="dog" name="dog" required>
+
+          <label for="plan">Your membership</label>
+          <select id="plan" name="plan" required>
+            <option value="">Select…</option>
+            <option>Starter (4 walks / month)</option>
+            <option>Growth (10 walks / month)</option>
+            <option>Unlimited (weekday solo walks)</option>
+          </select>
+
+          <label for="date">Preferred date (Mon–Fri)</label>
+          <input id="date" name="date" type="date" required>
+
+          <label for="time">Preferred time (7:00–19:00)</label>
+          <input id="time" name="time" type="time" min="07:00" max="19:00" required>
+
+          <label for="notes">Notes (access, preferences, etc.)</label>
+          <textarea id="notes" name="notes" rows="4" placeholder="Gate code, meet spot, anything else"></textarea>
+
+          <button type="submit">Request Booking</button>
+          <p class="note">Walks are 45 minutes, solo only. Bookings are confirmed subject to availability.</p>
+        </form>
+
+        <div id="ok" class="success" role="status">Thanks! Your request was submitted. We’ll confirm by email shortly.</div>
+      </div>
+
+      <!-- HOW IT WORKS -->
+      <div class="info-card">
+        <h2>How Membership Credit Booking Works</h2>
+        <ul>
+          <li>Select your plan (Starter, Growth, or Unlimited) and your preferred weekday/time.</li>
+          <li>We verify your available credits and confirm by email.</li>
+          <li>Every walk is <strong>one-dog-only</strong>, <strong>GPS-tracked</strong>, with <strong>photo updates</strong>.</li>
+        </ul>
+      </div>
+
+      <!-- NOT A MEMBER -->
+      <div class="info-card">
+        <h2>Not a Member Yet?</h2>
+        <p>Choose a plan that fits your routine, or book a one-off:</p>
+        <ul>
+          <li><a href="/membership-starter.html">Starter — 4 Solo Walks / Month</a></li>
+          <li><a href="/membership-growth.html">Growth — 10 Solo Walks / Month</a></li>
+          <li><a href="/membership-unlimited.html">Unlimited — Weekday Solo Walks</a></li>
+          <li><a href="/casual-dog-walking-south-melbourne.html">Casual Dog Walking South Melbourne — book one-off solo walks</a></li>
+        </ul>
+      </div>
+
+      <!-- BLOG TEASER -->
+      <section class="info-card" aria-labelledby="blog-teaser-title">
+        <h2 id="blog-teaser-title">From the Blog</h2>
+        <div class="blog-list">
+          <article class="blog-card">
+            <h3><a href="/blog/best-dog-walks-south-melbourne.html">Best Dog Walks in South Melbourne</a></h3>
+            <p>Explore our top picks for scenic, safe, and fun local walks.</p>
+          </article>
+          <article class="blog-card">
+            <h3><a href="/blog/why-solo-walks.html">Why Solo Walks Reduce Stress</a></h3>
+            <p>Learn why one-dog-only walks are healthier and safer.</p>
+          </article>
+          <article class="blog-card">
+            <h3><a href="/blog/ethical-dog-walker.html">How to Choose an Ethical Dog Walker</a></h3>
+            <p>Not all walkers are the same — here’s what to look for.</p>
+          </article>
+        </div>
+        <p style="margin-top:1rem">
+          <a class="btn button-primary" href="/blog/index.html">Read More Blogs</a>
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <!-- Sticky mobile CTA (optional) -->
+  <div class="sticky-cta" aria-hidden="true">
+    <a class="cta-button" href="/memberships.html">Compare Memberships</a>
+    <a class="cta-button secondary" href="/casual-dog-walking-south-melbourne.html">Book a Casual Walk</a>
+  </div>
+
+  <!-- FOOTER (same as index) -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-banner">
+      <picture>
+        <source srcset="/images/brand/footer-banner-1600x600.webp" media="(min-width: 768px)">
+        <img src="/images/brand/footer-banner-800x300.webp" alt="Happy dogs in Melbourne" loading="lazy" width="800" height="300">
+      </picture>
+    </div>
+
+    <div class="container footer-grid">
+      <!-- Brand / NAP -->
+      <section class="footer-brand">
+        <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="60" height="60" loading="lazy">
+        <p><strong>The Woof of Walk Street</strong><br>
+          <a class="footer-map" href="https://maps.app.goo.gl/YnEoSPwhGocUZyWL9?g_st=ipc" target="_blank" rel="noopener">South Melbourne, VIC</a> · Mon–Fri 7am–7pm<br>
+          <a href="tel:+61456754050">+61 456 754 050</a> · <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a>
+        </p>
+        <div class="footer-socials">
+          <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram"><img src="/images/social/instagram.svg" alt="" width="24" height="24"></a>
+          <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook"><img src="/images/social/facebook.svg" alt="" width="24" height="24"></a>
+          <a href="https://x.com/woofofwalkstreet" aria-label="X"><img src="/images/social/twitter.svg" alt="" width="24" height="24"></a>
+        </div>
+        <p>
+          <a class="btn button-primary" target="_blank" rel="noopener"
+             href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=footer&utm_campaign=book_now_footer"
+             onclick="gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
+            Book Now
+          </a>
+        </p>
+      </section>
+
+      <!-- Primary links -->
+      <nav class="footer-col" aria-label="Primary">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="/services.html">All Services</a></li>
+          <li><a href="/dog-walking-south-melbourne">Dog Walking South Melbourne</a></li>
+          <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
+          <li><a href="/memberships.html" aria-current="page">Memberships</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Support -->
+      <section class="footer-col collapsible">
+        <button class="collapse-btn" aria-expanded="false" aria-controls="support-list">Support</button>
+        <ul id="support-list">
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/testimonials.html">Testimonials</a></li>
+          <li><a href="/gallery.html">Photos & Videos</a></li>
+          <li><a href="/blog/index.html">Blog</a></li>
+          <li><a href="/faq.html">FAQs</a></li>
+        </ul>
+      </section>
+
+      <!-- Legal -->
+      <section class="footer-col collapsible">
+        <button class="collapse-btn" aria-expanded="false" aria-controls="legal-list">Legal</button>
+        <ul id="legal-list">
+          <li><a href="/privacy.html">Privacy</a></li>
+          <li><a href="/terms.html">Terms</a></li>
+          <li><a href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="container footer-geo">
+      Solo Dog Walking & Boutique Boarding across <strong>South Melbourne</strong>, <strong>Albert Park</strong>,
+      <strong>Port Melbourne</strong>, <strong>Middle Park</strong> and <strong>Southbank</strong>.
+    </div>
+
+    <div class="container footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+    <!-- Tiny JS for footer accordions (mobile) -->
+    <script>
+      document.querySelectorAll('.collapsible .collapse-btn').forEach(btn=>{
+        btn.addEventListener('click', ()=>{
+          const list = document.getElementById(btn.getAttribute('aria-controls'));
+          const open = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', String(!open));
+          list.hidden = open;
+        });
+        const list = document.getElementById(btn.getAttribute('aria-controls'));
+        if (window.matchMedia('(max-width:640px)').matches) list.hidden = true;
+      });
+    </script>
+  </footer>
+
+  <!-- Global TTP booking click tracker -->
+  <script>
+    (function () {
+      document.addEventListener('click', function (e) {
+        const a = e.target.closest('a');
+        if (!a) return;
+        const href = (a.getAttribute('href') || '').toLowerCase();
+        if (href.includes('timetopet.com/portal/woofofwalkstreet')) {
+          try {
+            gtag('event', 'ttp_booking_click', {
+              'send_to': 'AW-17527927259/ePjJCLT8p6cbENvj-6VB',
+              'value': 1.0,
+              'currency': 'AUD'
+            });
+          } catch (err) {}
+        }
+      }, { capture: true });
+    })();
+  </script>
+
+  <!-- Simple form handler (mailto placeholder) -->
+  <script>
+    (function(){
+      const f = document.getElementById('creditForm');
+      const ok = document.getElementById('ok');
+      if(!f) return;
+      f.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const data = new FormData(f);
+        const subject = encodeURIComponent('Membership Credit Booking Request');
+        const body = encodeURIComponent(
+`Name: ${data.get('name') || '-'}
+Dog: ${data.get('dog') || '-'}
+Plan: ${data.get('plan') || '-'}
+Date: ${data.get('date') || '-'}
+Time: ${data.get('time') || '-'}
+Notes: ${data.get('notes') || '-'}`);
+        // Send via mailto for now (replace with server endpoint later)
+        window.location.href = \`mailto:info@woofofwalkstreet.com?subject=\${subject}&body=\${body}\`;
+        f.reset();
+        ok.style.display = 'block';
+        ok.focus && ok.focus();
+      });
+    })();
+  </script>
+</body>
+</html>

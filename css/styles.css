@@ -367,6 +367,43 @@ a:hover{color:var(--ink); text-decoration-color:currentColor}
 /* Nav flyout & mobile drawer (if present) */
 .nav-group-list{background:var(--surface); border:1px solid var(--border)}
 
+/* ============ Key Takeaways styling ============ */
+.key-takeaways .m-card{
+  background:var(--surface, #0f1318);
+  border:1px solid var(--border, #1d232c);
+  border-radius:14px;
+  padding:18px;
+  box-shadow:var(--shadow, 0 10px 30px rgba(0,0,0,.16));
+}
+.key-takeaways h2{
+  margin:.2rem 0 .6rem;
+  font-weight:900;
+}
+.key-takeaways ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:grid;
+  gap:.55rem;
+}
+.key-takeaways li{
+  position:relative;
+  padding-left:28px;
+  line-height:1.45;
+}
+.key-takeaways li::before{
+  content:"✅";
+  position:absolute;
+  left:0; top:0;
+  line-height:1.2;
+  filter:saturate(1.1);
+}
+@media (min-width:900px){
+  .key-takeaways ul{
+    grid-template-columns:1fr 1fr; /* 2-column on desktop */
+  }
+}
+
 /* ---------- Optional embeds ---------- */
 .embed-1x1 iframe{height:360px!important}
 .poster img{max-height:520px;object-fit:cover}

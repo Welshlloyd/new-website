@@ -360,7 +360,7 @@ a:hover{color:var(--ink); text-decoration-color:currentColor}
 .site-footer{background:var(--surface); color:var(--ink)}
 .footer-grid, .footer-bottom{border-top:1px solid var(--border)}
 
-/* Trust ticks */
+/* Trust ticks (default) */
 .m-trust li{color:var(--muted)}
 .m-trust li::before{color:var(--ok)}
 
@@ -407,6 +407,41 @@ a:hover{color:var(--ink); text-decoration-color:currentColor}
 /* ---------- Optional embeds ---------- */
 .embed-1x1 iframe{height:360px!important}
 .poster img{max-height:520px;object-fit:cover}
+
+/* ===============================
+   Fixes & readability overrides
+   =============================== */
+
+/* 1) Sticky CTA safety area (mobile) */
+:root{ --sticky-cta-h: 88px; } /* fallback */
+@media (max-width: 820px){
+  main{ padding-bottom: calc(var(--sticky-cta-h) + 18px); }
+  .m-wrap, .m-card, section, .section{
+    scroll-margin-bottom: calc(var(--sticky-cta-h) + 24px);
+  }
+  .sticky-cta{
+    position:fixed;left:12px;right:12px;bottom:12px;z-index:1100;
+    border-radius:16px;
+  }
+}
+
+/* 2) Improve contrast for headings/cards on light alt sections */
+.section.alt h2,
+.section.alt h3{ color: var(--ink); opacity:1; }
+
+/* “What Unlimited Members Say” heading */
+#testimonials-heading{ color: var(--ink); font-weight:900; }
+
+/* 3) Remove duplicate ticks in the small hero checklist */
+.m-hero .m-trust{ list-style: disc; padding-left: 1.2rem; }
+.m-hero .m-trust li{ position: static; padding-left: 0; }
+.m-hero .m-trust li::before{ content: none; }
+
+/* 4) Mobile readability bumps */
+.m-hero .m-trust li{ color: color-mix(in srgb, var(--ink) 72%, #888 28%); }
+@media (max-width: 820px){
+  .m-card{ line-height:1.55; }
+}
 
 /* ===============================
    End – styles.css

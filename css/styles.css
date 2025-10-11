@@ -286,6 +286,87 @@ label{display:block;margin:.2rem 0 .25rem;color:#475467}
   .promo-copy{font-size:.95rem}
 }
 
+/* ===== Light/Dark Theme Tokens ===== */
+:root{
+  /* Light */
+  --bg:#ffffff;
+  --ink:#0c1016;
+  --ink-2:#1b222c;
+  --muted:#616976;
+  --surface:#f7f9fc;
+  --surface-2:#fffaf1;
+  --border:#e6e9ef;
+  --brand:#f5b200;
+  --accent:#ffd166;
+  --ok:#2a7a3a;
+  --shadow:0 10px 30px rgba(0,0,0,.10);
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    /* Dark */
+    --bg:#0b0e12;
+    --ink:#e6edf3;
+    --ink-2:#cdd7e1;
+    --muted:#97a3af;
+    --surface:#0f1318;
+    --surface-2:#171c23;
+    --border:#1d232c;
+    --brand:#f5b200;
+    --accent:#ffd166;
+    --ok:#46b067;
+    --shadow:0 12px 34px rgba(0,0,0,.35);
+  }
+}
+
+/* ===== Base surfaces ===== */
+body{background:var(--bg); color:var(--ink)}
+a{color:var(--ink-2); text-decoration-color:rgba(0,0,0,.25)}
+a:hover{color:var(--ink); text-decoration-color:currentColor}
+
+.header, .site-header .navbar{background:var(--bg); border-bottom:1px solid var(--border)}
+.m-hero{background:var(--surface-2); border-bottom:1px solid var(--border)}
+.m-card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  color:var(--ink);
+  box-shadow:var(--shadow);
+}
+.m-card h2{color:var(--ink)}
+.impact-ribbon{background:var(--ink); color:#fff; border-block:4px solid var(--brand)}
+.impact-cta{color:var(--accent)}
+
+/* CTA buttons (auto-contrast) */
+.cta-button{
+  background:var(--ink);
+  color:#fff;
+  border:1px solid color-mix(in srgb, var(--ink) 80%, #000 20%);
+}
+.cta-button.secondary{
+  background:#fff; color:#111; border:1px solid var(--border);
+}
+@media (prefers-color-scheme: dark){
+  .cta-button.secondary{background:var(--surface-2); color:var(--ink); border:1px solid var(--border)}
+}
+
+/* Sticky CTA and badges */
+.sticky-cta{
+  background:color-mix(in srgb, var(--bg) 92%, #fff 8%);
+  border:1px solid var(--border);
+  box-shadow:var(--shadow);
+}
+.m-badge, .ipoo-badge{background:var(--brand); color:#111}
+
+/* Footer */
+.site-footer{background:var(--surface); color:var(--ink)}
+.footer-grid, .footer-bottom{border-top:1px solid var(--border)}
+
+/* Trust ticks */
+.m-trust li{color:var(--muted)}
+.m-trust li::before{color:var(--ok)}
+
+/* Nav flyout & mobile drawer (if present) */
+.nav-group-list{background:var(--surface); border:1px solid var(--border)}
+
 /* ---------- Optional embeds ---------- */
 .embed-1x1 iframe{height:360px!important}
 .poster img{max-height:520px;object-fit:cover}

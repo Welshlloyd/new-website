@@ -1,0 +1,53 @@
+/* Woof of Walk Street — mini.dark.css (v1.0)
+   Optional dark-mode token overrides for mini.css v4.2
+--------------------------------------------------- */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:#0b0e12;
+    --text:#e6edf3;
+    --muted:#9da7b3;
+    --brand:#f5b200;
+    --brand-ink:#111;
+    --accent:#1f2935;
+    --stroke:#1d232c;
+    --card:#121821;
+    --promo-bg:#1a1e26;
+    --promo-border:#272f3a;
+    --promo-btn-bg:#f5b200;
+    --promo-btn-color:#111;
+    --shadow:0 12px 34px rgba(0,0,0,.5);
+  }
+
+  body,html{background:var(--bg);color:var(--text)}
+  a{color:#d9e2ef;text-decoration:none}
+  a:hover{color:var(--brand)}
+
+  .site-header,.promo-ribbon,.navbar,
+  .nav-links,.nav-dropmenu,.hero,
+  .card,.footer-grid,.site-footer{background:var(--card);border-color:var(--stroke);color:var(--text)}
+
+  .brand strong{color:#fefefe}
+  .promo-cta{background:var(--brand);color:#111;border-color:#000}
+  .promo-cta:hover{background:#ffd84a}
+  .nav-links a,.nav-dropbtn{color:var(--muted)}
+  .nav-links a[aria-current="page"],.nav-dropbtn:hover{background:#202834;color:#fff}
+  .card:hover{box-shadow:0 12px 30px rgba(245,178,0,.15)}
+
+  .hero{background:linear-gradient(160deg,#11161c,#1a2028)}
+  .hero h1{color:#ffd166}
+  .hero .subhead{color:#cfd6df}
+  .footer-col h3{color:#f8f8f8}
+  .footer-col a{color:#e0e6ef}
+  .footer-bottom,.footer-geo{opacity:.75}
+
+  .btn,.cta-button,.button,.button-primary{
+    background:var(--brand);color:#111;border:1px solid #000;
+  }
+  .btn:hover,.cta-button:hover{box-shadow:0 8px 22px rgba(245,178,0,.4)}
+
+  .btn-ghost{background:transparent;border:1px solid #fff;color:#fff}
+  .btn-ghost:hover{background:#fff;color:#000}
+
+  .sticky-cta{background:#14181fef;color:#fff;border-color:#2b313a}
+}

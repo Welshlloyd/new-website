@@ -4,6 +4,24 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <!-- Theme boot (no-FOUC): sets html[data-theme] + color-scheme before CSS loads -->
+  <script>
+  (function () {
+    const key = 'wow-theme';
+    const pref = localStorage.getItem(key) || 'auto';
+    const mql = window.matchMedia('(prefers-color-scheme: dark)');
+    const isDark = () => pref === 'dark' || (pref === 'auto' && mql.matches);
+    document.documentElement.setAttribute('data-theme', pref);
+    document.documentElement.style.colorScheme = isDark() ? 'dark' : 'light';
+    mql.addEventListener?.('change', () => {
+      const p = localStorage.getItem(key) || 'auto';
+      if (p === 'auto') {
+        document.documentElement.style.colorScheme = mql.matches ? 'dark' : 'light';
+      }
+    });
+  })();
+  </script>
+
   <!-- Title tuned for primary query + brand -->
   <title>Dog Walking South Melbourne (Solo) & Boarding | The Woof of Walk Street</title>
 
@@ -15,6 +33,8 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="/css/mini.css" />
+  <!-- NEW: dark-mode token overrides -->
+  <link rel="stylesheet" href="/css/mini.dark.css" />
   <link rel="stylesheet" href="/css/styles.css" />
 
   <!-- ===== Edge Pack (adds cooler look + unified buttons) ===== -->
@@ -50,6 +70,9 @@
     .btn-ghost,.cta-button.secondary{background:transparent;color:#fff;border-color:#2a3440}
     .btn-ghost:hover,.cta-button.secondary:hover{border-color:#fff;box-shadow:0 6px 18px rgba(0,0,0,.22)}
     .btn-outline{background:transparent;border-color:var(--brand);color:var(--brand)}
+
+    /* Theme toggle spacing (uses existing .btn-ghost look) */
+    #theme-toggle.btn-ghost{padding:8px 12px; border-radius:999px; line-height:1; display:inline-flex; align-items:center; gap:.4rem}
 
     /* Cards + Memberships pop */
     .card,.m-card{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 10px 24px rgba(0,0,0,.18)}
@@ -214,12 +237,20 @@
             <li><a href="/contact.html" title="Contact The Woof of Walk Street">Contact</a></li>
           </ul>
         </section>
+
         <a href="/about.html" title="About The Woof of Walk Street">About</a>
         <a href="/testimonials.html" title="Client Testimonials">Testimonials</a>
         <a href="/gallery.html" title="Photos & Videos">Gallery</a>
         <a href="/blog/index.html" title="Dog Walking Tips & Guides">Blog</a>
         <a href="/faq.html" title="Frequently Asked Questions">FAQs</a>
         <a href="/search.html" title="Search the site">Search</a>
+
+        <!-- NEW: Theme toggle button -->
+        <button id="theme-toggle" class="btn-ghost" type="button"
+                aria-pressed="false" aria-label="Toggle color theme" title="Theme: Auto">
+          🌗 Auto
+        </button>
+
         <a class="btn btn-primary nav-cta"
            href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=header&utm_campaign=book_now"
            target="_blank" rel="noopener"
@@ -590,6 +621,36 @@
     }, { capture: true });
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') { btn.setAttribute('aria-expanded', 'false'); sync(); }
+    });
+  })();
+  </script>
+
+  <!-- Theme toggle control -->
+  <script>
+  (function () {
+    const el = document.getElementById('theme-toggle');
+    if (!el) return;
+    const KEY = 'wow-theme';
+    const order = ['auto','light','dark'];
+    const next = (v) => order[(order.indexOf(v) + 1) % order.length];
+
+    function apply(pref) {
+      localStorage.setItem(KEY, pref);
+      document.documentElement.setAttribute('data-theme', pref);
+      const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const effectiveDark = (pref === 'dark') || (pref === 'auto' && systemDark);
+      document.documentElement.style.colorScheme = effectiveDark ? 'dark' : 'light';
+      el.setAttribute('aria-pressed', pref !== 'auto');
+      el.title = `Theme: ${pref[0].toUpperCase()}${pref.slice(1)}`;
+      el.textContent = (pref === 'auto') ? '🌗 Auto' : (pref === 'dark') ? '🌙 Dark' : '🔆 Light';
+    }
+
+    apply(localStorage.getItem(KEY) || 'auto');
+    el.addEventListener('click', () => apply(next(localStorage.getItem(KEY) || 'auto')));
+
+    const mql = window.matchMedia('(prefers-color-scheme: dark)');
+    mql.addEventListener?.('change', () => {
+      if ((localStorage.getItem(KEY) || 'auto') === 'auto') apply('auto');
     });
   })();
   </script>

@@ -457,7 +457,64 @@ a:hover{color:var(--ink); text-decoration-color:currentColor}
 #theme-toggle.btn-ghost{
   padding:8px 12px; border-radius:999px; line-height:1; display:inline-flex; align-items:center; gap:.4rem;
 }
+/* ===== Readability Fix Pack — About page only ===== */
+body.about{
+  /* Force light, high-contrast tokens regardless of OS theme */
+  --bg:#ffffff;
+  --ink:#0c1016;
+  --ink-2:#1b222c;
+  --muted:#4b5563;
+  --surface:#ffffff;      /* cards on white */
+  --surface-2:#fffaf1;    /* hero alt */
+  --border:#e6e9ef;
+  --brand:#f5b200;
+  --accent:#ffd166;
+  --ok:#2a7a3a;
+}
 
+/* Header/nav: ensure readable on light */
+body.about .site-header{background:#fff;border-bottom:1px solid var(--border)}
+body.about .nav-links a{color:#2b3645}
+body.about .nav-links a[aria-current="page"]{background:#f7f7f7;color:#111}
+
+/* Hero + base copy */
+body.about .hero{background:linear-gradient(180deg,#fffaf0,#fffdfa);color:var(--ink)}
+body.about .hero .subhead{color:#475569}
+
+/* Cards: white surface + dark text */
+body.about .card,
+body.about .m-card{
+  background:#fff!important;
+  border:1px solid var(--border)!important;
+  color:#111!important;
+  box-shadow:var(--shadow);
+}
+body.about .card h2,
+body.about .card h3,
+body.about .m-card h2,
+body.about .m-card h3{color:#0c1016!important}
+
+/* Lists inside cards */
+body.about .list-check li{color:#1f2937}
+
+/* Impact ribbon: dark background + white text + gold border */
+body.about .impact-ribbon{
+  background:#0c1117!important;
+  color:#ffffff!important;
+  border-block:4px solid var(--brand)!important;
+}
+body.about .impact-cta{background:#1a2b3f;border:1px solid rgba(245,178,0,.35);color:#ffd166}
+body.about .impact-ribbon a{color:#7bf0dc}
+body.about .impact-ribbon a:hover{text-decoration:underline}
+
+/* Buttons keep strong contrast */
+body.about .cta-button{background:#111;color:#fff;border:1px solid #0b0e12}
+body.about .cta-button.secondary{background:#fff;color:#111;border:1px solid var(--border)}
+
+/* Footer stays readable on light */
+body.about .site-footer{background:#fff;color:#0c1016}
+body.about .footer-grid, 
+body.about .footer-bottom{border-top:1px solid var(--border)}
 
 /* ===============================
    End – styles.css

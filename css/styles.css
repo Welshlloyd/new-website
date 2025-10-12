@@ -525,8 +525,11 @@ body.about .footer-bottom{border-top:1px solid var(--border)}
   text-decoration: none;
 }
 .section.alt[aria-label="Nearby areas we walk"] a:hover {
-  text-decoration: underline;
-}
+  text-decoration: /* Improve contrast for the Nearby Areas badge block */
+.section.alt[aria-label="Nearby areas we walk"] h2 { color: var(--ink, #1f2a37); }
+.section.alt[aria-label="Nearby areas we walk"] a { color: var(--brand, #111824); text-decoration: none; }
+.section.alt[aria-label="Nearby areas we walk"] a:hover { text-decoration: underline; }
+
 
 /* ===============================
    End – styles.css

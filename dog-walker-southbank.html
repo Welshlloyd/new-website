@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dog Walker Southbank | Solo Riverside & Backstreet Walks</title>
-  <meta name="description" content="Solo dog walking for Southbank apartment pups. Riverside paths, quieter backstreets, GPS tracking and photo updates. Book a calm one-on-one walk." />
+  <meta name="description" content="Riverside and backstreet solo walks for Southbank apartment dogs. One-dog-only, GPS-tracked with photo updates every session. Calm routes, reliable routine, local handler." />
   <link rel="canonical" href="https://www.woofofwalkstreet.com/dog-walker-southbank.html" />
   <link rel="icon" href="/images/brand/favicon.ico" />
 
@@ -15,7 +15,7 @@
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Dog Walker Southbank | Solo Riverside & Backstreet Walks">
-  <meta property="og:description" content="One-at-a-time walks with GPS routes & photo updates in Southbank.">
+  <meta property="og:description" content="Riverside and backstreet solo walks for Southbank apartment dogs. GPS tracking and photo updates after every session.">
   <meta property="og:url" content="https://www.woofofwalkstreet.com/dog-walker-southbank.html">
   <meta property="og:image" content="https://www.woofofwalkstreet.com/images/service-areas/southbank-river.webp">
   <meta name="twitter:card" content="summary_large_image">
@@ -23,7 +23,7 @@
   <meta name="twitter:description" content="Solo, GPS-tracked dog walks with photo updates in Southbank.">
   <meta name="twitter:image" content="https://www.woofofwalkstreet.com/images/service-areas/southbank-river.webp">
 
-  <!-- Breadcrumbs JSON-LD (keep) -->
+  <!-- Breadcrumbs JSON-LD -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -101,7 +101,7 @@
         "provider": { "@id": "https://www.woofofwalkstreet.com/#business" },
         "areaServed": ["Southbank","South Melbourne","Albert Park","Port Melbourne","Middle Park"],
         "url": "https://www.woofofwalkstreet.com/dog-walker-southbank.html",
-        "description": "Solo walks with GPS route & photo updates using Southbank riverside paths and quieter streets."
+        "description": "Riverside and backstreet solo walks for Southbank apartment dogs. GPS route and photo updates every session."
       },
       {
         "@type": "FAQPage",
@@ -145,11 +145,13 @@
     </div>
   </div>
 
-  <!-- Impact ribbon -->
-  <div class="impact-ribbon" role="note">
+  <!-- Impact ribbon (now high-contrast via mini.css) -->
+  <div class="impact-ribbon" role="note" aria-label="Walks that do more: 10% donated">
     <div class="impact-inner">
       <span class="impact-emoji" aria-hidden="true">💛</span>
-      <strong>Walks That Do More:</strong> We donate <strong>10% of profits</strong> to local rescue.
+      <strong>Walks That Do More:</strong>
+      When you choose us, you’re not just booking a dog walk — you’re helping rescue dogs too.
+      <strong>We donate 10% of profits</strong> to local shelters.
       <a class="impact-cta" href="/community.html">See our impact →</a>
     </div>
   </div>
@@ -193,7 +195,7 @@
       <div class="container">
         <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="/">Home</a> › Southbank Dog Walker</nav>
         <h1>Dog Walker in Southbank</h1>
-        <p class="subhead">Riverside paths & quieter backstreets · Solo walks · GPS + photos</p>
+        <p class="subhead">Riverside and backstreet solo walks for apartment dogs · GPS tracking + photo updates every session</p>
         <img src="/images/service-areas/southbank-river.webp" alt="Southbank skyline and Yarra river walk"
              width="1200" height="800" style="max-width:920px;border-radius:12px;display:block;margin:0 auto"
              loading="eager" decoding="async" fetchpriority="high">
@@ -213,7 +215,7 @@
           <p>Structure matters. We plan routes that manage space and avoid hot spots, keeping arousal low while still giving great enrichment and movement.</p>
           <ul class="list-check">
             <li>Solo 45-minute sessions</li>
-            <li>Local routes</li>
+            <li>Local riverside & backstreet routes</li>
             <li>GPS & photo updates</li>
           </ul>
         </article>
@@ -235,11 +237,20 @@
       </div>
     </section>
 
-    <!-- Local reassurance -->
-    <section class="section alt">
+    <!-- How to book (unified) -->
+    <section>
       <div class="container">
-        <h2>Local, reliable, ethical</h2>
-        <p>We’re proudly local to <strong>South Melbourne</strong> and walk daily in <strong>Southbank</strong>, serving <strong>Albert Park</strong>, <strong>Middle Park</strong> and <strong>Port Melbourne</strong>. Walks run Mon–Fri, 7am–7pm.</p>
+        <h2>How to book</h2>
+        <ol class="list-check" style="padding-left:1.25rem">
+          <li>Create your account in Time To Pet (2 minutes).</li>
+          <li>Choose your preferred window (Mon–Fri, 7am–7pm).</li>
+          <li>Meet-and-greet, then your Southbank solo walks begin.</li>
+        </ol>
+        <p class="cta-buttons" style="margin-top:.5rem">
+          <a class="btn button-primary" href="/memberships.html#unlimited">See Unlimited — 50% Off</a>
+          <a class="btn button-secondary" target="_blank" rel="noopener"
+             href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=how_to_book&utm_campaign=book_now">Start Now</a>
+        </p>
       </div>
     </section>
 
@@ -320,7 +331,7 @@
     <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
   </footer>
 
-  <!-- Nav dropdown JS -->
+  <!-- Services dropdown JS -->
   <script>
   (function(){const b=document.querySelector('.nav-group-btn[aria-controls="nav-services"]');const l=document.getElementById('nav-services');if(!b||!l)return;
     const s=()=>{l.hidden=b.getAttribute('aria-expanded')!=='true';}; s();
@@ -332,9 +343,13 @@
 
   <!-- Promo close -->
   <script>
-    document.getElementById('promo-close')?.addEventListener('click',()=>{document.getElementById('promo').style.display='none';
-      try{sessionStorage.setItem('promoDismissed','1');}catch(e){}});
-    try{if(sessionStorage.getItem('promoDismissed')==='1'){document.getElementById('promo').style.display='none';}}catch(e){}
+    document.getElementById('promo-close')?.addEventListener('click',()=>{
+      document.getElementById('promo').style.display='none';
+      try{sessionStorage.setItem('promoDismissed','1');}catch(e){}
+    });
+    try{if(sessionStorage.getItem('promoDismissed')==='1'){
+      document.getElementById('promo').style.display='none';
+    }}catch(e){}
   </script>
 </body>
 </html>

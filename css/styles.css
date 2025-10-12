@@ -516,6 +516,18 @@ body.about .site-footer{background:#fff;color:#0c1016}
 body.about .footer-grid, 
 body.about .footer-bottom{border-top:1px solid var(--border)}
 
+/* Improve contrast for Nearby Areas section */
+.section.alt[aria-label="Nearby areas we walk"] h2 {
+  color: var(--ink, #1f2a37);
+}
+.section.alt[aria-label="Nearby areas we walk"] a {
+  color: var(--brand, #111824);
+  text-decoration: none;
+}
+.section.alt[aria-label="Nearby areas we walk"] a:hover {
+  text-decoration: underline;
+}
+
 /* ===============================
    End – styles.css
    =============================== */

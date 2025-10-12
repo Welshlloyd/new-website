@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dog Walker Middle Park | Calm Solo Walks</title>
-  <meta name="description" content="Gentle, one-dog-only walking in Middle Park. Great for seniors, shy pups, or dogs who love a steady routine. GPS tracking and photo updates included." />
+
+  <!-- Meta: strong local intent + benefit -->
+  <title>Dog Walker Middle Park — Solo Dog Walking by the Beach (GPS + Photos)</title>
+  <meta name="description" content="One-dog-only dog walking in Middle Park and nearby beach paths. 45-minute solo walks with GPS tracking and photo updates. Local, insured, ethical. Book online." />
   <link rel="canonical" href="https://www.woofofwalkstreet.com/dog-walker-middle-park.html" />
   <link rel="icon" href="/images/brand/favicon.ico" />
 
@@ -14,8 +16,8 @@
 
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Dog Walker Middle Park | Calm Solo Walks">
-  <meta property="og:description" content="Solo walks with GPS routes & photo updates in Middle Park.">
+  <meta property="og:title" content="Dog Walker Middle Park — Solo Dog Walking by the Beach (GPS + Photos)">
+  <meta property="og:description" content="Calm, one-dog-only walks in Middle Park with GPS routes and photo updates. Local, insured, ethical.">
   <meta property="og:url" content="https://www.woofofwalkstreet.com/dog-walker-middle-park.html">
   <meta property="og:image" content="https://www.woofofwalkstreet.com/images/service-areas/middle-park-beach-dog.webp">
   <meta name="twitter:card" content="summary_large_image">
@@ -23,7 +25,7 @@
   <meta name="twitter:description" content="Solo, GPS-tracked dog walks with photo updates in Middle Park.">
   <meta name="twitter:image" content="https://www.woofofwalkstreet.com/images/service-areas/middle-park-beach-dog.webp">
 
-  <!-- Breadcrumbs JSON-LD (keep) -->
+  <!-- Breadcrumbs JSON-LD -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -56,14 +58,12 @@
           "addressCountry": "AU"
         },
         "areaServed": ["Middle Park","Albert Park","South Melbourne","Port Melbourne","Southbank"],
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-            "opens": "07:00",
-            "closes": "19:00"
-          }
-        ],
+        "openingHoursSpecification": [{
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "07:00",
+          "closes": "19:00"
+        }],
         "sameAs": [
           "https://maps.app.goo.gl/8UaSzJ6GmrDacfU49",
           "https://instagram.com/woofofwalkstreet",
@@ -73,24 +73,21 @@
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
           "name": "Dog Walking",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "name": "Unlimited Dog Walking Membership (50% off this month)",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Unlimited Solo Dog Walking",
-                "serviceType": "Dog Walking",
-                "provider": { "@id": "https://www.woofofwalkstreet.com/#business" },
-                "areaServed": ["Middle Park","Albert Park","South Melbourne","Port Melbourne","Southbank"],
-                "description": "Unlimited weekday solo dog walks with GPS route and photo updates."
-              },
-              "url": "https://www.woofofwalkstreet.com/memberships.html#unlimited",
-              "priceCurrency": "AUD",
-              "availability": "https://schema.org/InStock",
-              "priceValidUntil": "2025-10-31"
-            }
-          ]
+          "itemListElement": [{
+            "@type": "Offer",
+            "name": "Unlimited Dog Walking Membership (50% off first month)",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Unlimited Solo Dog Walking",
+              "serviceType": "Dog Walking",
+              "provider": { "@id": "https://www.woofofwalkstreet.com/#business" },
+              "areaServed": ["Middle Park","Albert Park","South Melbourne","Port Melbourne","Southbank"],
+              "description": "Unlimited weekday solo dog walks with GPS route and photo updates."
+            },
+            "url": "https://www.woofofwalkstreet.com/memberships.html#unlimited",
+            "priceCurrency": "AUD",
+            "availability": "https://schema.org/InStock"
+          }]
         }
       },
       {
@@ -101,7 +98,7 @@
         "provider": { "@id": "https://www.woofofwalkstreet.com/#business" },
         "areaServed": ["Middle Park","Albert Park","South Melbourne","Port Melbourne","Southbank"],
         "url": "https://www.woofofwalkstreet.com/dog-walker-middle-park.html",
-        "description": "Calm, one-dog-only walks with GPS route and photo updates around Middle Park."
+        "description": "Calm, one-dog-only walks around Middle Park Beach and quiet streets with GPS route and photo updates."
       },
       {
         "@type": "FAQPage",
@@ -115,7 +112,7 @@
           {
             "@type": "Question",
             "name": "Do you offer weekday memberships?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes — our Unlimited plan provides a walk each weekday." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes — our Unlimited plan provides a walk each weekday with GPS and photo updates." }
           }
         ]
       }
@@ -182,7 +179,10 @@
         <a href="/faq.html">FAQs</a>
         <a href="/search.html">Search</a>
         <a class="btn button-primary nav-cta" target="_blank" rel="noopener"
-           href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=header&utm_campaign=book_now">Book Now</a>
+           href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=header&utm_campaign=book_now"
+           onclick="gtag && gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
+           Book Now
+        </a>
       </nav>
     </div>
   </header>
@@ -193,28 +193,31 @@
       <div class="container">
         <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="/">Home</a> › Middle Park Dog Walker</nav>
         <h1>Dog Walker in Middle Park</h1>
-        <p class="subhead">Gentle, solo walks · Great for seniors & shy pups · GPS + photos</p>
+        <p class="subhead">Gentle, solo walks by Middle Park Beach · Great for seniors & shy pups · GPS + photos</p>
         <img src="/images/service-areas/middle-park-beach-dog.webp" alt="Dog wading at Middle Park beach"
              width="1200" height="800" style="max-width:920px;border-radius:12px;display:block;margin:0 auto"
              loading="eager" decoding="async" fetchpriority="high">
         <div class="cta-buttons" style="justify-content:center;flex-wrap:wrap;margin-top:14px">
           <a class="cta-button" href="/memberships.html#unlimited">See Unlimited Membership</a>
           <a class="cta-button secondary" target="_blank" rel="noopener"
-             href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=hero&utm_campaign=book_walk">Book a Walk</a>
+             href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=hero&utm_campaign=book_walk"
+             onclick="gtag && gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
+             Book a Walk
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Local benefits + Funnel -->
+    <!-- Local benefits (simplified, Grade ~8) -->
     <section>
       <div class="container grid grid-2">
         <article class="card">
           <h2>Why Middle Park suits steady routines</h2>
-          <p>Quiet streets and pocket parks are perfect for calm, confidence-building walks. We pace sessions for sniffing, stretching and steady movement.</p>
+          <p>Middle Park’s quiet streets and small parks are perfect for calm, happy walks. We go at your dog’s pace, with plenty of time for sniffing, stretching and exploring.</p>
           <ul class="list-check">
             <li>Solo 45-minute sessions</li>
-            <li>Local routes</li>
-            <li>GPS & photo updates</li>
+            <li>Local beach and street routes</li>
+            <li>GPS route + photo updates</li>
           </ul>
         </article>
 
@@ -224,14 +227,51 @@
             <li>Seniors and chill-tempered pups</li>
             <li>Shy or reactive dogs who need space</li>
             <li>Owners who want reliable weekday structure</li>
-            <li>Proof-seekers who love GPS + photo updates</li>
+            <li>Proof-seekers who love GPS + photos</li>
           </ul>
           <p class="stack-sm">
             <a class="btn button-primary" href="/memberships.html#unlimited">Join Unlimited — 50% Off</a>
             <a class="btn button-secondary" target="_blank" rel="noopener"
-               href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=body&utm_campaign=book_walk">Book a Casual Walk</a>
+               href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=body&utm_campaign=book_walk"
+               onclick="gtag && gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
+               Book a Casual Walk
+            </a>
           </p>
         </article>
+      </div>
+    </section>
+
+    <!-- How to Book (snippet-friendly) -->
+    <section>
+      <div class="container">
+        <h2>How to Book</h2>
+        <ol class="list-check" style="padding-left:1.25rem">
+          <li>Create your account in our client portal.</li>
+          <li>Choose a time window around Middle Park Beach or Canterbury Rd.</li>
+          <li>Your dog enjoys a solo walk; you receive GPS + photo updates.</li>
+        </ol>
+        <p class="cta-buttons" style="gap:10px">
+          <a class="btn button-primary" target="_blank" rel="noopener"
+             href="https://www.timetopet.com/portal/woofofwalkstreet/create-account"
+             onclick="gtag && gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
+             Create Account
+          </a>
+          <a class="btn" href="/memberships.html">Compare Memberships</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Internal linking hub (local cluster) -->
+    <section>
+      <div class="container">
+        <h2>Nearby Suburbs We Also Serve</h2>
+        <p class="muted">Looking just outside Middle Park? Explore our local guides:</p>
+        <p class="cta-buttons" style="flex-wrap:wrap">
+          <a class="btn btn-ghost" href="/dog-walker-albert-park.html">Albert Park</a>
+          <a class="btn btn-ghost" href="/dog-walking-south-melbourne">South Melbourne</a>
+          <a class="btn btn-ghost" href="/dog-walking-port-melbourne">Port Melbourne</a>
+          <a class="btn btn-ghost" href="/dog-walking-southbank">Southbank</a>
+        </p>
       </div>
     </section>
 
@@ -274,7 +314,10 @@
           <a href="tel:+61456754050">+61 456 754 050</a> · <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a>
         </p>
         <p><a class="btn button-primary" target="_blank" rel="noopener"
-              href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=footer&utm_campaign=book_now_footer">Book Now</a></p>
+              href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=footer&utm_campaign=book_now_footer"
+              onclick="gtag && gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
+              Book Now
+        </a></p>
       </section>
 
       <nav class="footer-col" aria-label="Primary">
@@ -321,8 +364,15 @@
 
   <!-- Promo close -->
   <script>
-    document.getElementById('promo-close')?.addEventListener('click',()=>{document.getElementById('promo').style.display='none';try{sessionStorage.setItem('promoDismissed','1');}catch(e){}});
-    try{if(sessionStorage.getItem('promoDismissed')==='1'){document.getElementById('promo').style.display='none';}}catch(e){}
+    document.getElementById('promo-close')?.addEventListener('click',()=>{
+      document.getElementById('promo').style.display='none';
+      try{sessionStorage.setItem('promoDismissed','1');}catch(e){}
+    });
+    try{
+      if(sessionStorage.getItem('promoDismissed')==='1'){
+        document.getElementById('promo').style.display='none';
+      }
+    }catch(e){}
   </script>
 </body>
 </html>

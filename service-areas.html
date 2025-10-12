@@ -3,14 +3,111 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Service Areas — Dog Walking & Boutique Boarding (South Melbourne) | The Woof of Walk Street</title>
-  <meta name="description" content="Solo dog walking and boutique weekend boarding across South Melbourne, Albert Park, Port Melbourne, Middle Park and Southbank. One-dog-only walks with GPS tracking and photo updates." />
+
+  <title>Service Areas | Solo Dog Walking & Boutique Boarding in South Melbourne, Albert Park, Port Melbourne, Middle Park & Southbank</title>
+  <meta name="description" content="We walk one dog at a time across South Melbourne, Albert Park, Port Melbourne, Middle Park and Southbank. GPS-tracked walks, photo updates, and boutique one-guest weekend boarding." />
   <link rel="canonical" href="https://www.woofofwalkstreet.com/service-areas.html" />
   <link rel="icon" href="/images/brand/favicon.ico" />
 
   <!-- Styles -->
   <link rel="stylesheet" href="/css/mini.css" />
   <link rel="stylesheet" href="/css/styles.css" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Service Areas — Solo Dog Walking & Boutique Boarding">
+  <meta property="og:description" content="One-dog-only walks with GPS tracking and photo updates across South Melbourne, Albert Park, Port Melbourne, Middle Park & Southbank.">
+  <meta property="og:url" content="https://www.woofofwalkstreet.com/service-areas.html">
+  <meta property="og:image" content="https://www.woofofwalkstreet.com/images/brand/hero-dog-skyline-1200.webp">
+  <meta property="og:locale" content="en_AU">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Breadcrumbs JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
+      {"@type":"ListItem","position":2,"name":"Service Areas","item":"https://www.woofofwalkstreet.com/service-areas.html"}
+    ]
+  }
+  </script>
+
+  <!-- Hub schema: CollectionPage + ItemList + FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://www.woofofwalkstreet.com/service-areas.html#collection",
+        "name": "Service Areas — The Woof of Walk Street",
+        "isPartOf": {"@id": "https://www.woofofwalkstreet.com/"},
+        "description": "Solo dog walking and boutique weekend boarding across South Melbourne, Albert Park, Port Melbourne, Middle Park and Southbank.",
+        "about": {
+          "@type": "PetService",
+          "name": "The Woof of Walk Street",
+          "areaServed": ["South Melbourne","Albert Park","Port Melbourne","Middle Park","Southbank"]
+        },
+        "mainEntity": {"@id": "https://www.woofofwalkstreet.com/service-areas.html#areas"}
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://www.woofofwalkstreet.com/service-areas.html#areas",
+        "name": "Areas we serve",
+        "itemListElement": [
+          {
+            "@type":"ListItem","position":1,
+            "name":"Dog Walking in South Melbourne",
+            "item":{"@type":"WebPage","url":"https://www.woofofwalkstreet.com/dog-walking-south-melbourne"}
+          },
+          {
+            "@type":"ListItem","position":2,
+            "name":"Dog Walker in Albert Park",
+            "item":{"@type":"WebPage","url":"https://www.woofofwalkstreet.com/dog-walker-albert-park.html"}
+          },
+          {
+            "@type":"ListItem","position":3,
+            "name":"Dog Walking in Port Melbourne",
+            "item":{"@type":"WebPage","url":"https://www.woofofwalkstreet.com/dog-walking-port-melbourne"}
+          },
+          {
+            "@type":"ListItem","position":4,
+            "name":"Dog Walker in Middle Park",
+            "item":{"@type":"WebPage","url":"https://www.woofofwalkstreet.com/dog-walker-middle-park.html"}
+          },
+          {
+            "@type":"ListItem","position":5,
+            "name":"Dog Walker in Southbank",
+            "item":{"@type":"WebPage","url":"https://www.woofofwalkstreet.com/dog-walker-southbank.html"}
+          }
+        ]
+      },
+      {
+        "@type":"FAQPage",
+        "@id":"https://www.woofofwalkstreet.com/service-areas.html#faq",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"Do you cover my postcode?",
+            "acceptedAnswer":{"@type":"Answer","text":"We currently serve 3205, 3206, 3207, 3006 and parts of 3004. Use the postcode checker on this page to confirm coverage."}
+          },
+          {
+            "@type":"Question",
+            "name":"Do you walk more than one dog at a time?",
+            "acceptedAnswer":{"@type":"Answer","text":"No. We are strictly one-dog-only for safety, focus and calmer outings."}
+          },
+          {
+            "@type":"Question",
+            "name":"What updates do I receive after a walk?",
+            "acceptedAnswer":{"@type":"Answer","text":"After every walk you’ll receive a GPS route, photos and quick notes about how your dog did."}
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 
   <!-- Small page-scoped styles for the icon grid -->
   <style>
@@ -24,62 +121,33 @@
     .h2-link:hover, .h2-link:focus { text-decoration:underline; }
     #postcode-input{ font-size:1.05rem; padding:.55rem .8rem; border-radius:10px; border:1px solid var(--stroke,#dfe3e8); width:min(420px,90%); }
   </style>
-
-  <!-- Open Graph / Twitter -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Service Areas — Dog Walking & Boutique Boarding (South Melbourne)">
-  <meta property="og:description" content="Solo dog walking and boutique weekend boarding across South Melbourne, Albert Park, Port Melbourne, Middle Park and Southbank.">
-  <meta property="og:url" content="https://www.woofofwalkstreet.com/service-areas.html">
-  <meta property="og:image" content="https://www.woofofwalkstreet.com/images/brand/hero-dog-skyline-1200.webp">
-  <meta property="og:locale" content="en_AU">
-  <meta name="twitter:card" content="summary_large_image">
-
-  <!-- Google Ads Global Site Tag -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'AW-17527927259');
-  </script>
-
-  <!-- Breadcrumbs JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
-      {"@type":"ListItem","position":2,"name":"Service Areas","item":"https://www.woofofwalkstreet.com/service-areas.html"}
-    ]
-  }
-  </script>
 </head>
 <body>
 
   <!-- Promo ribbon -->
-  <div id="promo" class="promo-ribbon promo--edge">
+  <div id="promo" class="promo-ribbon promo--edge" role="region" aria-label="Promo: 50% off">
     <div class="promo-inner container">
       <img class="promo-dog" src="/images/brand/dog-in-suit.webp" alt="" width="28" height="28" decoding="async" />
       <span class="promo-copy"><strong>50% OFF</strong> Unlimited Daily Walks — 45-minute solo walks · GPS tracked · Photo updates</span>
-      <a href="/membership-unlimited.html" class="promo-cta">Learn More →</a>
+      <a href="/memberships.html#unlimited" class="promo-cta">Learn More →</a>
       <button id="promo-close" class="promo-close" aria-label="Dismiss promo">✕</button>
     </div>
   </div>
 
   <!-- Impact ribbon -->
-  <div class="impact-ribbon" role="note">
+  <div class="impact-ribbon" role="note" aria-label="Walks that do more: 10% donated">
     <div class="impact-inner">
       <span class="impact-emoji" aria-hidden="true">💛</span>
       <strong>Walks That Do More:</strong>
-      We donate <strong>10% of profits</strong> to support local dog rescue and community impact.
-      <a class="impact-cta" href="/community.html">See our Community →</a>
+      When you choose us, you’re not just booking a dog walk — you’re helping rescue dogs too.
+      <strong>We donate 10% of profits</strong> to local shelters.
+      <a class="impact-cta" href="/community.html">See our impact →</a>
     </div>
   </div>
 
   <!-- HEADER -->
-  <header class="site-header">
-    <div class="navbar container">
+  <header class="site-header" role="banner">
+    <div class="navbar container" role="navigation" aria-label="Main">
       <a class="brand" href="/" aria-label="Go to home">
         <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="56" height="56">
         <strong>The Woof of Walk Street</strong>
@@ -105,7 +173,7 @@
         <a href="/faq.html">FAQs</a>
         <a href="/search.html">Search</a>
         <a class="btn button-primary nav-cta"
-           href="https://www.timetopet.com/portal/woofofwalkstreet"
+           href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=header&utm_campaign=book_now"
            target="_blank" rel="noopener">Book Now</a>
       </nav>
     </div>
@@ -115,6 +183,7 @@
     <!-- HERO -->
     <section class="hero">
       <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="/">Home</a> › Service Areas</nav>
         <h1>Dog Walking & Boutique Boarding — Service Areas</h1>
         <p class="subhead">
           One-dog-only walks and one-guest weekend boarding across <strong>South Melbourne</strong>,
@@ -131,31 +200,31 @@
         <div class="area-grid">
           <figure class="area-card">
             <img src="/images/service-areas/south-melbourne-market.webp"
-                 alt="South Melbourne Market night scene with diners" loading="lazy" width="600" height="400">
+                 alt="South Melbourne Market evening — local walking routes" loading="lazy" width="600" height="400">
             <a href="/dog-walking-south-melbourne">South Melbourne Market</a>
           </figure>
 
           <figure class="area-card">
             <img src="/images/service-areas/albert-park-lake.webp"
-                 alt="Albert Park Lake loop with palms and water" loading="lazy" width="600" height="400">
+                 alt="Albert Park Lake loop and palms — great decompression walks" loading="lazy" width="600" height="400">
             <a href="/dog-walker-albert-park.html">Albert Park Lake</a>
           </figure>
 
           <figure class="area-card">
             <img src="/images/service-areas/port-melbourne-dog-beach.webp"
-                 alt="Dog playing at the Port Melbourne dog beach" loading="lazy" width="600" height="400">
-            <a href="/dog-walker-port-melbourne.html">Port Melbourne Beach</a>
+                 alt="Port Melbourne dog beach — relaxed foreshore routes" loading="lazy" width="600" height="400">
+            <a href="/dog-walking-port-melbourne">Port Melbourne Beach</a>
           </figure>
 
           <figure class="area-card">
             <img src="/images/service-areas/middle-park-beach.webp"
-                 alt="Middle Park Beach shoreline on a sunny day" loading="lazy" width="600" height="400">
+                 alt="Middle Park Beach and quiet streets — steady routines" loading="lazy" width="600" height="400">
             <a href="/dog-walker-middle-park.html">Middle Park Beach</a>
           </figure>
 
           <figure class="area-card" style="grid-column:1 / -1">
             <img src="/images/service-areas/southbank-river.webp"
-                 alt="Southbank skyline along the Yarra River" loading="lazy" width="1200" height="400">
+                 alt="Southbank riverside path — lower-arousal apartment dog routes" loading="lazy" width="1200" height="400">
             <a href="/dog-walker-southbank.html">Southbank River Walk</a>
           </figure>
         </div>
@@ -171,7 +240,7 @@
         <p>
           Our home base. Calm, <strong>one-dog-only walks</strong> around St Vincent Gardens, the Market laneways and nearby
           streets. Every outing includes <strong>GPS tracking</strong> and <strong>photo updates</strong>. Weekend boarding is
-          <strong> one guest only</strong> in a quiet, home-style setting.
+          <strong>one guest only</strong> in a quiet, home-style setting.
         </p>
         <p class="cta-buttons">
           <a class="btn button-primary" href="/dog-walking-south-melbourne">See South Melbourne Walking</a>
@@ -184,10 +253,10 @@
     <section>
       <div class="container">
         <h2 id="albert-park">
-          <a class="h2-link" href="/dog-walker-albert-park.html">Dog Walking in Albert Park</a>
+          <a class="h2-link" href="/dog-walker-albert-park.html">Dog Walker in Albert Park</a>
         </h2>
         <p>
-          Tailored routes around <strong>Albert Park Lake</strong> with clear sight-lines and space to decompress — great for
+          Tailored routes around <strong>Albert Park Lake</strong> with clear sight-lines and space to decompress — ideal for
           sensitive or reactive pups. Solo pace, enrichment-led, and always followed by GPS + photo proof.
         </p>
       </div>
@@ -197,7 +266,7 @@
     <section>
       <div class="container">
         <h2 id="port-melbourne">
-          <a class="h2-link" href="/dog-walker-port-melbourne.html">Dog Walking in Port Melbourne</a>
+          <a class="h2-link" href="/dog-walking-port-melbourne">Dog Walking in Port Melbourne</a>
         </h2>
         <p>
           Breezy foreshore strolls and wide residential streets make Port Melbourne perfect for relaxed, predictable walks.
@@ -210,7 +279,7 @@
     <section>
       <div class="container">
         <h2 id="middle-park">
-          <a class="h2-link" href="/dog-walker-middle-park.html">Dog Walking in Middle Park</a>
+          <a class="h2-link" href="/dog-walker-middle-park.html">Dog Walker in Middle Park</a>
         </h2>
         <p>
           Quiet streets and pocket parks suit seniors and chill-tempered pups. We adjust distance and tempo for joints,
@@ -223,7 +292,7 @@
     <section>
       <div class="container">
         <h2 id="southbank">
-          <a class="h2-link" href="/dog-walker-southbank.html">Dog Walking in Southbank</a>
+          <a class="h2-link" href="/dog-walker-southbank.html">Dog Walker in Southbank</a>
         </h2>
         <p>
           For apartment dogs, structure is everything. We use riverside paths and quieter backstreets to keep arousal low and
@@ -252,7 +321,7 @@
       <div class="container center">
         <h2>Book a Walk or Weekend Stay</h2>
         <p>Ready to give your pup calm, one-on-one care with full transparency?</p>
-        <div class="cta-buttons">
+        <div class="cta-buttons" style="justify-content:center">
           <a class="btn button-primary" href="https://www.timetopet.com/portal/woofofwalkstreet" target="_blank" rel="noopener">Book Now</a>
           <a class="btn" href="/dog-walking-south-melbourne">Explore Dog Walking</a>
           <a class="btn" href="/boarding-services.html">Explore Boarding</a>
@@ -307,33 +376,26 @@
     <div class="container footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   </footer>
-<script>
-  (function () {
-    const btn  = document.querySelector('.nav-group-btn[aria-controls="nav-services"]');
-    const list = document.getElementById('nav-services');
-    if (!btn || !list) return;
 
-    // Start closed on mobile; respect aria-expanded
-    const sync = () => { list.hidden = btn.getAttribute('aria-expanded') !== 'true'; };
-    sync();
-
-    btn.addEventListener('click', () => {
-      const open = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!open));
+  <!-- Services dropdown + promo close -->
+  <script>
+    (function () {
+      const btn=document.querySelector('.nav-group-btn[aria-controls="nav-services"]');
+      const list=document.getElementById('nav-services'); if(!btn||!list) return;
+      const sync=()=>{ list.hidden = btn.getAttribute('aria-expanded')!=='true'; };
       sync();
-    });
+      btn.addEventListener('click',()=>{ const open=btn.getAttribute('aria-expanded')==='true'; btn.setAttribute('aria-expanded', String(!open)); sync(); });
+      document.addEventListener('click',(e)=>{ if(!btn.contains(e.target)&&!list.contains(e.target)){ btn.setAttribute('aria-expanded','false'); sync(); } }, {capture:true});
+      document.addEventListener('keydown',(e)=>{ if(e.key==='Escape'){ btn.setAttribute('aria-expanded','false'); sync(); } });
+    })();
 
-    document.addEventListener('click', (e) => {
-      if (!btn.contains(e.target) && !list.contains(e.target)) {
-        btn.setAttribute('aria-expanded', 'false'); sync();
-      }
-    }, { capture: true });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') { btn.setAttribute('aria-expanded', 'false'); sync(); }
+    document.getElementById('promo-close')?.addEventListener('click',()=>{
+      document.getElementById('promo').style.display='none';
+      try{ sessionStorage.setItem('promoDismissed','1'); }catch(e){}
     });
-  })();
-</script>
+    try{ if(sessionStorage.getItem('promoDismissed')==='1'){ document.getElementById('promo').style.display='none'; } }catch(e){}
+  </script>
+
   <!-- Postcode Checker JS -->
   <script>
     const coveredPostcodes = ["3205","3206","3207","3006","3004"]; // South Melbourne, Albert Park/Middle Park, Port Melbourne, Southbank, St Kilda Rd

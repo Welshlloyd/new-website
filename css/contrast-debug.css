@@ -1,0 +1,103 @@
+/* ===============================================
+   Contrast Debug Overlay (temporary helper)
+   Turn on by adding class="debug-contrast" to <html>
+   or by loading contrast-toggle.js and pressing Alt + D.
+   =============================================== */
+
+/* Base: light grid on all blocks so layout edges are obvious */
+html.debug-contrast *{
+  outline: 1px solid rgba(255,0,0,.12);
+  outline-offset: -1px;
+}
+
+/* Known dark-surface sections: add stripes + label */
+html.debug-contrast .section--ink,
+html.debug-contrast .why-local,
+html.debug-contrast .impact-ribbon,
+html.debug-contrast .site-footer,
+html.debug-contrast .hero.hero--edge,
+html.debug-contrast .ipoo-strip,
+html.debug-contrast .m-card.dark{
+  position: relative;
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      rgba(0,0,0,.22) 0px,
+      rgba(0,0,0,.22) 10px,
+      rgba(0,0,0,0) 10px,
+      rgba(0,0,0,0) 20px
+    ),
+    var(--_orig-bg, none);
+  background-blend-mode: multiply;
+}
+html.debug-contrast .section--ink::after,
+html.debug-contrast .why-local::after,
+html.debug-contrast .impact-ribbon::after,
+html.debug-contrast .site-footer::after,
+html.debug-contrast .hero.hero--edge::after,
+html.debug-contrast .ipoo-strip::after,
+html.debug-contrast .m-card.dark::after{
+  content:"DARK SURFACE — ensure text is LIGHT";
+  position:absolute; right:8px; top:6px; z-index:9999;
+  font: 700 11px/1.8 system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;
+  color:#fff; background:#111a; padding:2px 8px; border-radius:999px;
+  border:1px solid rgba(255,255,255,.25); letter-spacing:.2px;
+}
+
+/* Known light-surface sections: soft stripes + label */
+html.debug-contrast .hero:not(.hero--edge),
+html.debug-contrast .section:not(.section--ink):not(.why-local),
+html.debug-contrast .card:not(.dark),
+html.debug-contrast .container.bg-white{
+  position:relative;
+  background-image:
+    repeating-linear-gradient(
+      -45deg,
+      rgba(255,255,0,.18) 0px,
+      rgba(255,255,0,.18) 10px,
+      rgba(255,255,255,0) 10px,
+      rgba(255,255,255,0) 20px
+    ),
+    var(--_orig-bg, none);
+  background-blend-mode: multiply;
+}
+html.debug-contrast .hero:not(.hero--edge)::after,
+html.debug-contrast .section:not(.section--ink):not(.why-local)::after,
+html.debug-contrast .card:not(.dark)::after,
+html.debug-contrast .container.bg-white::after{
+  content:"LIGHT SURFACE — ensure text is DARK";
+  position:absolute; right:8px; top:6px; z-index:9999;
+  font: 700 11px/1.8 system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;
+  color:#111; background:#fffa; padding:2px 8px; border-radius:999px;
+  border:1px solid rgba(0,0,0,.2); letter-spacing:.2px;
+}
+
+/* Text beacons: mark headings/paragraphs to spot low contrast quickly */
+html.debug-contrast h1, html.debug-contrast h2, html.debug-contrast h3,
+html.debug-contrast p, html.debug-contrast li, html.debug-contrast a{
+  position:relative;
+}
+html.debug-contrast h1::before, html.debug-contrast h2::before, html.debug-contrast h3::before{
+  content:"Aa"; position:absolute; left:-1.2em; top:.1em;
+  font-weight:900; font-size:.7em; line-height:1;
+  color:#fff; background:#000; padding:.15em .35em; border-radius:4px;
+  mix-blend-mode: difference; opacity:.55;
+}
+html.debug-contrast p::before, html.debug-contrast li::before, html.debug-contrast a::before{
+  content:"•"; position:absolute; left:-.9em; top:.1em;
+  color:#000; background:#fff; border-radius:50%; width:12px; height:12px; text-align:center;
+  font-weight:900; line-height:12px; font-size:10px; mix-blend-mode: difference; opacity:.5;
+}
+
+/* High-risk nav/header zones: force visible while debugging */
+html.debug-contrast .site-header, html.debug-contrast .navbar, html.debug-contrast .nav-links a{
+  color:#fff !important;
+}
+html.debug-contrast .nav-links a::after{
+  content:"NAV"; font-size:.7em; padding:.1em .35em; margin-left:.35em;
+  border-radius:999px; background:#111a; color:#fff; border:1px solid rgba(255,255,255,.25);
+}
+
+/* Utility: if you want to manually tag a block, add .dark or .light */
+.dark{ background-color: #10151d !important; color:#fff !important; }
+.light{ background-color: #fff !important; color:#111 !important; }

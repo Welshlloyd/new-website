@@ -1,0 +1,165 @@
+/* =======================================================
+   mini.light.css — Woof of Walk Street (brand light theme)
+   Scope: html[data-theme="light"]
+   Pair with mini.dark.css and theme toggle script
+   ======================================================= */
+
+html[data-theme="light"] {
+  color-scheme: light;
+
+  /* ---- Light tokens ---- */
+  --bg: #ffffff;
+  --surface: #f9fafb;
+  --surface-2: #f1f3f5;
+  --line: #e3e7ec;
+
+  --ink: #111824;
+  --ink-2: #2b3645;
+  --muted: #5b6775;
+
+  --brand: #f5b200;  /* gold */
+  --brand-ink: #111;
+  --accent: #006d77; /* aqua accent */
+  --ok: #2a7a3a;
+  --warn: #f5b200;
+  --danger: #d32f2f;
+
+  --shadow: 0 8px 20px rgba(0,0,0,.08);
+  --radius: 12px;
+  --btn-radius: 28px;
+  --container: 1120px;
+}
+
+/* ---- Base ---- */
+html[data-theme="light"] body {
+  background: var(--bg);
+  color: var(--ink);
+}
+html[data-theme="light"] :where(p,li,small){ color: var(--muted); }
+html[data-theme="light"] a{
+  color: var(--brand);
+  text-decoration-color: color-mix(in srgb, var(--brand) 55%, transparent);
+}
+html[data-theme="light"] a:hover{
+  color: #ffcb00;
+  text-decoration-color: currentColor;
+}
+
+/* ---- Headings ---- */
+html[data-theme="light"] h1,
+html[data-theme="light"] h2,
+html[data-theme="light"] h3{
+  color: var(--ink);
+  letter-spacing: -0.015em;
+}
+
+/* ---- Containers / Cards ---- */
+html[data-theme="light"] .container{
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+html[data-theme="light"] .card,
+html[data-theme="light"] .m-card{
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  color: var(--ink);
+}
+html[data-theme="light"] .section.alt,
+html[data-theme="light"] .m-card.alt{
+  background: var(--surface-2);
+  border-block: 1px solid var(--line);
+}
+
+/* ---- Header / Nav ---- */
+html[data-theme="light"] .site-header{
+  backdrop-filter: saturate(120%) blur(8px);
+  background: rgba(255,255,255,.8);
+  border-bottom: 1px solid var(--line);
+}
+html[data-theme="light"] .navbar .brand strong{ color: var(--ink); }
+html[data-theme="light"] .nav-links a{ color: var(--ink-2); }
+html[data-theme="light"] .nav-links a:hover{ color: var(--brand); }
+html[data-theme="light"] .nav-group-list{
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+/* ---- Buttons ---- */
+html[data-theme="light"] .btn,
+html[data-theme="light"] .button-primary,
+html[data-theme="light"] .cta-button:not(.secondary){
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: .5rem;
+  background: var(--brand);
+  color: var(--brand-ink);
+  border: 1px solid color-mix(in srgb, var(--brand) 70%, #000 20%);
+  border-radius: var(--btn-radius);
+  padding: 12px 18px;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(245,178,0,.25);
+  transition: transform .15s, box-shadow .15s;
+}
+html[data-theme="light"] .btn:hover,
+html[data-theme="light"] .cta-button:not(.secondary):hover{
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 10px 26px rgba(245,178,0,.35);
+}
+html[data-theme="light"] .cta-button.secondary,
+html[data-theme="light"] .btn.button-secondary,
+html[data-theme="light"] .btn-ghost{
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+html[data-theme="light"] .cta-button.secondary:hover,
+html[data-theme="light"] .btn.button-secondary:hover,
+html[data-theme="light"] .btn-ghost:hover{
+  background: var(--surface-2);
+}
+
+/* ---- Hero ---- */
+html[data-theme="light"] .hero,
+html[data-theme="light"] .m-hero{
+  background:
+    radial-gradient(1200px 600px at 20% -20%, rgba(245,178,0,.08), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,1), rgba(255,255,255,.95));
+  color: var(--ink);
+  border-bottom: 1px solid var(--line);
+}
+html[data-theme="light"] .m-hero-card{
+  background: #fff;
+  color: var(--ink);
+  border: 1px solid #e4e8ee;
+  box-shadow: var(--shadow);
+}
+html[data-theme="light"] .m-badge{
+  background: var(--brand);
+  color: #111;
+}
+
+/* ---- Footer ---- */
+html[data-theme="light"] .site-footer{
+  background: var(--surface);
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+}
+html[data-theme="light"] .footer-bottom{
+  border-top: 1px solid var(--line);
+}
+
+/* ---- Utilities ---- */
+html[data-theme="light"] .muted{ color: var(--muted)!important; }
+html[data-theme="light"] .ok{ color: var(--ok)!important; }
+html[data-theme="light"] .warn{ color: var(--warn)!important; }
+html[data-theme="light"] .danger{ color: var(--danger)!important; }
+
+/* ---- Mobile tweaks ---- */
+@media (max-width:640px){
+  html[data-theme="light"] .cta-button,
+  html[data-theme="light"] .btn{ width:100%; }
+}

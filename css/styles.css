@@ -361,8 +361,95 @@ html, body { color: var(--text-dark); }
 .hero.hero--edge,
 .site-footer,
 .navbar.navbar--dark {
-  color: var(--text-light);
+  color: var(--text-/* =======================
+   UNLIMITED PAGE FIX PACK
+   ======================= */
+
+/* 1) Opt-in: add class="unlimited" on the <body> of the Unlimited page */
+body.unlimited{
+  /* Dark canvas + light text */
+  --bg:#0b0e12;            /* page background */
+  --ink:#e6edf3;           /* default text */
+  --muted:#a9b4c0;
+  --border:#1d232c;
+  --surface:#0f1318;       /* dark cards if you use them later */
 }
+
+/* 2) Global text colour on the dark canvas */
+body.unlimited,
+body.unlimited main,
+body.unlimited section,
+body.unlimited .container{
+  color:var(--ink);
+}
+
+/* 3) Header/nav: brighter and readable on dark */
+body.unlimited .site-header{
+  background:rgba(11,14,18,.88);
+  border-bottom:1px solid #2b3440;
+  backdrop-filter:saturate(115%) blur(8px);
+}
+body.unlimited .brand strong{ color:#f7f9fb; font-weight:900; }
+body.unlimited .nav-links a{ color:#cfd6df; font-weight:600; }
+body.unlimited .nav-links a:hover{ color:#ffffff; text-decoration:none; }
+body.unlimited .nav-cta{ 
+  background:#ffd166; color:#111; 
+  border:1px solid rgba(0,0,0,.12); 
+  box-shadow:0 10px 26px rgba(255,209,102,.25);
+}
+
+/* 4) Hero image top fade so the header doesn’t clash */
+body.unlimited .m-hero-visual::after{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(to top, rgba(0,0,0,.0) 55%, rgba(0,0,0,.45) 100%);
+  pointer-events:none;
+}
+
+/* 5) The white hero card: keep it high-contrast on dark */
+body.unlimited .m-hero-card{
+  background:rgba(255,255,255,.98);
+  color:#0b0e12;                      /* make sure all text inside is dark */
+  border:1px solid rgba(0,0,0,.10);
+  box-shadow:0 22px 50px rgba(0,0,0,.35);
+}
+body.unlimited .m-hero-card h1,
+body.unlimited .m-hero-card p,
+body.unlimited .m-hero-card li{ color:#0b0e12; }
+
+/* 6) Hero buttons: bold & edgy */
+body.unlimited .m-hero-card .cta-button{
+  background:linear-gradient(180deg,#ffdd6a 0%, #f5b200 100%);
+  color:#111; border:0;
+  box-shadow:0 12px 26px rgba(245,178,0,.35);
+}
+body.unlimited .m-hero-card .cta-button.secondary{
+  background:#0b0e12; color:#fff; border:2px solid #111;
+}
+
+/* 7) Links inside dark sections */
+body.unlimited a{ color:#9cd8ff; text-decoration-color:rgba(156,216,255,.5); }
+body.unlimited a:hover{ color:#cfe9ff; text-decoration-color:currentColor; }
+
+/* 8) Sticky CTA: brighter on dark */
+body.unlimited .sticky-cta{
+  background:rgba(255,255,255,.96); color:#111; border:1px solid rgba(0,0,0,.08);
+}
+body.unlimited .sticky-cta .cta-button{
+  background:linear-gradient(180deg,#ffdd6a 0%, #f5b200 100%);
+  color:#111;
+}
+
+/* 9) Headings in content sections on dark */
+body.unlimited h2, body.unlimited h3{ color:#f7f9fb; }
+
+/* 10) If any element forces a white background inline, ensure dark text */
+body.unlimited :where(section,div,article,header,nav)[style*="background:#fff"],
+body.unlimited :where(section,div,article,header,nav)[style*="background: #fff"]{
+  color:#0b0e12 !important;
+}
+
+
+
 
 /* ---------- Page-specific: About (forces light, high-contrast) ---------- */
 body.about{

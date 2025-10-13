@@ -511,3 +511,57 @@ body.about .impact-ribbon a:hover{text-decoration:underline}
 /* Trust ticks (default) */
 .m-trust li{color:var(--muted)}
 .m-trust li::before{content:"✔";color:var(--ok);font-weight:800;position:relative;left:auto}
+
+/* === Readability hotfix (site-wide) === */
+
+/* Default body text: dark */
+html, body { color: #0b0e12; }
+
+/* Always LIGHT text on obviously dark sections */
+.hero.hero--edge,
+.section--ink,
+.why-local,
+.site-footer,
+.impact-ribbon {
+  color: #ffffff !important;
+}
+
+/* Always DARK text on light/white sections & cards */
+.hero:not(.hero--edge),
+.section:not(.section--ink):not(.why-local),
+.card:not(.dark),
+.container.bg-white {
+  color: #0b0e12 !important;
+}
+
+/* If any element forces a white background inline, make the text dark */
+:where(section,div,article,header,main,aside,nav)[style*="background:#fff"],
+:where(section,div,article,header,main,aside,nav)[style*="background: #fff"],
+:where(section,div,article,header,main,aside,nav)[style*="background-color:#fff"],
+:where(section,div,article,header,main,aside,nav)[style*="background-color: #fff"]{
+  color:#0b0e12 !important;
+}
+/* Unlimited page: header readable over dark hero, then flip on scroll */
+.page-unlimited .site-header{
+  background: transparent;
+  border-bottom: 1px solid rgba(255,255,255,.18);
+}
+.page-unlimited .navbar .brand strong,
+.page-unlimited .nav-links a,
+.page-unlimited .nav-links .btn,
+.page-unlimited .nav-links .cta-button {
+  color: #fff !important;
+}
+.page-unlimited .nav-links a:hover { text-decoration: underline; }
+
+/* After you start scrolling, revert to the normal light header */
+.page-unlimited.scrolled .site-header{
+  background: #ffffff;
+  border-bottom: 1px solid var(--border, #e6e9ef);
+}
+.page-unlimited.scrolled .navbar .brand strong,
+.page-unlimited.scrolled .nav-links a,
+.page-unlimited.scrolled .nav-links .btn,
+.page-unlimited.scrolled .nav-links .cta-button {
+  color: var(--ink, #0c1016) !important;
+}

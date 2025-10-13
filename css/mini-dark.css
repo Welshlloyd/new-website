@@ -1,194 +1,134 @@
-/* =======================================================
-   mini.dark.css — Woof of Walk Street (brand dark theme)
-   Scope: only when html[data-theme="dark"] is present.
-   Keep mini.css loaded BEFORE this file.
-   ======================================================= */
+/* =========================================================
+   mini.dark.css
+   Global dark-mode overrides for The Woof of Walk Street
+   Ensures perfect readability:
+   - White text on dark surfaces
+   - Black text on light surfaces
+   ========================================================= */
 
-html[data-theme="dark"] {
-  color-scheme: dark;
-
-  /* ---- Dark tokens (brand tuned) ---- */
+/* Root dark theme colors */
+:root[data-theme="dark"] {
   --bg: #0b0e12;
-  --surface: #0f1318;
-  --surface-2: #171c23;
-  --line: #1d232c;
-
-  --ink: #e6edf3;      /* primary text */
-  --ink-2: #cdd7e1;    /* secondary text */
-  --muted: #9aa6b2;    /* tertiary text */
-
-  --brand: #ffd166;    /* gold */
-  --brand-ink: #111;
-  --accent: #5af2c6;   /* aqua accent */
-  --ok: #46b067;
-  --warn: #ffd166;
-  --danger: #ff6b6b;
-
-  --shadow: 0 14px 40px rgba(0,0,0,.45);
-  --radius: 12px;
-  --btn-radius: 28px;
-
-  /* Containers */
-  --container: 1120px;
+  --card: #141a21;
+  --line: #1f2a2f;
+  --text: #ffffff;
+  --muted: #d5dee8;
+  --brand: #ffd166;
+  --brand-ink: #0b0e12;
+  --accent: #5af2c6;
+  --shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
 }
 
-/* ---- Base ---- */
-html[data-theme="dark"] body {
-  background: var(--bg);
-  color: var(--ink);
-}
-html[data-theme="dark"] :where(p,li,small) { color: var(--ink-2); }
-html[data-theme="dark"] a {
-  color: var(--brand);
-  text-decoration-color: color-mix(in srgb, var(--brand) 55%, transparent);
-}
-html[data-theme="dark"] a:hover {
-  color: #ffe59f;
-  text-decoration-color: currentColor;
+/* ----- General dark-mode surfaces ----- */
+[data-theme="dark"] body {
+  background-color: var(--bg);
+  color: var(--text);
 }
 
-/* ---- Headings ---- */
-html[data-theme="dark"] h1,
-html[data-theme="dark"] h2,
-html[data-theme="dark"] h3 {
-  color: var(--ink);
-  letter-spacing: -0.015em;
+/* ----- White text on dark sections ----- */
+[data-theme="dark"]
+  :where(
+    .hero--edge,
+    .section--ink,
+    .impact-ribbon,
+    .why-local,
+    .site-footer,
+    .navbar.navbar--dark,
+    .on-dark
+  ) {
+  color: #fff !important;
 }
 
-/* ---- Layout helpers ---- */
-html[data-theme="dark"] .container {
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 0 16px;
-}
-html[data-theme="dark"] .card {
-  background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  color: var(--ink);
-}
-html[data-theme="dark"] .section.alt,
-html[data-theme="dark"] .m-card.dark,
-html[data-theme="dark"] .section--ink {
-  background: var(--surface-2);
-  border-block: 1px solid var(--line);
+[data-theme="dark"]
+  :where(
+    .hero--edge,
+    .section--ink,
+    .impact-ribbon,
+    .why-local,
+    .site-footer,
+    .navbar.navbar--dark,
+    .on-dark
+  )
+  :where(h1, h2, h3, h4, h5, h6, p, li, span, strong, em, small, a, button, label, input, td, th) {
+  color: #fff !important;
 }
 
-/* ---- Header / Nav ---- */
-html[data-theme="dark"] .site-header {
-  backdrop-filter: saturate(120%) blur(8px);
-  background: rgba(11,14,18,.72);
-  border-bottom: 1px solid rgba(255,255,255,.06);
-}
-html[data-theme="dark"] .navbar .brand strong { color: var(--ink); }
-html[data-theme="dark"] .nav-links a { color: var(--ink-2); }
-html[data-theme="dark"] .nav-links a:hover { color: var(--ink); }
-html[data-theme="dark"] .nav-group-list {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow);
+/* ----- Black text on light sections ----- */
+[data-theme="dark"]
+  :where(
+    .card,
+    .section:not(.section--ink):not(.why-local):not(.impact-ribbon):not(.hero--edge),
+    .container.bg-white
+  ) {
+  background: #ffffff;
+  color: #0b0e12 !important;
 }
 
-/* ---- Buttons ---- */
-html[data-theme="dark"] .btn,
-html[data-theme="dark"] .button-primary,
-html[data-theme="dark"] .cta-button:not(.secondary) {
-  display: inline-flex; align-items: center; justify-content: center;
-  gap: .5rem;
+/* ----- Links ----- */
+[data-theme="dark"] a {
+  color: #ffffff;
+  text-decoration-color: rgba(255, 255, 255, 0.6);
+}
+[data-theme="dark"] a:hover {
+  text-decoration-thickness: 2px;
+}
+
+/* ----- Muted / Subtle text ----- */
+[data-theme="dark"] .muted,
+[data-theme="dark"] .text-muted {
+  color: var(--muted);
+}
+
+/* ----- Buttons ----- */
+[data-theme="dark"] .btn-primary,
+[data-theme="dark"] .cta-button {
   background: var(--brand);
   color: var(--brand-ink);
-  border: 1px solid color-mix(in srgb, var(--brand) 75%, #000 25%);
-  border-radius: var(--btn-radius);
-  padding: 12px 18px;
-  font-weight: 900;
-  text-decoration: none;
-  box-shadow: 0 12px 26px rgba(255,209,102,.22);
-  transition: transform .15s, box-shadow .15s, filter .15s;
+  box-shadow: 0 10px 26px rgba(255, 209, 102, 0.3);
 }
-html[data-theme="dark"] .btn:hover,
-html[data-theme="dark"] .button-primary:hover,
-html[data-theme="dark"] .cta-button:not(.secondary):hover {
+[data-theme="dark"] .btn-primary:hover,
+[data-theme="dark"] .cta-button:hover {
   transform: translateY(-1px) scale(1.02);
-  box-shadow: 0 16px 34px rgba(255,209,102,.30);
-}
-html[data-theme="dark"] .btn.button-secondary,
-html[data-theme="dark"] .cta-button.secondary,
-html[data-theme="dark"] .btn-ghost {
-  background: var(--surface-2);
-  color: var(--ink);
-  border: 1px solid var(--line);
-  box-shadow: 0 8px 18px rgba(0,0,0,.25);
-}
-html[data-theme="dark"] .btn.button-secondary:hover,
-html[data-theme="dark"] .cta-button.secondary:hover,
-html[data-theme="dark"] .btn-ghost:hover {
-  background: #0c1117;
-  border-color: #2a3440;
 }
 
-/* ---- Hero / Banners ---- */
-html[data-theme="dark"] .hero,
-html[data-theme="dark"] .m-hero {
-  background:
-    radial-gradient(1200px 600px at 20% -20%, rgba(255,209,102,.10), transparent 60%),
-    linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0));
-  color: var(--ink);
-  border-bottom: 1px solid rgba(255,255,255,.06);
+[data-theme="dark"] .btn-ghost,
+[data-theme="dark"] .cta-button.secondary {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #fff;
 }
-html[data-theme="dark"] .impact-ribbon {
-  background: linear-gradient(90deg,#0c1117,#122034);
-  color: #e8fff7;
-  border-block: 3px solid #40e0c2;
-}
-html[data-theme="dark"] .impact-cta {
-  background: #1a2b3f;
-  border: 1px solid rgba(64,224,194,.35);
-  color: #cffff4;
+[data-theme="dark"] .btn-ghost:hover,
+[data-theme="dark"] .cta-button.secondary:hover {
+  border-color: #fff;
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.15);
 }
 
-/* ---- Forms ---- */
-html[data-theme="dark"] input,
-html[data-theme="dark"] select,
-html[data-theme="dark"] textarea {
-  background: #0f141b;
-  color: var(--ink);
-  border: 1px solid var(--line);
-  border-radius: 10px;
+/* ----- Navbar readability ----- */
+[data-theme="dark"] .navbar,
+[data-theme="dark"] .site-header {
+  background: rgba(11, 14, 18, 0.9);
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
-html[data-theme="dark"] input::placeholder,
-html[data-theme="dark"] textarea::placeholder { color: #8b97a6; }
-
-/* ---- Tables (minimal) ---- */
-html[data-theme="dark"] table {
-  border-collapse: collapse;
-  width: 100%;
-  color: var(--ink);
+[data-theme="dark"] .navbar a {
+  color: #ffffff;
 }
-html[data-theme="dark"] th,
-html[data-theme="dark"] td {
-  border-bottom: 1px solid var(--line);
-  padding: 10px 12px;
+
+/* ----- Footer readability ----- */
+[data-theme="dark"] .site-footer {
+  background: var(--card);
+  color: #fff;
 }
-html[data-theme="dark"] th { color: var(--ink); }
 
-/* ---- Footer ---- */
-html[data-theme="dark"] .site-footer {
-  background: var(--surface);
-  color: var(--ink-2);
-  border-top: 1px solid var(--line);
+/* ----- Optional: remove grey shadows on headings ----- */
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3 {
+  text-shadow: none !important;
 }
-html[data-theme="dark"] .footer-bottom { border-top: 1px solid var(--line); }
 
-/* ---- Utilities ---- */
-html[data-theme="dark"] .muted { color: var(--muted)!important; }
-html[data-theme="dark"] .ok { color: var(--ok)!important; }
-html[data-theme="dark"] .warn { color: var(--warn)!important; }
-html[data-theme="dark"] .danger { color: var(--danger)!important; }
-html[data-theme="dark"] .shadow { box-shadow: var(--shadow)!important; }
-
-/* ---- Mobile tweaks ---- */
-@media (max-width: 640px) {
-  html[data-theme="dark"] .cta-button,
-  html[data-theme="dark"] .btn { width: 100%; }
+/* Ensure all icons and SVGs remain visible */
+[data-theme="dark"] svg path {
+  stroke: #fff;
+  fill: #fff;
 }

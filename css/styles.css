@@ -530,6 +530,43 @@ body.about .footer-bottom{border-top:1px solid var(--border)}
 .section.alt[aria-label="Nearby areas we walk"] a { color: var(--brand, #111824); text-decoration: none; }
 .section.alt[aria-label="Nearby areas we walk"] a:hover { text-decoration: underline; }
 
+/* ---- Global readable contrast on light backgrounds ---- */
+:root{
+  --text-dark:#0b0e12;
+  --text-light:#ffffff;
+}
+
+/* Default text color is dark */
+html, body { color: var(--text-dark); }
+
+/* Common light sections get dark text automatically */
+.hero,
+.section:not(.alt),
+.card:not(.dark),
+.container,
+.promo-ribbon,
+.impact-ribbon,
+.bg-white,
+[data-theme="light"] {
+  color: var(--text-dark);
+}
+
+/* Preserve intended light-on-dark areas */
+.site-footer,
+.m-card,            /* dark content cards on Unlimited page */
+.ipoo-strip,        /* any planned dark strip */
+.section.alt,       /* if your .alt sections are dark */
+.navbar.navbar--dark,
+.footer-banner picture + img { color: var(--text-light); }
+
+/* If any component hard-sets a white background inline,
+   you still get dark text automatically */
+:where(section,div,article,header,main,aside,nav)[style*="background:#fff"],
+:where(section,div,article,header,main,aside,nav)[style*="background: #fff"],
+:where(section,div,article,header,main,aside,nav)[style*="background-color:#fff"],
+:where(section,div,article,header,main,aside,nav)[style*="background-color: #fff"]{
+  color: var(--text-dark) !important;
+}
 
 /* ===============================
    End – styles.css

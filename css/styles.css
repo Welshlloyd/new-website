@@ -445,7 +445,36 @@ body.unlimited h2, body.unlimited h3{ color:#f7f9fb; }
 /* 10) If any element forces a white background inline, ensure dark text */
 body.unlimited :where(section,div,article,header,nav)[style*="background:#fff"],
 body.unlimited :where(section,div,article,header,nav)[style*="background: #fff"]{
-  color:#0b0e12 !important;
+  color:#0b0e12 !/* ---- Theme Visibility Fix ---- */
+
+/* When in light theme, ensure dark backgrounds get light text */
+:root[data-theme="light"] .section--ink,
+:root[data-theme="light"] .why-local,
+:root[data-theme="light"] .impact-ribbon {
+  color: #ffffff !important;
+}
+
+:root[data-theme="light"] .section--ink h1,
+:root[data-theme="light"] .section--ink h2,
+:root[data-theme="light"] .section--ink h3,
+:root[data-theme="light"] .why-local h1,
+:root[data-theme="light"] .why-local h2,
+:root[data-theme="light"] .why-local h3 {
+  color: #fff !important;
+}
+
+/* Ensure nav text is visible on light hero backgrounds */
+:root[data-theme="light"] .navbar .brand strong,
+:root[data-theme="light"] .nav-links a {
+  color: #111 !important;
+}
+
+/* Make sure hero text is dark on light backgrounds */
+:root[data-theme="light"] .hero,
+:root[data-theme="light"] .hero h1,
+:root[data-theme="light"] .hero h2,
+:root[data-theme="light"] .hero .subhead {
+  color: #111 !important;
 }
 
 

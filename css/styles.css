@@ -1,26 +1,30 @@
 /* =========================================================
-   The Woof of Walk Street – styles.css
+   The Woof of Walk Street – styles.css (rev C)
    Mobile-first. Keep mini.css loaded BEFORE this file.
+   Contrast rules:
+   - Header/nav always dark with white text
+   - Light surfaces = dark text
+   - Dark strips (hero--edge / section--ink / why-local / footer / impact) = white text
    ========================================================= */
 
-/* ---------- CSS Variables (base, light by default) ---------- */
+/* ---------- CSS Variables (light default) ---------- */
 :root{
   --brand:#f5b200;
   --accent:#ffd166;
 
   --bg:#ffffff;
-  --ink:#0c1016;
+  --ink:#0c1016;     /* body text on light */
   --ink-2:#1b222c;
   --muted:#616976;
 
-  --surface:#f7f9fc;
+  --surface:#f7f9fc; /* light cards/sections */
   --surface-2:#fffaf1;
   --border:#e6e9ef;
 
   --ok:#2a7a3a;
   --shadow:0 10px 30px rgba(0,0,0,.10);
 
-  --gold:#f5b200; /* legacy var kept */
+  --gold:#f5b200;
   --line:var(--border);
   --radius:12px;
   --btn-radius:28px;
@@ -28,16 +32,16 @@
 
   --promo-h:0px; /* set via JS if promo ribbon exists */
 
-  /* helper tokens for auto-contrast */
+  /* helpers for forced color on very light/dark blocks */
   --text-dark:#0b0e12;
   --text-light:#ffffff;
 }
 
-/* Dark scheme tokens */
+/* Dark scheme tokens (auto) */
 @media (prefers-color-scheme: dark){
   :root{
     --bg:#0b0e12;
-    --ink:#e6edf3;
+    --ink:#e6edf3;  /* body text on dark */
     --ink-2:#cdd7e1;
     --muted:#97a3af;
 
@@ -52,12 +56,13 @@
   }
 }
 
-/* Optional forced theme tokens (if you flip data-theme on <html>) */
+/* Optional forced theme via <html data-theme> */
 :root[data-theme="light"] { color-scheme: light; }
 :root[data-theme="dark"]  {
   color-scheme: dark;
-  --bg:#0b0e12; --ink:#e6edf3; --muted:#9da7b3; --brand:#f5b200; --accent:#ffd166;
-  --border:#1d232c; --surface:#121821; --surface-2:#171c23; --shadow:0 12px 34px rgba(0,0,0,.5);
+  --bg:#0b0e12; --ink:#e6edf3; --ink-2:#cdd7e1; --muted:#97a3af;
+  --surface:#121821; --surface-2:#171c23; --border:#1d232c;
+  --brand:#f5b200; --accent:#ffd166; --shadow:0 12px 34px rgba(0,0,0,.5);
 }
 
 /* ---------- Base / Reset ---------- */
@@ -111,40 +116,47 @@ strong{font-weight:700}
 }
 body.with-mini-offset{padding-top:32px}
 
-/* ---------- Header / Nav ---------- */
-.site-header{position:sticky;top:var(--promo-h);z-index:1000;background:#fff;border-bottom:1px solid var(--border)}
+/* ---------- Header / Nav (ALWAYS dark, white text) ---------- */
+.site-header{
+  position:sticky;top:var(--promo-h);z-index:1000;
+  background:#0c1117;border-bottom:1px solid rgba(255,255,255,.12);
+  box-shadow:0 2px 10px rgba(0,0,0,.24);
+}
 .navbar{display:flex;align-items:center;justify-content:space-between;padding:10px 16px}
-.brand{display:flex;align-items:center;gap:10px;color:var(--ink)}
+.brand{display:flex;align-items:center;gap:10px}
 .brand img{border-radius:8px}
-.brand strong{font-size:1.15rem}
+.brand strong{font-size:1.15rem;color:#fff;font-weight:900;letter-spacing:-.2px;text-transform:uppercase}
 .nav-links{display:flex;align-items:center;gap:16px}
-.nav-links a{color:var(--ink-2);font-weight:500}
+.nav-links a{color:#e6edf3;font-weight:700;padding:8px 10px;border-radius:8px}
+.nav-links a:hover{color:#fff;background:rgba(255,255,255,.08);text-decoration:none}
+.nav-links a[aria-current="page"]{background:#ffd166;color:#111}
 .nav-cta.btn,.nav-cta.button-primary{padding:8px 14px}
 
 /* Dropdown */
 .nav-group{position:relative}
-.nav-group-btn{background:transparent;border:0;font:inherit;color:var(--ink-2);cursor:pointer;font-weight:600}
+.nav-group-btn{background:transparent;border:0;font:inherit;color:#e6edf3;cursor:pointer;font-weight:800;padding:8px 10px;border-radius:8px}
+.nav-group-btn:hover{background:rgba(255,255,255,.08)}
 .nav-group-list{
   position:absolute;top:100%;left:0;z-index:1001;display:none;min-width:240px;padding:8px;
-  border:1px solid var(--border);background:#fff;border-radius:10px;box-shadow:var(--shadow)
+  border:1px solid rgba(255,255,255,.12);background:#0f1318;border-radius:10px;box-shadow:0 14px 32px rgba(0,0,0,.35)
 }
 .nav-group-list li{list-style:none}
-.nav-group-list a{display:block;padding:8px;border-radius:8px;color:var(--ink-2)}
-.nav-group-list a:hover{background:#f6f8fb}
+.nav-group-list a{display:block;padding:10px;border-radius:8px;color:#e6edf3;font-weight:700}
+.nav-group-list a:hover{background:rgba(255,255,255,.06);text-decoration:none}
 .nav-group-btn[aria-expanded="true"] + .nav-group-list{display:block}
 
 /* Mobile hamburger */
 #nav-toggle{display:none}
-.nav-toggle{display:none;cursor:pointer;font-size:1.6rem}
+.nav-toggle{display:none;cursor:pointer;font-size:1.6rem;color:#e6edf3}
 @media (max-width:880px){
   .nav-links{
     display:none;position:absolute;left:0;right:0;top:100%;
-    background:#fff;border-bottom:1px solid var(--border);
-    padding:12px 16px;flex-direction:column;gap:10px
+    background:#0f1318;border-bottom:1px solid rgba(255,255,255,.12);
+    padding:12px 16px;flex-direction:column;gap:10px;box-shadow:0 12px 26px rgba(0,0,0,.35)
   }
   #nav-toggle:checked ~ .nav-links{display:flex}
   .nav-toggle{display:block;margin-left:auto}
-  .nav-group-list{position:static;min-width:unset;padding:6px 0;border:0;box-shadow:none}
+  .nav-group-list{position:static;min-width:unset;padding:6px 0;border:0;box-shadow:none;background:transparent}
 }
 
 /* ---------- Buttons (unified) ---------- */
@@ -169,26 +181,26 @@ body.with-mini-offset{padding-top:32px}
 .btn-ghost:hover{background:#111;color:#fff}
 .cta-buttons{display:flex;flex-wrap:wrap;gap:10px}
 
-/* ---------- Sections ---------- */
-.hero{background:var(--surface-2);padding:24px 0 26px}
-.hero h1{font-size:clamp(1.6rem,4.5vw + .6rem,2.6rem);line-height:1.15;margin:.4rem 0 .2rem}
+/* ---------- Sections (light by default) ---------- */
+.hero{background:var(--surface-2);padding:24px 0 26px;color:var(--text-dark)}
+.hero h1{font-size:clamp(1.6rem,4.5vw + .6rem,2.6rem);line-height:1.15;margin:.4rem 0 .2rem;color:var(--text-dark)}
 .subhead{font-size:clamp(1rem,2.2vw + .6rem,1.2rem);color:#46505a;margin:.25rem 0 0}
-.section{padding:28px 0}
-.section.alt{background:var(--surface)}
+.section{padding:28px 0;color:var(--text-dark)}
+.section.alt{background:var(--surface);color:var(--text-dark)}
 
-/* “Edgy” hero variant */
+/* “Edgy” dark hero variant */
 .hero.hero--edge{
   text-align:center;padding:2.2rem 1rem 2.2rem;
-  background:linear-gradient(160deg,#0b1420 0%,#1c2430 100%);color:#f8f9fa;
+  background:linear-gradient(160deg,#0b1420 0%,#1c2430 100%);color:#fff;
 }
 .hero.hero--edge h1{
-  color:#d4af37;font-size:2rem;line-height:1.2;font-weight:900;margin-bottom:.6rem;
+  color:#ffd166;font-size:2rem;line-height:1.2;font-weight:900;margin-bottom:.6rem;
   text-transform:uppercase;letter-spacing:-.5px;text-shadow:1px 1px 2px rgba(0,0,0,.25);
 }
-.hero.hero--edge .subhead{font-size:1.05rem;line-height:1.5;max-width:34ch;margin:0 auto 1.2rem;color:#d9e1e8}
+.hero.hero--edge .subhead{font-size:1.05rem;line-height:1.5;max-width:34ch;margin:0 auto 1.2rem;color:#e5ecf3}
 
 /* ---------- Cards / Grids ---------- */
-.card{border:1px solid var(--border);border-radius:var(--radius);padding:14px;background:#fff}
+.card{border:1px solid var(--border);border-radius:var(--radius);padding:14px;background:#fff;color:var(--text-dark)}
 .grid{display:grid;gap:18px}
 .grid-2{grid-template-columns:1fr}
 .grid-3{grid-template-columns:1fr}
@@ -197,22 +209,22 @@ body.with-mini-offset{padding-top:32px}
   .grid-3{grid-template-columns:repeat(3,1fr)}
 }
 
-/* Ink section (dark) */
-.section--ink{background:#0f1318;color:#e6edf3}
+/* Dark “ink” section */
+.section--ink{background:#0f1318;color:#fff}
 .section--ink h2{color:#ffd166}
 .section--ink .card{background:#11161d;border-color:#2d3948;color:#e6edf3}
 
-/* WHY LOCAL block */
-.why-local{background:#0b0e12;color:#f7f3e8;border-block:4px solid var(--gold);margin-top:32px}
+/* WHY LOCAL block (dark) */
+.why-local{background:#0b0e12;color:#fff;border-block:4px solid var(--gold);margin-top:32px}
 .why-local .container{padding:32px 16px;text-align:center;max-width:900px}
 .why-local h2{color:#fff;font-size:1.9rem;margin-bottom:12px}
 .why-local p{margin:0 auto;max-width:60ch;color:#cfd6df;line-height:1.6}
 
 /* ---------- Blog / Posts ---------- */
-.page-header{background:var(--surface);padding:28px 0;border-bottom:1px solid var(--border)}
+.page-header{background:var(--surface);padding:28px 0;border-bottom:1px solid var(--border);color:var(--text-dark)}
 .blog-grid{display:grid;gap:18px}
 @media(min-width:860px){.blog-grid{grid-template-columns:repeat(2,1fr)}}
-.blog-card{border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.blog-card{border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#fff;display:flex;flex-direction:column;color:var(--text-dark)}
 .blog-card .body{padding:14px}
 .blog-card h2{margin:.2rem 0 .4rem;font-size:1.2rem}
 .blog-card p{margin:.35rem 0 .25rem;color:#444}
@@ -220,25 +232,25 @@ body.with-mini-offset{padding-top:32px}
 .post-hero img{border-radius:12px;margin:12px auto}
 .intro{font-size:1.1rem;color:#444;margin:.5rem 0 1.25rem}
 .benefits{display:grid;gap:14px}
-.benefit{border:1px solid var(--border);border-radius:12px;padding:14px;background:#fff}
+.benefit{border:1px solid var(--border);border-radius:12px;padding:14px;background:#fff;color:var(--text-dark)}
 .benefit h3{margin:.25rem 0 .35rem;font-size:1.05rem}
 .callout{background:#eef6ff;border:1px solid #cfe5ff;border-radius:10px;padding:14px;margin:1rem 0}
 .faq details{border-top:1px solid var(--border);padding:.6rem 0}
 .faq summary{cursor:pointer;font-weight:600}
 
-/* ---------- Footer ---------- */
-.site-footer{background:#fff;border-top:1px solid var(--border);margin-top:24px}
+/* ---------- Footer (dark) ---------- */
+.site-footer{background:#0b0e12;border-top:1px solid rgba(255,255,255,.12);margin-top:24px;color:#fff}
 .footer-banner img{width:100%;height:auto}
 .footer-grid{display:grid;gap:18px;padding:18px 0}
 .footer-brand .footer-logo{border-radius:8px}
 .footer-brand p{margin:.4rem 0}
-.footer-socials a{display:inline-block;margin-right:8px}
-.footer-col h3{margin:.25rem 0 .5rem}
+.footer-socials a{display:inline-block;margin-right:8px;color:#fff}
+.footer-col h3{margin:.25rem 0 .5rem;color:#fff}
 .footer-col ul{margin:0;padding:0;list-style:none}
 .footer-col li{margin:.35rem 0}
-.footer-geo{padding:12px 0;color:#46505a}
-.footer-bottom{padding:12px 0;border-top:1px solid var(--border);color:#66707c}
-.collapsible .collapse-btn{background:transparent;border:0;font:inherit;font-weight:700;cursor:pointer;padding:0}
+.footer-geo{padding:12px 0;color:#d5dde6}
+.footer-bottom{padding:12px 0;border-top:1px solid rgba(255,255,255,.12);color:#cfd6df}
+.collapsible .collapse-btn{background:transparent;border:0;font:inherit;font-weight:700;cursor:pointer;padding:0;color:#fff}
 @media(min-width:860px){.footer-grid{grid-template-columns:1.2fr 1fr 1fr 1fr}}
 
 /* ---------- Forms ---------- */
@@ -253,10 +265,10 @@ label{display:block;margin:.2rem 0 .25rem;color:#475467}
 .badge{display:inline-block;padding:.35rem .6rem;border:1px solid #ddd;border-radius:999px;font-size:.9rem;line-height:1;text-decoration:none}
 .badge[aria-current="page"]{background:#f6f6f6;font-weight:600;pointer-events:none}
 
-/* ---------- Impact ribbon ---------- */
+/* ---------- Impact ribbon (dark) ---------- */
 .impact-ribbon{
   background:linear-gradient(90deg,#0c1117,#0c1117 60%,#122034);
-  color:#e8fff7;border-block:3px solid #40e0c2;
+  color:#fff;border-block:3px solid #40e0c2;
   font-size:clamp(.95rem,1.6vw,1.05rem)
 }
 .impact-inner{
@@ -267,14 +279,14 @@ label{display:block;margin:.2rem 0 .25rem;color:#475467}
 .impact-ribbon a:hover{text-decoration:underline}
 .impact-cta{
   margin-left:.4rem;background:#1a2b3f;border:1px solid rgba(64,224,194,.35);
-  color:#cffff4;padding:6px 10px;border-radius:10px;font-weight:700;white-space:nowrap
+  color:#ffd166;padding:6px 10px;border-radius:10px;font-weight:700;white-space:nowrap
 }
 .impact-cta:hover{background:#203550}
 
 /* ---------- Search / Legal ---------- */
-.search-results .result{border-bottom:1px solid var(--border);padding:12px 0}
+.search-results .result{border-bottom:1px solid var(--border);padding:12px 0;color:var(--text-dark)}
 .search-results .result:last-child{border-bottom:0}
-.legal h1,.legal h2{margin-top:1rem}
+.legal h1,.legal h2{margin-top:1rem;color:var(--text-dark)}
 
 /* ---------- Accessibility ---------- */
 :focus-visible{outline:2px solid #2563eb;outline-offset:2px}
@@ -320,174 +332,20 @@ label{display:block;margin:.2rem 0 .25rem;color:#475467}
   .m-wrap, .m-card, section, .section{ scroll-margin-bottom: calc(var(--sticky-cta-h) + 24px); }
   .sticky-cta{
     position:fixed;left:12px;right:12px;bottom:12px;z-index:1100;
-    background:color-mix(in srgb, var(--bg) 92%, #fff 8%);
-    border:1px solid var(--border);box-shadow:var(--shadow);
+    background:#ffffffee;border:1px solid var(--border);box-shadow:var(--shadow);
     border-radius:16px;
   }
 }
 
-/* ===============================
-   Auto-contrast on WHITE surfaces
-   (site-wide: white bg => dark text)
-   =============================== */
-
-/* Common white surfaces get dark text automatically */
-html, body { color: var(--text-dark); }
-
-.hero,
-.section,
-.card,
-.container,
-.promo-ribbon,
-.bg-white,
-:where(.m-hero-card, .white-surface) {
-  color: var(--text-dark);
-}
-
-/* Inline styles forcing white backgrounds also get dark text */
-:where(section,div,article,header,main,aside,nav)[style*="background:#fff" i],
-:where(section,div,article,header,main,aside,nav)[style*="background-color:#fff" i]{
-  color: var(--text-dark) !important;
-}
-:where(section,div,article,header,main,aside,nav)[style*="background:#fff" i] a,
-:where(section,div,article,header,main,aside,nav)[style*="background-color:#fff" i] a{
-  color: var(--ink-2) !important;
-  text-decoration-color: rgba(0,0,0,.25) !important;
-}
-
-/* Preserve intentionally dark areas */
-.section--ink,
-.why-local,
-.hero.hero--edge,
-.site-footer,
-.navbar.navbar--dark {
-  color: var(--text-/* =======================
-   UNLIMITED PAGE FIX PACK
-   ======================= */
-
-/* 1) Opt-in: add class="unlimited" on the <body> of the Unlimited page */
-body.unlimited{
-  /* Dark canvas + light text */
-  --bg:#0b0e12;            /* page background */
-  --ink:#e6edf3;           /* default text */
-  --muted:#a9b4c0;
-  --border:#1d232c;
-  --surface:#0f1318;       /* dark cards if you use them later */
-}
-
-/* 2) Global text colour on the dark canvas */
-body.unlimited,
-body.unlimited main,
-body.unlimited section,
-body.unlimited .container{
-  color:var(--ink);
-}
-
-/* 3) Header/nav: brighter and readable on dark */
-body.unlimited .site-header{
-  background:rgba(11,14,18,.88);
-  border-bottom:1px solid #2b3440;
-  backdrop-filter:saturate(115%) blur(8px);
-}
-body.unlimited .brand strong{ color:#f7f9fb; font-weight:900; }
-body.unlimited .nav-links a{ color:#cfd6df; font-weight:600; }
-body.unlimited .nav-links a:hover{ color:#ffffff; text-decoration:none; }
-body.unlimited .nav-cta{ 
-  background:#ffd166; color:#111; 
-  border:1px solid rgba(0,0,0,.12); 
-  box-shadow:0 10px 26px rgba(255,209,102,.25);
-}
-
-/* 4) Hero image top fade so the header doesn’t clash */
-body.unlimited .m-hero-visual::after{
-  content:""; position:absolute; inset:0;
-  background:linear-gradient(to top, rgba(0,0,0,.0) 55%, rgba(0,0,0,.45) 100%);
-  pointer-events:none;
-}
-
-/* 5) The white hero card: keep it high-contrast on dark */
-body.unlimited .m-hero-card{
-  background:rgba(255,255,255,.98);
-  color:#0b0e12;                      /* make sure all text inside is dark */
-  border:1px solid rgba(0,0,0,.10);
-  box-shadow:0 22px 50px rgba(0,0,0,.35);
-}
-body.unlimited .m-hero-card h1,
-body.unlimited .m-hero-card p,
-body.unlimited .m-hero-card li{ color:#0b0e12; }
-
-/* 6) Hero buttons: bold & edgy */
-body.unlimited .m-hero-card .cta-button{
-  background:linear-gradient(180deg,#ffdd6a 0%, #f5b200 100%);
-  color:#111; border:0;
-  box-shadow:0 12px 26px rgba(245,178,0,.35);
-}
-body.unlimited .m-hero-card .cta-button.secondary{
-  background:#0b0e12; color:#fff; border:2px solid #111;
-}
-
-/* 7) Links inside dark sections */
-body.unlimited a{ color:#9cd8ff; text-decoration-color:rgba(156,216,255,.5); }
-body.unlimited a:hover{ color:#cfe9ff; text-decoration-color:currentColor; }
-
-/* 8) Sticky CTA: brighter on dark */
-body.unlimited .sticky-cta{
-  background:rgba(255,255,255,.96); color:#111; border:1px solid rgba(0,0,0,.08);
-}
-body.unlimited .sticky-cta .cta-button{
-  background:linear-gradient(180deg,#ffdd6a 0%, #f5b200 100%);
-  color:#111;
-}
-
-/* 9) Headings in content sections on dark */
-body.unlimited h2, body.unlimited h3{ color:#f7f9fb; }
-
-/* 10) If any element forces a white background inline, ensure dark text */
-body.unlimited :where(section,div,article,header,nav)[style*="background:#fff"],
-body.unlimited :where(section,div,article,header,nav)[style*="background: #fff"]{
-  color:#0b0e12 !/* ---- Theme Visibility Fix ---- */
-
-/* When in light theme, ensure dark backgrounds get light text */
-:root[data-theme="light"] .section--ink,
-:root[data-theme="light"] .why-local,
-:root[data-theme="light"] .impact-ribbon {
-  color: #ffffff !important;
-}
-
-:root[data-theme="light"] .section--ink h1,
-:root[data-theme="light"] .section--ink h2,
-:root[data-theme="light"] .section--ink h3,
-:root[data-theme="light"] .why-local h1,
-:root[data-theme="light"] .why-local h2,
-:root[data-theme="light"] .why-local h3 {
-  color: #fff !important;
-}
-
-/* Ensure nav text is visible on light hero backgrounds */
-:root[data-theme="light"] .navbar .brand strong,
-:root[data-theme="light"] .nav-links a {
-  color: #111 !important;
-}
-
-/* Make sure hero text is dark on light backgrounds */
-:root[data-theme="light"] .hero,
-:root[data-theme="light"] .hero h1,
-:root[data-theme="light"] .hero h2,
-:root[data-theme="light"] .hero .subhead {
-  color: #111 !important;
-}
-
-
-
-
-/* ---------- Page-specific: About (forces light, high-contrast) ---------- */
+/* ---------- Page-specific: About (forces high-contrast light) ---------- */
 body.about{
-  --bg:#ffffff; --ink:#0c1016; --ink-2:#1b222c; --muted:#4b5563; --surface:#ffffff; --surface-2:#fffaf1;
-  --border:#e6e9ef; --brand:#f5b200; --accent:#ffd166; --ok:#2a7a3a;
+  --bg:#ffffff; --ink:#0c1016; --ink-2:#1b222c; --muted:#4b5563;
+  --surface:#ffffff; --surface-2:#fffaf1; --border:#e6e9ef;
+  --brand:#f5b200; --accent:#ffd166; --ok:#2a7a3a;
 }
-body.about .site-header{background:#fff;border-bottom:1px solid var(--border)}
-body.about .nav-links a{color:#2b3645}
-body.about .nav-links a[aria-current="page"]{background:#f7f7f7;color:#111}
+body.about .site-header{background:#0c1117;border-bottom:1px solid rgba(255,255,255,.12)}
+body.about .nav-links a{color:#e6edf3}
+body.about .nav-links a[aria-current="page"]{background:#ffd166;color:#111}
 body.about .hero{background:linear-gradient(180deg,#fffaf0,#fffdfa);color:var(--ink)}
 body.about .hero .subhead{color:#475569}
 body.about .card, body.about .m-card{
@@ -500,7 +358,7 @@ body.about .impact-cta{background:#1a2b3f;border:1px solid rgba(245,178,0,.35);c
 body.about .impact-ribbon a{color:#7bf0dc}
 body.about .impact-ribbon a:hover{text-decoration:underline}
 
-/* ---------- Misc small fixes ---------- */
+/* ---------- Tiny helpers ---------- */
 #theme-toggle.btn-ghost{padding:8px 12px;border-radius:999px;line-height:1;display:inline-flex;align-items:center;gap:.4rem}
 
 /* Nearby areas (single, de-duplicated) */
@@ -508,60 +366,7 @@ body.about .impact-ribbon a:hover{text-decoration:underline}
 .section.alt[aria-label="Nearby areas we walk"] a { color: var(--ink-2); text-decoration: none; }
 .section.alt[aria-label="Nearby areas we walk"] a:hover { text-decoration: underline; }
 
-/* Trust ticks (default) */
+/* Trust ticks */
 .m-trust li{color:var(--muted)}
 .m-trust li::before{content:"✔";color:var(--ok);font-weight:800;position:relative;left:auto}
 
-/* === Readability hotfix (site-wide) === */
-
-/* Default body text: dark */
-html, body { color: #0b0e12; }
-
-/* Always LIGHT text on obviously dark sections */
-.hero.hero--edge,
-.section--ink,
-.why-local,
-.site-footer,
-.impact-ribbon {
-  color: #ffffff !important;
-}
-
-/* Always DARK text on light/white sections & cards */
-.hero:not(.hero--edge),
-.section:not(.section--ink):not(.why-local),
-.card:not(.dark),
-.container.bg-white {
-  color: #0b0e12 !important;
-}
-
-/* If any element forces a white background inline, make the text dark */
-:where(section,div,article,header,main,aside,nav)[style*="background:#fff"],
-:where(section,div,article,header,main,aside,nav)[style*="background: #fff"],
-:where(section,div,article,header,main,aside,nav)[style*="background-color:#fff"],
-:where(section,div,article,header,main,aside,nav)[style*="background-color: #fff"]{
-  color:#0b0e12 !important;
-}
-/* Unlimited page: header readable over dark hero, then flip on scroll */
-.page-unlimited .site-header{
-  background: transparent;
-  border-bottom: 1px solid rgba(255,255,255,.18);
-}
-.page-unlimited .navbar .brand strong,
-.page-unlimited .nav-links a,
-.page-unlimited .nav-links .btn,
-.page-unlimited .nav-links .cta-button {
-  color: #fff !important;
-}
-.page-unlimited .nav-links a:hover { text-decoration: underline; }
-
-/* After you start scrolling, revert to the normal light header */
-.page-unlimited.scrolled .site-header{
-  background: #ffffff;
-  border-bottom: 1px solid var(--border, #e6e9ef);
-}
-.page-unlimited.scrolled .navbar .brand strong,
-.page-unlimited.scrolled .nav-links a,
-.page-unlimited.scrolled .nav-links .btn,
-.page-unlimited.scrolled .nav-links .cta-button {
-  color: var(--ink, #0c1016) !important;
-}

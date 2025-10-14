@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Starter Dog Walking Membership South Melbourne — 4 Solo Walks / Month | The Woof of Walk Street</title>
-  <meta name="description" content="Starter dog walking membership in South Melbourne: four 45-minute solo walks per month with GPS tracking and photo updates. Ethical one-dog-only walking. A$320/month." />
+
+  <!-- Title & Description (SEO) -->
+  <title>Starter Dog Walking Membership (South Melbourne) — 4 Solo Walks + Member Rewards | The Woof of Walk Street</title>
+  <meta name="description" content="Starter dog walking membership in South Melbourne: four 45-minute solo walks per month with GPS tracking, photo updates, and member rewards. A$340/month. Ethical one-dog-only walking." />
   <link rel="canonical" href="https://www.woofofwalkstreet.com/membership-starter.html" />
   <link rel="icon" href="/images/brand/favicon.ico" />
 
@@ -12,25 +14,65 @@
   <link rel="stylesheet" href="/css/mini.css" />
   <link rel="stylesheet" href="/css/styles.css" />
 
+  <!-- Page-scoped “edge” polish + gold trims -->
+  <style>
+    :root{ --brand:#f5b200; --brand-ink:#111; --ink:#0b0e12; --bg:#0b0e12; --card:#0f1318; --line:#1d232c; --text:#e6edf3; --muted:#a9b4c0; --shadow:0 14px 40px rgba(0,0,0,.28) }
+    body{background:#0b0e12;color:var(--text)}
+    .site-header{backdrop-filter:saturate(120%) blur(8px);background:rgba(11,14,18,.72);border-bottom:1px solid rgba(255,255,255,.06)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:12px 18px;border-radius:999px;border:1px solid transparent;font-weight:900;letter-spacing:.01em;text-decoration:none;transition:transform .15s,box-shadow .15s,background .15s,color .15s,border-color .15s}
+    .btn-primary{background:var(--brand);color:var(--brand-ink);box-shadow:0 10px 26px rgba(245,178,0,.25)}
+    .btn-primary:hover{transform:translateY(-1px) scale(1.02)}
+    .btn-ghost{background:transparent;color:#fff;border-color:#2a3440}
+    .btn-ghost:hover{border-color:#fff;box-shadow:0 6px 18px rgba(0,0,0,.22)}
+    .btn-outline{background:transparent;border-color:var(--brand);color:var(--brand)}
+    .m-wrap{max-width:960px;margin:24px auto 44px;padding:0 16px}
+    .m-hero{padding:34px 16px 18px;text-align:center;border-bottom:1px solid rgba(255,255,255,.06);
+      background:
+        radial-gradient(1200px 600px at 20% -20%, rgba(245,178,0,.10), transparent 60%),
+        linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0));
+    }
+    .m-hero h1{margin:0 0 .4rem;font-weight:900}
+    .m-hook{margin:.4rem auto .8rem;max-width:62ch;color:#cfd6df;font-size:1.06rem}
+    .m-badge{display:inline-block;margin:.25rem 0 .9rem;padding:.45rem .9rem;background:var(--brand);color:var(--brand-ink);border-radius:999px;font-weight:900}
+    .m-cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+    .hero-img{max-width:min(980px,92vw);height:auto;border-radius:14px;margin:14px auto 0;display:block;box-shadow:var(--shadow)}
+    .m-trust{list-style:none;padding:0;margin:12px auto 10px;max-width:46ch;color:#a9b4c0}
+    .m-trust li{position:relative;padding-left:22px;margin:.25rem 0}
+    .m-trust li::before{content:"✔";position:absolute;left:0;top:0;line-height:1;color:#5af2c6;font-weight:800}
+    .m-card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:14px;padding:18px;margin-top:16px;color:var(--text);box-shadow:0 10px 24px rgba(0,0,0,.18)}
+    .m-card h2{margin:.2rem 0 .6rem;font-weight:900}
+    .m-card li{color:#cdd7e1}
+    .m-card .btn-primary{margin-top:.6rem}
+    /* Member Rewards (cream card with gold trim) */
+    .rewards{background:#fff;color:#111;border:2px solid var(--brand);border-radius:14px;box-shadow:0 0 14px rgba(245,178,0,.25)}
+    .rewards h2,.rewards h3{color:#111}
+    .rewards .perk{display:grid;gap:8px;margin:.5rem 0}
+    .rewards .perk .tag{display:inline-block;border-radius:999px;background:var(--brand);color:#111;font-weight:900;padding:.28rem .6rem}
+    /* Value strip */
+    .ipoo-strip{background:#0b0e12;color:#f7f3e8;border-block:4px solid var(--brand)}
+    .ipoo-inner{max-width:1100px;margin:0 auto;display:grid;gap:18px;grid-template-columns:1fr;align-items:center;padding:24px 16px}
+    .ipoo-copy h2{font-size:clamp(1.35rem,3.2vw,1.9rem);margin:.2rem 0 .5rem;color:#fff}
+    .ipoo-badge{display:inline-block;background:var(--brand);color:#111;font-weight:900;border-radius:999px;padding:10px 16px;box-shadow:var(--shadow);margin-top:8px;text-decoration:none}
+    .ipoo-copy a{text-decoration:underline;font-weight:800;color:#ffd166}
+    @media(min-width:820px){.ipoo-inner{grid-template-columns:260px 1fr}}
+    .ipoo-graphic img{width:min(220px,52vw);height:auto;border-radius:14px;box-shadow:var(--shadow)}
+    /* Sticky mobile CTA */
+    @media (max-width: 820px){
+      .sticky-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:999;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border:1px solid rgba(0,0,0,.08);border-radius:16px;box-shadow:0 8px 24px rgba(0,0,0,.14);display:flex;gap:10px;justify-content:center;align-items:center;padding:10px}
+      .sticky-cta .btn{padding:10px 14px}
+    }
+  </style>
+
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Starter Dog Walking Membership — 4 Solo Walks / Month (South Melbourne)" />
-  <meta property="og:description" content="Four 45-minute solo walks per month in South Melbourne. GPS tracking + photo updates. Ethical one-dog-only walking. A$320/month." />
+  <meta property="og:title" content="Starter Dog Walking Membership — 4 Solo Walks + Rewards (South Melbourne)" />
+  <meta property="og:description" content="Four 45-minute solo walks/month in South Melbourne. GPS tracking, photo updates, and member rewards. A$340/month. Ethical one-dog-only walking." />
   <meta property="og:url" content="https://www.woofofwalkstreet.com/membership-starter.html" />
   <meta property="og:image" content="https://www.woofofwalkstreet.com/images/memberships/membership-starter.webp" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Starter Dog Walking Membership — 4 Solo Walks / Month" />
-  <meta name="twitter:description" content="Solo, GPS-tracked dog walks with photo updates in South Melbourne. A$320/month." />
+  <meta name="twitter:title" content="Starter Membership — 4 Solo Walks + Rewards" />
+  <meta name="twitter:description" content="Solo, GPS-tracked dog walks with photo updates in South Melbourne. A$340/month + member rewards." />
   <meta name="twitter:image" content="https://www.woofofwalkstreet.com/images/memberships/membership-starter.webp" />
-
-  <!-- Google Ads Global Site Tag -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'AW-17527927259');
-  </script>
 
   <!-- Breadcrumbs JSON-LD -->
   <script type="application/ld+json">
@@ -40,7 +82,7 @@
     "itemListElement":[
       {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
       {"@type":"ListItem","position":2,"name":"Memberships","item":"https://www.woofofwalkstreet.com/memberships.html"},
-      {"@type":"ListItem","position":3,"name":"Starter Dog Walking Membership","item":"https://www.woofofwalkstreet.com/membership-starter.html"}
+      {"@type":"ListItem","position":3,"name":"Starter Membership","item":"https://www.woofofwalkstreet.com/membership-starter.html"}
     ]
   }
   </script>
@@ -59,11 +101,11 @@
       "address":{"@type":"PostalAddress","addressLocality":"South Melbourne","addressRegion":"VIC","addressCountry":"AU"}
     },
     "areaServed":["South Melbourne","Albert Park","Port Melbourne","Middle Park","Southbank"],
-    "description":"Starter: four 45-minute solo dog walks per month with GPS tracking and photo updates. Ethical, one-dog-only walking in South Melbourne.",
+    "description":"Starter membership: four 45-minute solo dog walks per month in South Melbourne with GPS tracking and photo updates. Ethical, one-dog-only walking.",
     "offers":{
       "@type":"Offer",
       "priceCurrency":"AUD",
-      "price":"320",
+      "price":"340",
       "priceValidUntil":"2026-12-31",
       "availability":"https://schema.org/InStock",
       "url":"https://www.timetopet.com/portal/woofofwalkstreet/create-account"
@@ -77,14 +119,14 @@
     "@context":"https://schema.org",
     "@type":"Product",
     "name":"Starter Dog Walking Membership — 4 Solo Walks / Month",
-    "description":"Four 45-minute solo dog walks per month in South Melbourne. GPS tracking and photo updates. Ethical, one-dog-only walking.",
+    "description":"Four 45-minute solo dog walks per month in South Melbourne. GPS tracking and photo updates. Ethical, one-dog-only walking. Member rewards included.",
     "brand":{"@type":"Brand","name":"The Woof of Walk Street"},
     "image":"https://www.woofofwalkstreet.com/images/memberships/membership-starter.webp",
     "url":"https://www.woofofwalkstreet.com/membership-starter.html",
     "offers":{
       "@type":"Offer",
       "priceCurrency":"AUD",
-      "price":"320",
+      "price":"340",
       "priceValidUntil":"2026-12-31",
       "availability":"https://schema.org/InStock",
       "url":"https://www.timetopet.com/portal/woofofwalkstreet/create-account"
@@ -98,62 +140,33 @@
     "@context":"https://schema.org",
     "@type":"FAQPage",
     "mainEntity":[
-      {
-        "@type":"Question",
-        "name":"What’s included in the Starter dog walking membership?",
-        "acceptedAnswer":{"@type":"Answer","text":"Four 45-minute solo walks per month, with GPS tracking and photo updates after each walk."}
-      },
-      {
-        "@type":"Question",
-        "name":"Do unused walks roll over?",
-        "acceptedAnswer":{"@type":"Answer","text":"No. We recommend a steady monthly rhythm to keep dogs settled."}
-      },
-      {
-        "@type":"Question",
-        "name":"When are walks available?",
-        "acceptedAnswer":{"@type":"Answer","text":"Monday to Friday, 7:00am–7:00pm (public holidays excluded), subject to calendar availability."}
-      }
+      {"@type":"Question","name":"What’s included in the Starter membership?","acceptedAnswer":{"@type":"Answer","text":"Four 45-minute solo walks per month, with GPS tracking and photo updates after each walk."}},
+      {"@type":"Question","name":"Do unused walks roll over?","acceptedAnswer":{"@type":"Answer","text":"No. We recommend a steady monthly rhythm to keep dogs settled."}},
+      {"@type":"Question","name":"When are walks available?","acceptedAnswer":{"@type":"Answer","text":"Monday to Friday, 7:00am–7:00pm (public holidays excluded), subject to calendar availability."}}
     ]
   }
   </script>
 
-  <!-- Page helpers -->
-  <style>
-    .m-wrap{max-width:960px;margin:24px auto 44px;padding:0 16px}
-    .m-hero{padding:36px 16px 16px;text-align:center;background:#fffaf1;border-bottom:1px solid #f0e6cf}
-    .m-hero h1{margin:0 0 .35rem}
-    .m-hook{margin:.35rem auto .75rem;max-width:56ch;color:#2a2a2a;font-size:1.06rem}
-    .m-badge{display:inline-block;margin:.25rem 0 .9rem;padding:.45rem .9rem;background:#f5b200;color:#111;border-radius:999px;font-weight:900}
-    .m-cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
-    .cta-button{display:inline-flex;align-items:center;gap:.4rem;border-radius:999px;padding:12px 18px;font-weight:900;border:1px solid #111;background:#111;color:#fff;box-shadow:0 6px 18px rgba(0,0,0,.18);transition:transform .15s, box-shadow .15s, background .15s, color .15s;text-decoration:none}
-    .cta-button.secondary{background:#fff;color:#111}
-    .cta-button:hover{transform:translateY(-1px) scale(1.02);box-shadow:0 12px 24px rgba(0,0,0,.22)}
-    .cta-button.secondary:hover{background:#0b0e12;color:#ffd166}
+  <!-- Google Ads Global Site Tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'AW-17527927259');
+  </script>
 
-    .m-trust{list-style:none;padding:0;margin:12px auto 10px;max-width:46ch;color:#6b6b6b}
-    .m-trust li{position:relative;padding-left:22px;margin:.25rem 0}
-    .m-trust li::before{content:"✔";position:absolute;left:0;top:0;line-height:1;color:#2a7a3a;font-weight:800}
-
-    .m-card{background:#0f1318;border:1px solid #1d232c;border-radius:14px;padding:18px;margin-top:16px;color:#e6edf3}
-    .m-card h2{color:#f3f6fb;margin:.2rem 0 .6rem}
-    .m-card li{color:#cdd7e1}
-    .m-card .cta-button{margin-top:.6rem}
-
-    .ipoo-strip{background:#0b0e12;color:#f7f3e8;border-block:4px solid var(--brand)}
-    .ipoo-inner{max-width:1100px;margin:0 auto;display:grid;gap:18px;grid-template-columns:1fr;align-items:center;padding:24px 16px}
-    .ipoo-copy h2{font-size:clamp(1.35rem,3.2vw,1.9rem);margin:.2rem 0 .5rem;color:#fff}
-    .ipoo-badge{display:inline-block;background:#f5b200;color:#111;font-weight:900;border-radius:999px;padding:10px 16px;box-shadow:var(--shadow);margin-top:8px;text-decoration:none}
-    .ipoo-copy a{text-decoration:underline;font-weight:800;color:#ffd166}
-    @media(min-width:820px){.ipoo-inner{grid-template-columns:260px 1fr}}
-    .ipoo-graphic img{width:min(220px,52vw);height:auto;border-radius:14px;box-shadow:var(--shadow)}
-
-    @media (max-width: 820px){
-      .sticky-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:999;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border:1px solid rgba(0,0,0,.08);border-radius:16px;box-shadow:0 8px 24px rgba(0,0,0,.14);display:flex;gap:10px;justify-content:center;align-items:center;padding:10px}
-      .sticky-cta .cta-button{padding:10px 14px}
-    }
-  </style>
+  <!-- Preload hero image -->
+  <link
+    rel="preload"
+    as="image"
+    href="/images/memberships/membership-starter.webp"
+    imagesrcset="/images/memberships/membership-starter.webp 1200w"
+    imagesizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 980px"
+  >
 </head>
 <body>
+
   <!-- Promo ribbon -->
   <div id="promo" class="promo-ribbon promo--edge" role="region" aria-label="Promo: 50% off">
     <div class="promo-inner container">
@@ -161,22 +174,23 @@
       <span class="promo-copy">
         <strong>50% OFF</strong> Unlimited Daily Walks — 45-minute solo walks · GPS tracked · Photo updates
       </span>
-      <a href="/membership-unlimited.html" class="promo-cta">Learn More →</a>
+      <a href="/unlimited-dog-walks.html" class="btn btn-primary">Learn More →</a>
       <button id="promo-close" class="promo-close" aria-label="Dismiss promo">✕</button>
     </div>
   </div>
-  
+
   <!-- Impact ribbon -->
   <div class="impact-ribbon" role="note" aria-label="Walks that do more: 10% donated">
     <div class="impact-inner">
       <span class="impact-emoji" aria-hidden="true">💛</span>
       <strong>Walks That Do More:</strong>
-      We donate <strong>10% of profits</strong> to local shelters.
+      When you choose us, you’re not just booking a dog walk — you’re helping rescue dogs too.
+      <strong>We donate 10% of profits</strong> to local shelters.
       <a class="impact-cta" href="/community.html">See our impact →</a>
     </div>
   </div>
 
-  <!-- HEADER -->
+  <!-- HEADER (same structure as index) -->
   <header class="site-header" role="banner">
     <div class="navbar container" role="navigation" aria-label="Main">
       <a class="brand" href="/" aria-label="Go to home">
@@ -184,6 +198,7 @@
         <strong>The Woof of Walk Street</strong>
       </a>
 
+      <!-- mobile hamburger -->
       <input id="nav-toggle" type="checkbox" hidden>
       <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</label>
 
@@ -191,21 +206,29 @@
         <section class="nav-group">
           <button class="nav-group-btn" aria-expanded="false" aria-controls="nav-services">Services</button>
           <ul id="nav-services" class="nav-group-list">
-            <li><a href="/services.html">All Services</a></li>
-            <li><a href="/dog-walking-south-melbourne">Dog Walking South Melbourne</a></li>
-            <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
-            <li><a href="/memberships.html" aria-current="page">Memberships</a></li>
-            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/services.html" title="All Services">All Services</a></li>
+            <li><a href="/dog-walking-south-melbourne.html" title="Dog Walking South Melbourne">Dog Walking South Melbourne</a></li>
+            <li><a href="/casual-dog-walking-south-melbourne.html" title="Casual Dog Walking South Melbourne">Casual Dog Walking</a></li>
+            <li><a href="/memberships.html" title="Compare Dog Walking Memberships">Memberships — Compare Plans</a></li>
+            <li><a href="/membership-starter.html" aria-current="page" title="Starter Membership — 4 Solo Walks / Month">Starter Membership</a></li>
+            <li><a href="/membership-growth.html" title="Growth Membership — 10 Solo Walks / Month">Growth Membership</a></li>
+            <li><a href="/unlimited-dog-walks.html" title="Unlimited Membership — Weekday Solo Walks">Unlimited Membership</a></li>
+            <li><a href="/boarding-services.html" title="Dog Boarding South Melbourne">Boarding — Weekend Woof Club</a></li>
+            <li><a href="/contact.html" title="Contact The Woof of Walk Street">Contact</a></li>
           </ul>
         </section>
-        <a href="/about.html">About</a>
-        <a href="/blog/index.html">Blog</a>
-        <a href="/faq.html">FAQs</a>
-        <a href="/search.html">Search</a>
-        <a class="btn button-primary nav-cta"
+
+        <a href="/about.html" title="About The Woof of Walk Street">About</a>
+        <a href="/testimonials.html" title="Client Testimonials">Testimonials</a>
+        <a href="/gallery.html" title="Photos & Videos">Gallery</a>
+        <a href="/blog/index.html" title="Dog Walking Tips & Guides">Blog</a>
+        <a href="/faq.html" title="Frequently Asked Questions">FAQs</a>
+        <a href="/search.html" title="Search the site">Search</a>
+
+        <a class="btn btn-primary nav-cta"
            href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=header&utm_campaign=book_now"
            target="_blank" rel="noopener"
-           onclick="gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
+           onclick="gtag && gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
            Book Now
         </a>
       </nav>
@@ -218,42 +241,51 @@
       <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="/">Home</a> › <a href="/memberships.html">Memberships</a> › Starter</nav>
       <h1>Starter Dog Walking Membership — 4 Solo Walks / Month (South Melbourne)</h1>
       <p class="m-hook">
-        Our <strong>Starter dog walking membership in South Melbourne</strong> gives you <strong>four 45-minute solo walks</strong> each month,
-        with <strong>GPS tracking</strong> and <strong>photo updates</strong>. A calm, ethical way to build routine for newer or lower-energy pups.
+        A flexible intro to our ethical, one-dog-only walking in <strong>South Melbourne</strong>.
+        Enjoy <strong>four 45-minute solo walks</strong> per month with <strong>GPS tracking</strong> and
+        <strong>photo updates</strong>. Calm, reliable, and tailored to your pup.
       </p>
-      <p class="m-badge">South Melbourne · One-to-one walks</p>
+      <p class="m-badge">A$340 / month · One-to-one</p>
 
       <div class="m-cta">
-        <a class="cta-button"
+        <a class="btn btn-primary"
            href="https://www.timetopet.com/portal/woofofwalkstreet/create-account"
            target="_blank" rel="noopener"
            onclick="gtag && gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
-          Join Starter — A$320 / month
+          Join Starter — A$340 / month
         </a>
-        <a class="cta-button secondary" href="/membership-growth.html">Need more walks? Try Growth</a>
-        <a class="cta-button secondary" href="/casual-dog-walking-south-melbourne.html">Just want one-off? Casual</a>
+        <a class="btn btn-ghost" href="/membership-growth.html">Need more walks? Try Growth</a>
       </div>
+
+      <img
+        class="hero-img"
+        src="/images/memberships/membership-starter.webp"
+        srcset="/images/memberships/membership-starter.webp 1200w"
+        sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 980px"
+        alt="Calm solo dog walk in South Melbourne — Starter membership"
+        width="1200" height="800"
+        loading="eager" decoding="async" fetchpriority="high">
 
       <ul class="m-trust">
         <li>Always <strong>solo</strong> — never pack walked or car-ferried</li>
-        <li><strong>GPS-tracked</strong> routes + <strong>photo updates</strong></li>
-        <li>Local routes around South Melbourne & neighbouring suburbs</li>
+        <li><strong>GPS-tracked</strong> routes + <strong>photo updates</strong> after each walk</li>
+        <li>Local loops around South Melbourne & neighbouring suburbs</li>
       </ul>
     </section>
 
-    <!-- Cross-sell strip -->
-    <section class="ipoo-strip" aria-labelledby="ipoo-title">
+    <!-- Value nudge / Cross-sell -->
+    <section class="ipoo-strip" aria-labelledby="value-title">
       <div class="ipoo-inner">
         <div class="ipoo-graphic" aria-hidden="true">
           <picture>
             <source srcset="/images/brand/dog-in-suit.webp" type="image/webp" />
-            <img src="/images/brand/dog-in-suit.webp" width="220" height="220" alt="Promo icon: smiling dog in a suit" loading="lazy">
+            <img src="/images/brand/dog-in-suit.webp" width="220" height="220" alt="" loading="lazy">
           </picture>
         </div>
         <div class="ipoo-copy">
-          <h2 id="ipoo-title">📈 Want daily walks? Meet the I.P.O.O.</h2>
-          <p>Upgrade anytime to <a href="/membership-unlimited.html">Unlimited</a> for a solo walk every weekday — GPS-tracked with photo proof.</p>
-          <a class="ipoo-badge" href="/membership-unlimited.html">First month 50% OFF on Unlimited</a>
+          <h2 id="value-title">Want daily walks and bigger perks?</h2>
+          <p>Step up to <a href="/membership-growth.html">Growth</a> or <a href="/unlimited-dog-walks.html">Unlimited</a> for lower per-walk pricing and enhanced rewards.</p>
+          <a class="ipoo-badge" href="/memberships.html">Compare Memberships →</a>
         </div>
       </div>
     </section>
@@ -261,8 +293,8 @@
     <!-- CONTENT -->
     <div class="m-wrap">
       <div class="m-card">
-        <h2>Starter Dog Walking Membership — South Melbourne</h2>
-        <p>This plan gives your dog a steady rhythm without over-committing. We walk locally around <strong>South Melbourne</strong>, <strong>Albert Park Lake</strong>, and nearby parks, keeping routines calm and familiar. Perfect for newer clients or dogs building confidence with one-to-one walks. If you only need the occasional walk, try our <a href="/casual-dog-walking-south-melbourne.html">Casual dog walking in South Melbourne</a>.</p>
+        <h2>Dog Walking Membership — Starter (South Melbourne)</h2>
+        <p>This plan gives your dog a steady rhythm without over-committing. We walk locally around <strong>South Melbourne</strong>, <strong>Albert Park Lake</strong>, and nearby streets, keeping routines calm and familiar. Perfect for newer clients or dogs building confidence with one-to-one walks.</p>
       </div>
 
       <div class="m-card">
@@ -275,6 +307,25 @@
         </ul>
       </div>
 
+      <!-- NEW: Member Rewards -->
+      <div class="m-card rewards" id="rewards">
+        <h2>✨ Starter Member Rewards</h2>
+
+        <div class="perk">
+          <span class="tag">12-Month Loyalty</span>
+          <h3>Two Midweek Boarding Nights — On Us</h3>
+          <p>Hold Starter for 12 consecutive months and receive <strong>2 free midweek nights</strong> at our <a href="/boarding-services.html">Weekend Woof Club</a> (Mon–Thu nights, non-peak, one dog; subject to availability).</p>
+        </div>
+
+        <div class="perk">
+          <span class="tag">Community Prize</span>
+          <h3>$100 Top Tail-Trotter</h3>
+          <p>Your dog loves a lap? The pup with the most completed walks in a calendar year wins a <strong>A$100 voucher</strong> for merch or food. We’ll announce the winner each January.</p>
+        </div>
+
+        <p style="margin-top:.6rem;opacity:.85">Full eligibility: active Starter members only; boarding nights non-transferable; standard policies apply.</p>
+      </div>
+
       <div class="m-card">
         <h2>How scheduling works</h2>
         <ul>
@@ -282,7 +333,7 @@
           <li>Choose any weekdays across the month, subject to availability</li>
           <li>Unused walks don’t roll over — consistency keeps dogs settled</li>
         </ul>
-        <a class="cta-button"
+        <a class="btn btn-primary"
            href="https://www.timetopet.com/portal/woofofwalkstreet/create-account"
            target="_blank" rel="noopener"
            onclick="gtag && gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
@@ -292,13 +343,13 @@
 
       <div class="m-card" id="pricing">
         <h2>Pricing</h2>
-        <p><strong>A$320 / month</strong> — equivalent to <strong>A$80 per 45-minute solo walk</strong>, with GPS tracking and photo updates.</p>
-        <p style="opacity:.85">Cancel anytime. No lock-ins. For ad-hoc needs, book a <a href="/casual-dog-walking-south-melbourne.html">Casual walk (A$90)</a>.</p>
-        <a class="cta-button"
+        <p><strong>A$340 / month</strong> — ≈ <strong>A$85 per 45-minute solo walk</strong>, GPS tracking and photo updates included.</p>
+        <p style="opacity:.85">Cancel anytime. No lock-ins. For ad-hoc needs, a <a href="/casual-dog-walking-south-melbourne.html">Casual walk</a> is A$90.</p>
+        <a class="btn btn-primary"
            href="https://www.timetopet.com/portal/woofofwalkstreet/create-account"
            target="_blank" rel="noopener"
            onclick="gtag && gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
-          Join Starter — A$320 / month
+          Join Starter — A$340 / month
         </a>
       </div>
 
@@ -310,38 +361,14 @@
           <li>Seniors or calmer dogs who prefer gentle, local routes</li>
         </ul>
       </div>
-      
-<section class="m-wrap" aria-labelledby="compare-plans">
-  <div class="m-card">
-    <h2 id="compare-plans">Compare Dog Walking Memberships (South Melbourne)</h2>
-    <ul>
-      <li><strong>Casual Dog Walking — South Melbourne</strong> · A$90 per 45-minute solo walk.
-        Book ad-hoc when you need a top-up. <a href="/casual-dog-walking-south-melbourne.html">See Casual →</a></li>
-      <li><strong>Starter — 4 Solo Walks / Month</strong> · A$300/month (≈ A$75/walk). 
-        You’re here — a flexible intro with GPS tracking & photo updates.</li>
-      <li><strong>Growth — 10 Solo Walks / Month</strong> · A$750/month (≈ A$75/walk). 
-        Step up routine without going full daily. <a href="/membership-growth.html">See Growth →</a></li>
-      <li><strong>Unlimited Dog Walking Membership — Weekday Solo Walks</strong> · A$1,500/month.
-        One solo walk every weekday. <a href="/membership-unlimited.html">See Unlimited →</a></li>
-    </ul>
-    <p style="margin-top:.6rem">Not sure which plan fits? <a href="/contact.html">Ask us</a> about your dog’s age, energy and routine.</p>
-  </div>
-
-  <div class="m-card">
-    <h3 style="margin-top:.2rem">Dog Walking South Melbourne — Nearby Suburbs</h3>
-    <p>We walk locally around <strong>South Melbourne</strong>, <strong>Albert Park</strong>, 
-       <strong>Port Melbourne</strong>, <strong>Middle Park</strong> and <strong>Southbank</strong> — 
-       familiar routes like Albert Park Lake and St Vincent Gardens.</p>
-  </div>
-</section>
 
       <!-- On-page FAQ to match JSON-LD -->
       <div class="m-card" itemscope itemtype="https://schema.org/FAQPage">
         <h2>Starter — FAQs</h2>
         <details>
-          <summary>What’s included in the Starter dog walking membership?</summary>
+          <summary>What’s included in the Starter membership?</summary>
           <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-            <meta itemprop="name" content="What’s included in the Starter dog walking membership?">
+            <meta itemprop="name" content="What’s included in the Starter membership?">
             <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
               <p itemprop="text">Four 45-minute solo walks per month, with GPS tracking and photo updates after each walk.</p>
             </div>
@@ -371,17 +398,16 @@
 
   <!-- Sticky mobile CTA -->
   <div class="sticky-cta">
-    <a class="cta-button"
+    <a class="btn btn-primary"
        href="https://www.timetopet.com/portal/woofofwalkstreet/create-account"
        target="_blank" rel="noopener"
        onclick="gtag && gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
-       Join Starter — A$320 / month
+       Join Starter — A$340 / month
     </a>
-    <a class="cta-button secondary" href="/membership-growth.html">Compare Growth</a>
-    <a class="cta-button secondary" href="/casual-dog-walking-south-melbourne.html">Or go Casual</a>
+    <a class="btn btn-ghost" href="/membership-growth.html">Compare Growth</a>
   </div>
 
-  <!-- FOOTER -->
+  <!-- FOOTER (matches index) -->
   <footer class="site-footer" role="contentinfo">
     <div class="footer-banner">
       <picture>
@@ -403,7 +429,7 @@
           <a href="https://x.com/woofofwalkstreet" aria-label="X"><img src="/images/social/twitter.svg" alt="" width="24" height="24"></a>
         </div>
         <p>
-          <a class="btn button-primary" target="_blank" rel="noopener"
+          <a class="btn btn-primary" target="_blank" rel="noopener"
              href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=footer&utm_campaign=book_now_footer"
              onclick="gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
             Book Now
@@ -411,17 +437,22 @@
         </p>
       </section>
 
-      <nav class="footer-col" aria-label="Primary">
+      <!-- Primary services -->
+      <nav class="footer-col" aria-label="Services">
         <h3>Services</h3>
         <ul>
           <li><a href="/services.html">All Services</a></li>
-          <li><a href="/dog-walking-south-melbourne">Dog Walking South Melbourne</a></li>
+          <li><a href="/dog-walking-south-melbourne.html">Dog Walking South Melbourne</a></li>
+          <li><a href="/casual-dog-walking-south-melbourne.html">Casual Dog Walking</a></li>
+          <li><a href="/membership-starter.html" aria-current="page">Starter Membership</a></li>
+          <li><a href="/membership-growth.html">Growth Membership</a></li>
+          <li><a href="/unlimited-dog-walks.html">Unlimited Membership</a></li>
           <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
-          <li><a href="/memberships.html" aria-current="page">Memberships</a></li>
           <li><a href="/contact.html">Contact</a></li>
         </ul>
       </nav>
 
+      <!-- Support -->
       <section class="footer-col collapsible">
         <button class="collapse-btn" aria-expanded="false" aria-controls="support-list">Support</button>
         <ul id="support-list">
@@ -433,6 +464,7 @@
         </ul>
       </section>
 
+      <!-- Legal -->
       <section class="footer-col collapsible">
         <button class="collapse-btn" aria-expanded="false" aria-controls="legal-list">Legal</button>
         <ul id="legal-list">
@@ -451,6 +483,7 @@
     <div class="container footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 
+    <!-- Tiny JS for footer accordions (mobile) -->
     <script>
       document.querySelectorAll('.collapsible .collapse-btn').forEach(btn=>{
         btn.addEventListener('click', ()=>{
@@ -486,3 +519,4 @@
   </script>
 </body>
 </html>
+

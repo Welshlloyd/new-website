@@ -357,6 +357,27 @@ body.about .impact-ribbon{background:#0c1117!important;color:#ffffff!important;b
 body.about .impact-cta{background:#1a2b3f;border:1px solid rgba(245,178,0,.35);color:#ffd166}
 body.about .impact-ribbon a{color:#7bf0dc}
 body.about .impact-ribbon a:hover{text-decoration:underline}
+/* ---------- Trust Strip ---------- */
+.trust-strip .m-trust{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:12px;
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+@media(min-width:780px){
+  .trust-strip .m-trust{ grid-template-columns:repeat(2,1fr); }
+}
+
+/* Use existing tick style, but boost contrast on dark section */
+.section--ink .m-trust li{ color:#e6edf3; }
+.section--ink .m-trust li::before{ content:"✔"; color:#40e0c2; font-weight:800; margin-right:.5rem; }
+
+/* Slight spacing polish */
+.trust-strip h2{ margin-bottom:14px; }
+.trust-strip .btn{ margin-top:8px; }
+
 
 /* ---------- Tiny helpers ---------- */
 #theme-toggle.btn-ghost{padding:8px 12px;border-radius:999px;line-height:1;display:inline-flex;align-items:center;gap:.4rem}

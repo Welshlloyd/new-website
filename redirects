@@ -12,6 +12,24 @@ https://woofofwalkstreet.com/*    https://www.woofofwalkstreet.com/:splat       
 /blog/index                        /blog/                                         301
 
 # ================================
+# Canonical pages (explicit .html targets)
+# Put these BEFORE trailing-slash rules to avoid loops
+# ================================
+/dog-walking-south-melbourne       /dog-walking-south-melbourne.html              301
+/dog-walking-south-melbourne/      /dog-walking-south-melbourne.html              301
+
+# Unlimited slug consolidation → /unlimited-dog-walks.html
+/membership-unlimited-plan.html    /unlimited-dog-walks.html                      301
+/membership-unlimited.html         /unlimited-dog-walks.html                      301
+/membership-unlimited              /unlimited-dog-walks.html                      301
+/membership-unlimited/             /unlimited-dog-walks.html                      301
+/unlimited                         /unlimited-dog-walks.html                      301
+/unlimited/                        /unlimited-dog-walks.html                      301
+
+# (Optional) legacy anchors to new page
+/memberships.html#unlimited        /unlimited-dog-walks.html                      301
+
+# ================================
 # Common legacy/typo variants
 # ================================
 /book-now                          /book-now/                                     301
@@ -31,25 +49,26 @@ https://woofofwalkstreet.com/*    https://www.woofofwalkstreet.com/:splat       
 
 # ================================
 # Enforce trailing slash on directory-style paths
+# (Note: specific .html canonicals above will win)
 # ================================
 /:slug                             /:slug/                                        301
 /:slug/:child                      /:slug/:child/                                 301
 
 # ================================
-# Membership Pages
+# Membership Pages (legacy → current)
+# (Keep existing mappings; Unlimited now handled above)
 # ================================
 /membership-credit-booking.html        /membership-credit-booking-south-melbourne.html    301
 /membership-sniffvestment.html         /membership-starter.html                          301
 /membership-starter-sniffvestment.html /membership-starter.html                          301
 /membership-growth-plan.html           /membership-growth.html                           301
-/membership-unlimited-plan.html        /membership-unlimited.html                        301
 
 # ================================
 # Friendly short links for campaigns
 # ================================
 /starter                              /membership-starter.html                           301
 /growth                               /membership-growth.html                            301
-/unlimited                            /membership-unlimited.html                         301
+/unlimited                            /unlimited-dog-walks.html                          301
 /credit                               /membership-credit-booking-south-melbourne.html    301
 /join                                 /memberships.html                                  301
 

@@ -31,15 +31,14 @@
   <link rel="canonical" href="https://www.woofofwalkstreet.com/" />
   <link rel="icon" href="/images/brand/favicon.ico" />
 
-   <!-- Styles -->
+  <!-- Styles -->
   <!-- Core styles: mini first, then dark/light support, then main styles -->
   <link rel="stylesheet" href="/css/mini.css">
   <link rel="stylesheet" href="/css/mini.dark.css">
   <link rel="stylesheet" href="/css/mini.light.css">
   <link rel="stylesheet" href="/css/styles.css">
 
-
-  <!-- ===== Edge Pack (adds cooler look + unified buttons) ===== -->
+  <!-- ===== Edge Pack (adds cooler look + unified buttons) + Page-scoped overrides ===== -->
   <style>
     :root{
       --bg:#0b0e12; --card:#0f1318; --line:#1d232c; --text:#e6edf3; --muted:#a9b4c0;
@@ -76,7 +75,7 @@
     /* Theme toggle spacing (uses existing .btn-ghost look) */
     #theme-toggle.btn-ghost{padding:8px 12px; border-radius:999px; line-height:1; display:inline-flex; align-items:center; gap:.4rem}
 
-    /* Cards + Memberships pop */
+    /* Cards + Memberships base */
     .card,.m-card{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 10px 24px rgba(0,0,0,.18)}
     .memberships .grid{display:grid;gap:16px}
     @media(min-width:840px){.memberships .grid{grid-template-columns:repeat(3,1fr)}}
@@ -92,6 +91,38 @@
 
     .why-local{border-block:4px solid var(--brand);background:linear-gradient(180deg,#0b0e12,#0b1016)}
     h2{font-size:clamp(1.35rem,1.3rem + 1.1vw,1.9rem);font-weight:900}
+
+    /* ===== Scoped overrides: Membership section to white text + gold edges ===== */
+    .memberships { color:#fff; }
+    .memberships * { color:#fff !important; }
+    .memberships .plan.card{
+      border:2px solid #f5b200 !important;
+      box-shadow:0 0 12px rgba(245,178,0,.3);
+      border-radius:14px;
+    }
+    .memberships .plan.card:hover{
+      box-shadow:0 0 22px rgba(245,178,0,.6);
+      transform:translateY(-2px);
+      transition:all .25s ease;
+    }
+    .memberships .btn-primary{ background-color:#f5b200 !important; color:#111 !important; }
+
+    /* ===== FAQ: white card with gold trim ===== */
+    .faq.section{
+      background:#fff;
+      border:2px solid #f5b200;
+      border-radius:14px;
+      box-shadow:0 0 14px rgba(245,178,0,.25);
+      color:#111;
+      padding:24px 28px;
+      margin-top:32px;
+    }
+    .faq details{ background:#fff; border-bottom:1px solid #eee; padding:8px 0; }
+    .faq summary{ cursor:pointer; font-weight:700; color:#111; }
+    .faq summary:hover{ color:#f5b200; }
+    .faq p{ color:#111; margin:6px 0 10px; }
+    .faq .btn-primary{ background:#f5b200; color:#111 !important; }
+    .faq .btn-ghost,.faq .btn-outline{ border-color:#f5b200; color:#111; }
   </style>
 
   <!-- Open Graph / Twitter -->
@@ -603,17 +634,28 @@
     </script>
   </footer>
 
-  <!-- Nav services toggle (unchanged) -->
+  <!-- Nav services toggle (fixed) -->
   <script>
   (function () {
     const btn  = document.querySelector('.nav-group-btn[aria-controls="nav-services"]');
     const list = document.getElementById('nav-services');
     if (!btn || !list) return;
+
     const sync = () => { list.hidden = btn.getAttribute('aria-expanded') !== 'true'; };
     sync();
+
     btn.addEventListener('click', () => {
       const open = btn.getAttribute('aria-expanded') === 'true';
-@@ -593,5 +624,35 @@
+      btn.setAttribute('aria-expanded', String(!open));
+      list.hidden = open;
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!btn.contains(e.target) && !list.contains(e.target)) {
+        btn.setAttribute('aria-expanded', 'false');
+        list.hidden = true;
+      }
     });
   })();
   </script>

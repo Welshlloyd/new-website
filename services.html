@@ -139,6 +139,53 @@
       background: linear-gradient(180deg, #0b0e12, #0b1016);
       border-block: 4px solid var(--brand);
     }
+    
+    /* === Extra mobile & polish refinements === */
+
+/* 1. Hero image overlay for better text contrast */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 0;
+}
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* 2. More comfortable padding inside cards on smaller screens */
+@media (max-width: 640px) {
+  .card {
+    padding: 32px 16px;
+  }
+}
+
+/* 3. Button tactile feedback */
+.btn {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn:active {
+  transform: scale(0.96);
+}
+
+/* 4. Stronger gold glow on hover (mobile-safe smoothness) */
+.btn-primary:hover {
+  box-shadow: 0 14px 42px rgba(255, 209, 102, 0.45);
+}
+
+/* 5. Optional: slight increase to hero text spacing for small screens */
+@media (max-width: 480px) {
+  .hero h1 {
+    line-height: 1.3;
+    padding: 0 8px;
+  }
+}
 
     footer {
       margin-top: 60px;

@@ -1,103 +1,108 @@
 # ================================
 # Canonical: HTTPS + www
 # ================================
-http://woofofwalkstreet.com/      https://www.woofofwalkstreet.com/              301
-https://woofofwalkstreet.com/*    https://www.woofofwalkstreet.com/:splat        301
+http://woofofwalkstreet.com/            https://www.woofofwalkstreet.com/                   301
+https://woofofwalkstreet.com/*          https://www.woofofwalkstreet.com/:splat             301
 
 # ================================
 # Key fixes
 # ================================
-/book                              /book-now/                                     301
-/blog                              /blog/                                         301
-/blog/index                        /blog/                                         301
+/book                                   /book-now/                                          301
+/blog                                   /blog/                                              301
+/blog/index                             /blog/                                              301
 
 # ================================
 # Canonical pages (explicit .html targets)
 # Put these BEFORE trailing-slash rules to avoid loops
 # ================================
-/dog-walking-south-melbourne       /dog-walking-south-melbourne.html              301
-/dog-walking-south-melbourne/      /dog-walking-south-melbourne.html              301
+/dog-walking-south-melbourne            /dog-walking-south-melbourne.html                   301
+/dog-walking-south-melbourne/           /dog-walking-south-melbourne.html                   301
 
 # Unlimited slug consolidation → /unlimited-dog-walks.html
-/membership-unlimited-plan.html    /unlimited-dog-walks.html                      301
-/membership-unlimited.html         /unlimited-dog-walks.html                      301
-/membership-unlimited              /unlimited-dog-walks.html                      301
-/membership-unlimited/             /unlimited-dog-walks.html                      301
-/unlimited                         /unlimited-dog-walks.html                      301
-/unlimited/                        /unlimited-dog-walks.html                      301
-
-# (Optional) legacy anchors to new page
-/memberships.html#unlimited        /unlimited-dog-walks.html                      301
+/membership-unlimited-plan.html         /unlimited-dog-walks.html                           301
+/membership-unlimited.html              /unlimited-dog-walks.html                           301
+/membership-unlimited                   /unlimited-dog-walks.html                           301
+/membership-unlimited/                  /unlimited-dog-walks.html                           301
+/unlimited                              /unlimited-dog-walks.html                           301
+/unlimited/                             /unlimited-dog-walks.html                           301
+/memberships.html#unlimited             /unlimited-dog-walks.html                           301
 
 # ================================
 # Common legacy/typo variants
 # ================================
-/book-now                          /book-now/                                     301
-/book-now.html                     /book-now/                                     301
-/blog/index.html                   /blog/                                         301
-/sitemap                           /sitemap.html                                  301
-/services                          /services.html                                 301
-/about                             /about.html                                    301
-/contact                           /contact.html                                  301
-/privacy                           /privacy.html                                  301
-/terms                             /terms.html                                    301
+/book-now                               /book-now/                                          301
+/book-now.html                          /book-now/                                          301
+/blog/index.html                        /blog/                                              301
+/sitemap                                /sitemap.html                                       301
+/services                               /services.html                                      301
+/about                                  /about.html                                         301
+/contact                                /contact.html                                       301
+/privacy                                /privacy.html                                       301
+/terms                                  /terms.html                                         301
 
 # ================================
 # Strip index.html → pretty links
 # ================================
-*/index.html                       /:splat/                                       301
+*/index.html                            /:splat/                                            301
+
+# ================================
+# Guard: never add slashes to real files
+# (Must be BEFORE trailing-slash section)
+# ================================
+/:file.:ext                             /:file.:ext                                         200!
+/:parent/:file.:ext                     /:parent/:file.:ext                                 200!
 
 # ================================
 # Enforce trailing slash on directory-style paths
-# (Note: specific .html canonicals above will win)
+# (Specific .html canonicals above will win)
 # ================================
-/:slug                             /:slug/                                        301
-/:slug/:child                      /:slug/:child/                                 301
+/:slug                                  /:slug/                                             301
+/:slug/:child                           /:slug/:child/                                      301
 
 # ================================
 # Membership Pages (legacy → current)
-# (Keep existing mappings; Unlimited now handled above)
+# (Unlimited handled above)
 # ================================
-/membership-credit-booking.html        /membership-credit-booking-south-melbourne.html    301
-/membership-sniffvestment.html         /membership-starter.html                          301
-/membership-starter-sniffvestment.html /membership-starter.html                          301
-/membership-growth-plan.html           /membership-growth.html                           301
+/membership-credit-booking.html         /membership-credit-booking-south-melbourne.html     301
+/membership-sniffvestment.html          /membership-starter.html                            301
+/membership-starter-sniffvestment.html  /membership-starter.html                            301
+/membership-growth-plan.html            /membership-growth.html                             301
 
 # ================================
 # Friendly short links for campaigns
 # ================================
-/starter                              /membership-starter.html                           301
-/growth                               /membership-growth.html                            301
-/unlimited                            /unlimited-dog-walks.html                          301
-/credit                               /membership-credit-booking-south-melbourne.html    301
-/join                                 /memberships.html                                  301
+/starter                                /membership-starter.html                            301
+/growth                                 /membership-growth.html                             301
+/unlimited                              /unlimited-dog-walks.html                           301
+/credit                                 /membership-credit-booking-south-melbourne.html     301
+/join                                   /memberships.html                                   301
 
 # ================================
 # QR-friendly direct booking links with UTM tracking (Flyers)
 # ================================
-/join-starter     https://www.timetopet.com/portal/woofofwalkstreet/create-account?utm_source=qr&utm_medium=flyer&utm_campaign=starter_membership    302
-/join-growth      https://www.timetopet.com/portal/woofofwalkstreet/create-account?utm_source=qr&utm_medium=flyer&utm_campaign=growth_membership     302
-/join-unlimited   https://www.timetopet.com/portal/woofofwalkstreet/create-account?utm_source=qr&utm_medium=flyer&utm_campaign=unlimited_membership  302
+/join-starter       https://www.timetopet.com/portal/woofofwalkstreet/create-account?utm_source=qr&utm_medium=flyer&utm_campaign=starter_membership      302
+/join-growth        https://www.timetopet.com/portal/woofofwalkstreet/create-account?utm_source=qr&utm_medium=flyer&utm_campaign=growth_membership       302
+/join-unlimited     https://www.timetopet.com/portal/woofofwalkstreet/create-account?utm_source=qr&utm_medium=flyer&utm_campaign=unlimited_membership    302
 
 # ================================
 # Vanity QR links (Social vs Flyers split)
 # ================================
-/qr-starter       https://www.timetopet.com/portal/woofofwalkstreet/create-account?utm_source=qr&utm_medium=social&utm_campaign=starter_membership    302
-/qr-growth        https://www.timetopet.com/portal/woofofwalkstreet/create-account?utm_source=qr&utm_medium=social&utm_campaign=growth_membership     302
-/qr-unlimited     https://www.timetopet.com/portal/woofofwalkstreet/create-account?utm_source=qr&utm_medium=social&utm_campaign=unlimited_membership  302
+/qr-starter         https://www.timetopet.com/portal/woofofwalkstreet/create-account?utm_source=qr&utm_medium=social&utm_campaign=starter_membership     302
+/qr-growth          https://www.timetopet.com/portal/woofofwalkstreet/create-account?utm_source=qr&utm_medium=social&utm_campaign=growth_membership      302
+/qr-unlimited       https://www.timetopet.com/portal/woofofwalkstreet/create-account?utm_source=qr&utm_medium=social&utm_campaign=unlimited_membership   302
 
 # ================================
 # Catch-all membership redirect
 # ================================
-/membership/*                         /memberships.html                                  301
+/membership/*                          /memberships.html                                    301
 
 # ================================
 # Clean removals (410 Gone)
 # ================================
-/wp-admin/*                        -                                               410
-/wp-login.php                      -                                               410
-/cgi-bin/*                         -                                               410
-/phpmyadmin/*                      -                                               410
-/searchreplacedb2.php              -                                               410
-/old-page                          -                                               410
-/test-page                         -                                               410
+/wp-admin/*                            -                                                    410
+/wp-login.php                          -                                                    410
+/cgi-bin/*                             -                                                    410
+/phpmyadmin/*                          -                                                    410
+/searchreplacedb2.php                  -                                                    410
+/old-page                              -                                                    410
+/test-page                             -                                                    410

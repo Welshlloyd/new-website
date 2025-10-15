@@ -3,31 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dog Walking South Melbourne (Solo, GPS-Tracked) | The Woof of Walk Street</title>
-  <meta name="description" content="Solo, one-dog-only dog walking in South Melbourne. 45-minute walks with GPS routes and photo updates. Trusted local walker for Albert Park, Port Melbourne, Middle Park & Southbank." />
+
+  <!-- CTR-optimised title + meta -->
+  <title>Dog Walking South Melbourne — Ethical Solo Walks</title>
+  <meta name="description" content="Premium solo dog walking across South Melbourne, Albert Park, Middle Park & Port Melbourne. GPS-tracked, insured and reliable. 50% off Unlimited this month." />
+
   <link rel="canonical" href="https://www.woofofwalkstreet.com/dog-walking-south-melbourne.html" />
   <link rel="icon" href="/images/brand/favicon.ico" />
 
   <!-- Styles -->
-
-   <!-- Styles -->
-  <!-- Core styles: mini first, then dark/light support, then main styles -->
   <link rel="stylesheet" href="/css/mini.css">
   <link rel="stylesheet" href="/css/mini.dark.css">
   <link rel="stylesheet" href="/css/mini.light.css">
   <link rel="stylesheet" href="/css/styles.css">
 
-
-
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Dog Walking South Melbourne (Solo, GPS-Tracked) | The Woof of Walk Street">
-  <meta property="og:description" content="Solo, one-dog-only dog walking in South Melbourne. GPS tracking & photo updates after every walk.">
+  <meta property="og:title" content="Dog Walking South Melbourne — Ethical Solo Walks">
+  <meta property="og:description" content="Solo, one-dog-only dog walking in South Melbourne. GPS tracking & photo updates after every walk. 50% off Unlimited this month.">
   <meta property="og:url" content="https://www.woofofwalkstreet.com/dog-walking-south-melbourne.html">
   <meta property="og:image" content="https://www.woofofwalkstreet.com/images/brand/hero-dog-skyline-1200.webp">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Dog Walking South Melbourne | The Woof of Walk Street">
-  <meta name="twitter:description" content="Solo, GPS-tracked dog walks with photo updates across South Melbourne.">
+  <meta name="twitter:title" content="Dog Walking South Melbourne — Ethical Solo Walks">
+  <meta name="twitter:description" content="GPS-tracked solo walks with photo updates across South Melbourne. Try Unlimited — 50% off this month.">
   <meta name="twitter:image" content="https://www.woofofwalkstreet.com/images/brand/hero-dog-skyline-1200.webp">
 
   <!-- Breadcrumbs JSON-LD -->
@@ -42,7 +40,7 @@
   }
   </script>
 
-  <!-- Business + Services + FAQ JSON-LD -->
+  <!-- Business + Service + FAQ JSON-LD (single consolidated graph) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -105,6 +103,7 @@
   }
   </script>
 
+  <!-- Preload LCP image -->
   <link rel="preload" as="image" href="/images/pages/dog-walking/dog-albert-park-lake-south-melbourne.jpg">
 </head>
 <body>
@@ -125,12 +124,14 @@
         <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="56" height="56">
         <strong>The Woof of Walk Street</strong>
       </a>
+
       <input id="nav-toggle" type="checkbox" hidden>
       <label for="nav-toggle" class="nav-toggle">☰</label>
+
       <nav class="nav-links">
         <section class="nav-group">
-          <button class="nav-group-btn" aria-expanded="false">Services</button>
-          <ul class="nav-group-list">
+          <button class="nav-group-btn" aria-expanded="false" aria-controls="nav-services">Services</button>
+          <ul id="nav-services" class="nav-group-list">
             <li><a href="/services.html">All Services</a></li>
             <li><a href="/dog-walking-south-melbourne.html" aria-current="page">Dog Walking South Melbourne</a></li>
             <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
@@ -142,7 +143,7 @@
         <a href="/blog/index.html">Blog</a>
         <a href="/faq.html">FAQs</a>
         <a href="/search.html">Search</a>
-        <a id="book-now-header" class="btn button-primary nav-cta" href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=header&utm_campaign=book_now" target="_blank">Book Now</a>
+        <a id="book-now-header" class="btn button-primary nav-cta" href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=header&utm_campaign=book_now" target="_blank" rel="noopener">Book Now</a>
       </nav>
     </div>
   </header>
@@ -158,7 +159,7 @@
         <p class="muted" style="margin-top:.4rem;">Casual solo walk (45 mins): <strong>A$90</strong>. Join <a href="/unlimited-dog-walks.html">Unlimited</a> for weekday savings.</p>
         <div class="cta-buttons" style="justify-content:center;margin-top:1rem;">
           <a class="cta-button" href="/unlimited-dog-walks.html">See Unlimited Membership</a>
-          <a class="cta-button secondary" href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=hero&utm_campaign=book_walk" target="_blank">Book a Walk</a>
+          <a class="cta-button secondary" href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=hero&utm_campaign=book_walk" target="_blank" rel="noopener">Book a Walk</a>
         </div>
       </div>
     </section>
@@ -183,12 +184,12 @@
         </ul>
         <p class="stack-sm">
           <a class="btn button-primary" href="/unlimited-dog-walks.html">Join Unlimited — 50% Off</a>
-          <a class="btn button-secondary" href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=why-solo&utm_campaign=book_walk" target="_blank">Book a Casual Walk</a>
+          <a class="btn button-secondary" href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=why-solo&utm_campaign=book_walk" target="_blank" rel="noopener">Book a Casual Walk</a>
         </p>
       </div>
     </section>
 
-    <!-- FAQ (schema-enhanced) -->
+    <!-- FAQ (visible content that aligns to JSON-LD above) -->
     <section class="faq" id="faq" itemscope itemtype="https://schema.org/FAQPage">
       <div class="container">
         <h2>Dog Walking FAQs</h2>
@@ -214,25 +215,7 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-banner">
-      <img src="/images/brand/footer-banner-800x300.webp" alt="Happy dogs in Melbourne" width="800" height="300">
-    </div>
-    <div class="container footer-grid">
-      <section class="footer-brand">
-        <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="60" height="60">
-        <p><strong>The Woof of Walk Street</strong><br>South Melbourne, VIC · Mon–Fri 7am–7pm<br>
-        <a href="tel:+61456754050">+61 456 754 050</a> · <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a></p>
-      </section>
-    </div>
-    <div class="container footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
-    <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
-  </footer>
-</body>
-</html>
-
-
-     <!-- FOOTER -->
+  <!-- FOOTER (single, de-duplicated) -->
   <footer class="site-footer" role="contentinfo">
     <div class="footer-banner">
       <picture>
@@ -261,7 +244,7 @@
         <h3>Services</h3>
         <ul>
           <li><a href="/services.html">All Services</a></li>
-          <li><a href="/dog-walking-south-melbourne.html">Dog Walking South Melbourne</a></li>
+          <li><a href="/dog-walking-south-melbourne.html" aria-current="page">Dog Walking South Melbourne</a></li>
           <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
           <li><a href="/memberships.html">Memberships — Compare Plans</a></li>
           <li><a href="/service-areas.html">Service Areas</a></li>
@@ -272,7 +255,7 @@
       <section class="footer-col collapsible">
         <button class="collapse-btn" aria-expanded="false" aria-controls="support-list">Support</button>
         <ul id="support-list">
-          <li><a href="/about.html" aria-current="page">About</a></li>
+          <li><a href="/about.html">About</a></li>
           <li><a href="/community.html">Community</a></li>
           <li><a href="/testimonials.html">Testimonials</a></li>
           <li><a href="/gallery.html">Photos & Videos</a></li>
@@ -298,81 +281,45 @@
 
     <div class="container footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+    <!-- Footer accordions -->
+    <script defer>
+      document.querySelectorAll('.collapsible .collapse-btn').forEach(btn=>{
+        btn.addEventListener('click', ()=>{
+          const list = document.getElementById(btn.getAttribute('aria-controls'));
+          const open = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', String(!open));
+          list.hidden = open;
+        });
+        const list = document.getElementById(btn.getAttribute('aria-controls'));
+        if (window.matchMedia('(max-width:640px)').matches) list.hidden = true;
+      });
+    </script>
+
+    <!-- Services flyout toggle -->
+    <script defer>
+      (function () {
+        const btn  = document.querySelector('.nav-group-btn[aria-controls="nav-services"]');
+        const list = document.getElementById('nav-services');
+        if (!btn || !list) return;
+        const sync = () => { list.hidden = btn.getAttribute('aria-expanded') !== 'true'; };
+        sync();
+        btn.addEventListener('click', () => {
+          const open = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', String(!open)); sync();
+        });
+        document.addEventListener('click', (e) => {
+          if (!btn.contains(e.target) && !list.contains(e.target)) {
+            btn.setAttribute('aria-expanded', 'false'); sync();
+          }
+        }, { capture: true });
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') { btn.setAttribute('aria-expanded', 'false'); sync(); }
+        });
+      })();
+    </script>
   </footer>
 
-  <!-- Footer accordions -->
-  <script defer>
-    document.querySelectorAll('.collapsible .collapse-btn').forEach(btn=>{
-      btn.addEventListener('click', ()=>{
-        const list = document.getElementById(btn.getAttribute('aria-controls'));
-        const open = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', String(!open));
-        list.hidden = open;
-      });
-      const list = document.getElementById(btn.getAttribute('aria-controls'));
-      if (window.matchMedia('(max-width:640px)').matches) list.hidden = true;
-    });
-  </script>
-
-  <!-- Services flyout toggle -->
-  <script defer>
-    (function () {
-      const btn  = document.querySelector('.nav-group-btn[aria-controls="nav-services"]');
-      const list = document.getElementById('nav-services');
-      if (!btn || !list) return;
-      const sync = () => { list.hidden = btn.getAttribute('aria-expanded') !== 'true'; };
-      sync();
-      btn.addEventListener('click', () => {
-        const open = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', String(!open)); sync();
-      });
-      document.addEventListener('click', (e) => {
-        if (!btn.contains(e.target) && !list.contains(e.target)) {
-          btn.setAttribute('aria-expanded', 'false'); sync();
-        }
-      }, { capture: true });
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') { btn.setAttribute('aria-expanded', 'false'); sync(); }
-      });
-    })();
-  </script>
-
-  <!-- Theme toggle control -->
-  <script defer>
-    (function () {
-      const el = document.getElementById('theme-toggle');
-      if (!el) return;
-      const KEY = 'wow-theme';
-      const order = ['auto','light','dark'];
-      const next = (v) => order[(order.indexOf(v) + 1) % order.length];
-      function apply(pref) {
-        localStorage.setItem(KEY, pref);
-        document.documentElement.setAttribute('data-theme', pref);
-        const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const effectiveDark = (pref === 'dark') || (pref === 'auto' && systemDark);
-        document.documentElement.style.colorScheme = effectiveDark ? 'dark' : 'light';
-        el.setAttribute('aria-pressed', pref !== 'auto');
-        el.title = `Theme: ${pref[0].toUpperCase()}${pref.slice(1)}`;
-        el.textContent = (pref === 'auto') ? '🌗 Auto' : (pref === 'dark') ? '🌙 Dark' : '🔆 Light';
-      }
-      apply(localStorage.getItem(KEY) || 'auto');
-      el.addEventListener('click', () => apply(next(localStorage.getItem(KEY) || 'auto')));
-      const mql = window.matchMedia('(prefers-color-scheme: dark)');
-      mql.addEventListener?.('change', () => { if ((localStorage.getItem(KEY) || 'auto') === 'auto') apply('auto'); });
-    })();
-  </script>
-
-  <!-- FAQPage schema for on-page FAQ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type":"Question","name":"Do you ever do group walks?","acceptedAnswer":{"@type":"Answer","text":"No — we’re strictly one-dog-only for safety, focus and a calmer experience."}},
-      { "@type":"Question","name":"Do I get updates after each walk?","acceptedAnswer":{"@type":"Answer","text":"Yes. You’ll receive a GPS route, photos and quick notes after every walk."}},
-      { "@type":"Question","name":"Which areas do you cover?","acceptedAnswer":{"@type":"Answer","text":"South Melbourne, Albert Park, Port Melbourne, Middle Park and Southbank."}}
-    ]
-  }
-  </script>
+  <!-- Removed duplicate FAQ JSON-LD block to avoid duplication -->
 </body>
 </html>

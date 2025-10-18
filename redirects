@@ -7,7 +7,11 @@ https://woofofwalkstreet.com/*          https://www.woofofwalkstreet.com/:splat 
 # ================================
 # Key fixes
 # ================================
-/book                                   /book-now/                                          301
+# (Updated) Send all "book" intents to the new booking bridge
+/book                                   /book-dog-walk/                                     301
+/book-now                               /book-dog-walk/                                     301
+/book-now.html                          /book-dog-walk/                                     301
+
 /blog                                   /blog/                                              301
 /blog/index                             /blog/                                              301
 
@@ -28,10 +32,15 @@ https://woofofwalkstreet.com/*          https://www.woofofwalkstreet.com/:splat 
 /memberships.html#unlimited             /unlimited-dog-walks.html                           301
 
 # ================================
+# Booking bridge canonical (directory-style)
+# Ensures pretty URL wins and avoids duplicate content
+# ================================
+/book-dog-walk                          /book-dog-walk/                                     301
+/book-dog-walk.html                     /book-dog-walk/                                     301
+
+# ================================
 # Common legacy/typo variants
 # ================================
-/book-now                               /book-now/                                          301
-/book-now.html                          /book-now/                                          301
 /blog/index.html                        /blog/                                              301
 /sitemap                                /sitemap.html                                       301
 /services                               /services.html                                      301

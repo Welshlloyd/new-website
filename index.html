@@ -719,32 +719,30 @@
       return href && href.toLowerCase().includes('timetopet.com/portal/woofofwalkstreet');
     }
 
-    // Rewrites all Time To Pet links on page load
-    function rewriteAll(){
-      document.querySelectorAll('a[href]').forEach(function(a){
-        var href = a.getAttribute('href');
-        if (looksLikeTTP(href)) a.setAttribute('href', buildRoute(a));
-      });
-    }
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // All buttons that should lead to the booking bridge
+  const buttons = document.querySelectorAll('a[href*="book"], button[data-action="book"]');
 
-    // Intercepts any missed clicks dynamically loaded
-    function interceptClicks(e){
-      var a = e.target.closest && e.target.closest('a[href]');
-      if (!a) return;
-      var href = a.getAttribute('href');
-      if (looksLikeTTP(href)) {
-        e.preventDefault();
-        window.location.href = buildRoute(a);
+  // Correct URL — your bridge page that exists
+  const DEFAULT_ROUTE = "/book-dog-walk/";
+
+  buttons.forEach(btn => {
+    btn.addEventListener("click", function(e) {
+      e.preventDefault();
+      // Fire conversion tracking
+      if (typeof gtag === "function") {
+        gtag('event', 'book_appointment_ttp', {
+          'event_category': 'engagement',
+          'event_label': 'Book Now Button Click'
+        });
       }
-    }
-
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', rewriteAll);
-    } else { rewriteAll(); }
-
-    document.addEventListener('click', interceptClicks, {capture:true});
-  })();
-  </script>
+      // Redirect to the booking bridge page
+      window.location.href = DEFAULT_ROUTE;
+    });
+  });
+});
+</script>
 </body>
 </html>
 </body>

@@ -7,10 +7,17 @@ https://woofofwalkstreet.com/*          https://www.woofofwalkstreet.com/:splat 
 # ================================
 # Key fixes
 # ================================
-# (Updated) Send all "book" intents to the new booking bridge
+# (Updated) All booking intents → new booking bridge
 /book                                   /book-dog-walk/                                     301
 /book-now                               /book-dog-walk/                                     301
 /book-now.html                          /book-dog-walk/                                     301
+/booking                                /book-dog-walk/                                     301
+/booking.html                           /book-dog-walk/                                     301
+/bookings                               /book-dog-walk/                                     301
+/bookings.html                          /book-dog-walk/                                     301
+# Wildcard fallbacks (catch any subpaths)
+/booking/*                              /book-dog-walk/                                     301
+/bookings/*                             /book-dog-walk/                                     301
 
 /blog                                   /blog/                                              301
 /blog/index                             /blog/                                              301
@@ -33,7 +40,6 @@ https://woofofwalkstreet.com/*          https://www.woofofwalkstreet.com/:splat 
 
 # ================================
 # Booking bridge canonical (directory-style)
-# Ensures pretty URL wins and avoids duplicate content
 # ================================
 /book-dog-walk                          /book-dog-walk/                                     301
 /book-dog-walk.html                     /book-dog-walk/                                     301
@@ -85,6 +91,18 @@ https://woofofwalkstreet.com/*          https://www.woofofwalkstreet.com/:splat 
 /unlimited                              /unlimited-dog-walks.html                           301
 /credit                                 /membership-credit-booking-south-melbourne.html     301
 /join                                   /memberships.html                                   301
+
+# ================================
+# Campaign short links (with attribution tracking)
+# ================================
+/book-adwords       /book-dog-walk/?utm_source=google&utm_medium=cpc&utm_campaign=booking_bridge             302
+/book-meta          /book-dog-walk/?utm_source=meta&utm_medium=ads&utm_campaign=booking_bridge               302
+/book-organic       /book-dog-walk/?utm_source=google&utm_medium=organic&utm_campaign=booking_bridge         302
+/book-qr            /book-dog-walk/?utm_source=qr&utm_medium=flyer&utm_campaign=booking_bridge               302
+/book-social        /book-dog-walk/?utm_source=instagram&utm_medium=social&utm_campaign=booking_bridge       302
+/book-email         /book-dog-walk/?utm_source=email&utm_medium=newsletter&utm_campaign=booking_bridge       302
+/book-cta           /book-dog-walk/?utm_source=website&utm_medium=cta&utm_campaign=booking_bridge            302
+/book-test          /book-dog-walk/?utm_source=website&utm_medium=cta&utm_campaign=test_variant              302
 
 # ================================
 # QR-friendly direct booking links with UTM tracking (Flyers)

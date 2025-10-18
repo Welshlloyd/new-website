@@ -698,5 +698,54 @@
     });
   })();
   </script>
+  
+  <!-- === Auto-rewrite Time To Pet links site-wide === -->
+  <script>
+  (function () {
+    // Change this to '/go/ttp?...' if you’re using the Netlify GA4 gateway
+    var DEFAULT_ROUTE = '/book-cta';
+
+    function buildRoute(a){
+      var variant = a.getAttribute('data-variant') || '';
+      var plan    = a.getAttribute('data-plan') || '';
+      var base    = DEFAULT_ROUTE;
+      var sep = base.indexOf('?')>-1 ? '&' : '?';
+      if (variant) base += sep + 'variant=' + encodeURIComponent(variant), sep='&';
+      if (plan)    base += sep + 'plan=' + encodeURIComponent(plan);
+      return base;
+    }
+
+    function looksLikeTTP(href){
+      return href && href.toLowerCase().includes('timetopet.com/portal/woofofwalkstreet');
+    }
+
+    // Rewrites all Time To Pet links on page load
+    function rewriteAll(){
+      document.querySelectorAll('a[href]').forEach(function(a){
+        var href = a.getAttribute('href');
+        if (looksLikeTTP(href)) a.setAttribute('href', buildRoute(a));
+      });
+    }
+
+    // Intercepts any missed clicks dynamically loaded
+    function interceptClicks(e){
+      var a = e.target.closest && e.target.closest('a[href]');
+      if (!a) return;
+      var href = a.getAttribute('href');
+      if (looksLikeTTP(href)) {
+        e.preventDefault();
+        window.location.href = buildRoute(a);
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', rewriteAll);
+    } else { rewriteAll(); }
+
+    document.addEventListener('click', interceptClicks, {capture:true});
+  })();
+  </script>
+</body>
+</html>
 </body>
 </html>

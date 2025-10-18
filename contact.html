@@ -4,142 +4,111 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Contact | The Woof of Walk Street (South Melbourne)</title>
-  <meta name="description" content="Contact The Woof of Walk Street — solo dog walking and boutique weekend boarding in South Melbourne. Call, email, or book via Time To Pet." />
+  <!-- ====== SEO ====== -->
+  <title>Contact | Dog Walker South Melbourne & Boutique Boarding</title>
+  <meta name="description" content="Contact The Woof of Walk Street — solo dog walking and boutique weekend boarding in South Melbourne. Call, email, or send a message. One-dog-only, GPS tracked." />
   <link rel="canonical" href="https://www.woofofwalkstreet.com/contact.html" />
-  <link rel="icon" href="/images/brand/favicon.ico" />
-
-  <!-- Core styles (same stack as the rest of the site) -->
-  <link rel="stylesheet" href="/css/mini.css" />
-  <link rel="stylesheet" href="/css/mini.dark.css" />
-  <link rel="stylesheet" href="/css/mini.light.css" />
-  <link rel="stylesheet" href="/css/styles.css" />
 
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Contact | The Woof of Walk Street">
-  <meta property="og:description" content="Call, email or book a solo walk/boarding. South Melbourne local.">
+  <meta property="og:title" content="Contact | Dog Walker South Melbourne">
+  <meta property="og:description" content="Solo dog walking & boutique weekend boarding in South Melbourne. Call, email or message us." />
   <meta property="og:url" content="https://www.woofofwalkstreet.com/contact.html">
   <meta property="og:image" content="https://www.woofofwalkstreet.com/images/brand/hero-dog-skyline-1200.webp">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- LocalBusiness JSON-LD -->
+  <!-- Styles -->
+  <link rel="icon" href="/images/brand/favicon.ico" />
+  <link rel="stylesheet" href="/css/mini.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
+
+  <!-- Page-scoped styles: strong contrast, cards, form -->
+  <style>
+    :root{
+      --bg: var(--bg, #0b0e12);
+      --card: #0f1318;
+      --line: #1d232c;
+      --text: #e6edf3;
+      --muted: #a9b4c0;
+      --brand: #ffd166;
+      --brand-ink:#111;
+    }
+    body[data-theme="light"] .contact-hero{background:#f8fafc}
+    .contact-hero{
+      background: radial-gradient(1200px 600px at 20% -20%, rgba(255,209,102,.10), transparent 60%),
+                  linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0));
+      padding:28px 0;border-bottom:1px solid rgba(0,0,0,.08)
+    }
+    .contact-hero .subhead{max-width:60ch;color:var(--muted)}
+    .grid{display:grid;gap:16px}
+    @media(min-width:880px){ .grid{grid-template-columns:1.1fr .9fr} }
+    .card{
+      background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.02));
+      border:1px solid var(--line); border-radius:14px; padding:18px; box-shadow:0 10px 24px rgba(0,0,0,.18)
+    }
+    .card h2{margin:.25rem 0 .5rem}
+    .contact-list{list-style:none;margin:0;padding:0}
+    .contact-list li{margin:.45rem 0}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:12px 18px;border-radius:999px;border:1px solid transparent;text-decoration:none;font-weight:900}
+    .btn-primary{background:var(--brand);color:var(--brand-ink);box-shadow:0 10px 26px rgba(255,209,102,.25)}
+    .btn-ghost{background:transparent;border-color:#2a3440;color:inherit}
+    .btn-outline{background:transparent;border-color:var(--brand);color:var(--brand)}
+    .badge{display:inline-block;padding:.28rem .6rem;border-radius:999px;font-size:.82rem;font-weight:800;background:#111;color:#fff}
+    .muted{color:var(--muted)}
+
+    /* Form */
+    form .row{display:grid;gap:12px}
+    @media(min-width:680px){ form .row.two{grid-template-columns:1fr 1fr} }
+    label{font-weight:700;display:block;margin:.25rem 0}
+    input, textarea, select{
+      width:100%;padding:12px 14px;border-radius:10px;border:1px solid #2a3440;
+      background:rgba(255,255,255,.02);color:inherit
+    }
+    input:focus, textarea:focus, select:focus{outline:2px solid var(--brand)}
+    .help{font-size:.9rem;color:var(--muted);margin-top:.25rem}
+    .error{color:#ff6b6b;font-size:.9rem}
+    .map-embed{border:1px solid var(--line);border-radius:12px;overflow:hidden}
+    .map-embed img{display:block;width:100%;height:auto}
+    .success, .fail{display:none;margin-top:10px;padding:10px;border-radius:10px}
+    .success{background:#0c5132;color:#e7f6ed;border:1px solid #0a3f27}
+    .fail{background:#512d2d;color:#fdecec;border:1px solid #3f2323}
+  </style>
+
+  <!-- ====== Schema (LocalBusiness + ContactPage) ====== -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": "https://www.woofofwalkstreet.com/#business",
-    "name": "The Woof of Walk Street",
-    "image": "https://www.woofofwalkstreet.com/images/brand/logo-lockup-gold.webp",
-    "url": "https://www.woofofwalkstreet.com",
-    "telephone": "+61 456 754 050",
-    "priceRange": "$$",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "South Melbourne",
-      "addressRegion": "VIC",
-      "addressCountry": "AU"
-    },
-    "geo": { "@type": "GeoCoordinates", "latitude": -37.833, "longitude": 144.958 },
-    "hasMap": "https://maps.app.goo.gl/YnEoSPwhGocUZyWL9?g_st=ipc",
-    "openingHoursSpecification": [{
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-      "opens": "07:00", "closes": "19:00"
-    }],
-    "areaServed": ["South Melbourne","Albert Park","Port Melbourne","Middle Park","Southbank"],
-    "sameAs": [
-      "https://instagram.com/woofofwalkstreet",
-      "https://facebook.com/woofofwalkstreet",
-      "https://x.com/woofofwalkstreet"
-    ],
-    "description": "Solo dog walks and boutique weekend boarding with GPS tracking and photo updates."
+    "@type": "ContactPage",
+    "name": "Contact The Woof of Walk Street",
+    "url": "https://www.woofofwalkstreet.com/contact.html",
+    "mainEntity": {
+      "@type": "LocalBusiness",
+      "@id": "https://www.woofofwalkstreet.com/#business",
+      "name": "The Woof of Walk Street",
+      "image": "https://www.woofofwalkstreet.com/images/brand/logo-lockup-gold.webp",
+      "url": "https://www.woofofwalkstreet.com",
+      "telephone": "+61 456 754 050",
+      "priceRange": "$$",
+      "address": { "@type": "PostalAddress", "addressLocality": "South Melbourne", "addressRegion": "VIC", "addressCountry": "AU" },
+      "areaServed": ["South Melbourne","Albert Park","Port Melbourne","Middle Park","Southbank"],
+      "sameAs": ["https://instagram.com/woofofwalkstreet","https://facebook.com/woofofwalkstreet","https://x.com/woofofwalkstreet"]
+    }
   }
   </script>
 
-  <!-- Google Ads (load ONCE) -->
+  <!-- ====== Google Ads tag with Enhanced Conversions ====== -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
-    gtag('config','AW-17527927259');
+    // Enable enhanced conversions on this page:
+    gtag('config', 'AW-17527927259', { 'allow_enhanced_conversions': true });
   </script>
-
-  <!-- Page-scoped styles with guaranteed contrast -->
-  <style>
-    :root{
-      /* borrow site tokens but pin safe contrasts for this page */
-      --wow-bg: #0b0e12;
-      --wow-card: #0f1318;
-      --wow-line: #1d232c;
-      --wow-text: #e6edf3;
-      --wow-muted:#acb6c1;
-      --wow-brand:#ffd166;
-      --wow-ink:#0b0e12;
-    }
-
-    body{background: var(--wow-bg); color: var(--wow-text);}
-    .contact-hero{
-      padding:28px 0 22px;
-      background:
-        radial-gradient(1100px 520px at 12% -20%, rgba(255,209,102,.10), transparent 60%),
-        linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0));
-      border-bottom:1px solid rgba(255,255,255,.06);
-    }
-    .contact-hero h1{font-weight:900; margin:0 0 .35rem}
-    .contact-hero .subhead{color:#cfd6df; max-width:60ch}
-
-    .grid{
-      display:grid; gap:18px; grid-template-columns:1fr;
-    }
-    @media(min-width:880px){ .grid{ grid-template-columns: 1.1fr .9fr; } }
-
-    .card{
-      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
-      border:1px solid var(--wow-line); border-radius:14px; padding:18px;
-      box-shadow:0 10px 28px rgba(0,0,0,.18);
-    }
-    .card h2{font-weight:900; margin:.2rem 0 .6rem}
-    .muted{ color: var(--wow-muted); }
-
-    .contact-list{ list-style:none; padding:0; margin:0 0 .75rem }
-    .contact-list li{ margin:.5rem 0; font-weight:600 }
-    .contact-list a{ color:#fff; text-decoration: none; border-bottom:1px dashed rgba(255,255,255,.2) }
-    .contact-list a:hover{ border-bottom-color: #fff }
-
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      gap:.5rem; padding:12px 18px; border-radius:999px; text-decoration:none; font-weight:900;
-      border:1px solid transparent; transition:transform .15s, box-shadow .15s;
-    }
-    .btn-primary{ background: var(--wow-brand); color:var(--wow-ink); box-shadow:0 10px 24px rgba(255,209,102,.25) }
-    .btn-ghost{ background:transparent; color:#fff; border-color:#2a3440 }
-    .btn-primary:hover, .btn-ghost:hover{ transform: translateY(-1px) }
-
-    .btn-row{ display:flex; gap:10px; flex-wrap:wrap; margin:.6rem 0 }
-
-    .map{
-      border:1px solid var(--wow-line); border-radius:14px; overflow:hidden;
-      aspect-ratio: 3 / 2; background:#0c1116;
-    }
-    .map img{ width:100%; height:100%; object-fit:cover; display:block }
-
-    /* details (FAQ) */
-    details{ border-top:1px solid var(--wow-line); padding:.6rem 0 }
-    details:first-of-type{ border-top:none }
-    summary{ cursor:pointer; font-weight:800 }
-  </style>
-
-  <!-- LCP preload -->
-  <link rel="preload" as="image"
-        href="/images/brand/hero-dog-skyline-1200.webp"
-        imagesrcset="/images/brand/hero-dog-skyline-800.webp 800w, /images/brand/hero-dog-skyline-1200.webp 1200w, /images/brand/hero-dog-skyline-1600.webp 1600w"
-        imagesizes="(max-width: 640px) 100vw, (max-width: 1200px) 90vw, 1200px">
 </head>
 <body>
 
-  <!-- HEADER (same as site) -->
+  <!-- ====== Header (condensed – matches site nav structure) ====== -->
   <header class="site-header" role="banner">
     <div class="navbar container" role="navigation" aria-label="Main">
       <a class="brand" href="/" aria-label="Go to home">
@@ -156,8 +125,10 @@
           <ul id="nav-services" class="nav-group-list">
             <li><a href="/services.html">All Services</a></li>
             <li><a href="/dog-walking-south-melbourne.html">Dog Walking South Melbourne</a></li>
-            <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
+            <li><a href="/casual-dog-walking-south-melbourne.html">Casual Dog Walking</a></li>
+            <li><a href="/memberships.html">Memberships — Compare Plans</a></li>
             <li><a href="/unlimited-dog-walks.html">Unlimited Membership</a></li>
+            <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
             <li><a href="/contact.html" aria-current="page">Contact</a></li>
           </ul>
         </section>
@@ -165,7 +136,6 @@
         <a href="/blog/index.html">Blog</a>
         <a href="/faq.html">FAQs</a>
         <a href="/search.html">Search</a>
-
         <a class="btn btn-primary nav-cta"
            href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=header&utm_campaign=book_now"
            target="_blank" rel="noopener"
@@ -177,30 +147,28 @@
   </header>
 
   <main>
-    <!-- HERO -->
+    <!-- ====== Hero ====== -->
     <section class="contact-hero">
       <div class="container">
-        <h1>Contact The Woof of Walk Street</h1>
-        <p class="subhead">Solo dog walking and boutique weekend boarding across South Melbourne.</p>
+        <span class="badge">South Melbourne</span>
+        <h1>Contact a South Melbourne Dog Walker</h1>
+        <p class="subhead">Solo dog walking and boutique weekend boarding. Call, email, or send a message — we usually reply within a few hours (Mon–Fri, 7am–7pm).</p>
       </div>
     </section>
 
-    <!-- GRID -->
-    <section class="section">
+    <!-- ====== Two-column content ====== -->
+    <section>
       <div class="container grid">
-
-        <!-- Left -->
-        <article class="card">
-          <h2>Talk to a human</h2>
-
-          <ul class="contact-list" aria-label="Contact details">
+        <!-- Left: Contact details + CTAs -->
+        <article class="card" aria-labelledby="talk-to-human">
+          <h2 id="talk-to-human">Talk to a human</h2>
+          <ul class="contact-list">
             <li>📞 <a href="tel:+61456754050">+61 456 754 050</a></li>
             <li>✉️ <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a></li>
-            <li>📍 <a href="https://maps.app.goo.gl/YnEoSPwhGocUZyWL9?g_st=ipc" target="_blank" rel="noopener">South Melbourne, VIC</a></li>
-            <li class="muted">🕒 Mon–Fri, 7:00am–7:00pm</li>
+            <li>📍 South Melbourne, VIC</li>
+            <li>🕒 Mon–Fri, 7:00am–7:00pm</li>
           </ul>
-
-          <div class="btn-row">
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px">
             <a class="btn btn-primary" target="_blank" rel="noopener"
                href="https://www.timetopet.com/portal/woofofwalkstreet/create-account"
                onclick="gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
@@ -212,58 +180,183 @@
               Client Login
             </a>
           </div>
-
-          <p class="muted" style="margin-top:.4rem">
-            Prefer messages? Email us or DM on
-            <a href="https://instagram.com/woofofwalkstreet" target="_blank" rel="noopener" style="color:#fff">Instagram</a>.
-          </p>
+          <p class="muted" style="margin-top:.6rem">Prefer messages? Email us or DM on <a href="https://instagram.com/woofofwalkstreet" target="_blank" rel="noopener">Instagram</a>.</p>
+          <p class="muted">Quick links: <a href="/dog-walking-south-melbourne.html">Dog Walking</a> · <a href="/memberships.html">Memberships</a> · <a href="/boarding-services.html">Weekend Boarding</a> · <a href="/faq.html">FAQs</a></p>
         </article>
 
-        <!-- Right -->
-        <aside class="card" aria-labelledby="where-we-walk">
-          <h2 id="where-we-walk">Where we walk</h2>
-          <p class="muted">We’re local to <strong>South Melbourne</strong> and walk daily around <strong>Albert Park Lake</strong>, St Vincent Gardens, and nearby streets. Boarding is one guest only — calm and kennel-free.</p>
-          <div class="map" aria-label="Service area map">
-            <picture>
-              <source type="image/webp" srcset="/images/brand/service-area-map.webp">
-              <img src="/images/brand/service-area-map.jpg"
-                   alt="Map showing South Melbourne, Albert Park, Port Melbourne, Middle Park and Southbank"
-                   width="1200" height="800" loading="lazy">
-            </picture>
-          </div>
-        </aside>
+        <!-- Right: Contact form -->
+        <aside class="card" aria-labelledby="contact-form-heading">
+          <h2 id="contact-form-heading">Send a message</h2>
+          <!-- NOTE: Replace YOUR_FORMSPREE_ID with your Formspree form ID -->
+          <form id="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" novalidate>
+            <!-- Redirect to thank-you after a successful submit -->
+            <input type="hidden" name="_redirect" value="https://www.woofofwalkstreet.com/thank-you.html">
 
+            <!-- Honeypot (spam) -->
+            <input type="text" name="_gotcha" autocomplete="off" tabindex="-1" style="position:absolute;left:-9999px;height:0;width:0;opacity:0">
+
+            <div class="row two">
+              <div>
+                <label for="name">Your name</label>
+                <input id="name" name="name" autocomplete="name" required />
+                <div class="error" id="err-name" aria-live="polite"></div>
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" inputmode="email" autocomplete="email" required />
+                <div class="error" id="err-email" aria-live="polite"></div>
+              </div>
+            </div>
+
+            <div class="row two">
+              <div>
+                <label for="phone">Phone (optional)</label>
+                <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" />
+                <div class="help">We'll only use this for scheduling.</div>
+              </div>
+              <div>
+                <label for="service">Service</label>
+                <select id="service" name="service">
+                  <option>Dog Walking (solo, 45 minutes)</option>
+                  <option>Casual Dog Walking</option>
+                  <option>Memberships (Starter/Growth/Unlimited)</option>
+                  <option>Weekend Boarding (one guest only)</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row">
+              <div>
+                <label for="message">How can we help?</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <div class="error" id="err-message" aria-live="polite"></div>
+              </div>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Send message</button>
+            <div class="success" id="form-success" role="status">Thanks — we’ve received your message.</div>
+            <div class="fail" id="form-fail" role="status">Sorry, something went wrong. Please try again or email us.</div>
+          </form>
+        </aside>
       </div>
     </section>
 
-    <!-- Micro-FAQ -->
-    <section class="section">
+    <!-- ====== Service area ====== -->
+    <section>
       <div class="container card">
+        <h2>Where we walk</h2>
+        <p>We’re local to <strong>South Melbourne</strong> and walk daily around <strong>Albert Park Lake</strong>, St Vincent Gardens, and nearby streets. Boarding is one guest only — calm and kennel-free.</p>
+        <div class="map-embed" aria-label="Service area map">
+          <a href="https://maps.app.goo.gl/YnEoSPwhGocUZyWL9?g_st=ipc" target="_blank" rel="noopener">
+            <picture>
+              <source srcset="/images/brand/service-area-map.webp" type="image/webp">
+              <img src="/images/brand/service-area-map.jpg" alt="Map of South Melbourne, Albert Park, Port Melbourne, Middle Park and Southbank" width="1200" height="800" loading="lazy">
+            </picture>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== Quick answers ====== -->
+    <section class="section alt">
+      <div class="container">
         <h2>Quick answers</h2>
         <details>
           <summary>Do you do pack walks?</summary>
-          <p class="muted">No — we’re one-dog-only for safety, focus and calmer outings.</p>
+          <p>No — we’re one-dog-only for safety, focus and calmer outings.</p>
         </details>
         <details>
           <summary>How long is each walk?</summary>
-          <p class="muted">45 minutes, paced for sniffing and decompression, with GPS + photos after.</p>
+          <p>45 minutes, paced for sniffing and decompression, with GPS + photos after.</p>
         </details>
         <details>
           <summary>Do you offer weekend boarding?</summary>
-          <p class="muted">Yes — <a href="/boarding-services.html">Weekend Woof Club</a> is a one-guest only, home-style stay.</p>
+          <p>Yes — <a href="/boarding-services.html">Weekend Woof Club</a> is a one-guest only, home-style stay.</p>
         </details>
-        <p style="margin-top:10px" class="muted">More questions? Visit the <a href="/faq.html">full FAQs</a>.</p>
+        <p style="margin-top:12px" class="muted">
+          More questions? Visit the <a href="/faq.html">full FAQs</a> or explore <a href="/memberships.html">dog walking memberships</a>.
+        </p>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER (unchanged) -->
+  <!-- ====== Footer (same as site) ====== -->
   <footer class="site-footer" role="contentinfo">
-    <!-- … keep your existing footer markup from the rest of the site … -->
+    <div class="footer-banner">
+      <picture>
+        <source srcset="/images/brand/footer-banner-1600x600.webp" media="(min-width: 768px)">
+        <img src="/images/brand/footer-banner-800x300.webp" alt="Happy dogs in Melbourne" loading="lazy" width="800" height="300">
+      </picture>
+    </div>
+
+    <div class="container footer-grid">
+      <section class="footer-brand">
+        <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="60" height="60" loading="lazy">
+        <p><strong>The Woof of Walk Street</strong><br>
+          <a class="footer-map" href="https://maps.app.goo.gl/YnEoSPwhGocUZyWL9?g_st=ipc" target="_blank" rel="noopener">South Melbourne, VIC</a> · Mon–Fri 7am–7pm<br>
+          <a href="tel:+61456754050">+61 456 754 050</a> · <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a>
+        </p>
+        <div class="footer-socials">
+          <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram"><img src="/images/social/instagram.svg" alt="" width="24" height="24"></a>
+          <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook"><img src="/images/social/facebook.svg" alt="" width="24" height="24"></a>
+          <a href="https://x.com/woofofwalkstreet" aria-label="X"><img src="/images/social/twitter.svg" alt="" width="24" height="24"></a>
+        </div>
+        <p>
+          <a class="btn btn-primary" target="_blank" rel="noopener"
+             href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=footer&utm_campaign=book_now_footer"
+             onclick="gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
+            Book Now
+          </a>
+        </p>
+      </section>
+
+      <nav class="footer-col" aria-label="Services">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="/services.html">All Services</a></li>
+          <li><a href="/dog-walking-south-melbourne.html">Dog Walking South Melbourne</a></li>
+          <li><a href="/casual-dog-walking-south-melbourne.html">Casual Dog Walking</a></li>
+          <li><a href="/memberships.html">Memberships</a></li>
+          <li><a href="/unlimited-dog-walks.html">Unlimited Membership</a></li>
+          <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
+          <li><a href="/contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+
+      <section class="footer-col collapsible">
+        <button class="collapse-btn" aria-expanded="false" aria-controls="support-list">Support</button>
+        <ul id="support-list">
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/testimonials.html">Testimonials</a></li>
+          <li><a href="/gallery.html">Photos & Videos</a></li>
+          <li><a href="/blog/index.html">Blog</a></li>
+          <li><a href="/faq.html">FAQs</a></li>
+        </ul>
+      </section>
+
+      <section class="footer-col collapsible">
+        <button class="collapse-btn" aria-expanded="false" aria-controls="legal-list">Legal</button>
+        <ul id="legal-list">
+          <li><a href="/privacy.html">Privacy</a></li>
+          <li><a href="/terms.html">Terms</a></li>
+          <li><a href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="container footer-geo">
+      Solo Dog Walking & Boutique Boarding across <strong>South Melbourne</strong>, <strong>Albert Park</strong>,
+      <strong>Port Melbourne</strong>, <strong>Middle Park</strong> and <strong>Southbank</strong>.
+    </div>
+
+    <div class="container footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   </footer>
 
-  <!-- Services group toggle (same helper used site-wide) -->
+  <!-- ====== Behaviours: service menu toggle, form validation + Ads conversion ====== -->
   <script>
+    // Services dropdown (mobile)
     (function () {
       const btn  = document.querySelector('.nav-group-btn[aria-controls="nav-services"]');
       const list = document.getElementById('nav-services');
@@ -275,12 +368,43 @@
         btn.setAttribute('aria-expanded', String(!open)); sync();
       });
       document.addEventListener('click', (e) => {
-        if (!btn.contains(e.target) && !list.contains(e.target)) {
-          btn.setAttribute('aria-expanded', 'false'); sync();
-        }
+        if (!btn.contains(e.target) && !list.contains(e.target)) { btn.setAttribute('aria-expanded', 'false'); sync(); }
       }, { capture: true });
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') { btn.setAttribute('aria-expanded', 'false'); sync(); }
+    })();
+
+    // Contact form: client-side validation + enhanced conversions + lead event
+    (function () {
+      const form = document.getElementById('contact-form');
+      if (!form) return;
+
+      function validEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v||''); }
+
+      form.addEventListener('submit', function (e) {
+        // basic validation
+        let ok = true;
+        const name = form.name.value.trim();
+        const email = form.email.value.trim();
+        const message = form.message.value.trim();
+
+        document.getElementById('err-name').textContent = '';
+        document.getElementById('err-email').textContent = '';
+        document.getElementById('err-message').textContent = '';
+
+        if (!name){ ok=false; document.getElementById('err-name').textContent = 'Please enter your name.'; }
+        if (!validEmail(email)){ ok=false; document.getElementById('err-email').textContent = 'Please enter a valid email.'; }
+        if (!message){ ok=false; document.getElementById('err-message').textContent = 'Tell us a bit about your dog.'; }
+
+        if (!ok){ e.preventDefault(); return; }
+
+        try {
+          // Enhanced conversions: pass raw identifiers (gtag will hash)
+          gtag('set','user_data',{
+            'email': email,
+            'phone_number': (form.phone.value || '').trim()
+          });
+          // Optional: custom lead event
+          gtag('event','generate_lead', { 'send_to':'AW-17527927259' });
+        } catch(err) { /* no-op */ }
       });
     })();
   </script>

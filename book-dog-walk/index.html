@@ -4,101 +4,125 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Page purpose: booking bridge (not for search) -->
-  <meta name="robots" content="noindex,follow">
-
-  <title>Book a Dog Walk — Secure Client Portal | The Woof of Walk Street</title>
-  <meta name="description" content="Create your secure client account to book a solo dog walk. Powered by Time To Pet — trusted portal for scheduling, GPS updates and messaging." />
+  <title>Book a Solo Dog Walk — Secure Client Portal | The Woof of Walk Street</title>
+  <meta name="description" content="Create your secure client account to book a solo dog walk. GPS routes and photo updates included. Powered by Time To Pet — trusted globally with bank-grade security." />
   <link rel="canonical" href="https://www.woofofwalkstreet.com/book-dog-walk/" />
   <link rel="icon" href="/images/brand/favicon.ico" />
 
-  <!-- Styles (sitewide) -->
+  <!-- Site CSS -->
   <link rel="stylesheet" href="/css/mini.css">
   <link rel="stylesheet" href="/css/mini.dark.css">
   <link rel="stylesheet" href="/css/mini.light.css">
   <link rel="stylesheet" href="/css/styles.css">
 
-  <!-- Page-scoped style: strong contrast + unified buttons -->
   <style>
     :root{
       --bg:#0b0e12; --card:#0f1318; --line:#1d232c; --text:#e6edf3; --muted:#a9b4c0;
       --brand:#ffd166; --brand-ink:#0b0e12; --accent:#5af2c6; --shadow:0 14px 40px rgba(0,0,0,.28)
     }
     body{background:var(--bg);color:var(--text)}
-    a{color:#9ee8ff}
-    .section-kicker,.kicker{letter-spacing:.08em;color:var(--accent);font-weight:800}
-    .site-header{backdrop-filter:saturate(120%) blur(8px);background:rgba(11,14,18,.7);border-bottom:1px solid rgba(255,255,255,.06)}
-    .navbar .brand{display:flex;gap:10px;align-items:center;text-decoration:none;color:#fff}
-    .navbar .brand strong{font-weight:900}
+    .kicker{letter-spacing:.08em;color:var(--accent);font-weight:800}
 
-    .hero{padding:24px 0 8px;border-bottom:1px solid rgba(255,255,255,.06)}
-    .hero h1{margin:.25rem 0 .35rem}
-    .hero .subhead{max-width:62ch;color:#cfd6df}
-
-    .bridge-main{padding:26px 0}
-    .card{
-      background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.03));
-      border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 10px 24px rgba(0,0,0,.18)
+    /* ===== Hero (edgier + dynamic) ===== */
+    .hero-bridge{
+      padding:28px 0 16px;
+      background:
+        radial-gradient(1000px 520px at 10% -30%, rgba(255,209,102,.10), transparent 60%),
+        radial-gradient(800px 400px at 90% -40%, rgba(90,242,198,.08), transparent 60%),
+        linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0));
+      border-bottom:1px solid rgba(255,255,255,.06)
     }
-    .card *{color:var(--text)}
-    .grid{display:grid;gap:16px}
-    @media(min-width:960px){.grid-2{grid-template-columns:1.1fr .9fr}}
+    .hero-bridge h1{
+      font-weight:900; letter-spacing:-.01em;
+      text-shadow:0 1px 0 rgba(0,0,0,.35);
+    }
+    .hero-bridge .lede{
+      color:#cfd6df; max-width:65ch; margin-top:.3rem;
+    }
+    .hero-bridge .lede strong{ color:#fff }
 
-    .steps{display:flex;gap:10px;flex-wrap:wrap;margin:.35rem 0 1rem}
-    .step{display:inline-flex;align-items:center;gap:8px;border:1px solid #2a3440;border-radius:999px;padding:6px 10px}
+    /* ===== Edge cards (gold frame + soft glow) ===== */
+    .edge{
+      background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.02));
+      border:2px solid #f5b200;
+      border-radius:16px;
+      box-shadow:
+        0 0 10px rgba(245,178,0,.25),
+        0 12px 28px rgba(0,0,0,.18);
+      padding:18px;
+      position:relative;
+      isolation:isolate;
+      transition:.22s ease;
+    }
+    .edge::after{
+      content:"";
+      position:absolute; inset:-35% -35% auto auto;
+      width:220px; height:220px; border-radius:50%;
+      background:radial-gradient(closest-side,rgba(245,178,0,.18),transparent 66%);
+      transform:translate(20%,-20%);
+      pointer-events:none;
+      filter:blur(.2px);
+    }
+    .edge:hover{
+      box-shadow:
+        0 0 18px rgba(245,178,0,.55),
+        0 18px 44px rgba(0,0,0,.26);
+      transform:translateY(-2px)
+    }
 
-    .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
-    .btn,.cta-button{
+    /* Layout */
+    .bridge-wrap{ display:grid; gap:16px }
+    @media(min-width:980px){ .bridge-wrap{ grid-template-columns:1.15fr .85fr } }
+
+    /* Steps */
+    .steps{ display:flex; gap:10px; flex-wrap:wrap; margin:.5rem 0 1rem }
+    .step{
+      display:inline-flex; align-items:center; gap:8px;
+      border:1px solid #2a3440; color:#fff;
+      border-radius:999px; padding:6px 10px; font-weight:700
+    }
+    .step b{
+      display:inline-grid; place-items:center;
+      width:22px;height:22px;border-radius:999px;
+      background:#1c2531;border:1px solid #2a3440;font-size:.78rem
+    }
+
+    /* Buttons */
+    .btn{
       -webkit-tap-highlight-color:transparent;
-      display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
-      padding:12px 18px;border-radius:999px;border:1px solid transparent;
-      font-weight:900;letter-spacing:.01em;text-decoration:none;
-      transition:transform .15s,box-shadow .15s,background .15s,color .15s,border-color .15s
+      display:inline-flex;align-items:center;justify-content:center;
+      gap:.5rem;padding:12px 18px;border-radius:999px;border:1px solid transparent;
+      font-weight:900;text-decoration:none;transition:transform .15s,box-shadow .15s,background .15s,color .15s,border-color .15s
     }
     .btn-primary{background:var(--brand);color:var(--brand-ink);box-shadow:0 10px 26px rgba(255,209,102,.25)}
     .btn-primary:hover{transform:translateY(-1px) scale(1.02)}
-    .btn-ghost{background:transparent;color:#fff;border-color:#2a3440}
+    .btn-ghost{background:transparent;color:#fff;border:1px solid #2a3440}
     .btn-ghost:hover{border-color:#fff;box-shadow:0 6px 18px rgba(0,0,0,.22)}
-    .btn-outline{background:transparent;border-color:var(--brand);color:var(--brand)}
-    .btn-outline:hover{transform:translateY(-1px) scale(1.02)}
+    .btn-outline{background:transparent;border:1px solid var(--brand);color:var(--brand)}
+    .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
 
+    /* Lists / copy */
     .mini{font-size:.95rem;color:#cfd6df}
     .muted{color:#a9b4c0}
+    .trust-list{margin:0;padding-left:18px}
+    .trust-list li{margin:.35rem 0}
     .badge{display:inline-block;padding:.28rem .6rem;border-radius:999px;font-size:.82rem;font-weight:800;color:#111;background:var(--brand)}
+
+    /* Callout */
     .notice{border:1px dashed #2a3440;border-radius:12px;padding:10px;margin-top:12px;color:#cfd6df}
 
-    /* Footer quick note contrast */
-    .site-footer{border-top:1px solid rgba(255,255,255,.06)}
+    /* Gold underline accent on small section titles */
+    .accent-title{
+      position:relative; display:inline-block; padding-bottom:4px;
+    }
+    .accent-title::after{
+      content:""; position:absolute; left:0; right:0; bottom:0; height:2px;
+      background:linear-gradient(90deg,#f5b200,transparent 70%);
+      opacity:.9;
+    }
   </style>
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Book a Dog Walk — Secure Client Portal | The Woof of Walk Street">
-  <meta property="og:description" content="Create your secure client account to book a solo dog walk. Powered by Time To Pet — trusted portal for scheduling, GPS updates and messaging.">
-  <meta property="og:url" content="https://www.woofofwalkstreet.com/book-dog-walk/">
-  <meta property="og:image" content="https://www.woofofwalkstreet.com/images/brand/hero-dog-skyline-1200.webp">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="675">
-  <meta property="og:locale" content="en_AU">
-
-  <!-- JSON-LD: Breadcrumb + WebPage -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebPage",
-    "name":"Book a Dog Walk — Secure Client Portal",
-    "url":"https://www.woofofwalkstreet.com/book-dog-walk/",
-    "breadcrumb":{
-      "@type":"BreadcrumbList",
-      "itemListElement":[
-        {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
-        {"@type":"ListItem","position":2,"name":"Book a Dog Walk","item":"https://www.woofofwalkstreet.com/book-dog-walk/"}
-      ]
-    }
-  }
-  </script>
-
-  <!-- Google Ads Global Site Tag (sitewide-safe) -->
+  <!-- Google Ads tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -106,18 +130,42 @@
     gtag('js', new Date());
     gtag('config', 'AW-17527927259');
   </script>
+
+  <!-- JSON-LD: Breadcrumb + HowTo (booking steps) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
+      {"@type":"ListItem","position":2,"name":"Book a Solo Dog Walk","item":"https://www.woofofwalkstreet.com/book-dog-walk/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"HowTo",
+    "name":"Book a Solo Dog Walk",
+    "description":"Create your secure client account and schedule a 45-minute solo dog walk.",
+    "step":[
+      {"@type":"HowToStep","name":"Pick option","text":"Choose Casual Walk, Unlimited (first month 50% off), or enquire about Boarding."},
+      {"@type":"HowToStep","name":"Create account","text":"Continue to the Time To Pet portal and create your account."},
+      {"@type":"HowToStep","name":"Confirm booking","text":"We confirm details such as keys and routine, then lock your first walk."}
+    ]
+  }
+  </script>
 </head>
 
 <body>
-  <!-- HEADER (reused, trimmed CTA to avoid raw TTP link here) -->
-  <header class="site-header" role="banner">
+  <!-- FULL site header (same structure as other pages) -->
+  <header class="site-header">
     <div class="navbar container" role="navigation" aria-label="Main">
       <a class="brand" href="/" aria-label="Go to home">
-        <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="56" height="56">
+        <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="56" height="56">
         <strong>The Woof of Walk Street</strong>
       </a>
 
-      <!-- mobile hamburger -->
       <input id="nav-toggle" type="checkbox" hidden>
       <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</label>
 
@@ -129,9 +177,7 @@
             <li><a href="/dog-walking-south-melbourne.html">Dog Walking South Melbourne</a></li>
             <li><a href="/casual-dog-walking-south-melbourne.html">Casual Dog Walking</a></li>
             <li><a href="/memberships.html">Memberships — Compare Plans</a></li>
-            <li><a href="/membership-starter.html">Starter Membership — 4 / Month</a></li>
-            <li><a href="/membership-growth.html">Growth Membership — 10 / Month</a></li>
-            <li><a href="/unlimited-dog-walks.html">Unlimited Membership — Weekdays</a></li>
+            <li><a href="/unlimited-dog-walks.html">Unlimited Membership</a></li>
             <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
             <li><a href="/contact.html">Contact</a></li>
           </ul>
@@ -144,33 +190,43 @@
         <a href="/faq.html">FAQs</a>
         <a href="/search.html">Search</a>
 
-        <!-- Keep users on-bridge instead of jumping to TTP directly -->
-        <a class="btn btn-primary nav-cta" href="/book-dog-walk/">Book Now</a>
+        <a class="btn btn-primary nav-cta"
+           href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=header&utm_campaign=book_now"
+           target="_blank" rel="noopener"
+           onclick="gtag && gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
+           Book Now
+        </a>
       </nav>
     </div>
   </header>
 
-  <!-- PAGE HERO -->
-  <section class="hero">
+  <!-- HERO -->
+  <section class="hero-bridge">
     <div class="container">
-      <span class="section-kicker">Secure Booking Portal</span>
+      <span class="kicker">Secure Booking Portal</span>
       <h1>Book a Solo Dog Walk</h1>
-      <p class="subhead">Create your client account to schedule your first <strong>45-minute solo walk</strong>. Every walk includes <strong>GPS routes</strong> and <strong>photo updates</strong>. Portal powered by <strong>Time To Pet</strong>.</p>
+      <p class="lede">
+        Create your client account to schedule your first <strong>45-minute solo walk</strong>.
+        Every walk includes <strong>GPS routes</strong> and <strong>photo updates</strong>. Portal powered by <strong>Time To Pet</strong>.
+      </p>
     </div>
   </section>
 
-  <!-- BRIDGE CONTENT -->
-  <main class="bridge-main">
-    <div class="container grid grid-2">
-      <!-- Left: Options + CTA -->
-      <section class="card" aria-labelledby="book-heading">
-        <h2 id="book-heading" style="margin-top:.25rem">Choose your first booking</h2>
-        <p class="mini" style="margin-top:-6px">The options below will redirect to our <strong>Time To Pet</strong> client portal. Your UTM source and selection will carry through automatically.</p>
+  <!-- MAIN -->
+  <main class="container" style="margin-top:18px">
+    <div class="bridge-wrap">
+      <!-- LEFT: booking choices -->
+      <section class="edge" aria-labelledby="book-heading">
+        <h2 id="book-heading" class="accent-title">Choose your first booking</h2>
+        <p class="mini" style="margin:.25rem 0 .35rem">
+          The options below will redirect to our <strong>Time To Pet</strong> client portal. Your UTM source
+          and selection carry through automatically.
+        </p>
 
         <div class="steps" aria-label="Booking steps">
-          <span class="step">1. Pick option</span>
-          <span class="step">2. Create account</span>
-          <span class="step">3. Confirm booking</span>
+          <span class="step"><b>1</b> Pick option</span>
+          <span class="step"><b>2</b> Create account</span>
+          <span class="step"><b>3</b> Confirm booking</span>
         </div>
 
         <div class="cta-row">
@@ -182,18 +238,18 @@
 
           <a class="btn btn-ghost"
              data-plan="unlimited_50"
-             href="https://www.timetopet.com/portal/woofofwalkstreet/create-account">
+             href="/unlimited-dog-walks.html">
              50% Off First Month — Unlimited (Weekdays)
           </a>
 
           <a class="btn btn-ghost"
-             data-plan="boarding_info"
+             data-plan="boarding"
              href="/boarding-services.html">
              Weekend Boarding — Learn More
           </a>
         </div>
 
-        <div class="notice" role="note" aria-live="polite">
+        <div class="notice" role="note" style="margin-top:14px">
           <strong>Prefer to chat first?</strong>
           <div class="cta-row" style="margin-top:8px">
             <a class="btn btn-outline" href="/contact.html">Ask a Question</a>
@@ -202,31 +258,34 @@
         </div>
       </section>
 
-      <!-- Right: TTP Trust & How it works -->
-      <aside class="card" aria-labelledby="trust-heading">
+      <!-- RIGHT: TTP trust -->
+      <aside class="edge" aria-labelledby="trust-heading">
         <span class="badge" style="margin-bottom:6px">About Time To Pet</span>
-        <h2 id="trust-heading">Why we use Time To Pet</h2>
-        <ul class="mini" style="margin:0 0 10px 18px">
-          <li><strong>Secure portal:</strong> encrypted (HTTPS) for all logins and data.</li>
-          <li><strong>Privacy-first:</strong> bookings and messages live in the portal; we don’t store your card on our site.</li>
-          <li><strong>Everything in one place:</strong> booking requests, GPS walk maps, photo updates, messaging.</li>
-          <li><strong>Trusted platform:</strong> used by pet-care businesses across Australia.</li>
+        <h2 id="trust-heading" class="accent-title">Why we use Time To Pet</h2>
+
+        <ul class="trust-list">
+          <li><strong>Trusted globally:</strong> used by <strong>4,000+ pet-care companies</strong> worldwide.</li>
+          <li><strong>Bank-grade security:</strong> all portal communication uses <strong>128-bit TLS encryption</strong> (same class as major banks).</li>
+          <li><strong>Secure hosting:</strong> data is stored on hardened servers in data-centres with <strong>24/7 physical security</strong>.</li>
+          <li><strong>Resilient backups:</strong> customer data is backed up <strong>multiple times per day</strong>.</li>
+          <li><strong>Everything in one place:</strong> booking requests, GPS walk maps, photo updates and messaging.</li>
+          <li><strong>Privacy-first:</strong> we don’t store your card details on our site — it all lives securely in the portal.</li>
         </ul>
 
-        <h3 style="margin-top:8px">What to expect</h3>
-        <ol class="mini" style="margin:0 0 8px 18px">
+        <h3 style="margin-top:14px" class="accent-title">What to expect</h3>
+        <ol style="margin:8px 0 8px 18px">
           <li>Select an option and continue to the portal.</li>
           <li>Create your account and tell us about your dog.</li>
           <li>We confirm details (keys, routine) and lock your first walk.</li>
         </ol>
 
-        <p class="mini" style="margin-top:8px"><em>Note:</em> Time To Pet doesn’t support a separate “thank-you page”. Your confirmation is shown inside the portal and you’ll receive email updates.</p>
+        <p class="mini" style="margin-top:8px"><em>Note:</em> Time To Pet doesn’t support a separate “thank-you page”. Your confirmation appears in the portal and you’ll receive email updates.</p>
       </aside>
     </div>
   </main>
 
-  <!-- FOOTER (same structure as site) -->
-  <footer class="site-footer" role="contentinfo">
+  <!-- FOOTER (same structure as other pages) -->
+  <footer class="site-footer" role="contentinfo" style="margin-top:22px">
     <div class="container footer-grid">
       <section class="footer-brand">
         <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="60" height="60" loading="lazy">
@@ -239,7 +298,13 @@
           <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook"><img src="/images/social/facebook.svg" alt="" width="24" height="24"></a>
           <a href="https://x.com/woofofwalkstreet" aria-label="X"><img src="/images/social/twitter.svg" alt="" width="24" height="24"></a>
         </div>
-        <p><a class="btn btn-primary" href="/book-dog-walk/">Book Now</a></p>
+        <p>
+          <a class="btn btn-primary" target="_blank" rel="noopener"
+             href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=footer&utm_campaign=book_now_footer"
+             onclick="gtag && gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
+            Book Now
+          </a>
+        </p>
       </section>
 
       <nav class="footer-col" aria-label="Services">
@@ -268,6 +333,17 @@
       </nav>
 
       <section class="footer-col collapsible">
+        <button class="collapse-btn" aria-expanded="false" aria-controls="support-list">Support</button>
+        <ul id="support-list">
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/testimonials.html">Testimonials</a></li>
+          <li><a href="/gallery.html">Photos & Videos</a></li>
+          <li><a href="/blog/index.html">Blog</a></li>
+          <li><a href="/faq.html">FAQs</a></li>
+        </ul>
+      </section>
+
+      <section class="footer-col collapsible">
         <button class="collapse-btn" aria-expanded="false" aria-controls="legal-list">Legal</button>
         <ul id="legal-list">
           <li><a href="/privacy.html">Privacy</a></li>
@@ -286,22 +362,19 @@
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   </footer>
 
-  <!-- Nav services toggle (copied from site) -->
+  <!-- Nav services toggle -->
   <script>
   (function () {
     const btn  = document.querySelector('.nav-group-btn[aria-controls="nav-services"]');
     const list = document.getElementById('nav-services');
     if (!btn || !list) return;
-
     const sync = () => { list.hidden = btn.getAttribute('aria-expanded') !== 'true'; };
     sync();
-
     btn.addEventListener('click', () => {
       const open = btn.getAttribute('aria-expanded') === 'true';
       btn.setAttribute('aria-expanded', String(!open));
       list.hidden = open;
     });
-
     document.addEventListener('click', (e) => {
       if (!btn.contains(e.target) && !list.contains(e.target)) {
         btn.setAttribute('aria-expanded', 'false');
@@ -311,72 +384,66 @@
   })();
   </script>
 
-  <!-- Bridge logic: preserve UTMs + selected plan; track; redirect -->
+  <!-- Bridge logic: append UTM + plan; fire GA event; then redirect -->
   <script>
   (function(){
-    const TTP_BASE = "https://www.timetopet.com/portal/woofofwalkstreet/create-account";
-
+    var TTP_BASE = "https://www.timetopet.com/portal/woofofwalkstreet/create-account";
     function getParams() {
-      const p = new URLSearchParams(window.location.search);
-      const keep = new URLSearchParams();
-      ["utm_source","utm_medium","utm_campaign","utm_term","utm_content"].forEach(k=>{
+      var p = new URLSearchParams(window.location.search);
+      var keep = new URLSearchParams();
+      ["utm_source","utm_medium","utm_campaign","utm_term","utm_content"].forEach(function(k){
         if (p.has(k)) keep.set(k, p.get(k));
       });
       try { keep.set("ref_path", window.location.pathname); } catch(e){}
       return keep;
     }
-
     function buildOutbound(plan){
-      const qs = getParams();
+      var qs = getParams();
       if (plan) qs.set("plan", plan);
-      const sep = TTP_BASE.includes("?") ? "&" : "?";
-      const full = qs.toString();
-      return TTP_BASE + (full ? (sep + full) : "");
+      var sep = TTP_BASE.indexOf("?")>-1 ? "&" : "?";
+      return TTP_BASE + (qs.toString() ? (sep + qs.toString()) : "");
     }
-
-    // Attach to buttons with data-plan
-    document.querySelectorAll('[data-plan]').forEach(a=>{
-      a.addEventListener('click', e=>{
-        const href = a.getAttribute('href') || '';
-        const plan = a.getAttribute('data-plan') || '';
-
-        // If this is a direct TTP link, intercept
-        if (/timetopet\.com\/portal\/woofofwalkstreet/i.test(href)) {
-          e.preventDefault();
-          try { window.gtag && gtag('event','bridge_click',{ event_category:'engagement', event_label: plan || 'unknown_plan' }); } catch(err){}
-          window.location.href = buildOutbound(plan);
+    document.querySelectorAll('[data-plan]').forEach(function(a){
+      a.addEventListener('click', function(e){
+        var plan = a.getAttribute('data-plan') || '';
+        var href = a.getAttribute('href') || '';
+        if (!/timetopet\.com\/portal\/woofofwalkstreet/i.test(href)) {
+          if (href.startsWith('/') && href.indexOf('?') === -1) {
+            e.preventDefault();
+            var keep = getParams();
+            if ([...keep.keys()].length){
+              window.location.href = href + "?" + keep.toString();
+            } else {
+              window.location.href = href;
+            }
+          }
           return;
         }
-
-        // Internal page (Unlimited/Boarding info): keep UTMs if present
-        if (href.startsWith('/') && href.indexOf('?') === -1) {
-          const keep = getParams();
-          if ([...keep.keys()].length){
-            e.preventDefault();
-            window.location.href = href + "?" + keep.toString();
-          }
-        }
+        e.preventDefault();
+        try {
+          window.gtag && gtag('event','bridge_click',{
+            event_category:'engagement',
+            event_label: plan || 'unknown_plan'
+          });
+        } catch(err){}
+        window.location.href = buildOutbound(plan);
       });
     });
-
-    // Safety-net: intercept any raw TTP link clicks on page
-    document.addEventListener('click', e=>{
-      const a = e.target.closest('a');
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest('a');
       if (!a) return;
-      const href = (a.getAttribute('href') || '');
-      if (/timetopet\.com\/portal\/woofofwalkstreet/i.test(href)) {
+      var href = (a.getAttribute('href') || '').toLowerCase();
+      if (href.includes('timetopet.com/portal/woofofwalkstreet')) {
         e.preventDefault();
         try { window.gtag && gtag('event','ttp_intercept_bridge'); } catch(err){}
-        const plan = a.getAttribute('data-plan') || '';
-        window.location.href = buildOutbound(plan);
+        window.location.href = buildOutbound(a.getAttribute('data-plan') || '');
       }
     }, { capture:true });
   })();
   </script>
 
-  <!-- No-JS fallback -->
   <noscript>
-    <div class="container card" style="margin:24px auto">
+    <div class="container edge" style="margin:20px 0">
       <p><strong>JavaScript is disabled.</strong> You can still create your account here:</p>
       <p><a class="btn btn-primary" href="https://www.timetopet.com/portal/woofofwalkstreet/create-account">Open Time To Pet</a></p>
     </div>

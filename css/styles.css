@@ -391,3 +391,66 @@ body.about .impact-ribbon a:hover{text-decoration:underline}
 .m-trust li{color:var(--muted)}
 .m-trust li::before{content:"✔";color:var(--ok);font-weight:800;position:relative;left:auto}
 
+/* ============================
+   Booking section improvements
+   ============================ */
+
+.booking-section {
+  background: linear-gradient(180deg, #0c0f13 0%, #121720 100%);
+  color: #fff;
+  padding: 40px 0 50px;
+}
+
+.booking-section h2,
+.booking-section h3,
+.booking-section p,
+.booking-section li,
+.booking-section span {
+  color: #fff !important;
+}
+
+.booking-section .pricing-card {
+  background: #141a24;
+  color: #fff;
+  border: 2px solid rgba(245, 178, 0, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(245, 178, 0, 0.25);
+  transition: all 0.25s ease;
+  padding: 20px;
+}
+
+.booking-section .pricing-card:hover {
+  border-color: var(--gold);
+  box-shadow: 0 0 30px rgba(245, 178, 0, 0.45);
+  transform: translateY(-4px);
+}
+
+.booking-section .price {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--gold);
+}
+
+.booking-section .old-price {
+  text-decoration: line-through;
+  opacity: 0.6;
+  color: #aaa;
+  font-size: 1rem;
+  margin-right: 6px;
+}
+
+.booking-section .btn-primary {
+  background: var(--gold);
+  color: #111;
+  font-weight: 900;
+  box-shadow: 0 0 18px rgba(245,178,0,.45);
+}
+
+.booking-section .btn-primary:hover {
+  background: #ffd86a;
+  box-shadow: 0 0 28px rgba(245,178,0,.55);
+}
+
+.booking-section small {
+  color: #cfd6df;
+}

@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Book a Dog Walk (Secure Portal) | The Woof of Walk Street</title>
-  <meta name="description" content="Book a 45-minute solo dog walk. Set up your account in under a minute. GPS map and photos included. Secure booking powered by Time To Pet." />
+  <meta name="description" content="Book a 45-minute solo dog walk. Create your account in under a minute. GPS map and photos included. Secure booking powered by Time To Pet." />
   <link rel="canonical" href="https://www.woofofwalkstreet.com/book-dog-walk/" />
   <link rel="icon" href="/images/brand/favicon.ico" />
 
+  <!-- Site CSS -->
   <link rel="stylesheet" href="/css/mini.css">
   <link rel="stylesheet" href="/css/mini.dark.css">
   <link rel="stylesheet" href="/css/mini.light.css">
@@ -22,6 +23,7 @@
     body{background:var(--bg);color:var(--text)}
     .kicker{letter-spacing:.08em;color:var(--accent);font-weight:800}
 
+    /* Hero */
     .hero-bridge{
       padding:28px 0 16px;
       background:
@@ -34,6 +36,7 @@
     .hero-bridge .lede{color:#cfd6df; max-width:60ch; margin-top:.3rem}
     .hero-bridge .lede strong{ color:#fff }
 
+    /* Gold-edged cards */
     .edge{
       background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.02));
       border:2px solid #f5b200;
@@ -46,10 +49,12 @@
     .bridge-wrap{ display:grid; gap:16px }
     @media(min-width:980px){ .bridge-wrap{ grid-template-columns:1.15fr .85fr } }
 
+    /* Steps */
     .steps{ display:flex; gap:10px; flex-wrap:wrap; margin:.5rem 0 1rem }
     .step{ display:inline-flex; align-items:center; gap:8px; border:1px solid #2a3440; color:#fff; border-radius:999px; padding:6px 10px; font-weight:700 }
     .step b{ display:inline-grid; place-items:center; width:22px;height:22px;border-radius:999px;background:#1c2531;border:1px solid #2a3440;font-size:.78rem }
 
+    /* Buttons */
     .btn{
       -webkit-tap-highlight-color:transparent;
       display:inline-flex;align-items:center;justify-content:center;
@@ -64,46 +69,55 @@
     .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
 
     .mini{font-size:.95rem;color:#cfd6df}
-    .muted{color:#a9b4c0}
-    .trust-list{margin:0;padding-left:18px}
-    .trust-list li{margin:.35rem 0}
     .badge{display:inline-block;padding:.28rem .6rem;border-radius:999px;font-size:.82rem;font-weight:800;color:#111;background:var(--brand)}
-    .notice{border:1px dashed #2a3440;border-radius:12px;padding:10px;margin-top:12px;color:#cfd6df}
-
     .accent-title{ position:relative; display:inline-block; padding-bottom:4px }
     .accent-title::after{ content:""; position:absolute; left:0; right:0; bottom:0; height:2px;
       background:linear-gradient(90deg,#f5b200,transparent 70%); opacity:.9 }
     .helper{font-size:.9rem;color:#cfd6df;margin-top:6px}
     .ticks{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
     .tick{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:#c9ffd1}
+
+    /* What to expect card specifics (high contrast) */
+    .expect-card h3{margin:0 0 .5rem}
+    .expect-inner{background:#0c1016;border:1px solid #273040;border-radius:14px;padding:14px;color:#e8f0f6}
+    .expect-inner strong{color:#fff}
+    .expect-note{color:#cfd6df;margin-top:8px}
   </style>
 
-  <!-- Google Ads -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
+  <!-- Google tag (gtag.js) — all your IDs -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KP5LVKN6X3"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'AW-17527927259');
+    gtag('config', 'G-KP5LVKN6X3');       // GA4
+    gtag('config', 'AW-17527927259');      // Google Ads
+    gtag('config', 'GT-PL9F623G');         // Google tag
+    gtag('config', 'GT-M3V2RMCT');         // Google tag
   </script>
 
-  <!-- SEO: Breadcrumb + HowTo -->
+  <!-- SEO: Breadcrumb -->
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
     {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
     {"@type":"ListItem","position":2,"name":"Book a Dog Walk","item":"https://www.woofofwalkstreet.com/book-dog-walk/"}
   ]}
   </script>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"HowTo","name":"Book a Solo Dog Walk","description":"Set up your account and book a 45-minute solo dog walk.","step":[
-    {"@type":"HowToStep","name":"Pick an option","text":"Choose Casual Walk, Unlimited (50% off first month) or Boarding."},
-    {"@type":"HowToStep","name":"Create account","text":"Continue to the Time To Pet portal and sign up."},
-    {"@type":"HowToStep","name":"Confirm","text":"We confirm keys and routine, then lock your first walk."}
-  ]}
-  </script>
 </head>
 
 <body>
+  <!-- Promo ribbon -->
+  <div id="promo" class="promo-ribbon promo--edge" role="region" aria-label="Promo: 50% off">
+    <div class="promo-inner container">
+      <img class="promo-dog" src="/images/brand/dog-in-suit.webp" alt="" width="28" height="28" decoding="async" />
+      <span class="promo-copy">
+        <strong>50% OFF</strong> Unlimited Weekday Walks — 45-minute solo walks · GPS tracked · Photo updates
+      </span>
+      <a href="/unlimited-dog-walks.html" class="btn btn-primary">Learn More →</a>
+      <button id="promo-close" class="promo-close" aria-label="Dismiss promo">✕</button>
+    </div>
+  </div>
+
   <!-- Header -->
   <header class="site-header">
     <div class="navbar container" role="navigation" aria-label="Main">
@@ -124,7 +138,6 @@
             <li><a href="/casual-dog-walking-south-melbourne.html">Casual Dog Walking</a></li>
             <li><a href="/memberships.html">Memberships</a></li>
             <li><a href="/unlimited-dog-walks.html">Unlimited Membership</a></li>
-            <li><a href="/boarding-services.html">Boarding</a></li>
             <li><a href="/contact.html">Contact</a></li>
           </ul>
         </section>
@@ -151,8 +164,8 @@
       <span class="kicker">Secure Booking Portal</span>
       <h1>Book a Dog Walk</h1>
       <p class="lede">
-        Set up your account. Pick a time. We walk your dog for <strong>45 minutes</strong>.
-        You get a <strong>GPS map</strong> and <strong>photos</strong>. Booking runs on <strong>Time To Pet</strong>.
+        Create your account, pick a time, and you're set. Every walk is a <strong>45-minute solo walk</strong>
+        with <strong>GPS routes</strong> and <strong>photo updates</strong>. Portal powered by <strong>Time To Pet</strong>.
       </p>
     </div>
   </section>
@@ -170,12 +183,22 @@
           <span class="step"><b>3</b> Confirm</span>
         </div>
 
-        <a class="btn btn-primary"
-           data-plan="casual_50"
-           href="https://www.timetopet.com/portal/woofofwalkstreet/create-account">
-           Book 50% Off Casual Walk
-        </a>
-        <div class="helper">Takes about 60 seconds. No payment needed to create your account.</div>
+        <!-- BOTH CTAs GOLD -->
+        <div class="cta-row" style="margin-top:4px">
+          <a class="btn btn-primary"
+             data-plan="casual_50"
+             href="https://www.timetopet.com/portal/woofofwalkstreet/create-account">
+             50% Off Casual Walk
+          </a>
+
+          <a class="btn btn-primary"
+             data-plan="unlimited_50"
+             href="/unlimited-dog-walks.html">
+             50% Off Unlimited Walks
+          </a>
+        </div>
+
+        <div class="helper">Takes about a minute. No payment needed to create your account.</div>
 
         <div class="ticks">
           <span class="tick">✅ Solo walk</span>
@@ -184,12 +207,7 @@
         </div>
 
         <div class="cta-row" style="margin-top:14px">
-          <a class="btn btn-ghost" data-plan="unlimited_50" href="/unlimited-dog-walks.html">50% Off First Month — Unlimited</a>
-          <a class="btn btn-ghost" data-plan="boarding" href="/boarding-services.html">Weekend Boarding — Learn More</a>
-        </div>
-
-        <div class="notice" role="note" style="margin-top:14px">
-          Questions first? <a class="btn btn-outline" href="/contact.html">Ask a Question</a>
+          <a class="btn btn-outline" href="/contact.html">Ask a Question</a>
           <a class="btn btn-ghost" href="tel:+61456754050">Call +61 456 754 050</a>
         </div>
       </section>
@@ -199,25 +217,41 @@
         <span class="badge" style="margin-bottom:6px">About Time To Pet</span>
         <h2 id="trust-heading" class="accent-title">Safe. Simple. Trusted.</h2>
 
-        <ul class="trust-list">
-          <li><strong>Trusted by 4,000+ businesses</strong> worldwide.</li>
-          <li><strong>Bank-grade security:</strong> 128-bit encrypted connection.</li>
-          <li><strong>24/7 secure data centres</strong> protect your info.</li>
-          <li><strong>Backups many times a day</strong> keep data safe.</li>
-          <li><strong>Everything in one place:</strong> booking, GPS maps, photos and messages.</li>
-          <li><strong>We don’t store your card</strong> on our website — it stays in the portal.</li>
+        <ul class="trust-list" style="margin:0;padding-left:18px">
+          <li><strong>Trusted by 4,000+ pet-care businesses</strong> worldwide.</li>
+          <li><strong>Bank-grade security</strong>: 128-bit encrypted connection.</li>
+          <li><strong>Secure hosting</strong>: data kept on protected servers in monitored data centres with <strong>24/7 security</strong>.</li>
+          <li><strong>Regular backups</strong>: customer data is backed up multiple times per day.</li>
+          <li><strong>Everything in one place</strong>: booking requests, GPS maps, photo updates and messaging.</li>
+          <li><strong>Privacy-first</strong>: card details and messages live in the portal — not on our website.</li>
         </ul>
-
-        <h3 style="margin-top:14px" class="accent-title">What happens next</h3>
-        <ol style="margin:8px 0 8px 18px">
-          <li>Click an option and go to the portal.</li>
-          <li>Create your account and tell us about your dog.</li>
-          <li>We confirm keys and routine, then book your first walk.</li>
-        </ol>
-
-        <p class="mini" style="margin-top:8px"><em>Note:</em> The portal shows your confirmation on screen and also emails you.</p>
       </aside>
     </div>
+
+    <!-- What to expect (separate card) -->
+    <section class="edge expect-card" style="margin-top:16px" aria-labelledby="expect-heading">
+      <h2 id="expect-heading" class="accent-title">What to expect</h2>
+
+      <div class="expect-inner" style="margin-top:10px">
+        <h3>Inside <strong>Time To Pet</strong></h3>
+        <ol style="margin:6px 0 0 18px">
+          <li>Create your account and tell us about your dog.</li>
+          <li>Request your first walk or reply to our suggested time.</li>
+          <li>See your booking confirmation in the portal.</li>
+          <li>On walk day, view your <strong>GPS route</strong> and <strong>photo updates</strong>.</li>
+        </ol>
+        <p class="expect-note"><em>Note:</em> Time To Pet doesn’t use a separate “thank-you page”. Confirmations show in the portal and you’ll also get portal emails.</p>
+      </div>
+
+      <div class="expect-inner" style="margin-top:12px">
+        <h3>From <strong>The Woof of Walk Street</strong></h3>
+        <ul style="margin:6px 0 0 18px">
+          <li>We’ll confirm keys, routine and access details.</li>
+          <li>You’ll get a <strong>welcome email</strong> from <strong>info@woofofwalkstreet.com</strong> with next steps.</li>
+          <li>Need help? Call us any time: <a href="tel:+61456754050" style="color:#fff">+61 456 754 050</a>.</li>
+        </ul>
+      </div>
+    </section>
   </main>
 
   <!-- Footer -->
@@ -252,7 +286,6 @@
           <li><a href="/membership-starter.html">Starter Membership</a></li>
           <li><a href="/membership-growth.html">Growth Membership</a></li>
           <li><a href="/unlimited-dog-walks.html">Unlimited Membership</a></li>
-          <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
           <li><a href="/contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -320,6 +353,15 @@
   })();
   </script>
 
+  <!-- Promo close -->
+  <script>
+    (function(){
+      const x = document.getElementById('promo-close');
+      const bar = document.getElementById('promo');
+      if (x && bar) x.addEventListener('click', ()=> bar.remove());
+    })();
+  </script>
+
   <!-- Bridge logic: keep UTMs, tag plan, send event, redirect -->
   <script>
   (function(){
@@ -369,6 +411,7 @@
   })();
   </script>
 
+  <!-- No-JS fallback -->
   <noscript>
     <div class="container edge" style="margin:20px 0">
       <p><strong>JavaScript is off.</strong> You can still book here:</p>

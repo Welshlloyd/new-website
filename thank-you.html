@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thanks — Your Booking Is Confirmed | The Woof of Walk Street</title>
+
+  <!-- Thank-you pages should not be indexed -->
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="icon" href="/images/brand/favicon.ico" />
+  <!-- Re-use site CSS -->
+  <link rel="stylesheet" href="/css/mini.css">
+  <link rel="stylesheet" href="/css/mini.dark.css">
+  <link rel="stylesheet" href="/css/mini.light.css">
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <style>
+    :root{
+      --bg:#0b0e12; --card:#0f1318; --line:#1d232c; --text:#e6edf3;
+      --brand:#ffd166; --brand-ink:#0b0e12; --accent:#5af2c6;
+    }
+    body{background:var(--bg);color:var(--text)}
+    .kicker{letter-spacing:.08em;color:var(--accent);font-weight:800}
+
+    .wrap{padding:28px 0}
+    .thank-card{
+      background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.02));
+      border:2px solid #f5b200; border-radius:16px;
+      box-shadow:0 0 12px rgba(245,178,0,.3);
+      padding:22px; max-width:860px; margin:0 auto 18px;
+    }
+    .thank-card h1{font-weight:900; letter-spacing:-.01em; margin:.2rem 0 .5rem}
+    .lead{color:#cfd6df; font-size:1.05rem}
+    .pill{display:inline-block;background:#f5b200;color:#111;font-weight:900;
+      padding:.28rem .6rem;border-radius:999px;font-size:.85rem;margin-right:.4rem}
+    .split{display:grid; gap:14px;}
+    @media(min-width:900px){ .split{ grid-template-columns:1.15fr .85fr; } }
+    .edge{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.02));
+      border:1px solid var(--line); border-radius:14px; padding:16px;}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+      padding:12px 18px;border-radius:999px;border:1px solid transparent;
+      font-weight:900; text-decoration:none;
+    }
+    .btn-primary{background:var(--brand);color:var(--brand-ink);
+      box-shadow:0 10px 26px rgba(255,209,102,.25)}
+    .btn-ghost{background:transparent;color:#fff;border:1px solid #2a3440}
+    .btn-outline{background:transparent;border:1px solid var(--brand);color:var(--brand)}
+    .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .list{margin:.4rem 0 0 18px}
+    .list li{margin:.28rem 0}
+    .center{text-align:center}
+  </style>
+
+  <!-- Google Ads global tag (already used site-wide) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'AW-17527927259');            // Google Ads
+    gtag('config', 'G-KP5LVKN6X3');              // GA4 (optional: keeps session continuity)
+  </script>
+
+  <!-- JSON-LD (Breadcrumb) -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
+    {"@type":"ListItem","position":2,"name":"Thank You","item":"https://www.woofofwalkstreet.com/thank-you.html"}
+  ]}
+  </script>
+</head>
+
+<body>
+  <!-- Small header (kept lightweight to avoid double nav paths) -->
+  <header class="site-header">
+    <div class="navbar container">
+      <a class="brand" href="/" aria-label="Go to home">
+        <img src="/images/brand/logo-lockup-gold.webp" alt="" width="56" height="56">
+        <strong>The Woof of Walk Street</strong>
+      </a>
+      <nav class="nav-links">
+        <a href="/services.html">Services</a>
+        <a href="/dog-walking-south-melbourne.html">Dog Walking</a>
+        <a href="/boarding-services.html">Boarding</a>
+        <a class="btn btn-primary"
+           href="/book-dog-walk/?utm_source=thankyou&utm_medium=header&utm_campaign=book_more">
+          Book Another
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="container thank-card">
+      <span class="kicker">Thanks — you’re booked</span>
+      <h1>We’ve received your request 🎉</h1>
+      <p class="lead">
+        Your booking is confirmed in our secure <strong>Time To Pet</strong> portal.
+        You’ll get an email shortly with the details.
+      </p>
+
+      <div class="split" style="margin-top:10px">
+        <!-- Left: Next steps by type -->
+        <div class="edge">
+          <h2 style="margin-top:0">What happens next</h2>
+          <div id="by-type">
+            <!-- Filled by JS with walk/boarding copy -->
+            <p>We’ll review your request, confirm the time, and send you updates via the portal.</p>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn btn-primary"
+               id="open-portal"
+               href="https://www.timetopet.com/portal/woofofwalkstreet"
+               target="_blank" rel="noopener">
+              Open Client Portal
+            </a>
+            <a class="btn btn-ghost" href="mailto:info@woofofwalkstreet.com">Email Us</a>
+            <a class="btn btn-ghost" href="tel:+61456754050">Call +61 456 754 050</a>
+          </div>
+        </div>
+
+        <!-- Right: Helpful links -->
+        <aside class="edge">
+          <h2 style="margin-top:0">Helpful links</h2>
+          <ul class="list">
+            <li><a href="/faq.html">FAQs</a> — payments, keys, cancellations</li>
+            <li><a href="/testimonials.html">Read client reviews</a></li>
+            <li><a href="/memberships.html">Compare walking memberships</a></li>
+            <li><a href="/gallery.html">Photos & videos</a></li>
+          </ul>
+          <p class="center" style="margin-top:10px">
+            <a class="btn btn-outline" href="/services.html">Explore Services</a>
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Optional promo reminder -->
+    <section class="container center" style="margin-top:10px">
+      <span class="pill">Tip</span>
+      <span>New to us? Your first month of <a href="/unlimited-dog-walks.html">Unlimited Walks</a> is <strong>50% off</strong>.</span>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo" style="margin-top:22px">
+    <div class="container footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </footer>
+
+  <!-- ==== Dynamic thank-you logic + conversion firing ==== -->
+  <script>
+    (function () {
+      const p = new URLSearchParams(location.search);
+      const type = (p.get('type') || '').toLowerCase(); // 'walk' | 'boarding' | ''
+      const byType = document.getElementById('by-type');
+
+      // Replace copy based on type for clarity
+      if (type === 'boarding') {
+        byType.innerHTML = `
+          <p><strong>Boarding</strong> is in the diary. We’ll confirm your drop-off time and routine.</p>
+          <ul class="list">
+            <li>You’ll receive portal emails and messages from us.</li>
+            <li>Pack the essentials: food, lead, favourite toy/blanket, meds (if any).</li>
+            <li>During the stay you’ll get photo updates.</li>
+          </ul>`;
+      } else if (type === 'walk' || type === 'walking') {
+        byType.innerHTML = `
+          <p>Your <strong>solo dog walk</strong> is set. We’ll confirm the time and key access.</p>
+          <ul class="list">
+            <li>On the day, you’ll get a <strong>GPS route</strong> and <strong>photos</strong> in the portal.</li>
+            <li>Need to tweak the time? Reply in the portal or call us.</li>
+          </ul>`;
+      }
+
+      // Fire Google Ads conversion *only* for Boarding promo when present
+      if (type === 'boarding') {
+        try {
+          gtag('event', 'conversion', {
+            'send_to': 'AW-17527927259/nUNTCKzy3LAbENvj-6VB' // Boarding 20% off
+          });
+        } catch(e) {}
+      }
+
+      // If you later add a specific Walks conversion in Google Ads,
+      // uncomment and add its send_to below, then use ?type=walk
+      /*
+      if (type === 'walk') {
+        try { gtag('event','conversion',{'send_to':'AW-17527927259/REPLACE_WITH_WALKS_TAG'}); } catch(e){}
+      }
+      */
+    })();
+  </script>
+
+  <noscript>
+    <div class="container" style="color:#fff; padding:10px 0 24px">
+      JavaScript is disabled. Your booking is confirmed; open the portal:
+      <a href="https://www.timetopet.com/portal/woofofwalkstreet" target="_blank" rel="noopener">Time To Pet</a>.
+    </div>
+  </noscript>
+</body>
+</html>

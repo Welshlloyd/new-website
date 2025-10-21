@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Book Dog Boarding — 20% Off Until 5 Nov | The Woof of Walk Street</title>
-  <meta name="description" content="Book boutique, one-guest-only dog boarding in South Melbourne. 20% off until 5 Nov. Weekday, weekend, 7-night or 14-night stays. GPS, drop-off, photo updates included. Secure booking via Time To Pet." />
-  <link rel="canonical" href="https://www.woofofwalkstreet.com/book-boarding/" />
+  <title>Book Dog Boarding (Secure Portal) | The Woof of Walk Street</title>
+  <meta name="description" content="Book boutique dog boarding in South Melbourne. One guest only, calm home-style care, daily walks, GPS + photo updates. 20% off boarding until 5 November." />
+  <link rel="canonical" href="https://www.woofofwalkstreet.com/book-boarding.html" />
   <link rel="icon" href="/images/brand/favicon.ico" />
 
   <!-- Re-use site CSS -->
@@ -21,81 +21,57 @@
       --brand:#ffd166; --brand-ink:#0b0e12; --accent:#5af2c6; --shadow:0 14px 40px rgba(0,0,0,.28)
     }
     body{background:var(--bg);color:var(--text)}
-    .kicker{letter-spacing:.08em;color:var(--accent);font-weight:800}
-
-    /* gold “edge” card */
-    .edge{
-      background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.02));
-      border:2px solid #f5b200;
-      border-radius:16px;
-      box-shadow:0 0 10px rgba(245,178,0,.25), 0 12px 28px rgba(0,0,0,.18);
-      padding:18px; position:relative; isolation:isolate; transition:.22s ease;
-    }
-    .edge:hover{ box-shadow:0 0 18px rgba(245,178,0,.55), 0 18px 44px rgba(0,0,0,.26); transform:translateY(-2px) }
-
-    .bridge-wrap{ display:grid; gap:16px }
-    @media(min-width:980px){ .bridge-wrap{ grid-template-columns:1.15fr .85fr } }
-
-    .steps{ display:flex; gap:10px; flex-wrap:wrap; margin:.5rem 0 1rem }
-    .step{ display:inline-flex; align-items:center; gap:8px; border:1px solid #2a3440; color:#fff; border-radius:999px; padding:6px 10px; font-weight:700 }
-    .step b{ display:inline-grid; place-items:center; width:22px;height:22px;border-radius:999px;background:#1c2531;border:1px solid #2a3440;font-size:.78rem }
-
+    .hero-bridge{padding:28px 0 16px;border-bottom:1px solid rgba(255,255,255,.06)}
+    .hero-bridge h1{font-weight:900;letter-spacing:-.01em}
+    .lede{color:#cfd6df;max-width:60ch}
+    .edge{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.02));border:2px solid #f5b200;border-radius:16px;box-shadow:0 0 10px rgba(245,178,0,.25),0 12px 28px rgba(0,0,0,.18);padding:18px}
+    .edge:hover{box-shadow:0 0 18px rgba(245,178,0,.55),0 18px 44px rgba(0,0,0,.26);transform:translateY(-2px)}
+    .bridge-wrap{display:grid;gap:16px}
+    @media(min-width:980px){.bridge-wrap{grid-template-columns:1.1fr .9fr}}
+    .steps{display:flex;gap:10px;flex-wrap:wrap;margin:.5rem 0 1rem}
+    .step{display:inline-flex;align-items:center;gap:8px;border:1px solid #2a3440;color:#fff;border-radius:999px;padding:6px 10px;font-weight:700}
+    .step b{width:22px;height:22px;display:grid;place-items:center;border-radius:999px;background:#1c2531;border:1px solid #2a3440;font-size:.78rem}
     .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:12px 18px;border-radius:999px;border:1px solid transparent;font-weight:900;text-decoration:none;transition:transform .15s,box-shadow .15s}
     .btn-primary{background:var(--brand);color:var(--brand-ink);box-shadow:0 10px 26px rgba(255,209,102,.25)}
     .btn-primary:hover{transform:translateY(-1px) scale(1.02)}
     .btn-ghost{background:transparent;color:#fff;border:1px solid #2a3440}
+    .btn-ghost:hover{border-color:#fff}
     .btn-outline{background:transparent;border:1px solid var(--brand);color:var(--brand)}
-
-    .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .kicker{letter-spacing:.08em;color:var(--accent);font-weight:800}
     .mini{font-size:.95rem;color:#cfd6df}
     .muted{color:#a9b4c0}
     .badge{display:inline-block;padding:.28rem .6rem;border-radius:999px;font-size:.82rem;font-weight:800;color:#111;background:var(--brand)}
-    .list{margin:.4rem 0;padding-left:18px}
-    .list li{margin:.3rem 0}
-    .accent-title{position:relative;display:inline-block;padding-bottom:4px}
-    .accent-title::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:linear-gradient(90deg,#f5b200,transparent 70%);opacity:.9}
+    .grid-price{display:grid;gap:8px}
+    @media(min-width:720px){.grid-price{grid-template-columns:1fr 1fr}}
+    .price{display:flex;justify-content:space-between;align-items:center;border:1px solid #2a3440;border-radius:12px;padding:10px 12px}
+    .promo-note{background:rgba(255,209,102,.08);border:1px dashed #f5b200;color:#ffd166;border-radius:12px;padding:10px;margin-top:10px}
+    .hero-img{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:12px}
+    .hero-img picture,.hero-img img{border-radius:12px;max-width:320px;width:100%}
   </style>
 
-  <!-- Google tags -->
+  <!-- GA4 + Ads (your IDs) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KP5LVKN6X3"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
+    window.dataLayer=window.dataLayer||[];
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    /* GA4 + Ads */
-    gtag('config', 'G-KP5LVKN6X3');
-    gtag('config', 'AW-17527927259');
+    gtag('config','G-KP5LVKN6X3');               // GA4
+    gtag('config','AW-17527927259');             // Google Ads
   </script>
 
-  <!-- JSON-LD -->
+  <!-- Breadcrumb JSON-LD -->
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
-      {"@type":"ListItem","position":2,"name":"Book Boarding","item":"https://www.woofofwalkstreet.com/book-boarding/"}
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"HowTo",
-    "name":"Book Boutique Dog Boarding (20% off until 5 Nov)",
-    "step":[
-      {"@type":"HowToStep","name":"Pick a plan","text":"Choose Weekday, Weekend Woof Club, 7 Nights or 14 Nights."},
-      {"@type":"HowToStep","name":"Create account","text":"Continue to the secure Time To Pet portal and sign up."},
-      {"@type":"HowToStep","name":"Confirm","text":"We confirm details and lock your stay."}
-    ]
-  }
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
+    {"@type":"ListItem","position":2,"name":"Book Dog Boarding","item":"https://www.woofofwalkstreet.com/book-boarding.html"}
+  ]}
   </script>
 </head>
 
 <body>
-  <!-- Header (same structure as site) -->
+  <!-- Header (reuse your site header) -->
   <header class="site-header">
-    <div class="navbar container" role="navigation" aria-label="Main">
+    <div class="navbar container">
       <a class="brand" href="/" aria-label="Go to home">
         <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="56" height="56">
         <strong>The Woof of Walk Street</strong>
@@ -105,9 +81,12 @@
         <a href="/about.html">About</a>
         <a href="/testimonials.html">Testimonials</a>
         <a href="/gallery.html">Gallery</a>
+        <a href="/blog/index.html">Blog</a>
         <a href="/faq.html">FAQs</a>
+        <a href="/search.html">Search</a>
         <a class="btn btn-primary nav-cta"
-           href="#plans">Book Boarding</a>
+           href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=header&utm_campaign=book_now"
+           target="_blank" rel="noopener">Book Now</a>
       </nav>
     </div>
   </header>
@@ -117,107 +96,128 @@
     <div class="container">
       <span class="kicker">Secure Booking Portal</span>
       <h1>Book Boutique Dog Boarding</h1>
-      <p class="mini" style="max-width:62ch">
-        20% OFF <strong>until 5 Nov</strong>. One-guest-only home boarding with
-        <strong>GPS tracking</strong>, <strong>drop-off</strong>, <strong>photo updates</strong>, <strong>food & chicken treats</strong>, and
-        <strong>multiple daily walks</strong>. Booking runs on <strong>Time To Pet</strong>.
-      </p>
+      <p class="lede">One guest only. Calm, home-style care with <strong>daily walks</strong>, <strong>GPS map</strong> and <strong>photo updates</strong>. Powered by <strong>Time To Pet</strong>.</p>
+
+      <div class="hero-img">
+        <!-- promo visual -->
+        <picture>
+          <source type="image/webp"
+                  srcset="/images/promos/boarding/boarding-promo-20off-640.webp 640w,
+                          /images/promos/boarding/boarding-promo-20off-1024.webp 1024w,
+                          /images/promos/boarding/boarding-promo-20off-1600.webp 1600w"
+                  sizes="(max-width: 640px) 88vw, 320px">
+          <img src="/images/promos/boarding/boarding-promo-20off-1024.webp"
+               alt="20% Off Boarding — ends 5 November"
+               width="1024" height="1024" loading="lazy" decoding="async">
+        </picture>
+
+        <div class="promo-note"><strong>Limited-time:</strong> <u>20% off boarding</u> — valid until <strong>5 November</strong>.</div>
+      </div>
     </div>
   </section>
 
   <main class="container" style="margin-top:18px">
     <div class="bridge-wrap">
-      <!-- Left: plans & CTAs -->
-      <section id="plans" class="edge" aria-labelledby="book-heading">
-        <h2 id="book-heading" class="accent-title">Choose your plan</h2>
+      <!-- Left: options -->
+      <section class="edge" aria-labelledby="book-heading">
+        <h2 id="book-heading">Choose your stay</h2>
+        <p class="mini" style="margin:.25rem 0 .35rem">Pick an option — you’ll jump to our secure <strong>Time To Pet</strong> portal to finish. Your UTM source will carry through.</p>
+
         <div class="steps" aria-label="Steps">
-          <span class="step"><b>1</b> Pick</span>
+          <span class="step"><b>1</b> Pick stay</span>
           <span class="step"><b>2</b> Create account</span>
           <span class="step"><b>3</b> Confirm</span>
         </div>
 
-        <p class="muted" style="margin:-4px 0 8px">Buttons go to our secure <strong>Time To Pet</strong> portal. Your UTM source will carry through.</p>
-
-        <div class="cta-row">
-          <a class="btn btn-primary" data-plan="weekday_2min"
-             href="https://www.timetopet.com/portal/woofofwalkstreet/create-account">
-            Weekday Boarding — $125/night (2-night min)
-          </a>
-          <a class="btn btn-primary" data-plan="weekend_woof"
-             href="https://www.timetopet.com/portal/woofofwalkstreet/create-account">
-            Weekend Woof Club — 2 or 3 nights
-          </a>
+        <div class="grid-price">
+          <div class="price">
+            <div><strong>Weekday Boarding</strong><br><span class="muted">Mon–Thu · min 2 nights</span></div>
+            <div><strong>$125</strong> / night</div>
+          </div>
+          <div class="price">
+            <div><strong>Weekend Woof Club</strong><br><span class="muted">2 nights: Fri–Sun</span></div>
+            <div><strong>$300</strong></div>
+          </div>
+          <div class="price">
+            <div><strong>Weekend Woof Club</strong><br><span class="muted">3 nights: Fri–Mon</span></div>
+            <div><strong>$450</strong></div>
+          </div>
+          <div class="price">
+            <div><strong>Week Stay</strong><br><span class="muted">7 nights (discounted)</span></div>
+            <div><strong>$750</strong></div>
+          </div>
+          <div class="price">
+            <div><strong>2-Week Stay</strong><br><span class="muted">14 nights (discounted)</span></div>
+            <div><strong>$1,400</strong></div>
+          </div>
         </div>
-        <div class="cta-row">
-          <a class="btn btn-primary" data-plan="week_7"
-             href="https://www.timetopet.com/portal/woofofwalkstreet/create-account">
-            Week Stay — 7 nights ($750)
-          </a>
-          <a class="btn btn-primary" data-plan="two_weeks_14"
-             href="https://www.timetopet.com/portal/woofofwalkstreet/create-account">
-            Two Weeks — 14 nights ($1,400)
-          </a>
+
+        <div class="mini" style="margin:.6rem 0 0">All plans include: drop-off, GPS tracking, photo updates, food + chicken treats, and multiple daily walks.</div>
+
+        <div class="steps" style="margin-top:12px">
+          <a class="btn btn-primary" data-plan="boarding_weekday" href="https://www.timetopet.com/portal/woofofwalkstreet/create-account">Book Weekday Boarding</a>
+          <a class="btn btn-primary" data-plan="weekend_2" href="https://www.timetopet.com/portal/woofofwalkstreet/create-account">Book Weekend (2 nights)</a>
+          <a class="btn btn-primary" data-plan="weekend_3" href="https://www.timetopet.com/portal/woofofwalkstreet/create-account">Book Weekend (3 nights)</a>
+          <a class="btn btn-primary" data-plan="week_7" href="https://www.timetopet.com/portal/woofofwalkstreet/create-account">Book Week (7 nights)</a>
+          <a class="btn btn-primary" data-plan="week_14" href="https://www.timetopet.com/portal/woofofwalkstreet/create-account">Book 2 Weeks (14 nights)</a>
         </div>
 
-        <p class="mini" style="margin-top:10px">
-          <span class="badge">20% OFF</span> applied at booking. Valid until <strong>5 Nov</strong>.
-        </p>
+        <div class="promo-note"><strong>Offer:</strong> 20% off boarding until <strong>5 November</strong> is applied by us after your request. You’ll see confirmation in the portal/email.</div>
 
-        <div class="edge" style="margin-top:12px;background:transparent;border:1px dashed #2a3440">
-          <p class="mini"><strong>What’s included:</strong> GPS tracking, drop-off, photo updates, food, chicken treats, multiple daily walks.</p>
-          <ul class="list mini">
-            <li><strong>Weekday Boarding</strong>: Mon–Thu • 2-night minimum</li>
-            <li><strong>Weekend Woof Club</strong>: Pick Fri/Sat/Sun • 2 or 3 nights</li>
-            <li><strong>Week</strong>: 7 nights (built-in discount) • <strong>Two Weeks</strong>: 14 nights</li>
-          </ul>
+        <div class="mini" style="margin-top:10px">
+          Prefer to chat first?
+          <a class="btn btn-outline" href="/contact.html">Ask a Question</a>
+          <a class="btn btn-ghost" href="tel:+61456754050">Call +61 456 754 050</a>
         </div>
       </section>
 
-      <!-- Right: trust + what to expect -->
+      <!-- Right: Trust / How it works -->
       <aside class="edge" aria-labelledby="trust-heading">
         <span class="badge" style="margin-bottom:6px">About Time To Pet</span>
-        <h2 id="trust-heading" class="accent-title">Safe. Simple. Trusted.</h2>
-
-        <ul class="list">
+        <h2 id="trust-heading">Safe. Simple. Trusted.</h2>
+        <ul class="mini" style="margin:0 0 12px 18px">
           <li><strong>Trusted by 4,000+ businesses</strong> worldwide.</li>
-          <li><strong>Bank-grade security</strong> (128-bit encryption).</li>
-          <li><strong>Secure hosting & daily backups</strong> in monitored data centres.</li>
-          <li><strong>All in one place:</strong> requests, confirmations, GPS maps, photos & messages.</li>
+          <li><strong>Bank-grade security:</strong> 128-bit encrypted connection.</li>
+          <li><strong>Secure hosting:</strong> data in monitored 24/7 data centres.</li>
+          <li><strong>Backups</strong> performed multiple times per day.</li>
+          <li><strong>Everything in one place:</strong> bookings, GPS maps, photos, messaging.</li>
+          <li><strong>We don’t store your card</strong> on our website — it stays in the portal.</li>
         </ul>
 
-        <h3 class="accent-title" style="margin-top:12px">What to expect</h3>
-        <div class="edge" style="border:1px dashed #2a3440;background:transparent">
-          <p class="mini"><strong>Inside Time To Pet</strong></p>
-          <ol class="list mini">
-            <li>Pick your plan and continue to the portal.</li>
+        <h3 class="mini" style="font-size:1.1rem;margin:.5rem 0 .35rem">What to expect</h3>
+        <div class="edge" style="border-width:1px;padding:12px">
+          <h4 class="muted" style="margin:0 0 .4rem">Inside Time To Pet</h4>
+          <ol class="mini" style="margin:0 0 8px 18px">
             <li>Create your account and tell us about your dog.</li>
-            <li>See your booking confirmation in the portal.</li>
-            <li>On stay days, view GPS routes and photo updates.</li>
+            <li>Request dates or select our suggested time.</li>
+            <li>See your confirmation in the portal and via email.</li>
+            <li>During the stay, view your <strong>GPS map</strong> and <strong>photo updates</strong>.</li>
           </ol>
-          <p class="mini" style="margin-top:6px"><em>Note:</em> Time To Pet doesn’t use a separate “thank-you” page. You’ll see confirmation in-portal and via email.</p>
-          <hr style="border-color:#2a3440;opacity:.4;margin:10px 0">
-          <p class="mini"><strong>From The Woof of Walk Street</strong></p>
-          <ul class="list mini">
-            <li>We’ll confirm keys, routine and access.</li>
-            <li>You’ll get a welcome email and next steps from <strong>info@woofofwalkstreet.com</strong>.</li>
-            <li>Need help? <a href="tel:+61456754050">Call +61 456 754 050</a>.</li>
+          <p class="mini" style="margin:0"><em>Note:</em> TTP shows the confirmation inside the portal and also emails you.</p>
+        </div>
+
+        <div class="edge" style="border-width:1px;padding:12px;margin-top:10px">
+          <h4 class="muted" style="margin:0 0 .4rem">From The Woof of Walk Street</h4>
+          <ul class="mini" style="margin:0 0 0 18px">
+            <li>We’ll confirm keys, routine and access details.</li>
+            <li>We’ll send a welcome email and next steps from <strong>info@woofofwalkstreet.com</strong>.</li>
           </ul>
         </div>
       </aside>
     </div>
   </main>
 
-  <p class="muted" style="text-align:center;margin:16px 0 24px">
-    © <span id="year"></span> The Woof of Walk Street · South Melbourne
-  </p>
+  <!-- Footer (reuse your site footer) -->
+  <footer class="site-footer" role="contentinfo" style="margin-top:22px">
+    <!-- keep your existing full footer here -->
+    <div class="container footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </footer>
 
-  <!-- Bridge logic → append UTM + plan; fire GA; redirect -->
+  <!-- Bridge logic: keep UTMs, tag plan, send event, redirect -->
   <script>
   (function(){
-    document.getElementById('year').textContent = new Date().getFullYear();
-
     var TTP_BASE = "https://www.timetopet.com/portal/woofofwalkstreet/create-account";
-
     function getParams() {
       var p = new URLSearchParams(window.location.search);
       var keep = new URLSearchParams();
@@ -227,46 +227,36 @@
       try { keep.set("ref_path", window.location.pathname); } catch(e){}
       return keep;
     }
-
     function buildOutbound(plan){
       var qs = getParams();
       if (plan) qs.set("plan", plan);
       var sep = TTP_BASE.indexOf("?")>-1 ? "&" : "?";
       return TTP_BASE + (qs.toString() ? (sep + qs.toString()) : "");
     }
-
-    // Attach click handlers to primary buttons
     document.querySelectorAll('[data-plan]').forEach(function(a){
       a.addEventListener('click', function(e){
         e.preventDefault();
         var plan = a.getAttribute('data-plan') || '';
-        try {
-          gtag('event','bridge_click',{
-            event_category:'engagement',
-            event_label: plan || 'unknown_plan'
-          });
-        } catch(err){}
+        try { window.gtag && gtag('event','bridge_click',{event_category:'engagement',event_label: plan||'unknown_plan'}); } catch(err){}
         window.location.href = buildOutbound(plan);
       });
     });
-
-    // Safety: any raw TTP link clicked on the page gets UTMs added
     document.addEventListener('click', function (e) {
-      var a = e.target.closest('a');
-      if (!a) return;
-      var href = (a.getAttribute('href') || '').toLowerCase();
+      var a = e.target.closest('a'); if (!a) return;
+      var href = (a.getAttribute('href')||'').toLowerCase();
       if (href.includes('timetopet.com/portal/woofofwalkstreet')) {
         e.preventDefault();
-        try { gtag('event','ttp_intercept_bridge'); } catch(err){}
-        window.location.href = buildOutbound(a.getAttribute('data-plan') || '');
+        try { window.gtag && gtag('event','ttp_intercept_bridge'); } catch(err){}
+        window.location.href = buildOutbound(a.getAttribute('data-plan')||'');
       }
     }, { capture:true });
   })();
   </script>
 
+  <!-- No-JS fallback -->
   <noscript>
     <div class="container edge" style="margin:20px 0">
-      <p><strong>JavaScript is off.</strong> You can still create your account here:</p>
+      <p><strong>JavaScript is off.</strong> You can still book here:</p>
       <p><a class="btn btn-primary" href="https://www.timetopet.com/portal/woofofwalkstreet/create-account">Open Time To Pet</a></p>
     </div>
   </noscript>

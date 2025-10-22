@@ -3,164 +3,268 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dog-Friendly Cafés in South Melbourne – The Woof of Walk Street</title>
-  <meta name="description" content="Local picks for genuinely dog-friendly cafés in and around South Melbourne — outdoor seating, shade, water bowls and a warm welcome for pups." />
-  <link rel="stylesheet" href="/css/styles.css" />
-  <link rel="stylesheet" href="/css/mini.css" />
+
+  <!-- SEO -->
+  <title>Dog-Friendly Cafés in South Melbourne — Local Picks & Calm Coffee Tips</title>
+  <meta name="description" content="Our favourite dog-friendly cafés in South Melbourne, Albert Park, Middle Park, Port Melbourne and Southbank — with shade, water bowls and outdoor seating. Plus calm café etiquette and nearby solo walking routes." />
+  <link rel="canonical" href="https://www.woofofwalkstreet.com/blog/dog-friendly-cafes-south-melbourne.html" />
   <link rel="icon" href="/images/brand/favicon.ico" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/mini.css" />
+  <link rel="stylesheet" href="/css/mini.dark.css" />
+  <link rel="stylesheet" href="/css/mini.light.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
 
   <!-- Social -->
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="Dog-Friendly Cafés in South Melbourne" />
-  <meta property="og:description" content="Our go-to cafés that treat dogs (and humans) well — plus quick etiquette tips for a calm coffee stop." />
-  <meta property="og:image" content="https://www.woofofwalkstreet.com/images/blog/blog-dog-friendly-cafes-south-melbourne.webp" />
+  <meta property="og:title" content="Dog-Friendly Cafés in South Melbourne — Local Picks & Calm Coffee Tips" />
+  <meta property="og:description" content="Local favourites that truly welcome dogs — outdoor seating, shade and water bowls. Plus calm café etiquette and nearby solo walking routes." />
   <meta property="og:url" content="https://www.woofofwalkstreet.com/blog/dog-friendly-cafes-south-melbourne.html" />
+  <meta property="og:image" content="https://www.woofofwalkstreet.com/images/blog/blog-dog-friendly-cafes-1600.webp" />
+  <meta property="og:locale" content="en_AU" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- BlogPosting schema -->
+  <!-- Breadcrumbs + BlogPosting schema -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
-    "@type":"BlogPosting",
-    "headline":"Dog-Friendly Cafés in South Melbourne",
-    "description":"Local picks for genuinely dog-friendly cafés around South Melbourne, plus quick etiquette tips.",
-    "image":"https://www.woofofwalkstreet.com/images/blog/blog-dog-friendly-cafes-south-melbourne.webp",
-    "mainEntityOfPage":{"@type":"WebPage","@id":"https://www.woofofwalkstreet.com/blog/dog-friendly-cafes-south-melbourne.html"},
-    "author":{"@type":"Organization","name":"The Woof of Walk Street"},
-    "publisher":{"@type":"Organization","name":"The Woof of Walk Street","logo":{"@type":"ImageObject","url":"https://www.woofofwalkstreet.com/images/brand/logo-lockup-gold.webp"}}
+    "@graph":[
+      {
+        "@type":"BreadcrumbList",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
+          {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.woofofwalkstreet.com/blog/"},
+          {"@type":"ListItem","position":3,"name":"Dog-Friendly Cafés in South Melbourne","item":"https://www.woofofwalkstreet.com/blog/dog-friendly-cafes-south-melbourne.html"}
+        ]
+      },
+      {
+        "@type":"BlogPosting",
+        "headline":"Dog-Friendly Cafés in South Melbourne — Local Picks & Calm Coffee Tips",
+        "description":"Genuinely dog-friendly cafés around South Melbourne, Albert Park, Middle Park, Port Melbourne and Southbank — plus calm etiquette tips and nearby solo walking routes.",
+        "image":"https://www.woofofwalkstreet.com/images/blog/blog-dog-friendly-cafes-1600.webp",
+        "author":{"@type":"Organization","name":"The Woof of Walk Street"},
+        "publisher":{"@type":"Organization","name":"The Woof of Walk Street","logo":{"@type":"ImageObject","url":"https://www.woofofwalkstreet.com/images/brand/logo-lockup-gold.webp"}},
+        "datePublished":"2025-10-03",
+        "dateModified":"2025-10-03",
+        "mainEntityOfPage":{"@type":"WebPage","@id":"https://www.woofofwalkstreet.com/blog/dog-friendly-cafes-south-melbourne.html"}
+      }
+    ]
   }
   </script>
 
-  <!-- Ads global tag -->
+  <!-- Google Ads Global Site Tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
-    gtag('config','AW-17527927259');
+    gtag('config', 'AW-17527927259');
   </script>
 
+  <!-- Preload LCP hero -->
+  <link
+    rel="preload"
+    as="image"
+    href="/images/blog/blog-dog-friendly-cafes-1600.webp"
+    imagesrcset="/images/blog/blog-dog-friendly-cafes-800.webp 800w, /images/blog/blog-dog-friendly-cafes-1600.webp 1600w"
+    imagesizes="(max-width: 640px) 100vw, (max-width: 1200px) 92vw, 1100px"
+  >
+
   <style>
-    .post-hero img{max-width:980px;border-radius:12px;display:block;margin:12px auto}
-    .intro{max-width:820px;margin:0 auto 1rem auto}
+    /* Page polish */
+    .post-hero img{max-width:1100px;border-radius:12px;display:block;margin:12px auto;box-shadow:0 12px 28px rgba(0,0,0,.16)}
+    .intro{max-width:860px;margin:0 auto 1rem auto}
     .card-grid{display:grid;gap:16px}
-    .cafe-card{border:1px solid #eee;border-radius:12px;padding:14px;background:#fff}
+    .cafe-card{border:1px solid var(--line);border-radius:12px;padding:14px;background:#fff}
     .cafe-card h3{margin:.25rem 0 .35rem}
     .pill{display:inline-block;padding:.15rem .5rem;border:1px solid #e5e5e5;border-radius:999px;font-size:.85rem;margin-right:.25rem}
     .meta{color:#666;font-size:.95rem}
     .cta-row a{margin-right:.5rem;margin-bottom:.5rem}
-    @media (min-width: 720px){ .card-grid{grid-template-columns: repeat(2,1fr);} }
+    @media (min-width: 860px){ .card-grid{grid-template-columns: repeat(2,1fr);} }
+
+    /* Sticky dual-CTA */
+    .sticky-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:998;background:rgba(15,19,24,.92);border:1px solid rgba(255,255,255,.08);border-radius:16px;box-shadow:0 10px 28px rgba(0,0,0,.28);display:flex;gap:10px;justify-content:center;align-items:center;padding:10px}
+    .sticky-cta a{white-space:nowrap}
+    .sticky-cta .btn{border-radius:999px}
   </style>
 </head>
 <body>
 
-<header class="site-header">
-  <div class="navbar container">
-    <a class="brand" href="/"><img src="/images/brand/logo-lockup-gold.webp" width="56" height="56" alt=""><strong>The Woof of Walk Street</strong></a>
-    <nav class="nav-links">
-      <a href="/">Home</a>
-      <a href="/blog/index.html" aria-current="page">Blog</a>
-    </nav>
+  <!-- Promo ribbon -->
+  <div id="promo" class="promo-ribbon promo--edge" role="region" aria-label="Promo: 50% off">
+    <div class="promo-inner container">
+      <img class="promo-dog" src="/images/brand/dog-in-suit.webp" alt="" width="28" height="28" decoding="async" />
+      <span class="promo-copy"><strong>50% OFF</strong> Unlimited Daily Walks — 45-minute solo walks · GPS tracked · Photo updates</span>
+      <a href="/unlimited-dog-walks.html" class="btn btn-primary">Learn More →</a>
+      <button id="promo-close" class="promo-close" aria-label="Dismiss promo">✕</button>
+    </div>
   </div>
-</header>
 
-<main>
+  <!-- Impact ribbon (charity) -->
+  <div class="impact-ribbon" role="note" aria-label="Walks that do more: 10% donated">
+    <div class="impact-inner">
+      <span class="impact-emoji" aria-hidden="true">💛</span>
+      <strong>Walks That Do More:</strong> We donate <strong>10% of profits</strong> to local rescue.
+      <a class="impact-cta" href="/community.html">See our impact →</a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="navbar container">
+      <a class="brand" href="/">
+        <img src="/images/brand/logo-lockup-gold.webp" width="56" height="56" alt="The Woof of Walk Street logo">
+        <strong>The Woof of Walk Street</strong>
+      </a>
+
+      <input id="nav-toggle" type="checkbox" hidden>
+      <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</label>
+
+      <nav class="nav-links" aria-label="Primary">
+        <section class="nav-group">
+          <button class="nav-group-btn" aria-expanded="false" aria-controls="nav-services">Services</button>
+          <ul id="nav-services" class="nav-group-list">
+            <li><a href="/services.html">All Services</a></li>
+            <li><a href="/dog-walking-south-melbourne.html">Dog Walking South Melbourne</a></li>
+            <li><a href="/casual-dog-walking-south-melbourne.html">Casual Walks</a></li>
+            <li><a href="/memberships.html">Memberships</a></li>
+            <li><a href="/unlimited-dog-walks.html">Unlimited Membership</a></li>
+            <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </section>
+
+        <a href="/about.html">About</a>
+        <a href="/blog/index.html" aria-current="page">Blog</a>
+        <a href="/faq.html">FAQs</a>
+        <a href="/search.html">Search</a>
+
+        <!-- New header CTAs -->
+        <a class="btn button-primary nav-cta" href="/book-boarding-discount/">Book Boarding</a>
+        <a class="btn button-secondary nav-cta" href="/book-dog-walk/">Book Walks</a>
+      </nav>
+    </div>
+  </header>
+
   <!-- HERO -->
   <section class="hero">
     <div class="container">
+      <nav class="breadcrumbs"><a href="/">Home</a> › <a href="/blog/">Blog</a> › Cafés</nav>
       <h1>Dog-Friendly Cafés in South Melbourne</h1>
-      <p class="subhead">Locals we love for good coffee, shade, and a warm welcome for dogs.</p>
+      <p class="subhead">Local picks that truly welcome pups — outdoor seating, shade and water bowls — plus calm café etiquette and nearby walking routes.</p>
       <div class="post-hero">
-        <img src="/images/blog/blog-dog-friendly-cafes-1600.webp"
-             alt="Dog relaxing outside a South Melbourne café with water bowl and shade"
-             width="1200" height="750" loading="eager" decoding="async">
+        <picture>
+          <source srcset="/images/blog/blog-dog-friendly-cafes-1600.webp 1600w, /images/blog/blog-dog-friendly-cafes-800.webp 800w" type="image/webp">
+          <img src="/images/blog/blog-dog-friendly-cafes-1600.webp" alt="Dog relaxing outside a South Melbourne café with water bowl and shade" width="1200" height="750" loading="eager" decoding="async">
+        </picture>
       </div>
-      <p class="intro">Post-walk coffee? Yes please. These are the spots we consistently find **dog-friendly** — outdoor seating, shade where possible, clean water bowls and staff who are happy to say hello. Always check current policies and be mindful of other guests.</p>
+      <p class="intro">Post-walk coffee? Yes please. These are the spots we consistently find <strong>genuinely dog-friendly</strong> — staff who say hello, clean bowls, and outdoor tables with enough space to settle. Policies change, so always double-check on the day and be mindful of other guests.</p>
     </div>
   </section>
 
   <!-- CAFÉ LIST -->
   <section>
     <div class="container">
-      <h2>Our go-to cafés</h2>
+      <h2>South Melbourne favourites</h2>
       <div class="card-grid">
-
-        <!-- 1 -->
         <article class="cafe-card">
           <div class="meta">South Melbourne</div>
           <h3>ST. ALi</h3>
-          <p>Shaded outdoor benches and staff who are relaxed with well-behaved pups. Busy on weekends — arrive early for calmer vibes.</p>
+          <p>Iconic coffee with shaded benches and a relaxed attitude to well-behaved pups. Peak weekends are buzzing — arrive early for calmer vibes and easier settling.</p>
           <div class="pill">Outdoor seating</div><div class="pill">Water bowls</div><div class="pill">Lively</div>
           <p class="cta-row">
             <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=ST+Ali+South+Melbourne" target="_blank" rel="noopener">Map</a>
-            <a class="btn" href="/dog-walking-south-melbourne">Pre-café walk route</a>
+            <a class="btn" href="/dog-walking-south-melbourne.html">Pre-café walk route</a>
           </p>
         </article>
 
-        <!-- 2 -->
         <article class="cafe-card">
           <div class="meta">South Melbourne</div>
           <h3>Dead Man Espresso</h3>
-          <p>Consistently friendly to dogs with street-side tables set back from traffic. Good shade late morning.</p>
+          <p>Street-side tables set back from traffic with staff who are friendly to dogs. Good shade late morning and room to park a mat.</p>
           <div class="pill">Outdoor seating</div><div class="pill">Shade</div><div class="pill">Calmer streets</div>
           <p class="cta-row">
             <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Dead+Man+Espresso+South+Melbourne" target="_blank" rel="noopener">Map</a>
-            <a class="btn" href="/dog-walking-south-melbourne">Nearby walk</a>
+            <a class="btn" href="/dog-walking-south-melbourne.html">Nearby walk</a>
           </p>
         </article>
 
-        <!-- 3 -->
         <article class="cafe-card">
           <div class="meta">South Melbourne</div>
           <h3>PhiloCoffee</h3>
-          <p>Neighbourhood spot with patient staff; easy settling for dogs on a mat. Water bowl offered without asking.</p>
+          <p>Neighbourhood spot with patient staff — easy to settle dogs on a mat. Water offered without asking and footpath space to avoid crowding.</p>
           <div class="pill">Water bowls</div><div class="pill">Mat-friendly</div><div class="pill">Quiet corners</div>
           <p class="cta-row">
             <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=PhiloCoffee+South+Melbourne" target="_blank" rel="noopener">Map</a>
-            <a class="btn" href="/dog-walking-south-melbourne">Pre-café walk</a>
+            <a class="btn" href="/dog-walking-south-melbourne.html">Pre-café walk</a>
           </p>
         </article>
+      </div>
 
-        <!-- 4 -->
+      <h2 style="margin-top:1.25rem">Albert Park & Middle Park</h2>
+      <div class="card-grid">
         <article class="cafe-card">
           <div class="meta">Albert Park</div>
           <h3>Nanna’s Place</h3>
-          <p>Local favourite after an Albert Park Lake loop. Courteous staff, shade, and bowls — best outside peak brunch hours.</p>
-          <div class="pill">Near Albert Park</div><div class="pill">Shade</div><div class="pill">Water bowls</div>
+          <p>Local favourite after an <a href="/dog-walker-albert-park.html">Albert Park Lake loop</a>. Courteous staff, shade and bowls — best outside peak brunch hours.</p>
+          <div class="pill">Near the Lake</div><div class="pill">Shade</div><div class="pill">Water bowls</div>
           <p class="cta-row">
             <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Nanna%E2%80%99s+Place+Albert+Park" target="_blank" rel="noopener">Map</a>
-            <a class="btn" href="/dog-walking-south-melbourne">Lake loop walk</a>
+            <a class="btn" href="/dog-walker-albert-park.html">Lake loop details</a>
           </p>
         </article>
 
-        <!-- 5 -->
         <article class="cafe-card">
-          <div class="meta">South Melbourne / Domain</div>
-          <h3>The Kettle Black</h3>
-          <p>Leafy frontage with space to settle; terrific coffee. Can be bustling — pick off-peak times for training young dogs.</p>
-          <div class="pill">Leafy frontage</div><div class="pill">Space to settle</div><div class="pill">Busy at peak</div>
+          <div class="meta">Middle Park</div>
+          <h3>Local Middle Park spots</h3>
+          <p>Leafy streets with generous verges make Middle Park great for training calm café behaviour. Look for outdoor tables set away from doorways.</p>
+          <div class="pill">Leafy streets</div><div class="pill">Quieter corners</div>
           <p class="cta-row">
-            <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=The+Kettle+Black+South+Melbourne" target="_blank" rel="noopener">Map</a>
-            <a class="btn" href="/dog-walking-south-melbourne">Nearby park route</a>
+            <a class="btn" href="/dog-walker-middle-park.html">Walking in Middle Park</a>
           </p>
         </article>
-
       </div>
 
-      <h2 style="margin-top:1.25rem">Quick etiquette tips</h2>
+      <h2 style="margin-top:1.25rem">Port Melbourne & Southbank</h2>
+      <div class="card-grid">
+        <article class="cafe-card">
+          <div class="meta">Port Melbourne</div>
+          <h3>Bay-side cafés</h3>
+          <p>Sea breeze, wide footpaths and water views. Pick off-peak windows for younger dogs, and bring a mat for easy downs.</p>
+          <div class="pill">Breezy</div><div class="pill">Wide paths</div>
+          <p class="cta-row">
+            <a class="btn" href="/dog-walking-port-melbourne.html">Nearby walking routes</a>
+          </p>
+        </article>
+
+        <article class="cafe-card">
+          <div class="meta">Southbank</div>
+          <h3>Riverside options</h3>
+          <p>Choose tables away from foot traffic; practise short calm settles between sips. Great proofing for city-savvy dogs.</p>
+          <div class="pill">City proofing</div><div class="pill">Outdoor seating</div>
+          <p class="cta-row">
+            <a class="btn" href="/dog-walker-southbank.html">Walking in Southbank</a>
+          </p>
+        </article>
+      </div>
+
+      <h2 style="margin-top:1.25rem">Calm café etiquette (quick wins)</h2>
       <ul>
-        <li>Keep leads short; settle dogs beside or under the table on a small mat.</li>
-        <li>Skip peak times if your dog is still learning to relax in busy places.</li>
-        <li>Offer water and a chew to encourage calm resting.</li>
-        <li>Always thank staff — a friendly chat keeps cafés dog-welcoming.</li>
+        <li>Keep leads short and neutral; settle your dog on a small mat by your chair.</li>
+        <li>Skip peak times if your dog is still learning to relax in busy spaces.</li>
+        <li>Offer water and a gentle chew to encourage resting.</li>
+        <li>Thank staff and keep the space tidy — it helps venues stay dog-welcoming.</li>
       </ul>
 
-      <div class="callout" style="margin:1rem 0;padding:14px;border:1px solid #cfe5ff;background:#eef6ff;border-radius:10px">
+      <!-- Funnel block -->
+      <div class="callout" style="margin:1rem 0;padding:16px;border:2px solid #ffd166;background:#fffaf0;border-radius:12px">
         Want café-calm faster? Our <strong>one-dog-only walks</strong> build loose-lead skills and impulse control around distractions.
-        <a class="btn button-primary" href="/dog-walking-south-melbourne" style="margin-left:.5rem">See Our Walks</a>
-        <a class="btn button-primary" target="_blank" rel="noopener"
-           href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=blog_cafes&utm_campaign=book_now"
-           onclick="gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">Book Now</a>
+        <div class="cta-row" style="margin-top:.5rem">
+          <a class="btn button-primary" href="/dog-walking-south-melbourne.html">See Our Walks</a>
+          <a class="btn button-primary" href="/book-dog-walk/">Book Walks — <strong>50% Off</strong> Unlimited</a>
+          <a class="btn button-secondary" href="/book-boarding-discount/">Book Boarding — <strong>20% Off</strong></a>
+        </div>
       </div>
 
       <hr>
@@ -168,11 +272,16 @@
       <ul>
         <li><a href="/blog/best-dog-walks-south-melbourne.html">Best Dog-Friendly Spots in South Melbourne</a></li>
         <li><a href="/blog/why-solo-walks.html">Why Solo Walks Reduce Stress</a></li>
-        <li><a href="/blog/weekend-woof-club-checklist.html">Weekend Woof Club – What To Pack</a></li>
+        <li><a href="/blog/weekend-woof-club-checklist.html">Weekend Woof Club — What to Pack</a></li>
       </ul>
     </div>
   </section>
-</main>
+
+  <!-- Sticky dual-CTA -->
+  <div class="sticky-cta" role="region" aria-label="Quick booking">
+    <a class="btn button-primary" href="/book-boarding-discount/">Book Boarding — 20% Off</a>
+    <a class="btn button-secondary" href="/book-dog-walk/">Book Walks — 50% Off</a>
+  </div>
 
   <!-- FOOTER -->
   <footer class="site-footer" role="contentinfo">
@@ -210,7 +319,7 @@
         <h3>Services</h3>
         <ul>
           <li><a href="/services.html">All Services</a></li>
-          <li><a href="/dog-walking-south-melbourne">Dog Walking South Melbourne</a></li>
+          <li><a href="/dog-walking-south-melbourne.html">Dog Walking South Melbourne</a></li>
           <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
           <li><a href="/memberships.html">Unlimited Membership</a></li>
           <li><a href="/contact.html">Contact</a></li>
@@ -224,7 +333,7 @@
           <li><a href="/about.html">About</a></li>
           <li><a href="/testimonials.html">Testimonials</a></li>
           <li><a href="/gallery.html">Photos & Videos</a></li>
-          <li><a href="/blog/index.html">Blog</a></li>
+          <li><a href="/blog/index.html" aria-current="page">Blog</a></li>
           <li><a href="/faq.html">FAQs</a></li>
         </ul>
       </section>
@@ -248,7 +357,7 @@
     <div class="container footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 
-    <!-- Tiny JS for footer accordions (mobile) -->
+    <!-- Footer accordions (mobile) -->
     <script>
       document.querySelectorAll('.collapsible .collapse-btn').forEach(btn=>{
         btn.addEventListener('click', ()=>{
@@ -276,38 +385,34 @@
                 'value': 1.0,
                 'currency': 'AUD'
               });
-            } catch (err) { /* silent */ }
+            } catch (err) {}
           }
         }, { capture: true });
       })();
     </script>
   </footer>
+
+  <!-- Services flyout accessibility -->
   <script>
-  (function () {
-    const btn  = document.querySelector('.nav-group-btn[aria-controls="nav-services"]');
-    const list = document.getElementById('nav-services');
-    if (!btn || !list) return;
-
-    // Start closed on mobile; respect aria-expanded
-    const sync = () => { list.hidden = btn.getAttribute('aria-expanded') !== 'true'; };
-    sync();
-
-    btn.addEventListener('click', () => {
-      const open = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!open));
+    (function () {
+      const btn  = document.querySelector('.nav-group-btn[aria-controls="nav-services"]');
+      const list = document.getElementById('nav-services');
+      if (!btn || !list) return;
+      const sync = () => { list.hidden = btn.getAttribute('aria-expanded') !== 'true'; };
       sync();
-    });
-
-    document.addEventListener('click', (e) => {
-      if (!btn.contains(e.target) && !list.contains(e.target)) {
-        btn.setAttribute('aria-expanded', 'false'); sync();
-      }
-    }, { capture: true });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') { btn.setAttribute('aria-expanded', 'false'); sync(); }
-    });
-  })();
-</script>
+      btn.addEventListener('click', () => {
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open)); sync();
+      });
+      document.addEventListener('click', (e) => {
+        if (!btn.contains(e.target) && !list.contains(e.target)) {
+          btn.setAttribute('aria-expanded', 'false'); sync();
+        }
+      }, { capture: true });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') { btn.setAttribute('aria-expanded', 'false'); sync(); }
+      });
+    })();
+  </script>
 </body>
 </html>

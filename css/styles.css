@@ -454,3 +454,30 @@ body.about .impact-ribbon a:hover{text-decoration:underline}
 .booking-section small {
   color: #cfd6df;
 }
+/* Sticky dual CTAs */
+.sticky-cta{
+  position:fixed;left:12px;right:12px;bottom:12px;z-index:1100;
+  background:#ffffffee;border:1px solid var(--border);border-radius:16px;
+  box-shadow:var(--shadow);padding:10px;display:flex;gap:10px;
+  justify-content:center;align-items:center
+}
+.sticky-cta .btn,.sticky-cta .cta-button{padding:10px 14px}
+@media(min-width:900px){ .sticky-cta{display:none} }
+
+/* Header readability (always-dark header) */
+.site-header{
+  position:sticky;top:var(--promo-h,0px);z-index:1000;
+  background:#0c1117;border-bottom:1px solid rgba(255,255,255,.12);
+  box-shadow:0 2px 10px rgba(0,0,0,.24);
+}
+.site-header .nav-links a,
+.site-header .nav-group-btn{color:#e6edf3}
+.site-header .nav-links a:hover,
+.site-header .nav-group-btn:hover{color:#fff;background:rgba(255,255,255,.08);text-decoration:none}
+
+/* Outline style for the Walks button variant */
+.btn.btn-outline{
+  background:transparent;border:1px solid var(--brand,#f5b200);color:var(--brand,#f5b200);
+}
+.btn.btn-outline:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(0,0,0,.18)}
+}

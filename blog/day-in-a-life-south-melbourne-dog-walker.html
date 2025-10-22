@@ -6,7 +6,7 @@
 
   <!-- SEO -->
   <title>A Day in the Life of a South Melbourne Dog Walker — Calm, One-Dog-Only Routines</title>
-  <meta name="description" content="Follow a typical day for a South Melbourne dog walker: calm, one-dog-only walks, GPS tracking, photo updates, and the local routes we love around Albert Park, Gasworks and St Vincent Gardens." />
+  <meta name="description" content="Follow a typical day for a South Melbourne dog walker: calm, solo dog walking with GPS tracking, photo updates, and the local routes we love around Albert Park, Gasworks and St Vincent Gardens. Learn how one-dog-only walks reduce stress and build confidence." />
   <link rel="canonical" href="https://www.woofofwalkstreet.com/blog/day-in-the-life-south-melbourne-dog-walker.html" />
   <link rel="icon" href="/images/brand/favicon.ico" />
 
@@ -18,8 +18,8 @@
 
   <!-- Social -->
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="A Day in the Life of a South Melbourne Dog Walker" />
-  <meta property="og:description" content="From first leash clip to last GPS ping — a calm, one-dog-only walking routine around South Melbourne." />
+  <meta property="og:title" content="A Day in the Life of a South Melbourne Dog Walker — Calm, One-Dog-Only Routines" />
+  <meta property="og:description" content="From first leash clip to last GPS ping — a calm, solo dog walking routine around South Melbourne with GPS tracking and photo updates." />
   <meta property="og:url" content="https://www.woofofwalkstreet.com/blog/day-in-the-life-south-melbourne-dog-walker.html" />
   <meta property="og:image" content="https://www.woofofwalkstreet.com/images/blog/hero-day-in-the-life-south-melbourne-dog-walker-1200.webp" />
   <meta property="og:locale" content="en_AU" />
@@ -41,7 +41,7 @@
       {
         "@type":"BlogPosting",
         "headline":"A Day in the Life of a South Melbourne Dog Walker — Calm, One-Dog-Only Routines",
-        "description":"Follow a typical day for a South Melbourne dog walker: calm, one-dog-only walks, GPS tracking, photo updates, and the local routes we love.",
+        "description":"Follow a typical day for a South Melbourne dog walker: calm, solo dog walking, GPS tracking, photo updates, and the local routes we love.",
         "image":"https://www.woofofwalkstreet.com/images/blog/hero-day-in-the-life-south-melbourne-dog-walker-1200.webp",
         "datePublished":"2025-01-01",
         "dateModified":"2025-01-01",
@@ -71,13 +71,15 @@
     imagesizes="(max-width: 640px) 100vw, (max-width: 1200px) 90vw, 1100px"
   >
 
-  <!-- Page-scoped styles -->
+  <!-- Page-scoped styles (dark, premium) -->
   <style>
     :root{
       --gold:#f5b200; --text:#e6edf3; --bg:#0b0e12; --card:#0f1318; --line:#1d232c; --muted:#a9b4c0; --shadow:0 14px 40px rgba(0,0,0,.28);
     }
     body{background:var(--bg);color:var(--text)}
-    .site-header{backdrop-filter:saturate(120%) blur(8px);background:rgba(11,14,18,.72);border-bottom:1px solid rgba(255,255,255,.06)}
+    .site-header{backdrop-filter:saturate(120%) blur(8px);background:rgba(11,14,18,.82);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav-links a{color:#e6edf3}
+    .nav-links a:hover{color:#ffd166}
 
     .page-hero{border-bottom:1px solid rgba(255,255,255,.08);background:
       radial-gradient(1200px 600px at 20% -20%, rgba(245,178,0,.08), transparent 60%),
@@ -95,8 +97,8 @@
     .tag-list{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
     .tag{display:inline-block;font-size:.82rem;border:1px solid #2a3440;border-radius:999px;padding:.2rem .6rem;color:#cfd6df}
 
-    .content{max-width:980px;margin:0 auto;padding:18px 16px 44px}
-    .content h2{font-weight:900;margin:1.1rem 0 .5rem}
+    .content{max-width:980px;margin:0 auto;padding:18px 16px 60px}
+    .content h2{font-weight:900;margin:1.1rem 0 .55rem}
     .content h3{font-weight:800;margin:.6rem 0 .35rem}
     .content p{line-height:1.75}
     .block{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:0 10px 24px rgba(0,0,0,.18);margin:14px 0}
@@ -106,6 +108,18 @@
     .btn-ghost{background:transparent;color:#fff;border:1px solid #2a3440}
     .btn-primary:hover,.btn-ghost:hover{transform:translateY(-1px) scale(1.02)}
     .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+
+    /* Sticky mobile CTA */
+    :root{ --sticky-cta-h: 88px; }
+    @media (max-width: 820px){
+      main, .content{ padding-bottom: calc(var(--sticky-cta-h) + 18px); }
+      .sticky-cta{
+        position:fixed;left:12px;right:12px;bottom:12px;z-index:1100;
+        background:#ffffffee;border:1px solid rgba(0,0,0,.12);box-shadow:0 10px 24px rgba(0,0,0,.24);
+        border-radius:16px;display:flex;gap:10px;justify-content:center;align-items:center;padding:10px
+      }
+      .sticky-cta a{font-weight:900}
+    }
   </style>
 </head>
 <body>
@@ -115,9 +129,9 @@
     <div class="promo-inner container">
       <img class="promo-dog" src="/images/brand/dog-in-suit.webp" alt="" width="28" height="28" decoding="async" />
       <span class="promo-copy">
-        <strong>50% OFF</strong> Unlimited Daily Walks — 45-minute solo walks · GPS tracked · Photo updates
+        <strong>50% OFF</strong> Unlimited Weekday Walks — 45-minute solo walks · GPS tracked · Photo updates
       </span>
-      <a href="/unlimited-dog-walks.html" class="btn btn-primary">Learn More →</a>
+      <a href="/unlimited-dog-walks.html" class="promo-cta">Learn More →</a>
       <button id="promo-close" class="promo-close" aria-label="Dismiss promo">✕</button>
     </div>
   </div>
@@ -127,13 +141,12 @@
     <div class="impact-inner">
       <span class="impact-emoji" aria-hidden="true">💛</span>
       <strong>Walks That Do More:</strong>
-      When you choose us, you’re not just booking a dog walk — you’re helping rescue dogs too.
-      <strong>We donate 10% of profits</strong> to local shelters.
+      We donate <strong>10% of profits</strong> to local shelters.
       <a class="impact-cta" href="/community.html">See our impact →</a>
     </div>
   </div>
 
-  <!-- HEADER (homepage version) -->
+  <!-- HEADER (updated site-wide with dual CTAs to pre-TTP) -->
   <header class="site-header" role="banner">
     <div class="navbar container" role="navigation" aria-label="Main">
       <a class="brand" href="/" aria-label="Go to home">
@@ -153,8 +166,6 @@
             <li><a href="/dog-walking-south-melbourne.html">Dog Walking South Melbourne</a></li>
             <li><a href="/casual-dog-walking-south-melbourne.html">Casual Dog Walking</a></li>
             <li><a href="/memberships.html">Memberships — Compare Plans</a></li>
-            <li><a href="/membership-starter.html">Starter Membership</a></li>
-            <li><a href="/membership-growth.html">Growth Membership</a></li>
             <li><a href="/unlimited-dog-walks.html">Unlimited Membership</a></li>
             <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
             <li><a href="/contact.html">Contact</a></li>
@@ -166,12 +177,9 @@
         <a href="/faq.html">FAQs</a>
         <a href="/search.html">Search</a>
 
-        <a class="btn btn-primary nav-cta"
-           href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=header&utm_campaign=book_now"
-           target="_blank" rel="noopener"
-           onclick="gtag && gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
-           Book Now
-        </a>
+        <!-- Dual funnel buttons (pre-TTP pages) -->
+        <a class="btn btn-ghost nav-cta" href="/book-boarding/index.html">Book Boarding</a>
+        <a class="btn btn-primary nav-cta" href="/book-dog-walk/index.html">Book Walks</a>
       </nav>
     </div>
   </header>
@@ -198,41 +206,41 @@
       <a href="/">Home</a> › <a href="/blog/index.html">Blog</a> › Day in the Life
     </nav>
     <h1 class="post-title">A Day in the Life of a South Melbourne Dog Walker</h1>
-    <p class="subhead">From first leash clip to last GPS ping — here’s how we keep walks calm, safe and predictable around South Melbourne.</p>
+    <p class="subhead">From first leash clip to last GPS ping — here’s how our <strong>solo dog walking</strong> stays calm, safe and predictable around South Melbourne.</p>
     <p class="post-meta">By The Woof of Walk Street · Updated 1 Jan 2025</p>
     <div class="tag-list">
-      <span class="tag">South Melbourne</span><span class="tag">Dog walking</span><span class="tag">Routine</span><span class="tag">One-dog-only</span>
+      <span class="tag">South Melbourne</span><span class="tag">Solo dog walking</span><span class="tag">Routine</span><span class="tag">One-dog-only</span>
     </div>
   </header>
 
   <!-- CONTENT -->
   <main class="content" role="main">
-    <p>Every dog — like every human — has a best rhythm. Our job is to find it and keep it steady. Here’s what a typical weekday looks like for a <strong>South Melbourne dog walker</strong> at The Woof of Walk Street.</p>
+    <p>Every dog — like every human — has a best rhythm. Our job is to find it and keep it steady. Below is a typical weekday for a <strong>South Melbourne dog walker</strong> at The Woof of Walk Street: ethical, one-dog-only walks with GPS tracking, photo updates, and routes chosen to reduce stress and build confidence.</p>
 
     <section class="block">
       <h2>6:45am — Greet, gear & a calm start</h2>
-      <p>We arrive with quiet energy (dogs mirror us). Quick hello, harness check, ID, and a moment to sniff the air. If your pup needs meds or a jacket, we’ll note it in the app before heading out.</p>
-      <h3>Why the calm start matters</h3>
-      <p>Starting low-arousal sets the tone for the whole session. It helps with loose-lead walking and better choices around triggers.</p>
+      <p>We arrive with quiet energy (dogs mirror us). A calm hello, harness check, and ID confirmation set the tone. If your pup needs medication, a rain jacket, or paw balm, we log it in our notes before leaving.</p>
+      <h3>Why the low-arousal start matters</h3>
+      <p>Beginning in a low arousal state helps loose-lead walking and better choices around common triggers like bikes, prams, and other dogs. It’s the foundation of our <strong>solo dog walking</strong> approach.</p>
     </section>
 
     <section class="block">
-      <h2>7:00am — The route we pick (and why)</h2>
-      <p>We choose routes that fit your dog’s pace and current training goals — think <a href="/blog/best-dog-walks-south-melbourne.html">Albert Park Lake</a> for smooth paths, <strong>St Vincent Gardens</strong> for shaded loops, or quiet back streets towards Gasworks for gentle novelty.</p>
+      <h2>7:00am — Route selection around South Melbourne</h2>
+      <p>We match the walk to your dog’s pace and goals. For smooth, uninterrupted movement we’ll loop <a href="/blog/best-dog-walks-south-melbourne.html">Albert Park Lake</a>; for shade and quiet streets we prefer <strong>St Vincent Gardens</strong> and the back streets near Gasworks. We avoid crowded areas at peak times and create space early.</p>
       <h3>One-dog-only, always</h3>
-      <p>No pack walks and no car shuttles. Your dog gets our full attention for the entire 45 minutes.</p>
+      <p>No pack walks, no car shuttles, no mixing unfamiliar dogs. Your pup gets 100% of our attention for a full 45 minutes on foot.</p>
     </section>
 
     <section class="block">
       <h2>7:15–7:45am — Walk flow: sniff, settle, move</h2>
-      <p>We cycle between decompression (sniffing), short training reps (recall, checks-in, impulse control) and easy movement. We avoid crowding and create space early — especially around bikes, prams and excitable dogs.</p>
-      <h3>Safety & comfort</h3>
-      <p>We carry water in warmer months, watch surface temps, and adjust pace for seniors or recovering dogs. Your walker logs notes about energy, toileting, and anything unusual.</p>
+      <p>We cycle between decompression (sniffing), short training reps (check-ins and impulse control), and relaxed movement. Seniors get gentle pacing and rest breaks; high-energy dogs get a structured rhythm to channel excitement into focus.</p>
+      <h3>Safety & comfort first</h3>
+      <p>We carry water in warm months, watch surface temperatures, and adapt to weather. Notes include energy, toileting, and any changes we notice.</p>
     </section>
 
     <section class="block">
-      <h2>7:50am — GPS + photo proof</h2>
-      <p>Back home, your dog is dried off if needed and settled. You’ll receive the <strong>GPS route</strong>, a couple of <strong>photos</strong>, and a short summary — so you always know how the session went.</p>
+      <h2>7:50am — GPS route & photo proof</h2>
+      <p>Back home, your dog is settled and towel-dried if needed. You’ll receive a <strong>GPS route</strong>, <strong>photo update</strong>, and short summary straight to your phone — transparent, predictable and reassuring.</p>
       <div class="cta-row">
         <a class="btn btn-primary" href="/dog-walking-south-melbourne.html">See Solo Dog Walking</a>
         <a class="btn btn-ghost" href="/memberships.html">Compare Memberships</a>
@@ -240,34 +248,32 @@
     </section>
 
     <section class="block">
-      <h2>Late morning — Growth & Unlimited members</h2>
-      <p>For pups on a routine, we keep days predictable. <a href="/membership-growth.html">Growth (10 walks)</a> builds steady momentum, while <a href="/unlimited-dog-walks.html">Unlimited</a> locks in every weekday — brilliant for high-energy dogs and busy humans.</p>
+      <h2>Late morning — Building routine with memberships</h2>
+      <p>Routine makes everything easier. Our <a href="/membership-growth.html">Growth (10 walks)</a> plan builds momentum for training and manners, while <a href="/unlimited-dog-walks.html">Unlimited (weekdays)</a> locks in a predictable daily structure — ideal for busy schedules and energetic dogs. Prefer to test us first? Book a <a href="/casual-dog-walking-south-melbourne.html">casual dog walk in South Melbourne</a>.</p>
     </section>
 
     <section class="block">
-      <h2>Afternoon — Heat & crowd hacks</h2>
-      <p>On hot days, we shift to shaded loops and carry extra water. During school pick-up or market hours, we switch to quieter streets and use S-curves to reduce pressure around pass-bys.</p>
-      <h3>Rain? No drama.</h3>
-      <p>We towel-dry on return and swap to shorter loops with rich sniffing. If you’re staying in, try our <a href="/blog/rainy-day-enrichment-games.html">rainy-day enrichment games</a>.</p>
+      <h2>Afternoons — Heat, crowds & calm handling</h2>
+      <p>On hotter days we favour shaded routes and carry extra water. During school pick-up or market hours we switch to quieter loops and use S-curves to create space around pass-bys. Rain? We shorten loops, increase sniffing, and towel-dry on return. If you’re homebound, try our <a href="/blog/rainy-day-enrichment-games.html">rainy-day enrichment games</a>.</p>
     </section>
 
     <section class="callout">
-      <h2 style="margin:.1rem 0 .4rem">Want this rhythm every week?</h2>
-      <p>Memberships keep things calm and predictable — with GPS tracking and photo proof after each walk.</p>
+      <h2 style="margin:.1rem 0 .4rem">Ready for calmer, more predictable walks?</h2>
+      <p>Join a membership to secure priority windows and better rates — you’ll still get GPS tracking and photo proof after every solo session.</p>
       <div class="cta-row">
         <a class="btn btn-primary" href="/membership-starter.html">Starter — 4 Walks / Month</a>
         <a class="btn btn-ghost" href="/membership-growth.html">Growth — 10 Walks / Month</a>
-        <a class="btn btn-ghost" href="/unlimited-dog-walks.html">Unlimited — Weekday Walks</a>
+        <a class="btn btn-ghost" href="/unlimited-dog-walks.html">Unlimited — Weekday Walks (50% off first month)</a>
       </div>
     </section>
 
-    <h2>FAQs we’re asked on the doorstep</h2>
+    <h2>Doorstep FAQs for South Melbourne dog parents</h2>
     <h3>Do you do meet-and-greets?</h3>
-    <p>Yes — quick intro at your place, plus a short test walk if helpful.</p>
+    <p>Yes — a quick intro at your place and (if helpful) a short test walk. It helps us set your dog up for success.</p>
     <h3>What if my dog is reactive?</h3>
-    <p>We manage distance and choose routes that reduce overwhelm. Solo walking is ideal for sensitive dogs.</p>
+    <p>Solo dog walking is ideal. We manage distance, choose calmer routes, and keep arousal low so learning sticks.</p>
     <h3>What time windows do you cover?</h3>
-    <p>Mon–Fri, 7am–7pm in South Melbourne and neighbouring suburbs. Holiday periods book early.</p>
+    <p>Mon–Fri, 7am–7pm across South Melbourne, Albert Park, Port Melbourne, Middle Park and Southbank. Holiday periods book early.</p>
 
     <hr>
     <h2>Keep reading</h2>
@@ -279,7 +285,13 @@
     </ul>
   </main>
 
-  <!-- FOOTER (homepage version) -->
+  <!-- Sticky mobile CTA (pre-TTP funnel) -->
+  <div class="sticky-cta" role="region" aria-label="Quick booking">
+    <a class="btn btn-primary" href="/book-dog-walk/index.html">Book Walks</a>
+    <a class="btn btn-ghost" href="/book-boarding/index.html">Book Boarding</a>
+  </div>
+
+  <!-- FOOTER -->
   <footer class="site-footer" role="contentinfo">
     <div class="footer-banner">
       <picture>
@@ -301,11 +313,8 @@
           <a href="https://x.com/woofofwalkstreet" aria-label="X"><img src="/images/social/twitter.svg" alt="" width="24" height="24"></a>
         </div>
         <p>
-          <a class="btn btn-primary" target="_blank" rel="noopener"
-             href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=footer&utm_campaign=book_now_footer"
-             onclick="gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
-            Book Now
-          </a>
+          <a class="btn btn-primary" href="/book-dog-walk/index.html">Book Walks</a>
+          <a class="btn btn-ghost" href="/book-boarding/index.html">Book Boarding</a>
         </p>
       </section>
 
@@ -364,7 +373,7 @@
       });
     </script>
 
-    <!-- Global TTP booking click tracker -->
+    <!-- Global TTP click tracker (kept) -->
     <script>
       (function () {
         document.addEventListener('click', function (e) {
@@ -385,28 +394,23 @@
     </script>
   </footer>
 
-  <!-- Nav services toggle (accessibility) -->
+  <!-- Services flyout accessibility -->
   <script>
   (function () {
     const btn  = document.querySelector('.nav-group-btn[aria-controls="nav-services"]');
     const list = document.getElementById('nav-services');
     if (!btn || !list) return;
-
     const sync = () => { list.hidden = btn.getAttribute('aria-expanded') !== 'true'; };
     sync();
-
     btn.addEventListener('click', () => {
       const open = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!open));
-      sync();
+      btn.setAttribute('aria-expanded', String(!open)); sync();
     });
-
     document.addEventListener('click', (e) => {
       if (!btn.contains(e.target) && !list.contains(e.target)) {
         btn.setAttribute('aria-expanded', 'false'); sync();
       }
     }, { capture: true });
-
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') { btn.setAttribute('aria-expanded', 'false'); sync(); }
     });
@@ -414,3 +418,4 @@
   </script>
 </body>
 </html>
+

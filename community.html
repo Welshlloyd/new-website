@@ -8,11 +8,16 @@
   <link rel="canonical" href="https://www.woofofwalkstreet.com/community.html" />
   <link rel="icon" href="/images/brand/favicon.ico" />
 
-  <!-- Styles -->
+  <!-- CSS -->
   <link rel="stylesheet" href="/css/mini.css" />
   <link rel="stylesheet" href="/css/styles.css" />
 
-  <!-- Open Graph / Twitter -->
+  <!-- Speed -->
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="/images/brand/logo-lockup-gold.webp" imagesizes="56px">
+
+  <!-- OG/Twitter -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Community Impact | The Woof of Walk Street">
   <meta property="og:description" content="Every walk helps support local animal welfare initiatives in Melbourne.">
@@ -22,30 +27,47 @@
   <meta name="twitter:title" content="Community Impact | The Woof of Walk Street">
   <meta name="twitter:description" content="Walking with purpose: how we give back to dogs in need.">
 
-  <!-- Breadcrumbs JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
-      {"@type":"ListItem","position":2,"name":"Community Impact","item":"https://www.woofofwalkstreet.com/community.html"}
-    ]
-  }
-  </script>
-</head>
-<body>
-
-  <!-- Google Ads Global Site Tag -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
+  <!-- GA4 + Ads -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KP5LVKN6X3"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
-    gtag('config', 'AW-17527927259');
+    gtag('config','G-KP5LVKN6X3');
+    gtag('config','AW-17527927259');
   </script>
 
-  <!-- ✅ Preload LCP hero image (with srcset + sizes) -->
+  <!-- Breadcrumbs JSON-LD -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
+    {"@type":"ListItem","position":2,"name":"Community Impact","item":"https://www.woofofwalkstreet.com/community.html"}]}
+  </script>
+
+  <!-- Site Navigation + Website + LocalBusiness -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SiteNavigationElement",
+   "name":["Dog Walking South Melbourne","Dog Boarding South Melbourne","Memberships","About","Blog","FAQs","Contact"],
+   "url":["https://www.woofofwalkstreet.com/dog-walking-south-melbourne/",
+          "https://www.woofofwalkstreet.com/boarding-services.html",
+          "https://www.woofofwalkstreet.com/memberships.html",
+          "https://www.woofofwalkstreet.com/about.html",
+          "https://www.woofofwalkstreet.com/blog/",
+          "https://www.woofofwalkstreet.com/faq.html",
+          "https://www.woofofwalkstreet.com/contact.html"]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite",
+   "url":"https://www.woofofwalkstreet.com/",
+   "potentialAction":{"@type":"SearchAction","target":"https://www.woofofwalkstreet.com/search.html?q={search_term_string}","query-input":"required name=search_term_string"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"LocalBusiness",
+   "name":"The Woof of Walk Street","url":"https://www.woofofwalkstreet.com/","image":"https://www.woofofwalkstreet.com/images/brand/logo-lockup-gold.webp",
+   "telephone":"+61 456 754 050","address":{"@type":"PostalAddress","addressLocality":"South Melbourne","addressRegion":"VIC","postalCode":"3205","addressCountry":"AU"}}
+  </script>
+
+  <!-- ✅ Preload LCP hero image -->
   <link
     rel="preload"
     as="image"
@@ -56,19 +78,20 @@
 </head>
 
 <body>
-  <!-- Promo ribbon (edgier) -->
+  <!-- Skip link -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Promo ribbon -->
   <div id="promo" class="promo-ribbon promo--edge" role="region" aria-label="Promo: 50% off">
     <div class="promo-inner container">
       <img class="promo-dog" src="/images/brand/dog-in-suit.webp" alt="" width="28" height="28" decoding="async" />
-      <span class="promo-copy">
-        <strong>50% OFF</strong> Unlimited Daily Walks — 45-minute solo walks · GPS tracked · Photo updates
-      </span>
+      <span class="promo-copy"><strong>50% OFF</strong> Unlimited Daily Walks — 45-minute solo walks · GPS tracked · Photo updates</span>
       <a href="/unlimited-dog-walks.html" class="promo-cta">Learn More →</a>
       <button id="promo-close" class="promo-close" aria-label="Dismiss promo">✕</button>
     </div>
   </div>
-  
-  <!-- Impact ribbon (charity) -->
+
+  <!-- Impact ribbon -->
   <div class="impact-ribbon" role="note" aria-label="Walks that do more: 10% donated">
     <div class="impact-inner">
       <span class="impact-emoji" aria-hidden="true">💛</span>
@@ -79,16 +102,14 @@
     </div>
   </div>
 
-
-  <!-- HEADER -->
+  <!-- HEADER (shared) -->
   <header class="site-header" role="banner">
-    <div class="navbar container" role="navigation" aria-label="Main">
+    <div class="navbar container" role="navigation" aria-label="Primary">
       <a class="brand" href="/" aria-label="Go to home">
-        <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="56" height="56">
+        <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street — Solo Dog Walking & Boutique Boarding, South Melbourne" width="56" height="56">
         <strong>The Woof of Walk Street</strong>
       </a>
 
-      <!-- mobile hamburger -->
       <input id="nav-toggle" type="checkbox" hidden>
       <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</label>
 
@@ -97,8 +118,8 @@
           <button class="nav-group-btn" aria-expanded="false" aria-controls="nav-services">Services</button>
           <ul id="nav-services" class="nav-group-list">
             <li><a href="/services.html">All Services</a></li>
-            <li><a href="/dog-walking-south-melbourne">Dog Walking South Melbourne</a></li>
-            <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
+            <li><a href="/dog-walking-south-melbourne/">Dog Walking South Melbourne</a></li>
+            <li><a href="/boarding-services.html">Dog Boarding South Melbourne</a></li>
             <li><a href="/unlimited-dog-walks.html">Unlimited Membership</a></li>
             <li><a href="/contact.html">Contact</a></li>
           </ul>
@@ -107,28 +128,23 @@
         <a href="/blog/index.html">Blog</a>
         <a href="/faq.html">FAQs</a>
         <a href="/search.html">Search</a>
-        <a class="btn button-primary nav-cta"
-           href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=header&utm_campaign=book_now"
-           target="_blank" rel="noopener"
-           onclick="gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
-           Book Now
-        </a>
+        <a class="btn btn-primary nav-cta"
+           href="/book-boarding.html?utm_source=website&utm_medium=header&utm_campaign=boarding_20off"
+           onclick="gtag && gtag('event','header_cta_click',{cta:'boarding_20off'});">Book Boarding — 20% Off</a>
+        <a class="btn btn-outline nav-cta"
+           href="/unlimited-dog-walks.html?utm_source=website&utm_medium=header&utm_campaign=walks_50off"
+           onclick="gtag && gtag('event','header_cta_click',{cta:'walks_50off'});">50% Off Walks</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    
+  <main id="main">
     <!-- HERO -->
     <section class="hero">
       <div class="container">
         <h1>Community Impact</h1>
         <p class="subhead">Walking with purpose — how your bookings help support dogs in need across Melbourne.</p>
-        <img
-          src="/images/about/value-photo-gps.webp"
-          alt="Happy dog enjoying a solo walk in South Melbourne"
-          style="max-width:920px;border-radius:12px;display:block;margin:12px auto"
-          width="1200" height="800" loading="eager" decoding="async">
+        <img src="/images/about/value-photo-gps.webp" alt="Happy dog enjoying a solo walk in South Melbourne" style="max-width:920px;border-radius:12px;display:block;margin:12px auto" width="1200" height="800" loading="eager" decoding="async">
       </div>
     </section>
 
@@ -163,79 +179,39 @@
       <div class="container center">
         <h2>Every Walk Makes a Difference</h2>
         <p>Join us in making Melbourne a better place for all dogs. Book a walk or boarding stay and be part of the impact.</p>
-        <a class="btn button-primary" target="_blank" rel="noopener"
-           href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=community_cta&utm_campaign=book_now">
-           Book Now
-        </a>
+        <a class="btn button-primary" href="/book-boarding.html?utm_source=website&utm_medium=community_cta&utm_campaign=book_now">Book Now</a>
       </div>
     </section>
   </main>
 
   <!-- FOOTER -->
   <footer class="site-footer" role="contentinfo">
-    <div class="footer-banner">
-      <picture>
-        <source srcset="/images/brand/footer-banner-1600x600.webp" media="(min-width: 768px)">
-        <img src="/images/brand/footer-banner-800x300.webp" alt="Happy dogs in Melbourne" loading="lazy" width="800" height="300">
-      </picture>
-    </div>
-
-    <div class="container footer-grid">
-      <section class="footer-brand">
-        <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="60" height="60" loading="lazy">
-        <p><strong>The Woof of Walk Street</strong><br>
-          <a class="footer-map" href="https://maps.app.goo.gl/YnEoSPwhGocUZyWL9?g_st=ipc" target="_blank" rel="noopener">South Melbourne, VIC</a> · Mon–Fri 7am–7pm<br>
-          <a href="tel:+61456754050">+61 456 754 050</a> · <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a>
-        </p>
-      </section>
-      <nav class="footer-col" aria-label="Primary">
-        <h3>Services</h3>
-        <ul>
-          <li><a href="/services.html">All Services</a></li>
-          <li><a href="/dog-walking-south-melbourne">Dog Walking South Melbourne</a></li>
-          <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
-          <li><a href="/unlimited-dog-walks.html">Unlimited Membership</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-          <li><a href="/community.html" aria-current="page">Community</a></li>
-        </ul>
-      </nav>
-    </div>
-
-    <div class="container footer-geo">
-      Solo Dog Walking & Boutique Boarding across <strong>South Melbourne</strong>, <strong>Albert Park</strong>,
-      <strong>Port Melbourne</strong>, <strong>Middle Park</strong> and <strong>Southbank</strong>.
-    </div>
-
-    <div class="container footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <div class="container footer-bottom">© <span id="year3"></span> The Woof of Walk Street</div>
+    <script>document.getElementById('year3').textContent = new Date().getFullYear();</script>
   </footer>
+
+  <!-- Services flyout -->
   <script>
   (function () {
     const btn  = document.querySelector('.nav-group-btn[aria-controls="nav-services"]');
     const list = document.getElementById('nav-services');
     if (!btn || !list) return;
-
-    // Start closed on mobile; respect aria-expanded
     const sync = () => { list.hidden = btn.getAttribute('aria-expanded') !== 'true'; };
     sync();
-
     btn.addEventListener('click', () => {
       const open = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!open));
-      sync();
+      btn.setAttribute('aria-expanded', String(!open)); sync();
     });
-
     document.addEventListener('click', (e) => {
       if (!btn.contains(e.target) && !list.contains(e.target)) {
         btn.setAttribute('aria-expanded', 'false'); sync();
       }
     }, { capture: true });
-
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') { btn.setAttribute('aria-expanded', 'false'); sync(); }
     });
   })();
-</script>
-  
+  </script>
 </body>
 </html>
+

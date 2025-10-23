@@ -51,9 +51,9 @@
   </script>
 
   <style>
-    /* ========= Contrast-safe theme tokens (fixes light text on light bg) ========= */
+    /* ========= Contrast-safe theme tokens ========= */
     :root{
-      --ink:#0b2540;           /* main text */
+      --ink:#0b2540;           /* main text (light theme) */
       --muted:#5d6a77;         /* secondary text */
       --bg:#f7f9fc;            /* page background */
       --card:#ffffff;          /* cards */
@@ -66,7 +66,7 @@
     }
     @media (prefers-color-scheme: dark){
       :root{
-        --ink:#e8eef5;
+        --ink:#e8eef5;         /* white on black */
         --muted:#b7c2cf;
         --bg:#0b0e12;
         --card:#10151b;
@@ -82,6 +82,23 @@
     body{background:var(--bg);color:var(--ink)}
     a{color:inherit}
 
+    /* ======= Header (ensure white-on-black) ======= */
+    .site-header{backdrop-filter:saturate(120%) blur(8px);background:rgba(11,14,18,.72)}
+    .site-header .navbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none}
+    .brand img{width:40px;height:40px}
+    .nav-links{display:flex;align-items:center;gap:14px}
+    .nav-links a,.nav-group-btn{color:#fff;text-decoration:none}
+    .nav-group-btn{background:none;border:0;font:inherit;cursor:pointer}
+    .nav-cta{background:#ffd166;color:#111;border-radius:999px;padding:.55rem 1rem;font-weight:900}
+
+    /* Mobile nav label */
+    .nav-toggle{color:#fff;font-size:1.6rem;margin-left:.5rem;cursor:pointer}
+    @media(min-width:860px){.nav-toggle{display:none}}
+
+    /* If your global CSS makes the menu off-canvas, this keeps colours correct */
+    #nav-services[hidden]{display:none}
+
     /* ======= Hero / Featured ======= */
     .hero-wrap{
       padding:18px 0 8px;
@@ -95,7 +112,7 @@
     @media(min-width:860px){.hero-grid{grid-template-columns: 1.2fr 1fr}}
 
     .hero-card{border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--card);box-shadow:var(--shadow)}
-    .hero-card img{display:block;width:100%;height:auto;max-height:420px;object-fit:cover}
+    .hero-card img{display:block;width:100%;height:auto;max-height:420px;object-fit:cover;background:#eef2f6}
     .hero-body{padding:16px 16px 14px}
     .hero-body h1{margin:.25rem 0 .35rem}
     .meta{color:var(--muted);font-size:.95rem}
@@ -148,20 +165,12 @@
       border-radius:16px;display:flex;gap:10px;justify-content:center;align-items:center;padding:10px
     }
     .sticky-cta .btn{padding:10px 16px}
+    @media (prefers-color-scheme: dark){.sticky-cta{background:#0e1318ee}}
     @media (min-width:860px){.sticky-cta{display:none}}
 
     /* simple filter hide/show */
     .card[data-tags]{display:flex}
     .card.hidden{display:none}
-
-    /* Header quick tweaks to ensure contrast over translucent header */
-    .site-header{backdrop-filter:saturate(120%) blur(8px);background:rgba(11,14,18,.72)}
-    .site-header .navbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
-    .brand{display:flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none}
-    .brand img{width:40px;height:40px}
-    .nav-links{display:flex;align-items:center;gap:14px}
-    .nav-links a{color:#fff;text-decoration:none}
-    .nav-cta{background:#ffd166;color:#111;border-radius:999px;padding:.55rem 1rem;font-weight:900}
   </style>
 </head>
 <body>
@@ -185,7 +194,7 @@
     </div>
   </div>
 
-  <!-- HEADER (site-wide with dual CTAs) -->
+  <!-- HEADER -->
   <header class="site-header" role="banner">
     <div class="navbar container" role="navigation" aria-label="Main">
       <a class="brand" href="/" aria-label="Home">
@@ -415,7 +424,7 @@
     <a class="btn button-primary" href="/book-boarding.html">Book Boarding</a>
   </div>
 
-  <!-- FOOTER (site-wide) -->
+  <!-- FOOTER -->
   <footer class="site-footer" role="contentinfo">
     <div class="footer-banner">
       <picture>
@@ -528,27 +537,48 @@
     })();
   </script>
 
-  <!-- Services flyout accessibility -->
+  <!-- Services flyout accessibility + Mobile menu auto-close -->
   <script>
     (function () {
+      /* Services submenu (desktop/mobile) */
       const btn  = document.querySelector('.nav-group-btn[aria-controls="nav-services"]');
       const list = document.getElementById('nav-services');
-      if (!btn || !list) return;
-      const sync = () => { list.hidden = btn.getAttribute('aria-expanded') !== 'true'; };
-      sync();
-      btn.addEventListener('click', () => {
-        const open = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', String(!open));
+      if (btn && list) {
+        const sync = () => { list.hidden = btn.getAttribute('aria-expanded') !== 'true'; };
         sync();
-      });
-      document.addEventListener('click', (e) => {
-        if (!btn.contains(e.target) && !list.contains(e.target)) {
-          btn.setAttribute('aria-expanded', 'false'); sync();
-        }
-      }, { capture: true });
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') { btn.setAttribute('aria-expanded', 'false'); sync(); }
-      });
+        btn.addEventListener('click', () => {
+          const open = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', String(!open));
+          sync();
+        });
+        document.addEventListener('click', (e) => {
+          if (!btn.contains(e.target) && !list.contains(e.target)) {
+            btn.setAttribute('aria-expanded', 'false'); sync();
+          }
+        }, { capture: true });
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') { btn.setAttribute('aria-expanded', 'false'); sync(); }
+        });
+      }
+
+      /* Auto-collapse hamburger menu on link tap / outside / scroll */
+      const navToggle = document.getElementById('nav-toggle');
+      const navLabel  = document.querySelector('label[for="nav-toggle"]');
+      const navLinks  = document.querySelector('.nav-links');
+      const closeMenu = () => { if (navToggle && navToggle.checked) navToggle.checked = false; };
+
+      if (navToggle && navLinks) {
+        navLinks.addEventListener('click', (e) => { if (e.target.closest('a')) closeMenu(); });
+        document.addEventListener('click', (e) => {
+          const inside = navLinks.contains(e.target) || navLabel?.contains(e.target) || e.target === navToggle;
+          if (!inside) closeMenu();
+        }, { capture: true });
+        let lastY = window.scrollY;
+        window.addEventListener('scroll', () => {
+          if (Math.abs(window.scrollY - lastY) > 8) closeMenu();
+          lastY = window.scrollY;
+        });
+      }
     })();
   </script>
 </body>

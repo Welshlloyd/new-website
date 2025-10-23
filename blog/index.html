@@ -51,37 +51,117 @@
   </script>
 
   <style>
-    /* Page polish for index */
-    .hero-wrap{padding:18px 0 8px;background:linear-gradient(180deg,#fffdfa,transparent);border-bottom:1px solid var(--border)}
-    .hero-grid{display:grid;gap:16px;align-items:center}
-    @media(min-width:860px){.hero-grid{grid-template-columns: 1.2fr 1fr}}
-    .hero-card{border:1px solid var(--border);border-radius:14px;overflow:hidden;background:#fff;box-shadow:var(--shadow)}
-    .hero-card img{display:block;width:100%;height:auto;max-height:480px;object-fit:cover}
-    .hero-body{padding:16px 16px 14px}
-    .meta{color:var(--muted);font-size:.95rem}
-    .chip-row{display:flex;gap:8px;flex-wrap:wrap;margin:.4rem 0}
-    .chip{border:1px solid var(--border);border-radius:999px;padding:.2rem .6rem;font-size:.82rem}
-    .search-row{display:flex;gap:8px;flex-wrap:wrap;margin:.6rem 0}
-    .search-row input{flex:1;min-width:200px}
+    /* ========= Contrast-safe theme tokens (fixes light text on light bg) ========= */
+    :root{
+      --ink:#0b2540;           /* main text */
+      --muted:#5d6a77;         /* secondary text */
+      --bg:#f7f9fc;            /* page background */
+      --card:#ffffff;          /* cards */
+      --border:#e5ebf2;        /* borders */
+      --chip-bg:#f1f5fa;       /* filter chips */
+      --chip-ink:#0b2540;
+      --accent:#ffd166;        /* gold */
+      --accent-ink:#111;
+      --shadow:0 14px 36px rgba(0,0,0,.08);
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --ink:#e8eef5;
+        --muted:#b7c2cf;
+        --bg:#0b0e12;
+        --card:#10151b;
+        --border:#1e2630;
+        --chip-bg:#131b24;
+        --chip-ink:#e8eef5;
+        --accent:#ffd166;
+        --accent-ink:#111;
+        --shadow:0 14px 36px rgba(0,0,0,.4);
+      }
+    }
 
+    body{background:var(--bg);color:var(--ink)}
+    a{color:inherit}
+
+    /* ======= Hero / Featured ======= */
+    .hero-wrap{
+      padding:18px 0 8px;
+      background:
+        radial-gradient(900px 420px at 20% -10%, rgba(245,178,0,.10), transparent 60%),
+        linear-gradient(180deg,#fffdfa,transparent);
+      border-bottom:1px solid var(--border)
+    }
+    .container{max-width:980px;margin:0 auto;padding:0 16px}
+    .hero-grid{display:grid;gap:16px;align-items:stretch}
+    @media(min-width:860px){.hero-grid{grid-template-columns: 1.2fr 1fr}}
+
+    .hero-card{border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--card);box-shadow:var(--shadow)}
+    .hero-card img{display:block;width:100%;height:auto;max-height:420px;object-fit:cover}
+    .hero-body{padding:16px 16px 14px}
+    .hero-body h1{margin:.25rem 0 .35rem}
+    .meta{color:var(--muted);font-size:.95rem}
+
+    .chip-row{display:flex;gap:8px;flex-wrap:wrap;margin:.6rem 0}
+    .chip{
+      border:1px solid var(--border);
+      border-radius:999px;
+      padding:.35rem .7rem;
+      font-size:.9rem;font-weight:700;
+      background:var(--chip-bg);color:var(--chip-ink);
+      cursor:pointer;user-select:none;
+      transition:transform .12s ease, box-shadow .12s ease
+    }
+    .chip:hover{transform:translateY(-1px)}
+    .chip[aria-pressed="true"]{outline:2px solid var(--accent);box-shadow:0 6px 20px rgba(0,0,0,.08)}
+
+    .search-row{display:flex;gap:8px;flex-wrap:wrap;margin:.6rem 0}
+    .search-row input{
+      flex:1;min-width:200px;border:1px solid var(--border);border-radius:12px;
+      padding:.8rem 1rem;background:#fff;color:#111
+    }
+    @media (prefers-color-scheme: dark){
+      .search-row input{background:#0f141b;color:#e8eef5;border-color:#1e2630}
+    }
+
+    /* ======= Grid of posts ======= */
     .grid{display:grid;gap:16px;margin:14px 0}
     @media(min-width:760px){ .grid{grid-template-columns:repeat(2,1fr)} }
-    .card{border:1px solid var(--border);border-radius:12px;background:#fff;display:flex;flex-direction:column;overflow:hidden}
+    .card{
+      border:1px solid var(--border);border-radius:12px;background:var(--card);
+      display:flex;flex-direction:column;overflow:hidden;box-shadow:var(--shadow)
+    }
     .card a.cover{display:block}
-    .card img{width:100%;height:220px;object-fit:cover}
+    .card img{width:100%;height:220px;object-fit:cover;background:#eef2f6}
     .card .body{padding:12px 14px}
     .card .body h3{margin:.25rem 0 .35rem}
     .card .body p{margin:.2rem 0 .4rem}
-    .pill{display:inline-block;border:1px solid var(--border);border-radius:999px;padding:.1rem .5rem;font-size:.8rem;margin-right:.25rem}
+    .pill{display:inline-block;border:1px solid var(--border);border-radius:999px;padding:.1rem .5rem;font-size:.8rem;margin-right:.25rem;color:var(--chip-ink);background:var(--chip-bg)}
 
-    .cta-note{border:2px solid #ffd166;background:#fffaf0;border-radius:12px;padding:14px;margin:12px 0}
-    .sticky-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:1100;background:#ffffffee;border:1px solid var(--border);box-shadow:var(--shadow);border-radius:16px;display:flex;gap:10px;justify-content:center;align-items:center;padding:10px}
+    .cta-note{border:2px solid var(--accent);background:#fffaf0;border-radius:12px;padding:14px;margin:16px 0;color:#111}
+    @media (prefers-color-scheme: dark){
+      .cta-note{background:#27200f;color:#fff;border-color:#ffcf6a}
+    }
+
+    /* Sticky dual CTA (mobile only) */
+    .sticky-cta{
+      position:fixed;left:12px;right:12px;bottom:12px;z-index:1100;
+      background:#ffffffee;border:1px solid var(--border);box-shadow:var(--shadow);
+      border-radius:16px;display:flex;gap:10px;justify-content:center;align-items:center;padding:10px
+    }
     .sticky-cta .btn{padding:10px 16px}
     @media (min-width:860px){.sticky-cta{display:none}}
 
     /* simple filter hide/show */
     .card[data-tags]{display:flex}
     .card.hidden{display:none}
+
+    /* Header quick tweaks to ensure contrast over translucent header */
+    .site-header{backdrop-filter:saturate(120%) blur(8px);background:rgba(11,14,18,.72)}
+    .site-header .navbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none}
+    .brand img{width:40px;height:40px}
+    .nav-links{display:flex;align-items:center;gap:14px}
+    .nav-links a{color:#fff;text-decoration:none}
+    .nav-cta{background:#ffd166;color:#111;border-radius:999px;padding:.55rem 1rem;font-weight:900}
   </style>
 </head>
 <body>
@@ -146,12 +226,14 @@
       <article class="hero-card">
         <a href="/blog/best-dog-walks-south-melbourne.html" class="cover">
           <img src="/images/brand/hero-dog-skyline-1200.webp"
-               alt="Happy dog with Melbourne skyline">
+               alt="Happy dog with Melbourne skyline"
+               onerror="this.closest('.hero-card').style.display='none'">
         </a>
         <div class="hero-body">
           <div class="meta">Featured · South Melbourne</div>
-          <h1 style="margin:.25rem 0 .35rem">Best Dog-Friendly Spots in South Melbourne</h1>
+          <h1>Best Dog-Friendly Spots in South Melbourne</h1>
           <p>Local parks, lake loops and cafés your pup will love — plus how our one-dog-only walks keep things calm. GPS route + photo after each session.</p>
+
           <div class="chip-row" role="group" aria-label="Filters">
             <button class="chip" data-filter="all" aria-pressed="true">All</button>
             <button class="chip" data-filter="walking">Walking</button>
@@ -159,17 +241,19 @@
             <button class="chip" data-filter="boarding">Boarding</button>
             <button class="chip" data-filter="training">Training</button>
           </div>
+
           <div class="search-row">
-            <input id="blog-search" type="search" placeholder="Search posts (e.g. cafés, solo, boarding)"/>
+            <input id="blog-search" type="search" placeholder="Search posts (e.g. cafés, solo, boarding)" aria-label="Search posts"/>
             <a class="btn button-secondary" href="/service-areas.html">Check your postcode</a>
           </div>
+
           <p class="meta">Psst — walking often? Save with <a href="/memberships.html">memberships</a> or try <a href="/unlimited-dog-walks.html">Unlimited (50% off first month)</a>.</p>
         </div>
       </article>
 
       <aside class="cta-note">
-        <strong>New to us?</strong> We walk <em>one dog at a time</em>, with GPS + photo proof every session. Boutique, one-guest boarding on weekends.  
-        <div style="margin-top:.5rem">
+        <strong>New to us?</strong> We walk <em>one dog at a time</em>, with GPS + photo proof every session. Boutique, one-guest boarding on weekends.
+        <div style="margin-top:.6rem">
           <a class="btn button-primary" href="/dog-walking-south-melbourne.html">See Solo Walking</a>
           <a class="btn" href="/boarding-services.html">Weekend Woof Club</a>
         </div>
@@ -184,7 +268,7 @@
       <!-- Day in the Life -->
       <article class="card" data-tags="walking training south melbourne routine">
         <a class="cover" href="/blog/day-in-a-life-south-melbourne-dog-walker.html">
-          <img src="/images/blog/hero-day-in-a-life-south-melbourne-dog-walker-1200.webp" alt="Early morning solo walk by Albert Park Lake">
+          <img src="/images/blog/hero-day-in-a-life-south-melbourne-dog-walker-1200.webp" alt="Early morning solo walk by Albert Park Lake" onerror="this.parentNode.parentNode.style.display='none'">
         </a>
         <div class="body">
           <div class="meta">Updated 1 Jan 2025 · ~6 min</div>
@@ -197,7 +281,7 @@
       <!-- Cafés — Albert & Middle Park -->
       <article class="card" data-tags="cafes albert park middle park local guide">
         <a class="cover" href="/blog/dog-friendly-cafes-albert-park-middle-park.html">
-          <img src="/images/blog/cafes-albert-middle/hero-1600.webp" alt="Dog outside a café in Albert Park">
+          <img src="/images/blog/cafes-albert-middle/hero-1600.webp" alt="Dog outside a café in Albert Park" onerror="this.parentNode.parentNode.style.display='none'">
         </a>
         <div class="body">
           <div class="meta">Updated 6 Oct 2025 · ~5 min</div>
@@ -210,7 +294,7 @@
       <!-- Cafés — South Melbourne -->
       <article class="card" data-tags="cafes south melbourne etiquette routes">
         <a class="cover" href="/blog/dog-friendly-cafes-south-melbourne.html">
-          <img src="/images/blog/blog-dog-friendly-cafes-1600.webp" alt="Dog relaxing outside a South Melbourne café">
+          <img src="/images/blog/blog-dog-friendly-cafes-1600.webp" alt="Dog relaxing outside a South Melbourne café" onerror="this.parentNode.parentNode.style.display='none'">
         </a>
         <div class="body">
           <div class="meta">Updated 3 Oct 2025 · ~6 min</div>
@@ -223,7 +307,7 @@
       <!-- Ethical dog walker -->
       <article class="card" data-tags="training ethics walking south melbourne trust">
         <a class="cover" href="/blog/ethical-dog-walker.html">
-          <img src="/images/blog/blog-ethical-dog-walker-melbourne.webp" alt="Calm one-dog-only walk with GPS & photo proof">
+          <img src="/images/blog/blog-ethical-dog-walker-melbourne.webp" alt="Calm one-dog-only walk with GPS & photo proof" onerror="this.parentNode.parentNode.style.display='none'">
         </a>
         <div class="body">
           <div class="meta">Updated 5 Oct 2025 · ~7 min</div>
@@ -236,7 +320,7 @@
       <!-- Why solo walks -->
       <article class="card" data-tags="walking training solo stress arousal">
         <a class="cover" href="/blog/why-solo-walks.html">
-          <img src="/images/blog/blog-solo-dog-walks-reduce-stress.webp" alt="Loose-lead solo walk in South Melbourne">
+          <img src="/images/blog/blog-solo-dog-walks-reduce-stress.webp" alt="Loose-lead solo walk in South Melbourne" onerror="this.parentNode.parentNode.style.display='none'">
         </a>
         <div class="body">
           <div class="meta">Updated 3 Oct 2025 · ~7 min</div>
@@ -249,7 +333,7 @@
       <!-- Solo vs Pack -->
       <article class="card" data-tags="walking comparison solo pack risk safety">
         <a class="cover" href="/blog/solo-vs-pack-walks.html">
-          <img src="/images/blog/hero-solo-vs-pack-walks-1200.webp" alt="Calm solo dog walk on quiet street">
+          <img src="/images/blog/hero-solo-vs-pack-walks-1200.webp" alt="Calm solo dog walk on quiet street" onerror="this.parentNode.parentNode.style.display='none'">
         </a>
         <div class="body">
           <div class="meta">Updated 1 Jan 2025 · ~8 min</div>
@@ -259,10 +343,10 @@
         </div>
       </article>
 
-      <!-- Best dog spots (already featured, still listing for depth) -->
+      <!-- Best dog spots -->
       <article class="card" data-tags="walking routes south melbourne cafes parks">
         <a class="cover" href="/blog/best-dog-walks-south-melbourne.html">
-          <img src="/images/brand/hero-dog-skyline-1200.webp" alt="Best dog-friendly spots in South Melbourne">
+          <img src="/images/brand/hero-dog-skyline-1200.webp" alt="Best dog-friendly spots in South Melbourne" onerror="this.parentNode.parentNode.style.display='none'">
         </a>
         <div class="body">
           <div class="meta">Updated 3 Oct 2025 · ~6 min</div>
@@ -275,7 +359,7 @@
       <!-- Weekend Woof Club checklist -->
       <article class="card" data-tags="boarding checklist weekend woof club packing">
         <a class="cover" href="/blog/weekend-woof-club-checklist.html">
-          <img src="/images/blog/blog-weekend-woof-club-checklist.webp" alt="Packed dog bag ready for boutique boarding">
+          <img src="/images/blog/blog-weekend-woof-club-checklist.webp" alt="Packed dog bag ready for boutique boarding" onerror="this.parentNode.parentNode.style.display='none'">
         </a>
         <div class="body">
           <div class="meta">Updated 5 Oct 2025 · ~5 min</div>
@@ -285,10 +369,10 @@
         </div>
       </article>
 
-      <!-- Prepare dog for boarding (the other boarding post) -->
+      <!-- Prepare dog for boarding -->
       <article class="card" data-tags="boarding prep checklist calm">
         <a class="cover" href="/blog/prepare-dog-for-boarding-checklist.html">
-          <img src="/images/blog/blog-boarding-prep-1200.webp" alt="Dog bed and labelled food ready for boarding">
+          <img src="/images/blog/blog-boarding-prep-1200.webp" alt="Dog bed and labelled food ready for boarding" onerror="this.parentNode.parentNode.style.display='none'">
         </a>
         <div class="body">
           <div class="meta">Updated 5 Oct 2025 · ~6 min</div>
@@ -301,7 +385,7 @@
       <!-- Rainy day enrichment -->
       <article class="card" data-tags="training enrichment rainy day games home">
         <a class="cover" href="/blog/rainy-day-enrichment-games.html">
-          <img src="/images/blog/blog-rainy-day-enrichment.webp" alt="Dog enjoying a food puzzle on a rainy day">
+          <img src="/images/blog/blog-rainy-day-enrichment.webp" alt="Dog enjoying a food puzzle on a rainy day" onerror="this.parentNode.parentNode.style.display='none'">
         </a>
         <div class="body">
           <div class="meta">Updated 3 Oct 2025 · ~4 min</div>

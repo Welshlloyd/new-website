@@ -51,22 +51,26 @@
   </script>
 
   <style>
-    /* ========= Contrast-safe theme tokens ========= */
+    /* ========= Theme tokens ========= */
     :root{
-      --ink:#0b2540;           /* main text (light theme) */
+      --ink:#0b2540;           /* main text (light) */
       --muted:#5d6a77;         /* secondary text */
-      --bg:#f7f9fc;            /* page background */
-      --card:#ffffff;          /* cards */
-      --border:#e5ebf2;        /* borders */
-      --chip-bg:#f1f5fa;       /* filter chips */
+      --bg:#f7f9fc;            /* page bg */
+      --card:#ffffff;          /* light cards (hero) */
+      --border:#e5ebf2;
+      --chip-bg:#f1f5fa;
       --chip-ink:#0b2540;
-      --accent:#ffd166;        /* gold */
+      --accent:#ffd166;        /* brand gold */
       --accent-ink:#111;
       --shadow:0 14px 36px rgba(0,0,0,.08);
+      --black:#0b0e12;         /* dark canvas for blog cards */
+      --black-2:#10151b;
+      --gold:#f5b200;          /* stronger gold for edges */
+      --white:#e8eef5;
     }
     @media (prefers-color-scheme: dark){
       :root{
-        --ink:#e8eef5;         /* white on black */
+        --ink:#e8eef5;
         --muted:#b7c2cf;
         --bg:#0b0e12;
         --card:#10151b;
@@ -74,7 +78,6 @@
         --chip-bg:#131b24;
         --chip-ink:#e8eef5;
         --accent:#ffd166;
-        --accent-ink:#111;
         --shadow:0 14px 36px rgba(0,0,0,.4);
       }
     }
@@ -82,8 +85,8 @@
     body{background:var(--bg);color:var(--ink)}
     a{color:inherit}
 
-    /* ======= Header (ensure white-on-black) ======= */
-    .site-header{backdrop-filter:saturate(120%) blur(8px);background:rgba(11,14,18,.72)}
+    /* ======= Header (white on black; collapses cleanly) ======= */
+    .site-header{position:sticky;top:0;z-index:1000;backdrop-filter:saturate(120%) blur(8px);background:rgba(11,14,18,.72)}
     .site-header .navbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
     .brand{display:flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none}
     .brand img{width:40px;height:40px}
@@ -91,12 +94,8 @@
     .nav-links a,.nav-group-btn{color:#fff;text-decoration:none}
     .nav-group-btn{background:none;border:0;font:inherit;cursor:pointer}
     .nav-cta{background:#ffd166;color:#111;border-radius:999px;padding:.55rem 1rem;font-weight:900}
-
-    /* Mobile nav label */
     .nav-toggle{color:#fff;font-size:1.6rem;margin-left:.5rem;cursor:pointer}
     @media(min-width:860px){.nav-toggle{display:none}}
-
-    /* If your global CSS makes the menu off-canvas, this keeps colours correct */
     #nav-services[hidden]{display:none}
 
     /* ======= Hero / Featured ======= */
@@ -139,20 +138,41 @@
       .search-row input{background:#0f141b;color:#e8eef5;border-color:#1e2630}
     }
 
-    /* ======= Grid of posts ======= */
+    /* ======= Blog grid & cards — GOLD EDGE + WHITE TEXT ======= */
     .grid{display:grid;gap:16px;margin:14px 0}
     @media(min-width:760px){ .grid{grid-template-columns:repeat(2,1fr)} }
-    .card{
-      border:1px solid var(--border);border-radius:12px;background:var(--card);
-      display:flex;flex-direction:column;overflow:hidden;box-shadow:var(--shadow)
-    }
-    .card a.cover{display:block}
-    .card img{width:100%;height:220px;object-fit:cover;background:#eef2f6}
-    .card .body{padding:12px 14px}
-    .card .body h3{margin:.25rem 0 .35rem}
-    .card .body p{margin:.2rem 0 .4rem}
-    .pill{display:inline-block;border:1px solid var(--border);border-radius:999px;padding:.1rem .5rem;font-size:.8rem;margin-right:.25rem;color:var(--chip-ink);background:var(--chip-bg)}
 
+    .card{
+      border:2px solid var(--gold);
+      border-radius:14px;
+      background:var(--black);
+      color:#fff;
+      display:flex;flex-direction:column;
+      overflow:hidden;
+      box-shadow:0 12px 30px rgba(0,0,0,.4);
+      transition:transform .2s ease, box-shadow .2s ease;
+    }
+    .card:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(0,0,0,.6)}
+    .card a.cover{display:block}
+    .card img{width:100%;height:220px;object-fit:cover;background:#0f141b;border-bottom:2px solid var(--gold)}
+    .card .body{padding:14px 16px}
+    .card .body h3{margin:.25rem 0 .35rem;color:#fff}
+    .card .body h3 a{color:#fff;text-decoration:none}
+    .card .body h3 a:hover{color:#ffd166}
+    .card .body p{margin:.2rem 0 .4rem;color:#e8eef5}
+    .meta{color:#b7c2cf}
+    .pill{
+      display:inline-block;
+      background:#1a1f27;
+      border:1px solid var(--gold);
+      color:#ffd166;
+      border-radius:999px;
+      font-size:.8rem;
+      padding:.2rem .6rem;
+      margin-right:.3rem;
+    }
+
+    /* CTA note keeps gold frame look */
     .cta-note{border:2px solid var(--accent);background:#fffaf0;border-radius:12px;padding:14px;margin:16px 0;color:#111}
     @media (prefers-color-scheme: dark){
       .cta-note{background:#27200f;color:#fff;border-color:#ffcf6a}
@@ -168,7 +188,7 @@
     @media (prefers-color-scheme: dark){.sticky-cta{background:#0e1318ee}}
     @media (min-width:860px){.sticky-cta{display:none}}
 
-    /* simple filter hide/show */
+    /* Filter hide/show */
     .card[data-tags]{display:flex}
     .card.hidden{display:none}
   </style>

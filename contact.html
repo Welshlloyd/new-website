@@ -105,13 +105,17 @@
     .success{background:#0c5132;color:#e7f6ed;border:1px solid #0a3f27}
     .fail{background:#512d2d;color:#fdecec;border:1px solid #3f2323}
 
-    /* Map + postcode checker */
+    /* Map + postcode checker + thumbs */
     .map-embed{border:1px solid var(--line);border-radius:12px;overflow:hidden}
-    .map-embed img{display:block;width:100%;height:auto}
-    .pc-widget{ display:grid; gap:10px; margin-top:10px }
-    .pc-result{ display:none; padding:10px; border-radius:10px; border:1px solid var(--line) }
-    .pc-ok{ background:#0c5132; color:#e7f6ed; border-color:#0a3f27 }
-    .pc-no{ background:#3f2323; color:#fdecec; border-color:#512d2d }
+    .thumbs{ display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:10px; margin-top:10px }
+    .thumbs figure{ margin:0; border:1px solid var(--line); border-radius:12px; overflow:hidden; background:rgba(255,255,255,.02); position:relative; }
+    .thumbs img{ display:block; width:100%; height:140px; object-fit:cover }
+    .thumbs figcaption{ padding:8px 10px; font-weight:800; font-size:.95rem; color:#e6edf3; border-top:1px solid rgba(255,255,255,.06) }
+    .thumbs a{ text-decoration:none }
+    .thumbs figure::after{
+      content:""; position:absolute; inset:0; pointer-events:none; border-radius:12px;
+      box-shadow: inset 0 0 0 2px rgba(245,178,0,.1);
+    }
 
     /* Section spacing */
     .section{ padding:22px 0 }
@@ -304,18 +308,52 @@
       </div>
     </section>
 
-    <!-- ====== Service area + Postcode checker ====== -->
+    <!-- ====== Service area + Postcode checker + Thumbs ====== -->
     <section class="section">
       <div class="container card">
         <h2>Areas We Serve in South Melbourne</h2>
         <p>We walk daily around <strong>3205 South Melbourne</strong>, <strong>3206 Albert Park & Middle Park</strong>, <strong>3207 Port Melbourne</strong> and <strong>3006 Southbank</strong>. Not sure if you’re in range? Use the postcode checker below.</p>
 
-        <div class="map-embed" aria-label="Service area map" style="margin:10px 0 16px">
-          <a href="https://maps.app.goo.gl/YnEoSPwhGocUZyWL9?g_st=ipc" target="_blank" rel="noopener">
-            <picture>
-              <source srcset="/images/brand/service-area-map.webp" type="image/webp">
-              <img src="/images/brand/service-area-map.jpg" alt="Map of South Melbourne, Albert Park, Port Melbourne, Middle Park and Southbank" width="1200" height="800" loading="lazy">
-            </picture>
+        <!-- Live Google Map -->
+        <div class="map-embed" aria-label="Service area map" style="margin:10px 0 12px">
+          <iframe
+            title="Service area map — South Melbourne, Albert Park, Middle Park, Port Melbourne, Southbank"
+            src="https://www.google.com/maps?q=South%20Melbourne%20VIC%203205,Albert%20Park%20VIC%203206,Middle%20Park%20VIC%203206,Port%20Melbourne%20VIC%203207,Southbank%20VIC%203006&z=13&output=embed"
+            style="width:100%;height:420px;border:0"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <!-- Thumbnails under the map -->
+        <div class="thumbs" aria-label="Local highlights">
+          <a href="/service-areas.html#south-melbourne">
+            <figure>
+              <img src="/images/brand/south-melbourne-market.webp" alt="South Melbourne Market area" loading="lazy" width="400" height="260">
+              <figcaption>South Melbourne Market</figcaption>
+            </figure>
+          </a>
+
+          <a href="/service-areas.html#albert-park">
+            <figure>
+              <img src="/images/brand/albert-park-lake.webp" alt="Albert Park Lake walking paths" loading="lazy" width="400" height="260">
+              <figcaption>Albert Park Lake</figcaption>
+            </figure>
+          </a>
+
+          <a href="/service-areas.html#southbank">
+            <figure>
+              <img src="/images/brand/southbank-river.webp" alt="Southbank river promenade" loading="lazy" width="400" height="260">
+              <figcaption>Southbank River</figcaption>
+            </figure>
+          </a>
+
+          <a href="/service-areas.html#middle-park">
+            <figure>
+              <img src="/images/brand/middle-park-beach-dog.webp" alt="Middle Park dog-friendly beach" loading="lazy" width="400" height="260">
+              <figcaption>Middle Park Beach</figcaption>
+            </figure>
           </a>
         </div>
 

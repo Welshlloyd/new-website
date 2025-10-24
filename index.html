@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- ===== Theme boot (no-FOUC): sets html[data-theme] + color-scheme before CSS loads ===== -->
+  <!-- ===== Theme boot (no-FOUC) ===== -->
   <script>
   (function () {
     const KEY = 'wow-theme';
@@ -21,7 +21,7 @@
   })();
   </script>
 
-  <!-- ===== SEO: title + meta tuned for primary query & location ===== -->
+  <!-- ===== SEO ===== -->
   <title>Solo Dog Walking South Melbourne — 50% Off | The Woof of Walk Street</title>
   <meta name="description" content="Premium solo dog walks in South Melbourne with GPS routes & photo updates. No pack walks, no van shuttles. New client offer: 50% off Casual & Unlimited until 31 Oct." />
   <link rel="canonical" href="https://www.woofofwalkstreet.com/" />
@@ -41,9 +41,9 @@
   <meta name="twitter:description" content="GPS-tracked, photo updates. 50% off new clients until 31 Oct.">
   <meta name="twitter:image" content="https://www.woofofwalkstreet.com/images/brand/hero-dog-skyline-1200.webp">
 
-  <!-- ===== Critical CSS (Edge Pack + gold edging) ===== -->
+  <!-- ===== Edge Pack CSS (dark + gold + motion) ===== -->
   <style>
-    /* Base tokens (dark-first with gold) */
+    /* ---- Tokens ---- */
     :root{
       --bg:#0b0e12;
       --card:#0f1318;
@@ -59,15 +59,15 @@
       --header-bg: rgba(11,14,18,.78);
       --container: 1100px;
       --radius-lg: 16px;
+      --speed: .22s;
     }
     html,body{background:var(--bg);color:var(--text)}
     img{max-width:100%;height:auto}
     a{color:inherit}
 
-    /* Containers */
     .container{max-width:var(--container);margin:0 auto;padding:0 16px}
 
-    /* ===== Header: sticky, gold details, white text; avoid overlap with content ===== */
+    /* ---- Header ---- */
     .site-header{
       position:sticky; top:0; z-index:1000;
       backdrop-filter:var(--header-blur); -webkit-backdrop-filter:var(--header-blur);
@@ -80,7 +80,15 @@
     @media(min-width:900px){.nav-toggle{display:none}}
 
     .nav-links{display:flex;align-items:center;gap:14px}
-    .nav-links a{color:#fff;text-decoration:none;font-weight:700}
+    .nav-links a{color:#fff;text-decoration:none;font-weight:700;position:relative}
+    /* edgy underline hover */
+    .nav-links a::after{
+      content:""; position:absolute; left:0; right:0; bottom:-6px; height:2px;
+      background:linear-gradient(90deg, transparent, var(--brand), transparent);
+      transform:scaleX(0); transform-origin:center; transition:transform var(--speed) ease;
+    }
+    .nav-links a:hover::after{ transform:scaleX(1); }
+
     .nav-group{position:relative}
     .nav-group-btn{background:none;border:0;color:#fff;font:inherit;font-weight:900;cursor:pointer}
     .nav-group-list{
@@ -94,10 +102,9 @@
       .nav-group-list{position:static;min-width:auto;border:0;background:transparent;box-shadow:none;padding:0}
     }
 
-    /* Header height spacer so sticky header doesn't cover content */
     .page-top{padding-top:74px}
 
-    /* ===== Gold edge utility ===== */
+    /* ---- Utilities ---- */
     .gold-edge{
       border:1px solid rgba(255,209,102,.55);
       border-radius:var(--radius-lg);
@@ -105,47 +112,62 @@
       background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.015));
     }
 
-    /* ===== Buttons ===== */
+    .section-sweep{
+      height:4px; border:0; margin:34px 0;
+      background:
+        linear-gradient(90deg, transparent, rgba(255,209,102,.8), transparent);
+      filter:drop-shadow(0 8px 18px rgba(255,209,102,.25));
+    }
+
+    /* ---- Buttons (lift + glow) ---- */
     .cta-buttons{display:flex;gap:10px;flex-wrap:wrap}
     .btn{
       -webkit-tap-highlight-color:transparent; display:inline-flex;align-items:center;justify-content:center;
       gap:.5rem;padding:12px 18px;border-radius:999px;border:1px solid transparent;text-decoration:none;
-      font-weight:900;letter-spacing:.01em;transition:transform .15s,box-shadow .15s,background .15s,color .15s,border-color .15s
+      font-weight:900;letter-spacing:.01em;transition:transform var(--speed),box-shadow var(--speed),background var(--speed),color var(--speed),border-color var(--speed)
     }
     .btn-primary{background:var(--brand);color:var(--brand-ink);box-shadow:0 10px 26px rgba(255,209,102,.25)}
-    .btn-primary:hover{transform:translateY(-1px) scale(1.02)}
+    .btn-primary:hover{transform:translateY(-2px) scale(1.04); box-shadow:0 16px 46px rgba(255,209,102,.35)}
     .btn-ghost{background:transparent;color:#fff;border-color:#2a3440;border:1px solid #2a3440}
-    .btn-ghost:hover{border-color:#fff;box-shadow:0 6px 18px rgba(0,0,0,.22)}
+    .btn-ghost:hover{border-color:#fff;box-shadow:0 10px 28px rgba(0,0,0,.28);transform:translateY(-2px) scale(1.03)}
     .btn-outline{background:transparent;border-color:var(--brand);color:var(--brand)}
+    .btn-outline:hover{transform:translateY(-2px) scale(1.03); box-shadow:0 16px 40px rgba(255,209,102,.22)}
     #theme-toggle.btn-ghost{padding:8px 12px;border-radius:999px;line-height:1;display:inline-flex;align-items:center;gap:.4rem}
 
-    /* ===== Hero ===== */
+    /* ---- HERO (animated bg + parallax image) ---- */
     .hero{
       padding:28px 0 18px;
       background:
         radial-gradient(1200px 600px at 20% -20%, rgba(255,209,102,.08), transparent 60%),
-        linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0));
+        linear-gradient(120deg,#111824,#1b2433,#111824);
+      background-size: 200% 200%;
+      animation: heroMove 14s ease-in-out infinite;
       border-bottom:1px solid rgba(255,255,255,.06)
+    }
+    @keyframes heroMove {
+      0%,100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
     }
     .hero .section-kicker{letter-spacing:.08em;color:var(--accent);font-weight:800}
     .hero h1{font-size:clamp(1.6rem,1.35rem + 1.8vw,2.4rem);margin:.25rem 0 .5rem}
     .hero .subhead{max-width:65ch;color:#cfd6df}
-    .hero figure{margin:14px 0 0}
+    .hero figure{margin:14px 0 0; will-change: transform;}
     .hero img{width:100%;max-width:min(900px,92vw);height:auto;border-radius:16px;box-shadow:var(--shadow)}
     @media(min-width:900px){ .hero{padding:34px 0 20px} .hero img{max-height:420px;object-fit:cover}}
 
-    /* ===== Sections / headings ===== */
+    /* ---- Sections / headings ---- */
     section{padding:22px 0}
     h2{font-size:clamp(1.35rem,1.2rem + 1.2vw,1.9rem);font-weight:900}
 
-    /* ===== Membership cards ===== */
+    /* ---- Membership cards (lift + glow) ---- */
     .grid{display:grid;gap:16px}
     @media(min-width:860px){.grid{grid-template-columns:repeat(3,1fr)}}
-    .plan{position:relative;overflow:hidden;isolation:isolate;padding:18px}
+    .plan{position:relative;overflow:hidden;isolation:isolate;padding:18px; transition:transform var(--speed), box-shadow var(--speed);}
     .plan::after{
       content:"";position:absolute;inset:-40% -40% auto auto;width:220px;height:220px;border-radius:50%;
       background:radial-gradient(closest-side,rgba(255,209,102,.18),transparent 70%);transform:translate(20%,-20%)
     }
+    .plan:hover{ transform:translateY(-3px) scale(1.015); box-shadow:0 28px 80px rgba(255,209,102,.18); }
     .plan h3{margin:.2rem 0 .4rem;font-weight:900}
     .pill{display:inline-block;padding:.28rem .6rem;border-radius:999px;font-size:.82rem;font-weight:800;color:#111;background:var(--brand)}
     .meta{color:var(--muted)}
@@ -153,18 +175,19 @@
     .btn-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
     .featured{box-shadow:0 18px 60px rgba(255,209,102,.18)}
 
-    /* ===== Why Local ===== */
+    /* ---- Why Local ---- */
     .why-local{border-block:4px solid var(--brand);background:linear-gradient(180deg,#0b0e12,#0b1016);text-align:center}
     .why-local p{color:#cfd6df;max-width:60ch;margin:0 auto}
 
-    /* ===== Blog teasers ===== */
+    /* ---- Blog ---- */
     .blog-list{display:grid;gap:12px}
     @media(min-width:860px){.blog-list{grid-template-columns:repeat(3,1fr)}}
-    .blog-card{padding:16px}
+    .blog-card{padding:16px; transition:transform var(--speed), box-shadow var(--speed);}
+    .blog-card:hover{ transform: translateY(-3px); box-shadow: 0 24px 60px rgba(0,0,0,.25); }
     .blog-card h3{margin:.25rem 0 .4rem}
     .blog-card a{text-decoration:underline}
 
-    /* ===== FAQ white card with gold trim ===== */
+    /* ---- FAQ white card with gold trim ---- */
     .faq.section .wrap{background:#fff;border:2px solid #f5b200;border-radius:14px;
       box-shadow:0 0 14px rgba(245,178,0,.25);color:#111;padding:24px 28px}
     .faq details{border-bottom:1px solid #eee;padding:8px 0}
@@ -172,36 +195,41 @@
     .faq summary:hover{color:#f5b200}
     .faq p{color:#111;margin:6px 0 10px}
 
-    /* ===== Service Areas grid ===== */
+    /* ---- Areas grid ---- */
     .areas{display:grid;gap:12px;margin-top:10px}
     @media(min-width:860px){.areas{grid-template-columns:repeat(5,1fr)}}
-    .area-card{padding:12px;text-align:center}
+    .area-card{padding:12px;text-align:center; transition:transform var(--speed), box-shadow var(--speed);}
+    .area-card:hover{ transform: translateY(-3px); box-shadow: 0 18px 50px rgba(255,209,102,.16); }
     .area-card a{text-decoration:none;font-weight:900}
     .area-card small{display:block;color:var(--muted)}
 
-    /* ===== Contact strip ===== */
+    /* ---- Contact strip ---- */
     .contact-strip{padding:18px}
 
-    /* ===== Footer ===== */
+    /* ---- Footer ---- */
     .footer-banner img{border-radius:12px}
     .footer-grid{display:grid;gap:16px;padding:18px 0}
     @media(min-width:860px){.footer-grid{grid-template-columns:1.2fr .9fr .9fr .9fr}}
     .footer-logo{border-radius:8px}
     .footer-bottom{padding:12px 0;color:#a9b4c0;border-top:1px solid var(--line);text-align:center}
 
-    /* ===========================
-       Promo + Impact Ribbons (Edge)
-       =========================== */
+    /* ===== Promo + Impact Ribbons ===== */
 
-    /* --- Promo Ribbon (gold, bold, edgy) --- */
+    /* Promo with animated shimmer */
     .promo-ribbon{
       position: relative;
       z-index: 1100;
-      background: linear-gradient(135deg, var(--brand), #ffe289);
+      background: linear-gradient(135deg, #f5b200, #ffd866, #f5b200);
+      background-size: 300% 300%;
+      animation: shimmer 6s ease-in-out infinite;
       color: var(--brand-ink);
       border-bottom: 1px solid rgba(255,255,255,.06);
       box-shadow: 0 14px 40px rgba(0,0,0,.18);
       isolation: isolate;
+    }
+    @keyframes shimmer {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
     }
     .promo-ribbon::before,
     .promo-ribbon::after{
@@ -217,17 +245,12 @@
       padding: 10px 14px;
       display: grid;
       grid-template-columns: auto 1fr auto auto;
-      gap: 10px;
-      align-items: center;
+      gap: 10px; align-items: center;
     }
     .promo-dog{ display:none; width:28px; height:28px; border-radius:50%; }
     @media (min-width:720px){ .promo-dog{ display:block; } }
 
-    .promo-copy{
-      font-weight: 700;
-      letter-spacing: .2px;
-      line-height: 1.3;
-    }
+    .promo-copy{ font-weight: 800; letter-spacing: .2px; line-height: 1.3; }
     .promo-copy strong{
       background:#111; color:#fff; padding: 2px 8px; border-radius:999px; margin-right:8px;
       box-shadow: 0 6px 18px rgba(0,0,0,.25);
@@ -238,49 +261,49 @@
       text-decoration:none; white-space:nowrap; font-weight:900;
       padding:10px 14px; border-radius:999px;
       background:#111; color:#fff; border:1px solid rgba(255,255,255,.15);
-      transition: transform .15s, box-shadow .15s, background .15s;
+      transition: transform var(--speed), box-shadow var(--speed), background var(--speed);
     }
-    .promo-cta:hover{ transform: translateY(-1px) scale(1.02); box-shadow: 0 10px 26px rgba(0,0,0,.35); }
+    .promo-cta:hover{ transform: translateY(-2px) scale(1.04); box-shadow: 0 16px 46px rgba(0,0,0,.35); }
 
     .promo-close{
       appearance:none; border:0; background:transparent; color:#111; font:inherit; font-weight:900;
       width:34px; height:34px; border-radius:50%; display:grid; place-items:center;
-      transition: background .15s, transform .15s;
+      transition: background var(--speed), transform var(--speed);
     }
     .promo-close:hover{ background: rgba(0,0,0,.08); transform: rotate(10deg); }
 
-    /* Reduce grid on small screens */
     @media (max-width:599px){
       .promo-inner{ grid-template-columns: 1fr auto auto; }
       .promo-copy{ order:1 }
     }
 
-    /* --- Impact Ribbon (subtle, on-dark) --- */
+    /* Impact ribbon */
     .impact-ribbon{
       background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
       border-bottom: 1px solid var(--line);
       color: var(--text);
     }
     .impact-inner{
-      max-width: var(--container);
-      margin: 0 auto;
-      padding: 10px 14px;
+      max-width: var(--container); margin: 0 auto; padding: 10px 14px;
       display:flex; align-items:center; gap:10px; flex-wrap:wrap;
     }
     .impact-emoji{ filter: drop-shadow(0 6px 16px rgba(255,209,102,.25)); }
     .impact-cta{
-      margin-left:auto;
-      text-decoration:none; font-weight:900; white-space:nowrap;
-      color: var(--brand);
-      border:1px solid rgba(255,209,102,.45);
+      margin-left:auto; text-decoration:none; font-weight:900; white-space:nowrap;
+      color: var(--brand); border:1px solid rgba(255,209,102,.45);
       padding:8px 12px; border-radius:999px;
-      transition: transform .15s, box-shadow .15s, background .15s, color .15s;
+      transition: transform var(--speed), box-shadow var(--speed), background var(--speed), color var(--speed);
     }
     .impact-cta:hover{
       background: var(--brand); color: var(--brand-ink);
-      box-shadow: 0 10px 26px rgba(255,209,102,.2);
-      transform: translateY(-1px) scale(1.02);
+      box-shadow: 0 16px 46px rgba(255,209,102,.2);
+      transform: translateY(-2px) scale(1.03);
     }
+
+    /* ---- Scroll reveal ---- */
+    [data-reveal]{ opacity:0; transform:translateY(18px); filter:saturate(.9);
+      transition: opacity .7s ease-out, transform .7s ease-out, filter .7s ease-out; }
+    .revealed{ opacity:1; transform:none; filter:saturate(1); }
   </style>
 
   <!-- Structured Data -->
@@ -289,7 +312,7 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","url":"https://www.woofofwalkstreet.com/","potentialAction":{"@type":"SearchAction","target":"https://www.woofofwalkstreet.com/search.html?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do you offer group walks in South Melbourne?","acceptedAnswer":{"@type":"Answer","text":"No. We only offer solo dog walks for safety, attention and a calmer experience."}},{"@type":"Question","name":"Where do you walk?","acceptedAnswer":{"@type":"Answer","text":"Locally across South Melbourne, Albert Park Lake, Port Melbourne, Middle Park and Southbank."}},{"@type":"Question","name":"Do you send updates?","acceptedAnswer":{"@type":"Answer","text":"Yes — every walk includes GPS tracking and photo updates."}},{"@type":"Question","name":"Do you offer boarding?","acceptedAnswer":{"@type":"Answer","text":"Yes — our Weekend Woof Club is strictly one guest at a time in a calm, home environment."}}]}</script>
 
-  <!-- Google Ads Global Site Tag -->
+  <!-- Google Ads / gtag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -310,7 +333,7 @@
 
 <body>
 
-  <!-- Promo ribbon (reverted + styled) -->
+  <!-- Promo ribbon (reverted + animated) -->
   <div id="promo" class="promo-ribbon promo--edge" role="region" aria-label="Promo: 50% off">
     <div class="promo-inner container">
       <img class="promo-dog" src="/images/brand/dog-in-suit.webp" alt="" width="28" height="28" decoding="async" />
@@ -322,7 +345,7 @@
     </div>
   </div>
 
-  <!-- Impact ribbon (charity) -->
+  <!-- Impact ribbon -->
   <div class="impact-ribbon" role="note" aria-label="Walks that do more: 10% donated">
     <div class="impact-inner">
       <span class="impact-emoji" aria-hidden="true">💛</span>
@@ -333,7 +356,7 @@
     </div>
   </div>
 
-  <!-- HEADER (SEO-optimised internal links) -->
+  <!-- HEADER -->
   <header class="site-header" role="banner">
     <div class="navbar container" role="navigation" aria-label="Main">
       <a class="brand" href="/" aria-label="Go to home">
@@ -365,6 +388,14 @@
         <a href="/about.html" title="About The Woof of Walk Street">About</a>
         <a href="/testimonials.html" title="Client Testimonials">Testimonials</a>
         <a href="/gallery.html" title="Photos & Videos">Gallery</a>
+
+        <!-- Contact link (Option A) -->
+        <a href="/contact.html"
+           title="Contact The Woof of Walk Street"
+           onclick="gtag && gtag('event','nav_click',{label:'header_contact'});">
+          Contact
+        </a>
+
         <a href="/blog/index.html" title="Dog Walking Tips & Guides">Blog</a>
         <a href="/faq.html" title="Frequently Asked Questions">FAQs</a>
         <a href="/search.html" title="Search the site">Search</a>
@@ -385,9 +416,9 @@
 
   <main class="page-top">
 
-    <!-- HERO (offer-focused) -->
+    <!-- HERO -->
     <section class="hero">
-      <div class="container">
+      <div class="container" data-reveal>
         <span class="section-kicker">South Melbourne</span>
         <h1>Solo Dog Walking — Calm, One-to-One (50% Off for New Clients)</h1>
         <p class="subhead">
@@ -407,7 +438,7 @@
           </a>
         </div>
 
-        <figure class="gold-edge" style="display:inline-block;padding:6px;margin-top:12px">
+        <figure class="gold-edge" style="display:inline-block;padding:6px;margin-top:12px" data-parallax>
           <img
             src="/images/brand/hero-dog-skyline-1200.webp"
             srcset="/images/brand/hero-dog-skyline-800.webp 800w,
@@ -419,11 +450,12 @@
             loading="eager" decoding="async" fetchpriority="high">
         </figure>
       </div>
+      <hr class="section-sweep" aria-hidden="true">
     </section>
 
-    <!-- WHY US (emotional hooks + proof) -->
+    <!-- WHY US -->
     <section>
-      <div class="container">
+      <div class="container" data-reveal>
         <h2>Why Solo Beats Pack Walks — Especially for Sensitive Dogs</h2>
         <div class="gold-edge" style="padding:18px">
           <p>
@@ -443,16 +475,17 @@
           </div>
         </div>
       </div>
+      <hr class="section-sweep" aria-hidden="true">
     </section>
 
     <!-- MEMBERSHIPS -->
     <section>
-      <div class="container">
+      <div class="container" data-reveal>
         <h2>Dog Walking Memberships — Built Around Your Dog</h2>
         <p class="meta" style="max-width:60ch">Priority schedule, solo walks, GPS tracking and photo updates. Choose a rhythm that fits your dog.</p>
 
         <div class="grid">
-          <article class="plan gold-edge">
+          <article class="plan gold-edge" data-reveal>
             <span class="pill">Starter · 4 / month</span>
             <h3>Starter Membership</h3>
             <p class="meta">A steady intro to our one-dog-only walking.</p>
@@ -463,7 +496,7 @@
             </div>
           </article>
 
-          <article class="plan gold-edge">
+          <article class="plan gold-edge" data-reveal>
             <span class="pill">Growth · 10 / month</span>
             <h3>Growth Membership</h3>
             <p class="meta">For dogs that thrive on near-daily movement.</p>
@@ -474,7 +507,7 @@
             </div>
           </article>
 
-          <article class="plan gold-edge featured">
+          <article class="plan gold-edge featured" data-reveal>
             <span class="pill">Unlimited · Weekdays</span>
             <h3>Unlimited Membership</h3>
             <p class="meta">One 45-minute solo walk every weekday (Mon–Fri).</p>
@@ -488,11 +521,12 @@
 
         <p style="margin-top:.75rem">Prefer ad-hoc? Try <a href="/casual-dog-walking-south-melbourne.html">Casual Dog Walking</a> — the same solo, GPS-tracked service without a plan.</p>
       </div>
+      <hr class="section-sweep" aria-hidden="true">
     </section>
 
     <!-- LOCAL LOVE -->
     <section class="why-local">
-      <div class="container" style="padding:32px 16px;max-width:900px">
+      <div class="container" style="padding:32px 16px;max-width:900px" data-reveal>
         <h2 style="color:#fff;margin-bottom:12px">Why South Melbourne Dogs Love Us</h2>
         <p>
           From quiet laps around <strong>Albert Park Lake</strong> to sniff-heavy strolls by the <strong>South Melbourne Market</strong>
@@ -503,45 +537,47 @@
           <a href="/boarding-services.html" class="btn btn-ghost">Boutique Weekend Boarding</a>
         </div>
       </div>
+      <hr class="section-sweep" aria-hidden="true">
     </section>
 
-    <!-- SERVICE AREAS (new) -->
+    <!-- SERVICE AREAS -->
     <section>
-      <div class="container">
+      <div class="container" data-reveal>
         <h2>Service Areas — South Melbourne & Neighbours</h2>
         <p class="meta" style="max-width:60ch">
           We keep things local for calmer, predictable routes. Explore your suburb hub below or view the full
           <a href="/service-areas.html">Service Areas page</a>.
         </p>
         <div class="areas">
-          <article class="area-card gold-edge">
+          <article class="area-card gold-edge" data-reveal>
             <a href="/dog-walking-south-melbourne.html">South Melbourne →</a>
             <small>Local loops near the Market & parklands</small>
           </article>
-          <article class="area-card gold-edge">
+          <article class="area-card gold-edge" data-reveal>
             <a href="/dog-walker-albert-park.html">Albert Park →</a>
             <small>Lake laps & shaded streets</small>
           </article>
-          <article class="area-card gold-edge">
+          <article class="area-card gold-edge" data-reveal>
             <a href="/dog-walker-port-melbourne.html">Port Melbourne →</a>
             <small>Foreshore strolls & wide paths</small>
           </article>
-          <article class="area-card gold-edge">
+          <article class="area-card gold-edge" data-reveal>
             <a href="/dog-walker-middle-park.html">Middle Park →</a>
             <small>Leafy blocks & quiet corners</small>
           </article>
-          <article class="area-card gold-edge">
+          <article class="area-card gold-edge" data-reveal>
             <a href="/dog-walker-southbank.html">Southbank →</a>
             <small>River routes away from the rush</small>
           </article>
         </div>
         <p style="margin-top:10px"><a class="btn btn-outline" href="/service-areas.html">See All Service Areas</a></p>
       </div>
+      <hr class="section-sweep" aria-hidden="true">
     </section>
 
     <!-- Social / Gallery -->
     <section>
-      <div class="container">
+      <div class="container" data-reveal>
         <h2>Happy Dogs</h2>
         <p>Follow our walks, weekend boarding, and everyday dog joy.</p>
         <div class="gold-edge" style="padding:10px">
@@ -553,22 +589,23 @@
           </div>
         </div>
       </div>
+      <hr class="section-sweep" aria-hidden="true">
     </section>
 
     <!-- Testimonials -->
     <section class="section alt">
-      <div class="container">
+      <div class="container" data-reveal>
         <h2>What Our Clients Say</h2>
         <div class="grid">
-          <blockquote class="gold-edge" style="padding:14px">
+          <blockquote class="gold-edge" style="padding:14px" data-reveal>
             <p>“The best walks in Melbourne. My Cavoodle comes home happy every time!”</p>
             <footer>— Sarah, South Melbourne</footer>
           </blockquote>
-          <blockquote class="gold-edge" style="padding:14px">
+          <blockquote class="gold-edge" style="padding:14px" data-reveal>
             <p>“One dog at a time means my dog gets the full attention he deserves.”</p>
             <footer>— Daniel, Port Melbourne</footer>
           </blockquote>
-          <blockquote class="gold-edge" style="padding:14px">
+          <blockquote class="gold-edge" style="padding:14px" data-reveal>
             <p>“GPS tracking and photo updates made me feel so confident.”</p>
             <footer>— Priya, Albert Park</footer>
           </blockquote>
@@ -579,33 +616,35 @@
           </a>
         </p>
       </div>
+      <hr class="section-sweep" aria-hidden="true">
     </section>
 
     <!-- Blog teaser -->
     <section>
-      <div class="container">
+      <div class="container" data-reveal>
         <h2>From the Blog</h2>
         <div class="blog-list">
-          <article class="blog-card gold-edge">
+          <article class="blog-card gold-edge" data-reveal>
             <h3><a href="/blog/best-dog-walks-south-melbourne.html">Best Dog Walks in South Melbourne</a></h3>
             <p>Explore scenic, safe routes. See how our <a href="/dog-walking-south-melbourne.html">solo walking service</a> fits in.</p>
           </article>
-          <article class="blog-card gold-edge">
+          <article class="blog-card gold-edge" data-reveal>
             <h3><a href="/blog/why-solo-walks.html">Why Solo Walks Reduce Stress</a></h3>
             <p>One-dog-only walking lowers arousal and builds better habits.</p>
           </article>
-          <article class="blog-card gold-edge">
+          <article class="blog-card gold-edge" data-reveal>
             <h3><a href="/blog/rainy-day-enrichment-games.html">Rainy-Day Enrichment Games</a></h3>
             <p>Short, calm activities for wiggly days indoors.</p>
           </article>
         </div>
         <p class="text-center" style="margin-top:20px"><a class="btn btn-primary" href="/blog/index.html">Read More Blogs</a></p>
       </div>
+      <hr class="section-sweep" aria-hidden="true">
     </section>
 
     <!-- FAQ -->
     <section class="faq section">
-      <div class="container">
+      <div class="container" data-reveal>
         <div class="wrap">
           <h2 id="faq-heading">Dog Walking & Boarding – FAQs</h2>
           <details open>
@@ -636,11 +675,12 @@
           </blockquote>
         </div>
       </div>
+      <hr class="section-sweep" aria-hidden="true">
     </section>
 
-    <!-- Contact strip (above footer) -->
+    <!-- Contact strip -->
     <section class="contact-strip">
-      <div class="container gold-edge" style="display:grid;gap:14px;align-items:center;grid-template-columns:1fr">
+      <div class="container gold-edge" style="display:grid;gap:14px;align-items:center;grid-template-columns:1fr" data-reveal>
         <div>
           <h2 style="margin:0 0 6px;font-weight:900">Ready to book?</h2>
           <p class="meta" style="margin:0">
@@ -717,7 +757,7 @@
         </ul>
       </nav>
 
-      <!-- Local area hubs for SEO -->
+      <!-- Local area hubs -->
       <nav class="footer-col" aria-label="Local Areas">
         <h3>Local Areas</h3>
         <ul>
@@ -760,6 +800,8 @@
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   </footer>
 
+  <!-- ===== JS ===== -->
+
   <!-- Nav services toggle + mobile menu autoclose -->
   <script>
   (function () {
@@ -780,7 +822,6 @@
       }, { capture: true });
     }
 
-    /* Auto-collapse hamburger menu on link tap / outside / scroll */
     const navToggle = document.getElementById('nav-toggle');
     const navLabel  = document.querySelector('label[for="nav-toggle"]');
     const navLinks  = document.querySelector('.nav-links');
@@ -831,10 +872,9 @@
   })();
   </script>
 
-  <!-- Promo ribbon close persistence + TimeToPet bridge -->
+  <!-- Promo close persistence + TimeToPet bridge -->
   <script>
   (function(){
-    // Close + remember for this session
     const promo = document.getElementById('promo');
     const closeBtn = document.getElementById('promo-close');
     const KEY = 'wow-promo-closed';
@@ -844,7 +884,6 @@
       promo.style.display = 'none';
     });
 
-    // Intercept any direct TimeToPet links and route to booking bridge (clean analytics)
     document.addEventListener('click', function (e) {
       const a = e.target.closest('a');
       if (!a) return;
@@ -860,6 +899,34 @@
         window.location.href = url.toString();
       }
     }, { capture: true });
+  })();
+  </script>
+
+  <!-- Scroll reveal + parallax (performant) -->
+  <script>
+  (function(){
+    // Reveal
+    const io = new IntersectionObserver((entries)=>{
+      for (const e of entries) if (e.isIntersecting) {
+        e.target.classList.add('revealed'); io.unobserve(e.target);
+      }
+    }, { threshold:.12 });
+    document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+
+    // Light parallax on hero image
+    const parallaxEl = document.querySelector('[data-parallax]');
+    if (parallaxEl){
+      let y = 0;
+      const onScroll = () => {
+        const s = window.scrollY || 0;
+        // move slower than scroll (0.12 factor), clamp for safety
+        const target = Math.max(-8, Math.min(18, s * 0.12));
+        y += (target - y) * 0.08;
+        parallaxEl.style.transform = `translateY(${y}px)`;
+        requestAnimationFrame(()=>{});
+      };
+      window.addEventListener('scroll', onScroll, {passive:true});
+    }
   })();
   </script>
 
@@ -879,3 +946,4 @@
 
 </body>
 </html>
+

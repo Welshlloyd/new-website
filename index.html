@@ -94,10 +94,37 @@
       position:absolute;right:0;top:calc(100% + 8px);min-width:280px;padding:10px;
       background:#0f141b;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow)
     }
-    @media (max-width:899px){
-      .nav-links{position:fixed;inset:64px 0 auto 0;background:#0b0f14;display:none;
-                 flex-direction:column;gap:10px;padding:14px;border-top:1px solid var(--line)}
+
+    /* ===== Mobile menu layer & scrim ===== */
+    @media (max-width: 899px){
+      .nav-links{
+        position:fixed;
+        inset:64px 0 auto 0;
+        background:#0b0f14;
+        display:none;
+        flex-direction:column;
+        gap:10px;
+        padding:14px;
+        border-top:1px solid var(--line);
+        z-index:1300;              /* keep on top */
+      }
       #nav-toggle:checked ~ .nav-links{display:flex}
+
+      .nav-scrim{
+        display:none;
+        position:fixed;
+        inset:64px 0 0 0;
+        background:rgba(0,0,0,.45);
+        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(2px);
+        z-index:1200;              /* under the menu */
+      }
+      #nav-toggle:checked ~ .nav-scrim{display:block}
+    }
+    body.menu-open{ overflow:hidden; } /* lock scroll while menu is open */
+
+    /* Desktop dropdown visibility reset for mobile layout */
+    @media (max-width:899px){
       .nav-group-list{position:static;min-width:auto;border:0;background:transparent;box-shadow:none;padding:0}
     }
 
@@ -117,7 +144,7 @@
       filter:drop-shadow(0 8px 18px rgba(255,209,102,.25));
     }
 
-    /* ---- Buttons (lift + glow) ---- */
+    /* ---- Buttons ---- */
     .cta-buttons{display:flex;gap:10px;flex-wrap:wrap}
     .btn{
       -webkit-tap-highlight-color:transparent; display:inline-flex;align-items:center;justify-content:center;
@@ -132,7 +159,7 @@
     .btn-outline:hover{transform:translateY(-2px) scale(1.03); box-shadow:0 16px 40px rgba(255,209,102,.22)}
     #theme-toggle.btn-ghost{padding:8px 12px;border-radius:999px;line-height:1;display:inline-flex;align-items:center;gap:.4rem}
 
-    /* ---- HERO (animated bg + parallax image) ---- */
+    /* ---- HERO ---- */
     .hero{
       padding:28px 0 18px;
       background:
@@ -411,6 +438,9 @@
           Book Boarding
         </a>
       </nav>
+
+      <!-- SCRIM for the mobile menu -->
+      <div class="nav-scrim" aria-hidden="true"></div>
     </div>
   </header>
 
@@ -772,7 +802,7 @@
 
   <!-- ===== JS ===== -->
 
-  <!-- Nav services toggle + mobile menu autoclose -->
+  <!-- Nav services toggle + mobile menu autoclose + scroll lock -->
   <script>
   (function () {
     const btn  = document.querySelector('.nav-group-btn[aria-controls="nav-services"]');
@@ -792,17 +822,36 @@
       }, { capture: true });
     }
 
+    /* Auto-collapse hamburger menu on link tap / outside / scroll + lock body */
     const navToggle = document.getElementById('nav-toggle');
     const navLabel  = document.querySelector('label[for="nav-toggle"]');
     const navLinks  = document.querySelector('.nav-links');
-    const closeMenu = () => { if (navToggle && navToggle.checked) navToggle.checked = false; };
+    const scrim     = document.querySelector('.nav-scrim');
+    const closeMenu = () => {
+      if (navToggle && navToggle.checked) navToggle.checked = false;
+      document.body.classList.remove('menu-open');
+    };
 
     if (navToggle && navLinks) {
+      // Lock/unlock scroll when toggled
+      navToggle.addEventListener('change', () => {
+        if (navToggle.checked) document.body.classList.add('menu-open');
+        else document.body.classList.remove('menu-open');
+      });
+
+      // Close on link tap
       navLinks.addEventListener('click', (e) => { if (e.target.closest('a')) closeMenu(); });
+
+      // Close when tapping outside
       document.addEventListener('click', (e) => {
         const inside = navLinks.contains(e.target) || navLabel?.contains(e.target) || e.target === navToggle;
         if (!inside) closeMenu();
       }, { capture: true });
+
+      // Close on scrim tap
+      scrim?.addEventListener('click', closeMenu);
+
+      // Close on meaningful scroll
       let lastY = window.scrollY;
       window.addEventListener('scroll', () => {
         if (Math.abs(window.scrollY - lastY) > 8) closeMenu();

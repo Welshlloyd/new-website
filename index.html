@@ -64,7 +64,6 @@
     html,body{background:var(--bg);color:var(--text)}
     img{max-width:100%;height:auto}
     a{color:inherit}
-
     .container{max-width:var(--container);margin:0 auto;padding:0 16px}
 
     /* ---- Header ---- */
@@ -114,8 +113,7 @@
 
     .section-sweep{
       height:4px; border:0; margin:34px 0;
-      background:
-        linear-gradient(90deg, transparent, rgba(255,209,102,.8), transparent);
+      background:linear-gradient(90deg, transparent, rgba(255,209,102,.8), transparent);
       filter:drop-shadow(0 8px 18px rgba(255,209,102,.25));
     }
 
@@ -159,7 +157,7 @@
     section{padding:22px 0}
     h2{font-size:clamp(1.35rem,1.2rem + 1.2vw,1.9rem);font-weight:900}
 
-    /* ---- Membership cards (lift + glow) ---- */
+    /* ---- Membership cards ---- */
     .grid{display:grid;gap:16px}
     @media(min-width:860px){.grid{grid-template-columns:repeat(3,1fr)}}
     .plan{position:relative;overflow:hidden;isolation:isolate;padding:18px; transition:transform var(--speed), box-shadow var(--speed);}
@@ -187,14 +185,6 @@
     .blog-card h3{margin:.25rem 0 .4rem}
     .blog-card a{text-decoration:underline}
 
-    /* ---- FAQ white card with gold trim ---- */
-    .faq.section .wrap{background:#fff;border:2px solid #f5b200;border-radius:14px;
-      box-shadow:0 0 14px rgba(245,178,0,.25);color:#111;padding:24px 28px}
-    .faq details{border-bottom:1px solid #eee;padding:8px 0}
-    .faq summary{cursor:pointer;font-weight:700;color:#111}
-    .faq summary:hover{color:#f5b200}
-    .faq p{color:#111;margin:6px 0 10px}
-
     /* ---- Areas grid ---- */
     .areas{display:grid;gap:12px;margin-top:10px}
     @media(min-width:860px){.areas{grid-template-columns:repeat(5,1fr)}}
@@ -206,16 +196,22 @@
     /* ---- Contact strip ---- */
     .contact-strip{padding:18px}
 
-    /* ---- Footer ---- */
+    /* ---- Footer (streamlined) ---- */
     .footer-banner img{border-radius:12px}
     .footer-grid{display:grid;gap:16px;padding:18px 0}
-    @media(min-width:860px){.footer-grid{grid-template-columns:1.2fr .9fr .9fr .9fr}}
+    .footer-grid.compact{
+      row-gap: 12px; column-gap: 24px; align-items:start;
+    }
+    @media(min-width:860px){ .footer-grid.compact{ grid-template-columns:1.2fr 1fr 1fr; } }
+    @media(min-width:600px) and (max-width:859px){ .footer-grid.compact{ grid-template-columns:1fr 1fr; } }
+    .footer-col h3{ font-size:1rem; margin:0 0 .4rem; color:#ffd166; }
+    .footlist{ list-style:none; padding:0; margin:0; display:grid; gap:.28rem; }
+    .footlist a{ color:#e8eef5; text-decoration:none; }
+    .footlist a:hover{ text-decoration:underline; }
     .footer-logo{border-radius:8px}
     .footer-bottom{padding:12px 0;color:#a9b4c0;border-top:1px solid var(--line);text-align:center}
 
     /* ===== Promo + Impact Ribbons ===== */
-
-    /* Promo with animated shimmer */
     .promo-ribbon{
       position: relative;
       z-index: 1100;
@@ -227,18 +223,7 @@
       box-shadow: 0 14px 40px rgba(0,0,0,.18);
       isolation: isolate;
     }
-    @keyframes shimmer {
-      0%, 100% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-    }
-    .promo-ribbon::before,
-    .promo-ribbon::after{
-      content:""; position:absolute; inset:auto auto -8px -18px; width:90px; height:18px;
-      background: linear-gradient(90deg, rgba(255,255,255,.22), rgba(255,255,255,0));
-      transform: skew(-20deg); filter: blur(6px); opacity:.3; pointer-events:none;
-    }
-    .promo-ribbon::after{ left:auto; right:-18px; transform: skew(20deg) scaleX(-1); }
-
+    @keyframes shimmer { 0%,100% {background-position:0% 50%} 50% {background-position:100% 50%} }
     .promo-inner{
       max-width: var(--container);
       margin: 0 auto;
@@ -249,13 +234,11 @@
     }
     .promo-dog{ display:none; width:28px; height:28px; border-radius:50%; }
     @media (min-width:720px){ .promo-dog{ display:block; } }
-
     .promo-copy{ font-weight: 800; letter-spacing: .2px; line-height: 1.3; }
     .promo-copy strong{
       background:#111; color:#fff; padding: 2px 8px; border-radius:999px; margin-right:8px;
       box-shadow: 0 6px 18px rgba(0,0,0,.25);
     }
-
     .promo-cta{
       display:inline-flex; align-items:center; justify-content:center;
       text-decoration:none; white-space:nowrap; font-weight:900;
@@ -264,7 +247,6 @@
       transition: transform var(--speed), box-shadow var(--speed), background var(--speed);
     }
     .promo-cta:hover{ transform: translateY(-2px) scale(1.04); box-shadow: 0 16px 46px rgba(0,0,0,.35); }
-
     .promo-close{
       appearance:none; border:0; background:transparent; color:#111; font:inherit; font-weight:900;
       width:34px; height:34px; border-radius:50%; display:grid; place-items:center;
@@ -272,12 +254,6 @@
     }
     .promo-close:hover{ background: rgba(0,0,0,.08); transform: rotate(10deg); }
 
-    @media (max-width:599px){
-      .promo-inner{ grid-template-columns: 1fr auto auto; }
-      .promo-copy{ order:1 }
-    }
-
-    /* Impact ribbon */
     .impact-ribbon{
       background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
       border-bottom: 1px solid var(--line);
@@ -304,6 +280,27 @@
     [data-reveal]{ opacity:0; transform:translateY(18px); filter:saturate(.9);
       transition: opacity .7s ease-out, transform .7s ease-out, filter .7s ease-out; }
     .revealed{ opacity:1; transform:none; filter:saturate(1); }
+
+    /* ====== FAQ: gold edge + tighter layout + readable buttons ====== */
+    .faq.section .wrap{
+      background:#fff;
+      border:2px solid #f5b200;
+      border-radius:14px;
+      box-shadow: 0 0 0 3px rgba(245,178,0,.18), 0 22px 60px rgba(245,178,0,.18);
+      color:#111;
+      padding:20px 22px; /* tighter */
+    }
+    .faq details{ padding:6px 0; border-bottom:1px solid #eee; }
+    .faq details:last-of-type{ border-bottom:0; }
+    .faq summary{ cursor:pointer; font-weight:700; color:#111; }
+    .faq summary:hover{ color:#f5b200; }
+    .faq .faq-cta{ gap:8px; }
+    .faq .btn{ padding:10px 16px; line-height:1.05; font-size:.96rem; }
+    .faq .btn-primary{ background:#f5b200; color:#111; }
+    .faq .btn-outline{ border-color:#f5b200; color:#b88400; }
+    .faq .btn-outline:hover{ color:#111; box-shadow:0 12px 28px rgba(245,178,0,.25); }
+    .faq .btn-ghost{ background:#fff; color:#111; border:1px solid #cfd6df; }
+    .faq .btn-ghost:hover{ background:#111; color:#fff; border-color:#111; }
   </style>
 
   <!-- Structured Data -->
@@ -389,12 +386,9 @@
         <a href="/testimonials.html" title="Client Testimonials">Testimonials</a>
         <a href="/gallery.html" title="Photos & Videos">Gallery</a>
 
-        <!-- Contact link (Option A) -->
-        <a href="/contact.html"
-           title="Contact The Woof of Walk Street"
-           onclick="gtag && gtag('event','nav_click',{label:'header_contact'});">
-          Contact
-        </a>
+        <!-- Contact (Option A) -->
+        <a href="/contact.html" title="Contact The Woof of Walk Street"
+           onclick="gtag && gtag('event','nav_click',{label:'header_contact'});">Contact</a>
 
         <a href="/blog/index.html" title="Dog Walking Tips & Guides">Blog</a>
         <a href="/faq.html" title="Frequently Asked Questions">FAQs</a>
@@ -405,10 +399,16 @@
           🌗 Auto
         </button>
 
-        <a class="btn btn-primary"
-           href="/book-dog-walk/?utm_source=website&utm_medium=header&utm_campaign=book_now"
-           onclick="gtag && gtag('event','cta_click',{label:'header_book_now'});">
-           Book Now
+        <!-- Funnel to pre-TTP pages -->
+        <a class="btn btn-outline nav-cta"
+           href="/book-dog-walk/index.html"
+           onclick="gtag && gtag('event','cta_click',{label:'header_book_walks'});">
+          Book Walks
+        </a>
+        <a class="btn btn-primary nav-cta"
+           href="/book-boarding.html"
+           onclick="gtag && gtag('event','cta_click',{label:'header_book_boarding'});">
+          Book Boarding
         </a>
       </nav>
     </div>
@@ -642,7 +642,7 @@
       <hr class="section-sweep" aria-hidden="true">
     </section>
 
-    <!-- FAQ -->
+    <!-- FAQ (tight + gold edging) -->
     <section class="faq section">
       <div class="container" data-reveal>
         <div class="wrap">
@@ -714,7 +714,7 @@
 
   </main>
 
-  <!-- FOOTER -->
+  <!-- FOOTER (streamlined) -->
   <footer class="site-footer" role="contentinfo">
     <div class="container footer-banner" style="margin-top:6px">
       <picture>
@@ -723,80 +723,50 @@
       </picture>
     </div>
 
-    <div class="container footer-grid">
+    <div class="container footer-grid compact">
+      <!-- Brand / summary -->
       <section class="footer-brand">
-        <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="60" height="60" loading="lazy">
+        <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="56" height="56" loading="lazy">
         <p><strong>The Woof of Walk Street</strong><br>
-          <a class="footer-map" href="https://maps.app.goo.gl/YnEoSPwhGocUZyWL9?g_st=ipc" target="_blank" rel="noopener">South Melbourne, VIC</a> · Mon–Fri 7am–7pm<br>
-          <a href="tel:+61456754050">+61 456 754 050</a> · <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a>
+          <a class="footer-map" href="https://maps.app.goo.gl/YnEoSPwhGocUZyWL9?g_st=ipc" target="_blank" rel="noopener">South Melbourne, VIC</a><br>
+          Mon–Fri 7am–7pm · <a href="tel:+61456754050">+61&nbsp;456&nbsp;754&nbsp;050</a><br>
+          <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a>
         </p>
-        <p style="margin:.5rem 0 0">
-          <em>“GPS tracked, photo updates, and the calmest walks in Melbourne.”</em>
-        </p>
-        <p>
-          <a class="btn btn-primary"
-             href="/book-dog-walk/?utm_source=site&utm_medium=footer&utm_campaign=50off_oct"
-             onclick="gtag && gtag('event','cta_click',{label:'footer_book_50'});">
-            Book 50% Off Walk
-          </a>
+        <p style="margin:.4rem 0 0"><em>“GPS tracked, photo updates, and the calmest walks in Melbourne.”</em></p>
+        <p style="margin:.6rem 0 0">
+          <a class="btn btn-primary" href="/book-dog-walk/?utm_source=site&utm_medium=footer&utm_campaign=50off_oct">Book 50% Off Walk</a>
         </p>
       </section>
 
-      <!-- Primary services -->
+      <!-- Services -->
       <nav class="footer-col" aria-label="Services">
         <h3>Services</h3>
-        <ul>
-          <li><a href="/services.html">All Services</a></li>
-          <li><a href="/dog-walking-south-melbourne.html">Dog Walking South Melbourne</a></li>
-          <li><a href="/casual-dog-walking-south-melbourne.html">Casual Dog Walking</a></li>
-          <li><a href="/membership-starter.html">Starter Membership</a></li>
-          <li><a href="/membership-growth.html">Growth Membership</a></li>
-          <li><a href="/unlimited-dog-walks.html">Unlimited Membership</a></li>
-          <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
+        <ul class="footlist">
+          <li><a href="/dog-walking-south-melbourne.html">Dog Walking</a></li>
+          <li><a href="/casual-dog-walking-south-melbourne.html">Casual Walks</a></li>
+          <li><a href="/memberships.html">Memberships</a></li>
+          <li><a href="/boarding-services.html">Weekend Boarding</a></li>
           <li><a href="/contact.html">Contact</a></li>
         </ul>
       </nav>
 
-      <!-- Local area hubs -->
+      <!-- Local Areas -->
       <nav class="footer-col" aria-label="Local Areas">
         <h3>Local Areas</h3>
-        <ul>
-          <li><a href="/dog-walking-south-melbourne.html">Dog Walking — South Melbourne</a></li>
-          <li><a href="/dog-walker-albert-park.html">Dog Walker — Albert Park</a></li>
-          <li><a href="/dog-walker-port-melbourne.html">Dog Walker — Port Melbourne</a></li>
-          <li><a href="/dog-walker-middle-park.html">Dog Walker — Middle Park</a></li>
-          <li><a href="/dog-walker-southbank.html">Dog Walker — Southbank</a></li>
-          <li><a href="/service-areas.html">All Service Areas</a></li>
+        <ul class="footlist">
+          <li><a href="/dog-walking-south-melbourne.html">South Melbourne</a></li>
+          <li><a href="/dog-walker-albert-park.html">Albert Park</a></li>
+          <li><a href="/dog-walker-port-melbourne.html">Port Melbourne</a></li>
+          <li><a href="/dog-walker-middle-park.html">Middle Park</a></li>
+          <li><a href="/dog-walker-southbank.html">Southbank</a></li>
         </ul>
       </nav>
-
-      <section class="footer-col collapsible">
-        <button class="collapse-btn btn btn-ghost" aria-expanded="false" aria-controls="support-list">Support</button>
-        <ul id="support-list">
-          <li><a href="/about.html">About</a></li>
-          <li><a href="/testimonials.html">Testimonials</a></li>
-          <li><a href="/gallery.html">Photos & Videos</a></li>
-          <li><a href="/blog/index.html">Blog</a></li>
-          <li><a href="/faq.html">FAQs</a></li>
-        </ul>
-      </section>
-
-      <section class="footer-col collapsible">
-        <button class="collapse-btn btn btn-ghost" aria-expanded="false" aria-controls="legal-list">Legal</button>
-        <ul id="legal-list">
-          <li><a href="/privacy.html">Privacy</a></li>
-          <li><a href="/terms.html">Terms</a></li>
-          <li><a href="/sitemap.html">Sitemap</a></li>
-        </ul>
-      </section>
     </div>
 
-    <div class="container footer-geo">
+    <div class="container footer-bottom">
       Solo Dog Walking & Boutique Boarding across <strong>South Melbourne</strong>, <strong>Albert Park</strong>,
-      <strong>Port Melbourne</strong>, <strong>Middle Park</strong> and <strong>Southbank</strong>.
+      <strong>Port Melbourne</strong>, <strong>Middle Park</strong> and <strong>Southbank</strong> · © <span id="year"></span> The Woof of Walk Street
     </div>
-
-    <div class="container footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   </footer>
 
@@ -872,7 +842,7 @@
   })();
   </script>
 
-  <!-- Promo close persistence + TimeToPet bridge -->
+  <!-- Promo close persistence + TTP bridge -->
   <script>
   (function(){
     const promo = document.getElementById('promo');
@@ -884,6 +854,7 @@
       promo.style.display = 'none';
     });
 
+    // Intercept any direct TimeToPet links and route to booking bridge
     document.addEventListener('click', function (e) {
       const a = e.target.closest('a');
       if (!a) return;
@@ -902,7 +873,7 @@
   })();
   </script>
 
-  <!-- Scroll reveal + parallax (performant) -->
+  <!-- Scroll reveal + parallax -->
   <script>
   (function(){
     // Reveal
@@ -919,7 +890,6 @@
       let y = 0;
       const onScroll = () => {
         const s = window.scrollY || 0;
-        // move slower than scroll (0.12 factor), clamp for safety
         const target = Math.max(-8, Math.min(18, s * 0.12));
         y += (target - y) * 0.08;
         parallaxEl.style.transform = `translateY(${y}px)`;
@@ -929,21 +899,5 @@
     }
   })();
   </script>
-
-  <!-- Footer accordions (mobile) -->
-  <script>
-    document.querySelectorAll('.collapsible .collapse-btn').forEach(btn=>{
-      btn.addEventListener('click', ()=>{
-        const list = document.getElementById(btn.getAttribute('aria-controls'));
-        const open = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', String(!open));
-        list.hidden = open;
-      });
-      const list = document.getElementById(btn.getAttribute('aria-controls'));
-      if (window.matchMedia('(max-width:640px)').matches) list.hidden = true;
-    });
-  </script>
-
 </body>
 </html>
-

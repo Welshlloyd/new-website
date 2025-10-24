@@ -184,63 +184,68 @@
           <p class="muted">Quick links: <a href="/dog-walking-south-melbourne.html">Dog Walking</a> · <a href="/memberships.html">Memberships</a> · <a href="/boarding-services.html">Weekend Boarding</a> · <a href="/faq.html">FAQs</a></p>
         </article>
 
-        <!-- Right: Contact form -->
-        <aside class="card" aria-labelledby="contact-form-heading">
-          <h2 id="contact-form-heading">Send a message</h2>
-          <!-- NOTE: Replace YOUR_FORMSPREE_ID with your Formspree form ID -->
-          <form id="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" novalidate>
-            <!-- Redirect to thank-you after a successful submit -->
-            <input type="hidden" name="_redirect" value="https://www.woofofwalkstreet.com/thank-you.html">
+<!-- Right: Contact form -->
+<aside class="card" aria-labelledby="contact-form-heading">
+  <h2 id="contact-form-heading">Send a message</h2>
+  <form id="contact-form" action="https://formspree.io/f/movkrjba" method="POST" novalidate>
+    <!-- Redirect to thank-you after successful submit -->
+    <input type="hidden" name="_redirect" value="https://www.woofofwalkstreet.com/thank-you.html">
 
-            <!-- Honeypot (spam) -->
-            <input type="text" name="_gotcha" autocomplete="off" tabindex="-1" style="position:absolute;left:-9999px;height:0;width:0;opacity:0">
+    <!-- Optional subject for Formspree emails -->
+    <input type="hidden" name="_subject" value="New enquiry from The Woof of Walk Street">
 
-            <div class="row two">
-              <div>
-                <label for="name">Your name</label>
-                <input id="name" name="name" autocomplete="name" required />
-                <div class="error" id="err-name" aria-live="polite"></div>
-              </div>
-              <div>
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" inputmode="email" autocomplete="email" required />
-                <div class="error" id="err-email" aria-live="polite"></div>
-              </div>
-            </div>
+    <!-- Optional reply-to header (for convenience) -->
+    <input type="hidden" name="_replyto" value="">
 
-            <div class="row two">
-              <div>
-                <label for="phone">Phone (optional)</label>
-                <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" />
-                <div class="help">We'll only use this for scheduling.</div>
-              </div>
-              <div>
-                <label for="service">Service</label>
-                <select id="service" name="service">
-                  <option>Dog Walking (solo, 45 minutes)</option>
-                  <option>Casual Dog Walking</option>
-                  <option>Memberships (Starter/Growth/Unlimited)</option>
-                  <option>Weekend Boarding (one guest only)</option>
-                  <option>Other</option>
-                </select>
-              </div>
-            </div>
+    <!-- Honeypot (spam trap) -->
+    <input type="text" name="_gotcha" autocomplete="off" tabindex="-1"
+           style="position:absolute;left:-9999px;height:0;width:0;opacity:0">
 
-            <div class="row">
-              <div>
-                <label for="message">How can we help?</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-                <div class="error" id="err-message" aria-live="polite"></div>
-              </div>
-            </div>
-
-            <button class="btn btn-primary" type="submit">Send message</button>
-            <div class="success" id="form-success" role="status">Thanks — we’ve received your message.</div>
-            <div class="fail" id="form-fail" role="status">Sorry, something went wrong. Please try again or email us.</div>
-          </form>
-        </aside>
+    <div class="row two">
+      <div>
+        <label for="name">Your name</label>
+        <input id="name" name="name" autocomplete="name" required />
+        <div class="error" id="err-name" aria-live="polite"></div>
       </div>
-    </section>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" inputmode="email" autocomplete="email" required />
+        <div class="error" id="err-email" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <div class="row two">
+      <div>
+        <label for="phone">Phone (optional)</label>
+        <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" />
+        <div class="help">We'll only use this for scheduling.</div>
+      </div>
+      <div>
+        <label for="service">Service</label>
+        <select id="service" name="service">
+          <option>Dog Walking (solo, 45 minutes)</option>
+          <option>Casual Dog Walking</option>
+          <option>Memberships (Starter/Growth/Unlimited)</option>
+          <option>Weekend Boarding (one guest only)</option>
+          <option>Other</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <label for="message">How can we help?</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <div class="error" id="err-message" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <button class="btn btn-primary" type="submit">Send message</button>
+    <div class="success" id="form-success" role="status">Thanks — we’ve received your message.</div>
+    <div class="fail" id="form-fail" role="status">Sorry, something went wrong. Please try again or email us.</div>
+  </form>
+</aside>
+
 
     <!-- ====== Service area ====== -->
     <section>

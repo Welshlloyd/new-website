@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- ====== SEO ====== -->
-  <title>Contact | Dog Walker South Melbourne & Boutique Boarding</title>
-  <meta name="description" content="Contact The Woof of Walk Street — solo dog walking and boutique weekend boarding in South Melbourne. Call, email, or send a message. One-dog-only, GPS tracked." />
+  <title>Contact South Melbourne Dog Walker & Boutique Boarding | The Woof of Walk Street</title>
+  <meta name="description" content="Contact a South Melbourne dog walker for solo, one-dog-only walks and boutique weekend boarding. Call, email or message. GPS-tracked walks around Albert Park, Southbank, Middle Park & Port Melbourne." />
   <link rel="canonical" href="https://www.woofofwalkstreet.com/contact.html" />
 
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Contact | Dog Walker South Melbourne">
-  <meta property="og:description" content="Solo dog walking & boutique weekend boarding in South Melbourne. Call, email or message us." />
+  <meta property="og:title" content="Contact South Melbourne Dog Walker & Boutique Boarding">
+  <meta property="og:description" content="Solo dog walking & boutique weekend boarding in South Melbourne. Call, email or send a message — usually a same-day reply.">
   <meta property="og:url" content="https://www.woofofwalkstreet.com/contact.html">
   <meta property="og:image" content="https://www.woofofwalkstreet.com/images/brand/hero-dog-skyline-1200.webp">
   <meta name="twitter:card" content="summary_large_image">
@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="/css/mini.css" />
   <link rel="stylesheet" href="/css/styles.css" />
 
-  <!-- Page-scoped styles: strong contrast, cards, form -->
+  <!-- Page-scoped styles: gold edging, cards, form, hero -->
   <style>
     :root{
       --bg: var(--bg, #0b0e12);
@@ -30,27 +30,61 @@
       --line: #1d232c;
       --text: #e6edf3;
       --muted: #a9b4c0;
-      --brand: #ffd166;
+      --brand: #f5b200; /* gold */
       --brand-ink:#111;
+      --ring: rgba(245,178,0,.25);
     }
-    body[data-theme="light"] .contact-hero{background:#f8fafc}
+
+    body{ background: radial-gradient(1400px 800px at 20% -10%, rgba(245,178,0,.08), transparent 60%) }
+
+    /* Edgy/gold hero */
     .contact-hero{
-      background: radial-gradient(1200px 600px at 20% -20%, rgba(255,209,102,.10), transparent 60%),
-                  linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0));
-      padding:28px 0;border-bottom:1px solid rgba(0,0,0,.08)
+      position:relative;
+      background:
+        radial-gradient(1200px 600px at 20% -20%, rgba(245,178,0,.16), transparent 60%),
+        linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0));
+      padding:34px 0;border-bottom:1px solid rgba(255,255,255,.06)
     }
-    .contact-hero .subhead{max-width:60ch;color:var(--muted)}
+    .contact-hero .subhead{max-width:70ch;color:var(--muted)}
+    .hero-cta{ display:flex; gap:10px; flex-wrap:wrap; margin-top:12px }
+    .pill{
+      display:inline-flex; align-items:center; gap:.5rem; padding:12px 18px; border-radius:999px;
+      font-weight:900; text-decoration:none; border:1px solid transparent
+    }
+    .pill-primary{ background:var(--brand); color:var(--brand-ink); box-shadow:0 10px 26px var(--ring) }
+    .pill-outline{ background:transparent; color:var(--brand); border-color:var(--brand) }
+
+    /* Layout */
     .grid{display:grid;gap:16px}
-    @media(min-width:880px){ .grid{grid-template-columns:1.1fr .9fr} }
+    @media(min-width:980px){ .grid{grid-template-columns:1.1fr .9fr} }
+
+    /* Gold-edge cards */
     .card{
       background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.02));
-      border:1px solid var(--line); border-radius:14px; padding:18px; box-shadow:0 10px 24px rgba(0,0,0,.18)
+      border:1px solid var(--line);
+      border-radius:16px; padding:20px;
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,.02) inset,
+        0 14px 32px rgba(0,0,0,.22),
+        0 0 0 2px rgba(245,178,0,.06);
+      position:relative;
     }
-    .card h2{margin:.25rem 0 .5rem}
+    .card::before{
+      content:""; position:absolute; inset:-1px; pointer-events:none; border-radius:16px;
+      background:linear-gradient(120deg, rgba(245,178,0,.45), rgba(245,178,0,0) 28%, rgba(245,178,0,.35) 72%, rgba(245,178,0,0));
+      mask:linear-gradient(#000, #000) content-box, linear-gradient(#000, #000);
+      -webkit-mask:linear-gradient(#000, #000) content-box, linear-gradient(#000, #000);
+      padding:1px; border:1px solid transparent; opacity:.25;
+    }
+    .card h2{margin:.25rem 0 .6rem}
+
+    /* Contact list */
     .contact-list{list-style:none;margin:0;padding:0}
-    .contact-list li{margin:.45rem 0}
+    .contact-list li{margin:.5rem 0}
+
+    /* Buttons */
     .btn{display:inline-flex;align-items:center;gap:.5rem;padding:12px 18px;border-radius:999px;border:1px solid transparent;text-decoration:none;font-weight:900}
-    .btn-primary{background:var(--brand);color:var(--brand-ink);box-shadow:0 10px 26px rgba(255,209,102,.25)}
+    .btn-primary{background:var(--brand);color:var(--brand-ink);box-shadow:0 10px 26px var(--ring)}
     .btn-ghost{background:transparent;border-color:#2a3440;color:inherit}
     .btn-outline{background:transparent;border-color:var(--brand);color:var(--brand)}
     .badge{display:inline-block;padding:.28rem .6rem;border-radius:999px;font-size:.82rem;font-weight:800;background:#111;color:#fff}
@@ -67,11 +101,21 @@
     input:focus, textarea:focus, select:focus{outline:2px solid var(--brand)}
     .help{font-size:.9rem;color:var(--muted);margin-top:.25rem}
     .error{color:#ff6b6b;font-size:.9rem}
-    .map-embed{border:1px solid var(--line);border-radius:12px;overflow:hidden}
-    .map-embed img{display:block;width:100%;height:auto}
     .success, .fail{display:none;margin-top:10px;padding:10px;border-radius:10px}
     .success{background:#0c5132;color:#e7f6ed;border:1px solid #0a3f27}
     .fail{background:#512d2d;color:#fdecec;border:1px solid #3f2323}
+
+    /* Map + postcode checker */
+    .map-embed{border:1px solid var(--line);border-radius:12px;overflow:hidden}
+    .map-embed img{display:block;width:100%;height:auto}
+    .pc-widget{ display:grid; gap:10px; margin-top:10px }
+    .pc-result{ display:none; padding:10px; border-radius:10px; border:1px solid var(--line) }
+    .pc-ok{ background:#0c5132; color:#e7f6ed; border-color:#0a3f27 }
+    .pc-no{ background:#3f2323; color:#fdecec; border-color:#512d2d }
+
+    /* Section spacing */
+    .section{ padding:22px 0 }
+    .section.alt{ background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0)) }
   </style>
 
   <!-- ====== Schema (LocalBusiness + ContactPage) ====== -->
@@ -102,13 +146,12 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
-    // Enable enhanced conversions on this page:
     gtag('config', 'AW-17527927259', { 'allow_enhanced_conversions': true });
   </script>
 </head>
 <body>
 
-  <!-- ====== Header (condensed – matches site nav structure) ====== -->
+  <!-- ====== Updated Header ====== -->
   <header class="site-header" role="banner">
     <div class="navbar container" role="navigation" aria-label="Main">
       <a class="brand" href="/" aria-label="Go to home">
@@ -129,6 +172,7 @@
             <li><a href="/memberships.html">Memberships — Compare Plans</a></li>
             <li><a href="/unlimited-dog-walks.html">Unlimited Membership</a></li>
             <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
+            <li><a href="/service-areas.html">Service Areas</a></li>
             <li><a href="/contact.html" aria-current="page">Contact</a></li>
           </ul>
         </section>
@@ -151,13 +195,18 @@
     <section class="contact-hero">
       <div class="container">
         <span class="badge">South Melbourne</span>
-        <h1>Contact a South Melbourne Dog Walker</h1>
-        <p class="subhead">Solo dog walking and boutique weekend boarding. Call, email, or send a message — we usually reply within a few hours (Mon–Fri, 7am–7pm).</p>
+        <h1>Contact a South Melbourne Dog Walker & Boutique Boarding</h1>
+        <p class="subhead">Solo, one-dog-only walks and calm, kennel-free weekend boarding. Call, email, or send a message — we usually reply within a few hours (Mon–Fri, 7am–7pm).</p>
+
+        <div class="hero-cta">
+          <a class="pill pill-primary" href="/unlimited-dog-walks.html">Book Discounted Walks</a>
+          <a class="pill pill-outline" href="/boarding-services.html">Boarding Offers</a>
+        </div>
       </div>
     </section>
 
     <!-- ====== Two-column content ====== -->
-    <section>
+    <section class="section">
       <div class="container grid">
         <!-- Left: Contact details + CTAs -->
         <article class="card" aria-labelledby="talk-to-human">
@@ -179,80 +228,89 @@
                onclick="gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
               Client Login
             </a>
+            <a class="btn btn-outline" href="/service-areas.html">Service Areas</a>
           </div>
           <p class="muted" style="margin-top:.6rem">Prefer messages? Email us or DM on <a href="https://instagram.com/woofofwalkstreet" target="_blank" rel="noopener">Instagram</a>.</p>
-          <p class="muted">Quick links: <a href="/dog-walking-south-melbourne.html">Dog Walking</a> · <a href="/memberships.html">Memberships</a> · <a href="/boarding-services.html">Weekend Boarding</a> · <a href="/faq.html">FAQs</a></p>
+          <p class="muted">Quick links: <a href="/dog-walking-south-melbourne.html">Dog Walking</a> · <a href="/memberships.html">Memberships</a> · <a href="/unlimited-dog-walks.html">Discounted Walks</a> · <a href="/boarding-services.html">Weekend Boarding</a> · <a href="/faq.html">FAQs</a></p>
         </article>
 
-<!-- Right: Contact form -->
-<aside class="card" aria-labelledby="contact-form-heading">
-  <h2 id="contact-form-heading">Send a message</h2>
-  <form id="contact-form" action="https://formspree.io/f/movkrjba" method="POST" novalidate>
-    <!-- Redirect to thank-you after successful submit -->
-    <input type="hidden" name="_redirect" value="https://www.woofofwalkstreet.com/thank-you.html">
+        <!-- Right: Contact form (AJAX for Formspree free plan) -->
+        <aside class="card" aria-labelledby="contact-form-heading">
+          <h2 id="contact-form-heading">Send a message</h2>
 
-    <!-- Optional subject for Formspree emails -->
-    <input type="hidden" name="_subject" value="New enquiry from The Woof of Walk Street">
+          <form id="contact-form" action="https://formspree.io/f/movkrjba" method="POST" novalidate>
+            <!-- Optional subject for Formspree emails -->
+            <input type="hidden" name="_subject" value="New enquiry from The Woof of Walk Street">
+            <!-- Reply-to will be filled from the email input by JS -->
+            <input type="hidden" name="_replyto" id="fs-replyto" value="">
+            <!-- Honeypot (spam trap) -->
+            <input type="text" name="_gotcha" autocomplete="off" tabindex="-1" style="position:absolute;left:-9999px;height:0;width:0;opacity:0">
 
-    <!-- Optional reply-to header (for convenience) -->
-    <input type="hidden" name="_replyto" value="">
+            <div class="row two">
+              <div>
+                <label for="name">Your name</label>
+                <input id="name" name="name" autocomplete="name" required />
+                <div class="error" id="err-name" aria-live="polite"></div>
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" inputmode="email" autocomplete="email" required />
+                <div class="error" id="err-email" aria-live="polite"></div>
+              </div>
+            </div>
 
-    <!-- Honeypot (spam trap) -->
-    <input type="text" name="_gotcha" autocomplete="off" tabindex="-1"
-           style="position:absolute;left:-9999px;height:0;width:0;opacity:0">
+            <div class="row two">
+              <div>
+                <label for="phone">Phone (optional)</label>
+                <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" />
+                <div class="help">We'll only use this for scheduling.</div>
+              </div>
+              <div>
+                <label for="service">Service</label>
+                <select id="service" name="service">
+                  <option>Dog Walking (solo, 45 minutes)</option>
+                  <option>Casual Dog Walking</option>
+                  <option>Memberships (Starter/Growth/Unlimited)</option>
+                  <option>Weekend Boarding (one guest only)</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
 
-    <div class="row two">
-      <div>
-        <label for="name">Your name</label>
-        <input id="name" name="name" autocomplete="name" required />
-        <div class="error" id="err-name" aria-live="polite"></div>
+            <div class="row">
+              <div>
+                <label for="message">How can we help?</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <div class="error" id="err-message" aria-live="polite"></div>
+              </div>
+            </div>
+
+            <button class="btn btn-primary" type="submit" id="submit-btn">Send message</button>
+            <div class="success" id="form-success" role="status">Thanks — we’ve received your message.</div>
+            <div class="fail" id="form-fail" role="status">Sorry, something went wrong. Please try again or email us.</div>
+
+            <noscript><p class="help">Submitting without JavaScript will show Formspree’s confirmation page.</p></noscript>
+          </form>
+        </aside>
       </div>
-      <div>
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" inputmode="email" autocomplete="email" required />
-        <div class="error" id="err-email" aria-live="polite"></div>
-      </div>
-    </div>
+    </section>
 
-    <div class="row two">
-      <div>
-        <label for="phone">Phone (optional)</label>
-        <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" />
-        <div class="help">We'll only use this for scheduling.</div>
-      </div>
-      <div>
-        <label for="service">Service</label>
-        <select id="service" name="service">
-          <option>Dog Walking (solo, 45 minutes)</option>
-          <option>Casual Dog Walking</option>
-          <option>Memberships (Starter/Growth/Unlimited)</option>
-          <option>Weekend Boarding (one guest only)</option>
-          <option>Other</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="row">
-      <div>
-        <label for="message">How can we help?</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-        <div class="error" id="err-message" aria-live="polite"></div>
-      </div>
-    </div>
-
-    <button class="btn btn-primary" type="submit">Send message</button>
-    <div class="success" id="form-success" role="status">Thanks — we’ve received your message.</div>
-    <div class="fail" id="form-fail" role="status">Sorry, something went wrong. Please try again or email us.</div>
-  </form>
-</aside>
-
-
-    <!-- ====== Service area ====== -->
-    <section>
+    <!-- ====== Why choose solo dog walking (SEO copy) ====== -->
+    <section class="section alt">
       <div class="container card">
-        <h2>Where we walk</h2>
-        <p>We’re local to <strong>South Melbourne</strong> and walk daily around <strong>Albert Park Lake</strong>, St Vincent Gardens, and nearby streets. Boarding is one guest only — calm and kennel-free.</p>
-        <div class="map-embed" aria-label="Service area map">
+        <h2>South Melbourne Dog Walker — Why Solo Walks Work Best</h2>
+        <p>Our dog walking in <strong>South Melbourne</strong>, <strong>Albert Park</strong>, <strong>Port Melbourne</strong>, <strong>Middle Park</strong> and <strong>Southbank</strong> is strictly one-dog-only. Solo walks mean calmer outings, focused enrichment, and safer neighbourhood routes. Every session is GPS-tracked with photos so you can see exactly where we went and how your dog enjoyed their time.</p>
+        <p>If you’re looking for consistent routines with a <em>local</em> walker who knows the best spots around Albert Park Lake and St Vincent Gardens, you’re in the right place. Choose casual walks, value-packed memberships, or our Unlimited option for discounted walks.</p>
+      </div>
+    </section>
+
+    <!-- ====== Service area + Postcode checker ====== -->
+    <section class="section">
+      <div class="container card">
+        <h2>Areas We Serve in South Melbourne</h2>
+        <p>We walk daily around <strong>3205 South Melbourne</strong>, <strong>3206 Albert Park & Middle Park</strong>, <strong>3207 Port Melbourne</strong> and <strong>3006 Southbank</strong>. Not sure if you’re in range? Use the postcode checker below.</p>
+
+        <div class="map-embed" aria-label="Service area map" style="margin:10px 0 16px">
           <a href="https://maps.app.goo.gl/YnEoSPwhGocUZyWL9?g_st=ipc" target="_blank" rel="noopener">
             <picture>
               <source srcset="/images/brand/service-area-map.webp" type="image/webp">
@@ -260,13 +318,25 @@
             </picture>
           </a>
         </div>
+
+        <!-- Postcode checker widget -->
+        <div class="pc-widget" role="region" aria-label="Postcode checker">
+          <label for="pc">Check your postcode</label>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <input id="pc" name="pc" inputmode="numeric" pattern="[0-9]*" placeholder="e.g. 3205" style="max-width:160px">
+            <button id="pc-btn" class="btn btn-outline" type="button">Check</button>
+            <a href="/service-areas.html" class="btn btn-ghost">View Service Areas</a>
+          </div>
+          <div id="pc-ok" class="pc-result pc-ok">Great — we service your area. You can <a href="/unlimited-dog-walks.html">book discounted walks</a> or <a href="/boarding-services.html">request boarding</a>.</div>
+          <div id="pc-no" class="pc-result pc-no">We’re a bit outside that postcode right now. Message us anyway — we can sometimes accommodate nearby suburbs.</div>
+        </div>
       </div>
     </section>
 
     <!-- ====== Quick answers ====== -->
     <section class="section alt">
       <div class="container">
-        <h2>Quick answers</h2>
+        <h2>Quick Answers</h2>
         <details>
           <summary>Do you do pack walks?</summary>
           <p>No — we’re one-dog-only for safety, focus and calmer outings.</p>
@@ -286,7 +356,7 @@
     </section>
   </main>
 
-  <!-- ====== Footer (same as site) ====== -->
+  <!-- ====== Footer ====== -->
   <footer class="site-footer" role="contentinfo">
     <div class="footer-banner">
       <picture>
@@ -325,6 +395,7 @@
           <li><a href="/memberships.html">Memberships</a></li>
           <li><a href="/unlimited-dog-walks.html">Unlimited Membership</a></li>
           <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
+          <li><a href="/service-areas.html">Service Areas</a></li>
           <li><a href="/contact.html" aria-current="page">Contact</a></li>
         </ul>
       </nav>
@@ -359,7 +430,7 @@
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   </footer>
 
-  <!-- ====== Behaviours: service menu toggle, form validation + Ads conversion ====== -->
+  <!-- ====== Behaviours: nav toggle, form validation + AJAX + postcode checker ====== -->
   <script>
     // Services dropdown (mobile)
     (function () {
@@ -377,40 +448,74 @@
       }, { capture: true });
     })();
 
-    // Contact form: client-side validation + enhanced conversions + lead event
+    // Contact form: validation + AJAX (stay on page) + enhanced conversions
     (function () {
       const form = document.getElementById('contact-form');
       if (!form) return;
 
-      function validEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v||''); }
+      const btn = document.getElementById('submit-btn');
+      const okBox = document.getElementById('form-success');
+      const failBox = document.getElementById('form-fail');
+      const replyTo = document.getElementById('fs-replyto');
 
-      form.addEventListener('submit', function (e) {
+      function validEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v||''); }
+      function show(el){ el.style.display = 'block'; }
+      function hide(el){ el.style.display = 'none'; }
+
+      form.addEventListener('submit', async function (e) {
+        if (!window.fetch) return; // no-JS fallback posts normally
+        e.preventDefault();
+        hide(okBox); hide(failBox);
+
         // basic validation
         let ok = true;
         const name = form.name.value.trim();
         const email = form.email.value.trim();
         const message = form.message.value.trim();
-
         document.getElementById('err-name').textContent = '';
         document.getElementById('err-email').textContent = '';
         document.getElementById('err-message').textContent = '';
-
         if (!name){ ok=false; document.getElementById('err-name').textContent = 'Please enter your name.'; }
         if (!validEmail(email)){ ok=false; document.getElementById('err-email').textContent = 'Please enter a valid email.'; }
         if (!message){ ok=false; document.getElementById('err-message').textContent = 'Tell us a bit about your dog.'; }
+        if (!ok) return;
 
-        if (!ok){ e.preventDefault(); return; }
+        // keep Formspree "reply-to" tidy
+        replyTo.value = email;
 
+        // Enhanced conversions (hashed by gtag)
         try {
-          // Enhanced conversions: pass raw identifiers (gtag will hash)
           gtag('set','user_data',{
             'email': email,
             'phone_number': (form.phone.value || '').trim()
           });
-          // Optional: custom lead event
           gtag('event','generate_lead', { 'send_to':'AW-17527927259' });
-        } catch(err) { /* no-op */ }
+        } catch(err) {}
+
+        // Submit via AJAX to stay on page
+        btn.disabled = true; const old = btn.textContent; btn.textContent = 'Sending…';
+        try {
+          const res = await fetch(form.action, { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form) });
+          if (res.ok) { form.reset(); show(okBox); } else { show(failBox); }
+        } catch (err) { show(failBox); }
+        finally { btn.disabled = false; btn.textContent = old; }
       });
+    })();
+
+    // Postcode checker
+    (function(){
+      const okPC = ['3205','3206','3207','3006'];
+      const $ = (s)=>document.querySelector(s);
+      const pc = $('#pc'), btn = $('#pc-btn'), ok = $('#pc-ok'), no = $('#pc-no');
+      if(!pc || !btn) return;
+      const check = ()=>{
+        ok.style.display = 'none'; no.style.display = 'none';
+        const v = (pc.value || '').replace(/\s+/g,'');
+        if (okPC.includes(v)) ok.style.display = 'block';
+        else no.style.display = 'block';
+      };
+      btn.addEventListener('click', check);
+      pc.addEventListener('keydown', (e)=>{ if(e.key==='Enter'){ e.preventDefault(); check(); } });
     })();
   </script>
 </body>

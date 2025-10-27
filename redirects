@@ -56,6 +56,14 @@ https://woofofwalkstreet.com/*          https://www.woofofwalkstreet.com/:splat 
 /terms                                  /terms.html                                         301
 
 # ================================
+# Legacy 404 recovery (new)
+# ================================
+/walking-services.html                  /services.html                                      301
+/walking-services                       /services.html                                      301
+/blog/blog4.html                        /blog/index.html                                    301
+/blog/blog4                             /blog/index.html                                    301
+
+# ================================
 # Strip index.html → pretty links
 # ================================
 */index.html                            /:splat/                                            301

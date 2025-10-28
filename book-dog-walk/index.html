@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Book a Dog Walk (Secure Portal) | The Woof of Walk Street</title>
-  <meta name="description" content="Book a 45-minute solo dog walk. Set up your account in under a minute. GPS map and photos included. Secure booking powered by Time To Pet." />
+  <title>Book a Solo Dog Walk — 50% Off Until 30 November | The Woof of Walk Street</title>
+  <meta name="description" content="South Melbourne solo dog walks (45 min) with GPS map & photo updates. New clients get 50% off—offer ends 30 November. Create your account in under a minute (secure Time To Pet portal)." />
   <link rel="canonical" href="https://www.woofofwalkstreet.com/book-dog-walk/" />
   <link rel="icon" href="/images/brand/favicon.ico" />
 
@@ -69,6 +69,7 @@
     .accent-title::after{ content:""; position:absolute; left:0; right:0; bottom:0; height:2px;
       background:linear-gradient(90deg,#f5b200,transparent 70%); opacity:.9 }
     .helper{font-size:.9rem;color:#cfd6df;margin-top:6px}
+    .deadline{display:inline-flex;gap:.5rem;align-items:center;font-weight:900;color:#111;background:#ffd166;padding:.28rem .6rem;border-radius:999px}
 
     /* Hero banner */
     .hero-banner img{width:100%;height:auto;display:block;border-bottom:2px solid #f5b200}
@@ -92,7 +93,7 @@
     gtag('config','GT-M3V2RMCT');      /* Google Tag */
   </script>
 
-  <!-- SEO: Breadcrumb + HowTo -->
+  <!-- SEO: Breadcrumb + HowTo + Offer (50% off until 30 Nov) -->
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
     {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
@@ -106,17 +107,48 @@
     {"@type":"HowToStep","name":"Confirm","text":"We confirm keys and routine, then lock your first walk."}
   ]}
   </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Service",
+    "serviceType":"Dog Walking South Melbourne",
+    "provider":{"@type":"LocalBusiness","name":"The Woof of Walk Street","areaServed":["South Melbourne","Albert Park","Port Melbourne","Middle Park","Southbank"]},
+    "areaServed":["South Melbourne","Albert Park","Port Melbourne","Middle Park","Southbank"],
+    "description":"45-minute solo dog walks with GPS route and photo updates. New client offer: 50% off until 30 November.",
+    "offers":{
+      "@type":"Offer",
+      "url":"https://www.woofofwalkstreet.com/book-dog-walk/",
+      "priceCurrency":"AUD",
+      "priceValidUntil":"2025-11-30",
+      "eligibleCustomerType":"https://schema.org/NewCustomer",
+      "discount":"50%",
+      "availability":"https://schema.org/InStock"
+    }
+  }
+  </script>
+
+  <!-- Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Book a Solo Dog Walk — 50% Off Until 30 November">
+  <meta property="og:description" content="One-dog-only walks in South Melbourne with GPS & photo updates. New client promo ends 30 November.">
+  <meta property="og:url" content="https://www.woofofwalkstreet.com/book-dog-walk/">
+  <meta property="og:image" content="https://www.woofofwalkstreet.com/images/brand/promo-banner-dog-in-suit.png">
+  <meta property="og:locale" content="en_AU">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Book a Solo Dog Walk — 50% Off Until 30 November">
+  <meta name="twitter:description" content="GPS-tracked, photo updates. New client promo ends 30 November.">
+  <meta name="twitter:image" content="https://www.woofofwalkstreet.com/images/brand/promo-banner-dog-in-suit.png">
 </head>
 
 <body>
   <!-- Promo ribbon -->
-  <div id="promo" class="promo-ribbon promo--edge" role="region" aria-label="Promo: 50% off">
+  <div id="promo" class="promo-ribbon promo--edge" role="region" aria-label="Promo: 50% off until 30 November">
     <div class="promo-inner container">
       <img class="promo-dog" src="/images/brand/dog-in-suit.webp" alt="" width="28" height="28" decoding="async" />
       <span class="promo-copy">
-        <strong>50% OFF</strong> Unlimited Daily Walks — 45-minute solo walks · GPS tracked · Photo updates
+        <strong>50% OFF</strong> Solo Dog Walks for New Clients — Ends <strong>30 November</strong>
       </span>
-      <a href="/unlimited-dog-walks.html" class="btn btn-primary">Learn More →</a>
+      <a href="/unlimited-dog-walks.html" class="btn btn-primary">Unlimited 50% Off →</a>
       <button id="promo-close" class="promo-close" aria-label="Dismiss promo">✕</button>
     </div>
   </div>
@@ -136,11 +168,11 @@
         <section class="nav-group">
           <button class="nav-group-btn" aria-expanded="false" aria-controls="nav-services">Services</button>
           <ul id="nav-services" class="nav-group-list">
-            <li><a href="/services.html">All Services</a></li>
             <li><a href="/dog-walking-south-melbourne.html">Dog Walking South Melbourne</a></li>
             <li><a href="/casual-dog-walking-south-melbourne.html">Casual Dog Walking</a></li>
             <li><a href="/memberships.html">Memberships</a></li>
             <li><a href="/unlimited-dog-walks.html">Unlimited Membership</a></li>
+            <li><a href="/boarding-services.html">Boarding</a></li>
             <li><a href="/contact.html">Contact</a></li>
           </ul>
         </section>
@@ -164,12 +196,15 @@
   <!-- Hero image with overlay CTA -->
   <section style="padding:0;border-bottom:none">
     <div class="hero-banner" style="position:relative">
-      <img src="/images/brand/promo-banner-dog-in-suit.png" alt="50% Off Dog Walking South Melbourne">
+      <img src="/images/brand/promo-banner-dog-in-suit.png" alt="Solo Dog Walking South Melbourne — 50% Off Until 30 November">
       <div class="hero-overlay">
         <div style="max-width:760px">
           <h1>50% Off Solo Dog Walks</h1>
-          <p>Book a 45-minute solo walk. Includes a GPS map and photo updates — powered by Time To Pet.</p>
+          <p>One-dog-only, 45-minute walks with GPS map & photo updates. <span class="deadline">Ends <span id="days-left"></span> • 30 Nov</span></p>
           <a href="https://www.timetopet.com/portal/woofofwalkstreet/create-account" class="btn btn-primary" data-plan="casual_50">Book 50% Off Casual Walk</a>
+          <div style="margin-top:8px">
+            <a class="btn btn-ghost" data-plan="unlimited_50" href="/unlimited-dog-walks.html">Or get 50% Off Unlimited</a>
+          </div>
         </div>
       </div>
     </div>
@@ -180,7 +215,7 @@
       <!-- Booking options -->
       <section class="edge" aria-labelledby="book-heading">
         <h2 id="book-heading" class="accent-title">Get started</h2>
-        <p class="mini" style="margin:.25rem 0 .35rem">Choose an option. You’ll jump to our secure portal to finish.</p>
+        <p class="mini" style="margin:.25rem 0 .35rem">Choose an option. You’ll jump to our secure portal to finish (takes ~60 seconds). No payment needed to create your account.</p>
 
         <div class="steps" aria-label="Steps">
           <span class="step"><b>1</b> Pick</span>
@@ -188,7 +223,6 @@
           <span class="step"><b>3</b> Confirm</span>
         </div>
 
-        <!-- TWO PRIMARY (yellow) buttons -->
         <div class="cta-row" style="margin-top:0">
           <a class="btn btn-primary" data-plan="casual_50"
              href="https://www.timetopet.com/portal/woofofwalkstreet/create-account">
@@ -201,7 +235,7 @@
           </a>
         </div>
 
-        <div class="helper">Takes about 60 seconds. No payment needed to create your account.</div>
+        <div class="helper">New to us? We’ll confirm keys, access and routine after your request.</div>
 
         <div class="notice" role="note" style="margin-top:14px">
           Prefer to chat first?
@@ -217,11 +251,11 @@
 
         <ul class="trust-list">
           <li><strong>Trusted by 4,000+ pet-care businesses</strong> worldwide.</li>
-          <li><strong>Bank-grade security:</strong> the site uses 128-bit encryption.</li>
-          <li><strong>Secure hosting:</strong> data is kept on protected servers in monitored data centres with <strong>24/7 security</strong>.</li>
-          <li><strong>Safe backups:</strong> customer data is <strong>backed up multiple times a day</strong>.</li>
-          <li><strong>Everything in one place:</strong> booking requests, GPS maps, photo updates and messages.</li>
-          <li><strong>Private by design:</strong> we don’t store your card on our website — it stays in the portal.</li>
+          <li><strong>Bank-grade security:</strong> 128-bit encrypted connection.</li>
+          <li><strong>Secure hosting:</strong> monitored data centres with 24/7 security.</li>
+          <li><strong>Daily backups:</strong> your data is backed up multiple times per day.</li>
+          <li><strong>Everything in one place:</strong> booking requests, GPS maps, photo updates, messages.</li>
+          <li><strong>Privacy:</strong> we don’t store your card on our website — it stays in the portal.</li>
         </ul>
       </aside>
     </div>
@@ -234,19 +268,18 @@
         <h3 class="kicker" style="margin:0 0 6px;color:#9ef7d6">Inside Time To Pet</h3>
         <ol style="margin:0 0 8px 18px">
           <li>Create your account and tell us about your dog.</li>
-          <li>Request your first walk or reply to our suggested time.</li>
-          <li>See your booking confirmation in the portal.</li>
+          <li>Request your first walk or accept our suggested time.</li>
+          <li>See your booking confirmation in the portal (and via email).</li>
           <li>On walk day, view your <strong>GPS route</strong> and <strong>photo updates</strong>.</li>
         </ol>
-        <p class="mini"><em>Note:</em> Time To Pet doesn’t use a separate “thank-you page” — confirmations show in the portal and you’ll also get portal emails.</p>
       </div>
 
       <div class="edge" style="border-width:1px;margin-top:12px">
         <h3 class="kicker" style="margin:0 0 6px;color:#9ef7d6">From The Woof of Walk Street</h3>
         <ul style="margin:0 0 8px 18px">
           <li>We’ll confirm keys, routine and access details.</li>
-          <li>We’ll send a <strong>welcome email</strong> and next steps from <strong>info@woofofwalkstreet.com</strong>.</li>
-          <li>Need help? Call us on <a href="tel:+61456754050">+61 456 754 050</a>.</li>
+          <li>You’ll receive a welcome email from <strong>info@woofofwalkstreet.com</strong>.</li>
+          <li>Need help? Call <a href="tel:+61456754050">+61 456 754 050</a>.</li>
         </ul>
       </div>
     </section>
@@ -278,12 +311,12 @@
       <nav class="footer-col" aria-label="Services">
         <h3>Services</h3>
         <ul>
-          <li><a href="/services.html">All Services</a></li>
           <li><a href="/dog-walking-south-melbourne.html">Dog Walking South Melbourne</a></li>
           <li><a href="/casual-dog-walking-south-melbourne.html">Casual Dog Walking</a></li>
           <li><a href="/membership-starter.html">Starter Membership</a></li>
           <li><a href="/membership-growth.html">Growth Membership</a></li>
           <li><a href="/unlimited-dog-walks.html">Unlimited Membership</a></li>
+          <li><a href="/boarding-services.html">Boarding</a></li>
           <li><a href="/contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -397,6 +430,22 @@
         window.location.href = buildOutbound(a.getAttribute('data-plan') || '');
       }
     }, { capture:true });
+  })();
+  </script>
+
+  <!-- Count-down: days left to 30 Nov (Melbourne time) -->
+  <script>
+  (function(){
+    try{
+      const el = document.getElementById('days-left');
+      if(!el) return;
+      const now = new Date();
+      // 30 Nov 23:59:59 AEDT
+      const deadline = new Date('2025-11-30T23:59:59+11:00');
+      const ms = Math.max(0, deadline - now);
+      const days = Math.ceil(ms / (1000*60*60*24));
+      el.textContent = days + (days === 1 ? ' day left' : ' days left');
+    }catch(_){}
   })();
   </script>
 

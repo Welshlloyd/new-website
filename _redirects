@@ -4,6 +4,10 @@
 http://woofofwalkstreet.com/            https://www.woofofwalkstreet.com/                   301
 https://woofofwalkstreet.com/*          https://www.woofofwalkstreet.com/:splat             301
 
+
+/book-boarding            /book-boarding.html           301
+/book-boarding/           /book-boarding.html           301
+
 # ================================
 # Key fixes
 # ================================

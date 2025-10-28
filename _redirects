@@ -26,10 +26,25 @@ https://woofofwalkstreet.com/*          https://www.woofofwalkstreet.com/:splat 
 # Canonical pages (explicit .html targets)
 # Put these BEFORE trailing-slash rules to avoid loops
 # ================================
+# Existing canonicalisation
 /dog-walking-south-melbourne            /dog-walking-south-melbourne.html                   301
 /dog-walking-south-melbourne/           /dog-walking-south-melbourne.html                   301
 
+# NEW: unify extensionless hits to .html canonicals (fixes 404s & consolidates signals)
+# Unlimited membership
+/unlimited-dog-walks                    /unlimited-dog-walks.html                           301
+/unlimited-dog-walks/                   /unlimited-dog-walks.html                           301
+# Service-area pages
+/dog-walking-albert-park                /dog-walking-albert-park.html                       301
+/dog-walking-albert-park/               /dog-walking-albert-park.html                       301
+/dog-walking-middle-park                /dog-walking-middle-park.html                       301
+/dog-walking-middle-park/               /dog-walking-middle-park.html                       301
+/dog-walking-port-melbourne             /dog-walking-port-melbourne.html                    301
+/dog-walking-port-melbourne/            /dog-walking-port-melbourne.html                    301
+
+# ================================
 # Unlimited slug consolidation → /unlimited-dog-walks.html
+# ================================
 /membership-unlimited-plan.html         /unlimited-dog-walks.html                           301
 /membership-unlimited.html              /unlimited-dog-walks.html                           301
 /membership-unlimited                   /unlimited-dog-walks.html                           301

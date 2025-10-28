@@ -4,9 +4,9 @@
 http://woofofwalkstreet.com/            https://www.woofofwalkstreet.com/                   301
 https://woofofwalkstreet.com/*          https://www.woofofwalkstreet.com/:splat             301
 
-
-/book-boarding            /book-boarding.html           301
-/book-boarding/           /book-boarding.html           301
+# Explicit known pages
+/book-boarding                          /book-boarding.html                                 301
+/book-boarding/                         /book-boarding.html                                 301
 
 # ================================
 # Key fixes
@@ -38,6 +38,19 @@ https://woofofwalkstreet.com/*          https://www.woofofwalkstreet.com/:splat 
 # Unlimited membership
 /unlimited-dog-walks                    /unlimited-dog-walks.html                           301
 /unlimited-dog-walks/                   /unlimited-dog-walks.html                           301
+
+# Memberships hub
+/memberships                            /memberships.html                                   301
+/memberships/                           /memberships.html                                   301
+
+# Boarding services (7 days)
+/boarding-services                      /boarding-services.html                              301
+/boarding-services/                     /boarding-services.html                              301
+
+# Casual walking page
+/casual-dog-walking-south-melbourne     /casual-dog-walking-south-melbourne.html            301
+/casual-dog-walking-south-melbourne/    /casual-dog-walking-south-melbourne.html            301
+
 # Service-area pages
 /dog-walking-albert-park                /dog-walking-albert-park.html                       301
 /dog-walking-albert-park/               /dog-walking-albert-park.html                       301
@@ -112,10 +125,9 @@ https://woofofwalkstreet.com/*          https://www.woofofwalkstreet.com/:splat 
 
 # ================================
 # Friendly short links for campaigns
-# ================================
+# (Note: '/unlimited' handled above in consolidation)
 /starter                                /membership-starter.html                            301
 /growth                                 /membership-growth.html                             301
-/unlimited                              /unlimited-dog-walks.html                           301
 /credit                                 /membership-credit-booking-south-melbourne.html     301
 /join                                   /memberships.html                                   301
 
@@ -148,15 +160,15 @@ https://woofofwalkstreet.com/*          https://www.woofofwalkstreet.com/:splat 
 # ================================
 # Catch-all membership redirect
 # ================================
-/membership/*                          /memberships.html                                    301
+/membership/*                           /memberships.html                                    301
 
 # ================================
 # Clean removals (410 Gone)
 # ================================
-/wp-admin/*                            -                                                    410
-/wp-login.php                          -                                                    410
-/cgi-bin/*                             -                                                    410
-/phpmyadmin/*                          -                                                    410
-/searchreplacedb2.php                  -                                                    410
-/old-page                              -                                                    410
-/test-page                             -                                                    410
+/wp-admin/*                             -                                                    410
+/wp-login.php                           -                                                    410
+/cgi-bin/*                              -                                                    410
+/phpmyadmin/*                           -                                                    410
+/searchreplacedb2.php                   -                                                    410
+/old-page                               -                                                    410
+/test-page                              -                                                    410

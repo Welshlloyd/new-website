@@ -9,7 +9,7 @@
 
   <!-- SEO & Social Meta -->
   <meta name="description" content="Unlimited dog walking in South Melbourne — a calm, GPS-tracked 45-minute solo walk every weekday. Save over A$5,000/year vs casual + a week of boarding. 50% OFF your first month." />
-  <link rel="canonical" href="https://www.woofofwalkstreet.com/membership-unlimited.html" />
+  <link rel="canonical" href="https://www.woofofwalkstreet.com/unlimited-dog-walks.html" />
   <link rel="icon" href="/images/brand/favicon.ico" />
 
   <!-- Styles -->
@@ -78,7 +78,7 @@
 
     /* Right-side poster */
     .hero-art{
-      position:relative; aspect-ratio: 4 / 4; border-radius: 16px; overflow:hidden;
+      position:relative; aspect-ratio: 1 / 1; border-radius: 16px; overflow:hidden;
       border: 2px solid #111; box-shadow: 0 18px 48px rgba(0,0,0,.18);
     }
     .hero-art img{ width:100%; height:100%; object-fit:cover; display:block; }
@@ -121,7 +121,7 @@
     /* Sticky CTA (mobile) */
     @media (max-width:820px){
       .sticky-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:999;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border:1px solid rgba(0,0,0,.08);border-radius:16px;box-shadow:0 8px 24px rgba(0,0,0,.14);display:flex;gap:10px;justify-content:center;align-items:center;padding:10px}
-      .sticky-cta .cta-button{padding:10px 14px}
+      .sticky-cta .btn-grad{padding:10px 14px}
     }
 
     /* Thinner footer banner */
@@ -134,7 +134,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Unlimited Dog Walking South Melbourne — Weekday Solo Walks" />
   <meta property="og:description" content="A GPS-tracked solo dog walk every weekday in South Melbourne. Save over A$5,000/year vs casual + a week of boarding. 50% OFF first month." />
-  <meta property="og:url" content="https://www.woofofwalkstreet.com/membership-unlimited.html" />
+  <meta property="og:url" content="https://www.woofofwalkstreet.com/unlimited-dog-walks.html" />
   <meta property="og:image" content="https://www.woofofwalkstreet.com/images/memberships/membership-unlimited.webp" />
   <meta property="og:locale" content="en_AU" />
   <meta property="og:site_name" content="The Woof of Walk Street" />
@@ -145,11 +145,11 @@
   <meta name="twitter:description" content="Solo weekday walks with GPS tracking and photo updates. Save over A$5,000/year vs casual + a week boarding." />
   <meta name="twitter:image" content="https://www.woofofwalkstreet.com/images/memberships/membership-unlimited.webp" />
 
-  <!-- Preload hero poster (keeps LCP crisp) -->
+  <!-- Preload hero poster (square) for LCP -->
   <link rel="preload" as="image"
-        href="/images/memberships/unlimited-hero-card.webp"
-        imagesrcset="/images/memberships/unlimited-hero-card.webp 960w"
-        imagesizes="(max-width: 640px) 100vw, (max-width: 1200px) 50vw, 560px">
+        href="/images/memberships/unlimited-square-960.webp"
+        imagesrcset="/images/memberships/unlimited-square-512.webp 512w, /images/memberships/unlimited-square-720.webp 720w, /images/memberships/unlimited-square-960.webp 960w"
+        imagesizes="(min-width: 880px) 480px, 90vw" fetchpriority="high">
 
   <!-- Google Ads Global Site Tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
@@ -168,7 +168,7 @@
     "itemListElement":[
       {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
       {"@type":"ListItem","position":2,"name":"Memberships","item":"https://www.woofofwalkstreet.com/memberships.html"},
-      {"@type":"ListItem","position":3,"name":"Unlimited Dog Walking Membership","item":"https://www.woofofwalkstreet.com/membership-unlimited.html"}
+      {"@type":"ListItem","position":3,"name":"Unlimited Dog Walking Membership","item":"https://www.woofofwalkstreet.com/unlimited-dog-walks.html"}
     ]
   }
   </script>
@@ -214,7 +214,7 @@
     "description":"One 45-minute solo dog walk every weekday (Mon–Fri) in South Melbourne. GPS tracking + photo updates. Ethical, one-dog-only walks.",
     "brand":{"@type":"Brand","name":"The Woof of Walk Street"},
     "image":"https://www.woofofwalkstreet.com/images/memberships/membership-unlimited.webp",
-    "url":"https://www.woofofwalkstreet.com/membership-unlimited.html",
+    "url":"https://www.woofofwalkstreet.com/unlimited-dog-walks.html",
     "offers":{"@type":"Offer","priceCurrency":"AUD","price":"1500","availability":"https://schema.org/InStock","url":"https://www.timetopet.com/portal/woofofwalkstreet/create-account"},
     "aggregateRating":{"@type":"AggregateRating","ratingValue":"5","reviewCount":"12"}
   }
@@ -225,7 +225,7 @@
   {
     "@context":"https://schema.org",
     "@type":"FAQPage",
-    "@id":"https://www.woofofwalkstreet.com/membership-unlimited.html#faq",
+    "@id":"https://www.woofofwalkstreet.com/unlimited-dog-walks.html#faq",
     "mainEntity":[
       {"@type":"Question","name":"Can I cancel anytime?","acceptedAnswer":{"@type":"Answer","text":"Yes — there are no lock-ins. You can cancel before your next billing cycle."}},
       {"@type":"Question","name":"Do skipped days roll over?","acceptedAnswer":{"@type":"Answer","text":"No — Unlimited covers one walk per weekday. Keeping a steady rhythm is best for most dogs."}},
@@ -283,7 +283,7 @@
   </header>
 
   <main>
-    <!-- HERO (energised) -->
+    <!-- HERO (energised, gold-edged, square art) -->
     <section class="edge-hero" aria-labelledby="unlimited-title">
       <div class="edge-hero-inner">
         <!-- Left: copy + CTAs -->
@@ -316,10 +316,22 @@
         <!-- Right: poster image -->
         <div class="hero-art">
           <picture>
-            <source srcset="/images/memberships/unlimited-hero-card.webp" type="image/webp">
-            <img src="/images/memberships/unlimited-hero-card.webp"
-                 alt="Unlimited walks, unbeatable value — The Woof of Walk Street"
-                 width="960" height="960" loading="eager" decoding="async" fetchpriority="high">
+            <!-- Modern browsers: WEBP -->
+            <source
+              type="image/webp"
+              srcset="/images/memberships/unlimited-square-512.webp 512w,
+                      /images/memberships/unlimited-square-720.webp 720w,
+                      /images/memberships/unlimited-square-960.webp 960w"
+              sizes="(min-width: 880px) 480px, 90vw" />
+            <!-- Fallback: JPG -->
+            <img
+              src="/images/memberships/unlimited-square-960.jpg"
+              srcset="/images/memberships/unlimited-square-512.jpg 512w,
+                      /images/memberships/unlimited-square-720.jpg 720w,
+                      /images/memberships/unlimited-square-960.jpg 960w"
+              sizes="(min-width: 880px) 480px, 90vw"
+              alt="Unlimited walks, unbeatable value — The Woof of Walk Street"
+              width="960" height="960" loading="eager" decoding="async" fetchpriority="high">
           </picture>
           <span class="art-corner">UNLIMITED</span>
         </div>

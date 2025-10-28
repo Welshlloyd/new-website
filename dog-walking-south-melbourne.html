@@ -5,10 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Title + Meta (CTR-optimised) -->
-  <title>Dog Walking South Melbourne — Solo, GPS-Tracked Walks | The Woof of Walk Street</title>
-  <meta name="description" content="Professional dog walking in South Melbourne. Ethical one-dog-only 45-minute walks with GPS tracking & photo updates. Casual A$90 or save with Starter, Growth & Unlimited (50% off first month). Book online." />
+  <title>South Melbourne Dog Walker — Solo, GPS-Tracked Walks | The Woof of Walk Street</title>
+  <meta name="description" content="South Melbourne’s ethical one-dog-only walks. 45 minutes with GPS tracking & photo updates. Casual $90 or save with Starter, Growth & Unlimited (50% off first month). Book online." />
   <link rel="canonical" href="https://www.woofofwalkstreet.com/dog-walking-south-melbourne.html" />
   <link rel="icon" href="/images/brand/favicon.ico" />
+
+  <!-- Performance hints -->
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://www.google-analytics.com">
 
   <!-- Styles -->
   <link rel="stylesheet" href="/css/mini.css">
@@ -18,12 +22,12 @@
 
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Dog Walking South Melbourne — Solo, GPS-Tracked Walks">
+  <meta property="og:title" content="South Melbourne Dog Walker — Solo, GPS-Tracked Walks">
   <meta property="og:description" content="Ethical, one-dog-only dog walking in South Melbourne. GPS tracking & photo updates after every walk. Casual A$90 or save with memberships. 50% off Unlimited this month.">
   <meta property="og:url" content="https://www.woofofwalkstreet.com/dog-walking-south-melbourne.html">
   <meta property="og:image" content="https://www.woofofwalkstreet.com/images/pages/dog-walking/calm-consistent-one-dog-only-south-melbourne-dog-walking-large.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Dog Walking South Melbourne — Solo, GPS-Tracked Walks">
+  <meta name="twitter:title" content="South Melbourne Dog Walker — Solo, GPS-Tracked Walks">
   <meta name="twitter:description" content="GPS-tracked solo walks with photo updates across South Melbourne. Casual A$90 or save with memberships. Try Unlimited — 50% off this month.">
   <meta name="twitter:image" content="https://www.woofofwalkstreet.com/images/pages/dog-walking/calm-consistent-one-dog-only-south-melbourne-dog-walking-large.jpg">
 
@@ -55,11 +59,22 @@
   }
   </script>
 
-  <!-- Business + Service + WebPage JSON-LD -->
+  <!-- Business + Service + WebSite + WebPage JSON-LD -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@graph":[
+      {
+        "@type":"WebSite",
+        "@id":"https://www.woofofwalkstreet.com/#website",
+        "url":"https://www.woofofwalkstreet.com/",
+        "name":"The Woof of Walk Street",
+        "potentialAction":{
+          "@type":"SearchAction",
+          "target":"https://www.woofofwalkstreet.com/search.html?q={search_term_string}",
+          "query-input":"required name=search_term_string"
+        }
+      },
       {
         "@type":"PetService",
         "@id":"https://www.woofofwalkstreet.com/#business",
@@ -71,7 +86,9 @@
         "address":{"@type":"PostalAddress","addressLocality":"South Melbourne","addressRegion":"VIC","postalCode":"3205","addressCountry":"AU"},
         "areaServed":["South Melbourne","Albert Park","Middle Park","Port Melbourne","Southbank"],
         "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"07:00","closes":"19:00"}],
-        "sameAs":["https://maps.app.goo.gl/8UaSzJ6GmrDacfU49","https://instagram.com/woofofwalkstreet","https://facebook.com/woofofwalkstreet","https://x.com/woofofwalkstreet"]
+        "sameAs":["https://maps.app.goo.gl/8UaSzJ6GmrDacfU49","https://instagram.com/woofofwalkstreet","https://facebook.com/woofofwalkstreet","https://x.com/woofofwalkstreet"],
+        "hasMap":"https://maps.app.goo.gl/YnEoSPwhGocUZyWL9?g_st=ipc",
+        "geo":{"@type":"GeoCoordinates","latitude":-37.833,"longitude":144.958}
       },
       {
         "@type":"Service",
@@ -87,7 +104,7 @@
       {
         "@type":"WebPage",
         "@id":"https://www.woofofwalkstreet.com/dog-walking-south-melbourne.html#webpage",
-        "name":"Dog Walking South Melbourne — Solo, GPS-Tracked Walks",
+        "name":"South Melbourne Dog Walker — Solo, GPS-Tracked Walks",
         "description":"Professional, ethical solo dog walking in South Melbourne with GPS tracking and photo updates. Casual and membership options.",
         "url":"https://www.woofofwalkstreet.com/dog-walking-south-melbourne.html",
         "isPartOf":{"@id":"https://www.woofofwalkstreet.com/#website"}
@@ -96,7 +113,7 @@
   }
   </script>
 
-  <!-- FAQ JSON-LD (keep this; remove microdata below) -->
+  <!-- FAQ JSON-LD -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -131,7 +148,7 @@
     .site-footer a{color:#e6eef7;text-decoration:none}
     .site-footer a:hover,.site-footer a:focus{text-decoration:underline}
     .footer-brand p,.footer-geo,.footer-bottom{color:#e6eef7}
-    .footer-socials a img{filter:none} /* keep icons visible */
+    .footer-socials a img{filter:none}
     .footer-map{color:#cfe1ff}
     .site-footer .button-primary{color:#111;background:#f5b200;border-color:#f5b200}
     .site-footer .button-primary:hover{filter:brightness(1.05)}
@@ -142,7 +159,11 @@
   <!-- Promo ribbon (50% off Unlimited) -->
   <div id="promo" class="promo-ribbon promo--edge" role="region" aria-label="Promo: 50% off">
     <div class="promo-inner container">
-      <img class="promo-dog" src="/images/brand/dog-in-suit.webp" alt="" width="28" height="28" decoding="async" />
+      <img class="promo-dog"
+           src="/images/brand/dog-in-suit.webp"
+           alt="Dog wearing a suit – The Woof of Walk Street mascot"
+           width="28" height="28"
+           decoding="async" loading="lazy" />
       <span class="promo-copy"><strong>50% OFF</strong> Unlimited Daily Walks — 45-minute solo walks · GPS tracked · Photo updates</span>
       <a href="/unlimited-dog-walks.html" class="promo-cta">Learn More →</a>
       <button id="promo-close" class="promo-close" aria-label="Dismiss promo">✕</button>
@@ -188,8 +209,8 @@
         <a href="/faq.html">FAQs</a>
         <a href="/search.html">Search</a>
 
-        <!-- NEW: pre-TTP funnel buttons -->
-        <a class="btn button-primary nav-cta" href="/book-dog-walk/index.html">Book Walks</a>
+        <!-- Updated: canonical booking link -->
+        <a class="btn button-primary nav-cta" href="/book-dog-walk/">Book Walks</a>
         <a class="btn button-primary nav-cta" href="/book-boarding.html">Book Boarding</a>
       </nav>
     </div>
@@ -206,6 +227,7 @@
           src="/images/pages/dog-walking/calm-consistent-one-dog-only-south-melbourne-dog-walking-large.jpg"
           alt="Dog Walking South Melbourne — solo, calm GPS-tracked walk near Albert Park Lake"
           width="1200" height="800"
+          fetchpriority="high" decoding="async"
           style="max-width:920px;border-radius:12px;margin:0 auto;">
         <p class="muted" style="margin-top:.5rem">
           Casual solo walk (45 mins): <strong>A$90</strong>. Save with memberships:
@@ -213,7 +235,7 @@
           <a href="/unlimited-dog-walks.html">Unlimited</a>.
         </p>
         <div class="cta-buttons" style="justify-content:center;margin-top:.6rem">
-          <a class="cta-button" href="/book-dog-walk/index.html">Book Walks</a>
+          <a class="cta-button" href="/book-dog-walk/">Book Walks</a>
           <a class="cta-button secondary" href="/memberships.html">Compare Memberships</a>
         </div>
       </div>
@@ -222,7 +244,7 @@
     <!-- WHY US / TRUST -->
     <section>
       <div class="container">
-        <h2>Professional Dog Walkers in South Melbourne — Solo Only</h2>
+        <h2>Professional South Melbourne Dog Walkers — Solo Only</h2>
         <p>At <strong>The Woof of Walk Street</strong>, “solo” means solo — no pack walks, no car shuttles, no chaos. Your dog gets calm, focused attention from an insured, police-checked, first-aid-trained walker who knows South Melbourne’s streets and parks. We favour familiar, enriching routes — think <em>Albert Park Lake</em>, <em>St Vincent Gardens</em> and leafy backstreets — so your pup builds confidence, manners and a predictable routine.</p>
         <p>Every session includes a live <strong>GPS route</strong>, a <strong>photo update</strong>, and quick notes about how your dog went. Our force-free approach adapts to seniors, sniff-lovers and high-energy pups alike. If you’re booking often, our <a href="/memberships.html">dog walking memberships</a> reduce the per-walk price and secure priority slots (and our <a href="/unlimited-dog-walks.html">Unlimited plan</a> is <strong>50% off</strong> for the first month).</p>
         <p class="muted">Looking for weekend care too? See our boutique <a href="/boarding-services.html">Weekend Woof Club boarding</a> — one guest at a time for a quiet, home-style stay.</p>
@@ -232,9 +254,9 @@
     <!-- HOW IT WORKS -->
     <section class="section alt">
       <div class="container">
-        <h2>How Our Dog Walking Service Works</h2>
+        <h2>How Our South Melbourne Dog Walking Service Works</h2>
         <ol class="list-steps">
-          <li><strong>Book online:</strong> Choose a time between <em>7:00am–7:00pm (Mon–Fri)</em> via our <a href="/book-dog-walk/index.html">booking page</a>.</li>
+          <li><strong>Book online:</strong> Choose a time between <em>7:00am–7:00pm (Mon–Fri)</em> via our <a href="/book-dog-walk/">booking page</a>.</li>
           <li><strong>We collect & walk:</strong> We start from your door and take a calm, one-on-one 45-minute walk — never mixing unfamiliar dogs.</li>
           <li><strong>Proof & notes:</strong> You’ll receive a GPS route, photo and short summary straight after.</li>
         </ol>
@@ -250,10 +272,10 @@
         <ul class="list-check">
           <li>✅ <a href="/membership-starter.html">Starter</a> — 4 walks/month (≈ <strong>A$85</strong> per walk)</li>
           <li>✅ <a href="/membership-growth.html">Growth</a> — 10 walks/month (≈ <strong>A$80</strong> per walk)</li>
-          <li>✅ <a href="/unlimited-dog-walks.html">Unlimited</a> — weekday walks (≈ <strong>A$70</strong> per day; first month <strong>50% off</strong>)</li>
+          <li>✅ <a href="/unlimited-dog-walks.html">Unlimited</a> — weekday walks (≈ <strong>A$70*</strong>); first month <strong>50% off</strong></li>
         </ul>
         <div class="cta-buttons" style="margin-top:.6rem">
-          <a class="btn button-primary" href="/book-dog-walk/index.html">Book Walks</a>
+          <a class="btn button-primary" href="/book-dog-walk/">Book Walks</a>
           <a class="btn button-secondary" href="/memberships.html">See All Memberships</a>
         </div>
       </div>
@@ -263,6 +285,7 @@
     <section class="section alt">
       <div class="container">
         <h2>Compare Dog Walking Memberships</h2>
+        <h3>Compare Membership Options</h3>
         <p>Find the right plan for your dog’s lifestyle — whether you walk occasionally or every weekday. All memberships include 45-minute solo walks, GPS tracking, photo updates, and calm, one-on-one care.</p>
         <div class="table-scroll">
           <table class="pricing-table" aria-describedby="membership-note">
@@ -319,7 +342,20 @@
       </div>
     </section>
 
-    <!-- VISIBLE FAQ (microdata removed to avoid duplicate FAQPage) -->
+    <!-- RELATED BLOG POSTS (new) -->
+    <section class="section alt related-posts">
+      <div class="container">
+        <h2>Related Articles for South Melbourne Dog Owners</h2>
+        <ul class="list-links">
+          <li><a href="/blog/ethical-dog-walker.html">The Ethical Dog Walker — Why One-Dog-Only Walks Matter</a></li>
+          <li><a href="/blog/why-solo-walks.html">Why Solo Dog Walks Reduce Stress and Build Confidence</a></li>
+          <li><a href="/blog/best-dog-walks-south-melbourne.html">Best Dog Walks & Parks Around South Melbourne</a></li>
+        </ul>
+        <p class="muted">Explore our blog for ethical walking tips, local dog-friendly spots, and training ideas.</p>
+      </div>
+    </section>
+
+    <!-- VISIBLE FAQ -->
     <section class="faq" id="faq" aria-labelledby="faq-title">
       <div class="container">
         <h2 id="faq-title">Dog Walking FAQs</h2>
@@ -349,7 +385,7 @@
 
   <!-- Sticky dual CTA (mobile) -->
   <div class="sticky-cta" role="region" aria-label="Quick booking">
-    <a class="btn button-primary" href="/book-dog-walk/index.html">Book Walks</a>
+    <a class="btn button-primary" href="/book-dog-walk/">Book Walks</a>
     <a class="btn button-primary" href="/book-boarding.html">Book Boarding</a>
   </div>
 
@@ -357,25 +393,29 @@
   <footer class="site-footer" role="contentinfo">
     <div class="footer-banner">
       <picture>
-        <source srcset="/images/brand/footer-banner-1600x600.webp" media="(min-width: 768px)">
-        <img src="/images/brand/footer-banner-800x300.webp" alt="Happy dogs in Melbourne" loading="lazy" width="800" height="300">
+        <source srcset="/images/brand/footer-banner-1600x600.webp" type="image/webp" media="(min-width: 768px)">
+        <source srcset="/images/brand/footer-banner-800x300.webp" type="image/webp">
+        <img src="/images/brand/footer-banner-800x300.webp"
+             alt="Happy dogs enjoying a walk in a Melbourne park"
+             width="800" height="300"
+             loading="lazy" decoding="async">
       </picture>
     </div>
 
     <div class="container footer-grid">
       <section class="footer-brand">
-        <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="60" height="60" loading="lazy">
+        <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="60" height="60" loading="lazy" decoding="async">
         <p><strong>The Woof of Walk Street</strong><br>
           <a class="footer-map" href="https://maps.app.goo.gl/YnEoSPwhGocUZyWL9?g_st=ipc" target="_blank" rel="noopener">South Melbourne, VIC</a> · Mon–Fri 7am–7pm<br>
           <a href="tel:+61456754050">+61 456 754 050</a> · <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a>
         </p>
         <div class="footer-socials">
-          <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram"><img src="/images/social/instagram.svg" alt="" width="24" height="24"></a>
-          <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook"><img src="/images/social/facebook.svg" alt="" width="24" height="24"></a>
-          <a href="https://x.com/woofofwalkstreet" aria-label="X"><img src="/images/social/twitter.svg" alt="" width="24" height="24"></a>
+          <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram"><img src="/images/social/instagram.svg" alt="" width="24" height="24" loading="lazy" decoding="async"></a>
+          <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook"><img src="/images/social/facebook.svg" alt="" width="24" height="24" loading="lazy" decoding="async"></a>
+          <a href="https://x.com/woofofwalkstreet" aria-label="X"><img src="/images/social/twitter.svg" alt="" width="24" height="24" loading="lazy" decoding="async"></a>
         </div>
         <p class="cta-buttons" style="margin-top:.4rem">
-          <a class="btn button-primary" href="/book-dog-walk/index.html">Book Walks</a>
+          <a class="btn button-primary" href="/book-dog-walk/">Book Walks</a>
           <a class="btn button-primary" href="/book-boarding.html">Book Boarding</a>
         </p>
       </section>

@@ -6,7 +6,7 @@
 
   <!-- ===== SEO ===== -->
   <title>Book Dog Boarding — 20% Off (Ends 30 Nov) | The Woof of Walk Street</title>
-  <meta name="description" content="Book boutique, one-guest-only dog boarding in South Melbourne with daily walks, GPS & photo updates. Limited-time 20% OFF until 30 November." />
+  <meta name="description" content="Book boutique, one-guest-only dog boarding in South Melbourne with daily walks, GPS & photo updates. Dogs can sleep on our bed or sofa (like at home). Limited-time 20% OFF until 30 November 2025." />
   <link rel="canonical" href="https://www.woofofwalkstreet.com/book-boarding.html" />
   <link rel="icon" href="/images/brand/favicon.ico" />
 
@@ -65,6 +65,19 @@
     .faq details{border-top:1px solid #2a3440;padding:10px 0}
     .faq details:first-of-type{border-top:0}
     .faq summary{cursor:pointer;font-weight:800}
+
+    /* Persuasion block */
+    .why{display:grid;gap:12px;margin-top:12px}
+    @media(min-width:820px){.why{grid-template-columns:1fr 1fr}}
+    .why .point{border:1px solid #2a3440;border-radius:12px;padding:12px}
+    .why .point strong{color:#ffd166}
+
+    /* Thumbnail gallery */
+    .thumbs{margin-top:14px}
+    .thumb-grid{display:grid;gap:10px;grid-template-columns:repeat(2,1fr)}
+    @media(min-width:700px){.thumb-grid{grid-template-columns:repeat(5,1fr)}}
+    .thumb{aspect-ratio:1/1;overflow:hidden;border-radius:10px;border:2px solid #f5b20033}
+    .thumb img{width:100%;height:100%;object-fit:cover;display:block}
   </style>
 
   <!-- Preload LCP promo image -->
@@ -86,13 +99,13 @@
   <!-- Social -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Book Boutique Dog Boarding — 20% Off (Ends 30 Nov)">
-  <meta property="og:description" content="One-guest-only, calm home-style care with daily walks, GPS & photo updates. Book now — 20% OFF ends 30 November." />
+  <meta property="og:description" content="One-guest-only, calm home-style care with daily walks, GPS & photo updates. Book now — 20% OFF ends 30 November 2025." />
   <meta property="og:url" content="https://www.woofofwalkstreet.com/book-boarding.html">
   <meta property="og:image" content="https://www.woofofwalkstreet.com/images/promos/boarding/boarding-promo-20off-1024.webp">
   <meta property="og:locale" content="en_AU">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Book Boutique Dog Boarding — 20% Off (Ends 30 Nov)">
-  <meta name="twitter:description" content="Calm, one-guest-only boarding. Walks, GPS & photo updates. 20% OFF ends 30 November." />
+  <meta name="twitter:description" content="Calm, one-guest-only boarding. Walks, GPS & photo updates. 20% OFF ends 30 November 2025." />
   <meta name="twitter:image" content="https://www.woofofwalkstreet.com/images/promos/boarding/boarding-promo-20off-1024.webp">
 
   <!-- Breadcrumb JSON-LD -->
@@ -119,7 +132,7 @@
       "address":{"@type":"PostalAddress","addressLocality":"South Melbourne","addressRegion":"VIC","addressCountry":"AU"}
     },
     "areaServed": ["South Melbourne","Albert Park","Port Melbourne","Middle Park","Southbank"],
-    "description": "Calm, home-style, one-guest-only boarding with daily walks, GPS and photo updates. Limited-time 20% OFF until 30 November.",
+    "description": "Calm, home-style, one-guest-only boarding with daily walks, GPS and photo updates. Limited-time 20% OFF until 30 November 2025.",
     "url": "https://www.woofofwalkstreet.com/book-boarding.html",
     "offers": [
       {"@type":"Offer","name":"Weekday Boarding (per night)","price":"125","priceCurrency":"AUD","availability":"https://schema.org/InStock","priceValidUntil":"2025-11-30","url":"https://www.woofofwalkstreet.com/book-boarding.html"},
@@ -136,8 +149,8 @@
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
     {"@type":"Question","name":"How many dogs do you board at once?","acceptedAnswer":{"@type":"Answer","text":"Only one guest at a time for calm, stress-free care."}},
     {"@type":"Question","name":"Do you provide updates?","acceptedAnswer":{"@type":"Answer","text":"Yes — GPS maps and photos are shared in your portal."}},
-    {"@type":"Question","name":"Can you handle special diets or meds?","acceptedAnswer":{"@type":"Answer","text":"Yes. Tell us in the booking portal and we’ll follow your instructions."}},
-    {"@type":"Question","name":"Is pick-up/drop-off available?","acceptedAnswer":{"@type":"Answer","text":"We’ll confirm pick-up/drop-off windows after you request your dates."}}
+    {"@type":"Question","name":"Can my dog sleep on your bed or sofa?","acceptedAnswer":{"@type":"Answer","text":"Yes — if that’s your home routine, we continue it here. Comfort first."}},
+    {"@type":"Question","name":"Is pick-up/drop-off available?","acceptedAnswer":{"@type":"Answer","text":"We’ll confirm windows after you request your dates. We can also pick up your dog’s bed or crate locally."}}
   ]}
   </script>
 </head>
@@ -177,7 +190,7 @@
                           /images/promos/boarding/boarding-promo-20off-1600.webp 1600w"
                   sizes="(max-width: 640px) 88vw, 320px">
           <img src="/images/promos/boarding/boarding-promo-20off-1024.webp"
-               alt="Promo: 20% OFF dog boarding — ends 30 November"
+               alt="Promo: 20% OFF dog boarding — ends 30 November 2025"
                width="1024" height="1024" loading="eager" decoding="async" fetchpriority="high">
         </picture>
 
@@ -282,6 +295,42 @@
           <strong>Offer:</strong> 20% OFF boarding until <strong>30 November 2025</strong>. We apply the discount after your request — you’ll see it in your portal/email confirmation.
         </div>
 
+        <!-- Persuasion: why we’re different -->
+        <section class="why" aria-labelledby="why-different">
+          <h3 id="why-different" class="muted" style="margin:10px 0 2px">Why families choose us</h3>
+          <div class="point">
+            <p><strong>One guest only.</strong> No kennels, no overwhelm. Your dog gets our full attention.</p>
+          </div>
+          <div class="point">
+            <p><strong>Sleep like at home.</strong> Bed or sofa welcome if that’s your routine. We can <strong>pick up your dog’s bed or crate</strong> locally.</p>
+          </div>
+          <div class="point">
+            <p><strong>Daily walks + enrichment.</strong> Multiple walks with <strong>GPS map</strong> and <strong>photo updates</strong>. Food, enrichment games, and <strong>bones & chicken treats</strong> included (let us know allergies).</p>
+          </div>
+        </section>
+
+        <!-- Thumbnails: recent boarding photos -->
+        <section class="thumbs" aria-labelledby="recent-photos">
+          <h3 id="recent-photos" class="muted" style="margin:10px 0 6px">Recent boarding photos</h3>
+          <div class="thumb-grid" role="list">
+            <figure class="thumb" role="listitem">
+              <img src="/images/boarding/boarding-bed-jack.webp" alt="Small dog napping under a doona on our bed" width="640" height="640" loading="lazy" decoding="async">
+            </figure>
+            <figure class="thumb" role="listitem">
+              <img src="/images/boarding/boarding-couch-brown.webp" alt="Brown pup asleep on the sofa during boarding" width="640" height="640" loading="lazy" decoding="async">
+            </figure>
+            <figure class="thumb" role="listitem">
+              <img src="/images/boarding/boarding-couch-jack.webp" alt="Jack Russell snoozing upside down on cushions" width="640" height="640" loading="lazy" decoding="async">
+            </figure>
+            <figure class="thumb" role="listitem">
+              <img src="/images/boarding/boarding-closeup-brown.webp" alt="Close-up of a relaxed brown dog with chew" width="640" height="640" loading="lazy" decoding="async">
+            </figure>
+            <figure class="thumb" role="listitem">
+              <img src="/images/boarding/boarding-snooze-scruffy.webp" alt="Scruffy white pup dozing after enrichment play" width="640" height="640" loading="lazy" decoding="async">
+            </figure>
+          </div>
+        </section>
+
         <p class="mini" style="margin-top:10px">
           Prefer to chat first?
           <a class="btn btn-outline" href="/contact.html">Ask a Question</a>
@@ -332,12 +381,12 @@
             <p>Yes — GPS maps and photos are shared in your portal.</p>
           </details>
           <details>
-            <summary>Can you handle special diets or meds?</summary>
-            <p>Yes. Add details in the portal and we’ll follow your instructions.</p>
+            <summary>Can my dog sleep on your bed or sofa?</summary>
+            <p>Absolutely — if that’s your home routine, we continue it here.</p>
           </details>
           <details>
             <summary>Is pick-up/drop-off available?</summary>
-            <p>We’ll confirm windows after you request your dates.</p>
+            <p>We’ll confirm windows after you request your dates. We can also pick up your dog’s bed or crate locally.</p>
           </details>
         </div>
       </aside>

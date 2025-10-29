@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Dog Boarding South Melbourne | One-Guest-Only, Home-Style Stays (20% Off Until 30 Nov)</title>
-  <meta name="description" content="Boutique, one-guest-only dog boarding in South Melbourne. Dogs can sleep on our bed or sofa (like at home). Daily walks with GPS & photo updates. Food, enrichment games, bones & chicken treats included. 20% off boarding until 30 November." />
+  <title>Dog Boarding South Melbourne | One-Guest-Only, Home-Style Stays (20% Off)</title>
+  <meta name="description" content="Boutique, one-guest-only dog boarding in South Melbourne. Dogs can sleep on our bed or sofa (like at home). Daily walks with GPS & photo updates. Food, enrichment games, bones & chicken treats included. 20% off until 30 November." />
   <link rel="canonical" href="https://www.woofofwalkstreet.com/boarding-services.html" />
   <link rel="icon" href="/images/brand/favicon.ico" />
 
-  <!-- Styles -->
+  <!-- Base styles -->
   <link rel="stylesheet" href="/css/mini.css">
   <link rel="stylesheet" href="/css/styles.css">
 
@@ -27,6 +27,7 @@
 
   <!-- Preload LCP hero image -->
   <link rel="preload" as="image" href="/images/gallery/dog-weekend-woof.jpg"
+        imagesrcset="/images/gallery/dog-weekend-woof-800.jpg 800w, /images/gallery/dog-weekend-woof.jpg 1200w"
         imagesizes="(max-width: 640px) 100vw, (max-width: 1200px) 90vw, 1200px">
 
   <!-- Breadcrumbs JSON-LD -->
@@ -47,9 +48,9 @@
     "@context":"https://schema.org",
     "@type":"Service",
     "name":"Weekend Woof Club (Boutique Dog Boarding)",
-    "provider":{"@type":"LocalBusiness","name":"The Woof of Walk Street"},
-    "areaServed":["South Melbourne","Albert Park","Port Melbourne","Middle Park","Southbank"],
     "serviceType":"Dog Boarding",
+    "provider":{"@type":"LocalBusiness","name":"The Woof of Walk Street","@id":"https://www.woofofwalkstreet.com/#business"},
+    "areaServed":["South Melbourne","Albert Park","Port Melbourne","Middle Park","Southbank","South Yarra"],
     "url":"https://www.woofofwalkstreet.com/boarding-services.html",
     "description":"One-guest-only, boutique dog boarding with daily walks, GPS & photo updates, and home-style sleep on bed/sofa if preferred.",
     "offers": {
@@ -62,7 +63,7 @@
   }
   </script>
 
-  <!-- FAQ JSON-LD to support rich results -->
+  <!-- FAQ JSON-LD -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -77,70 +78,73 @@
   }
   </script>
 
-  <!-- Page-only polish & edgy gold accents -->
+  <!-- Page-only contrast fixes + accents -->
   <style>
-    /* Gold edging utilities */
-    .edge-gold { border:2px solid #f5b200; border-radius:16px; box-shadow:0 0 20px rgba(245,178,0,.25); }
-    .edge-gold-soft { border:2px solid rgba(245,178,0,.35); border-radius:14px; box-shadow:0 0 14px rgba(245,178,0,.2); }
-    .heading-underline {
-      position:relative; display:inline-block; padding-bottom:4px;
-    }
-    .heading-underline::after {
-      content:""; position:absolute; left:0; right:0; bottom:0; height:2px;
-      background:linear-gradient(90deg,#f5b200,transparent 70%); opacity:.9;
-    }
+    /* ===== Contrast utilities ===== */
+    .bg-dark{ background:#0b0f14; color:#fff; }
+    .bg-darker{ background:#0c0f13; color:#fff; }
+    .bg-light{ background:#ffffff; color:#111; }
+    .bg-panel{ background:#141a24; color:#fff; }
+    .text-light *{ color:#fff !important; }
+    .text-dark *{ color:#111 !important; }
+    .gold-edge{ border:2px solid #f5b200; border-radius:16px; box-shadow:0 0 20px rgba(245,178,0,.22); }
+    .gold-soft{ border:2px solid rgba(245,178,0,.35); border-radius:14px; box-shadow:0 0 14px rgba(245,178,0,.16); }
+    .heading-underline{ position:relative; display:inline-block; padding-bottom:4px; }
+    .heading-underline::after{ content:""; position:absolute; left:0; right:0; bottom:0; height:2px; background:linear-gradient(90deg,#f5b200,transparent 70%); opacity:.9; }
 
-    .quotes .quote::before { content:"★★★★★"; display:block; letter-spacing:.2ch; margin-bottom:.35rem; opacity:.9; }
+    /* Ensure all text inside dark sections is readable on mobile */
+    .bg-dark h1,.bg-dark h2,.bg-dark h3,.bg-dark p,.bg-dark li,.bg-dark a,
+    .bg-darker h1,.bg-darker h2,.bg-darker h3,.bg-darker p,.bg-darker li,.bg-darker a,
+    .bg-panel h1,.bg-panel h2,.bg-panel h3,.bg-panel p,.bg-panel li,.bg-panel a{ color:#fff; }
+    .bg-dark a, .bg-darker a, .bg-panel a{ text-decoration:underline; }
 
-    /* Booking section (dark + gold) */
-    .booking-section { background: linear-gradient(180deg, #0c0f13 0%, #121720 100%); color:#fff; padding:40px 0 50px; border-block:4px solid #f5b200; margin-top:10px; }
-    .booking-section h2,.booking-section h3,.booking-section p,.booking-section li,.booking-section span { color:#fff !important; }
-    .booking-section .grid { display:grid; gap:14px; }
-    @media (min-width:860px){ .booking-section .grid { grid-template-columns: repeat(2,1fr); } }
-    @media (min-width:1040px){ .booking-section .grid { grid-template-columns: repeat(3,1fr); } }
+    /* Buttons */
+    .btn{ display:inline-flex; align-items:center; justify-content:center; gap:.5rem; padding:12px 18px; border-radius:999px; font-weight:900; text-decoration:none; border:1px solid transparent; transition:.22s; }
+    .btn-primary{ background:linear-gradient(180deg,#ffdd6a 0%, #f5b200 100%); color:#111; border:0; box-shadow:0 10px 28px rgba(245,178,0,.35); }
+    .btn-primary:hover{ transform:translateY(-2px) scale(1.03); }
+    .btn-ghost{ background:transparent; border:1px solid #2a3440; color:#fff; }
+    .btn-ghost:hover{ border-color:#fff; transform:translateY(-2px); }
 
+    /* Layout bits */
+    .container{ max-width:1100px; margin:0 auto; padding:0 16px; }
+    .section{ padding:22px 0; }
+    .grid{ display:grid; gap:14px; }
+    @media(min-width:900px){ .grid-cols-2{ grid-template-columns:1fr 1fr; } .grid-cols-3{ grid-template-columns:repeat(3,1fr); } }
+
+    /* Pricing */
     .pricing-card{ background:#141a24; color:#fff; border:2px solid rgba(245,178,0,.45); border-radius:16px; box-shadow:0 0 22px rgba(245,178,0,.28); transition:.25s; padding:18px; display:flex; flex-direction:column; gap:8px; }
-    .pricing-card:hover{ border-color:#f5b200; box-shadow:0 0 34px rgba(245,178,0,.5); transform:translateY(-4px); }
-    .pricing-card h3{ margin:.2rem 0 .2rem; font-weight:900 }
+    .pricing-card:hover{ border-color:#f5b200; box-shadow:0 0 34px rgba(245,178,0,.45); transform:translateY(-3px); }
     .pricing-meta{ color:#cfd6df; margin-top:-4px }
     .price-row{ display:flex; align-items:baseline; gap:8px; margin-top:4px; }
-    .old-price{ text-decoration:line-through; opacity:.75; color:#b9c2cc; font-size:1rem; }
+    .old-price{ text-decoration:line-through; opacity:.8; color:#cbd3dd; font-size:1rem; }
     .price{ font-size:1.6rem; font-weight:900; color:#ffd166; }
-    .pricing-card .btn{ margin-top:6px; display:inline-flex; justify-content:center; background:linear-gradient(180deg,#ffdd6a 0%, #f5b200 100%); color:#111; font-weight:900; border:0; box-shadow:0 0 18px rgba(245,178,0,.45); }
-    .pricing-card .btn:hover{ transform:translateY(-2px) scale(1.02) }
-    .booking-includes{ margin-top:10px; color:#cfd6df; border:1px dashed #2a3440; border-radius:12px; padding:10px; background:rgba(255,255,255,.02); }
     .promo-chip{ display:inline-block; margin:8px 0 0; padding:.28rem .6rem; border-radius:999px; background:#f5b200; color:#111; font-weight:800; font-size:.85rem; }
 
-    /* Home-style comfort block */
-    .comfort{ display:grid; gap:14px; margin-top:16px; }
-    @media(min-width:900px){ .comfort{ grid-template-columns:1.2fr .8fr; } }
-    .comfort .card{ border:2px solid #f5b20022; border-radius:14px; padding:16px; }
+    /* Compare block */
+    .compare .col{ border-radius:14px; padding:14px; }
+    .compare .good{ border:2px solid rgba(90,242,198,.38); background:linear-gradient(180deg,rgba(90,242,198,.10),rgba(90,242,198,.06)); }
+    .compare .other{ border:2px solid rgba(255,0,0,.22); background:linear-gradient(180deg,rgba(255,0,0,.10),rgba(255,0,0,.06)); }
+    .list-check li::marker{ content:"✔ "; }
+    .list-cross li::marker{ content:"✖ "; }
 
-    /* Why us vs kennels comparison */
-    .compare { margin-top:16px; display:grid; gap:12px; }
-    @media(min-width:860px){ .compare { grid-template-columns:1fr 1fr; } }
-    .compare .col { padding:14px; border-radius:14px; }
-    .compare .good { border:2px solid rgba(90,242,198,.35); background:linear-gradient(180deg,rgba(90,242,198,.06),transparent); }
-    .compare .other { border:2px solid rgba(255,0,0,.18); background:linear-gradient(180deg,rgba(255,0,0,.06),transparent); }
-
-    /* Recent photos gallery */
-    .boarding-gallery{ margin-top:18px; }
+    /* Thumbs */
     .thumb-grid{ display:grid; gap:10px; grid-template-columns:repeat(2,1fr); }
-    @media(min-width:700px){ .thumb-grid{ grid-template-columns:repeat(5,1fr); } }
-    .thumb{ aspect-ratio: 1 / 1; overflow:hidden; border-radius:10px; border:2px solid #f5b20033; }
+    @media(min-width:720px){ .thumb-grid{ grid-template-columns:repeat(5,1fr); } }
+    .thumb{ aspect-ratio:1/1; overflow:hidden; border-radius:12px; border:2px solid #f5b20033; }
     .thumb img{ width:100%; height:100%; object-fit:cover; display:block; }
-    .thumb figcaption{ font-size:.8rem; color:#5b6775; margin-top:4px; text-align:center; }
 
-    /* Blog teaser cards */
-    .blog-teasers { display:grid; gap:12px; margin-top:10px; }
-    @media(min-width:860px){ .blog-teasers{ grid-template-columns:1fr 1fr; } }
-    .blog-card { padding:14px; border-radius:14px; border:2px solid rgba(245,178,0,.28); transition:.2s; }
-    .blog-card:hover { border-color:#f5b200; box-shadow:0 0 18px rgba(245,178,0,.28); transform:translateY(-2px); }
+    /* Header/nav contrast on mobile */
+    .site-header, .nav-links, .nav-group-list{ background:#0b0f14 !important; }
+    .site-header a, .nav-group-btn{ color:#fff !important; }
+
+    /* Focus states for a11y */
+    :focus-visible{ outline:3px solid #ffd166; outline-offset:2px; border-radius:6px; }
   </style>
 </head>
 
-<body>
-  <!-- Google Ads Global Site Tag (optional if already site-wide) -->
+<body class="bg-dark">
+
+  <!-- Google Ads Global Site Tag (kept) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config','AW-17527927259');</script>
 
@@ -156,7 +160,7 @@
     </div>
   </div>
 
-  <!-- Impact ribbon (charity) -->
+  <!-- Impact ribbon -->
   <div class="impact-ribbon" role="note" aria-label="Walks that do more: 10% donated">
     <div class="impact-inner">
       <span class="impact-emoji" aria-hidden="true">💛</span>
@@ -181,8 +185,8 @@
 
       <nav class="nav-links" aria-label="Primary">
         <section class="nav-group">
-          <button class="nav-group-btn" aria-expanded="false" aria-controls="nav-services">Services</button>
-          <ul id="nav-services" class="nav-group-list">
+          <button class="nav-group-btn" aria-expanded="false" aria-controls="nav-services">Services ▾</button>
+          <ul id="nav-services" class="nav-group-list" hidden>
             <li><a href="/services.html">All Services</a></li>
             <li><a href="/dog-walking-south-melbourne.html">Dog Walking South Melbourne</a></li>
             <li><a href="/boarding-services.html" aria-current="page">Boarding — Weekend Woof Club</a></li>
@@ -194,58 +198,59 @@
         <a href="/blog/index.html">Blog</a>
         <a href="/faq.html">FAQs</a>
         <a href="/search.html">Search</a>
-        <a class="btn button-primary nav-cta" href="/book-boarding.html?utm_source=website&utm_medium=header&utm_campaign=book_boarding">Book Boarding – 20% Off</a>
+        <a class="btn btn-primary nav-cta" href="/book-boarding.html?utm_source=website&utm_medium=header&utm_campaign=book_boarding">Book Boarding – 20% Off</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- Hero -->
-    <section class="hero">
+    <!-- Hero (dark) -->
+    <section class="section bg-darker">
       <div class="container">
         <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="/">Home</a> › Dog Boarding South Melbourne</nav>
         <h1>Dog Boarding in South Melbourne — Weekend Woof Club</h1>
         <p class="subhead">Boutique weekend & weekday stays · One guest only · Home-style comfort & daily walks</p>
+
         <img src="/images/gallery/dog-weekend-woof.jpg"
              alt="Relaxed pup during boutique weekend boarding in South Melbourne"
-             style="max-width:920px;border-radius:12px;display:block;margin:0 auto"
+             style="max-width:920px;border-radius:12px;display:block;margin:10px auto 0"
              width="1200" height="800" loading="eager" decoding="async" fetchpriority="high">
 
-        <div class="cta-buttons" style="justify-content:center;flex-wrap:wrap;margin-top:14px">
-          <a id="book-boarding-hero" class="cta-button" href="/book-boarding.html?utm_source=website&utm_medium=hero&utm_campaign=book_boarding">Book Boarding – 20% Off</a>
-          <a class="cta-button secondary" href="/dog-walking-south-melbourne.html">Need weekday walks?</a>
-        </div>
+        <p class="center" style="margin-top:12px">
+          <a id="book-boarding-hero" class="btn btn-primary" href="/book-boarding.html?utm_source=website&utm_medium=hero&utm_campaign=book_boarding">Check Availability – 20% Off</a>
+          <a class="btn btn-ghost" href="/dog-walking-south-melbourne.html">Need weekday walks?</a>
+        </p>
       </div>
     </section>
 
-    <!-- Booking/pricing -->
-    <section class="booking-section" aria-labelledby="choose-stay">
+    <!-- Pricing (dark) -->
+    <section class="section bg-darker" aria-labelledby="choose-stay">
       <div class="container">
-        <h2 id="choose-stay" class="heading-underline" style="font-weight:900;margin:0 0 6px">Choose Your Stay</h2>
-        <p class="mini" style="margin:0 0 12px">20% off boarding until <strong>30 November</strong>. Prices below show the discount.</p>
+        <h2 id="choose-stay" class="heading-underline">Choose Your Stay</h2>
+        <p class="mini">20% off boarding until <strong>30 November</strong>. Prices below show the discount.</p>
 
-        <div class="grid" style="margin-top:10px">
+        <div class="grid grid-cols-3" style="margin-top:10px">
           <article class="pricing-card">
             <h3>Weekday Boarding</h3>
             <p class="pricing-meta">Mon–Thu · Min 2 nights</p>
             <div class="price-row"><span class="old-price">$125</span><span class="price">$100</span><span>/ night</span></div>
-            <a class="btn" href="/book-boarding.html?plan=boarding_weekday&utm_source=website&utm_medium=pricing_card&utm_campaign=book_boarding">Book Weekday Boarding</a>
-            <span class="promo-chip">20% Off until 30 Nov</span>
-          </article>
-
-          <article class="pricing-card">
-            <h3>Weekend Woof Club</h3>
-            <p class="pricing-meta">2 nights: Fri–Sun</p>
-            <div class="price-row"><span class="old-price">$300</span><span class="price">$240</span></div>
-            <a class="btn" href="/book-boarding.html?plan=weekend_2&utm_source=website&utm_medium=pricing_card&utm_campaign=book_boarding">Book Weekend (2 nights)</a>
+            <a class="btn btn-primary" href="/book-boarding.html?plan=boarding_weekday&utm_source=website&utm_medium=pricing_card&utm_campaign=book_boarding">Book Weekday Boarding</a>
             <span class="promo-chip">20% Off</span>
           </article>
 
           <article class="pricing-card">
-            <h3>Weekend Woof Club</h3>
-            <p class="pricing-meta">3 nights: Fri–Mon</p>
+            <h3>Weekend Woof Club (2 nights)</h3>
+            <p class="pricing-meta">Fri–Sun</p>
+            <div class="price-row"><span class="old-price">$300</span><span class="price">$240</span></div>
+            <a class="btn btn-primary" href="/book-boarding.html?plan=weekend_2&utm_source=website&utm_medium=pricing_card&utm_campaign=book_boarding">Book Weekend (2 nights)</a>
+            <span class="promo-chip">20% Off</span>
+          </article>
+
+          <article class="pricing-card">
+            <h3>Weekend Woof Club (3 nights)</h3>
+            <p class="pricing-meta">Fri–Mon</p>
             <div class="price-row"><span class="old-price">$450</span><span class="price">$360</span></div>
-            <a class="btn" href="/book-boarding.html?plan=weekend_3&utm_source=website&utm_medium=pricing_card&utm_campaign=book_boarding">Book Weekend (3 nights)</a>
+            <a class="btn btn-primary" href="/book-boarding.html?plan=weekend_3&utm_source=website&utm_medium=pricing_card&utm_campaign=book_boarding">Book Weekend (3 nights)</a>
             <span class="promo-chip">20% Off</span>
           </article>
 
@@ -253,7 +258,7 @@
             <h3>Week Stay</h3>
             <p class="pricing-meta">7 nights (discounted)</p>
             <div class="price-row"><span class="old-price">$750</span><span class="price">$600</span></div>
-            <a class="btn" href="/book-boarding.html?plan=week_7&utm_source=website&utm_medium=pricing_card&utm_campaign=book_boarding">Book Week (7 nights)</a>
+            <a class="btn btn-primary" href="/book-boarding.html?plan=week_7&utm_source=website&utm_medium=pricing_card&utm_campaign=book_boarding">Book Week (7 nights)</a>
             <span class="promo-chip">20% Off</span>
           </article>
 
@@ -261,44 +266,43 @@
             <h3>2-Week Stay</h3>
             <p class="pricing-meta">14 nights (discounted)</p>
             <div class="price-row"><span class="old-price">$1,400</span><span class="price">$1,120</span></div>
-            <a class="btn" href="/book-boarding.html?plan=week_14&utm_source=website&utm_medium=pricing_card&utm_campaign=book_boarding">Book 2 Weeks (14 nights)</a>
+            <a class="btn btn-primary" href="/book-boarding.html?plan=week_14&utm_source=website&utm_medium=pricing_card&utm_campaign=book_boarding">Book 2 Weeks (14 nights)</a>
             <span class="promo-chip">20% Off</span>
           </article>
         </div>
 
-        <div class="booking-includes edge-gold-soft" style="margin-top:12px">
+        <div class="gold-soft" style="margin-top:12px; padding:12px;">
           <strong>Included in every stay:</strong> multiple daily walks with GPS & photo updates, <strong>food</strong>, <strong>enrichment games</strong>, and <strong>bones & chicken treats</strong>. Dogs are welcome to <strong>sleep on our bed or the sofa</strong> if that’s their home routine. We can <strong>pick up your dog’s bed or crate</strong> locally for extra comfort.
         </div>
 
-        <div class="cta-buttons" style="margin-top:12px">
-          <a class="btn" href="/book-boarding.html?utm_source=website&utm_medium=pricing_bottom&utm_campaign=book_boarding">Book Boarding – 20% Off</a>
-          <a class="btn button-secondary" href="/contact.html">Ask a question</a>
-          <a class="btn button-secondary" href="tel:+61456754050">Call +61 456 754 050</a>
-        </div>
+        <p class="cta-buttons" style="margin-top:12px">
+          <a class="btn btn-primary" href="/book-boarding.html?utm_source=website&utm_medium=pricing_bottom&utm_campaign=book_boarding">Book Boarding – 20% Off</a>
+          <a class="btn btn-ghost" href="/contact.html">Ask a question</a>
+          <a class="btn btn-ghost" href="tel:+61456754050">Call +61 456 754 050</a>
+        </p>
       </div>
     </section>
 
-    <!-- Core copy + comfort policy -->
-    <section>
-      <div class="container comfort">
-        <article class="card edge-gold-soft">
+    <!-- Home-style comfort (light content card + dark page background) -->
+    <section class="section bg-darker">
+      <div class="container grid grid-cols-2">
+        <article class="gold-soft bg-light text-dark" style="padding:16px">
           <h2 class="heading-underline">Home-Style Comfort (No Kennels, Ever)</h2>
-          <p>When you head away, you want your dog relaxed, settled, and loved. At <strong>The Woof of Walk Street</strong>, our <strong>Weekend Woof Club</strong> is South Melbourne’s boutique alternative to kennels—<strong>one guest only</strong>, calm routine, everyday comforts.</p>
+          <p>When you head away, you want your dog relaxed, settled, and loved. Our <strong>Weekend Woof Club</strong> is South Melbourne’s boutique alternative to kennels—<strong>one guest only</strong>, calm routine, everyday comforts.</p>
           <ul class="list-check">
-            <li>🐾 <strong>One guest only</strong> — calmer, safer, truly personal care</li>
-            <li>🛏️ <strong>Sleep on our bed or the sofa</strong> if that’s what you do at home</li>
-            <li>🧺 We can <strong>pick up dog beds or crates</strong> locally before your stay</li>
-            <li>🧠 Enrichment games for a settled, happy guest</li>
-            <li>🌳 Local walks around <strong>Albert Park</strong> & South Melbourne streets</li>
-            <li>📸 Daily photo & text updates direct to your phone</li>
+            <li>One guest only — calmer, safer, truly personal care</li>
+            <li>Sleep on our bed or the sofa if that’s what you do at home</li>
+            <li>We can pick up dog beds or crates locally before your stay</li>
+            <li>Enrichment games for a settled, happy guest</li>
+            <li>Local walks around <strong>Albert Park</strong> & South Melbourne streets</li>
+            <li>Daily photo & text updates direct to your phone</li>
           </ul>
-          <p>Perfect for short breaks, busy weekends, or any time you want absolute peace of mind — with a service level no traditional boarding facility can match.</p>
           <p class="stack-sm">
-            <a class="btn button-primary" href="/book-boarding.html?utm_source=website&utm_medium=comfort&utm_campaign=book_boarding">Reserve a Stay – 20% Off</a>
+            <a class="btn btn-primary" href="/book-boarding.html?utm_source=website&utm_medium=comfort&utm_campaign=book_boarding">Reserve a Stay – 20% Off</a>
           </p>
         </article>
 
-        <aside class="card edge-gold-soft">
+        <aside class="gold-soft bg-light text-dark" style="padding:16px">
           <h2 class="heading-underline">How It Works</h2>
           <ol class="list-steps">
             <li>Send preferred dates</li>
@@ -313,10 +317,54 @@
       </div>
     </section>
 
-    <!-- Why us vs kennels -->
-    <section class="section">
-      <div class="container compare">
-        <div class="col good edge-gold-soft">
+    <!-- Optional Extras (light cards for clarity) -->
+    <section class="section bg-light text-dark">
+      <div class="container">
+        <h2 class="heading-underline">Optional Extras</h2>
+        <p class="meta" style="max-width:60ch">Add any of these to tailor your dog’s stay. Prices are per stay unless noted.</p>
+        <div class="grid grid-cols-3" style="margin-top:10px">
+          <article class="gold-soft" style="padding:14px">
+            <h3>Pickup / Drop-off</h3>
+            <p>Local South Melbourne area.</p>
+            <p><strong>$20</strong> each way</p>
+          </article>
+          <article class="gold-soft" style="padding:14px">
+            <h3>Bath & Brush</h3>
+            <p>Warm wash, towel dry, gentle brush before pickup.</p>
+            <p><strong>$35</strong></p>
+          </article>
+          <article class="gold-soft" style="padding:14px">
+            <h3>Late Checkout</h3>
+            <p>Collect by 8pm on final day.</p>
+            <p><strong>$25</strong></p>
+          </article>
+          <article class="gold-soft" style="padding:14px">
+            <h3>Extra Solo Walk</h3>
+            <p>45-minute GPS-tracked walk.</p>
+            <p><strong>$45</strong></p>
+          </article>
+          <article class="gold-soft" style="padding:14px">
+            <h3>Medication Admin</h3>
+            <p>Tablets/drops at set times (no injectables).</p>
+            <p><strong>$10</strong> / day</p>
+          </article>
+          <article class="gold-soft" style="padding:14px">
+            <h3>Vet Run (if needed)</h3>
+            <p>Transport to your local vet.</p>
+            <p><strong>At cost</strong> + $25</p>
+          </article>
+        </div>
+        <p class="cta-buttons" style="margin-top:12px">
+          <a class="btn btn-primary" href="/book-boarding.html?utm_source=website&utm_medium=extras&utm_campaign=book_boarding">Add Extras & Book</a>
+          <a class="btn" style="border:1px solid #f5b200" href="/contact.html">Ask about an extra</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Why us vs kennels (dark) -->
+    <section class="section bg-darker">
+      <div class="container grid compare grid-cols-2">
+        <div class="col good">
           <h2 class="heading-underline">Why Families Choose Us</h2>
           <ul class="list-check">
             <li>One-guest-only focus (no kennels, no overwhelm)</li>
@@ -326,7 +374,7 @@
             <li>Local pickup for beds/crates available</li>
           </ul>
         </div>
-        <div class="col other edge-gold-soft">
+        <div class="col other">
           <h2 class="heading-underline">Typical Kennel Experience</h2>
           <ul class="list-cross">
             <li>Multiple dogs, higher stimulation</li>
@@ -339,12 +387,11 @@
       </div>
     </section>
 
-    <!-- Recent boarding photos (thumbnail gallery) -->
-    <section class="section boarding-gallery edge-gold" aria-labelledby="recent-boarding-photos" style="padding:14px">
-      <div class="container">
-        <h2 id="recent-boarding-photos" class="heading-underline">Recent Boarding Photos</h2>
+    <!-- Gallery (dark card with gold edge) -->
+    <section class="section bg-darker">
+      <div class="container gold-edge" style="padding:14px">
+        <h2 class="heading-underline">Recent Boarding Photos</h2>
         <p class="mini">A peek at our relaxed, home-style setup — comfy naps on bed/sofa, enrichment time, and calm spaces.</p>
-
         <div class="thumb-grid" role="list">
           <figure class="thumb" role="listitem">
             <img src="/images/boarding/boarding-bed-jack.webp" alt="Small dog napping under a doona on our bed" width="640" height="640" loading="lazy" decoding="async">
@@ -365,8 +412,8 @@
       </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="section" aria-labelledby="boarding-testimonials">
+    <!-- Testimonials (dark) -->
+    <section class="section bg-darker" aria-labelledby="boarding-testimonials">
       <div class="container">
         <h2 id="boarding-testimonials" class="heading-underline">What Owners Say About Weekend Woof Club</h2>
         <div class="quotes">
@@ -381,38 +428,38 @@
       </div>
     </section>
 
-    <!-- Local reassurance -->
-    <section class="section alt">
+    <!-- Local reassurance (dark text, strong internal linking) -->
+    <section class="section bg-darker">
       <div class="container">
         <h2 class="heading-underline">Safe, Loving, Reliable — Proudly Local</h2>
-        <p>Your dog stays in a comfortable home, not a kennel. We’re local to <strong>South Melbourne</strong> and serve <a href="/dog-walker-albert-park.html"><strong>Albert Park</strong></a>, <a href="/dog-walker-port-melbourne.html"><strong>Port Melbourne</strong></a>, <a href="/dog-walker-middle-park.html"><strong>Middle Park</strong></a> and <a href="/dog-walker-southbank.html"><strong>Southbank</strong></a>. Walks, naps, cuddles, and updates — everything your pup needs to feel relaxed and cared for.</p>
+        <p>We’re local to <strong>South Melbourne</strong> and serve <a href="/dog-walker-albert-park.html"><strong>Albert Park</strong></a>, <a href="/dog-walker-port-melbourne.html"><strong>Port Melbourne</strong></a>, <a href="/dog-walker-middle-park.html"><strong>Middle Park</strong></a>, <a href="/dog-walker-southbank.html"><strong>Southbank</strong></a> and <a href="/dog-walker-south-yarra.html"><strong>South Yarra</strong></a>. Walks, naps, cuddles, and updates — everything your pup needs to feel relaxed and cared for.</p>
         <p class="center" style="margin-top:14px">
-          <a id="book-boarding-bottom" class="btn button-primary" href="/book-boarding.html?utm_source=website&utm_medium=bottom&utm_campaign=book_boarding">Check Availability – 20% Off</a>
+          <a id="book-boarding-bottom" class="btn btn-primary" href="/book-boarding.html?utm_source=website&utm_medium=bottom&utm_campaign=book_boarding">Check Availability – 20% Off</a>
         </p>
       </div>
     </section>
 
-    <!-- From the blog (internal links for SEO + trust) -->
-    <section class="section">
+    <!-- From the blog (light cards to vary texture) -->
+    <section class="section bg-light text-dark">
       <div class="container">
         <h2 class="heading-underline">From the Blog</h2>
-        <div class="blog-teasers">
-          <article class="blog-card">
-            <h3><a href="/blog/why-solo-walks" rel="internal">Why Solo Walks Calm Anxious Dogs</a></h3>
+        <div class="grid grid-cols-2" style="margin-top:10px">
+          <article class="gold-soft" style="padding:14px">
+            <h3><a href="/blog/why-solo-walks.html">Why Solo Walks Calm Anxious Dogs</a></h3>
             <p>Our philosophy on one-dog-only care and how it translates to calmer stays and better sleep.</p>
-            <p><a class="btn button-secondary" href="/blog/why-solo-walks">Read more →</a></p>
+            <p><a class="btn" style="border:1px solid #f5b200" href="/blog/why-solo-walks.html">Read more →</a></p>
           </article>
-          <article class="blog-card">
-            <h3><a href="/blog/best-dog-walks-south-melbourne" rel="internal">Best Dog Walks in South Melbourne</a></h3>
+          <article class="gold-soft" style="padding:14px">
+            <h3><a href="/blog/best-dog-walks-south-melbourne.html">Best Dog Walks in South Melbourne</a></h3>
             <p>Our favourite local loops around Albert Park & South Melbourne — exactly where we’ll take your pup.</p>
-            <p><a class="btn button-secondary" href="/blog/best-dog-walks-south-melbourne">Read more →</a></p>
+            <p><a class="btn" style="border:1px solid #f5b200" href="/blog/best-dog-walks-south-melbourne.html">Read more →</a></p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- FAQs -->
-    <section>
+    <!-- FAQs (light) -->
+    <section class="section bg-light text-dark">
       <div class="container">
         <h2 class="heading-underline">Boarding FAQs</h2>
         <details><summary>Do you board multiple dogs at once?</summary><p>No. We’re strictly one guest only. This keeps things calmer, safer, and more personal.</p></details>
@@ -445,7 +492,7 @@
           <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook"><img src="/images/social/facebook.svg" alt="" width="24" height="24"></a>
           <a href="https://x.com/woofofwalkstreet" aria-label="X"><img src="/images/social/twitter.svg" alt="" width="24" height="24"></a>
         </div>
-        <p><a class="btn button-primary" href="/book-boarding.html?utm_source=website&utm_medium=footer&utm_campaign=book_boarding">Book Boarding – 20% Off</a></p>
+        <p><a class="btn btn-primary" href="/book-boarding.html?utm_source=website&utm_medium=footer&utm_campaign=book_boarding">Book Boarding – 20% Off</a></p>
       </section>
 
       <nav class="footer-col" aria-label="Primary">
@@ -482,7 +529,7 @@
 
     <div class="container footer-geo">
       Solo Dog Walking & Boutique Boarding across <strong>South Melbourne</strong>, <strong>Albert Park</strong>,
-      <strong>Port Melbourne</strong>, <strong>Middle Park</strong> and <strong>Southbank</strong>.
+      <strong>Port Melbourne</strong>, <strong>Middle Park</strong>, <strong>Southbank</strong> and <strong>South Yarra</strong>.
     </div>
 
     <div class="container footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
@@ -519,35 +566,39 @@
     </script>
   </footer>
 
-  <!-- Services dropdown accessibility + close-on-outside/Escape -->
+  <!-- Services dropdown accessibility + mobile menu behaviour -->
   <script>
     (function () {
       const btn  = document.querySelector('.nav-group-btn[aria-controls="nav-services"]');
       const list = document.getElementById('nav-services');
-      if (!btn || !list) return;
-
-      const sync = () => { list.hidden = btn.getAttribute('aria-expanded') !== 'true'; };
-      sync();
-
-      btn.addEventListener('click', () => {
-        const open = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', String(!open));
+      if (btn && list) {
+        const sync = () => { list.hidden = btn.getAttribute('aria-expanded') !== 'true'; };
         sync();
-      });
+        btn.addEventListener('click', () => {
+          const open = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', String(!open));
+          sync();
+        });
+        document.addEventListener('click', (e) => {
+          if (!btn.contains(e.target) && !list.contains(e.target)) {
+            btn.setAttribute('aria-expanded', 'false'); sync();
+          }
+        }, { capture: true });
+      }
 
-      document.addEventListener('click', (e) => {
-        if (!btn.contains(e.target) && !list.contains(e.target)) {
-          btn.setAttribute('aria-expanded', 'false'); sync();
-        }
-      }, { capture: true });
-
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') { btn.setAttribute('aria-expanded', 'false'); sync(); }
-      });
+      // Close mobile menu on outside/scroll and enforce dark header on mobile
+      const navToggle = document.getElementById('nav-toggle');
+      const navLinks  = document.querySelector('.nav-links');
+      const closeMenu = () => { if (navToggle && navToggle.checked) navToggle.checked = false; };
+      if (navToggle && navLinks){
+        navLinks.addEventListener('click',(e)=>{ if (e.target.closest('a')) closeMenu(); });
+        let lastY = window.scrollY;
+        window.addEventListener('scroll', ()=>{ if (Math.abs(window.scrollY-lastY)>8) closeMenu(); lastY = window.scrollY; }, {passive:true});
+      }
     })();
   </script>
 
-  <!-- Promo close (session) -->
+  <!-- Promo close persistence -->
   <script>
     document.getElementById('promo-close')?.addEventListener('click', ()=>{
       document.getElementById('promo').style.display = 'none';

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Dog Boarding South Melbourne | One-Guest-Only, Home-Style Stays (20% Off Until 30 Nov)</title>
-  <meta name="description" content="Boutique, one-guest-only dog boarding in South Melbourne. Dogs can sleep on our bed or the sofa (like at home). Daily walks with GPS & photo updates. Food, enrichment games, bones & chicken treats included. 20% off boarding until 30 November." />
+  <meta name="description" content="Boutique, one-guest-only dog boarding in South Melbourne. Dogs can sleep on our bed or sofa (like at home). Daily walks with GPS & photo updates. Food, enrichment games, bones & chicken treats included. 20% off boarding until 30 November." />
   <link rel="canonical" href="https://www.woofofwalkstreet.com/boarding-services.html" />
   <link rel="icon" href="/images/brand/favicon.ico" />
 
@@ -16,7 +16,7 @@
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Dog Boarding South Melbourne | Home-Style, One-Guest-Only (20% Off)">
-  <meta property="og:description" content="Sleep on our bed or the sofa (if that’s home routine). Daily walks, GPS & photo updates. Food, enrichment games, bones & chicken treats. 20% off until 30 Nov.">
+  <meta property="og:description" content="Sleep on our bed or sofa (if that’s home routine). Daily walks, GPS & photo updates. Food, enrichment games, bones & chicken treats. 20% off until 30 Nov.">
   <meta property="og:url" content="https://www.woofofwalkstreet.com/boarding-services.html">
   <meta property="og:image" content="https://www.woofofwalkstreet.com/images/gallery/dog-weekend-woof.jpg">
   <meta property="og:locale" content="en_AU">
@@ -26,11 +26,8 @@
   <meta name="twitter:image" content="https://www.woofofwalkstreet.com/images/gallery/dog-weekend-woof.jpg">
 
   <!-- Preload LCP hero image -->
-  <link
-    rel="preload"
-    as="image"
-    href="/images/gallery/dog-weekend-woof.jpg"
-    imagesizes="(max-width: 640px) 100vw, (max-width: 1200px) 90vw, 1200px">
+  <link rel="preload" as="image" href="/images/gallery/dog-weekend-woof.jpg"
+        imagesizes="(max-width: 640px) 100vw, (max-width: 1200px) 90vw, 1200px">
 
   <!-- Breadcrumbs JSON-LD -->
   <script type="application/ld+json">
@@ -65,8 +62,34 @@
   }
   </script>
 
-  <!-- Page-only tweaks -->
+  <!-- FAQ JSON-LD to support rich results -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"Do you board multiple dogs at once?","acceptedAnswer":{"@type":"Answer","text":"No. We’re strictly one guest only. This keeps things calmer, safer, and more personal."}},
+      {"@type":"Question","name":"Can my dog sleep on your bed or the sofa?","acceptedAnswer":{"@type":"Answer","text":"Yes—if that’s your home routine, we’ll continue it here. Comfort first."}},
+      {"@type":"Question","name":"What’s included?","acceptedAnswer":{"@type":"Answer","text":"Daily walks with GPS tracking, photo updates, food, enrichment games, and bones & chicken treats. Let us know about allergies."}},
+      {"@type":"Question","name":"Can you pick up our dog’s bed or crate?","acceptedAnswer":{"@type":"Answer","text":"Yes—local pickup/return is available so your dog’s routine stays consistent."}},
+      {"@type":"Question","name":"Can I book longer than a weekend?","acceptedAnswer":{"@type":"Answer","text":"Yes—custom stays can be arranged. Reach out via the contact page."}}
+    ]
+  }
+  </script>
+
+  <!-- Page-only polish & edgy gold accents -->
   <style>
+    /* Gold edging utilities */
+    .edge-gold { border:2px solid #f5b200; border-radius:16px; box-shadow:0 0 20px rgba(245,178,0,.25); }
+    .edge-gold-soft { border:2px solid rgba(245,178,0,.35); border-radius:14px; box-shadow:0 0 14px rgba(245,178,0,.2); }
+    .heading-underline {
+      position:relative; display:inline-block; padding-bottom:4px;
+    }
+    .heading-underline::after {
+      content:""; position:absolute; left:0; right:0; bottom:0; height:2px;
+      background:linear-gradient(90deg,#f5b200,transparent 70%); opacity:.9;
+    }
+
     .quotes .quote::before { content:"★★★★★"; display:block; letter-spacing:.2ch; margin-bottom:.35rem; opacity:.9; }
 
     /* Booking section (dark + gold) */
@@ -76,8 +99,8 @@
     @media (min-width:860px){ .booking-section .grid { grid-template-columns: repeat(2,1fr); } }
     @media (min-width:1040px){ .booking-section .grid { grid-template-columns: repeat(3,1fr); } }
 
-    .pricing-card{ background:#141a24; color:#fff; border:2px solid rgba(245,178,0,.4); border-radius:16px; box-shadow:0 0 20px rgba(245,178,0,.25); transition:.25s; padding:18px; display:flex; flex-direction:column; gap:8px; }
-    .pricing-card:hover{ border-color:#f5b200; box-shadow:0 0 30px rgba(245,178,0,.45); transform:translateY(-4px); }
+    .pricing-card{ background:#141a24; color:#fff; border:2px solid rgba(245,178,0,.45); border-radius:16px; box-shadow:0 0 22px rgba(245,178,0,.28); transition:.25s; padding:18px; display:flex; flex-direction:column; gap:8px; }
+    .pricing-card:hover{ border-color:#f5b200; box-shadow:0 0 34px rgba(245,178,0,.5); transform:translateY(-4px); }
     .pricing-card h3{ margin:.2rem 0 .2rem; font-weight:900 }
     .pricing-meta{ color:#cfd6df; margin-top:-4px }
     .price-row{ display:flex; align-items:baseline; gap:8px; margin-top:4px; }
@@ -93,6 +116,13 @@
     @media(min-width:900px){ .comfort{ grid-template-columns:1.2fr .8fr; } }
     .comfort .card{ border:2px solid #f5b20022; border-radius:14px; padding:16px; }
 
+    /* Why us vs kennels comparison */
+    .compare { margin-top:16px; display:grid; gap:12px; }
+    @media(min-width:860px){ .compare { grid-template-columns:1fr 1fr; } }
+    .compare .col { padding:14px; border-radius:14px; }
+    .compare .good { border:2px solid rgba(90,242,198,.35); background:linear-gradient(180deg,rgba(90,242,198,.06),transparent); }
+    .compare .other { border:2px solid rgba(255,0,0,.18); background:linear-gradient(180deg,rgba(255,0,0,.06),transparent); }
+
     /* Recent photos gallery */
     .boarding-gallery{ margin-top:18px; }
     .thumb-grid{ display:grid; gap:10px; grid-template-columns:repeat(2,1fr); }
@@ -100,18 +130,19 @@
     .thumb{ aspect-ratio: 1 / 1; overflow:hidden; border-radius:10px; border:2px solid #f5b20033; }
     .thumb img{ width:100%; height:100%; object-fit:cover; display:block; }
     .thumb figcaption{ font-size:.8rem; color:#5b6775; margin-top:4px; text-align:center; }
+
+    /* Blog teaser cards */
+    .blog-teasers { display:grid; gap:12px; margin-top:10px; }
+    @media(min-width:860px){ .blog-teasers{ grid-template-columns:1fr 1fr; } }
+    .blog-card { padding:14px; border-radius:14px; border:2px solid rgba(245,178,0,.28); transition:.2s; }
+    .blog-card:hover { border-color:#f5b200; box-shadow:0 0 18px rgba(245,178,0,.28); transform:translateY(-2px); }
   </style>
 </head>
 
 <body>
   <!-- Google Ads Global Site Tag (optional if already site-wide) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'AW-17527927259');
-  </script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config','AW-17527927259');</script>
 
   <!-- Promo ribbon -->
   <div id="promo" class="promo-ribbon promo--edge" role="region" aria-label="Promo: 50% off">
@@ -163,9 +194,7 @@
         <a href="/blog/index.html">Blog</a>
         <a href="/faq.html">FAQs</a>
         <a href="/search.html">Search</a>
-        <a class="btn button-primary nav-cta"
-           href="/book-boarding.html?utm_source=website&utm_medium=header&utm_campaign=book_boarding"
-        >Book Boarding – 20% Off</a>
+        <a class="btn button-primary nav-cta" href="/book-boarding.html?utm_source=website&utm_medium=header&utm_campaign=book_boarding">Book Boarding – 20% Off</a>
       </nav>
     </div>
   </header>
@@ -177,18 +206,13 @@
         <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="/">Home</a> › Dog Boarding South Melbourne</nav>
         <h1>Dog Boarding in South Melbourne — Weekend Woof Club</h1>
         <p class="subhead">Boutique weekend & weekday stays · One guest only · Home-style comfort & daily walks</p>
-        <img
-          src="/images/gallery/dog-weekend-woof.jpg"
-          alt="Relaxed pup during boutique weekend boarding in South Melbourne"
-          style="max-width:920px;border-radius:12px;display:block;margin:0 auto"
-          width="1200" height="800"
-          loading="eager" decoding="async" fetchpriority="high">
+        <img src="/images/gallery/dog-weekend-woof.jpg"
+             alt="Relaxed pup during boutique weekend boarding in South Melbourne"
+             style="max-width:920px;border-radius:12px;display:block;margin:0 auto"
+             width="1200" height="800" loading="eager" decoding="async" fetchpriority="high">
 
         <div class="cta-buttons" style="justify-content:center;flex-wrap:wrap;margin-top:14px">
-          <a id="book-boarding-hero"
-             class="cta-button"
-             href="/book-boarding.html?utm_source=website&utm_medium=hero&utm_campaign=book_boarding"
-          >Book Boarding – 20% Off</a>
+          <a id="book-boarding-hero" class="cta-button" href="/book-boarding.html?utm_source=website&utm_medium=hero&utm_campaign=book_boarding">Book Boarding – 20% Off</a>
           <a class="cta-button secondary" href="/dog-walking-south-melbourne.html">Need weekday walks?</a>
         </div>
       </div>
@@ -197,7 +221,7 @@
     <!-- Booking/pricing -->
     <section class="booking-section" aria-labelledby="choose-stay">
       <div class="container">
-        <h2 id="choose-stay" style="font-weight:900;margin:0 0 6px">Choose Your Stay</h2>
+        <h2 id="choose-stay" class="heading-underline" style="font-weight:900;margin:0 0 6px">Choose Your Stay</h2>
         <p class="mini" style="margin:0 0 12px">20% off boarding until <strong>30 November</strong>. Prices below show the discount.</p>
 
         <div class="grid" style="margin-top:10px">
@@ -242,8 +266,8 @@
           </article>
         </div>
 
-        <div class="booking-includes">
-          <strong>Included in every stay:</strong> multiple daily walks with GPS & photo updates, <strong>food</strong>, <strong>enrichment games</strong>, and <strong>bones & chicken treats</strong>. Dogs are welcome to <strong>sleep on our bed or the sofa</strong> if that’s their home routine.
+        <div class="booking-includes edge-gold-soft" style="margin-top:12px">
+          <strong>Included in every stay:</strong> multiple daily walks with GPS & photo updates, <strong>food</strong>, <strong>enrichment games</strong>, and <strong>bones & chicken treats</strong>. Dogs are welcome to <strong>sleep on our bed or the sofa</strong> if that’s their home routine. We can <strong>pick up your dog’s bed or crate</strong> locally for extra comfort.
         </div>
 
         <div class="cta-buttons" style="margin-top:12px">
@@ -257,24 +281,25 @@
     <!-- Core copy + comfort policy -->
     <section>
       <div class="container comfort">
-        <article class="card">
-          <h2>Home-Style Comfort (No Kennels, Ever)</h2>
+        <article class="card edge-gold-soft">
+          <h2 class="heading-underline">Home-Style Comfort (No Kennels, Ever)</h2>
+          <p>When you head away, you want your dog relaxed, settled, and loved. At <strong>The Woof of Walk Street</strong>, our <strong>Weekend Woof Club</strong> is South Melbourne’s boutique alternative to kennels—<strong>one guest only</strong>, calm routine, everyday comforts.</p>
           <ul class="list-check">
-            <li>🐾 <strong>One guest only</strong> — calmer, safer, personal care</li>
+            <li>🐾 <strong>One guest only</strong> — calmer, safer, truly personal care</li>
             <li>🛏️ <strong>Sleep on our bed or the sofa</strong> if that’s what you do at home</li>
             <li>🧺 We can <strong>pick up dog beds or crates</strong> locally before your stay</li>
             <li>🧠 Enrichment games for a settled, happy guest</li>
             <li>🌳 Local walks around <strong>Albert Park</strong> & South Melbourne streets</li>
             <li>📸 Daily photo & text updates direct to your phone</li>
           </ul>
-          <p>Our boarding is intentionally limited — one pup, one stay. It’s ideal for short breaks, busy weekends, or any time you want absolute peace of mind.</p>
+          <p>Perfect for short breaks, busy weekends, or any time you want absolute peace of mind — with a service level no traditional boarding facility can match.</p>
           <p class="stack-sm">
             <a class="btn button-primary" href="/book-boarding.html?utm_source=website&utm_medium=comfort&utm_campaign=book_boarding">Reserve a Stay – 20% Off</a>
           </p>
         </article>
 
-        <aside class="card">
-          <h2>How It Works</h2>
+        <aside class="card edge-gold-soft">
+          <h2 class="heading-underline">How It Works</h2>
           <ol class="list-steps">
             <li>Send preferred dates</li>
             <li>Quick meet & greet (virtual or local)</li>
@@ -288,10 +313,36 @@
       </div>
     </section>
 
+    <!-- Why us vs kennels -->
+    <section class="section">
+      <div class="container compare">
+        <div class="col good edge-gold-soft">
+          <h2 class="heading-underline">Why Families Choose Us</h2>
+          <ul class="list-check">
+            <li>One-guest-only focus (no kennels, no overwhelm)</li>
+            <li>Sleep where they’re happiest — bed or sofa</li>
+            <li>Food provided + enrichment, bones & chicken treats</li>
+            <li>Daily walks with GPS & photo updates</li>
+            <li>Local pickup for beds/crates available</li>
+          </ul>
+        </div>
+        <div class="col other edge-gold-soft">
+          <h2 class="heading-underline">Typical Kennel Experience</h2>
+          <ul class="list-cross">
+            <li>Multiple dogs, higher stimulation</li>
+            <li>Fixed sleep areas; limited home comforts</li>
+            <li>Less personalised enrichment</li>
+            <li>Generic updates, if any</li>
+            <li>Little continuity of home routine</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <!-- Recent boarding photos (thumbnail gallery) -->
-    <section class="section boarding-gallery" aria-labelledby="recent-boarding-photos">
+    <section class="section boarding-gallery edge-gold" aria-labelledby="recent-boarding-photos" style="padding:14px">
       <div class="container">
-        <h2 id="recent-boarding-photos">Recent Boarding Photos</h2>
+        <h2 id="recent-boarding-photos" class="heading-underline">Recent Boarding Photos</h2>
         <p class="mini">A peek at our relaxed, home-style setup — comfy naps on bed/sofa, enrichment time, and calm spaces.</p>
 
         <div class="thumb-grid" role="list">
@@ -317,7 +368,7 @@
     <!-- Testimonials -->
     <section class="section" aria-labelledby="boarding-testimonials">
       <div class="container">
-        <h2 id="boarding-testimonials">What Owners Say About Weekend Woof Club</h2>
+        <h2 id="boarding-testimonials" class="heading-underline">What Owners Say About Weekend Woof Club</h2>
         <div class="quotes">
           <blockquote class="quote"><p>“Our Spoodle came home so relaxed. One-guest-only is perfect — no kennels, just a calm home.”</p><footer>— Amelia, South Melbourne</footer></blockquote>
           <blockquote class="quote"><p>“Photo updates each day were such a relief. You can tell they genuinely care.”</p><footer>— Lucas, Albert Park</footer></blockquote>
@@ -333,43 +384,47 @@
     <!-- Local reassurance -->
     <section class="section alt">
       <div class="container">
-        <h2>Safe, Loving, Reliable</h2>
-        <p>Your dog will stay in a comfortable home, not a kennel. We’re proudly local to <strong>South Melbourne</strong>, also serving <strong>Albert Park</strong>, <strong>Port Melbourne</strong>, <strong>Middle Park</strong> and <strong>Southbank</strong>. Walks, naps, cuddles, and updates — everything your pup needs to feel relaxed and cared for.</p>
+        <h2 class="heading-underline">Safe, Loving, Reliable — Proudly Local</h2>
+        <p>Your dog stays in a comfortable home, not a kennel. We’re local to <strong>South Melbourne</strong> and serve <a href="/dog-walker-albert-park.html"><strong>Albert Park</strong></a>, <a href="/dog-walker-port-melbourne.html"><strong>Port Melbourne</strong></a>, <a href="/dog-walker-middle-park.html"><strong>Middle Park</strong></a> and <a href="/dog-walker-southbank.html"><strong>Southbank</strong></a>. Walks, naps, cuddles, and updates — everything your pup needs to feel relaxed and cared for.</p>
         <p class="center" style="margin-top:14px">
           <a id="book-boarding-bottom" class="btn button-primary" href="/book-boarding.html?utm_source=website&utm_medium=bottom&utm_campaign=book_boarding">Check Availability – 20% Off</a>
         </p>
       </div>
     </section>
 
+    <!-- From the blog (internal links for SEO + trust) -->
+    <section class="section">
+      <div class="container">
+        <h2 class="heading-underline">From the Blog</h2>
+        <div class="blog-teasers">
+          <article class="blog-card">
+            <h3><a href="/blog/why-solo-walks" rel="internal">Why Solo Walks Calm Anxious Dogs</a></h3>
+            <p>Our philosophy on one-dog-only care and how it translates to calmer stays and better sleep.</p>
+            <p><a class="btn button-secondary" href="/blog/why-solo-walks">Read more →</a></p>
+          </article>
+          <article class="blog-card">
+            <h3><a href="/blog/best-dog-walks-south-melbourne" rel="internal">Best Dog Walks in South Melbourne</a></h3>
+            <p>Our favourite local loops around Albert Park & South Melbourne — exactly where we’ll take your pup.</p>
+            <p><a class="btn button-secondary" href="/blog/best-dog-walks-south-melbourne">Read more →</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- FAQs -->
     <section>
       <div class="container">
-        <h2>Boarding FAQs</h2>
-        <details>
-          <summary>Do you board multiple dogs at once?</summary>
-          <p>No. We’re strictly one guest only. This keeps things calmer, safer, and more personal.</p>
-        </details>
-        <details>
-          <summary>Can my dog sleep on your bed or the sofa?</summary>
-          <p>Yes — if that’s your home routine, we’ll continue it here. Comfort first.</p>
-        </details>
-        <details>
-          <summary>What’s included?</summary>
-          <p>Daily walks with GPS tracking, photo updates, food, enrichment games, and bones & chicken treats. Let us know about allergies.</p>
-        </details>
-        <details>
-          <summary>Can you pick up our dog’s bed or crate?</summary>
-          <p>Yes — for local clients we can collect and return beds or crates to keep your dog’s routine consistent.</p>
-        </details>
-        <details>
-          <summary>Can I book for longer than a weekend?</summary>
-          <p>Yes — custom stays can be arranged. Just reach out via our <a href="/contact.html">contact page</a>.</p>
-        </details>
+        <h2 class="heading-underline">Boarding FAQs</h2>
+        <details><summary>Do you board multiple dogs at once?</summary><p>No. We’re strictly one guest only. This keeps things calmer, safer, and more personal.</p></details>
+        <details><summary>Can my dog sleep on your bed or the sofa?</summary><p>Yes — if that’s your home routine, we’ll continue it here. Comfort first.</p></details>
+        <details><summary>What’s included?</summary><p>Daily walks with GPS tracking, photo updates, food, enrichment games, and bones & chicken treats. Let us know about allergies.</p></details>
+        <details><summary>Can you pick up our dog’s bed or crate?</summary><p>Yes — for local clients we can collect and return beds or crates to keep your dog’s routine consistent.</p></details>
+        <details><summary>Can I book for longer than a weekend?</summary><p>Yes — custom stays can be arranged. Just reach out via our <a href="/contact.html">contact page</a>.</p></details>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER (unchanged except CTAs) -->
+  <!-- FOOTER -->
   <footer class="site-footer" role="contentinfo">
     <div class="footer-banner">
       <picture>
@@ -456,11 +511,7 @@
           const href = (a.getAttribute('href') || '').toLowerCase();
           if (href.includes('timetopet.com/portal/woofofwalkstreet')) {
             try {
-              gtag('event', 'ttp_booking_click', {
-                'send_to': 'AW-17527927259/ePjJCLT8p6cbENvj-6VB',
-                'value': 1.0,
-                'currency': 'AUD'
-              });
+              gtag('event', 'ttp_booking_click', {'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});
             } catch (err) {}
           }
         }, { capture: true });

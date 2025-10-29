@@ -3,33 +3,26 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Dog Walking & Boarding Gallery | The Woof of Walk Street</title>
-  <meta name="description" content="See happy pups on solo walks and calm boutique boarding across South Melbourne. Real photos from Albert Park Lake, St Vincent Gardens and our one-guest-only Weekend Woof Club."/>
-  <link rel="canonical" href="https://www.woofofwalkstreet.com/gallery.html"/>
 
-  <!-- Icons & CSS -->
+  <title>Dog Walking & Boarding Gallery, South Melbourne | One-Dog-Only Photos</title>
+  <meta name="description" content="Photos of solo dog walks and one-guest boutique boarding across South Melbourne: Albert Park Lake, St Vincent Gardens & local routes. GPS maps and photo updates after every walk."/>
+
+  <link rel="canonical" href="https://www.woofofwalkstreet.com/gallery.html"/>
   <link rel="icon" href="/images/brand/favicon.ico"/>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="/css/mini.css"/>
   <link rel="stylesheet" href="/css/styles.css"/>
 
   <!-- Open Graph -->
   <meta property="og:type" content="website"/>
-  <meta property="og:title" content="Dog Walking & Boarding Gallery | The Woof of Walk Street"/>
-  <meta property="og:description" content="Photos of solo dog walks and boutique boarding in South Melbourne — calm, safe and transparent."/>
+  <meta property="og:title" content="Dog Walking & Boarding Gallery, South Melbourne | One-Dog-Only Photos"/>
+  <meta property="og:description" content="See real moments from solo walks and one-guest weekend boarding around South Melbourne. GPS maps and photo updates after every walk."/>
   <meta property="og:url" content="https://www.woofofwalkstreet.com/gallery.html"/>
   <meta property="og:image" content="https://www.woofofwalkstreet.com/images/brand/hero-dog-skyline-1200.webp"/>
   <meta name="twitter:card" content="summary_large_image"/>
 
-  <!-- ✅ Preload LCP hero/heroish image (stays in HEAD) -->
-  <link
-    rel="preload"
-    as="image"
-    href="/images/brand/hero-dog-skyline-1200.webp"
-    imagesrcset="/images/brand/hero-dog-skyline-800.webp 800w, /images/brand/hero-dog-skyline-1200.webp 1200w, /images/brand/hero-dog-skyline-1600.webp 1600w"
-    imagesizes="(max-width: 640px) 100vw, (max-width: 1200px) 90vw, 1200px"
-  >
-
-  <!-- Google Ads (one instance only) -->
+  <!-- Google Ads Global Site Tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -38,40 +31,31 @@
     gtag('config', 'AW-17527927259');
   </script>
 
+  <!-- Preload LCP hero image -->
+  <link
+    rel="preload"
+    as="image"
+    href="/images/brand/hero-dog-skyline-1200.webp"
+    imagesrcset="/images/brand/hero-dog-skyline-800.webp 800w, /images/brand/hero-dog-skyline-1200.webp 1200w, /images/brand/hero-dog-skyline-1600.webp 1600w"
+    imagesizes="(max-width: 640px) 100vw, (max-width: 1200px) 90vw, 1200px"
+  >
+
+  <!-- Page styles -->
   <style>
-    .intro-copy{max-width:760px;margin:.5rem auto 1.25rem;color:#444}
+    .intro-copy{max-width:780px;margin:.5rem auto 1.25rem;color:#444}
     .embed-1x1{position:relative;padding-top:56.25%}
     .embed-1x1 iframe{position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:12px}
-    .gallery-grid{display:grid;gap:14px}
-    @media (min-width:720px){ .gallery-grid{grid-template-columns:1fr 1fr} }
+    .gallery-grid{display:grid;gap:14px;grid-template-columns:1fr; margin-top:10px}
+    @media(min-width:700px){ .gallery-grid{grid-template-columns:1fr 1fr} }
     .gallery-grid figure{margin:0}
     .gallery-grid img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px}
+    .edge{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:2px solid #f5b200;border-radius:16px;box-shadow:0 0 10px rgba(245,178,0,.25),0 12px 28px rgba(0,0,0,.12);padding:16px}
+    .edge:hover{box-shadow:0 0 18px rgba(245,178,0,.45),0 18px 44px rgba(0,0,0,.18);transform:translateY(-1px)}
+    .cta-buttons{display:flex;gap:10px;flex-wrap:wrap}
+    .center{text-align:center}
   </style>
-
-  <!-- Breadcrumb JSON-LD (optional but helpful) -->
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
-    {"@type":"ListItem","position":2,"name":"Gallery","item":"https://www.woofofwalkstreet.com/gallery.html"}
-  ]}
-  </script>
-
-  <!-- ImageGallery JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ImageGallery",
-    "name": "Dog Walking & Boarding Gallery - The Woof of Walk Street",
-    "description": "Photos of solo walks and boutique boarding in South Melbourne, including Albert Park Lake and local neighbourhood routes.",
-    "image": [
-      "https://www.woofofwalkstreet.com/images/gallery/dog-digging-sand.webp",
-      "https://www.woofofwalkstreet.com/images/gallery/dog-sunset-walk.webp",
-      "https://www.woofofwalkstreet.com/images/gallery/dog-cozy-nap.webp",
-      "https://www.woofofwalkstreet.com/images/gallery/dog-weekend-woof.webp"
-    ]
-  }
-  </script>
 </head>
+
 <body>
   <!-- Promo ribbon -->
   <div id="promo" class="promo-ribbon promo--edge" role="region" aria-label="Promo: 50% off">
@@ -89,7 +73,9 @@
   <div class="impact-ribbon" role="note" aria-label="Walks that do more: 10% donated">
     <div class="impact-inner">
       <span class="impact-emoji" aria-hidden="true">💛</span>
-      <strong>Walks That Do More:</strong> We donate <strong>10% of profits</strong> to local shelters.
+      <strong>Walks That Do More:</strong>
+      When you choose us, you’re not just booking a dog walk — you’re helping rescue dogs too.
+      <strong>We donate 10% of profits</strong> to local shelters.
       <a class="impact-cta" href="/community.html">See our impact →</a>
     </div>
   </div>
@@ -98,7 +84,7 @@
   <header class="site-header" role="banner">
     <div class="navbar container" role="navigation" aria-label="Main">
       <a class="brand" href="/" aria-label="Go to home">
-        <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="56" height="56" loading="lazy">
+        <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="56" height="56">
         <strong>The Woof of Walk Street</strong>
       </a>
 
@@ -123,7 +109,7 @@
         <a class="btn button-primary nav-cta"
            href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=header&utm_campaign=book_now"
            target="_blank" rel="noopener"
-           onclick="gtag && gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
+           onclick="gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
            Book Now
         </a>
       </nav>
@@ -134,26 +120,30 @@
     <!-- HERO + Intro -->
     <section class="hero">
       <div class="container">
-        <h1>Dog Walking & Boarding Gallery</h1>
-        <p class="subhead">Real moments from solo walks and calm, one-guest-only weekend stays around South Melbourne.</p>
+        <h1>Dog Walking & Boarding Gallery, South Melbourne (One-Dog-Only)</h1>
+        <p class="subhead">Real moments from calm, one-guest-only weekend boarding and solo walks around South Melbourne.</p>
+
         <p class="intro-copy">
-          We’re <strong>one-dog-only</strong>. That means calmer routes, loose-lead walks and photo updates you can rely on.
-          Here are a few favourite snapshots from <strong>Albert Park Lake</strong>, <strong>St Vincent Gardens</strong>, and
-          our <a href="/boarding-services.html">Weekend Woof Club</a> boutique boarding.
+          We’re <strong>one-dog-only</strong>—no pack walks, no kennels. You’ll see <strong>loose-lead walks</strong>,
+          <strong>GPS maps</strong>, and <strong>photo updates</strong> after every session. These photos are from our
+          regular routes across <a href="/dog-walking-south-melbourne.html">South Melbourne dog walking</a> including
+          <strong>Albert Park Lake</strong>, <strong>St Vincent Gardens</strong>, and nearby streets—plus relaxed
+          evenings from our <a href="/boarding-services.html">Weekend Woof Club boutique boarding</a>.
         </p>
+
         <div class="cta-buttons">
           <a href="https://www.timetopet.com/portal/woofofwalkstreet" class="cta-button" target="_blank" rel="noopener"
-             onclick="gtag && gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
-             Book a Walk
+             onclick="gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
+             Book a Solo Walk
           </a>
-          <a href="/boarding-services.html" class="cta-button secondary">Weekend Boarding</a>
+          <a href="/boarding-services.html" class="cta-button secondary">Weekend Boarding (One Guest)</a>
         </div>
       </div>
     </section>
 
     <!-- Instagram embed -->
     <section class="container" aria-labelledby="latest-instagram">
-      <h2 id="latest-instagram">Latest on Instagram</h2>
+      <h2 id="latest-instagram">Latest Dog Walks in South Melbourne</h2>
       <div class="embed-1x1">
         <iframe
           src="https://snapwidget.com/embed/1108836"
@@ -168,15 +158,15 @@
 
     <!-- Highlights grid -->
     <section class="container" aria-labelledby="gallery-highlights">
-      <h2 id="gallery-highlights">Highlights</h2>
+      <h2 id="gallery-highlights">Highlights from Solo Walks & Weekend Boarding</h2>
       <div class="gallery-grid">
         <figure>
           <picture>
             <source type="image/webp"
-              srcset="/images/gallery/dog-digging-sand.webp"
-              sizes="(max-width:640px) 100vw, 50vw">
+                    srcset="/images/gallery/dog-digging-sand.webp 1200w"
+                    sizes="(max-width:640px) 100vw, 50vw">
             <img src="/images/gallery/dog-digging-sand.jpg"
-                 alt="Happy dog playing on the Port Melbourne foreshore during a solo walk"
+                 alt="Solo dog walk, Port Melbourne foreshore — playful digging during one-dog-only walk"
                  width="1200" height="900" loading="lazy" decoding="async">
           </picture>
         </figure>
@@ -184,10 +174,10 @@
         <figure>
           <picture>
             <source type="image/webp"
-              srcset="/images/gallery/dog-sunset-walk.webp"
-              sizes="(max-width:640px) 100vw, 50vw">
+                    srcset="/images/gallery/dog-sunset-walk.webp 1200w"
+                    sizes="(max-width:640px) 100vw, 50vw">
             <img src="/images/gallery/dog-sunset-walk.jpg"
-                 alt="Golden light sunset stroll near Albert Park Lake with one-dog-only walking"
+                 alt="Loose-lead stroll at sunset near Albert Park Lake — South Melbourne solo dog walking"
                  width="1200" height="900" loading="lazy" decoding="async">
           </picture>
         </figure>
@@ -195,10 +185,10 @@
         <figure>
           <picture>
             <source type="image/webp"
-              srcset="/images/gallery/dog-cozy-nap.webp"
-              sizes="(max-width:640px) 100vw, 50vw">
+                    srcset="/images/gallery/dog-cozy-nap.webp 1200w"
+                    sizes="(max-width:640px) 100vw, 50vw">
             <img src="/images/gallery/dog-cozy-nap.jpg"
-                 alt="Calm nap on a familiar blanket during boutique weekend boarding in South Melbourne"
+                 alt="Calm nap on a familiar blanket — boutique weekend boarding, South Melbourne"
                  width="1200" height="900" loading="lazy" decoding="async">
           </picture>
         </figure>
@@ -206,19 +196,59 @@
         <figure>
           <picture>
             <source type="image/webp"
-              srcset="/images/gallery/dog-weekend-woof.webp"
-              sizes="(max-width:640px) 100vw, 50vw">
+                    srcset="/images/gallery/dog-weekend-woof.webp 1200w"
+                    sizes="(max-width:640px) 100vw, 50vw">
             <img src="/images/gallery/dog-weekend-woof.jpg"
-                 alt="Relaxed dog settling for lights-out at our one-guest Weekend Woof Club"
+                 alt="Relaxed lights-out at our one-guest Weekend Woof Club — home-style boarding"
                  width="1200" height="900" loading="lazy" decoding="async">
           </picture>
         </figure>
       </div>
 
       <p class="center" style="margin-top:1rem">
-        <a class="btn" href="/dog-walking-south-melbourne.html">See dog walking service</a>
-        <a class="btn button-primary" href="/boarding-services.html">Explore boarding</a>
+        <a class="btn" href="/dog-walking-south-melbourne.html">See Dog Walking Details</a>
+        <a class="btn button-primary" href="/boarding-services.html">Explore Boarding</a>
       </p>
+    </section>
+
+    <!-- Where we walk -->
+    <section class="container" aria-labelledby="where-we-walk" style="margin-top:16px">
+      <h2 id="where-we-walk">Where We Walk: Albert Park, Middle Park, Southbank & Port Melbourne</h2>
+      <p class="intro-copy">
+        Most routes start in <strong>South Melbourne</strong> and loop through <strong>Albert Park Lake</strong>,
+        <strong>Middle Park</strong>, <strong>Southbank</strong> and <strong>Port Melbourne</strong>—quiet streets,
+        safe crossings and plenty of sniffing. If you’re comparing options, here’s how we’re different:
+        <strong>one-dog-only walks</strong>, the same handler for consistency, predictable routines and detailed
+        <a href="/blog/why-solo-walks">notes with photos</a> after every walk.
+      </p>
+      <p class="intro-copy">
+        Planning a weekend away? Our <a href="/boarding-services.html">one-guest boutique boarding</a>
+        keeps your dog’s home routines—<em>sofa or bed is fine if that’s your normal</em>—with multiple local walks
+        and daily updates. Walk a lot on weekdays? The
+        <a href="/unlimited-dog-walks.html">Unlimited Membership</a> is the best value (Mon–Fri).
+      </p>
+      <p class="center" style="margin-top:.6rem">
+        <a class="btn btn-ghost" href="/blog/best-dog-walks-south-melbourne">Best Dog Walks in South Melbourne (Blog)</a>
+        <a class="btn" href="/contact.html">Ask a Question</a>
+      </p>
+    </section>
+
+    <!-- Sales CTA band -->
+    <section class="container edge" aria-labelledby="ready-to-book" style="margin:18px auto">
+      <h2 id="ready-to-book" style="margin-top:0">Ready to Book?</h2>
+      <p class="intro-copy" style="margin:.2rem 0 10px">
+        One-dog-only walks with GPS & photo updates. Boutique boarding with one guest at a time.
+      </p>
+      <div class="cta-buttons">
+        <a class="btn button-primary" target="_blank" rel="noopener"
+           href="https://www.timetopet.com/portal/woofofwalkstreet"
+           onclick="gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
+          Open Client Portal
+        </a>
+        <a class="btn" href="/dog-walking-south-melbourne.html">Dog Walking Service</a>
+        <a class="btn" href="/boarding-services.html">Boarding — Weekend Woof Club</a>
+        <a class="btn btn-ghost" href="tel:+61456754050">Call 0456 754 050</a>
+      </div>
     </section>
   </main>
 
@@ -232,6 +262,7 @@
     </div>
 
     <div class="container footer-grid">
+      <!-- Brand / NAP -->
       <section class="footer-brand">
         <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="60" height="60" loading="lazy">
         <p><strong>The Woof of Walk Street</strong><br>
@@ -246,34 +277,37 @@
         <p>
           <a class="btn button-primary" target="_blank" rel="noopener"
              href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=footer&utm_campaign=book_now_footer"
-             onclick="gtag && gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
+             onclick="gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
             Book Now
           </a>
         </p>
       </section>
 
+      <!-- Primary links -->
       <nav class="footer-col" aria-label="Primary">
         <h3>Services</h3>
         <ul>
           <li><a href="/services.html">All Services</a></li>
           <li><a href="/dog-walking-south-melbourne.html">Dog Walking South Melbourne</a></li>
-          <li><a href="/boarding-services.html" aria-current="page">Boarding — Weekend Woof Club</a></li>
+          <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
           <li><a href="/unlimited-dog-walks.html">Unlimited Membership</a></li>
           <li><a href="/contact.html">Contact</a></li>
         </ul>
       </nav>
 
+      <!-- Support -->
       <section class="footer-col collapsible">
         <button class="collapse-btn" aria-expanded="false" aria-controls="support-list">Support</button>
         <ul id="support-list">
           <li><a href="/about.html">About</a></li>
           <li><a href="/testimonials.html">Testimonials</a></li>
-          <li><a href="/gallery.html">Photos & Videos</a></li>
+          <li><a href="/gallery.html" aria-current="page">Photos & Videos</a></li>
           <li><a href="/blog/index.html">Blog</a></li>
           <li><a href="/faq.html">FAQs</a></li>
         </ul>
       </section>
 
+      <!-- Legal -->
       <section class="footer-col collapsible">
         <button class="collapse-btn" aria-expanded="false" aria-controls="legal-list">Legal</button>
         <ul id="legal-list">
@@ -307,32 +341,63 @@
     </script>
   </footer>
 
+  <!-- JSON-LD: ImageGallery + Breadcrumbs -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    "name": "Dog Walking & Boarding Gallery - The Woof of Walk Street",
+    "description": "Photos of solo walks and one-guest boutique boarding in South Melbourne, including Albert Park Lake and local neighbourhood routes.",
+    "image": [
+      "https://www.woofofwalkstreet.com/images/gallery/dog-digging-sand.webp",
+      "https://www.woofofwalkstreet.com/images/gallery/dog-sunset-walk.webp",
+      "https://www.woofofwalkstreet.com/images/gallery/dog-cozy-nap.webp",
+      "https://www.woofofwalkstreet.com/images/gallery/dog-weekend-woof.webp"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
+    {"@type":"ListItem","position":2,"name":"Gallery","item":"https://www.woofofwalkstreet.com/gallery.html"}
+  ]}
+  </script>
+
   <!-- Services dropdown accessibility -->
   <script>
     (function () {
       const btn  = document.querySelector('.nav-group-btn[aria-controls="nav-services"]');
       const list = document.getElementById('nav-services');
       if (!btn || !list) return;
-
       const sync = () => { list.hidden = btn.getAttribute('aria-expanded') !== 'true'; };
       sync();
-
       btn.addEventListener('click', () => {
         const open = btn.getAttribute('aria-expanded') === 'true';
         btn.setAttribute('aria-expanded', String(!open));
         sync();
       });
-
       document.addEventListener('click', (e) => {
         if (!btn.contains(e.target) && !list.contains(e.target)) {
           btn.setAttribute('aria-expanded', 'false'); sync();
         }
       }, { capture: true });
-
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') { btn.setAttribute('aria-expanded', 'false'); sync(); }
       });
     })();
+  </script>
+
+  <!-- Promo close (session) -->
+  <script>
+    document.getElementById('promo-close')?.addEventListener('click', ()=>{
+      document.getElementById('promo').style.display = 'none';
+      try { sessionStorage.setItem('promoDismissed','1'); } catch(e){}
+    });
+    try {
+      if (sessionStorage.getItem('promoDismissed') === '1') {
+        document.getElementById('promo').style.display = 'none';
+      }
+    } catch(e){}
   </script>
 </body>
 </html>

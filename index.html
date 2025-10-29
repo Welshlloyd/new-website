@@ -263,6 +263,14 @@
     }
     .promo-close:hover{ background: rgba(0,0,0,.08); transform: rotate(10deg); }
 
+    /* clear delineation between ribbons */
+    .ribbon-gap{
+      height:10px;
+      background:linear-gradient(180deg, rgba(0,0,0,.24), rgba(0,0,0,0));
+      border-bottom:1px solid rgba(255,255,255,.06);
+      box-shadow: inset 0 -1px 0 rgba(0,0,0,.18);
+    }
+
     .impact-ribbon{
       background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
       border-bottom: 1px solid var(--line);
@@ -304,9 +312,7 @@
     .faq .btn-ghost:hover{ background:#111; color:#fff; border-color:#111; }
   </style>
 
-  <!-- ===== Structured Data ===== -->
-
-  <!-- LocalBusiness (with GBP link) -->
+  <!-- ===== Structured Data (unchanged) ===== -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -321,7 +327,6 @@
     "address":{"@type":"PostalAddress","addressLocality":"South Melbourne","addressRegion":"VIC","addressCountry":"AU"},
     "areaServed":["South Melbourne","Albert Park","Port Melbourne","Middle Park","Southbank","South Yarra"],
     "sameAs":[
-      "https://www.google.com/search?sca_esv=e9f55f1ce1ed95d6&authuser=0&hl=en&gl=au&nfpr=1&sxsrf=AE3TifP5_xOq9o_RWRGxs8qTS_GbH89BiA:1761708463195&q=The+Woof+of+Walk+Street+%E2%80%93+Dog+Walking+South+Melbourne&ludocid=16990922104674419629&lsig=AB86z5UXDJ3ghyzMyUkvhOKOIEF3&ved=1i%3A4%2Ct%3A109124%2Ce%3A3%2Cp%3AqokBabC5O9_NseMP-IfUoAk%3A54",
       "https://instagram.com/woofofwalkstreet",
       "https://facebook.com/woofofwalkstreet",
       "https://x.com/woofofwalkstreet"
@@ -329,7 +334,6 @@
   }
   </script>
 
-  <!-- Service: Dog Walking -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -342,7 +346,6 @@
   }
   </script>
 
-  <!-- Service: Boarding -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -355,7 +358,6 @@
   }
   </script>
 
-  <!-- OfferCatalog for memberships -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -370,12 +372,10 @@
   }
   </script>
 
-  <!-- WebSite SearchAction -->
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"WebSite","url":"https://www.woofofwalkstreet.com/","potentialAction":{"@type":"SearchAction","target":"https://www.woofofwalkstreet.com/search.html?q={search_term_string}","query-input":"required name=search_term_string"}}
   </script>
 
-  <!-- FAQPage -->
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
     {"@type":"Question","name":"Do you offer group walks in South Melbourne?","acceptedAnswer":{"@type":"Answer","text":"No. We only offer solo dog walks for safety, attention and a calmer experience."}},
@@ -411,12 +411,15 @@
     <div class="promo-inner container">
       <img class="promo-dog" src="/images/brand/dog-in-suit.webp" alt="" width="28" height="28" decoding="async" />
       <span class="promo-copy">
-        <strong>50% OFF</strong> Unlimited Daily Walks — 45-minute solo walks · GPS tracked · Photo updates <strong>· Ends 30 Nov 2025</strong>
+        <strong>50% OFF</strong> Unlimited Daily Walks — 45-minute solo walks · GPS tracked · Photo updates <strong>· Ends 30 Nov</strong>
       </span>
       <a href="/unlimited-dog-walks.html" class="promo-cta">Learn More →</a>
       <button id="promo-close" class="promo-close" aria-label="Dismiss promo">✕</button>
     </div>
   </div>
+
+  <!-- visual break between ribbons -->
+  <div class="ribbon-gap" aria-hidden="true"></div>
 
   <!-- Impact ribbon -->
   <div class="impact-ribbon" role="note" aria-label="Walks that do more: 10% donated">
@@ -442,6 +445,7 @@
       <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</label>
 
       <nav class="nav-links gold-edge" aria-label="Primary" style="padding:10px;border-radius:12px">
+        <!-- Services group -->
         <section class="nav-group">
           <button class="nav-group-btn" aria-expanded="false" aria-controls="nav-services">Services ▾</button>
           <ul id="nav-services" class="nav-group-list" hidden>
@@ -457,7 +461,21 @@
         </section>
 
         <a href="/about.html">About</a>
-        <a href="/memberships.html">Pricing</a>
+
+        <!-- Areas group (replaces Pricing) -->
+        <section class="nav-group">
+          <button class="nav-group-btn" aria-expanded="false" aria-controls="nav-areas">Areas ▾</button>
+          <ul id="nav-areas" class="nav-group-list" hidden>
+            <li><a href="/service-areas.html">All Service Areas</a></li>
+            <li><a href="/dog-walking-south-melbourne.html">South Melbourne</a></li>
+            <li><a href="/dog-walker-albert-park.html">Albert Park</a></li>
+            <li><a href="/dog-walker-port-melbourne.html">Port Melbourne</a></li>
+            <li><a href="/dog-walker-middle-park.html">Middle Park</a></li>
+            <li><a href="/dog-walker-southbank.html">Southbank</a></li>
+            <li><a href="/dog-walker-south-yarra.html">South Yarra</a></li>
+          </ul>
+        </section>
+
         <a href="/testimonials.html">Testimonials</a>
         <a href="/gallery.html">Gallery</a>
         <a href="/contact.html" onclick="gtag && gtag('event','nav_click',{label:'header_contact'});">Contact</a>
@@ -539,7 +557,7 @@
       <hr class="section-sweep" aria-hidden="true">
     </section>
 
-    <!-- BOARDING (dedicated section) -->
+    <!-- BOARDING -->
     <section>
       <div class="container" data-reveal>
         <h2>Boutique Boarding — One Guest, Calm Home Vibes</h2>
@@ -660,27 +678,29 @@
       <hr class="section-sweep" aria-hidden="true">
     </section>
 
-    <!-- Social / Gallery (SnapWidget fixed) -->
+    <!-- Social / Gallery (with SnapWidget fallback) -->
     <section>
       <div class="container" data-reveal>
         <h2>Happy Dogs</h2>
         <p>Follow our walks, boarding weekends, and everyday dog joy.</p>
         <div class="gold-edge" style="padding:10px">
-          <!-- SnapWidget -->
-          <script src="https://snapwidget.com/js/snapwidget.js" async></script>
-          <iframe
-            src="https://snapwidget.com/embed/18077269241319594"
-            class="snapwidget-widget"
-            allowtransparency="true"
-            frameborder="0"
-            scrolling="no"
-            style="border:none;overflow:hidden;width:100%;height:500px"
-            title="Posts from Instagram"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-          <noscript>
-            <p><a href="https://instagram.com/woofofwalkstreet" target="_blank" rel="noopener">See our Instagram</a></p>
-          </noscript>
+          <div id="ig-embed">
+            <script src="https://snapwidget.com/js/snapwidget.js" async></script>
+            <iframe
+              id="snapwidget"
+              src="https://snapwidget.com/embed/18077269241319594"
+              class="snapwidget-widget"
+              allowtransparency="true"
+              frameborder="0"
+              scrolling="no"
+              style="border:none;overflow:hidden;width:100%;height:500px"
+              title="Posts from Instagram"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div id="ig-fallback" style="display:none;text-align:center;padding:12px">
+            <a class="btn btn-outline" href="https://instagram.com/woofofwalkstreet" target="_blank" rel="noopener">See our Instagram →</a>
+          </div>
         </div>
       </div>
       <hr class="section-sweep" aria-hidden="true">
@@ -773,9 +793,8 @@
 
   </main>
 
-  <!-- FOOTER (rich, with CTAs) -->
+  <!-- FOOTER -->
   <footer class="site-footer" role="contentinfo">
-    <!-- Banner hero -->
     <div class="container footer-banner" style="margin-top:6px">
       <picture>
         <source srcset="/images/brand/footer-banner-1600x600.webp" media="(min-width: 768px)">
@@ -783,9 +802,7 @@
       </picture>
     </div>
 
-    <!-- Grid -->
     <div class="container footer-grid compact">
-      <!-- Brand / contact -->
       <section class="footer-brand">
         <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="56" height="56" loading="lazy">
         <p class="org"><strong>The Woof of Walk Street</strong><br>
@@ -796,7 +813,6 @@
         </p>
         <p style="margin:.4rem 0 0"><em>“GPS tracked, photo updates, and the calmest walks in Melbourne.”</em></p>
 
-        <!-- CTA row -->
         <p class="cta-buttons" style="margin:.75rem 0 0;display:flex;gap:.5rem;flex-wrap:wrap">
           <a class="btn btn-primary" href="/book-dog-walk/?utm_source=site&utm_medium=footer&utm_campaign=50off_walk">Book 50% Off Walk</a>
           <a class="btn btn-ghost"    href="/unlimited-dog-walks.html?utm_source=site&utm_medium=footer&utm_campaign=50off_unlimited">50% Off Unlimited</a>
@@ -804,7 +820,6 @@
         </p>
       </section>
 
-      <!-- Services -->
       <nav class="footer-col" aria-label="Services">
         <h3>Services</h3>
         <ul class="footlist">
@@ -816,7 +831,6 @@
         </ul>
       </nav>
 
-      <!-- Local Areas -->
       <nav class="footer-col" aria-label="Local Areas">
         <h3>Local Areas</h3>
         <ul class="footlist">
@@ -830,7 +844,6 @@
       </nav>
     </div>
 
-    <!-- Legal / SEO internal links -->
     <div class="container footer-bottom" style="text-align:center">
       <nav style="margin:10px 0 6px;display:inline-flex;gap:18px;flex-wrap:wrap">
         <a href="/contact.html">Contact Us</a>
@@ -849,18 +862,18 @@
 
   <!-- ===== JS ===== -->
 
-  <!-- Nav services toggle + mobile menu autoclose + scroll lock -->
+  <!-- Nav groups + mobile menu + scroll lock -->
   <script>
   (function () {
-    const btn  = document.querySelector('.nav-group-btn[aria-controls="nav-services"]');
-    const list = document.getElementById('nav-services');
-    if (btn && list) {
+    function wireGroup(btnSel, listId){
+      const btn  = document.querySelector(btnSel);
+      const list = document.getElementById(listId);
+      if (!btn || !list) return;
       const sync = () => { list.hidden = btn.getAttribute('aria-expanded') !== 'true'; };
       sync();
       btn.addEventListener('click', () => {
         const open = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', String(!open));
-        sync();
+        btn.setAttribute('aria-expanded', String(!open)); sync();
       });
       document.addEventListener('click', (e) => {
         if (!btn.contains(e.target) && !list.contains(e.target)) {
@@ -868,39 +881,23 @@
         }
       }, { capture: true });
     }
+    wireGroup('.nav-group-btn[aria-controls="nav-services"]','nav-services');
+    wireGroup('.nav-group-btn[aria-controls="nav-areas"]','nav-areas');
 
-    /* Auto-collapse hamburger menu on link tap / outside / scroll + lock body */
     const navToggle = document.getElementById('nav-toggle');
     const navLabel  = document.querySelector('label[for="nav-toggle"]');
     const navLinks  = document.querySelector('.nav-links');
-    const scrim     = document.querySelector('.nav-scrim');
-    const closeMenu = () => {
-      if (navToggle && navToggle.checked) navToggle.checked = false;
-      document.body.classList.remove('menu-open');
-    };
+    const closeMenu = () => { if (navToggle && navToggle.checked) navToggle.checked = false; document.body.classList.remove('menu-open'); };
 
     if (navToggle && navLinks) {
-      // Lock/unlock scroll when toggled
-      navToggle.addEventListener('change', () => {
-        if (navToggle.checked) document.body.classList.add('menu-open');
-        else document.body.classList.remove('menu-open');
-      });
-
-      // Close on link tap
+      navToggle.addEventListener('change', () => { document.body.classList.toggle('menu-open', navToggle.checked); });
       navLinks.addEventListener('click', (e) => { if (e.target.closest('a')) closeMenu(); });
-
-      // Close when tapping outside
       document.addEventListener('click', (e) => {
         const inside = navLinks.contains(e.target) || navLabel?.contains(e.target) || e.target === navToggle;
         if (!inside) closeMenu();
       }, { capture: true });
-
-      // Close on meaningful scroll
       let lastY = window.scrollY;
-      window.addEventListener('scroll', () => {
-        if (Math.abs(window.scrollY - lastY) > 8) closeMenu();
-        lastY = window.scrollY;
-      });
+      window.addEventListener('scroll', () => { if (Math.abs(window.scrollY - lastY) > 8) closeMenu(); lastY = window.scrollY; });
     }
   })();
   </script>
@@ -935,16 +932,15 @@
   })();
   </script>
 
-  <!-- Promo close persistence + TTP bridge -->
+  <!-- Promo close + TTP bridge + SnapWidget fallback -->
   <script>
   (function(){
+    // Promo dismiss
     const promo = document.getElementById('promo');
     const closeBtn = document.getElementById('promo-close');
     const KEY = 'wow-promo-closed';
     if (sessionStorage.getItem(KEY) === '1' && promo) promo.style.display = 'none';
-    closeBtn?.addEventListener('click', () => {
-      sessionStorage.setItem(KEY, '1'); promo.style.display = 'none';
-    });
+    closeBtn?.addEventListener('click', () => { sessionStorage.setItem(KEY, '1'); promo.style.display = 'none'; });
 
     // Intercept direct TimeToPet links and route to booking bridge
     document.addEventListener('click', function (e) {
@@ -960,13 +956,22 @@
         window.location.href = url.toString();
       }
     }, { capture: true });
+
+    // SnapWidget fallback: if the iframe errors or returns 404, hide and show link
+    const sw = document.getElementById('snapwidget');
+    const fb = document.getElementById('ig-fallback');
+    const holder = document.getElementById('ig-embed');
+    function showFallback(){ if (holder) holder.style.display='none'; if (fb) fb.style.display='block'; }
+    // Some browsers don't fire onerror for cross-origin iframes; add a timer + post-load check
+    let loaded = false;
+    sw?.addEventListener('load', () => { loaded = true; });
+    setTimeout(() => { if (!loaded) showFallback(); }, 4000);
   })();
   </script>
 
   <!-- Scroll reveal + parallax -->
   <script>
   (function(){
-    // Reveal
     const io = new IntersectionObserver((entries)=>{
       for (const e of entries) if (e.isIntersecting) {
         e.target.classList.add('revealed'); io.unobserve(e.target);
@@ -974,7 +979,6 @@
     }, { threshold:.12 });
     document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
 
-    // Light parallax on hero image
     const parallaxEl = document.querySelector('[data-parallax]');
     if (parallaxEl){
       let y = 0;

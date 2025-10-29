@@ -1,107 +1,83 @@
 <!DOCTYPE html>
 <html lang="en-AU">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Terms & Conditions | The Woof of Walk Street</title>
-  <meta name="description" content="Terms & Conditions for The Woof of Walk Street (South Melbourne). Booking, payment, cancellations, safety, keys/access, photos, and liability."/>
-  <link rel="canonical" href="https://www.woofofwalkstreet.com/terms.html"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Icons & CSS -->
-  <link rel="icon" href="/images/brand/favicon.ico"/>
-  <link rel="stylesheet" href="/css/mini.css"/>
-  <link rel="stylesheet" href="/css/styles.css"/>
+  <title>Terms & Policies — The Woof of Walk Street (South Melbourne)</title>
+  <meta name="description" content="Read The Woof of Walk Street’s terms and policies for solo dog walking and boutique one-guest-only boarding in South Melbourne. Access our Full Terms, Short-Form Terms and Privacy Policy, plus helpful links to services and FAQs." />
+  <link rel="canonical" href="https://www.woofofwalkstreet.com/terms.html" />
+  <link rel="icon" href="/images/brand/favicon.ico" />
 
-  <!-- Open Graph / Twitter -->
-  <meta property="og:type" content="website"/>
-  <meta property="og:title" content="Terms & Conditions | The Woof of Walk Street"/>
-  <meta property="og:description" content="Booking, payment, cancellations, safety, and more for our solo dog walking and boutique weekend boarding."/>
-  <meta property="og:url" content="https://www.woofofwalkstreet.com/terms.html"/>
-  <meta property="og:image" content="https://www.woofofwalkstreet.com/images/brand/hero-dog-skyline-1200.webp"/>
-  <meta name="twitter:card" content="summary_large_image"/>
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/css/mini.css">
+  <link rel="stylesheet" href="/css/styles.css">
 
-  <!-- JSON-LD: WebPage + Breadcrumbs -->
+  <!-- Page polish -->
+  <style>
+    .container{max-width:1120px;margin:0 auto;padding:0 16px}
+    .lede{color:#5b6775;max-width:70ch}
+    .edge{
+      background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.02));
+      border:2px solid #f5b200;border-radius:14px;
+      box-shadow:0 0 10px rgba(245,178,0,.25),0 10px 24px rgba(0,0,0,.18);
+      padding:16px;transition:.2s ease
+    }
+    .edge:hover{transform:translateY(-2px);box-shadow:0 0 16px rgba(245,178,0,.5),0 16px 36px rgba(0,0,0,.24)}
+    .grid{display:grid;gap:14px}
+    @media(min-width:900px){ .grid{grid-template-columns:1.05fr .95fr} }
+    .doc-list{list-style:none;padding:0;margin:0}
+    .doc-item{display:flex;align-items:center;justify-content:space-between;gap:12px;border:1px solid #eceff3;border-radius:12px;padding:14px}
+    .doc-item h3{margin:.1rem 0 .25rem;font-weight:900}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:10px 16px;border-radius:999px;border:1px solid transparent;font-weight:900;text-decoration:none}
+    .btn-primary{background:#ffd166;color:#111;box-shadow:0 8px 20px rgba(255,209,102,.25)}
+    .btn-ghost{background:transparent;border:1px solid #2a3440;color:inherit}
+    .tag{display:inline-block;padding:.22rem .5rem;border-radius:999px;background:#f5b200;color:#111;font-weight:800;font-size:.82rem}
+    .subtle{color:#5b6775}
+    .link-list{margin:.4rem 0 0 1.2rem}
+    .link-list li{margin:.25rem 0}
+    .section-title{font-weight:900;letter-spacing:-.01em}
+  </style>
+
+  <!-- Breadcrumbs + ItemList JSON-LD -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
+    {"@type":"ListItem","position":2,"name":"Terms & Policies","item":"https://www.woofofwalkstreet.com/terms.html"}
+  ]}
+  </script>
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
-    "@type":"WebPage",
-    "name":"Terms & Conditions",
-    "url":"https://www.woofofwalkstreet.com/terms.html",
-    "breadcrumb":{
-      "@type":"BreadcrumbList",
-      "itemListElement":[
-        {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
-        {"@type":"ListItem","position":2,"name":"Terms & Conditions","item":"https://www.woofofwalkstreet.com/terms.html"}
-      ]
-    },
-    "about":{"@type":"LocalBusiness","name":"The Woof of Walk Street","address":{"@type":"PostalAddress","addressLocality":"South Melbourne","addressRegion":"VIC","addressCountry":"AU"}}
+    "@type":"ItemList",
+    "name":"The Woof of Walk Street — Terms & Policies",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,
+       "item":{"@type":"WebPage","name":"Full Terms","url":"https://www.woofofwalkstreet.com/terms-full.html"}},
+      {"@type":"ListItem","position":2,
+       "item":{"@type":"WebPage","name":"Short-Form Terms","url":"https://www.woofofwalkstreet.com/terms-short.html"}},
+      {"@type":"ListItem","position":3,
+       "item":{"@type":"WebPage","name":"Privacy Policy","url":"https://www.woofofwalkstreet.com/privacy.html"}}
+    ]
   }
   </script>
-
- <!-- Google Ads Global Site Tag -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'AW-17527927259');
-  </script>
-
-  <!-- ✅ Preload LCP hero image (with srcset + sizes) -->
-  <link
-    rel="preload"
-    as="image"
-    href="/images/brand/hero-dog-skyline-1200.webp"
-    imagesrcset="/images/brand/hero-dog-skyline-800.webp 800w, /images/brand/hero-dog-skyline-1200.webp 1200w, /images/brand/hero-dog-skyline-1600.webp 1600w"
-    imagesizes="(max-width: 640px) 100vw, (max-width: 1200px) 90vw, 1200px"
-  >
 </head>
-
 <body>
-  <!-- Promo ribbon (edgier) -->
-  <div id="promo" class="promo-ribbon promo--edge" role="region" aria-label="Promo: 50% off">
-    <div class="promo-inner container">
-      <img class="promo-dog" src="/images/brand/dog-in-suit.webp" alt="" width="28" height="28" decoding="async" />
-      <span class="promo-copy">
-        <strong>50% OFF</strong> Unlimited Daily Walks — 45-minute solo walks · GPS tracked · Photo updates
-      </span>
-      <a href="/membership-unlimited.html" class="promo-cta">Learn More →</a>
-      <button id="promo-close" class="promo-close" aria-label="Dismiss promo">✕</button>
-    </div>
-  </div>
-  
-  <!-- Impact ribbon (charity) -->
-  <div class="impact-ribbon" role="note" aria-label="Walks that do more: 10% donated">
-    <div class="impact-inner">
-      <span class="impact-emoji" aria-hidden="true">💛</span>
-      <strong>Walks That Do More:</strong>
-      When you choose us, you’re not just booking a dog walk — you’re helping rescue dogs too.
-      <strong>We donate 10% of profits</strong> to local shelters.
-      <a class="impact-cta" href="/community.html">See our impact →</a>
-    </div>
-  </div>
-
-
   <!-- HEADER -->
   <header class="site-header" role="banner">
     <div class="navbar container" role="navigation" aria-label="Main">
       <a class="brand" href="/" aria-label="Go to home">
-        <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="56" height="56">
+        <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="56" height="56" loading="lazy">
         <strong>The Woof of Walk Street</strong>
       </a>
-
-      <!-- mobile hamburger -->
-      <input id="nav-toggle" type="checkbox" hidden>
-      <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</label>
-
       <nav class="nav-links" aria-label="Primary">
         <section class="nav-group">
           <button class="nav-group-btn" aria-expanded="false" aria-controls="nav-services">Services</button>
           <ul id="nav-services" class="nav-group-list">
             <li><a href="/services.html">All Services</a></li>
-            <li><a href="/dog-walking-south-melbourne">Dog Walking South Melbourne</a></li>
+            <li><a href="/dog-walking-south-melbourne.html">Dog Walking South Melbourne</a></li>
             <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
-            <li><a href="/memberships.html">Unlimited Membership</a></li>
+            <li><a href="/unlimited-dog-walks.html">Unlimited Membership</a></li>
             <li><a href="/contact.html">Contact</a></li>
           </ul>
         </section>
@@ -109,141 +85,112 @@
         <a href="/blog/index.html">Blog</a>
         <a href="/faq.html">FAQs</a>
         <a href="/search.html">Search</a>
-        <a class="btn button-primary nav-cta"
+        <a class="btn btn-primary nav-cta"
            href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=header&utm_campaign=book_now"
-           target="_blank" rel="noopener"
-           onclick="gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
-           Book Now
-        </a>
+           target="_blank" rel="noopener">Open Portal</a>
       </nav>
     </div>
   </header>
 
   <main>
-
-    <section>
+    <!-- Hero -->
+    <section class="hero">
       <div class="container">
-        <h2>1) Who we are</h2>
-        <p><strong>The Woof of Walk Street</strong> provides solo dog walking and boutique “one-guest-only” weekend boarding in and around South Melbourne, VIC. We operate Monday–Friday for walking (by booking) and select weekends for boarding.</p>
+        <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="/">Home</a> › Terms & Policies</nav>
+        <h1 class="section-title">Terms & Policies — The Woof of Walk Street (South Melbourne)</h1>
+        <p class="lede">Welcome to The Woof of Walk Street’s terms hub. Here you’ll find quick access to our <strong>Full Terms</strong>, <strong>Short-Form Terms</strong> and <strong>Privacy Policy</strong>. We keep things clear, respectful and designed around your dog’s comfort and safety.</p>
+        <p class="subtle">Last updated: <time datetime="2025-10-29">29 October 2025</time></p>
+      </div>
+    </section>
 
-        <h2>2) Bookings &amp; accounts</h2>
+    <!-- Two-column: document links + persuasive copy -->
+    <section>
+      <div class="container grid">
+        <!-- Left: Documents -->
+        <div class="edge" aria-labelledby="doc-index">
+          <h2 id="doc-index" class="section-title" style="margin-top:0">Our Documents</h2>
+          <ul class="doc-list" role="list">
+            <li class="doc-item" role="listitem">
+              <div>
+                <h3>Full Terms</h3>
+                <p class="subtle">The complete legal terms for walking, memberships and one-guest-only boarding.</p>
+              </div>
+              <a class="btn btn-primary" href="/terms-full.html">Open</a>
+            </li>
+            <li class="doc-item" role="listitem">
+              <div>
+                <h3>Short-Form Terms</h3>
+                <p class="subtle">A human-friendly summary of the key points (great for a quick read).</p>
+              </div>
+              <a class="btn btn-primary" href="/terms-short.html">Open</a>
+            </li>
+            <li class="doc-item" role="listitem">
+              <div>
+                <h3>Privacy Policy</h3>
+                <p class="subtle">How we handle your data in the booking portal and on our website.</p>
+              </div>
+              <a class="btn btn-primary" href="/privacy.html">Open</a>
+            </li>
+          </ul>
+
+          <div class="edge" style="margin-top:12px;border-width:1px">
+            <p class="subtle" style="margin:0"><span class="tag">Tip</span> Keep this page bookmarked; we’ll note the date above if anything changes.</p>
+          </div>
+        </div>
+
+        <!-- Right: Persuasive / trust copy -->
+        <aside class="edge" aria-labelledby="trust">
+          <h2 id="trust" class="section-title" style="margin-top:0">Why Owners Choose Us</h2>
+          <p><strong>One-dog-only walks. One-guest-only boarding.</strong> We built The Woof of Walk Street for dogs who thrive on calm, individual attention. Your pup gets focused exercise, predictable routines and real home comfort — not a busy pack walk or a noisy kennel.</p>
+          <ul class="link-list">
+            <li>Walks include <strong>GPS route</strong> and <strong>photo updates</strong>—see exactly how their day went. <a href="/dog-walking-south-melbourne.html">Explore dog walking →</a></li>
+            <li>Boarding is <strong>home-style</strong>: dogs may <strong>sleep on our bed or the sofa</strong> if that’s your routine. <a href="/boarding-services.html">See boarding details →</a></li>
+            <li>Frequent walkers save with <strong>memberships</strong> (including our Unlimited weekday option). <a href="/unlimited-dog-walks.html">Compare memberships →</a></li>
+            <li>We donate <strong>10% of profits</strong> to local shelters. <a href="/community.html">See our impact →</a></li>
+          </ul>
+          <p>If you’re new here, the fastest way to get started is via our secure portal — it takes about a minute to create your account and request your first booking.</p>
+          <p class="link-list" style="list-style:none;margin-top:8px">
+            <a class="btn btn-primary" href="https://www.timetopet.com/portal/woofofwalkstreet/create-account" target="_blank" rel="noopener">Open Client Portal</a>
+            <a class="btn btn-ghost" href="/faq.html">Read FAQs</a>
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Promo rules snapshot (links to full details elsewhere) -->
+    <section>
+      <div class="container edge" aria-labelledby="promos">
+        <h2 id="promos" class="section-title" style="margin-top:0">Current Promotions (Snapshot)</h2>
+        <p class="subtle" style="margin:.2rem 0 8px">A quick reference — the full legal version lives in our documents above.</p>
         <ul>
-          <li>All requests are managed through the <strong>Time To Pet</strong> Client Portal/App.</li>
-          <li>Requests are <em>pending</em> until confirmed by us within the app.</li>
-          <li>Availability is limited by design; priority may be given to current clients and members.</li>
+          <li><strong>Casual Walk:</strong> 50% off your first 45-minute walk — one per customer.</li>
+          <li><strong>Boarding:</strong> 20% off one stay (up to <strong>14 nights</strong>) — one per customer.</li>
+          <li><strong>Unlimited Membership:</strong> 50% off the first month — one per customer.</li>
         </ul>
+        <p class="subtle">Valid until <strong>30 November 2025</strong> (Melbourne time). Not transferable. Not combinable. <a href="/faq.html#promos">See full promo rules →</a></p>
+        <div class="link-list" style="list-style:none;margin-top:8px">
+          <a class="btn btn-ghost" href="/book-dog-walk/?utm_source=terms&utm_medium=cta&utm_campaign=casual_50">Book 50% Off Casual Walk</a>
+          <a class="btn btn-ghost" href="/book-boarding.html?utm_source=terms&utm_medium=cta&utm_campaign=boarding_20">Book 20% Off Boarding</a>
+          <a class="btn btn-ghost" href="/unlimited-dog-walks.html?utm_source=terms&utm_medium=cta&utm_campaign=unlimited_50">Get 50% Off Unlimited</a>
+        </div>
+      </div>
+    </section>
 
-        <h2>3) Services</h2>
-        <ul>
-          <li><strong>Solo walks:</strong> one dog at a time, approx. 45 minutes (weather-sensible), GPS-tracked with post-walk photo/update.</li>
-          <li><strong>Weekend Woof Club (boarding):</strong> one guest only in a calm, home-style environment. A daily walk is included.</li>
-          <li>We don’t offer pack walks. We may adjust route, pace, or timing for heat, storms, events, or safety.</li>
+    <!-- Helpful links -->
+    <section>
+      <div class="container edge" aria-labelledby="helpful">
+        <h2 id="helpful" class="section-title" style="margin-top:0">Helpful Links</h2>
+        <ul class="link-list">
+          <li><a href="/services.html">All Services</a> · <a href="/gallery.html">Photos & Videos</a> · <a href="/testimonials.html">Testimonials</a></li>
+          <li><a href="/blog/best-dog-walks-south-melbourne">Blog: Best Dog Walks in South Melbourne</a> · <a href="/blog/why-solo-walks">Blog: Why Solo Walks</a></li>
+          <li><a href="/faq.html">Frequently Asked Questions</a> · <a href="/contact.html">Contact</a></li>
+          <li><a href="/sitemap.html">HTML Sitemap</a></li>
         </ul>
-
-        <h2>4) Health, behaviour &amp; suitability</h2>
-        <ul>
-          <li>Clients confirm their dog is <strong>healthy, up to date</strong> with vaccinations or titre status, parasite prevention, and microchipped.</li>
-          <li>Please disclose any medical needs, allergies, triggers, reactivity, or handling requirements in the app.</li>
-          <li>We are one-dog-only; dogs must be safe to handle and suitable for solo care in public spaces.</li>
-          <li>We may pause or decline services if a dog poses a safety risk to people, other animals, or themselves.</li>
-        </ul>
-
-        <h2>5) Keys &amp; home access</h2>
-        <ul>
-          <li>Entry methods (keys, key safes, smart locks) must be accurate in the app and kept current.</li>
-          <li>Keys are coded, stored securely, and never labelled with full addresses.</li>
-          <li>Please inform building management/concierge that we’re authorised to attend as your dog walker/boarder.</li>
-        </ul>
-
-        <h2>6) Payments</h2>
-        <ul>
-          <li>Pricing is shown in the portal and may vary by time, public holiday, or add-ons.</li>
-          <li>Payment is processed via Time To Pet or our nominated provider. Invoices are due on receipt unless otherwise stated.</li>
-          <li>Membership discounts apply only while the plan is active and in good standing.</li>
-        </ul>
-
-        <h2>7) Cancellations &amp; changes</h2>
-        <ul>
-          <li><strong>Walks:</strong> cancel in-app ≥24 hours before the scheduled start for no charge. Inside 24h, the session is chargeable.</li>
-          <li><strong>Boarding:</strong> 7-day notice for a full credit; 3–6 days 50% credit; &lt;72 hours non-refundable (we generally cannot fill one-guest spots at short notice).</li>
-          <li>Credits are applied to future bookings and are not cash-refundable unless required by law.</li>
-        </ul>
-
-        <h2>8) Weather &amp; safety adjustments</h2>
-        <ul>
-          <li>For heat, storms, smoke, or hazards, we may shorten, reschedule, switch to enrichment/indoor breaks, or cancel.</li>
-          <li>We do not walk during lightning, extreme heat, or severe air quality alerts. Dog welfare is the priority.</li>
-        </ul>
-
-        <h2>9) Emergencies &amp; vet care</h2>
-        <ul>
-          <li>We’ll contact you (and your nominated emergency contact) promptly if concerns arise.</li>
-          <li>If immediate care is required, you authorise us to transport your dog to a veterinarian and you agree to cover related costs.</li>
-          <li>We will act in your dog’s <strong>best interests</strong> while attempting to reach you.</li>
-        </ul>
-
-        <h2>10) Photos, GPS &amp; updates</h2>
-        <ul>
-          <li>Walks include GPS tracking and a photo update. Media may be used for your updates and, with your permission, on our website/socials.</li>
-          <li>To opt out of marketing use, let us know in writing (email or app message).</li>
-        </ul>
-
-        <h2>11) Liability</h2>
-        <ul>
-          <li>While we take professional care, you acknowledge risks inherent in animal services and public environments.</li>
-          <li>We are not liable for issues arising from inaccurate client information, defective equipment, unsecured premises, or third-party actions, except to the extent liability cannot be excluded by law.</li>
-          <li>Please supply safe, fit-for-purpose equipment (well-fitting harness/lead, ID tag).</li>
-        </ul>
-
-        <h2>12) Public holidays &amp; after-hours</h2>
-        <ul>
-          <li>Public holiday/after-hours surcharges may apply and will be shown or confirmed in the app before approval.</li>
-        </ul>
-
-        <h2>13) Privacy</h2>
-        <p>We handle your personal information in accordance with our <a href="/privacy.html">Privacy Policy</a>. Time To Pet processes data subject to its own terms and privacy policy.</p>
-
-        <h2>14) Changes to these terms</h2>
-        <p>We may update these terms from time to time. The latest version will be published on this page with a revised “Last updated” date.</p>
-
-        <h2>15) Governing law</h2>
-        <p>These terms are governed by the laws of Victoria, Australia. Disputes are subject to the non-exclusive jurisdiction of the courts of Victoria.</p>
-
-        <!-- ============================= -->
-        <!-- SERVICE-SPECIFIC ADDENDUM(S) -->
-        <!-- ============================= -->
-
-        <h2>Service-Specific Addendum: Unlimited Membership</h2>
-        <p>This addendum applies to our “Unlimited Daily Walks” membership.</p>
-        <ul>
-          <li><strong>Eligibility & area:</strong> Available to clients within our regular South Melbourne service zone. We may decline if location/timetable is outside practical reach.</li>
-          <li><strong>What “Unlimited” means:</strong> One <em>45-minute solo walk</em> per weekday (Mon–Fri), subject to calendar availability and confirmed booking in the app. Additional ad-hoc walks may be requested but are subject to schedule capacity and standard rates/credits.</li>
-          <li><strong>Booking window:</strong> Members should request preferred time windows (e.g., late morning) at least 48h ahead. Same-day requests are welcomed but not guaranteed.</li>
-          <li><strong>Fair use:</strong> The plan is designed for a consistent weekday routine. Repeated no-shows, last-minute changes, or patterns that materially reduce capacity for other clients may prompt a schedule review.</li>
-          <li><strong>Holds/pauses:</strong> You may pause for holidays/medical reasons in weekly blocks with 7-day notice; billing is pro-rated to the next cycle. Unused days aren’t banked unless we cancel for safety (see Weather/Safety).</li>
-          <li><strong>Billing & term:</strong> Recurs monthly until cancelled. Price may change at renewal; we’ll notify you in advance via app/email.</li>
-          <li><strong>Cancellations:</strong> Cancel any time in the app to take effect at the next billing cycle. Mid-cycle cancellations take effect at period end; no partial refunds unless required by law.</li>
-          <li><strong>Promotions:</strong> Intro offers (e.g., “50% OFF”) apply to the promotional period only. After that, standard pricing resumes unless otherwise specified in writing.</li>
-          <li><strong>Exclusions:</strong> Public holidays and weekends are not included in “weekday unlimited.” Boarding services are separate and billed per stay.</li>
-          <li><strong>Weather/Safety credits:</strong> If we shorten or cancel due to weather/safety, we’ll credit or reschedule at our discretion to maintain dog welfare.</li>
-          <li><strong>Transferability:</strong> Memberships are for a single household/dog (or agreed multi-dog plan) and are not transferable.</li>
-        </ul>
-
-        <h2>Service-Specific Addendum: Weekend Woof Club (Boarding)</h2>
-        <ul>
-          <li><strong>One guest only:</strong> We host a single dog per stay. A video/meet-and-greet may be required prior to the first booking.</li>
-          <li><strong>Drop-off & pick-up:</strong> Times are agreed in-app. Late pickups may incur a day-care fee or an extra night, if available.</li>
-          <li><strong>Comfort & supplies:</strong> Please pack food with instructions, meds, and a familiar item (bed/blanket). We can provide simple meals (kibble & cooked chicken) if requested.</li>
-          <li><strong>Behaviour & welfare:</strong> If a dog experiences undue distress, we may adjust activities, request early pickup, or arrange an alternative in consultation with you.</li>
-        </ul>
-
-        <hr>
-        <p><strong>Quick links:</strong> <a href="/privacy.html">Privacy Policy</a> · <a href="/faq.html">FAQs</a> · <a href="/sitemap.html">Sitemap</a></p>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER (matches site) -->
+  <!-- FOOTER -->
   <footer class="site-footer" role="contentinfo">
     <div class="footer-banner">
       <picture>
@@ -253,58 +200,45 @@
     </div>
 
     <div class="container footer-grid">
-      <!-- Brand / NAP -->
       <section class="footer-brand">
         <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="60" height="60" loading="lazy">
         <p><strong>The Woof of Walk Street</strong><br>
           <a class="footer-map" href="https://maps.app.goo.gl/YnEoSPwhGocUZyWL9?g_st=ipc" target="_blank" rel="noopener">South Melbourne, VIC</a> · Mon–Fri 7am–7pm<br>
           <a href="tel:+61456754050">+61 456 754 050</a> · <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a>
         </p>
-        <div class="footer-socials">
-          <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram"><img src="/images/social/instagram.svg" alt="" width="24" height="24"></a>
-          <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook"><img src="/images/social/facebook.svg" alt="" width="24" height="24"></a>
-          <a href="https://x.com/woofofwalkstreet" aria-label="X"><img src="/images/social/twitter.svg" alt="" width="24" height="24"></a>
-        </div>
-        <p>
-          <a class="btn button-primary" target="_blank" rel="noopener"
-             href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=footer&utm_campaign=book_now_footer"
-             onclick="gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
-            Book Now
-          </a>
+        <p><a class="btn btn-primary" target="_blank" rel="noopener"
+              href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=footer&utm_campaign=book_now">Open Client Portal</a>
         </p>
       </section>
 
-      <!-- Primary links -->
       <nav class="footer-col" aria-label="Primary">
         <h3>Services</h3>
         <ul>
-          <li><a href="/services.html">All Services</a></li>
-          <li><a href="/dog-walking-south-melbourne">Dog Walking South Melbourne</a></li>
+          <li><a href="/dog-walking-south-melbourne.html">Dog Walking South Melbourne</a></li>
           <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
-          <li><a href="/memberships.html">Unlimited Membership</a></li>
+          <li><a href="/unlimited-dog-walks.html">Unlimited Membership</a></li>
           <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/sitemap.html">Sitemap</a></li>
         </ul>
       </nav>
 
-      <!-- Support -->
       <section class="footer-col collapsible">
         <button class="collapse-btn" aria-expanded="false" aria-controls="support-list">Support</button>
         <ul id="support-list">
-          <li><a href="/about.html">About</a></li>
+          <li><a href="/faq.html">FAQs</a></li>
           <li><a href="/testimonials.html">Testimonials</a></li>
           <li><a href="/gallery.html">Photos & Videos</a></li>
           <li><a href="/blog/index.html">Blog</a></li>
-          <li><a href="/faq.html">FAQs</a></li>
         </ul>
       </section>
 
-      <!-- Legal -->
       <section class="footer-col collapsible">
         <button class="collapse-btn" aria-expanded="false" aria-controls="legal-list">Legal</button>
         <ul id="legal-list">
-          <li><a href="/privacy.html">Privacy</a></li>
-          <li><a href="/terms.html" aria-current="page">Terms</a></li>
-          <li><a href="/sitemap.html">Sitemap</a></li>
+          <li><a href="/terms.html" aria-current="page">Terms (Index)</a></li>
+          <li><a href="/terms-full.html">Full Terms</a></li>
+          <li><a href="/terms-short.html">Short-Form Terms</a></li>
+          <li><a href="/privacy.html">Privacy Policy</a></li>
         </ul>
       </section>
     </div>
@@ -316,48 +250,30 @@
 
     <div class="container footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-
-    <!-- Tiny JS for footer accordions (mobile) -->
-    <script>
-      document.querySelectorAll('.collapsible .collapse-btn').forEach(btn=>{
-        btn.addEventListener('click', ()=>{
-          const list = document.getElementById(btn.getAttribute('aria-controls'));
-          const open = btn.getAttribute('aria-expanded') === 'true';
-          btn.setAttribute('aria-expanded', String(!open));
-          list.hidden = open;
-        });
-        const list = document.getElementById(btn.getAttribute('aria-controls'));
-        if (window.matchMedia('(max-width:640px)').matches) list.hidden = true;
-      });
-    </script>
   </footer>
+
+  <!-- Services dropdown a11y -->
   <script>
-  (function () {
-    const btn  = document.querySelector('.nav-group-btn[aria-controls="nav-services"]');
-    const list = document.getElementById('nav-services');
-    if (!btn || !list) return;
-
-    // Start closed on mobile; respect aria-expanded
-    const sync = () => { list.hidden = btn.getAttribute('aria-expanded') !== 'true'; };
-    sync();
-
-    btn.addEventListener('click', () => {
-      const open = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!open));
+    (function () {
+      const btn  = document.querySelector('.nav-group-btn[aria-controls="nav-services"]');
+      const list = document.getElementById('nav-services');
+      if (!btn || !list) return;
+      const sync = () => { list.hidden = btn.getAttribute('aria-expanded') !== 'true'; };
       sync();
-    });
-
-    document.addEventListener('click', (e) => {
-      if (!btn.contains(e.target) && !list.contains(e.target)) {
-        btn.setAttribute('aria-expanded', 'false'); sync();
-      }
-    }, { capture: true });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') { btn.setAttribute('aria-expanded', 'false'); sync(); }
-    });
-  })();
-</script>
-
+      btn.addEventListener('click', () => {
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        sync();
+      });
+      document.addEventListener('click', (e) => {
+        if (!btn.contains(e.target) && !list.contains(e.target)) {
+          btn.setAttribute('aria-expanded', 'false'); sync();
+        }
+      }, { capture: true });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') { btn.setAttribute('aria-expanded', 'false'); sync(); }
+      });
+    })();
+  </script>
 </body>
 </html>

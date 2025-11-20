@@ -23,13 +23,27 @@
     img{max-width:100%;height:auto}
     a{color:inherit}
     .container{max-width:1100px;margin:0 auto;padding:0 16px}
-    .hero-bridge{padding:28px 0 16px;border-bottom:1px solid rgba(255,255,255,.06)}
-    .hero-bridge h1{font-weight:900;letter-spacing:-.01em;margin:.2rem 0 .4rem}
-    .lede{color:#cfd6df;max-width:65ch}
-    .edge{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.02));border:2px solid #f5b200;border-radius:16px;box-shadow:0 0 10px rgba(245,178,0,.25),0 12px 28px rgba(0,0,0,.18);padding:18px}
-    .edge:hover{box-shadow:0 0 18px rgba(245,178,0,.55),0 18px 44px rgba(0,0,0,.26);transform:translateY(-2px)}
     
-    /* CRO: ADJUST GRID FOR MORE BOOKING SPACE */
+    /* CRO: Typography Hierarchy */
+    .hero-bridge h1, .edge h2, .card-plan h3, .faq summary, .why .point strong, .kicker, .badge {
+        font-weight: 800; /* Strong headings */
+    }
+    .lede, .mini, .muted {
+        font-weight: 400; /* Lighter body text for readability */
+    }
+
+    .hero-bridge{padding:28px 0 16px;border-bottom:1px solid rgba(255,255,255,.06)}
+    .hero-bridge h1{letter-spacing:-.01em;margin:.2rem 0 .4rem}
+    .lede{color:#cfd6df;max-width:65ch}
+    .edge{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.02));border:2px solid #f5b200;border-radius:16px;box-shadow:0 0 10px rgba(245,178,0,.25),0 12px 28px rgba(0,0,0,.18);padding:18px; transition: all .3s ease;}
+    
+    /* CRO: Advanced Card Visuals / Hierarchy */
+    .edge:hover{
+        box-shadow: 0 0 18px rgba(245,178,0,.55), 0 18px 44px rgba(0,0,0,.26);
+        transform: translateY(-2px); /* Lift for main conversion area */
+    }
+    
+    /* CRO: Adjust Grid for more booking space */
     .bridge-wrap{display:grid;gap:16px}
     @media(min-width:980px){.bridge-wrap{grid-template-columns:1.2fr .8fr}} 
     
@@ -40,7 +54,7 @@
     .btn-primary{background:var(--brand);color:var(--brand-ink);box-shadow:0 10px 26px rgba(255,209,102,.25)}
     .btn-primary:hover{transform:translateY(-1px) scale(1.02)}
     
-    /* CRO: ENHANCED PRIMARY CTA SIZE for booking flow */
+    /* CRO: Enhanced Primary CTA Size for booking flow */
     .card-plan .btn-primary, .hero-cta-group .btn-primary { 
         padding: 16px 28px; 
         font-size: 1.15rem; 
@@ -49,12 +63,12 @@
     .btn-ghost{background:transparent;color:#fff;border:1px solid #2a3440}
     .btn-ghost:hover{border-color:#fff}
     .btn-outline{background:transparent;border:1px solid var(--brand);color:var(--brand)}
-    .kicker{letter-spacing:.08em;color:var(--accent);font-weight:800}
+    .kicker{letter-spacing:.08em;color:var(--accent)}
     .mini{font-size:.96rem;color:#cfd6df}
     .muted{color:#a9b4c0}
-    .badge{display:inline-block;padding:.28rem .6rem;border-radius:999px;font-size:.82rem;font-weight:800;color:#111;background:var(--brand)}
+    .badge{display:inline-block;padding:.28rem .6rem;border-radius:999px;font-size:.82rem;color:#111;background:var(--brand)}
     
-    /* CRO: SHRINK HERO IMAGE ON DESKTOP */
+    /* CRO: Shrink Hero Image on Desktop */
     .hero-img{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:10px}
     @media (min-width: 980px) {
         .hero-img picture, .hero-img img {
@@ -65,7 +79,7 @@
     }
     .hero-img picture,.hero-img img{border-radius:12px;max-width:320px;width:100%}
     
-    /* CRO: ENHANCED PROMO NOTE VISIBILITY (PULSE ANIMATION) */
+    /* CRO: Enhanced Promo Note Visibility (Pulse Animation) */
     .promo-note{
         background:rgba(255,209,102,.08);
         border:1px dashed #f5b200;
@@ -81,7 +95,7 @@
         100% { box-shadow: 0 0 0px #f5b20000; }
     }
     
-    /* CRO: URGENCY TIMER STYLING */
+    /* CRO: Urgency Timer Styling */
     .promo-timer {
         display: inline-block;
         color: var(--accent);
@@ -94,9 +108,23 @@
 
     .cards{display:grid;gap:12px}
     @media(min-width:740px){.cards{grid-template-columns:1fr 1fr}}
-    .card-plan{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid #2a3440;border-radius:14px;padding:14px}
-    
-    /* CRO: HIGHLIGHT THE UNLIMITED CARD (2ND CHILD - The assumed preferred offer) */
+    .card-plan{
+        background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));
+        border:1px solid #2a3440;
+        border-radius:14px;
+        padding:14px;
+        position: relative; /* For ribbon */
+        overflow: hidden; /* For ribbon */
+        transition: all .2s ease;
+    }
+
+    /* CRO: Interactive Card Hover */
+    .card-plan:hover {
+        box-shadow: inset 0 0 10px rgba(255,209,102,.2); /* Inner glow */
+        transform: translateY(-1px); /* Subtle lift */
+    }
+
+    /* CRO: Highlight the Unlimited Card (2ND CHILD - The assumed preferred offer) */
     .cards .card-plan:nth-child(2) { 
         border-width: 2px;
         border-color: var(--brand); /* gold */
@@ -104,7 +132,25 @@
         background:linear-gradient(180deg,rgba(255,209,102,.05),rgba(255,255,255,.02));
     }
     
-    .card-plan h3{margin:.1rem 0 .25rem;font-weight:900}
+    /* CRO: Best Value Ribbon */
+    .ribbon-badge {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: var(--brand);
+        color: var(--brand-ink);
+        padding: 6px 12px;
+        font-weight: 900;
+        font-size: 0.9rem;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+        box-shadow: -2px 2px 5px rgba(0,0,0,0.2);
+        transform: translate(0px, 0px) rotate(3deg);
+        z-index: 10;
+        text-transform: uppercase;
+        letter-spacing: .05em;
+    }
+
+    .card-plan h3{margin:.1rem 0 .25rem}
     .price-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
     .regular{color:#aab6c3;text-decoration:line-through}
     .promo{font-weight:900;background:#f5b200;color:#111;padding:.18rem .5rem;border-radius:999px;box-shadow:0 8px 18px rgba(245,178,0,.26)}
@@ -115,7 +161,29 @@
     .faq{margin-top:16px}
     .faq details{border-top:1px solid #2a3440;padding:10px 0}
     .faq details:first-of-type{border-top:0}
-    .faq summary{cursor:pointer;font-weight:800}
+    .faq summary{cursor:pointer}
+
+    /* CRO: Accented List Markers */
+    ol.mini {
+        list-style: none; /* Remove default marker */
+        counter-reset: item; /* Start counter */
+        padding-left: 0; /* Remove default padding */
+    }
+    ol.mini li {
+        padding-left: 20px; /* Space for the custom marker */
+        position: relative;
+        margin-bottom: 6px;
+    }
+    ol.mini li:before {
+        content: counter(item);
+        counter-increment: item;
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: var(--accent); /* Accent color for the numbers */
+        font-weight: 800;
+        font-size: 1.1em;
+    }
 
     /* Persuasion block */
     .why{display:grid;gap:12px;margin-top:12px}
@@ -240,6 +308,7 @@
           </article>
 
           <article class="card-plan" role="listitem">
+            <span class="ribbon-badge">BEST VALUE</span>
             <h3>Unlimited Walks Membership (Weekly)</h3>
             <p class="meta">Best value for regular walkers</p>
             <div class="price-row">
@@ -292,7 +361,7 @@
         <h3 class="mini" style="font-size:1.1rem;margin:.5rem 0 .35rem">What to expect</h3>
         <div class="edge" style="border-width:1px;padding:12px">
           <h4 class="muted" style="margin:0 0 .4rem">Inside Time To Pet</h4>
-          <ol class="mini" style="margin:0 0 8px 18px">
+          <ol class="mini">
             <li>Create your account and tell us about your dog.</li>
             <li>Request dates or select our suggested time.</li>
             <li>See your confirmation in the portal and via email.</li>

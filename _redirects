@@ -1,3 +1,8 @@
+# CRITICAL FIX: Redirect old South Melbourne Hub to the new generic Hub
+/dog-walking-south-melbourne.html       /dog-walking.html                                   301
+/dog-walking-south-melbourne            /dog-walking.html                                   301
+/dog-walking-south-melbourne/           /dog-walking.html
+
 # ================================
 # Canonical: HTTPS + www
 # ================================

@@ -4,26 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- ===== SEO ===== -->
-  <title>Dog Walker Port Melbourne — Solo Dog Walking by Port Melbourne Beach (GPS & Photos)</title>
-  <meta name="description" content="Local dog walker in Port Melbourne. Calm, one-dog-only 45-minute walks by Port Melbourne Beach & wide streets. GPS route & photo updates every time. Casual A$90 or save with Memberships / Unlimited (50% off first month). Book online." />
+  <title>Dog Walker Port Melbourne — Solo Beach Walks & Local Service (GPS Tracked)</title>
+  <meta name="description" content="Local dog walker in Port Melbourne. Calm, one-dog-only 45-minute walks by Port Melbourne Beach, Princes Pier & wide streets. GPS route & photo updates every time. Casual A$90 or save with Memberships." />
   <link rel="canonical" href="https://www.woofofwalkstreet.com/dog-walker-port-melbourne.html" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="icon" href="/images/brand/favicon.ico" />
 
-  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Dog Walker Port Melbourne — Solo Walks by the Beach (GPS & Photos)">
-  <meta property="og:description" content="One-at-a-time dog walking in Port Melbourne. GPS-tracked with photo updates. Great for steady, predictable routines.">
+  <meta property="og:description" content="One-at-a-time dog walking in Port Melbourne. GPS-tracked with photo updates. Great for steady, predictable routines near the beach and parks.">
   <meta property="og:url" content="https://www.woofofwalkstreet.com/dog-walker-port-melbourne.html">
   <meta property="og:image" content="https://www.woofofwalkstreet.com/images/port-melbourne-beach.webp">
   <meta property="og:locale" content="en_AU">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <!-- ===== Edge Pack CSS (aligned with other new pages) ===== -->
   <style>
     :root{
       --bg:#0b0e12; --card:#0f1318; --text:#e8eef5; --muted:#a9b4c0; --line:#1e2630;
@@ -103,6 +99,8 @@
 
     /* Footer */
     .footer-banner img{border-radius:12px}
+    /* ADDED: CSS for footer spacing */
+    .footer-banner { margin-top: 6px; }
     .footer-grid{display:grid;gap:16px;padding:18px 0}
     .footer-grid.compact{row-gap:12px;column-gap:24px;align-items:start}
     @media(min-width:860px){.footer-grid.compact{grid-template-columns:1.2fr 1fr 1fr}}
@@ -112,6 +110,8 @@
     .footlist a{color:#e8eef5;text-decoration:none}
     .footlist a:hover{text-decoration:underline}
     .footer-bottom{padding:12px 0;color:#a9b4c0;border-top:1px solid var(--line);text-align:center}
+    /* ADDED: CSS for footer CTA buttons */
+    .footer-brand .cta-buttons { margin: .75rem 0 0; display: flex; gap: .5rem; flex-wrap: wrap; }
 
     /* Ribbons (mobile-polished) */
     .promo-ribbon{position:relative;z-index:1100;background:linear-gradient(135deg,#f5b200,#ffd866,#f5b200);background-size:300% 300%;animation:shimmer 6s ease-in-out infinite;color:var(--brand-ink);border-bottom:1px solid rgba(255,255,255,.06);box-shadow:0 14px 40px rgba(0,0,0,.18);isolation:isolate}
@@ -135,7 +135,6 @@
     @media (min-width:860px){.sticky-cta{display:none}}
   </style>
 
-  <!-- Theme boot (no-FOUC) -->
   <script>
   (function(){
     const KEY='wow-theme'; const pref=localStorage.getItem(KEY)||'auto';
@@ -147,11 +146,9 @@
   })();
   </script>
 
-  <!-- GA Ads -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-17527927259');</script>
 
-  <!-- JSON-LD: Breadcrumbs + Service + WebPage + FAQ -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -160,7 +157,28 @@
         {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
         {"@type":"ListItem","position":2,"name":"Dog Walker Port Melbourne","item":"https://www.woofofwalkstreet.com/dog-walker-port-melbourne.html"}
       ]},
-      {
+      { /* ADDED: LocalBusiness entity for local ranking */
+        "@type":"LocalBusiness",
+        "name":"The Woof of Walk Street",
+        "url":"https://www.woofofwalkstreet.com/",
+        "telephone":"+61-456-754-050",
+        "priceRange":"A$90.00",
+        "address":{
+          "@type":"PostalAddress",
+          "streetAddress":"South Melbourne Area",
+          "addressLocality":"South Melbourne",
+          "addressRegion":"VIC",
+          "addressCountry":"AU"
+        },
+        "areaServed":["Port Melbourne","Albert Park","South Melbourne","Middle Park","Southbank","South Yarra"],
+        "openingHoursSpecification":{
+          "@type":"OpeningHoursSpecification",
+          "dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens":"07:00",
+          "closes":"19:00"
+        }
+      },
+      { /* Service entity */
         "@type":"Service","@id":"https://www.woofofwalkstreet.com/dog-walker-port-melbourne.html#solo",
         "name":"Solo Dog Walking — Port Melbourne (45 minutes)",
         "serviceType":"Dog Walking",
@@ -168,7 +186,14 @@
         "provider":{"@type":"Organization","name":"The Woof of Walk Street","url":"https://www.woofofwalkstreet.com/"},
         "url":"https://www.woofofwalkstreet.com/dog-walker-port-melbourne.html",
         "description":"Calm, one-dog-only walks by Port Melbourne Beach and wide residential streets with GPS route & photo updates.",
-        "offers":{"@type":"Offer","priceCurrency":"AUD","price":"90.00","availability":"https://schema.org/InStock","url":"https://www.woofofwalkstreet.com/casual-dog-walking-south-melbourne.html"}
+        "offers":{
+          "@type":"Offer",
+          "priceCurrency":"AUD",
+          "price":"90.00",
+          "availability":"https://schema.org/InStock",
+          /* FIX: Point to main booking page */
+          "url":"https://www.woofofwalkstreet.com/book-dog-walk/"
+        }
       },
       {"@type":"WebPage","@id":"https://www.woofofwalkstreet.com/dog-walker-port-melbourne.html#page",
        "name":"Dog Walker Port Melbourne — Solo Dog Walking by Port Melbourne Beach",
@@ -183,12 +208,10 @@
   }
   </script>
 
-  <!-- Preload LCP hero -->
   <link rel="preload" as="image" href="/images/port-melbourne-beach.webp" />
 </head>
 <body>
 
-  <!-- Promo ribbon -->
   <div id="promo" class="promo-ribbon" role="region" aria-label="Promo: 50% off Unlimited first month">
     <div class="promo-inner container">
       <span class="promo-copy"><strong>50% OFF</strong> Unlimited Weekday Walks — solo 45-min walks · GPS tracked · Photo updates · Ends 30 Nov</span>
@@ -197,7 +220,6 @@
     </div>
   </div>
 
-  <!-- Impact ribbon -->
   <div class="impact-ribbon" role="note" aria-label="Walks that do more: 10% donated">
     <div class="impact-inner">
       <span class="impact-emoji" aria-hidden="true">💛</span>
@@ -207,7 +229,6 @@
     </div>
   </div>
 
-  <!-- HEADER -->
   <header class="site-header" role="banner">
     <div class="navbar container" role="navigation" aria-label="Main">
       <a class="brand" href="/" aria-label="Go to home">
@@ -223,8 +244,7 @@
           <button class="nav-group-btn" aria-expanded="false" aria-controls="nav-services">Services ▾</button>
           <ul id="nav-services" class="nav-group-list" hidden>
             <li><a href="/services.html">All Services</a></li>
-            <li><a href="/dog-walking-south-melbourne.html">Dog Walking South Melbourne</a></li>
-            <li><a href="/casual-dog-walking-south-melbourne.html">Casual Walking</a></li>
+            <li><a href="/dog-walking.html">Dog Walking Services</a></li> <li><a href="/casual-dog-walking-south-melbourne.html">Casual Walking</a></li>
             <li><a href="/memberships.html">Memberships — Compare</a></li>
             <li><a href="/unlimited-dog-walks.html">Unlimited Weekday Walks</a></li>
             <li><a href="/boarding-services.html">Boarding Services</a></li>
@@ -239,7 +259,6 @@
         <a href="/faq.html">FAQs</a>
         <a href="/search.html">Search</a>
 
-        <!-- CTAs -->
         <a class="btn btn-outline" href="/book-dog-walk/">Book Walks</a>
         <a class="btn btn-primary" href="/book-boarding.html">Book Boarding</a>
       </nav>
@@ -248,15 +267,12 @@
   </header>
 
   <main class="page-top">
-    <!-- HERO -->
     <section class="hero">
       <div class="container">
         <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="/">Home</a> › Dog Walker Port Melbourne</nav>
         <h1>Dog Walker Port Melbourne — Solo Dog Walking by Port Melbourne Beach</h1>
         <p class="subhead">
-          Predictable, <strong>one-dog-only</strong> walks starting at your door, then a calm loop by <strong>Port Melbourne Beach</strong>
-          and wide residential streets. Every session includes a <strong>GPS route</strong>, <strong>photo update</strong> and quick notes.
-          Try a casual A$90 walk or save with <a href="/memberships.html"><strong>Memberships</strong></a> and <a href="/unlimited-dog-walks.html"><strong>Unlimited</strong></a>.
+          Predictable, <strong>one-dog-only</strong> walks starting at your door, then a calm loop along the <strong>Bay Street foreshore</strong>, past <strong>Princes Pier</strong>, or through the quiet streets near <strong>Garden City</strong>. Every session includes a <strong>GPS route</strong>, <strong>photo update</strong> and quick notes.
         </p>
         <img class="hero-img" src="/images/port-melbourne-beach.webp"
              alt="Calm solo dog walk along Port Melbourne foreshore" width="1200" height="800" loading="eager" decoding="async" fetchpriority="high">
@@ -264,14 +280,13 @@
       <hr class="section-sweep" aria-hidden="true">
     </section>
 
-    <!-- WHY PORT MELBOURNE -->
     <section>
       <div class="container grid grid-2">
         <article class="card">
           <h2>Professional Dog Walker in Port Melbourne — Solo Only</h2>
           <h3>Foreshore Paths, Wide Streets & Low-Arousal Routes</h3>
           <p>
-            Port Melbourne’s breezy foreshore and generous street layouts are ideal for steady, decompression-style walks.
+            From the breezy paths of <strong>Sandridge Beach</strong> to the open green spaces of <strong>J.L. Murphy Reserve</strong>, Port Melbourne is ideal for steady, decompression-style walks.
             We keep things structured and predictable — no pack walks, no mixing unfamiliar dogs, just calm one-to-one attention.
           </p>
           <ul class="list-check">
@@ -301,7 +316,6 @@
       <hr class="section-sweep" aria-hidden="true">
     </section>
 
-    <!-- LOCAL GUIDES / BLOG LINKS -->
     <section class="alt">
       <div class="container">
         <h2>Port Melbourne Guides — Dog-Friendly Cafés, Solo Walk Tips & Local Routes</h2>
@@ -318,7 +332,6 @@
       <hr class="section-sweep" aria-hidden="true">
     </section>
 
-    <!-- HOW TO BOOK -->
     <section>
       <div class="container">
         <h2>How to Book Your Port Melbourne Dog Walk</h2>
@@ -336,7 +349,6 @@
       <hr class="section-sweep" aria-hidden="true">
     </section>
 
-    <!-- NEARBY AREAS -->
     <section class="alt" aria-label="Nearby areas we walk">
       <div class="container">
         <h2>Nearby Areas — Albert Park, Middle Park, South Melbourne & Southbank</h2>
@@ -344,8 +356,7 @@
           <a class="badge" href="/dog-walker-albert-park.html">Albert Park</a>
           <a class="badge" href="/dog-walker-middle-park.html">Middle Park</a>
           <span class="badge" aria-current="page">Port Melbourne</span>
-          <a class="badge" href="/dog-walking-south-melbourne.html">South Melbourne</a>
-          <a class="badge" href="/dog-walker-southbank.html">Southbank</a>
+          <a class="badge" href="/dog-walking.html">South Melbourne</a> <a class="badge" href="/dog-walker-southbank.html">Southbank</a>
           <a class="badge" href="/dog-walker-south-yarra.html">South Yarra</a>
         </p>
         <p><a href="/service-areas.html">See all service areas →</a></p>
@@ -353,7 +364,6 @@
       <hr class="section-sweep" aria-hidden="true">
     </section>
 
-    <!-- FAQ (visible; mirrors JSON-LD) -->
     <section id="faq">
       <div class="container">
         <h2>Port Melbourne Dog Walker — FAQs</h2>
@@ -364,15 +374,13 @@
     </section>
   </main>
 
-  <!-- Sticky dual CTA (mobile) -->
   <div class="sticky-cta" role="region" aria-label="Quick booking">
     <a class="btn btn-primary" href="/book-dog-walk/">Book Walks</a>
     <a class="btn btn-outline" href="/unlimited-dog-walks.html">50% Off Unlimited</a>
   </div>
 
-  <!-- FOOTER (same pattern) -->
   <footer class="site-footer" role="contentinfo">
-    <div class="container footer-banner" style="margin-top:6px">
+    <div class="container footer-banner">
       <picture>
         <source srcset="/images/brand/footer-banner-1600x600.webp" media="(min-width: 768px)">
         <img class="gold-edge" src="/images/brand/footer-banner-800x300.webp" alt="Happy dogs in Melbourne" loading="lazy" width="800" height="300">
@@ -384,11 +392,11 @@
         <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="56" height="56" loading="lazy">
         <p class="org"><strong>The Woof of Walk Street</strong><br>
           <a class="footer-map" href="https://maps.app.goo.gl/YnEoSPwhGocUZyWL9?g_st=ipc" target="_blank" rel="noopener">South Melbourne, VIC</a><br>
-          Mon–Fri 7am–7pm · <a href="tel:+61456754050">+61&nbsp;456&nbsp;754&nbsp;050</a><br>
+          Mon–Fri 7am–7pm · <a href="tel:+61456754050">+61 456 754 050</a><br>
           <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a>
         </p>
         <p style="margin:.4rem 0 0"><em>“GPS tracked, photo updates, and the calmest walks in Melbourne.”</em></p>
-        <p class="cta-buttons" style="margin:.75rem 0 0;display:flex;gap:.5rem;flex-wrap:wrap">
+        <p class="cta-buttons">
           <a class="btn btn-primary" href="/book-dog-walk/?utm_source=site&utm_medium=footer&utm_campaign=book_walk">Book a Walk</a>
           <a class="btn btn-ghost" href="/unlimited-dog-walks.html?utm_source=site&utm_medium=footer&utm_campaign=50off_unlimited">50% Off Unlimited</a>
           <a class="btn btn-ghost" href="/book-boarding.html?utm_source=site&utm_medium=footer&utm_campaign=20off_boarding">20% Off Boarding</a>
@@ -398,8 +406,7 @@
       <nav class="footer-col" aria-label="Services">
         <h3>Services</h3>
         <ul class="footlist">
-          <li><a href="/dog-walking-south-melbourne.html">Dog Walking</a></li>
-          <li><a href="/casual-dog-walking-south-melbourne.html">Casual Walks</a></li>
+          <li><a href="/dog-walking.html">Dog Walking</a></li> <li><a href="/casual-dog-walking-south-melbourne.html">Casual Walks</a></li>
           <li><a href="/memberships.html">Memberships</a></li>
           <li><a href="/boarding-services.html">Boarding Services</a></li>
           <li><a href="/contact.html">Contact</a></li>
@@ -412,15 +419,14 @@
           <li><a href="/dog-walker-albert-park.html">Albert Park</a></li>
           <li><a href="/dog-walker-middle-park.html">Middle Park</a></li>
           <li><a href="/dog-walker-port-melbourne.html" aria-current="page">Port Melbourne</a></li>
-          <li><a href="/dog-walking-south-melbourne.html">South Melbourne</a></li>
-          <li><a href="/dog-walker-southbank.html">Southbank</a></li>
+          <li><a href="/dog-walking.html">South Melbourne</a></li> <li><a href="/dog-walker-southbank.html">Southbank</a></li>
           <li><a href="/dog-walker-south-yarra.html">South Yarra</a></li>
         </ul>
       </nav>
     </div>
 
     <div class="container footer-bottom">
-      Solo Dog Walking &amp; Boutique Boarding across
+      Solo Dog Walking & Boutique Boarding across
       <strong>South Melbourne</strong>, <strong>Albert Park</strong>, <strong>Middle Park</strong>,
       <strong>Port Melbourne</strong>, <strong>Southbank</strong> and <strong>South Yarra</strong>
       · © <span id="year"></span> The Woof of Walk Street
@@ -428,7 +434,6 @@
     <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
   </footer>
 
-  <!-- ===== JS ===== -->
   <script>
   (function () {
     // Header dropdown wiring & auto-close

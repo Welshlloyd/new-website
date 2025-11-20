@@ -3,27 +3,117 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Book Now | The Woof of Walk Street</title>
-  <meta name="description" content="Book a solo 45-minute walk or use your membership credits. Ethical, one-dog-at-a-time walking with GPS tracking and photos.">
+  
+  <title>Book a Dog Walk South Melbourne | 50% Off First Month | The Woof of Walk Street</title>
+  <meta name="description" content="Ready for a happier dog? Book your solo dog walk in South Melbourne. New clients: Get 50% off your first month of Unlimited walks. GPS tracked & police checked." />
+  
   <link rel="stylesheet" href="css/styles.css" />
+  
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'AW-17527927259');
+  </script>
+
   <style>
-    :root{--gold:#f4c542;--ink:#0c1b2a;--surface:#0f1318;--line:#1d232c}
-    .hero{padding:56px 16px 22px;text-align:center}
-    .hero h1{font-size:clamp(2rem,3.2vw,3rem);margin:.25rem 0}
-    .hero p{color:#cfd7e1;max-width:840px;margin:0 auto}
-    .wrap{max-width:1100px;margin:16px auto 40px;padding:0 16px}
-    .grid{display:grid;gap:20px;grid-template-columns:repeat(12,1fr)}
-    .card{grid-column:span 6;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px}
-    .card h2{margin:.25rem 0 .5rem}
-    .btn{display:inline-block;margin-top:10px;padding:12px 16px;border-radius:10px;font-weight:800;text-decoration:none}
-    .btn-primary{background:var(--gold);color:#111}
-    .btn-ghost{border:1px solid #2a3440;color:#e9edf2}
-    .rules{margin-top:24px;background:#0b0e12;border:1px solid var(--line);border-radius:16px;padding:18px;color:#cfd7e1}
-    @media(max-width:900px){.card{grid-column:1/-1}}
+    /* --- Core Variables (Matched to your Brand) --- */
+    :root{
+      --gold: #f4c542;
+      --ink: #0c1b2a;
+      --surface: #0f1318;
+      --line: #1d232c;
+      --text: #cfd7e1;
+    }
+    
+    body {
+      background-color: #0b0e12;
+      color: var(--text);
+      font-family: 'Work Sans', sans-serif;
+    }
+    h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; color: #fff; }
+
+    /* --- Header & Hero --- */
+    .hero { padding: 56px 16px 32px; text-align: center; }
+    .hero h1 { font-size: clamp(2.2rem, 4vw, 3.5rem); margin: 0 0 1rem; line-height: 1.1; }
+    .hero p { color: #a9b4c0; max-width: 600px; margin: 0 auto; font-size: 1.1rem; }
+
+    /* --- Layout: The Booking Split --- */
+    .wrap { max-width: 1100px; margin: 0 auto 60px; padding: 0 16px; }
+    
+    .booking-split {
+      display: grid;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    @media(min-width: 850px) {
+      .booking-split { grid-template-columns: 1fr 1.2fr; align-items: start; }
+    }
+
+    /* --- Cards --- */
+    .login-card, .form-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+    }
+    
+    /* Existing Clients Styling */
+    .login-card {
+      border-top: 4px solid #2a3440;
+      text-align: center;
+    }
+    
+    /* New Clients Styling */
+    .form-card {
+      border-top: 4px solid var(--gold);
+    }
+
+    /* --- Forms --- */
+    .form-group { margin-bottom: 1.2rem; }
+    .form-label { display: block; margin-bottom: .5rem; font-weight: 600; font-size: 0.9rem; color: #fff; }
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      background: #161b22;
+      border: 1px solid #30363d;
+      color: #fff;
+      padding: 14px;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 1rem;
+      transition: border-color 0.2s;
+    }
+    .form-input:focus { outline: none; border-color: var(--gold); }
+
+    /* --- Buttons --- */
+    .btn {
+      display: inline-flex; justify-content: center; align-items: center;
+      padding: 14px 24px; border-radius: 10px; font-weight: 700; text-decoration: none;
+      cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; width: 100%; margin-top: 10px;
+      font-size: 1rem;
+    }
+    .btn-primary { background: var(--gold); color: #111; border: none; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(244, 197, 66, 0.3); }
+    
+    .btn-ghost { background: transparent; border: 1px solid #2a3440; color: #e9edf2; }
+    .btn-ghost:hover { border-color: var(--text); }
+
+    /* --- Trust Icons --- */
+    .trust-icons {
+      display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 2rem; color: var(--gold);
+      border-bottom: 1px solid var(--line); padding-bottom: 1.5rem;
+    }
+    .trust-item { font-size: 0.85rem; display: flex; flex-direction: column; align-items: center; gap: 6px; color: #fff; font-weight: 600; }
+    .trust-icon { font-size: 1.5rem; }
+
   </style>
 </head>
 <body>
-  <!-- Header -->
+
   <header class="site-header">
     <div class="brand"><a href="index.html"><img class="wordmark" src="images/brand/wordmark.svg" alt="The Woof of Walk Street"></a></div>
     <nav class="primary-nav">
@@ -37,170 +127,149 @@
   </header>
 
   <section class="hero">
-    <h1>Book a Walk</h1>
-    <p>Choose casual booking via our portal, or use your membership credits. All walks are 45 minutes, solo only, with GPS tracking & photos.</p>
+    <h1>Let's Get Walking</h1>
+    <p>Ready for calm, solo walks? Choose your path below to book your spot.</p>
   </section>
 
   <main class="wrap">
-    <div class="grid">
-      <!-- CASUAL -->
-      <section class="card" aria-labelledby="casual">
-        <h2 id="casual">Casual Booking</h2>
-        <p>Perfect for ad-hoc strolls. You’ll create (or log into) your client profile and pick a time in our calendar.</p>
-        <ul>
-          <li>45-minute solo walk</li>
-          <li>Mon–Fri, 7:00am–7:00pm</li>
-          <li>GPS tracking & photos after each walk</li>
-        </ul>
-        <a class="btn btn-primary" href="https://www.timetopet.com/portal/woofofwalkstreet/create-account" target="_blank" rel="noopener">Book Casual in Portal</a>
-        <a class="btn btn-ghost" href="faq.html">Read FAQs</a>
+    <div class="booking-split">
+      
+      <section class="login-card">
+        <h2 style="margin-top:0">Existing Clients</h2>
+        <p style="color:#a9b4c0; font-size:0.95rem; margin-bottom: 1.5rem;">
+          Welcome back! Log in to your portal to request casual walks, or use the dedicated page for membership credits.
+        </p>
+        
+        <a href="https://www.timetopet.com/portal/woofofwalkstreet" target="_blank" rel="noopener" class="btn btn-ghost">
+          Login to Portal (Casual)
+        </a>
+        
+        <a href="member-booking.html" class="btn btn-ghost">
+          Use Membership Credits
+        </a>
+
+        <p style="margin-top:1.5rem; font-size:0.85rem; color:#555;">
+          Forgot password? You can reset it on the portal login page.
+        </p>
       </section>
 
-      <!-- MEMBERSHIP CREDIT -->
-      <section class="card" aria-labelledby="member">
-        <h2 id="member">Book with Membership Credit</h2>
-        <p>Already on a plan? Use your monthly credits here. We’ll confirm your slot and send a calendar invite.</p>
-        <ul>
-          <li>45-minute solo walk</li>
-          <li>Mon–Fri, 7:00am–7:00pm</li>
-          <li>Priority window for Tail Growth & Unlimited</li>
-        </ul>
-        <a class="btn btn-primary" href="member-booking.html">Use Membership Credit</a>
-        <a class="btn btn-ghost" href="memberships.html">View Plans</a>
-      </section>
+      <section class="form-card">
+        <h2 style="margin-top:0; color:var(--gold); text-align:center;">New Clients</h2>
+        <p style="color:#a9b4c0; margin-bottom: 1.5rem; text-align:center;">
+          Tell us a bit about your dog. We'll text you shortly to arrange a free Meet & Greet.
+        </p>
+        
+        <div class="trust-icons">
+          <div class="trust-item"><span class="trust-icon">📍</span> GPS Tracked</div>
+          <div class="trust-item"><span class="trust-icon">🛡️</span> Fully Insured</div>
+          <div class="trust-item"><span class="trust-icon">👮</span> Police Checked</div>
+        </div>
+
+        <form action="/thank-you.html" method="POST">
+          
+          <div class="form-group">
+            <label class="form-label" for="owner_name">Your Name</label>
+            <input type="text" id="owner_name" name="owner_name" class="form-input" placeholder="Jane Doe" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="email">Email Address</label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="jane@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" class="form-input" placeholder="0400 000 000" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="suburb">Suburb</label>
+            <select id="suburb" name="suburb" class="form-select" class="form-input">
+              <option value="" disabled selected>Select your area...</option>
+              <option value="South Melbourne">South Melbourne</option>
+              <option value="Albert Park">Albert Park</option>
+              <option value="Middle Park">Middle Park</option>
+              <option value="Port Melbourne">Port Melbourne</option>
+              <option value="Southbank">Southbank</option>
+              <option value="South Yarra">South Yarra</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="dog_name">Dog's Name & Breed</label>
+            <input type="text" id="dog_name" name="dog_name" class="form-input" placeholder="e.g. Charlie (Golden Retriever)" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="service_interest">Interested In</label>
+            <select id="service_interest" name="service_interest" class="form-input">
+              <option value="Casual Walks">Casual Solo Walks</option>
+              <option value="Unlimited Membership">Unlimited Membership (50% Off 1st Month)</option>
+              <option value="Boarding">Boarding Services</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="message">Anything else we should know?</label>
+            <textarea id="message" name="message" class="form-input" rows="3" placeholder="E.g. Specific days needed, behavioural notes..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Request Meet & Greet</button>
+          <p style="font-size:0.8rem; color:#666; text-align:center; margin-top:1rem;">
+            No payment required today. We'll contact you to confirm details.
+          </p>
+        </form>
+        </section>
     </div>
-
-    <aside class="rules" aria-label="Booking rules">
-      <strong>Booking & Availability</strong>
-      <ul>
-        <li>Walk window: <strong>7:00am–7:00pm, Monday–Friday</strong> (public holidays excluded).</li>
-        <li>Solo, one-dog-at-a-time (never pack walked, never car-ferried).</li>
-        <li>All bookings are via our calendar (Time To Pet) and are subject to availability.</li>
-      </ul>
-      <p style="margin-top:8px;color:#9bd9c3">We donate <strong>10% of profits</strong> to The Lost Dogs’ Home (North Melbourne) & local shelters.</p>
-    </aside>
   </main>
 
-   <!-- Blog teaser -->
-  <section>
-    <div class="container">
-      <h2>From the Blog</h2>
-      <div class="blog-list">
-        <article class="blog-card">
-          <h3><a href="/blog/best-dog-walks-south-melbourne.html">Best Dog Walks in South Melbourne</a></h3>
-          <p>Explore our top picks for scenic, safe, and fun local walks.</p>
-        </article>
-        <article class="blog-card">
-          <h3><a href="/blog/why-solo-walks.html">Why Solo Walks Reduce Stress</a></h3>
-          <p>Learn why one-dog-only walks are healthier and safer.</p>
-        </article>
-        <article class="blog-card">
-          <h3><a href="/blog/ethical-dog-walker.html">How to Choose an Ethical Dog Walker</a></h3>
-          <p>Not all walkers are the same — here’s what to look for.</p>
-        </article>
-      </div>
-      <p class="text-center" style="margin-top:20px"><a class="btn button-primary" href="/blog/index.html">Read More Blogs</a></p>
-    </div>
-  </section>
-<!-- FOOTER (shared) -->
-<footer class="site-footer">
-  <div class="footer-banner">
-    <picture>
-      <source srcset="/images/brand/footer-banner-1600x600.webp" media="(min-width: 768px)">
-      <img src="/images/brand/footer-banner-800x300.webp" alt="Happy dogs in Melbourne" loading="lazy">
-    </picture>
-  </div>
-
-  <div class="container footer-top">
-    <div class="footer-brand">
-      <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="60" height="60" loading="lazy">
-      <div>
-        <strong>The Woof of Walk Street</strong><br>
-        <a class="footer-map" href="https://maps.google.com/?q=South+Melbourne+VIC" target="_blank" rel="noopener">South Melbourne, VIC</a>
-        <span> · Mon–Fri 7am–7pm</span>
-      </div>
+  <footer class="site-footer">
+    <div class="footer-banner">
+      <picture>
+        <source srcset="/images/brand/footer-banner-1600x600.webp" media="(min-width: 768px)">
+        <img src="/images/brand/footer-banner-800x300.webp" alt="Happy dogs in Melbourne" loading="lazy">
+      </picture>
     </div>
 
-    <div class="footer-contact">
-      <h3>Contact Us</h3>
-      <p>
-        Email: <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a><br>
-        Phone: <a href="tel:+61456754050">0456 754 050</a>
-      </p>
-      <div class="footer-socials">
-        <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook"><img src="/images/social/facebook.svg" alt="Facebook"></a>
-        <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram"><img src="/images/social/instagram.svg" alt="Instagram"></a>
-        <a href="https://x.com/woofofwalkstreet" aria-label="Twitter/X"><img src="/images/social/twitter.svg" alt="Twitter/X"></a>
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="60" height="60" loading="lazy">
+        <div>
+          <strong>The Woof of Walk Street</strong><br>
+          <a class="footer-map" href="https://maps.google.com/?q=South+Melbourne+VIC" target="_blank" rel="noopener">South Melbourne, VIC</a>
+          <span> · Mon–Fri 7am–7pm</span>
+        </div>
       </div>
+
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>
+          Email: <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a><br>
+          Phone: <a href="tel:+61456754050">0456 754 050</a>
+        </p>
+        <div class="footer-socials">
+          <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook"><img src="/images/social/facebook.svg" alt="Facebook"></a>
+          <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram"><img src="/images/social/instagram.svg" alt="Instagram"></a>
+          <a href="https://x.com/woofofwalkstreet" aria-label="Twitter/X"><img src="/images/social/twitter.svg" alt="Twitter/X"></a>
+        </div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="/memberships.html">Memberships</a></li>
+          <li><a href="/services.html">Walking</a></li>
+          <li><a href="/boarding-services.html">Boarding</a></li>
+          <li><a href="/faq.html">FAQ</a></li>
+          <li><a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></li>
+          <li><a href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
     </div>
 
-    <nav class="footer-nav" aria-label="Footer">
-      <ul>
-        <li><a href="/memberships.html">Memberships</a></li>
-        <li><a href="/services.html">Walking</a></li>
-        <li><a href="/boarding-services.html">Boarding</a></li>
-        <li><a href="/faq.html">FAQ</a></li>
-        <li><a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></li>
-        <li><a href="/sitemap.html">Sitemap</a></li>
-      </ul>
-    </nav>
-  </div>
-
-  <div class="footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-</footer>
-
-<!-- Compare Plans: scroller controls + monthly-limited spots counter -->
-<script>
-  (function(){
-    // Scroller arrows
-    const scroller = document.getElementById('planScroller');
-    document.querySelectorAll('[data-scroll]').forEach(btn=>{
-      btn.addEventListener('click', ()=>{
-        const dir = Number(btn.dataset.scroll);
-        const card = scroller.querySelector('.plan-card');
-        const step = card ? card.getBoundingClientRect().width + 14 : 320;
-        scroller.scrollBy({left: dir * step, behavior: 'smooth'});
-      });
-    });
-
-    // Growth plan monthly counter (per-visitor; resets monthly)
-    const CARD_ID = 'plan-growth';
-    const COUNT_ID = 'growthSpotsCount';
-    const CTA_ID = 'growthJoinCta';
-    const STORAGE_KEY = 'woof_growth_spots';
-    const STORAGE_MONTH_KEY = 'woof_growth_month';
-
-    const card = document.getElementById(CARD_ID);
-    const countEl = document.getElementById(COUNT_ID);
-    const cta = document.getElementById(CTA_ID);
-    if(!card || !countEl || !cta) return;
-
-    const startValue = Number(card.getAttribute('data-spots-start')) || 8;
-    const now = new Date();
-    const monthKey = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}`;
-
-    const storedMonth = localStorage.getItem(STORAGE_MONTH_KEY);
-    if (storedMonth !== monthKey) {
-      localStorage.setItem(STORAGE_MONTH_KEY, monthKey);
-      localStorage.setItem(STORAGE_KEY, String(startValue));
-    }
-
-    const current = Number(localStorage.getItem(STORAGE_KEY));
-    const spots = Number.isFinite(current) ? current : startValue;
-    countEl.textContent = Math.max(spots, 0);
-
-    cta.addEventListener('click', function() {
-      let n = Number(localStorage.getItem(STORAGE_KEY));
-      if (!Number.isFinite(n)) n = startValue;
-      if (n > 0) {
-        n -= 1;
-        localStorage.setItem(STORAGE_KEY, String(n));
-        countEl.textContent = Math.max(n, 0);
-      }
-    });
-  })();
-</script>
+    <div class="footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </footer>
 
 </body>
 </html>

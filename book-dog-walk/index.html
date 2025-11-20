@@ -9,13 +9,11 @@
   <link rel="canonical" href="https://www.woofofwalkstreet.com/book-dog-walk/" />
   <link rel="icon" href="/images/brand/favicon.ico" />
 
-  <!-- Site CSS -->
   <link rel="stylesheet" href="/css/mini.css">
   <link rel="stylesheet" href="/css/mini.dark.css">
   <link rel="stylesheet" href="/css/mini.light.css">
   <link rel="stylesheet" href="/css/styles.css">
 
-  <!-- Preload hero for fast LCP -->
   <link rel="preload" as="image" href="/images/brand/promo-banner-dog-in-suit.png" imagesrcset="/images/brand/promo-banner-dog-in-suit.png 1200w" imagesizes="100vw">
 
   <style>
@@ -24,7 +22,14 @@
       --brand:#ffd166; --brand-ink:#0b0e12; --accent:#5af2c6; --shadow:0 14px 40px rgba(0,0,0,.28)
     }
     body{background:var(--bg);color:var(--text)}
-    .kicker{letter-spacing:.08em;color:var(--accent);font-weight:800}
+    
+    /* CRO: Typography Hierarchy */
+    h1, h2, h3, .kicker, .badge, .deadline, .step, strong {
+        font-weight: 800; /* Strong headings and key info */
+    }
+    .mini, .muted, .helper, p {
+        font-weight: 400; /* Lighter body text for readability */
+    }
 
     /* Gold-edged cards */
     .edge{
@@ -42,7 +47,7 @@
 
     /* Steps + Buttons */
     .steps{ display:flex; gap:10px; flex-wrap:wrap; margin:.5rem 0 1rem }
-    .step{ display:inline-flex; align-items:center; gap:8px; border:1px solid #2a3440; color:#fff; border-radius:999px; padding:6px 10px; font-weight:700 }
+    .step{ display:inline-flex; align-items:center; gap:8px; border:1px solid #2a3440; color:#fff; border-radius:999px; padding:6px 10px; }
     .step b{ display:inline-grid; place-items:center; width:22px;height:22px;border-radius:999px;background:#1c2531;border:1px solid #2a3440;font-size:.78rem }
 
     .btn{
@@ -58,19 +63,64 @@
     .btn-outline{background:transparent;border:1px solid var(--brand);color:var(--brand)}
     .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
 
+    /* CRO: ENHANCED PRIMARY CTA SIZE for booking flow */
+    .cta-row .btn-primary { 
+        padding: 18px 32px; 
+        font-size: 1.2rem; 
+        min-width: 280px; 
+    }
+
+    /* CRO: BEST VALUE WRAPPER (for Unlimited Walks) */
+    .best-value-wrap {
+        position: relative;
+        padding: 12px;
+        background: rgba(255,209,102,.05); /* Faint gold background */
+        border: 1px solid var(--brand); /* Gold border */
+        border-radius: 12px;
+        text-align: center;
+        transition: all .2s ease;
+    }
+    .best-value-ribbon {
+        position: absolute;
+        top: -12px; 
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--accent);
+        color: var(--brand-ink);
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-weight: 900;
+        font-size: 0.9rem;
+        letter-spacing: 0.05em;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        z-index: 2;
+    }
+
     /* Helpers */
     .mini{font-size:.95rem;color:#cfd6df}
     .muted{color:#a9b4c0}
     .trust-list{margin:0;padding-left:18px}
     .trust-list li{margin:.35rem 0}
-    .badge{display:inline-block;padding:.28rem .6rem;border-radius:999px;font-size:.82rem;font-weight:800;color:#111;background:var(--brand)}
+    .badge{display:inline-block;padding:.28rem .6rem;border-radius:999px;font-size:.82rem;color:#111;background:var(--brand)}
     .notice{border:1px dashed #2a3440;border-radius:12px;padding:10px;margin-top:12px;color:#cfd6df}
     .accent-title{ position:relative; display:inline-block; padding-bottom:4px }
     .accent-title::after{ content:""; position:absolute; left:0; right:0; bottom:0; height:2px;
       background:linear-gradient(90deg,#f5b200,transparent 70%); opacity:.9 }
     .helper{font-size:.9rem;color:#cfd6df;margin-top:6px}
-    .deadline{display:inline-flex;gap:.5rem;align-items:center;font-weight:900;color:#111;background:#ffd166;padding:.28rem .6rem;border-radius:999px}
 
+    /* CRO: Hero Urgency Timer Styling */
+    .deadline{
+        display:inline-flex;
+        gap:.5rem;
+        align-items:center;
+        font-weight:900;
+        color:var(--brand-ink); 
+        background:var(--brand); 
+        padding:.35rem .8rem; 
+        border-radius:999px;
+        box-shadow: 0 4px 10px rgba(255,209,102,.5);
+    }
+    
     /* Hero banner */
     .hero-banner img{width:100%;height:auto;display:block;border-bottom:2px solid #f5b200}
     .hero-overlay{
@@ -79,21 +129,43 @@
     }
     .hero-overlay h1{font-size:clamp(1.8rem,1.2rem + 2vw,2.6rem);font-weight:900;color:#fff;margin:0 0 8px}
     .hero-overlay p{color:#eee;font-size:1.05rem;margin:0 0 16px}
+    
+    /* CRO: Accented List Markers (for What to Expect) */
+    .edge ol {
+        list-style: none; /* Remove default marker */
+        counter-reset: item; /* Start counter */
+        padding-left: 0; /* Remove default padding */
+    }
+    .edge ol li {
+        padding-left: 20px; /* Space for the custom marker */
+        position: relative;
+        margin-bottom: 6px;
+        font-size: 1rem;
+    }
+    .edge ol li:before {
+        content: counter(item) ".";
+        counter-increment: item;
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: var(--accent); /* Accent color for the numbers */
+        font-weight: 800;
+        font-size: 1.1em;
+    }
+
   </style>
 
-  <!-- Google tag (gtag.js) — GA4 + Google Tag + Ads -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KP5LVKN6X3"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config','G-KP5LVKN6X3');     /* GA4 */
-    gtag('config','GT-PL9F623G');      /* Google Tag */
-    gtag('config','AW-17527927259');   /* Google Ads */
-    gtag('config','GT-M3V2RMCT');      /* Google Tag */
+    gtag('config','G-KP5LVKN6X3');     /* GA4 */
+    gtag('config','GT-PL9F623G');      /* Google Tag */
+    gtag('config','AW-17527927259');   /* Google Ads */
+    gtag('config','GT-M3V2RMCT');      /* Google Tag */
   </script>
 
-  <!-- SEO: Breadcrumb + HowTo + Offer (50% off until 30 Nov) -->
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
     {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
@@ -127,7 +199,6 @@
   }
   </script>
 
-  <!-- Social -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Book a Solo Dog Walk — 50% Off Until 30 November">
   <meta property="og:description" content="One-dog-only walks in South Melbourne with GPS & photo updates. New client promo ends 30 November.">
@@ -141,7 +212,6 @@
 </head>
 
 <body>
-  <!-- Promo ribbon -->
   <div id="promo" class="promo-ribbon promo--edge" role="region" aria-label="Promo: 50% off until 30 November">
     <div class="promo-inner container">
       <img class="promo-dog" src="/images/brand/dog-in-suit.webp" alt="" width="28" height="28" decoding="async" />
@@ -153,7 +223,6 @@
     </div>
   </div>
 
-  <!-- Header -->
   <header class="site-header">
     <div class="navbar container" role="navigation" aria-label="Main">
       <a class="brand" href="/" aria-label="Go to home">
@@ -184,16 +253,15 @@
         <a href="/search.html">Search</a>
 
         <a class="btn btn-primary nav-cta"
-           href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=header&utm_campaign=book_now"
-           target="_blank" rel="noopener"
-           onclick="gtag && gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
-           Book Now
+            href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=header&utm_campaign=book_now"
+            target="_blank" rel="noopener"
+            onclick="gtag && gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
+            Book Now
         </a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero image with overlay CTA -->
   <section style="padding:0;border-bottom:none">
     <div class="hero-banner" style="position:relative">
       <img src="/images/brand/promo-banner-dog-in-suit.png" alt="Solo Dog Walking South Melbourne — 50% Off Until 30 November">
@@ -201,6 +269,7 @@
         <div style="max-width:760px">
           <h1>50% Off Solo Dog Walks</h1>
           <p>One-dog-only, 45-minute walks with GPS map & photo updates. <span class="deadline">Ends <span id="days-left"></span> • 30 Nov</span></p>
+          
           <a href="https://www.timetopet.com/portal/woofofwalkstreet/create-account" class="btn btn-primary" data-plan="casual_50">Book 50% Off Casual Walk</a>
           <div style="margin-top:8px">
             <a class="btn btn-ghost" data-plan="unlimited_50" href="/unlimited-dog-walks.html">Or get 50% Off Unlimited</a>
@@ -212,7 +281,6 @@
 
   <main class="container" style="margin-top:18px">
     <div class="bridge-wrap">
-      <!-- Booking options -->
       <section class="edge" aria-labelledby="book-heading">
         <h2 id="book-heading" class="accent-title">Get started</h2>
         <p class="mini" style="margin:.25rem 0 .35rem">Choose an option. You’ll jump to our secure portal to finish (takes ~60 seconds). No payment needed to create your account.</p>
@@ -226,13 +294,16 @@
         <div class="cta-row" style="margin-top:0">
           <a class="btn btn-primary" data-plan="casual_50"
              href="https://www.timetopet.com/portal/woofofwalkstreet/create-account">
-            50% Off Casual Walk
+             50% Off Casual Walk
           </a>
 
-          <a class="btn btn-primary" data-plan="unlimited_50"
-             href="/unlimited-dog-walks.html">
-            50% Off Unlimited Walks
-          </a>
+          <div class="best-value-wrap">
+              <span class="best-value-ribbon">BEST VALUE</span>
+              <a class="btn btn-primary" data-plan="unlimited_50"
+                 href="/unlimited-dog-walks.html">
+                 50% Off Unlimited Walks
+              </a>
+          </div>
         </div>
 
         <div class="helper">New to us? We’ll confirm keys, access and routine after your request.</div>
@@ -244,7 +315,6 @@
         </div>
       </section>
 
-      <!-- Trust panel -->
       <aside class="edge" aria-labelledby="trust-heading">
         <span class="badge" style="margin-bottom:6px">About Time To Pet</span>
         <h2 id="trust-heading" class="accent-title">Safe. Simple. Trusted.</h2>
@@ -260,13 +330,12 @@
       </aside>
     </div>
 
-    <!-- What to expect (separate panel) -->
     <section class="edge" style="margin-top:16px" aria-labelledby="expect-heading">
       <h2 id="expect-heading" class="accent-title">What to expect</h2>
 
       <div class="edge" style="border-width:1px;margin-top:10px">
         <h3 class="kicker" style="margin:0 0 6px;color:#9ef7d6">Inside Time To Pet</h3>
-        <ol style="margin:0 0 8px 18px">
+        <ol> 
           <li>Create your account and tell us about your dog.</li>
           <li>Request your first walk or accept our suggested time.</li>
           <li>See your booking confirmation in the portal (and via email).</li>
@@ -285,7 +354,6 @@
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer" role="contentinfo" style="margin-top:22px">
     <div class="container footer-grid">
       <section class="footer-brand">
@@ -301,9 +369,9 @@
         </div>
         <p>
           <a class="btn btn-primary" target="_blank" rel="noopener"
-             href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=footer&utm_campaign=book_now_footer"
-             onclick="gtag && gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
-            Book Now
+              href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=footer&utm_campaign=book_now_footer"
+              onclick="gtag && gtag('event','ttp_booking_click',{'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'});">
+             Book Now
           </a>
         </p>
       </section>
@@ -362,10 +430,9 @@
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   </footer>
 
-  <!-- Nav services toggle -->
   <script>
   (function () {
-    const btn  = document.querySelector('.nav-group-btn[aria-controls="nav-services"]');
+    const btn  = document.querySelector('.nav-group-btn[aria-controls="nav-services"]');
     const list = document.getElementById('nav-services');
     if (!btn || !list) return;
     const sync = () => { list.hidden = btn.getAttribute('aria-expanded') !== 'true'; };
@@ -384,7 +451,6 @@
   })();
   </script>
 
-  <!-- Bridge logic: keep UTMs, tag plan, send event, redirect -->
   <script>
   (function(){
     var TTP_BASE = "https://www.timetopet.com/portal/woofofwalkstreet/create-account";
@@ -433,7 +499,6 @@
   })();
   </script>
 
-  <!-- Count-down: days left to 30 Nov (Melbourne time) -->
   <script>
   (function(){
     try{
@@ -449,7 +514,6 @@
   })();
   </script>
 
-  <!-- No-JS fallback -->
   <noscript>
     <div class="container edge" style="margin:20px 0">
       <p><strong>JavaScript is off.</strong> You can still book here:</p>

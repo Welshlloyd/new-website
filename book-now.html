@@ -1,275 +1,389 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
-  <title>Book a Dog Walk | South Melbourne, Albert Park & Port Melbourne</title>
-  <meta name="description" content="Book your solo dog walk today. Serving South Melbourne, Albert Park, Port Melbourne, and surrounds. New clients get 50% off the first month!" />
-  
-  <link rel="stylesheet" href="css/styles.css" />
-  
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'AW-17527927259');
-  </script>
+  <title>Book Solo Dog Walks South Melbourne — 50% Off Trial | The Woof of Walk Street</title>
+  <meta name="description" content="Book private, solo dog walks in South Melbourne. GPS map, photos, and training notes after every walk. Limited-time 50% OFF trial walks until 30 November 2025." />
+  <link rel="canonical" href="https://www.woofofwalkstreet.com/book-solo-walks.html" />
+  <link rel="icon" href="/images/brand/favicon.ico" />
+
+  <link rel="stylesheet" href="/css/mini.css">
+  <link rel="stylesheet" href="/css/mini.dark.css">
+  <link rel="stylesheet" href="/css/mini.light.css">
+  <link rel="stylesheet" href="/css/styles.css">
 
   <style>
-    /* --- Core Variables (Matched to your Brand) --- */
     :root{
-      --gold: #f4c542;
-      --ink: #0c1b2a;
-      --surface: #0f1318;
-      --line: #1d232c;
-      --text: #cfd7e1;
+      --bg:#0b0e12; --card:#0f1318; --line:#1d232c; --text:#e6edf3; --muted:#a9b4c0;
+      --brand:#ffd166; --brand-ink:#0b0e12; --accent:#5af2c6; --shadow:0 14px 40px rgba(0,0,0,.28)
+    }
+    html,body{background:var(--bg);color:var(--text)}
+    img{max-width:100%;height:auto}
+    a{color:inherit}
+    .container{max-width:1100px;margin:0 auto;padding:0 16px}
+    .hero-bridge{padding:28px 0 16px;border-bottom:1px solid rgba(255,255,255,.06)}
+    .hero-bridge h1{font-weight:900;letter-spacing:-.01em;margin:.2rem 0 .4rem}
+    .lede{color:#cfd6df;max-width:65ch}
+    .edge{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.02));border:2px solid #f5b200;border-radius:16px;box-shadow:0 0 10px rgba(245,178,0,.25),0 12px 28px rgba(0,0,0,.18);padding:18px}
+    .edge:hover{box-shadow:0 0 18px rgba(245,178,0,.55),0 18px 44px rgba(0,0,0,.26);transform:translateY(-2px)}
+    
+    /* CRO: ADJUST GRID FOR MORE BOOKING SPACE */
+    .bridge-wrap{display:grid;gap:16px}
+    @media(min-width:980px){.bridge-wrap{grid-template-columns:1.2fr .8fr}} 
+    
+    .steps{display:flex;gap:10px;flex-wrap:wrap;margin:.5rem 0 1rem}
+    .step{display:inline-flex;align-items:center;gap:8px;border:1px solid #2a3440;color:#fff;border-radius:999px;padding:6px 10px;font-weight:700}
+    .step b{width:22px;height:22px;display:grid;place-items:center;border-radius:999px;background:#1c2531;border:1px solid #2a3440;font-size:.78rem}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:12px 18px;border-radius:999px;border:1px solid transparent;font-weight:900;text-decoration:none;transition:transform .15s,box-shadow .15s}
+    .btn-primary{background:var(--brand);color:var(--brand-ink);box-shadow:0 10px 26px rgba(255,209,102,.25)}
+    .btn-primary:hover{transform:translateY(-1px) scale(1.02)}
+    
+    /* CRO: ENHANCED PRIMARY CTA SIZE for booking flow */
+    .card-plan .btn-primary, .hero-cta-group .btn-primary { 
+        padding: 16px 28px; 
+        font-size: 1.15rem; 
     }
     
-    body {
-      background-color: #0b0e12;
-      color: var(--text);
-      font-family: 'Work Sans', sans-serif;
-    }
-    h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; color: #fff; }
-
-    /* --- Header & Hero --- */
-    .hero { padding: 56px 16px 32px; text-align: center; }
-    .hero h1 { font-size: clamp(2.2rem, 4vw, 3.5rem); margin: 0 0 1rem; line-height: 1.1; }
-    .hero p { color: #a9b4c0; max-width: 600px; margin: 0 auto; font-size: 1.1rem; }
-
-    /* --- Layout: The Booking Split --- */
-    .wrap { max-width: 1100px; margin: 0 auto 60px; padding: 0 16px; }
+    .btn-ghost{background:transparent;color:#fff;border:1px solid #2a3440}
+    .btn-ghost:hover{border-color:#fff}
+    .btn-outline{background:transparent;border:1px solid var(--brand);color:var(--brand)}
+    .kicker{letter-spacing:.08em;color:var(--accent);font-weight:800}
+    .mini{font-size:.96rem;color:#cfd6df}
+    .muted{color:#a9b4c0}
+    .badge{display:inline-block;padding:.28rem .6rem;border-radius:999px;font-size:.82rem;font-weight:800;color:#111;background:var(--brand)}
     
-    .booking-split {
-      display: grid;
-      gap: 2rem;
-      margin-top: 2rem;
+    /* CRO: SHRINK HERO IMAGE ON DESKTOP */
+    .hero-img{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:10px}
+    @media (min-width: 980px) {
+        .hero-img picture, .hero-img img {
+            max-width: 250px; /* Reduced image size */
+            max-height: 250px;
+            object-fit: cover;
+        }
     }
-    @media(min-width: 850px) {
-      .booking-split { grid-template-columns: 1fr 1.2fr; align-items: start; }
-    }
-
-    /* --- Cards --- */
-    .login-card, .form-card {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 2rem;
-      box-shadow: 0 12px 40px rgba(0,0,0,0.3);
-    }
+    .hero-img picture,.hero-img img{border-radius:12px;max-width:320px;width:100%}
     
-    /* Existing Clients Styling */
-    .login-card {
-      border-top: 4px solid #2a3440;
-      text-align: center;
+    /* CRO: ENHANCED PROMO NOTE VISIBILITY (PULSE ANIMATION) */
+    .promo-note{
+        background:rgba(255,209,102,.08);
+        border:1px dashed #f5b200;
+        color:#ffd166;
+        border-radius:12px;
+        padding:10px;
+        margin-top:10px;
+        animation: pulse-border 4s infinite ease-in-out;
+    }
+    @keyframes pulse-border {
+        0% { box-shadow: 0 0 0px #f5b20000; }
+        50% { box-shadow: 0 0 8px #f5b20055; }
+        100% { box-shadow: 0 0 0px #f5b20000; }
     }
     
-    /* New Clients Styling */
-    .form-card {
-      border-top: 4px solid var(--gold);
+    /* CRO: URGENCY TIMER STYLING */
+    .promo-timer {
+        display: inline-block;
+        color: var(--accent);
+        font-weight: 900;
+        font-size: 1.1em;
+        padding: 4px 8px 3px;
+        border-radius: 4px;
+        background: rgba(90, 242, 198, 0.1);
     }
 
-    /* --- Forms --- */
-    .form-group { margin-bottom: 1.2rem; }
-    .form-label { display: block; margin-bottom: .5rem; font-weight: 600; font-size: 0.9rem; color: #fff; }
-    .form-input, .form-select, .form-textarea {
-      width: 100%;
-      background: #161b22;
-      border: 1px solid #30363d;
-      color: #fff;
-      padding: 14px;
-      border-radius: 8px;
-      font-family: inherit;
-      font-size: 1rem;
-      transition: border-color 0.2s;
-    }
-    .form-input:focus { outline: none; border-color: var(--gold); }
-
-    /* --- Buttons --- */
-    .btn {
-      display: inline-flex; justify-content: center; align-items: center;
-      padding: 14px 24px; border-radius: 10px; font-weight: 700; text-decoration: none;
-      cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; width: 100%; margin-top: 10px;
-      font-size: 1rem;
-    }
-    .btn-primary { background: var(--gold); color: #111; border: none; }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(244, 197, 66, 0.3); }
+    .cards{display:grid;gap:12px}
+    @media(min-width:740px){.cards{grid-template-columns:1fr 1fr}}
+    .card-plan{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid #2a3440;border-radius:14px;padding:14px}
     
-    .btn-ghost { background: transparent; border: 1px solid #2a3440; color: #e9edf2; }
-    .btn-ghost:hover { border-color: var(--text); }
-
-    /* --- Trust Icons --- */
-    .trust-icons {
-      display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 2rem; color: var(--gold);
-      border-bottom: 1px solid var(--line); padding-bottom: 1.5rem;
+    /* CRO: HIGHLIGHT THE UNLIMITED CARD (2ND CHILD - The assumed preferred offer) */
+    .cards .card-plan:nth-child(2) { 
+        border-width: 2px;
+        border-color: var(--brand); /* gold */
+        box-shadow: 0 0 10px rgba(255,209,102,.5), 0 12px 28px rgba(0,0,0,.18); 
+        background:linear-gradient(180deg,rgba(255,209,102,.05),rgba(255,255,255,.02));
     }
-    .trust-item { font-size: 0.85rem; display: flex; flex-direction: column; align-items: center; gap: 6px; color: #fff; font-weight: 600; }
-    .trust-icon { font-size: 1.5rem; }
+    
+    .card-plan h3{margin:.1rem 0 .25rem;font-weight:900}
+    .price-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+    .regular{color:#aab6c3;text-decoration:line-through}
+    .promo{font-weight:900;background:#f5b200;color:#111;padding:.18rem .5rem;border-radius:999px;box-shadow:0 8px 18px rgba(245,178,0,.26)}
+    .meta{color:#a9b4c0;font-size:.95rem}
+    .incl{margin:.45rem 0 0;color:#cfd6df;font-size:.92rem}
+    .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:.6rem}
+
+    .faq{margin-top:16px}
+    .faq details{border-top:1px solid #2a3440;padding:10px 0}
+    .faq details:first-of-type{border-top:0}
+    .faq summary{cursor:pointer;font-weight:800}
+
+    /* Persuasion block */
+    .why{display:grid;gap:12px;margin-top:12px}
+    @media(min-width:820px){.why{grid-template-columns:1fr 1fr}}
+    .why .point{border:1px solid #2a3440;border-radius:12px;padding:12px}
+    .why .point strong{color:#ffd166}
 
   </style>
-</head>
-<body>
 
-  <header class="site-header">
-    <div class="brand"><a href="index.html"><img class="wordmark" src="images/brand/wordmark.svg" alt="The Woof of Walk Street"></a></div>
-    <nav class="primary-nav">
-      <a href="/">Home</a>
-      <a href="/about.html">About Us</a>
-      <a href="/memberships.html">Memberships</a>
-      <a href="/services.html">Walking</a>
-      <a href="/boarding-services.html">Boarding</a>
-      <a href="/contact.html">Contact Us</a>
-    </nav>
+  <link rel="preload" as="image"
+        href="/images/promos/walking/walk-promo-50off-1024.webp"
+        imagesrcset="/images/promos/walking/walk-promo-50off-640.webp 640w, /images/promos/walking/walk-promo-50off-1024.webp 1024w, /images/promos/walking/walk-promo-50off-1600.webp 1600w"
+        imagesizes="(max-width: 640px) 88vw, 320px" fetchpriority="high">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KP5LVKN6X3"></script>
+  <script>
+    window.dataLayer=window.dataLayer||[];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config','G-KP5LVKN6X3');   /* GA4 */
+    gtag('config','AW-17527927259');  /* Google Ads */
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Dog Walking",
+    "name": "Solo Dog Walking — 50% Off Trial",
+    "provider": {
+      "@type":"LocalBusiness",
+      "name":"The Woof of Walk Street",
+      "url":"https://www.woofofwalkstreet.com/",
+      "telephone":"+61 456 754 050",
+      "address":{"@type":"PostalAddress","addressLocality":"South Melbourne","addressRegion":"VIC","addressCountry":"AU"}
+    },
+    "areaServed": ["South Melbourne","Albert Park","Port Melbourne","Middle Park","Southbank"],
+    "description": "Private, solo dog walks with GPS map and photo updates. Limited-time 50% OFF trial until 30 November 2025.",
+    "url": "https://www.woofofwalkstreet.com/book-solo-walks.html",
+    "offers": [
+      {"@type":"Offer","name":"Casual Solo Walk (60 min)","price":"55","priceCurrency":"AUD","availability":"https://schema.org/InStock","priceValidUntil":"2025-11-30"},
+      {"@type":"Offer","name":"Unlimited Walk Membership","price":"220","priceCurrency":"AUD","availability":"https://schema.org/InStock","priceValidUntil":"2025-11-30"}
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <header class="site-header" role="banner">
+    <div class="navbar container" role="navigation" aria-label="Main">
+      <a class="brand" href="/" aria-label="Go to home">
+        <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="56" height="56" loading="lazy">
+        <strong>The Woof of Walk Street</strong>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/services.html" title="All Services">Services</a>
+        <a href="/dog-walking-south-melbourne.html" title="Dog Walking South Melbourne">Dog Walking</a>
+        <a href="/memberships.html" title="Memberships">Memberships</a>
+        <a href="/faq.html" title="Frequently Asked Questions">FAQs</a>
+        <a class="btn btn-primary nav-cta"
+            href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=header&utm_campaign=book_now"
+            target="_blank" rel="noopener">Open Portal</a>
+      </nav>
+    </div>
   </header>
 
-  <section class="hero">
-    <h1>Book Your Solo Dog Walk</h1>
-    <p>Ready for calm, solo walks? Choose your path below to book your spot.</p>
+  <section class="hero-bridge">
+    <div class="container">
+      <span class="kicker">Secure Booking Portal</span>
+      <h1>Book Solo Dog Walks</h1>
+      <p class="lede">Private, focused, solo walks with <strong>GPS map</strong>, <strong>photo updates</strong>, and <strong>training notes</strong> after every walk. Powered by <strong>Time To Pet</strong>.</p>
+      
+      <p style="margin-top:10px;">
+        <span class="promo-timer">Offer Ends: 30 November 2025 (11 Days Left!)</span>
+      </p>
+      
+      <div class="hero-img">
+        <picture>
+          <source type="image/webp"
+                  srcset="/images/promos/walking/walk-promo-50off-640.webp 640w,
+                          /images/promos/walking/walk-promo-50off-1024.webp 1024w,
+                          /images/promos/walking/walk-promo-50off-1600.webp 1600w"
+                  sizes="(max-width: 640px) 88vw, 320px">
+          <img src="/images/promos/walking/walk-promo-50off-1024.webp"
+                alt="Promo: 50% OFF solo dog walks — ends 30 November 2025"
+                width="1024" height="1024" loading="eager" decoding="async" fetchpriority="high">
+        </picture>
+
+        <div class="promo-note" role="status" aria-live="polite">
+          <strong>New Client Special:</strong> <u>50% OFF your first walk or Unlimited Membership</u> — valid until **30 November 2025**.
+        </div>
+      </div>
+      
+    </div>
   </section>
 
-  <main class="wrap">
-    <div class="booking-split">
-      
-      <section class="login-card">
-        <h2 style="margin-top:0">Existing Clients</h2>
-        <p style="color:#a9b4c0; font-size:0.95rem; margin-bottom: 1.5rem;">
-          Welcome back! Log in to your portal to request casual walks, or use the dedicated page for membership credits.
-        </p>
-        
-        <a href="https://www.timetopet.com/portal/woofofwalkstreet" target="_blank" rel="noopener" class="btn btn-ghost">
-          Login to Portal (Casual)
-        </a>
-        
-        <a href="member-booking.html" class="btn btn-ghost">
-          Use Membership Credits
-        </a>
+  <main class="container" style="margin-top:18px">
+    <div class="bridge-wrap">
+      <section class="edge" aria-labelledby="book-heading">
+        <h2 id="book-heading" style="margin-top:0">Choose your Solo Walk</h2>
+        <p class="mini" style="margin:.25rem 0 .35rem">Start with 50% off! Pick an option below — you’ll jump to our secure <strong>Time To Pet</strong> portal to finish.</p>
 
-        <p style="margin-top:1.5rem; font-size:0.85rem; color:#555;">
-          Forgot password? You can reset it on the portal login page.
+        <div class="steps" aria-label="Steps to book">
+          <span class="step"><b>1</b> Pick walk</span>
+          <span class="step"><b>2</b> Create account</span>
+          <span class="step"><b>3</b> Confirm</span>
+        </div>
+
+        <div class="cards" role="list">
+          <article class="card-plan" role="listitem">
+            <h3>Casual Solo Walk (60 min)</h3>
+            <p class="meta">Ad-hoc or one-off walks</p>
+            <div class="price-row" aria-label="Price">
+              <span class="regular">A$55</span>
+              <span class="promo">50% OFF · A$27.50 (First walk)</span>
+            </div>
+            <p class="incl">Includes: 60-minute walk, GPS map, photo update, training notes, water/towelling upon return.</p>
+            <div class="cta-row hero-cta-group">
+              <a class="btn btn-primary" data-plan="walk_casual" href="https://www.timetopet.com/portal/woofofwalkstreet/create-account" aria-label="Book 60-minute casual walk">Book Casual Walk Trial</a>
+              <a class="btn btn-ghost" href="/walking-services.html">Walk details</a>
+            </div>
+          </article>
+
+          <article class="card-plan" role="listitem">
+            <h3>Unlimited Walks Membership (Weekly)</h3>
+            <p class="meta">Best value for regular walkers</p>
+            <div class="price-row">
+              <span class="regular">A$220 / week</span>
+              <span class="promo">50% OFF · A$110 (First week)</span>
+            </div>
+            <p class="incl">Includes: Up to 5 walks/week (60 min each), Priority booking, All features included.</p>
+            <div class="cta-row hero-cta-group">
+              <a class="btn btn-primary" data-plan="walk_unlimited" href="https://www.timetopet.com/portal/woofofwalkstreet/create-account" aria-label="Book unlimited walk membership">Book Unlimited Trial Week</a>
+              <a class="btn btn-ghost" href="/memberships.html">Membership info</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="promo-note" style="margin-top:.8rem">
+          <strong>New Clients Only:</strong> 50% OFF applies automatically to your first requested service. You’ll see the discount in your Time To Pet portal confirmation.
+        </div>
+
+        <section class="why" aria-labelledby="why-different">
+          <h3 id="why-different" class="muted" style="margin:10px 0 2px">Why families trust our walks</h3>
+          <div class="point">
+            <p><strong>Strictly Solo Walks.</strong> No packed group walks, no distractions. Your dog gets focused attention and exercise.</p>
+          </div>
+          <div class="point">
+            <p><strong>GPS Tracking.</strong> Always know where your dog went. We provide a <strong>GPS map</strong> and <strong>photo updates</strong> after every walk.</p>
+          </div>
+          <div class="point">
+            <p><strong>Training Reinforced.</strong> Every walk is a training opportunity. We include brief notes on loose-leash or focus work from the session.</p>
+          </div>
+        </section>
+
+        <p class="mini" style="margin-top:10px">
+          Prefer to chat first?
+          <a class="btn btn-outline" href="/contact.html">Ask a Question</a>
+          <a class="btn btn-ghost" href="tel:+61456754050">Call +61 456 754 050</a>
         </p>
       </section>
 
-      <section class="form-card">
-        <h2 style="margin-top:0; color:var(--gold); text-align:center;">New Clients</h2>
-        <p style="color:#a9b4c0; margin-bottom: 1.5rem; text-align:center;">
-          Tell us a bit about your dog. We'll text you shortly to arrange a free Meet & Greet.
-        </p>
-        
-        <div class="trust-icons">
-          <div class="trust-item"><span class="trust-icon">📍</span> GPS Tracked</div>
-          <div class="trust-item"><span class="trust-icon">🛡️</span> Fully Insured</div>
-          <div class="trust-item"><span class="trust-icon">👮</span> Police Checked</div>
+      <aside class="edge" aria-labelledby="trust-heading">
+        <span class="badge" style="margin-bottom:6px">About Time To Pet</span>
+        <h2 id="trust-heading">Safe. Simple. Trusted.</h2>
+        <ul class="mini" style="margin:0 0 12px 18px">
+          <li><strong>Trusted by thousands of pet businesses.</strong></li>
+          <li><strong>Encrypted connection</strong> and secure hosting.</li>
+          <li><strong>Backups</strong> multiple times per day.</li>
+          <li><strong>Everything in one place:</strong> bookings, GPS maps, photos, messaging.</li>
+          <li><strong>We don’t store your card</strong> on our website — it stays in the portal.</li>
+        </ul>
+
+        <h3 class="mini" style="font-size:1.1rem;margin:.5rem 0 .35rem">What to expect</h3>
+        <div class="edge" style="border-width:1px;padding:12px">
+          <h4 class="muted" style="margin:0 0 .4rem">Inside Time To Pet</h4>
+          <ol class="mini" style="margin:0 0 8px 18px">
+            <li>Create your account and tell us about your dog.</li>
+            <li>Request dates or select our suggested time.</li>
+            <li>See your confirmation in the portal and via email.</li>
+            <li>After the walk, view your <strong>GPS map</strong> and <strong>photo updates</strong>.</li>
+          </ol>
         </div>
 
-        <form action="/thank-you.html" method="POST">
-          
-          <div class="form-group">
-            <label class="form-label" for="owner_name">Your Name</label>
-            <input type="text" id="owner_name" name="owner_name" class="form-input" placeholder="Jane Doe" required>
-          </div>
+        <div class="edge" style="border-width:1px;padding:12px;margin-top:10px">
+          <h4 class="muted" style="margin:0 0 .4rem">From The Woof of Walk Street</h4>
+          <ul class="mini" style="margin:0 0 0 18px">
+            <li>We’ll confirm booking times and a key/access protocol.</li>
+            <li>You’ll also get a welcome email and next steps from <strong>info@woofofwalkstreet.com</strong>.</li>
+          </ul>
+        </div>
 
-          <div class="form-group">
-            <label class="form-label" for="email">Email Address</label>
-            <input type="email" id="email" name="email" class="form-input" placeholder="jane@example.com" required>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" class="form-input" placeholder="0400 000 000" required>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="suburb">Suburb</label>
-            <select id="suburb" name="suburb" class="form-select" class="form-input">
-              <option value="" disabled selected>Select your area...</option>
-              <option value="South Melbourne">South Melbourne</option>
-              <option value="Albert Park">Albert Park</option>
-              <option value="Middle Park">Middle Park</option>
-              <option value="Port Melbourne">Port Melbourne</option>
-              <option value="Southbank">Southbank</option>
-              <option value="South Yarra">South Yarra</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="dog_name">Dog's Name & Breed</label>
-            <input type="text" id="dog_name" name="dog_name" class="form-input" placeholder="e.g. Charlie (Golden Retriever)" required>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="service_interest">Interested In</label>
-            <select id="service_interest" name="service_interest" class="form-input">
-              <option value="Casual Walks">Casual Solo Walks</option>
-              <option value="Unlimited Membership">Unlimited Membership (50% Off 1st Month)</option>
-              <option value="Boarding">Boarding Services</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="message">Anything else we should know?</label>
-            <textarea id="message" name="message" class="form-input" rows="3" placeholder="E.g. Specific days needed, behavioural notes..."></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-primary">Request Meet & Greet</button>
-          <p style="font-size:0.8rem; color:#666; text-align:center; margin-top:1rem;">
-            No payment required today. We'll contact you to confirm details.
-          </p>
-        </form>
-        </section>
+        <div class="faq" aria-labelledby="faq-heading">
+          <h3 id="faq-heading" style="margin-top:12px">Walking FAQs</h3>
+          <details>
+            <summary>Are these solo or group walks?</summary>
+            <p>These are strictly solo (one dog, one walker) walks to ensure maximum safety and attention.</p>
+          </details>
+          <details>
+            <summary>How long is a solo walk?</summary>
+            <p>All walks booked on this page are a full 60 minutes.</p>
+          </details>
+          <details>
+            <summary>How do I get my 50% off?</summary>
+            <p>The new client discount is applied automatically to your first scheduled service after you create your account and request a booking.</p>
+          </details>
+        </div>
+      </aside>
     </div>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-banner">
-      <picture>
-        <source srcset="/images/brand/footer-banner-1600x600.webp" media="(min-width: 768px)">
-        <img src="/images/brand/footer-banner-800x300.webp" alt="Happy dogs in Melbourne" loading="lazy">
-      </picture>
+  <footer class="site-footer" role="contentinfo" style="margin-top:22px">
+    <nav class="container mini" aria-label="Footer links" style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
+      <a href="/boarding-services.html">Boarding Services</a>
+      <a href="/dog-walking-south-melbourne.html">Dog Walking</a>
+      <a href="/memberships.html">Memberships</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/faq.html">FAQs</a>
+    </nav>
+    <div class="container footer-bottom" style="text-align:center;margin-top:8px;color:#a9b4c0">
+      © <span id="year"></span> The Woof of Walk Street · South Melbourne, VIC
     </div>
-
-    <div class="container footer-top">
-      <div class="footer-brand">
-        <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="60" height="60" loading="lazy">
-        <div>
-          <strong>The Woof of Walk Street</strong><br>
-          <a class="footer-map" href="https://maps.google.com/?q=South+Melbourne+VIC" target="_blank" rel="noopener">South Melbourne, VIC</a>
-          <span> · Mon–Fri 7am–7pm</span>
-        </div>
-      </div>
-
-      <div class="footer-contact">
-        <h3>Contact Us</h3>
-        <p>
-          Email: <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a><br>
-          Phone: <a href="tel:+61456754050">0456 754 050</a>
-        </p>
-        <div class="footer-socials">
-          <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook"><img src="/images/social/facebook.svg" alt="Facebook"></a>
-          <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram"><img src="/images/social/instagram.svg" alt="Instagram"></a>
-          <a href="https://x.com/woofofwalkstreet" aria-label="Twitter/X"><img src="/images/social/twitter.svg" alt="Twitter/X"></a>
-        </div>
-      </div>
-
-      <nav class="footer-nav" aria-label="Footer">
-        <ul>
-          <li><a href="/memberships.html">Memberships</a></li>
-          <li><a href="/services.html">Walking</a></li>
-          <li><a href="/boarding-services.html">Boarding</a></li>
-          <li><a href="/faq.html">FAQ</a></li>
-          <li><a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></li>
-          <li><a href="/sitemap.html">Sitemap</a></li>
-        </ul>
-      </nav>
-    </div>
-
-    <div class="footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   </footer>
 
+  <script>
+  (function(){
+    var TTP_BASE = "https://www.timetopet.com/portal/woofofwalkstreet/create-account";
+    function getParams() {
+      var p = new URLSearchParams(window.location.search);
+      var keep = new URLSearchParams();
+      ["utm_source","utm_medium","utm_campaign","utm_term","utm_content"].forEach(function(k){
+        if (p.has(k)) keep.set(k, p.get(k));
+      });
+      try { keep.set("ref_path", window.location.pathname); } catch(e){}
+      return keep;
+    }
+    function buildOutbound(plan){
+      var qs = getParams();
+      if (plan) qs.set("plan", plan);
+      var sep = TTP_BASE.indexOf("?")>-1 ? "&" : "?";
+      return TTP_BASE + (qs.toString() ? (sep + qs.toString()) : "");
+    }
+    document.querySelectorAll('[data-plan]').forEach(function(a){
+      a.addEventListener('click', function(e){
+        e.preventDefault();
+        var plan = a.getAttribute('data-plan') || '';
+        try { window.gtag && gtag('event','bridge_click',{event_category:'engagement',event_label: plan||'unknown_plan'}); } catch(err){}
+        window.location.href = buildOutbound(plan);
+      });
+    });
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest('a'); if (!a) return;
+      var href = (a.getAttribute('href')||'').toLowerCase();
+      if (href.includes('timetopet.com/portal/woofofwalkstreet')) {
+        e.preventDefault();
+        try { window.gtag && gtag('event','ttp_intercept_bridge'); } catch(err){}
+        window.location.href = buildOutbound(a.getAttribute('data-plan')||'');
+      }
+    }, { capture:true });
+  })();
+  </script>
+
+  <noscript>
+    <div class="container edge" style="margin:20px 0">
+      <p><strong>JavaScript is off.</strong> You can still book here:</p>
+      <p><a class="btn btn-primary" href="https://www.timetopet.com/portal/woofofwalkstreet/create-account">Open Time To Pet</a></p>
+    </div>
+  </noscript>
 </body>
 </html>

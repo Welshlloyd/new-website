@@ -30,7 +30,7 @@
         imagesrcset="/images/gallery/dog-weekend-woof-800.jpg 800w, /images/gallery/dog-weekend-woof.jpg 1200w"
         imagesizes="(max-width: 640px) 100vw, (max-width: 1200px) 90vw, 1200px">
 
-  <!-- Service JSON-LD (base rate kept at $150; promo handled as coupon in UI) -->
+  <!-- Service JSON-LD -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -51,35 +51,49 @@
   }
   </script>
 
-  <!-- FAQ JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {"@type":"Question","name":"Do you board multiple dogs at once?","acceptedAnswer":{"@type":"Answer","text":"No. We’re strictly one guest only. This keeps things calmer, safer, and more personal."}},
-      {"@type":"Question","name":"Can my dog sleep on your bed or the sofa?","acceptedAnswer":{"@type":"Answer","text":"Yes—if that’s your home routine, we’ll continue it here. Comfort first."}},
-      {"@type":"Question","name":"What’s included?","acceptedAnswer":{"@type":"Answer","text":"Multiple daily walks (GPS tracked), photo updates, food, enrichment games, and bones & chicken treats. Let us know about allergies."}},
-      {"@type":"Question","name":"Can you pick up our dog’s bed or crate?","acceptedAnswer":{"@type":"Answer","text":"Yes—local pickup/return is available so your dog’s routine stays consistent."}},
-      {"@type":"Question","name":"How do I book?","acceptedAnswer":{"@type":"Answer","text":"All bookings are made via our Acuity scheduler for instant confirmation."}}
-    ]
-  }
-  </script>
-
-  <!-- Page-only accents -->
+  <!-- Page accents -->
   <style>
-    .promo-banner{border:3px solid #000;background:#fff6d6;color:#111;border-radius:14px;padding:14px;margin:12px 0}
-    .promo-banner h2{margin:0 0 6px;font-size:clamp(1.1rem,2.5vw,1.5rem)}
-    .promo-banner strong{font-weight:900}
-    .btn-copy{border:2px dashed #111;border-radius:999px;padding:6px 10px;font-weight:800;cursor:pointer;background:#fff;color:#111}
-    .price-note{font-size:.95rem;color:#cfd6df}
-    .pricing-card .fine{font-size:.95rem;color:#cfd6df;margin-top:4px}
+    .promo-banner{
+      border:0; border-radius:14px; padding:16px; margin:12px 0;
+      background: linear-gradient(135deg, #000 0%, #0b0f14 30%, #f5b200 100%);
+      color:#111; position:relative; overflow:hidden;
+    }
+    .promo-banner-inner{ background:#fff6d6; border-radius:12px; padding:14px; }
+    .promo-banner h2{ margin:0 0 6px; font-size:clamp(1.1rem,2.5vw,1.5rem); color:#111; }
+    .promo-banner strong{ font-weight:900; }
+    .btn-copy{ border:2px dashed #111; border-radius:999px; padding:6px 10px; font-weight:800; cursor:pointer; background:#fff; color:#111 }
+    .price-note{ font-size:.95rem; color:#cfd6df }
+    .pricing-card .fine{ font-size:.95rem; color:#cfd6df; margin-top:4px }
+
+    /* Sticky mobile promo ribbon */
+    @media (max-width: 768px){
+      .wows-sticky-promo{
+        position:fixed; left:0; right:0; bottom:0; z-index:9999;
+        background: linear-gradient(180deg,#ffdd6a 0%, #f5b200 100%);
+        box-shadow: 0 -8px 24px rgba(0,0,0,.35);
+        padding:10px 12px; display:flex; gap:10px; align-items:center; justify-content:space-between;
+      }
+      .wows-sticky-promo .txt{ font-weight:900; color:#111 }
+      .wows-sticky-promo .btn{ background:#111; color:#fff; border-radius:999px; padding:10px 14px; font-weight:800; text-decoration:none }
+      body{ padding-bottom:64px }
+    }
+
+    /* Header mini call button style */
+    .wows-call-btn{
+      background:#000; color:#fff; padding:10px 14px; border:0; border-radius:999px;
+      font-weight:800; text-decoration:none; display:inline-block; box-shadow:0 -2px 0 rgba(0,0,0,.15) inset; margin-left:8px;
+    }
+    .wows-call-btn:hover{ transform:translateY(-1px); }
   </style>
+
+  <!-- Acuity Button SDK (for the free 10-min catch-up button) -->
+  <link rel="stylesheet" href="https://embed.acuityscheduling.com/embed/button/37607219.css" id="acuity-button-styles" />
+  <script src="https://embed.acuityscheduling.com/embed/button/37607219.js" async></script>
 </head>
 
 <body class="bg-dark">
 
-  <!-- Google Ads Global Site Tag (kept) -->
+  <!-- Google Ads tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config','AW-17527927259');</script>
 
@@ -111,6 +125,15 @@
         <a href="/faq.html">FAQs</a>
         <a href="/search.html">Search</a>
         <a class="btn btn-primary nav-cta" href="/book-boarding.html?coupon=BOARDING20&utm_source=website&utm_medium=header&utm_campaign=book_boarding">Book Boarding — 20% Off</a>
+
+        <!-- Header mini Free 10-min catch-up button -->
+        <a
+          href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031912&utm_source=website&utm_medium=header&utm_campaign=10min_catchup"
+          target="_blank" rel="noopener"
+          class="acuity-embed-button wows-call-btn"
+          aria-label="Schedule a free 10-minute catch-up">
+          Free 10-min catch-up
+        </a>
       </nav>
     </div>
   </header>
@@ -128,19 +151,21 @@
              style="max-width:920px;border-radius:12px;display:block;margin:10px auto 0"
              width="1200" height="800" loading="eager" decoding="async" fetchpriority="high">
 
-        <!-- PROMO BANNER -->
+        <!-- PROMO BANNER (gold/black) -->
         <div class="promo-banner" role="note" aria-label="20% Off Boarding">
-          <h2>🚀 🔥 LIMITED-TIME: SAVE <strong>20%</strong> ON OVERNIGHT BOARDING! 🔥</h2>
-          <p>Standard rate <strong>$150/night</strong> — use code <strong id="coupon">BOARDING20</strong> at checkout for <strong>$120/night</strong>.</p>
-          <p>
-            <button class="btn-copy" aria-label="Copy discount code" onclick="navigator.clipboard.writeText('BOARDING20').then(()=>{this.textContent='Copied! BOARDING20'; setTimeout(()=>this.textContent='Copy code: BOARDING20',1800);});">Copy code: BOARDING20</button>
-          </p>
-          <ul>
-            <li>🐾 <strong>One-guest-only</strong> — no other dogs boarding</li>
-            <li>🏡 Safe, cosy, supervised home environment</li>
-            <li>📸 Daily photo/video updates</li>
-            <li>🦮 GPS-tracked walks included</li>
-          </ul>
+          <div class="promo-banner-inner">
+            <h2>🚀 🔥 SAVE <strong>20%</strong> ON OVERNIGHT BOARDING — LIMITED TIME 🔥</h2>
+            <p>Standard rate <strong>$150/night</strong> — use code <strong id="coupon">BOARDING20</strong> at checkout for <strong>$120/night</strong>.</p>
+            <p>
+              <button class="btn-copy" aria-label="Copy discount code" onclick="navigator.clipboard.writeText('BOARDING20').then(()=>{this.textContent='Copied! BOARDING20'; setTimeout(()=>this.textContent='Copy code: BOARDING20',1800);});">Copy code: BOARDING20</button>
+            </p>
+            <ul>
+              <li>🐾 <strong>One-guest-only</strong> — no other dogs boarding</li>
+              <li>🏡 Safe, cosy, supervised home environment</li>
+              <li>📸 Daily photo/video updates</li>
+              <li>🦮 GPS-tracked walks included</li>
+            </ul>
+          </div>
         </div>
 
         <p class="center" style="margin-top:12px">
@@ -152,7 +177,7 @@
       </div>
     </section>
 
-    <!-- Pricing (dark) — keeps base price consistent; promo shown as coupon -->
+    <!-- Pricing (dark) -->
     <section class="section bg-darker" aria-labelledby="choose-stay">
       <div class="container">
         <h2 id="choose-stay" class="heading-underline">Choose Your Stay</h2>
@@ -212,80 +237,17 @@
       </div>
     </section>
 
-    <!-- Home-style comfort (light content card + dark page background) -->
-    <section class="section bg-darker">
-      <div class="container grid grid-cols-2">
-        <article class="gold-soft bg-light text-dark" style="padding:16px">
-          <h2 class="heading-underline">Home-Style Comfort (No Kennels, Ever)</h2>
-          <p>Our <strong>Weekend Woof Club</strong> is South Melbourne’s boutique alternative to kennels—<strong>one guest only</strong>, calm routine, everyday comforts.</p>
-          <ul class="list-check">
-            <li>One guest only — calmer, safer, truly personal care</li>
-            <li>Sleep on our bed or the sofa if that’s what you do at home</li>
-            <li>Local pickup of dog beds/crates available</li>
-            <li>Enrichment games for a settled, happy guest</li>
-            <li>Local walks around <strong>Albert Park</strong> & South Melbourne streets</li>
-            <li>Daily photo & text updates direct to your phone</li>
-          </ul>
-          <p class="stack-sm">
-            <a class="btn btn-primary" href="/book-boarding.html?coupon=BOARDING20&utm_source=website&utm_medium=comfort&utm_campaign=book_boarding">Reserve a Stay — 20% Off</a>
-          </p>
-        </article>
-
-        <aside class="gold-soft bg-light text-dark" style="padding:16px">
-          <h2 class="heading-underline">How It Works</h2>
-          <ol class="list-steps">
-            <li>Pick your dates in our **Acuity** calendar (instant confirmation)</li>
-            <li>Quick dog profile form (vaccinations, routine, contacts)</li>
-            <li>Pack essentials — or we can pick up your dog’s bed/crate</li>
-            <li>Drop off & pick up windows confirmed by SMS</li>
-          </ol>
-          <figure style="margin-top:12px">
-            <img src="/images/highlights/dog-cozy-nap.jpg" alt="Cozy nap during boutique weekend boarding" loading="lazy" style="border-radius:10px;width:100%;height:auto">
-          </figure>
-        </aside>
-      </div>
-    </section>
-
-    <!-- Optional Extras (light cards) -->
-    <section class="section bg-light text-dark">
-      <div class="container">
-        <h2 class="heading-underline">Optional Extras</h2>
-        <p class="meta" style="max-width:60ch">Add any of these to tailor your dog’s stay. Prices are per stay unless noted.</p>
-        <div class="grid grid-cols-3" style="margin-top:10px">
-          <article class="gold-soft" style="padding:14px">
-            <h3>Pickup / Drop-off</h3>
-            <p>Local South Melbourne area.</p>
-            <p><strong>$20</strong> each way</p>
-          </article>
-          <article class="gold-soft" style="padding:14px">
-            <h3>Bath & Brush</h3>
-            <p>Warm wash, towel dry, gentle brush before pickup.</p>
-            <p><strong>$35</strong></p>
-          </article>
-          <article class="gold-soft" style="padding:14px">
-            <h3>Late Checkout</h3>
-            <p>Collect by 8pm on final day.</p>
-            <p><strong>$25</strong></p>
-          </article>
-          <article class="gold-soft" style="padding:14px">
-            <h3>Extra Solo Walk</h3>
-            <p>45-minute GPS-tracked walk.</p>
-            <p><strong>$45</strong></p>
-          </article>
-          <article class="gold-soft" style="padding:14px">
-            <h3>Medication Admin</h3>
-            <p>Tablets/drops at set times (no injectables).</p>
-            <p><strong>$10</strong> / day</p>
-          </article>
-          <article class="gold-soft" style="padding:14px">
-            <h3>Vet Run (if needed)</h3>
-            <p>Transport to your local vet.</p>
-            <p><strong>At cost</strong> + $25</p>
-          </article>
-        </div>
-        <p class="cta-buttons" style="margin-top:12px">
-          <a class="btn btn-primary" href="/book-boarding.html?coupon=BOARDING20&utm_source=website&utm_medium=extras&utm_campaign=book_boarding">Add Extras & Book</a>
-          <a class="btn" style="border:1px solid #f5b200" href="/contact.html">Ask about an extra</a>
+    <!-- Want to chat first? (Free 10-min catch-up) -->
+    <section class="section">
+      <div class="container gold-soft" style="padding:14px">
+        <h2 class="heading-underline">Want to chat first?</h2>
+        <p>Book a <strong>free 10-minute catch-up</strong> and we’ll answer questions about boarding, routines, and dates.</p>
+        <p>
+          <a
+            href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031912&utm_source=website&utm_medium=midpage&utm_campaign=10min_catchup"
+            target="_blank" rel="noopener"
+            class="acuity-embed-button wows-call-btn">📞 Free 10-minute catch-up</a>
+          &nbsp;or call <a href="tel:+61370731175"><strong>(03) 7073 1175</strong></a>
         </p>
       </div>
     </section>
@@ -316,7 +278,7 @@
       </div>
     </section>
 
-    <!-- Gallery (dark card with gold edge) -->
+    <!-- Gallery -->
     <section class="section bg-darker">
       <div class="container gold-edge" style="padding:14px">
         <h2 class="heading-underline">Recent Boarding Photos</h2>
@@ -341,7 +303,7 @@
       </div>
     </section>
 
-    <!-- Testimonials (dark) -->
+    <!-- Testimonials -->
     <section class="section bg-darker" aria-labelledby="boarding-testimonials">
       <div class="container">
         <h2 id="boarding-testimonials" class="heading-underline">What Owners Say About Weekend Woof Club</h2>
@@ -357,7 +319,7 @@
       </div>
     </section>
 
-    <!-- Local reassurance (dark text, strong internal linking) -->
+    <!-- Local reassurance -->
     <section class="section bg-darker">
       <div class="container">
         <h2 class="heading-underline">Safe, Loving, Reliable — Proudly Local</h2>
@@ -367,38 +329,13 @@
         </p>
       </div>
     </section>
-
-    <!-- From the blog (light cards to vary texture) -->
-    <section class="section bg-light text-dark">
-      <div class="container">
-        <h2 class="heading-underline">From the Blog</h2>
-        <div class="grid grid-cols-2" style="margin-top:10px">
-          <article class="gold-soft" style="padding:14px">
-            <h3><a href="/blog/why-solo-walks.html">Why Solo Walks Calm Anxious Dogs</a></h3>
-            <p>Our philosophy on one-dog-only care and how it translates to calmer stays and better sleep.</p>
-            <p><a class="btn" style="border:1px solid #f5b200" href="/blog/why-solo-walks.html">Read more →</a></p>
-          </article>
-          <article class="gold-soft" style="padding:14px">
-            <h3><a href="/blog/best-dog-walks-south-melbourne.html">Best Dog Walks in South Melbourne</a></h3>
-            <p>Our favourite local loops around Albert Park & South Melbourne — exactly where we’ll take your pup.</p>
-            <p><a class="btn" style="border:1px solid #f5b200" href="/blog/best-dog-walks-south-melbourne.html">Read more →</a></p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQs (light) -->
-    <section class="section bg-light text-dark">
-      <div class="container">
-        <h2 class="heading-underline">Boarding FAQs</h2>
-        <details><summary>Do you board multiple dogs at once?</summary><p>No. We’re strictly one guest only. This keeps things calmer, safer, and more personal.</p></details>
-        <details><summary>Can my dog sleep on your bed or the sofa?</summary><p>Yes — if that’s your home routine, we’ll continue it here. Comfort first.</p></details>
-        <details><summary>What’s included?</summary><p>Daily walks with GPS tracking, photo updates, food, enrichment games, and bones & chicken treats. Let us know about allergies.</p></details>
-        <details><summary>Can you pick up our dog’s bed or crate?</summary><p>Yes — for local clients we can collect and return beds or crates to keep your dog’s routine consistent.</p></details>
-        <details><summary>How do I book?</summary><p>All bookings are via our <a href="/book-boarding.html?coupon=BOARDING20">Acuity scheduler</a> for instant confirmation.</p></details>
-      </div>
-    </section>
   </main>
+
+  <!-- Sticky mobile promo ribbon -->
+  <div class="wows-sticky-promo" role="region" aria-label="Limited-time 20% off (mobile)">
+    <span class="txt">20% OFF Boarding — code BOARDING20</span>
+    <a class="btn" href="/book-boarding.html?coupon=BOARDING20&utm_source=website&utm_medium=sticky&utm_campaign=mobile_ribbon">Book now</a>
+  </div>
 
   <!-- FOOTER -->
   <footer class="site-footer" role="contentinfo">

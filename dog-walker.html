@@ -30,12 +30,10 @@
     .list-check li{margin:.35rem 0}
     .list-dash{padding-left:1.1rem; list-style:disc}
     .list-dash li{margin:.3rem 0}
-    /* UI Improvement: Area selection is now the focus */
     .area-chip-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px;justify-content:center;}
     .area-chip{display:inline-block;padding:12px 20px;border-radius:999px;background:var(--brand);color:var(--bg);font-weight:800;text-decoration:none;transition:.2s;}
     .area-chip:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(var(--brand-rgb),.4);}
     .badge-row .badge{margin-right:.35rem}
-    /* CRO: Price Banner to draw attention to the A$100 casual rate near the CTAs */
     .price-banner{
       background:var(--brand); 
       color:var(--bg); 
@@ -46,15 +44,11 @@
       font-size:1.15rem;
       font-weight:700;
     }
-    .price-banner a{
-      color:var(--bg);
-      font-weight:400; 
-      text-decoration:underline;
-    }
+    .price-banner a{ color:var(--bg); font-weight:400; text-decoration:underline; }
+    .hero-cta-row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:14px}
     .sticky-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:1100;background:#111824ee;border:1px solid var(--border);box-shadow:var(--shadow);border-radius:16px;display:flex;gap:10px;justify-content:center;align-items:center;padding:10px}
     .sticky-cta .btn,.sticky-cta .button-primary{padding:10px 16px}
     @media (min-width:860px){.sticky-cta{display:none}}
-    /* FIX: Ensure footer links are readable on the dark background */
     .footer-brand a{color:var(--brand);}
   </style>
 
@@ -71,7 +65,6 @@
 
   <script type="application/ld+json">
   {"@context":"https://schema.org","@graph":[
-    // NEW: LocalBusiness schema added for strong local signal
     {"@type":"LocalBusiness","name":"The Woof of Walk Street","url":"https://www.woofofwalkstreet.com/","telephone":"+61370731175",
       "address":{"@type":"PostalAddress","addressLocality":"South Melbourne","addressRegion":"VIC","addressCountry":"AU"}},
     {"@type":"BreadcrumbList","itemListElement":[
@@ -84,7 +77,7 @@
       "provider":{"@type":"Organization","name":"The Woof of Walk Street","url":"https://www.woofofwalkstreet.com/"},
       "url":"https://www.woofofwalkstreet.com/dog-walking-services.html",
       "description":"Calm, one-dog-only walks across Melbourne's inner south, perfect for nervous or reactive dogs. GPS route & photo updates included.",
-      "offers":{"@type":"Offer","priceCurrency":"AUD","price":"100.00","availability":"https://schema.org/InStock","url":"https://www.woofofwalkstreet.com/casual-dog-walking-south-melbourne.html"}},
+      "offers":{"@type":"Offer","priceCurrency":"AUD","price":"100.00","availability":"https://schema.org/InStock","url":"https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931","priceValidUntil":"2025-12-31"}},
     {"@type":"WebPage","@id":"https://www.woofofwalkstreet.com/dog-walking-services.html#page",
       "name":"Solo Dog Walking Services Melbourne — No Pack Walks",
       "url":"https://www.woofofwalkstreet.com/dog-walking-services.html",
@@ -101,11 +94,12 @@
 </head>
 <body>
 
+  <!-- Promo ribbon: NOW links to Acuity (casual 45-min, WALK50) -->
   <div id="promo" class="promo-ribbon promo--edge" role="region" aria-label="Promo: 50% off Casual Walks">
     <div class="promo-inner container">
       <img class="promo-dog" src="/images/brand/dog-in-suit.webp" alt="" width="28" height="28" decoding="async" />
       <span class="promo-copy"><strong>50% OFF Casual Walks</strong> — Use code <strong>WALK50</strong> at checkout. Book before 31/12!</span>
-      <a href="/casual-dog-walking-south-melbourne.html" class="promo-cta">Book Now →</a>
+      <a href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931" class="promo-cta" target="_blank" rel="noopener">Book Now →</a>
       <button id="promo-close" class="promo-close" aria-label="Dismiss promo">✕</button>
     </div>
   </div>
@@ -160,7 +154,7 @@
         
         <h1>Solo Dog Walking Services Melbourne — No Pack Walks, Guaranteed</h1>
         
-        <p class="subhead">Melbourne’s preferred choice for **one-dog-only** walking: calm 45-minute sessions with a **GPS route**, **photo update** and quick notes after every walk. Perfect for **anxious or reactive dogs.**</p>
+        <p class="subhead">Melbourne’s preferred choice for <strong>one-dog-only</strong> walking: calm 45-minute sessions with a <strong>GPS route</strong>, <strong>photo update</strong> and quick notes after every walk. Perfect for <strong>anxious or reactive dogs.</strong></p>
 
         <img src="/images/pages/dog-walking/dog-albert-park-lake-south-melbourne.jpg"
               alt="Happy solo dog walk near a lake, emphasizing individual attention"
@@ -170,6 +164,17 @@
 
         <div class="price-banner">
           <p><strong>A$100 Casual Solo Walk</strong> — <a href="/memberships.html">Save More with Memberships</a></p>
+        </div>
+
+        <!-- New hero CTAs for casual booking -->
+        <div class="hero-cta-row">
+          <a class="btn button-primary"
+             href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931"
+             target="_blank" rel="noopener"
+             onclick="gtag('event','book_casual_click',{label:'hero_casual'});">
+             Book 45-min Casual — 50% Off
+          </a>
+          <a class="btn button-secondary" href="/memberships.html">Compare All Plans</a>
         </div>
         
         <h2 style="margin-top:1.5rem;text-align:center;">Select Your Local Area to View Routes & Book</h2>
@@ -188,15 +193,13 @@
       <div class="container grid grid-2">
         <article class="card">
           <h2>Why Choose Solo Walking? (The Anti-Pack Walk)</h2>
-          
           <h3>Calm, Focused Attention & Low Arousal Routes</h3>
-          
-          <p>We are dedicated to **ethical, one-on-one care.** Unlike chaotic, car-ferry pack walks that can increase anxiety, our solo sessions provide **calm decompression** and high-value sniffing time.</p>
+          <p>We are dedicated to <strong>ethical, one-on-one care.</strong> Unlike chaotic, car-ferry pack walks that can increase anxiety, our solo sessions provide <strong>calm decompression</strong> and high-value sniffing time.</p>
           <ul class="list-check">
-            <li>45-minute **strictly solo** sessions (no group mixing)</li>
-            <li>**GPS route + photo update** after each walk</li>
+            <li>45-minute <strong>strictly solo</strong> sessions (no group mixing)</li>
+            <li><strong>GPS route + photo update</strong> after each walk</li>
             <li>Insured, police-checked, certified first-aid handlers</li>
-            <li>Perfect for **reactive, anxious, or senior dogs**</li>
+            <li>Perfect for <strong>reactive, anxious, or senior dogs</strong></li>
           </ul>
           <p class="muted">New here? Read <a href="/blog/why-solo-walks.html">Why Solo Walks Beat Pack Walks</a> and <a href="/blog/ethical-dog-walker.html">How to Choose an Ethical Dog Walker</a>.</p>
         </article>
@@ -204,26 +207,31 @@
         <article class="card">
           <h2>How Our Service Works</h2>
           <h3>Dedicated, Predictable, and Proof-Driven</h3>
-          <p>We believe in structure. Our **solo dog walking** service starts at your door, using predictable, low-traffic residential routes specific to your suburb (e.g., quiet backstreets, tree-lined avenues), to return your dog calm and satisfied. Our technology gives you total peace of mind.</p>
+          <p>We believe in structure. Our <strong>solo dog walking</strong> service starts at your door, using predictable, low-traffic residential routes specific to your suburb (e.g., quiet backstreets, tree-lined avenues), to return your dog calm and satisfied. Our technology gives you total peace of mind.</p>
           <ul class="list-check">
-            <li>✅ **Check-in/Check-out Text:** Confirmed start and end times.</li>
-            <li>✅ **GPS Route:** See exactly where your dog went and for how long.</li>
-            <li>✅ **Photo Update:** A moment of joy from their solo adventure.</li>
-            <li>✅ **Quick Notes:** Highlights on their mood, toileting, and energy level.</li>
+            <li>✅ <strong>Check-in/Check-out Text:</strong> Confirmed start and end times.</li>
+            <li>✅ <strong>GPS Route:</strong> See exactly where your dog went and for how long.</li>
+            <li>✅ <strong>Photo Update:</strong> A moment of joy from their solo adventure.</li>
+            <li>✅ <strong>Quick Notes:</strong> Highlights on their mood, toileting, and energy level.</li>
           </ul>
         </article>
 
         <article class="card">
           <h2>Plans for Every Routine</h2>
           <h3>Casual, Membership, or Unlimited Weekdays</h3>
-          <p>Whether you need a reliable weekday structure or just occasional cover, we have a plan to fit. **The more you walk, the more you save.** Our Unlimited Weekday plan offers the best value for busy owners needing daily help.</p>
+          <p>Whether you need a reliable weekday structure or just occasional cover, we have a plan to fit. <strong>The more you walk, the more you save.</strong> Our Unlimited Weekday plan offers the best value for busy owners needing daily help.</p>
           <ul class="list-dash">
-            <li>**Casual:** Book as needed (A$100 per walk).</li>
-            <li>**Membership:** Guaranteed weekly slots and discounted rates.</li>
-            <li>**Unlimited:** Daily solo walks Monday–Friday (50% off first month).</li>
+            <li><strong>Casual:</strong> Book as needed (A$100 per walk).</li>
+            <li><strong>Membership:</strong> Guaranteed weekly slots and discounted rates.</li>
+            <li><strong>Unlimited:</strong> Daily solo walks Monday–Friday (50% off first month).</li>
           </ul>
           <p class="stack-sm">
-            <a class="btn button-primary" href="/unlimited-dog-walks.html">Join Unlimited — 50% Off</a>
+            <a class="btn button-primary"
+               href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931"
+               target="_blank" rel="noopener"
+               onclick="gtag('event','book_casual_click',{label:'plans_casual'});">
+               Book 45-min Casual — 50% Off
+            </a>
             <a class="btn button-secondary" href="/memberships.html">Compare All Plans</a>
           </p>
         </article>
@@ -247,13 +255,18 @@
       <div class="container">
         <h2>How to Book Your Solo Dog Walk</h2>
         <ol class="list-check">
-          <li>**Choose Your Area:** Select your suburb from the list above.</li>
-          <li>**Pick a Plan:** Choose Casual, Membership, or Unlimited.</li>
-          <li>**Pick a Time:** Book a slot Mon–Fri, 7:00 a.m.–7:00 p.m.</li>
-          <li>**Get Proof:** Receive a GPS route, photo update and quick notes right after your walk.</li>
+          <li><strong>Choose Your Area:</strong> Select your suburb from the list above.</li>
+          <li><strong>Pick a Plan:</strong> Choose Casual, Membership, or Unlimited.</li>
+          <li><strong>Pick a Time:</strong> Book a slot Mon–Fri, 7:00 a.m.–7:00 p.m.</li>
+          <li><strong>Get Proof:</strong> Receive a GPS route, photo update and quick notes right after your walk.</li>
         </ol>
         <p class="cta-buttons" style="margin-top:.5rem">
-          <a class="btn button-primary" href="/book-dog-walk/">Book Walks</a>
+          <a class="btn button-primary"
+             href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931"
+             target="_blank" rel="noopener"
+             onclick="gtag('event','book_casual_click',{label:'howto_casual'});">
+             Book 45-min Casual — 50% Off
+          </a>
           <a class="btn button-secondary" href="/service-areas.html">See All Service Areas</a>
           <a class="btn button-secondary" href="https://app.acuityscheduling.com/schedule/de831367/appointment/86031912/calendar/13101521?appointmentTypeIds[]=86031912" target="_blank" rel="noopener">Chat with the Team (10 min)</a>
         </p>
@@ -286,7 +299,14 @@
     </section>
   </main>
 
+  <!-- Sticky mobile CTA: add direct casual booking button -->
   <div class="sticky-cta" role="region" aria-label="Quick booking">
+    <a class="btn button-primary"
+       href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931"
+       target="_blank" rel="noopener"
+       onclick="gtag('event','book_casual_click',{label:'sticky_casual'});">
+       Book Casual (50% Off)
+    </a>
     <a class="btn button-primary" href="/book-dog-walk/">Book Walks</a>
     <a class="btn button-primary" href="/book-boarding.html">Book Boarding</a>
     <a class="btn button-secondary" href="https://app.acuityscheduling.com/schedule/de831367/appointment/86031912/calendar/13101521?appointmentTypeIds[]=86031912" target="_blank" rel="noopener">Chat with the Team</a>
@@ -305,7 +325,7 @@
         <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="60" height="60" loading="lazy">
         <p><strong>The Woof of Walk Street</strong><br>
           <a class="footer-map" href="https://maps.app.goo.gl/YnEoSPwhGocUZyWL9?g_st=ipc" target="_blank" rel="noopener">South Melbourne, VIC</a> · Mon–Fri 7am–7pm<br>
-          <a href="tel:(03)70731175">(03) 7073 1175</a> · <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a>
+          <a href="tel:+61370731175">(03) 7073 1175</a> · <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a>
         </p>
         <div class="footer-socials">
           <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram"><img src="/images/social/instagram.svg" alt="" width="24" height="24"></a>
@@ -313,7 +333,12 @@
           <a href="https://x.com/woofofwalkstreet" aria-label="X"><img src="/images/social/twitter.svg" alt="" width="24" height="24"></a>
         </div>
         <p class="cta-buttons" style="margin-top:.4rem">
-          <a class="btn button-primary" href="/book-dog-walk/">Book Walks</a>
+          <a class="btn button-primary"
+             href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931"
+             target="_blank" rel="noopener"
+             onclick="gtag('event','book_casual_click',{label:'footer_casual'});">
+             Book 45-min Casual — 50% Off
+          </a>
           <a class="btn button-primary" href="/book-boarding.html">Book Boarding</a>
         </p>
       </section>
@@ -376,7 +401,7 @@
           btn.addEventListener('click', () => {
             const open = btn.getAttribute('aria-expanded') === 'true';
             btn.setAttribute('aria-expanded', String(!open));
-            list.hidden = open; // Toggle visibility
+            list.hidden = open;
           });
           document.addEventListener('click', (e) => {
             if (!btn.contains(e.target) && !list.contains(e.target)) {

@@ -38,6 +38,8 @@
     .sticky-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:1100;background:#111824ee;border:1px solid var(--border);box-shadow:var(--shadow);border-radius:16px;display:flex;gap:10px;justify-content:center;align-items:center;padding:10px}
     .sticky-cta .btn,.sticky-cta .button-primary{padding:10px 16px}
     @media (min-width:860px){.sticky-cta{display:none}}
+    /* FIX: Ensure footer links are readable on the dark background */
+    .footer-brand a{color:var(--brand);}
   </style>
 
   <link rel="preload" as="image" href="/images/pages/dog-walking/dog-albert-park-lake-south-melbourne.jpg" />
@@ -63,7 +65,7 @@
       "provider":{"@type":"Organization","name":"The Woof of Walk Street","url":"https://www.woofofwalkstreet.com/"},
       "url":"https://www.woofofwalkstreet.com/dog-walking-services.html",
       "description":"Calm, one-dog-only walks across Melbourne's inner south, perfect for nervous or reactive dogs. GPS route & photo updates included.",
-      "offers":{"@type":"Offer","priceCurrency":"AUD","price":"90.00","availability":"https://schema.org/InStock","url":"https://www.woofofwalkstreet.com/casual-dog-walking-south-melbourne.html"}},
+      "offers":{"@type":"Offer","priceCurrency":"AUD","price":"100.00","availability":"https://schema.org/InStock","url":"https://www.woofofwalkstreet.com/casual-dog-walking-south-melbourne.html"}},
     {"@type":"WebPage","@id":"https://www.woofofwalkstreet.com/dog-walking-services.html#page",
       "name":"Solo Dog Walking Services Melbourne — No Pack Walks",
       "url":"https://www.woofofwalkstreet.com/dog-walking-services.html",
@@ -148,7 +150,7 @@
               loading="eager" decoding="async" fetchpriority="high">
 
         <p class="muted" style="margin-top:.5rem">
-          Casual solo walk: <strong>A$90</strong>. Save with <a href="/memberships.html">memberships</a> or try <a href="/unlimited-dog-walks.html">Unlimited</a> (<strong>50% off</strong> first month).
+          Casual solo walk: <strong>A$100</strong>. Save with <a href="/memberships.html">memberships</a> or try <a href="/unlimited-dog-walks.html">Unlimited</a> (<strong>50% off</strong> first month).
         </p>
 
         <h2 style="margin-top:1.5rem;text-align:center;">Select Your Local Area to View Routes & Book</h2>
@@ -197,7 +199,7 @@
           <h3>Casual, Membership, or Unlimited Weekdays</h3>
           <p>Whether you need a reliable weekday structure or just occasional cover, we have a plan to fit. **The more you walk, the more you save.** Our Unlimited Weekday plan offers the best value for busy owners needing daily help.</p>
           <ul class="list-dash">
-            <li>**Casual:** Book as needed (A$90 per walk).</li>
+            <li>**Casual:** Book as needed (A$100 per walk).</li>
             <li>**Membership:** Guaranteed weekly slots and discounted rates.</li>
             <li>**Unlimited:** Daily solo walks Monday–Friday (50% off first month).</li>
           </ul>
@@ -234,6 +236,7 @@
         <p class="cta-buttons" style="margin-top:.5rem">
           <a class="btn button-primary" href="/book-dog-walk/">Book Walks</a>
           <a class="btn button-secondary" href="/service-areas.html">See All Service Areas</a>
+          <a class="btn button-secondary" href="https://app.acuityscheduling.com/schedule/de831367/appointment/86031912/calendar/13101521?appointmentTypeIds[]=86031912" target="_blank" rel="noopener">Chat with the Team (10 min)</a>
         </p>
       </div>
     </section>
@@ -267,6 +270,7 @@
   <div class="sticky-cta" role="region" aria-label="Quick booking">
     <a class="btn button-primary" href="/book-dog-walk/">Book Walks</a>
     <a class="btn button-primary" href="/book-boarding.html">Book Boarding</a>
+    <a class="btn button-secondary" href="https://app.acuityscheduling.com/schedule/de831367/appointment/86031912/calendar/13101521?appointmentTypeIds[]=86031912" target="_blank" rel="noopener">Chat with the Team</a>
   </div>
 
   <footer class="site-footer" role="contentinfo">
@@ -282,7 +286,7 @@
         <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="60" height="60" loading="lazy">
         <p><strong>The Woof of Walk Street</strong><br>
           <a class="footer-map" href="https://maps.app.goo.gl/YnEoSPwhGocUZyWL9?g_st=ipc" target="_blank" rel="noopener">South Melbourne, VIC</a> · Mon–Fri 7am–7pm<br>
-          <a href="tel:+61456754050">+61 456 754 050</a> · <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a>
+          <a href="tel:(03)70731175">(03) 7073 1175</a> · <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a>
         </p>
         <div class="footer-socials">
           <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram"><img src="/images/social/instagram.svg" alt="" width="24" height="24"></a>
@@ -346,7 +350,7 @@
           btn.addEventListener('click', ()=>{ const open = btn.getAttribute('aria-expanded')==='false'; sync(open); });
         });
         
-        const btn  = document.querySelector('.nav-group-btn[aria-controls="nav-services"]');
+        const btn  = document.querySelector('.nav-group-btn[aria-controls="nav-services"]');
         const list = document.getElementById('nav-services');
         if (btn && list){
           const sync = () => { list.hidden = btn.getAttribute('aria-expanded') !== 'true'; };

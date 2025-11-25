@@ -4,12 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Woof Club Booking | Dog Boarding South Melbourne — $150/night (20% Off)</title>
-  <meta name="description" content="Book Woof Club Boarding — one-guest-only, home-style stays in South Melbourne. $150/night all-inclusive. Free pickup & drop-off, GPS walks & photo updates. Fully insured, police-checked. Instant booking via Acuity." />
+  <title>Book Woof Club Boarding South Melbourne | No Kennels, Anxious Dogs Welcome</title>
+  <meta name="description" content="Instant booking for Woof Club Boarding: one-guest-only, home-style stays with NO kennels. Ideal for anxious dogs. Free pickup/drop-off, GPS walks, police-checked & insured. Book now." />
   <link rel="icon" href="/images/brand/favicon.ico" />
   <link rel="canonical" href="https://www.woofofwalkstreet.com/book-boarding.html" />
 
-  <!-- SEO / Social -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Book Woof Club Boarding — One-Guest-Only, Home-Style" />
   <meta property="og:description" content="Instant booking for boutique Woof Club Boarding. Free pickup & drop-off, GPS walks, photo updates. 10% donated to charity." />
@@ -21,10 +20,8 @@
   <meta name="twitter:description" content="One-guest-only, home-style stays. Free pickup & drop-off. Fully insured & police-checked." />
   <meta name="twitter:image" content="https://www.woofofwalkstreet.com/images/gallery/dog-weekend-woof.jpg" />
 
-  <!-- Preload hero for LCP -->
   <link rel="preload" as="image" href="/images/gallery/dog-weekend-woof.jpg" />
 
-  <!-- Local styles (aligned with boarding page) -->
   <style>
     :root{
       --bg:#0b0f14;--bg-2:#0e131b;--panel:#141a24;--text:#eaf1fb;--muted:#b5c0cf;--gold:#f5b200;--gold-2:#ffd166;
@@ -65,7 +62,9 @@
 
     /* Feature chips */
     .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
-    .chip{background:#0f141c;border:1px solid rgba(245,178,0,.35);padding:6px 10px;border-radius:999px;font-weight:700}
+    /* UI Improvement: Made the chips more prominent to increase trust */
+    .chip{background:var(--gold);color:#111;border:1px solid rgba(0,0,0,.15);padding:6px 10px;border-radius:999px;font-weight:900}
+    .chip-dark{background:#0f141c;color:var(--text);border:1px solid rgba(245,178,0,.35);font-weight:700;}
 
     /* Acuity wrapper */
     .scheduler-wrap{margin-top:10px}
@@ -85,32 +84,29 @@
     :focus-visible{outline:3px solid var(--gold-2);outline-offset:2px;border-radius:6px}
   </style>
 
-  <!-- JSON-LD: Service -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Woof Club — Dog Boarding (One-Guest-Only)",
+    "name": "Woof Club — Boutique Dog Boarding (One-Guest-Only, No Kennels)",
     "serviceType": "Dog Boarding",
     "provider": {"@type": "LocalBusiness", "name": "The Woof of Walk Street", "@id": "https://www.woofofwalkstreet.com/#business"},
     "areaServed": ["South Melbourne","Albert Park","Port Melbourne","Middle Park","Southbank","South Yarra"],
     "url": "https://www.woofofwalkstreet.com/book-boarding.html",
-    "description": "Instant booking for Woof Club Boarding: one-guest-only, home-style stays with free pickup & drop-off, GPS-tracked walks, and photo updates. Fully insured & police-checked. 10% of profits donated to charity.",
+    "description": "Instant booking for Woof Club Boarding: one-guest-only, home-style stays with NO kennels. Free pickup & drop-off, GPS-tracked walks, and photo updates. Fully insured & police-checked.",
     "offers": {"@type":"Offer","priceCurrency":"AUD","price":"150","availability":"https://schema.org/InStock","url":"https://www.woofofwalkstreet.com/book-boarding.html"}
   }
   </script>
 </head>
 <body>
-  <!-- HERO -->
   <section class="hero section">
     <div class="container">
       <nav aria-label="Breadcrumbs" class="muted" style="margin-bottom:6px"><a href="/" class="btn btn-ghost" style="padding:8px 12px;border-radius:8px">← Back to Home</a></nav>
 
-      <h1 class="underline">Book Woof Club Boarding — $150/night All-Inclusive</h1>
-      <p class="sub">One-guest-only, home-style stays. <strong>Free pickup & drop-off</strong> in the local area, daily GPS-tracked walks & photo updates. <strong>Fully insured</strong> and <strong>police-checked</strong>. We <strong>donate 10% of profits</strong> to local rescue charities.</p>
-      <p style="margin-top:10px" class="muted"><strong>$150/night</strong> base — use code <strong>BOARDING20</strong> for 20% off.</p>
+      <h1 class="underline">Book Dog Boarding in South Melbourne (No Kennels)</h1>
+      <p class="sub">Boutique, **one-guest-only** home stays. **$150/night all-inclusive** with **free pickup & drop-off** and daily GPS-tracked walks. Ideal for **anxious or sensitive dogs.**</p>
+      <p style="margin-top:10px" class="muted">**Use code BOARDING20 for 20% off.** Limited time offer.</p>
 
-      <!-- PROMO BANNER -->
       <div class="promo" role="note" aria-label="Limited-time offer">
         <div class="promo-inner">
           <h2>🚀 🔥 SAVE <strong>20%</strong> ON OVERNIGHT BOARDING — LIMITED TIME 🔥</h2>
@@ -126,94 +122,87 @@
           <div class="trust"><span class="stars" aria-hidden="true">⭐ ⭐ ⭐ ⭐ ⭐</span> Loved by South Melbourne dog families</div>
         </div>
       </div>
-
-      <h2 class="underline" style="margin-top:12px">Instant Booking (Acuity)</h2>
-      <p class="sub">Choose your check-in date, then select the number of nights. Weekend and longer stays are supported. Prefer to chat first? <a class="btn btn-dark acuity-embed-button" target="_blank" rel="noopener" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031912&utm_source=website&utm_medium=book_page&utm_campaign=10min_catchup">Free 10-min catch-up</a> or call <a href="tel:+61370731175"><strong>(03) 7073 1175</strong></a>.</p>
-
-      <!-- Feature chips to echo boarding page -->
+      
       <div class="chips" role="list">
         <span class="chip" role="listitem">One-Guest-Only</span>
-        <span class="chip" role="listitem">Free Pickup & Drop-off</span>
-        <span class="chip" role="listitem">GPS Walks + Photos</span>
+        <span class="chip" role="listitem">NO Kennels</span>
+        <span class="chip" role="listitem">Anxious Dogs Welcome</span>
+        <span class="chip" role="listitem">Free Pickup/Drop-off</span>
         <span class="chip" role="listitem">Fully Insured</span>
         <span class="chip" role="listitem">Police-Checked</span>
-        <span class="chip" role="listitem">10% Profits Donated</span>
       </div>
+
+      <h2 class="underline" style="margin-top:12px">Instant Booking & Availability Check</h2>
+      <p class="sub">Choose your check-in date, then select the number of nights. Weekend and longer stays are supported. Prefer to chat first? <a class="btn btn-dark acuity-embed-button" target="_blank" rel="noopener" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031912&utm_source=website&utm_medium=book_page&utm_campaign=10min_catchup">Free 10-min catch-up</a> or call <a href="tel:+61370731175"><strong>(03) 7073 1175</strong></a>.</p>
+
     </div>
   </section>
 
-  <!-- QUICK PICK -->
   <section class="section">
     <div class="container panel card" aria-label="Quick stay picker">
-      <h2 class="underline" style="margin-top:0">Quick Pick: How long is the stay?</h2>
+      <h2 class="underline" style="margin-top:0">Jump Start Your Booking: How long is the stay?</h2>
       <p class="help" id="qp-help">Choose an option to pre-fill nights (and next Friday for weekend options). You can still adjust inside the calendar.</p>
       <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-top:8px">
         <a href="#acuity-frame" class="btn btn-primary qp" data-nights="1">1 Night</a>
-        <a href="#acuity-frame" class="btn btn-primary qp" data-nights="2" data-start="friday">Weekend (Fri–Sun)</a>
-        <a href="#acuity-frame" class="btn btn-primary qp" data-nights="3" data-start="friday">Long Weekend (Fri–Mon)</a>
-        <a href="#acuity-frame" class="btn btn-primary qp" data-nights="7">7 Nights</a>
-        <a href="#acuity-frame" class="btn btn-primary qp" data-nights="14">14 Nights</a>
+        <a href="#acuity-frame" class="btn btn-primary qp" data-nights="2" data-start="friday">2 Nights (Weekend)</a>
+        <a href="#acuity-frame" class="btn btn-primary qp" data-nights="3" data-start="friday">3 Nights (Long Weekend)</a>
+        <a href="#acuity-frame" class="btn btn-primary qp" data-nights="7">7 Nights (Week Stay)</a>
+        <a href="#acuity-frame" class="btn btn-primary qp" data-nights="14">14 Nights (2 Weeks)</a>
       </div>
     </div>
   </section>
 
-  <!-- BOOKING WIDGET + TRUST/INFO -->
   <section class="section">
     <div class="container grid grid-2">
-      <!-- Left: Acuity embed -->
       <div class="panel card scheduler-wrap" aria-label="Woof Club booking widget">
-        <iframe id="acuity-frame" class="scheduler" title="Book Woof Club Boarding" src="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86032167" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <p class="scheduler-fallback help">If the scheduler doesn’t load, <a id="acuity-fallback" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86032167" target="_blank" rel="noopener">open booking in a new tab ↗</a></p>
+        <iframe id="acuity-frame" class="scheduler" title="Book Woof Club Boarding" src="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86032167&coupon=BOARDING20" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p class="scheduler-fallback help">If the scheduler doesn’t load, <a id="acuity-fallback" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86032167&coupon=BOARDING20" target="_blank" rel="noopener">open booking in a new tab ↗</a></p>
       </div>
 
-      <!-- Right: Steps & Trust -->
       <aside class="panel card">
-        <h2 class="underline">How It Works</h2>
+        <h2 class="underline">Why Book Woof Club?</h2>
         <div class="steps">
           <ol>
-            <li><strong>Select dates</strong> (check-in then number of nights)</li>
-            <li><strong>Complete quick dog profile</strong> (vaccination, routine, contacts)</li>
-            <li><strong>Instant confirmation</strong> — we’ll text you with check-in details</li>
+            <li>**Select dates & nights** in the calendar (or use Quick Pick)</li>
+            <li>**Complete quick dog profile** (vaccination, routine, contacts)</li>
+            <li>**Instant confirmation** — we’ll text you with check-in details</li>
           </ol>
           <p class="help" style="margin:.6rem 0 0">All bookings are through our Acuity scheduler.</p>
         </div>
-        <p class="badge" aria-label="One dog only">One-Guest-Only</p>
+        
+        <h3 style="margin-top:1.2rem">Woof Club Difference:</h3>
         <ul class="list" style="margin-top:.5rem">
-          <li>One simple nightly rate — everything included</li>
-          <li><strong>Free pickup & drop-off</strong> in the local area</li>
-          <li>Sleep on bed/sofa if that’s the home routine</li>
-          <li>Multiple daily walks (GPS tracked) + photo updates</li>
-          <li>We’re <strong>fully insured</strong> & <strong>police-checked</strong></li>
-          <li>We donate <strong>10% of profits</strong> to local rescues</li>
+          <li>🚫 **NO Kennels.** Private, home-style environment.</li>
+          <li>🐾 **One-Guest-Only.** Perfect for anxious or reactive dogs.</li>
+          <li>🚗 **Free pickup & drop-off** in the local area.</li>
+          <li>🛡️ **Fully insured** & **police-checked** peace of mind.</li>
+          <li>💛 We donate **10% of profits** to local rescues.</li>
         </ul>
         <p class="help" style="margin-top:.6rem">Questions before booking? <a href="tel:+61370731175">(03) 7073 1175</a> or book a <a class="acuity-embed-button" target="_blank" rel="noopener" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031912&utm_source=website&utm_medium=book_sidebar&utm_campaign=10min_catchup">free 10-min catch-up</a>.</p>
       </aside>
     </div>
   </section>
 
-  <!-- Extra reassurance -->
   <section class="section">
     <div class="container panel card">
       <h2 class="underline">What Happens After You Book</h2>
       <ul class="list">
-        <li>You’ll receive a confirmation email and a short <strong>Dog Profile</strong> form.</li>
-        <li>We’ll confirm <strong>check-in / check-out</strong> windows and <strong>arrange pickup & drop-off</strong>.</li>
+        <li>You’ll receive a confirmation email and a short <strong>Dog Profile</strong> form to fill out.</li>
+        <li>We'll confirm <strong>check-in / check-out</strong> windows and <strong>arrange pickup & drop-off</strong> times.</li>
         <li>On the day, you’ll get a quick text on arrival — and daily photo updates during the stay.</li>
       </ul>
       <p class="help">Based in South Melbourne; serving Albert Park, Port Melbourne, Middle Park, Southbank & South Yarra.</p>
     </div>
   </section>
 
-  <!-- Local SEO block -->
   <section class="section">
     <div class="container panel card">
-      <h2 class="underline">Local Dog Boarding Near You</h2>
-      <p>We provide boutique, home-style <strong>dog boarding in South Melbourne</strong> and nearby suburbs: <strong>Albert Park</strong>, <strong>Port Melbourne</strong>, <strong>Middle Park</strong>, <strong>Southbank</strong>, and <strong>South Yarra</strong>. One-guest-only care — no kennels, no group boarding.</p>
-      <p class="help">Looking for a sitter? Try these searches: <em>dog boarding South Melbourne</em>, <em>overnight dog boarding</em>, <em>home-style dog boarding</em>, <em>one-dog-only boarding</em>.</p>
+      <h2 class="underline">Boutique Dog Boarding Near You</h2>
+      <p>We provide boutique, **home-style dog boarding in South Melbourne** and nearby suburbs: **Albert Park**, **Port Melbourne**, **Middle Park**, **Southbank**, and **South Yarra**. **One-guest-only** care — no kennels, no group boarding.</p>
+      <p class="help">Looking for a specific service? Try these searches: *dog boarding South Melbourne*, *anxious dog boarding*, *no kennel boarding*, *one-dog-only boarding*.</p>
     </div>
   </section>
 
-  <!-- Back to Home (secondary) -->
   <section class="section center">
     <div class="container">
       <a href="/" class="btn btn-ghost">← Back to Home</a>
@@ -221,7 +210,6 @@
     </div>
   </section>
 
-  <!-- Sticky mobile CTA -->
   <div class="sticky-cta" role="region" aria-label="Quick booking">
     <span class="label">20% OFF — Use BOARDING20</span>
     <div class="actions">
@@ -230,7 +218,6 @@
     </div>
   </div>
 
-  <!-- Scripts -->
   <script>
     (function(){
       // Helper: get next Friday date (YYYY-MM-DD)
@@ -257,7 +244,7 @@
         passParams.forEach(function(k){ if(here.searchParams.has(k)) src.searchParams.set(k, here.searchParams.get(k)); });
         if(extra){ Object.keys(extra).forEach(function(k){ if(extra[k]) src.searchParams.set(k, extra[k]); }); }
 
-        // Always soft-apply promo code unless a coupon already exists
+        // Always soft-apply promo code unless a coupon already exists (Ensures BOARDING20 is default)
         if(!src.searchParams.get('coupon')){ src.searchParams.set('coupon','BOARDING20'); }
 
         frame.setAttribute('src', src.toString());
@@ -320,10 +307,7 @@
     })();
   </script>
 
-  <!-- Acuity Button SDK (for the free 10-min catch-up button styles) -->
   <link rel="stylesheet" href="https://embed.acuityscheduling.com/embed/button/37607219.css" id="acuity-button-styles" />
   <script src="https://embed.acuityscheduling.com/embed/button/37607219.js" async></script>
 </body>
-</html>
-
 </html>

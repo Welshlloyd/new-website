@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Solo Dog Walking Services Melbourne | No Pack Walks — Ideal for Anxious Dogs</title>
+  <title>Solo Dog Walking: South Melbourne & Albert Park | No Pack Walks</title>
   <meta name="description" content="Melbourne's trusted solo dog walking service. Calm, one-dog-only 45-minute walks with GPS route & photo updates. Ideal for anxious/reactive dogs. Choose your suburb to start." />
   
   <link rel="canonical" href="https://www.woofofwalkstreet.com/dog-walking-services.html" />
@@ -35,6 +35,22 @@
     .area-chip{display:inline-block;padding:12px 20px;border-radius:999px;background:var(--brand);color:var(--bg);font-weight:800;text-decoration:none;transition:.2s;}
     .area-chip:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(var(--brand-rgb),.4);}
     .badge-row .badge{margin-right:.35rem}
+    /* CRO: Price Banner to draw attention to the A$100 casual rate near the CTAs */
+    .price-banner{
+      background:var(--brand); 
+      color:var(--bg); 
+      padding:15px 20px;
+      border-radius:8px;
+      text-align:center;
+      margin-top:20px;
+      font-size:1.15rem;
+      font-weight:700;
+    }
+    .price-banner a{
+      color:var(--bg);
+      font-weight:400; 
+      text-decoration:underline;
+    }
     .sticky-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:1100;background:#111824ee;border:1px solid var(--border);box-shadow:var(--shadow);border-radius:16px;display:flex;gap:10px;justify-content:center;align-items:center;padding:10px}
     .sticky-cta .btn,.sticky-cta .button-primary{padding:10px 16px}
     @media (min-width:860px){.sticky-cta{display:none}}
@@ -55,6 +71,9 @@
 
   <script type="application/ld+json">
   {"@context":"https://schema.org","@graph":[
+    // NEW: LocalBusiness schema added for strong local signal
+    {"@type":"LocalBusiness","name":"The Woof of Walk Street","url":"https://www.woofofwalkstreet.com/","telephone":"+61370731175",
+      "address":{"@type":"PostalAddress","addressLocality":"South Melbourne","addressRegion":"VIC","addressCountry":"AU"}},
     {"@type":"BreadcrumbList","itemListElement":[
       {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
       {"@type":"ListItem","position":2,"name":"Dog Walking Services","item":"https://www.woofofwalkstreet.com/dog-walking-services.html"}
@@ -82,11 +101,11 @@
 </head>
 <body>
 
-  <div id="promo" class="promo-ribbon promo--edge" role="region" aria-label="Promo: 50% off Unlimited">
+  <div id="promo" class="promo-ribbon promo--edge" role="region" aria-label="Promo: 50% off Casual Walks">
     <div class="promo-inner container">
       <img class="promo-dog" src="/images/brand/dog-in-suit.webp" alt="" width="28" height="28" decoding="async" />
-      <span class="promo-copy"><strong>50% OFF</strong> Unlimited Weekday Walks — solo 45-min walks · GPS tracked · Photo updates</span>
-      <a href="/unlimited-dog-walks.html" class="promo-cta">See Unlimited →</a>
+      <span class="promo-copy"><strong>50% OFF Casual Walks</strong> — Use code <strong>WALK50</strong> at checkout. Book before 31/12!</span>
+      <a href="/casual-dog-walking-south-melbourne.html" class="promo-cta">Book Now →</a>
       <button id="promo-close" class="promo-close" aria-label="Dismiss promo">✕</button>
     </div>
   </div>
@@ -149,17 +168,17 @@
               style="max-width:920px;border-radius:12px;display:block;margin:0 auto"
               loading="eager" decoding="async" fetchpriority="high">
 
-        <p class="muted" style="margin-top:.5rem">
-          Casual solo walk: <strong>A$100</strong>. Save with <a href="/memberships.html">memberships</a> or try <a href="/unlimited-dog-walks.html">Unlimited</a> (<strong>50% off</strong> first month).
-        </p>
-
+        <div class="price-banner">
+          <p><strong>A$100 Casual Solo Walk</strong> — <a href="/memberships.html">Save More with Memberships</a></p>
+        </div>
+        
         <h2 style="margin-top:1.5rem;text-align:center;">Select Your Local Area to View Routes & Book</h2>
         <div class="area-chip-row">
-          <a class="area-chip" href="/dog-walking-south-melbourne.html">South Melbourne</a>
-          <a class="area-chip" href="/dog-walker-albert-park.html">Albert Park</a>
-          <a class="area-chip" href="/dog-walker-port-melbourne.html">Port Melbourne</a>
-          <a class="area-chip" href="/dog-walker-middle-park.html">Middle Park</a>
-          <a class="area-chip" href="/dog-walker-southbank.html">Southbank</a>
+          <a class="area-chip" href="/dog-walking-south-melbourne.html">📍 South Melbourne</a>
+          <a class="area-chip" href="/dog-walker-albert-park.html">📍 Albert Park</a>
+          <a class="area-chip" href="/dog-walker-port-melbourne.html">📍 Port Melbourne</a>
+          <a class="area-chip" href="/dog-walker-middle-park.html">📍 Middle Park</a>
+          <a class="area-chip" href="/dog-walker-southbank.html">📍 Southbank</a>
         </div>
         
       </div>
@@ -185,7 +204,7 @@
         <article class="card">
           <h2>How Our Service Works</h2>
           <h3>Dedicated, Predictable, and Proof-Driven</h3>
-          <p>We believe in structure. We start at your door, use predictable, low-traffic residential routes specific to your suburb (e.g., quiet backstreets, tree-lined avenues), and return your dog calm and satisfied. Our technology gives you total peace of mind.</p>
+          <p>We believe in structure. Our **solo dog walking** service starts at your door, using predictable, low-traffic residential routes specific to your suburb (e.g., quiet backstreets, tree-lined avenues), to return your dog calm and satisfied. Our technology gives you total peace of mind.</p>
           <ul class="list-check">
             <li>✅ **Check-in/Check-out Text:** Confirmed start and end times.</li>
             <li>✅ **GPS Route:** See exactly where your dog went and for how long.</li>
@@ -354,19 +373,19 @@
         const list = document.getElementById('nav-services');
         if (btn && list){
           const sync = () => { list.hidden = btn.getAttribute('aria-expanded') !== 'true'; };
-          sync();
           btn.addEventListener('click', () => {
             const open = btn.getAttribute('aria-expanded') === 'true';
             btn.setAttribute('aria-expanded', String(!open));
-            sync();
+            list.hidden = open; // Toggle visibility
           });
           document.addEventListener('click', (e) => {
             if (!btn.contains(e.target) && !list.contains(e.target)) {
-              btn.setAttribute('aria-expanded', 'false'); sync();
+              btn.setAttribute('aria-expanded', 'false');
+              list.hidden = true;
             }
           }, { capture: true });
           document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') { btn.setAttribute('aria-expanded', 'false'); sync(); }
+            if (e.key === 'Escape') { btn.setAttribute('aria-expanded', 'false'); list.hidden = true; }
           });
         }
         

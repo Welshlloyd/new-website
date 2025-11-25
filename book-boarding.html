@@ -1,464 +1,327 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-AU">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Book Dog Boarding South Melbourne | 20% Off (Ends 30 Nov) | The Woof of Walk Street</title>
-  <meta name="description" content="Book boutique, one-guest-only dog boarding in South Melbourne with daily walks, GPS & photo updates. Dogs can sleep on our bed or sofa (like at home). Limited-time 20% OFF until 30 November 2025." />
-  <link rel="canonical" href="https://www.woofofwalkstreet.com/book-boarding.html" />
+  <title>Book Dog Boarding South Melbourne | $150/night All‑Inclusive</title>
+  <meta name="description" content="Book boutique, one‑guest‑only dog boarding in South Melbourne. $150/night all‑inclusive — home‑style care, daily walks with GPS, and photo updates. Instant online booking." />
   <link rel="icon" href="/images/brand/favicon.ico" />
+  <link rel="canonical" href="https://www.woofofwalkstreet.com/book-boarding.html" />
 
-  <link rel="stylesheet" href="/css/mini.css">
-  <link rel="stylesheet" href="/css/mini.dark.css">
-  <link rel="stylesheet" href="/css/mini.light.css">
-  <link rel="stylesheet" href="/css/styles.css">
+  <!-- SEO / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Book Dog Boarding — One-Guest-Only, Home-Style" />
+  <meta property="og:description" content="Instant booking for boutique boarding. Home comforts, GPS walks, photo updates. One dog only." />
+  <meta property="og:url" content="https://www.woofofwalkstreet.com/book-boarding.html" />
+  <meta property="og:image" content="https://www.woofofwalkstreet.com/images/gallery/dog-weekend-woof.jpg" />
+  <meta property="og:locale" content="en_AU" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Book Boarding — The Woof of Walk Street" />
+  <meta name="twitter:description" content="Instant booking. One‑guest‑only, home‑style stays in South Melbourne." />
+  <meta name="twitter:image" content="https://www.woofofwalkstreet.com/images/gallery/dog-weekend-woof.jpg" />
 
+  <!-- Preload hero for LCP -->
+  <link rel="preload" as="image" href="/images/gallery/dog-weekend-woof.jpg" />
+
+  <!-- Local styles (keeps look & feel aligned with the main site; minimal CSS so you can drop this page anywhere) -->
   <style>
     :root{
-      --bg:#0b0e12; --card:#0f1318; --line:#1d232c; --text:#e6edf3; --muted:#a9b4c0;
-      --brand:#ffd166; --brand-ink:#0b0e12; --accent:#5af2c6; --shadow:0 14px 40px rgba(0,0,0,.28)
+      --bg:#0b0f14;--bg-2:#0e131b;--panel:#141a24;--text:#eaf1fb;--muted:#b5c0cf;--gold:#f5b200;--gold-2:#ffd166;
     }
-    html,body{background:var(--bg);color:var(--text)}
-    img{max-width:100%;height:auto}
-    a{color:inherit}
+    html,body{height:100%}
+    body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Noto Sans, "Apple Color Emoji","Segoe UI Emoji"}
+    a{color:var(--gold-2)}
     .container{max-width:1100px;margin:0 auto;padding:0 16px}
-    .hero-bridge{padding:28px 0 16px;border-bottom:1px solid rgba(255,255,255,.06)}
-    .hero-bridge h1{font-weight:900;letter-spacing:-.01em;margin:.2rem 0 .4rem}
-    .lede{color:#cfd6df;max-width:65ch}
-    .edge{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.02));border:2px solid #f5b200;border-radius:16px;box-shadow:0 0 10px rgba(245,178,0,.25),0 12px 28px rgba(0,0,0,.18);padding:18px}
-    .edge:hover{box-shadow:0 0 18px rgba(245,178,0,.55),0 18px 44px rgba(0,0,0,.26);transform:translateY(-2px)}
-    .bridge-wrap{display:grid;gap:16px}
-    @media(min-width:980px){.bridge-wrap{grid-template-columns:1.1fr .9fr}}
-    .steps{display:flex;gap:10px;flex-wrap:wrap;margin:.5rem 0 1rem}
-    .step{display:inline-flex;align-items:center;gap:8px;border:1px solid #2a3440;color:#fff;border-radius:999px;padding:6px 10px;font-weight:700}
-    .step b{width:22px;height:22px;display:grid;place-items:center;border-radius:999px;background:#1c2531;border:1px solid #2a3440;font-size:.78rem}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:12px 18px;border-radius:999px;border:1px solid transparent;font-weight:900;text-decoration:none;transition:transform .15s,box-shadow .15s}
-    .btn-primary{background:var(--brand);color:var(--brand-ink);box-shadow:0 10px 26px rgba(255,209,102,.25)}
-    .btn-primary:hover{transform:translateY(-1px) scale(1.02)}
-    
-    /* CRO: ENHANCED PRIMARY CTA SIZE */
-    .card-plan .btn-primary { 
-        padding: 16px 22px; 
-        font-size: 1.1rem; 
-    }
-    
-    .btn-ghost{background:transparent;color:#fff;border:1px solid #2a3440}
-    .btn-ghost:hover{border-color:#fff}
-    .btn-outline{background:transparent;border:1px solid var(--brand);color:var(--brand)}
-    .kicker{letter-spacing:.08em;color:var(--accent);font-weight:800}
-    .mini{font-size:.96rem;color:#cfd6df}
-    .muted{color:#a9b4c0}
-    .badge{display:inline-block;padding:.28rem .6rem;border-radius:999px;font-size:.82rem;font-weight:800;color:#111;background:var(--brand)}
-    .hero-img{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:12px}
-    .hero-img picture,.hero-img img{border-radius:12px;max-width:320px;width:100%}
-    
-    /* CRO: ENHANCED PROMO NOTE VISIBILITY (PULSE ANIMATION) */
-    .promo-note{
-        background:rgba(255,209,102,.08);
-        border:1px dashed #f5b200;
-        color:#ffd166;
-        border-radius:12px;
-        padding:10px;
-        margin-top:10px;
-        animation: pulse-border 4s infinite ease-in-out;
-    }
-    @keyframes pulse-border {
-        0% { box-shadow: 0 0 0px #f5b20000; }
-        50% { box-shadow: 0 0 8px #f5b20055; }
-        100% { box-shadow: 0 0 0px #f5b20000; }
-    }
-
-    .cards{display:grid;gap:12px}
-    @media(min-width:740px){.cards{grid-template-columns:1fr 1fr}}
-    .card-plan{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid #2a3440;border-radius:14px;padding:14px}
-    /* CRO: HIGHLIGHT THE 7-NIGHT CARD (4TH CHILD) */
-    .cards .card-plan:nth-child(4) { 
-        border-width: 2px;
-        border-color: var(--brand); /* gold */
-        box-shadow: 0 0 10px rgba(255,209,102,.5), 0 12px 28px rgba(0,0,0,.18); 
-        background:linear-gradient(180deg,rgba(255,209,102,.05),rgba(255,255,255,.02));
-    }
-    
-    .card-plan h3{margin:.1rem 0 .25rem;font-weight:900}
-    .price-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-    .regular{color:#aab6c3;text-decoration:line-through}
-    .promo{font-weight:900;background:#f5b200;color:#111;padding:.18rem .5rem;border-radius:999px;box-shadow:0 8px 18px rgba(245,178,0,.26)}
-    .meta{color:#a9b4c0;font-size:.95rem}
-    .incl{margin:.45rem 0 0;color:#cfd6df;font-size:.92rem}
-    .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:.6rem}
-
-    .faq{margin-top:16px}
-    .faq details{border-top:1px solid #2a3440;padding:10px 0}
-    .faq details:first-of-type{border-top:0}
-    .faq summary{cursor:pointer;font-weight:800}
-
-    /* Persuasion block */
-    .why{display:grid;gap:12px;margin-top:12px}
-    @media(min-width:820px){.why{grid-template-columns:1fr 1fr}}
-    .why .point{border:1px solid #2a3440;border-radius:12px;padding:12px}
-    .why .point strong{color:#ffd166}
-
-    /* Thumbnail gallery */
-    .thumbs{margin-top:14px}
-    .thumb-grid{display:grid;gap:10px;grid-template-columns:repeat(2,1fr)}
-    @media(min-width:700px){.thumb-grid{grid-template-columns:repeat(5,1fr)}}
-    .thumb{aspect-ratio:1/1;overflow:hidden;border-radius:10px;border:2px solid #f5b20033}
-    .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+    .section{padding:22px 0}
+    .hero{background:linear-gradient(180deg,var(--bg),var(--bg-2))}
+    h1,h2,h3{margin:.2rem 0 .4rem}
+    .sub{color:var(--muted);max-width:65ch}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:12px 18px;border-radius:999px;font-weight:900;text-decoration:none;border:1px solid #2a3440;transition:.2s}
+    .btn-primary{background:linear-gradient(180deg,#ffdd6a 0%, var(--gold) 100%);color:#111;border:0;box-shadow:0 10px 28px rgba(245,178,0,.35)}
+    .btn-ghost{background:transparent;color:var(--text)}
+    .btn:hover{transform:translateY(-2px)}
+    .panel{background:var(--panel);border:2px solid rgba(245,178,0,.35);border-radius:16px;box-shadow:0 0 16px rgba(245,178,0,.18)}
+    .grid{display:grid;gap:14px}
+    @media(min-width:900px){.grid-2{grid-template-columns:1fr 1fr}}
+    .underline{position:relative;display:inline-block;padding-bottom:4px}
+    .underline::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent 70%);opacity:.9}
+    .badge{display:inline-block;padding:.28rem .6rem;border-radius:999px;background:var(--gold);color:#111;font-weight:800;font-size:.85rem}
+    .muted{color:var(--muted)}
+    .list{padding-left:1.2rem}
+    .list li{margin:.25rem 0}
+    /* Acuity wrapper */
+    .scheduler-wrap{margin-top:10px}
+    .scheduler{width:100%;min-height:1100px;border:0;border-radius:14px;background:#0f141c}
+    .scheduler-fallback{margin-top:8px}
+    /* Trust / steps cards */
+    .card{padding:14px}
+    .steps ol{padding-left:1.4rem}
+    .steps li{margin:.35rem 0}
+    /* Footer help */
+    .help{font-size:.95rem;color:var(--muted)}
+    .center{text-align:center}
+    /* Focus for a11y */
+    :focus-visible{outline:3px solid var(--gold-2);outline-offset:2px;border-radius:6px}
   </style>
 
-  <link rel="preload" as="image"
-        href="/images/promos/boarding/boarding-promo-20off-1024.webp"
-        imagesrcset="/images/promos/boarding/boarding-promo-20off-640.webp 640w, /images/promos/boarding/boarding-promo-20off-1024.webp 1024w, /images/promos/boarding/boarding-promo-20off-1600.webp 1600w"
-        imagesizes="(max-width: 640px) 88vw, 320px" fetchpriority="high">
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KP5LVKN6X3"></script>
-  <script>
-    window.dataLayer=window.dataLayer||[];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config','G-KP5LVKN6X3');   /* GA4 */
-    gtag('config','AW-17527927259');  /* Google Ads */
-  </script>
-
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Book Boutique Dog Boarding — 20% Off (Ends 30 Nov)">
-  <meta property="og:description" content="One-guest-only, calm home-style care with daily walks, GPS & photo updates. Book now — 20% OFF ends 30 November 2025." />
-  <meta property="og:url" content="https://www.woofofwalkstreet.com/book-boarding.html">
-  <meta property="og:image" content="https://www.woofofwalkstreet.com/images/promos/boarding/boarding-promo-20off-1024.webp">
-  <meta property="og:locale" content="en_AU">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Book Boutique Dog Boarding — 20% Off (Ends 30 Nov)">
-  <meta name="twitter:description" content="Calm, one-guest-only boarding. Walks, GPS & photo updates. 20% OFF ends 30 November 2025." />
-  <meta name="twitter:image" content="https://www.woofofwalkstreet.com/images/promos/boarding/boarding-promo-20off-1024.webp">
-
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
-    {"@type":"ListItem","position":2,"name":"Book Dog Boarding","item":"https://www.woofofwalkstreet.com/book-boarding.html"}
-  ]}
-  </script>
-
+  <!-- JSON-LD: Service -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Service",
+    "name": "Dog Boarding – One-Guest-Only",
     "serviceType": "Dog Boarding",
-    "name": "Boutique Dog Boarding — One Guest Only",
-    "provider": {
-      "@type":"LocalBusiness",
-      "name":"The Woof of Walk Street",
-      "url":"https://www.woofofwalkstreet.com/",
-      "image":"https://www.woofofwalkstreet.com/images/brand/logo-lockup-gold.webp",
-      "telephone":"+61 456 754 050",
-      "address":{"@type":"PostalAddress","addressLocality":"South Melbourne","addressRegion":"VIC","addressCountry":"AU"}
-    },
-    "areaServed": ["South Melbourne","Albert Park","Port Melbourne","Middle Park","Southbank"],
-    "description": "Calm, home-style, one-guest-only boarding with daily walks, GPS and photo updates. Limited-time 20% OFF until 30 November 2025.",
+    "provider": {"@type": "LocalBusiness", "name": "The Woof of Walk Street", "@id": "https://www.woofofwalkstreet.com/#business"},
+    "areaServed": ["South Melbourne","Albert Park","Port Melbourne","Middle Park","Southbank","South Yarra"],
     "url": "https://www.woofofwalkstreet.com/book-boarding.html",
-    "offers": [
-      {"@type":"Offer","name":"Weekday Boarding (per night)","price":"125","priceCurrency":"AUD","availability":"https://schema.org/InStock","priceValidUntil":"2025-11-30","url":"https://www.woofofwalkstreet.com/book-boarding.html"},
-      {"@type":"Offer","name":"Weekend Woof Club (2 nights)","price":"300","priceCurrency":"AUD","availability":"https://schema.org/InStock","priceValidUntil":"2025-11-30","url":"https://www.woofofwalkstreet.com/book-boarding.html"},
-      {"@type":"Offer","name":"Weekend Woof Club (3 nights)","price":"450","priceCurrency":"AUD","availability":"https://schema.org/InStock","priceValidUntil":"2025-11-30","url":"https://www.woofofwalkstreet.com/book-boarding.html"},
-      {"@type":"Offer","name":"Week Stay (7 nights)","price":"750","priceCurrency":"AUD","availability":"https://schema.org/InStock","priceValidUntil":"2025-11-30","url":"https://www.woofofwalkstreet.com/book-boarding.html"},
-      {"@type":"Offer","name":"2-Week Stay (14 nights)","price":"1400","priceCurrency":"AUD","availability":"https://schema.org/InStock","priceValidUntil":"2025-11-30","url":"https://www.woofofwalkstreet.com/book-boarding.html"}
-    ]
+    "description": "Instant booking for boutique, one-guest-only boarding with daily GPS-tracked walks and photo updates. Home-style stays; no kennels.",
+    "offers": {"@type":"Offer","priceCurrency":"AUD","availability":"https://schema.org/InStock"}
   }
   </script>
 
+  <!-- JSON-LD: FAQ (short) -->
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-    {"@type":"Question","name":"How many dogs do you board at once?","acceptedAnswer":{"@type":"Answer","text":"Only one guest at a time for calm, stress-free care."}},
-    {"@type":"Question","name":"Do you provide updates?","acceptedAnswer":{"@type":"Answer","text":"Yes — GPS maps and photos are shared in your portal."}},
-    {"@type":"Question","name":"Can my dog sleep on your bed or sofa?","acceptedAnswer":{"@type":"Answer","text":"Yes — if that’s your home routine, we continue it here. Comfort first."}},
-    {"@type":"Question","name":"Is pick-up/drop-off available?","acceptedAnswer":{"@type":"Answer","text":"We’ll confirm windows after you request your dates. We can also pick up your dog’s bed or crate locally."}}
-  ]}
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"How many dogs do you board at once?","acceptedAnswer":{"@type":"Answer","text":"One. We are strictly one-guest-only for calm, personalised care."}},
+      {"@type":"Question","name":"What’s included?","acceptedAnswer":{"@type":"Answer","text":"Multiple daily walks (GPS tracked), photo updates, food, enrichment games, and home-style sleep (bed/sofa if preferred)."}},
+      {"@type":"Question","name":"Can I pick dates like Fri–Sun or Fri–Mon?","acceptedAnswer":{"@type":"Answer","text":"Yes. Choose your check‑in date then select the number of nights. Weekend and longer stays are supported."}}
+    ]
+  }
   </script>
 </head>
-
 <body>
-  <header class="site-header" role="banner">
-    <div class="navbar container" role="navigation" aria-label="Main">
-      <a class="brand" href="/" aria-label="Go to home">
-        <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="56" height="56" loading="lazy">
-        <strong>The Woof of Walk Street</strong>
-      </a>
-      <nav class="nav-links" aria-label="Primary">
-        <a href="/services.html" title="All Services">Services</a>
-        <a href="/dog-walking-south-melbourne.html" title="Dog Walking South Melbourne">Dog Walking</a>
-        <a href="/memberships.html" title="Memberships">Memberships</a>
-        <a href="/faq.html" title="Frequently Asked Questions">FAQs</a>
-        <a class="btn btn-primary nav-cta"
-            href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=header&utm_campaign=book_now"
-            target="_blank" rel="noopener">Open Portal</a>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero-bridge">
+  <!-- HERO -->
+  <section class="hero section">
     <div class="container">
-      <span class="kicker">Secure Booking Portal</span>
-      <h1>Book Boutique Dog Boarding</h1>
-      <p class="lede">One guest only. Calm, home-style care with <strong>daily walks</strong>, <strong>GPS map</strong> and <strong>photo updates</strong>. Powered by <strong>Time To Pet</strong>.</p>
-      
-      <div class="promo-note" role="status" aria-live="polite">
-        <strong>Limited-time:</strong> <u>20% OFF boarding</u> — valid until <strong>30 November 2025</strong>.
-      </div>
-      
-      <div class="hero-img">
-        <picture>
-          <source type="image/webp"
-                  srcset="/images/promos/boarding/boarding-promo-20off-640.webp 640w,
-                          /images/promos/boarding/boarding-promo-20off-1024.webp 1024w,
-                          /images/promos/boarding/boarding-promo-20off-1600.webp 1600w"
-                  sizes="(max-width: 640px) 88vw, 320px">
-          <img src="/images/promos/boarding/boarding-promo-20off-1024.webp"
-                alt="Promo: 20% OFF dog boarding — ends 30 November 2025"
-                width="1024" height="1024" loading="eager" decoding="async" fetchpriority="high">
-        </picture>
-        </div>
+      <h1 class="underline">Boutique Dog Boarding in South Melbourne — $150/night All‑Inclusive</h1>
+      <p class="sub">Instant booking for calm, home‑style stays in South Melbourne. One simple price per night (all‑inclusive). No kennels. No group boarding. Daily GPS‑tracked walks & photo updates included.</p>
+      <p style="margin-top:10px" class="muted"><strong>$150/night</strong> — home-style care, daily walks, and updates included.</p>
+
+      <h2 class="underline" style="margin-top:12px">Dog Boarding South Melbourne — Book Online</h2>
+      <p class="sub">Home‑style <strong>dog boarding in South Melbourne</strong> for one dog only. Boutique, no‑kennels care with <strong>overnight dog boarding</strong>, daily GPS‑tracked walks, and photo updates. Serving <strong>Albert Park</strong>, <strong>Port Melbourne</strong>, <strong>Middle Park</strong>, <strong>Southbank</strong> & <strong>South Yarra</strong>.</p>
     </div>
   </section>
 
-  <main class="container" style="margin-top:18px">
-    <div class="bridge-wrap">
-      <section class="edge" aria-labelledby="book-heading">
-        <h2 id="book-heading" style="margin-top:0">Choose your stay</h2>
-        <p class="mini" style="margin:.25rem 0 .35rem">Pick an option — you’ll jump to our secure <strong>Time To Pet</strong> portal to finish. Your UTM source is preserved.</p>
+  <!-- QUICK PICK (pre-select stay length) -->
+  <section class="section">
+    <div class="container panel card" aria-label="Quick stay picker">
+      <h2 class="underline" style="margin-top:0">Quick Pick: How long is the stay?</h2>
+      <p class="help" id="qp-help">Choose an option to speed things up — we’ll prefill nights (and Friday for weekend options). You can still adjust inside the calendar.</p>
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-top:8px">
+        <a href="#acuity-frame" class="btn btn-primary qp" data-nights="1">1 Night</a>
+        <a href="#acuity-frame" class="btn btn-primary qp" data-nights="2" data-start="friday">Weekend (Fri–Sun)</a>
+        <a href="#acuity-frame" class="btn btn-primary qp" data-nights="3" data-start="friday">Long Weekend (Fri–Mon)</a>
+        <a href="#acuity-frame" class="btn btn-primary qp" data-nights="7">7 Nights</a>
+        <a href="#acuity-frame" class="btn btn-primary qp" data-nights="14">14 Nights</a>
+      </div>
+    </div>
+  </section>
 
-        <div class="steps" aria-label="Steps to book">
-          <span class="step"><b>1</b> Pick stay</span>
-          <span class="step"><b>2</b> Create account</span>
-          <span class="step"><b>3</b> Confirm</span>
-        </div>
+  <!-- BOOKING WIDGET + TRUST/INFO -->
+  <section class="section">
+    <div class="container grid grid-2">
+      <!-- Left: Acuity embed -->
+      <div class="panel card scheduler-wrap" aria-label="Boarding booking widget">
+        <iframe id="acuity-frame" class="scheduler" title="Book Boarding" src="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86032167" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p class="scheduler-fallback help">If the scheduler doesn’t load, <a id="acuity-fallback" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86032167" target="_blank" rel="noopener">open booking in a new tab ↗</a></p>
+      </div>
 
-        <div class="cards" role="list">
-          <article class="card-plan" role="listitem">
-            <h3>Weekday Boarding</h3>
-            <p class="meta">Mon–Thu · minimum 2 nights</p>
-            <div class="price-row" aria-label="Price">
-              <span class="regular">A$125 / night</span>
-              <span class="promo">20% OFF · A$100 / night</span>
-            </div>
-            <p class="incl">Includes: drop-off, GPS tracking, photo updates, food & chicken treats, multiple daily walks.</p>
-            <div class="cta-row">
-              <a class="btn btn-primary" data-plan="boarding_weekday" href="https://www.timetopet.com/portal/woofofwalkstreet/create-account" aria-label="Book weekday boarding">Book Weekday Boarding</a>
-              <a class="btn btn-ghost" href="/boarding-services.html">Boarding details</a>
-            </div>
-          </article>
-
-          <article class="card-plan" role="listitem">
-            <h3>Weekend Woof Club — 2 nights</h3>
-            <p class="meta">Choose Fri–Sun</p>
-            <div class="price-row">
-              <span class="regular">A$300</span>
-              <span class="promo">20% OFF · A$240</span>
-            </div>
-            <p class="incl">Includes: drop-off, GPS tracking, photo updates, food & chicken treats, multiple daily walks.</p>
-            <div class="cta-row">
-              <a class="btn btn-primary" data-plan="weekend_2" href="https://www.timetopet.com/portal/woofofwalkstreet/create-account" aria-label="Book 2-night weekend boarding">Book Weekend (2 nights)</a>
-              <a class="btn btn-ghost" href="/boarding-services.html#weekend">What’s included</a>
-            </div>
-          </article>
-
-          <article class="card-plan" role="listitem">
-            <h3>Weekend Woof Club — 3 nights</h3>
-            <p class="meta">Choose Fri–Mon</p>
-            <div class="price-row">
-              <span class="regular">A$450</span>
-              <span class="promo">20% OFF · A$360</span>
-            </div>
-            <p class="incl">Includes: drop-off, GPS tracking, photo updates, food & chicken treats, multiple daily walks.</p>
-            <div class="cta-row">
-              <a class="btn btn-primary" data-plan="weekend_3" href="https://www.timetopet.com/portal/woofofwalkstreet/create-account" aria-label="Book 3-night weekend boarding">Book Weekend (3 nights)</a>
-              <a class="btn btn-ghost" href="/boarding-services.html#weekend">What’s included</a>
-            </div>
-          </article>
-
-          <article class="card-plan" role="listitem">
-            <h3>Week Stay — 7 nights</h3>
-            <p class="meta">Discounted weekly rate</p>
-            <div class="price-row">
-              <span class="regular">A$750</span>
-              <span class="promo">20% OFF · A$600</span>
-            </div>
-            <p class="incl">Includes: drop-off, GPS tracking, photo updates, food & chicken treats, multiple daily walks.</p>
-            <div class="cta-row">
-              <a class="btn btn-primary" data-plan="week_7" href="https://www.timetopet.com/portal/woofofwalkstreet/create-account" aria-label="Book 7-night boarding">Book Week (7 nights)</a>
-              <a class="btn btn-ghost" href="/boarding-services.html#longstay">Long-stay info</a>
-            </div>
-          </article>
-
-          <article class="card-plan" role="listitem">
-            <h3>2-Week Stay — 14 nights</h3>
-            <p class="meta">Deeper long-stay discount</p>
-            <div class="price-row">
-              <span class="regular">A$1,400</span>
-              <span class="promo">20% OFF · A$1,120</span>
-            </div>
-            <p class="incl">Includes: drop-off, GPS tracking, photo updates, food & chicken treats, multiple daily walks.</p>
-            <div class="cta-row">
-              <a class="btn btn-primary" data-plan="week_14" href="https://www.timetopet.com/portal/woofofwalkstreet/create-account" aria-label="Book 14-night boarding">Book 2 Weeks (14 nights)</a>
-              <a class="btn btn-ghost" href="/boarding-services.html#longstay">Long-stay info</a>
-            </div>
-          </article>
-        </div>
-
-        <div class="promo-note" style="margin-top:.8rem">
-          <strong>Offer:</strong> 20% OFF boarding until <strong>30 November 2025</strong>. We apply the discount after your request — you’ll see it in your portal/email confirmation.
-        </div>
-
-        <section class="why" aria-labelledby="why-different">
-          <h3 id="why-different" class="muted" style="margin:10px 0 2px">Why families choose us</h3>
-          <div class="point">
-            <p><strong>One guest only.</strong> No kennels, no overwhelm. Your dog gets our full attention.</p>
-          </div>
-          <div class="point">
-            <p><strong>Sleep like at home.</strong> Bed or sofa welcome if that’s your routine. We can <strong>pick up your dog’s bed or crate</strong> locally.</p>
-          </div>
-          <div class="point">
-            <p><strong>Daily walks + enrichment.</strong> Multiple walks with <strong>GPS map</strong> and <strong>photo updates</strong>. Food, enrichment games, and <strong>bones & chicken treats</strong> included (let us know allergies).</p>
-          </div>
-        </section>
-
-        <section class="thumbs" aria-labelledby="recent-photos">
-          <h3 id="recent-photos" class="muted" style="margin:10px 0 6px">Recent boarding photos</h3>
-          <div class="thumb-grid" role="list">
-            <figure class="thumb" role="listitem">
-              <img src="/images/boarding/boarding-bed-jack.webp" alt="Small dog napping under a doona on our bed" width="640" height="640" loading="lazy" decoding="async">
-            </figure>
-            <figure class="thumb" role="listitem">
-              <img src="/images/boarding/boarding-couch-brown.webp" alt="Brown pup asleep on the sofa during boarding" width="640" height="640" loading="lazy" decoding="async">
-            </figure>
-            <figure class="thumb" role="listitem">
-              <img src="/images/boarding/boarding-couch-jack.webp" alt="Jack Russell snoozing upside down on cushions" width="640" height="640" loading="lazy" decoding="async">
-            </figure>
-            <figure class="thumb" role="listitem">
-              <img src="/images/boarding/boarding-closeup-brown.webp" alt="Close-up of a relaxed brown dog with chew" width="640" height="640" loading="lazy" decoding="async">
-            </figure>
-            <figure class="thumb" role="listitem">
-              <img src="/images/boarding/boarding-snooze-scruffy.webp" alt="Scruffy white pup dozing after enrichment play" width="640" height="640" loading="lazy" decoding="async">
-            </figure>
-          </div>
-        </section>
-
-        <p class="mini" style="margin-top:10px">
-          Prefer to chat first?
-          <a class="btn btn-outline" href="/contact.html">Ask a Question</a>
-          <a class="btn btn-ghost" href="tel:+61456754050">Call +61 456 754 050</a>
-        </p>
-      </section>
-
-      <aside class="edge" aria-labelledby="trust-heading">
-        <span class="badge" style="margin-bottom:6px">About Time To Pet</span>
-        <h2 id="trust-heading">Safe. Simple. Trusted.</h2>
-        <ul class="mini" style="margin:0 0 12px 18px">
-          <li><strong>Trusted by thousands of pet businesses.</strong></li>
-          <li><strong>Encrypted connection</strong> and secure hosting.</li>
-          <li><strong>Backups</strong> multiple times per day.</li>
-          <li><strong>Everything in one place:</strong> bookings, GPS maps, photos, messaging.</li>
-          <li><strong>We don’t store your card</strong> on our website — it stays in the portal.</li>
-        </ul>
-
-        <h3 class="mini" style="font-size:1.1rem;margin:.5rem 0 .35rem">What to expect</h3>
-        <div class="edge" style="border-width:1px;padding:12px">
-          <h4 class="muted" style="margin:0 0 .4rem">Inside Time To Pet</h4>
-          <ol class="mini" style="margin:0 0 8px 18px">
-            <li>Create your account and tell us about your dog.</li>
-            <li>Request dates or select our suggested time.</li>
-            <li>See your confirmation in the portal and via email.</li>
-            <li>During the stay, view your <strong>GPS map</strong> and <strong>photo updates</strong>.</li>
+      <!-- Right: Steps & Trust -->
+      <aside class="panel card">
+        <h2 class="underline">How It Works</h2>
+        <div class="steps">
+          <ol>
+            <li><strong>Select dates</strong> (check‑in then number of nights)</li>
+            <li><strong>Complete quick dog profile</strong> (vaccination, routine, contacts)</li>
+            <li><strong>Instant confirmation</strong> — we’ll text you with check‑in details</li>
           </ol>
+          <p class="help" style="margin:.6rem 0 0">Questions about what’s included? It’s all covered in the booking details below.</p>
         </div>
-
-        <div class="edge" style="border-width:1px;padding:12px;margin-top:10px">
-          <h4 class="muted" style="margin:0 0 .4rem">From The Woof of Walk Street</h4>
-          <ul class="mini" style="margin:0 0 0 18px">
-            <li>We’ll confirm drop-off/pick-up times and any special instructions for your dog’s stay.</li>
-            <li>You’ll also get a welcome email and next steps from <strong>info@woofofwalkstreet.com</strong>.</li>
-          </ul>
-        </div>
-
-        <div class="faq" aria-labelledby="faq-heading">
-          <h3 id="faq-heading" style="margin-top:12px">Boarding FAQs</h3>
-          <details>
-            <summary>How many dogs do you board at once?</summary>
-            <p>Only one guest at a time for calm, stress-free care.</p>
-          </details>
-          <details>
-            <summary>Do you provide updates?</summary>
-            <p>Yes — GPS maps and photos are shared in your portal.</p>
-          </details>
-          <details>
-            <summary>Can my dog sleep on your bed or sofa?</summary>
-            <p>Absolutely — if that’s your home routine, we continue it here.</p>
-          </details>
-          <details>
-            <summary>Is pick-up/drop-off available?</summary>
-            <p>We’ll confirm windows after you request your dates. We can also pick up your dog’s bed or crate locally.</p>
-          </details>
-        </div>
+        <p class="badge" aria-label="One dog only">One‑Guest‑Only</p>
+        <ul class="list" style="margin-top:.5rem">
+          <li>One simple nightly rate — everything included</li>
+          <li>Sleep on bed/sofa if that’s the home routine</li>
+          <li>Multiple daily walks (GPS tracked) + photo updates</li>
+          <li>Food, enrichment games, bones & chicken treats</li>
+          <li>Optional pickup/return in local area (included in flat rate)</li>
+        </ul>
+        <p class="help" style="margin-top:.6rem">Questions before booking? <a href="tel:+61456754050">Call 0456 754 050</a>.</p>
       </aside>
     </div>
-  </main>
+  </section>
 
-  <footer class="site-footer" role="contentinfo" style="margin-top:22px">
-    <nav class="container mini" aria-label="Footer links" style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
-      <a href="/boarding-services.html">Boarding Services</a>
-      <a href="/dog-walking-south-melbourne.html">Dog Walking</a>
-      <a href="/memberships.html">Memberships</a>
-      <a href="/contact.html">Contact</a>
-      <a href="/faq.html">FAQs</a>
-    </nav>
-    <div class="container footer-bottom" style="text-align:center;margin-top:8px;color:#a9b4c0">
-      © <span id="year"></span> The Woof of Walk Street · South Melbourne, VIC
+  <!-- Extra reassurance -->
+  <section class="section">
+    <div class="container panel card">
+      <h2 class="underline">What Happens After You Book</h2>
+      <ul class="list">
+        <li>You’ll receive a confirmation email and a short <strong>Dog Profile</strong> form.</li>
+        <li>We’ll confirm <strong>check‑in / check‑out</strong> windows and what to pack (or what we can collect for you).</li>
+        <li>On the day, you’ll get a quick text on arrival — and daily photo updates during the stay.</li>
+      </ul>
+      <p class="help">We’re fully insured and police‑checked. Based in South Melbourne; serving Albert Park, Port Melbourne, Middle Park, Southbank & South Yarra.</p>
     </div>
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-  </footer>
+  </section>
 
+  <!-- Local SEO block -->
+  <section class="section">
+    <div class="container panel card">
+      <h2 class="underline">Local Dog Boarding Near You</h2>
+      <p>We provide boutique, home‑style <strong>dog boarding in South Melbourne</strong> and nearby suburbs: <strong>Albert Park</strong>, <strong>Port Melbourne</strong>, <strong>Middle Park</strong>, <strong>Southbank</strong>, and <strong>South Yarra</strong>. One‑guest‑only care — no kennels, no group boarding.</p>
+      <p class="help">Looking for a sitter? Try these searches: <em>dog boarding South Melbourne</em>, <em>overnight dog boarding</em>, <em>home‑style dog boarding</em>, <em>one‑dog‑only boarding</em>.</p>
+    </div>
+  </section>
+
+  <section class="section center">
+    <div class="container">
+      <p class="help">Having trouble? Book by phone at <a href="tel:+61456754050">0456 754 050</a>.</p>
+    </div>
+  </section>
+
+  <!-- Scripts: carry UTM & plan params into the Acuity iframe, set year, and light a small GA event if available -->
   <script>
-  (function(){
-    var TTP_BASE = "https://www.timetopet.com/portal/woofofwalkstreet/create-account";
-    function getParams() {
-      var p = new URLSearchParams(window.location.search);
-      var keep = new URLSearchParams();
-      ["utm_source","utm_medium","utm_campaign","utm_term","utm_content"].forEach(function(k){
-        if (p.has(k)) keep.set(k, p.get(k));
-      });
-      try { keep.set("ref_path", window.location.pathname); } catch(e){}
-      return keep;
-    }
-    function buildOutbound(plan){
-      var qs = getParams();
-      if (plan) qs.set("plan", plan);
-      var sep = TTP_BASE.indexOf("?")>-1 ? "&" : "?";
-      return TTP_BASE + (qs.toString() ? (sep + qs.toString()) : "");
-    }
-    document.querySelectorAll('[data-plan]').forEach(function(a){
-      a.addEventListener('click', function(e){
-        e.preventDefault();
-        var plan = a.getAttribute('data-plan') || '';
-        try { window.gtag && gtag('event','bridge_click',{event_category:'engagement',event_label: plan||'unknown_plan'}); } catch(err){}
-        window.location.href = buildOutbound(plan);
-      });
-    });
-    document.addEventListener('click', function (e) {
-      var a = e.target.closest('a'); if (!a) return;
-      var href = (a.getAttribute('href')||'').toLowerCase();
-      if (href.includes('timetopet.com/portal/woofofwalkstreet')) {
-        e.preventDefault();
-        try { window.gtag && gtag('event','ttp_intercept_bridge'); } catch(err){}
-        window.location.href = buildOutbound(a.getAttribute('data-plan')||'');
-      }
-    }, { capture:true });
-  })();
-  </script>
+    (function(){
+      // Pass through known query params to Acuity so attribution/plan follows
+      var passParams = ["utm_source","utm_medium","utm_campaign","utm_content","utm_term","plan","coupon","ref"];
+      var src = new URL(document.getElementById('acuity-frame').getAttribute('src'));
+      var here = new URL(window.location.href);
+      passParams.forEach(function(k){ if(here.searchParams.has(k)){ src.searchParams.set(k, here.searchParams.get(k)); }});
+      document.getElementById('acuity-frame').setAttribute('src', src.toString());
+      // Keep fallback link in sync
+      var fallback = document.getElementById('acuity-fallback');
+      if (fallback) fallback.href = src.toString();
 
-  <noscript>
-    <div class="container edge" style="margin:20px 0">
-      <p><strong>JavaScript is off.</strong> You can still book here:</p>
-      <p><a class="btn btn-primary" href="https://www.timetopet.com/portal/woofofwalkstreet/create-account">Open Time To Pet</a></p>
-    </div>
-  </noscript>
+      // Simple event for click-quality (no hard dependency)
+      window.addEventListener('message', function(ev){
+        try {
+          if ((ev.origin||'').indexOf('acuityscheduling.com') !== -1 && window.gtag) {
+            gtag('event','acuity_iframe_event',{event_category:'booking',value:1});
+          }
+        } catch (e) {}
+      });
+    })();
+  </script>
+  <!-- Sticky mobile CTA for hyper-focused conversions -->
+  <style>
+    @media (max-width: 768px){
+      .sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:9999;background:linear-gradient(180deg,#ffdd6a 0%, #f5b200 100%);box-shadow:0 -8px 24px rgba(0,0,0,.35);padding:12px 16px;display:flex;gap:10px;align-items:center;justify-content:space-between}
+      .sticky-cta .label{font-weight:900;color:#111}
+      .sticky-cta .action{background:#111;color:#fff;border-radius:999px;padding:10px 16px;font-weight:800;text-decoration:none}
+      body{padding-bottom:72px}
+    }
+  </style>
+  <div class="sticky-cta" role="region" aria-label="Quick booking">
+    <span class="label">$150/night — all‑inclusive</span>
+    <a href="#acuity-frame" class="action" id="sticky-book">Book now</a>
+  </div>
+  <script>
+    (function(){
+      var btn = document.getElementById('sticky-book');
+      if(btn){
+        btn.addEventListener('click', function(e){
+          e.preventDefault();
+          var target = document.getElementById('acuity-frame');
+          if(target){ target.scrollIntoView({behavior:'smooth', block:'start'}); }
+        });
+      }
+    })();
+  </script>
+  <!-- Sticky mobile CTA for hyper-focused conversions -->
+  <style>
+    @media (max-width: 768px){
+      .sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:9999;background:linear-gradient(180deg,#ffdd6a 0%, #f5b200 100%);box-shadow:0 -8px 24px rgba(0,0,0,.35);padding:12px 16px;display:flex;gap:10px;align-items:center;justify-content:space-between}
+      .sticky-cta .label{font-weight:900;color:#111}
+      .sticky-cta .action{background:#111;color:#fff;border-radius:999px;padding:10px 16px;font-weight:800;text-decoration:none}
+      body{padding-bottom:72px}
+    }
+  </style>
+  <div class="sticky-cta" role="region" aria-label="Quick booking">
+    <span class="label">$150/night — all‑inclusive</span>
+    <a href="#acuity-frame" class="action" id="sticky-book">Book now</a>
+  </div>
+  <script>
+    (function(){
+      // Helper: get next Friday date (YYYY-MM-DD)
+      function nextFriday(){
+        var d=new Date();
+        var day=d.getDay(); // 0 Sun ... 5 Fri
+        var diff=(5 - day + 7) % 7; // days until Friday
+        if(diff===0) diff=7; // if today Fri, take next Fri
+        d.setDate(d.getDate()+diff);
+        var y=d.getFullYear();
+        var m=('0'+(d.getMonth()+1)).slice(-2);
+        var dd=('0'+d.getDate()).slice(-2);
+        return y+'-'+m+'-'+dd;
+      }
+
+      // Pass through known query params (extended with nights/date)
+      var passParams = ["utm_source","utm_medium","utm_campaign","utm_content","utm_term","plan","coupon","ref","nights","date"]; 
+      var frame = document.getElementById('acuity-frame');
+      var fallback = document.getElementById('acuity-fallback');
+
+      function setFrameSrc(extra){
+        var src = new URL(frame.getAttribute('src'));
+        var here = new URL(window.location.href);
+        passParams.forEach(function(k){ if(here.searchParams.has(k)) src.searchParams.set(k, here.searchParams.get(k)); });
+        if(extra){ Object.keys(extra).forEach(function(k){ if(extra[k]) src.searchParams.set(k, extra[k]); }); }
+        frame.setAttribute('src', src.toString());
+        if (fallback) fallback.href = src.toString();
+      }
+
+      // Initial set with current URL params
+      setFrameSrc();
+
+      // Quick Pick handlers
+      document.querySelectorAll('.qp').forEach(function(btn){
+        btn.addEventListener('click', function(e){
+          e.preventDefault();
+          var nights=this.getAttribute('data-nights')||'';
+          var wantsFriday=this.hasAttribute('data-start');
+          var extras={};
+          if(nights) extras.nights=nights;
+          if(wantsFriday) extras.date=nextFriday();
+          // Reflect selection in URL (so refresh preserves it)
+          var url=new URL(window.location.href);
+          if(nights) url.searchParams.set('nights',nights); else url.searchParams.delete('nights');
+          if(wantsFriday) url.searchParams.set('date',extras.date); else url.searchParams.delete('date');
+          history.replaceState(null,'',url.toString());
+          // Update frame
+          setFrameSrc(extras);
+          // Scroll to calendar
+          frame.scrollIntoView({behavior:'smooth', block:'start'});
+          // Show small note
+          var help=document.getElementById('qp-help');
+          if(help){
+            var label = nights+" night"+(nights==='1'?'':'s');
+            if(wantsFriday) help.textContent = 'Preselected '+label+' starting next Friday ('+extras.date+'). You can adjust inside the calendar.';
+            else help.textContent = 'Preselected '+label+'. You can adjust inside the calendar.';
+          }
+        });
+      });
+
+      // Sticky CTA smooth scroll
+      var btn = document.getElementById('sticky-book');
+      if(btn){
+        btn.addEventListener('click', function(e){
+          e.preventDefault();
+          frame.scrollIntoView({behavior:'smooth', block:'start'});
+        });
+      }
+
+      // Lightweight GA ping for iframe messages (if gtag present)
+      window.addEventListener('message', function(ev){
+        try {
+          if ((ev.origin||'').indexOf('acuityscheduling.com') !== -1 && window.gtag) {
+            gtag('event','acuity_iframe_event',{event_category:'booking',value:1});
+          }
+        } catch (e) {}
+      });
+    })();
+  </script>
 </body>
 </html>
+

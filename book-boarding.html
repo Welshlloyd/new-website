@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Book Dog Boarding South Melbourne | $150/night All‑Inclusive</title>
-  <meta name="description" content="Book boutique, one‑guest‑only dog boarding in South Melbourne. $150/night all‑inclusive — home‑style care, daily walks with GPS, and photo updates. Instant online booking." />
+  <title>Book Dog Boarding South Melbourne | $150/night All-Inclusive</title>
+  <meta name="description" content="Book boutique, one-guest-only dog boarding in South Melbourne. $150/night all-inclusive — home-style care, daily walks with GPS, and photo updates. Instant online booking." />
   <link rel="icon" href="/images/brand/favicon.ico" />
   <link rel="canonical" href="https://www.woofofwalkstreet.com/book-boarding.html" />
 
@@ -18,19 +18,19 @@
   <meta property="og:locale" content="en_AU" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Book Boarding — The Woof of Walk Street" />
-  <meta name="twitter:description" content="Instant booking. One‑guest‑only, home‑style stays in South Melbourne." />
+  <meta name="twitter:description" content="Instant booking. One-guest-only, home-style stays in South Melbourne." />
   <meta name="twitter:image" content="https://www.woofofwalkstreet.com/images/gallery/dog-weekend-woof.jpg" />
 
   <!-- Preload hero for LCP -->
   <link rel="preload" as="image" href="/images/gallery/dog-weekend-woof.jpg" />
 
-  <!-- Local styles (keeps look & feel aligned with the main site; minimal CSS so you can drop this page anywhere) -->
+  <!-- Local styles -->
   <style>
     :root{
       --bg:#0b0f14;--bg-2:#0e131b;--panel:#141a24;--text:#eaf1fb;--muted:#b5c0cf;--gold:#f5b200;--gold-2:#ffd166;
     }
     html,body{height:100%}
-    body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Noto Sans, "Apple Color Emoji","Segoe UI Emoji"}
+    body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Noto Sans,"Apple Color Emoji","Segoe UI Emoji"}
     a{color:var(--gold-2)}
     .container{max-width:1100px;margin:0 auto;padding:0 16px}
     .section{padding:22px 0}
@@ -50,6 +50,11 @@
     .muted{color:var(--muted)}
     .list{padding-left:1.2rem}
     .list li{margin:.25rem 0}
+    /* Promo banner */
+    .promo{border:3px solid #000;background:#fff6d6;color:#111;border-radius:14px;padding:14px;margin-top:14px}
+    .promo h2{margin:0 0 8px;font-size:clamp(1.1rem,2.5vw,1.5rem)}
+    .promo strong{font-weight:900}
+    .promo .phone a{color:inherit;text-decoration:none}
     /* Acuity wrapper */
     .scheduler-wrap{margin-top:10px}
     .scheduler{width:100%;min-height:1100px;border:0;border-radius:14px;background:#0f141c}
@@ -63,6 +68,14 @@
     .center{text-align:center}
     /* Focus for a11y */
     :focus-visible{outline:3px solid var(--gold-2);outline-offset:2px;border-radius:6px}
+
+    /* Sticky mobile CTA */
+    @media (max-width: 768px){
+      .sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:9999;background:linear-gradient(180deg,#ffdd6a 0%, #f5b200 100%);box-shadow:0 -8px 24px rgba(0,0,0,.35);padding:12px 16px;display:flex;gap:10px;align-items:center;justify-content:space-between}
+      .sticky-cta .label{font-weight:900;color:#111}
+      .sticky-cta .action{background:#111;color:#fff;border-radius:999px;padding:10px 16px;font-weight:800;text-decoration:none}
+      body{padding-bottom:72px}
+    }
   </style>
 
   <!-- JSON-LD: Service -->
@@ -88,7 +101,7 @@
     "mainEntity":[
       {"@type":"Question","name":"How many dogs do you board at once?","acceptedAnswer":{"@type":"Answer","text":"One. We are strictly one-guest-only for calm, personalised care."}},
       {"@type":"Question","name":"What’s included?","acceptedAnswer":{"@type":"Answer","text":"Multiple daily walks (GPS tracked), photo updates, food, enrichment games, and home-style sleep (bed/sofa if preferred)."}},
-      {"@type":"Question","name":"Can I pick dates like Fri–Sun or Fri–Mon?","acceptedAnswer":{"@type":"Answer","text":"Yes. Choose your check‑in date then select the number of nights. Weekend and longer stays are supported."}}
+      {"@type":"Question","name":"Can I pick dates like Fri–Sun or Fri–Mon?","acceptedAnswer":{"@type":"Answer","text":"Yes. Choose your check-in date then select the number of nights. Weekend and longer stays are supported."}}
     ]
   }
   </script>
@@ -97,16 +110,30 @@
   <!-- HERO -->
   <section class="hero section">
     <div class="container">
-      <h1 class="underline">Boutique Dog Boarding in South Melbourne — $150/night All‑Inclusive</h1>
-      <p class="sub">Instant booking for calm, home‑style stays in South Melbourne. One simple price per night (all‑inclusive). No kennels. No group boarding. Daily GPS‑tracked walks & photo updates included.</p>
+      <h1 class="underline">Boutique Dog Boarding in South Melbourne — $150/night All-Inclusive</h1>
+      <p class="sub">Instant booking for calm, home-style stays in South Melbourne. One simple price per night (all-inclusive). No kennels. No group boarding. Daily GPS-tracked walks & photo updates included.</p>
       <p style="margin-top:10px" class="muted"><strong>$150/night</strong> — home-style care, daily walks, and updates included.</p>
 
+      <!-- PROMO BANNER -->
+      <div class="promo" role="note" aria-label="Limited-time offer">
+        <h2>🚀 🔥 LIMITED-TIME: SAVE <strong>20%</strong> ON OVERNIGHT BOARDING! 🔥</h2>
+        <p>Book today and get <strong>20% OFF</strong> your dog’s first Overnight Boarding stay at The Woof of Walk Street.</p>
+        <p>Use promo code <strong>BOARDING20</strong> at checkout.</p>
+        <ul>
+          <li>🐾 <strong>Solo care only</strong> — no other dogs staying</li>
+          <li>🏡 Safe, cosy, supervised home environment</li>
+          <li>📸 Daily photo/video updates</li>
+          <li>🦮 GPS-tracked walks included</li>
+        </ul>
+        <p class="phone">Prefer to chat first? Call <a href="tel:+61370731175"><strong>(03) 7073 1175</strong></a></p>
+      </div>
+
       <h2 class="underline" style="margin-top:12px">Dog Boarding South Melbourne — Book Online</h2>
-      <p class="sub">Home‑style <strong>dog boarding in South Melbourne</strong> for one dog only. Boutique, no‑kennels care with <strong>overnight dog boarding</strong>, daily GPS‑tracked walks, and photo updates. Serving <strong>Albert Park</strong>, <strong>Port Melbourne</strong>, <strong>Middle Park</strong>, <strong>Southbank</strong> & <strong>South Yarra</strong>.</p>
+      <p class="sub">Home-style <strong>dog boarding in South Melbourne</strong> for one dog only. Boutique, no-kennels care with <strong>overnight dog boarding</strong>, daily GPS-tracked walks, and photo updates. Serving <strong>Albert Park</strong>, <strong>Port Melbourne</strong>, <strong>Middle Park</strong>, <strong>Southbank</strong> & <strong>South Yarra</strong>.</p>
     </div>
   </section>
 
-  <!-- QUICK PICK (pre-select stay length) -->
+  <!-- QUICK PICK -->
   <section class="section">
     <div class="container panel card" aria-label="Quick stay picker">
       <h2 class="underline" style="margin-top:0">Quick Pick: How long is the stay?</h2>
@@ -135,13 +162,13 @@
         <h2 class="underline">How It Works</h2>
         <div class="steps">
           <ol>
-            <li><strong>Select dates</strong> (check‑in then number of nights)</li>
+            <li><strong>Select dates</strong> (check-in then number of nights)</li>
             <li><strong>Complete quick dog profile</strong> (vaccination, routine, contacts)</li>
-            <li><strong>Instant confirmation</strong> — we’ll text you with check‑in details</li>
+            <li><strong>Instant confirmation</strong> — we’ll text you with check-in details</li>
           </ol>
           <p class="help" style="margin:.6rem 0 0">Questions about what’s included? It’s all covered in the booking details below.</p>
         </div>
-        <p class="badge" aria-label="One dog only">One‑Guest‑Only</p>
+        <p class="badge" aria-label="One dog only">One-Guest-Only</p>
         <ul class="list" style="margin-top:.5rem">
           <li>One simple nightly rate — everything included</li>
           <li>Sleep on bed/sofa if that’s the home routine</li>
@@ -149,7 +176,7 @@
           <li>Food, enrichment games, bones & chicken treats</li>
           <li>Optional pickup/return in local area (included in flat rate)</li>
         </ul>
-        <p class="help" style="margin-top:.6rem">Questions before booking? <a href="tel:+61456754050">Call 0456 754 050</a>.</p>
+        <p class="help" style="margin-top:.6rem">Questions before booking? <a href="tel:+61370731175">(03) 7073 1175</a>.</p>
       </aside>
     </div>
   </section>
@@ -160,10 +187,10 @@
       <h2 class="underline">What Happens After You Book</h2>
       <ul class="list">
         <li>You’ll receive a confirmation email and a short <strong>Dog Profile</strong> form.</li>
-        <li>We’ll confirm <strong>check‑in / check‑out</strong> windows and what to pack (or what we can collect for you).</li>
+        <li>We’ll confirm <strong>check-in / check-out</strong> windows and what to pack (or what we can collect for you).</li>
         <li>On the day, you’ll get a quick text on arrival — and daily photo updates during the stay.</li>
       </ul>
-      <p class="help">We’re fully insured and police‑checked. Based in South Melbourne; serving Albert Park, Port Melbourne, Middle Park, Southbank & South Yarra.</p>
+      <p class="help">We’re fully insured and police-checked. Based in South Melbourne; serving Albert Park, Port Melbourne, Middle Park, Southbank & South Yarra.</p>
     </div>
   </section>
 
@@ -171,78 +198,24 @@
   <section class="section">
     <div class="container panel card">
       <h2 class="underline">Local Dog Boarding Near You</h2>
-      <p>We provide boutique, home‑style <strong>dog boarding in South Melbourne</strong> and nearby suburbs: <strong>Albert Park</strong>, <strong>Port Melbourne</strong>, <strong>Middle Park</strong>, <strong>Southbank</strong>, and <strong>South Yarra</strong>. One‑guest‑only care — no kennels, no group boarding.</p>
-      <p class="help">Looking for a sitter? Try these searches: <em>dog boarding South Melbourne</em>, <em>overnight dog boarding</em>, <em>home‑style dog boarding</em>, <em>one‑dog‑only boarding</em>.</p>
+      <p>We provide boutique, home-style <strong>dog boarding in South Melbourne</strong> and nearby suburbs: <strong>Albert Park</strong>, <strong>Port Melbourne</strong>, <strong>Middle Park</strong>, <strong>Southbank</strong>, and <strong>South Yarra</strong>. One-guest-only care — no kennels, no group boarding.</p>
+      <p class="help">Looking for a sitter? Try these searches: <em>dog boarding South Melbourne</em>, <em>overnight dog boarding</em>, <em>home-style dog boarding</em>, <em>one-dog-only boarding</em>.</p>
     </div>
   </section>
 
   <section class="section center">
     <div class="container">
-      <p class="help">Having trouble? Book by phone at <a href="tel:+61456754050">0456 754 050</a>.</p>
+      <p class="help">Having trouble? Book by phone at <a href="tel:+61370731175">(03) 7073 1175</a>.</p>
     </div>
   </section>
 
-  <!-- Scripts: carry UTM & plan params into the Acuity iframe, set year, and light a small GA event if available -->
-  <script>
-    (function(){
-      // Pass through known query params to Acuity so attribution/plan follows
-      var passParams = ["utm_source","utm_medium","utm_campaign","utm_content","utm_term","plan","coupon","ref"];
-      var src = new URL(document.getElementById('acuity-frame').getAttribute('src'));
-      var here = new URL(window.location.href);
-      passParams.forEach(function(k){ if(here.searchParams.has(k)){ src.searchParams.set(k, here.searchParams.get(k)); }});
-      document.getElementById('acuity-frame').setAttribute('src', src.toString());
-      // Keep fallback link in sync
-      var fallback = document.getElementById('acuity-fallback');
-      if (fallback) fallback.href = src.toString();
+  <!-- Sticky mobile CTA -->
+  <div class="sticky-cta" role="region" aria-label="Quick booking">
+    <span class="label">$150/night — all-inclusive</span>
+    <a href="#acuity-frame" class="action" id="sticky-book">Book now</a>
+  </div>
 
-      // Simple event for click-quality (no hard dependency)
-      window.addEventListener('message', function(ev){
-        try {
-          if ((ev.origin||'').indexOf('acuityscheduling.com') !== -1 && window.gtag) {
-            gtag('event','acuity_iframe_event',{event_category:'booking',value:1});
-          }
-        } catch (e) {}
-      });
-    })();
-  </script>
-  <!-- Sticky mobile CTA for hyper-focused conversions -->
-  <style>
-    @media (max-width: 768px){
-      .sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:9999;background:linear-gradient(180deg,#ffdd6a 0%, #f5b200 100%);box-shadow:0 -8px 24px rgba(0,0,0,.35);padding:12px 16px;display:flex;gap:10px;align-items:center;justify-content:space-between}
-      .sticky-cta .label{font-weight:900;color:#111}
-      .sticky-cta .action{background:#111;color:#fff;border-radius:999px;padding:10px 16px;font-weight:800;text-decoration:none}
-      body{padding-bottom:72px}
-    }
-  </style>
-  <div class="sticky-cta" role="region" aria-label="Quick booking">
-    <span class="label">$150/night — all‑inclusive</span>
-    <a href="#acuity-frame" class="action" id="sticky-book">Book now</a>
-  </div>
-  <script>
-    (function(){
-      var btn = document.getElementById('sticky-book');
-      if(btn){
-        btn.addEventListener('click', function(e){
-          e.preventDefault();
-          var target = document.getElementById('acuity-frame');
-          if(target){ target.scrollIntoView({behavior:'smooth', block:'start'}); }
-        });
-      }
-    })();
-  </script>
-  <!-- Sticky mobile CTA for hyper-focused conversions -->
-  <style>
-    @media (max-width: 768px){
-      .sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:9999;background:linear-gradient(180deg,#ffdd6a 0%, #f5b200 100%);box-shadow:0 -8px 24px rgba(0,0,0,.35);padding:12px 16px;display:flex;gap:10px;align-items:center;justify-content:space-between}
-      .sticky-cta .label{font-weight:900;color:#111}
-      .sticky-cta .action{background:#111;color:#fff;border-radius:999px;padding:10px 16px;font-weight:800;text-decoration:none}
-      body{padding-bottom:72px}
-    }
-  </style>
-  <div class="sticky-cta" role="region" aria-label="Quick booking">
-    <span class="label">$150/night — all‑inclusive</span>
-    <a href="#acuity-frame" class="action" id="sticky-book">Book now</a>
-  </div>
+  <!-- Scripts -->
   <script>
     (function(){
       // Helper: get next Friday date (YYYY-MM-DD)
@@ -258,7 +231,7 @@
         return y+'-'+m+'-'+dd;
       }
 
-      // Pass through known query params (extended with nights/date)
+      // Pass through known query params to Acuity (extended with nights/date and coupon)
       var passParams = ["utm_source","utm_medium","utm_campaign","utm_content","utm_term","plan","coupon","ref","nights","date"]; 
       var frame = document.getElementById('acuity-frame');
       var fallback = document.getElementById('acuity-fallback');
@@ -268,6 +241,10 @@
         var here = new URL(window.location.href);
         passParams.forEach(function(k){ if(here.searchParams.has(k)) src.searchParams.set(k, here.searchParams.get(k)); });
         if(extra){ Object.keys(extra).forEach(function(k){ if(extra[k]) src.searchParams.set(k, extra[k]); }); }
+
+        // Soft-apply the promo code if not already present (users can still change it in checkout)
+        if(!src.searchParams.get('coupon')){ src.searchParams.set('coupon','BOARDING20'); }
+
         frame.setAttribute('src', src.toString());
         if (fallback) fallback.href = src.toString();
       }
@@ -288,6 +265,8 @@
           var url=new URL(window.location.href);
           if(nights) url.searchParams.set('nights',nights); else url.searchParams.delete('nights');
           if(wantsFriday) url.searchParams.set('date',extras.date); else url.searchParams.delete('date');
+          // Preserve coupon in URL for shareability
+          if(!url.searchParams.get('coupon')) url.searchParams.set('coupon','BOARDING20');
           history.replaceState(null,'',url.toString());
           // Update frame
           setFrameSrc(extras);
@@ -324,4 +303,3 @@
   </script>
 </body>
 </html>
-

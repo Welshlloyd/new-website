@@ -4,242 +4,135 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- ===== SEO ===== -->
-  <title>Dog Walking South Melbourne, Albert Park, Port Melbourne, Middle Park, Southbank & South Yarra | Service Areas</title>
-  <meta name="description" content="One-dog-only dog walking with GPS routes & photo updates across South Melbourne, Albert Park, Port Melbourne, Middle Park, Southbank & South Yarra. Boutique one-guest weekend boarding. Start with a casual 45-minute walk, then save with Unlimited (50% off first month).">
-  <link rel="canonical" href="https://www.woofofwalkstreet.com/service-areas.html" />
+  <title>Dog Walking & Boutique Boarding Service Areas Melbourne | Woof Club</title>
+  <meta name="description" content="Find your suburb: The Woof of Walk Street offers premium solo dog walking and one-dog-only home boarding across Melbourne's Bayside and Inner-South, including Port Melbourne, South Melbourne, Albert Park, Middle Park, Southbank, and South Yarra." />
+
+  <link rel="canonical" href="https://www.woofofwalkstreet.com/boarding-services.html" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="icon" href="/images/brand/favicon.ico" />
 
-  <!-- Social -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Dog Walking & Boutique Boarding — Service Areas">
-  <meta property="og:description" content="Solo walks with GPS & photos across South Melbourne, Albert Park, Port Melbourne, Middle Park, Southbank & South Yarra. Try Unlimited — 50% off first month.">
-  <meta property="og:url" content="https://www.woofofwalkstreet.com/service-areas.html">
-  <meta property="og:image" content="https://www.woofofwalkstreet.com/images/brand/hero-dog-skyline-1200.webp">
-  <meta property="og:locale" content="en_AU">
-  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/css/mini.css">
+  <link rel="stylesheet" href="/css/mini.dark.css">
+  <link rel="stylesheet" href="/css/mini.light.css">
+  <link rel="stylesheet" href="/css/styles.css">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-
-  <!-- ===== Edge Pack CSS (same look as homepage) ===== -->
   <style>
-    :root{
-      --bg:#0b0e12; --card:#0f1318; --text:#e8eef5; --muted:#a9b4c0; --line:#1e2630;
-      --brand:#ffd166; --brand-ink:#0b0e12; --accent:#5af2c6;
-      --shadow:0 16px 48px rgba(0,0,0,.32);
-      --ring:0 0 0 2px rgba(255,209,102,.22), 0 16px 40px rgba(255,209,102,.08);
-      --header-blur: saturate(120%) blur(10px); --header-bg: rgba(11,14,18,.78);
-      --container:1100px; --radius-lg:16px; --speed:.22s;
-      --font-heading:'Space Grotesk',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      --font-body:'Work Sans',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    /* Custom styles for the hub page */
+    .hero img{border:3px solid var(--brand); box-shadow:0 12px 30px rgba(0,0,0,.18)}
+    .service-card{
+      background:var(--card-bg);
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:25px;
+      transition:transform 0.2s ease, box-shadow 0.2s ease;
+      /* Reduced size for sub-cards to fit more content below */
     }
-    html,body{background:var(--bg);color:var(--text)}
-    img{max-width:100%;height:auto}
-    a{color:inherit}
-    .container{max-width:var(--container);margin:0 auto;padding:0 16px}
-    body, p, li, span, button, input, textarea{font-family:var(--font-body);line-height:1.58}
-    h1,h2,h3,nav a,.nav-group-btn{font-family:var(--font-heading)}
-
-    /* Header / Nav */
-    .site-header{position:sticky;top:0;z-index:1000;backdrop-filter:var(--header-blur);-webkit-backdrop-filter:var(--header-blur);background:var(--header-bg);border-bottom:1px solid rgba(255,255,255,.06)}
-    .navbar{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
-    .brand{display:flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none;font-weight:900}
-    .brand img{width:48px;height:48px}
-    .nav-toggle{color:#fff;font-size:1.6rem;margin-left:.5rem;cursor:pointer}
-    @media(min-width:900px){.nav-toggle{display:none}}
-    .nav-links{display:flex;align-items:center;gap:14px}
-    .nav-links a{color:#fff;text-decoration:none;font-weight:700;position:relative}
-    .nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:linear-gradient(90deg,transparent,var(--brand),transparent);transform:scaleX(0);transition:transform var(--speed) ease}
-    .nav-links a:hover::after{transform:scaleX(1)}
-    .nav-group{position:relative}
-    .nav-group-btn{background:none;border:0;color:#fff;font:inherit;font-weight:800;cursor:pointer}
-    .nav-group-list{position:absolute;right:0;top:calc(100% + 8px);min-width:280px;padding:10px;background:#0f141b;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow)}
-
-    /* Mobile menu */
-    @media (max-width: 899px){
-      .nav-links{position:fixed;inset:64px 0 auto 0;background:#000;display:none;flex-direction:column;gap:12px;padding:16px;overflow-y:auto;z-index:1300}
-      #nav-toggle:checked ~ .nav-links{display:flex}
-      .nav-group-list{position:static;min-width:auto;padding:0;border:0;background:#000;box-shadow:none}
-      .nav-links a,.nav-group-btn{color:#fff}
-      .nav-scrim{display:none;position:fixed;inset:64px 0 0 0;background:rgba(0,0,0,.35);z-index:1200}
-      #nav-toggle:checked ~ .nav-scrim{display:block}
-      body.menu-open .site-header{background:#000 !important;border-bottom:1px solid rgba(255,255,255,.08)}
+    .service-card:hover{
+      transform:translateY(-3px);
+      box-shadow:0 10px 20px rgba(0,0,0,0.15);
     }
-    body.menu-open{overflow:hidden}
-    .page-top{padding-top:74px}
-
-    /* Utilities */
-    .gold-edge{border:1px solid rgba(255,209,102,.55);border-radius:var(--radius-lg);box-shadow:var(--ring);background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.015))}
-    .section-sweep{height:4px;border:0;margin:34px 0;background:linear-gradient(90deg,transparent,rgba(255,209,102,.8),transparent);filter:drop-shadow(0 8px 18px rgba(255,209,102,.25))}
-    .cta-buttons{display:flex;gap:10px;flex-wrap:wrap}
-    .btn{-webkit-tap-highlight-color:transparent;display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:12px 18px;border-radius:999px;border:1px solid transparent;text-decoration:none;font-weight:800;transition:transform var(--speed),box-shadow var(--speed),background var(--speed),color var(--speed),border-color var(--speed)}
-    .btn-primary{background:var(--brand);color:var(--brand-ink);box-shadow:0 10px 26px rgba(255,209,102,.25)}
-    .btn-primary:hover{transform:translateY(-2px) scale(1.04);box-shadow:0 16px 46px rgba(255,209,102,.35)}
-    .btn-ghost{background:transparent;color:#fff;border:1px solid #2a3440}
-    .btn-outline{background:transparent;border-color:var(--brand);color:var(--brand)}
-    .meta{color:var(--muted)}
-
-    /* Hero */
-    .hero{padding:28px 0 18px;background:radial-gradient(1200px 600px at 20% -20%,rgba(255,209,102,.08),transparent 60%),linear-gradient(120deg,#111824,#1b2433,#111824);background-size:200% 200%;animation:heroMove 14s ease-in-out infinite;border-bottom:1px solid rgba(255,255,255,.06)}
-    @keyframes heroMove{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
-    .hero h1{font-size:clamp(1.8rem,1.3rem + 2.4vw,2.6rem);margin:.25rem 0 .5rem}
-    .hero .subhead{max-width:74ch;color:#cfd6df}
-
-    /* Area grid */
-    .area-icons{padding:8px 0 22px}
-    .area-grid{display:grid;gap:14px;grid-template-columns:repeat(2,1fr)}
-    .area-card{background:#0f1418;border:1px solid var(--line);border-radius:12px;overflow:hidden;text-align:center;box-shadow:var(--shadow)}
-    .area-card img{width:100%;height:150px;object-fit:cover;object-position:center center;display:block}
-    .area-card a{
-      display:block;padding:12px 14px;font-weight:900;text-decoration:none;
-      line-height:1.25;font-size:clamp(.98rem,.9rem + .3vw,1.06rem);
-      word-break:break-word;hyphens:auto;min-height:3.2em;
+    .service-card h3 a{
+      color:var(--brand);
+      text-decoration:none;
     }
-    @media(min-width:760px){.area-grid{grid-template-columns:repeat(4,1fr)} .area-card img{height:130px}}
-    @media(max-width:380px){.area-grid{grid-template-columns:1fr}} /* narrow phones */
-    .h2-link{text-decoration:none}
-    .h2-link:hover,.h2-link:focus{text-decoration:underline}
-    #postcode-input{font-size:1.05rem;padding:.55rem .8rem;border-radius:10px;border:1px solid #2a3440;width:min(420px,90%);background:#0b0e12;color:#e8eef5}
+    .service-card .details{
+      margin-top:15px;
+      font-size:.9rem;
+      color:var(--text-light);
+    }
+    .badge-row .badge{margin-right:.35rem; margin-bottom: .35rem; display: inline-block;}
 
-    /* Footer */
-    .footer-banner img{border-radius:12px}
-    .footer-grid{display:grid;gap:16px;padding:18px 0}
-    .footer-grid.compact{row-gap:12px;column-gap:24px;align-items:start}
-    @media(min-width:860px){.footer-grid.compact{grid-template-columns:1.2fr 1fr 1fr}}
-    @media(min-width:600px) and (max-width:859px){.footer-grid.compact{grid-template-columns:1fr 1fr}}
-    .footer-col h3{font-size:1rem;margin:0 0 .4rem;color:#ffd166}
-    .footlist{list-style:none;padding:0;margin:0;display:grid;gap:.28rem}
-    .footlist a{color:#e8eef5;text-decoration:none}
-    .footlist a:hover{text-decoration:underline}
-    .footer-bottom{padding:12px 0;color:#a9b4c0;border-top:1px solid var(--line);text-align:center}
+    /* Dedicated Boarding Promo Banner (High visibility) */
+    .boarding-promo-banner{
+      background:linear-gradient(45deg, #FF6F61, #FFD166); /* Warm, high-contrast gradient */
+      color:#111;
+      padding:18px 25px;
+      border-radius:12px;
+      text-align:center;
+      margin:25px 0;
+      font-size:1.25rem;
+      font-weight:900;
+      box-shadow:0 10px 30px rgba(255,111,97,.4);
+    }
+    .boarding-promo-banner span{display:block;margin-top:5px;font-size:1rem;font-weight:700;color:rgba(17,17,17,.8)}
 
-    /* Ribbons */
-    .promo-ribbon{position:relative;z-index:1100;background:linear-gradient(135deg,#f5b200,#ffd866,#f5b200);background-size:300% 300%;animation:shimmer 6s ease-in-out infinite;color:var(--brand-ink);border-bottom:1px solid rgba(255,255,255,.06);box-shadow:0 14px 40px rgba(0,0,0,.18);isolation:isolate;overflow:hidden}
-    @keyframes shimmer{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
-    .promo-inner{max-width:var(--container);margin:0 auto;padding:10px 14px;display:grid;grid-template-columns:auto 1fr auto auto;gap:10px;align-items:center}
-    .promo-dog{display:none;width:28px;height:28px;border-radius:50%}
-    @media(min-width:720px){.promo-dog{display:block}}
-    .promo-copy{font-weight:800;letter-spacing:.2px;line-height:1.35}
-    .promo-copy strong{background:#111;color:#fff;padding:2px 8px;border-radius:999px;margin-right:8px;box-shadow:0 6px 18px rgba(0,0,0,.25)}
-    .promo-cta{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;white-space:nowrap;font-weight:900;padding:10px 14px;border-radius:999px;background:#111;color:#fff;border:1px solid rgba(255,255,255,.15)}
-    .promo-close{appearance:none;border:0;background:#000;color:#fff;font:inherit;font-weight:900;width:34px;height:34px;border-radius:999px;display:grid;place-items:center}
+    /* Primary CTA Button Style */
+    .cta-button{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:12px 18px;
+      border-radius:999px;
+      border:1px solid transparent;
+      background:var(--brand);
+      color:var(--bg);
+      font-weight:900;
+      text-decoration:none;
+      transition: background 0.2s ease;
+    }
+    .cta-button:hover {
+      background: #e88d00; /* Slightly darker shade of gold/brand color */
+    }
+    .cta-button.secondary{background:transparent;border-color:#2a3440;color:var(--text);font-weight:700}
+    .cta-button.secondary:hover{background:rgba(0,0,0,0.1); border-color:var(--brand); color:var(--brand);}
 
-    /* Mobile: tidy stacked layout */
-    @media (max-width:520px){
-      .promo-inner{grid-template-columns:1fr;gap:8px}
-      .promo-dog{display:none}
-      .promo-cta{width:100%;justify-self:stretch;text-align:center;padding:12px 16px}
-      .promo-close{position:absolute;top:6px;right:8px;border:1px solid rgba(255,255,255,.25)}
+    /* Testimonial Block Style */
+    .testimonial-block {
+        background: #f8f8f8; /* Light background for contrast */
+        border-left: 5px solid var(--brand);
+        padding: 20px 30px;
+        margin: 30px 0;
+        border-radius: 6px;
+        font-style: italic;
+        color: #333;
+    }
+    .testimonial-block footer {
+        margin-top: 10px;
+        font-weight: 700;
+        font-style: normal;
+        text-align: right;
     }
 
-    .ribbon-gap{height:8px;background:linear-gradient(180deg,rgba(255,255,255,.0),rgba(255,255,255,.04));border-bottom:1px solid var(--line)}
-    .impact-ribbon{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border-bottom:1px solid var(--line);color:var(--text)}
-    .impact-inner{max-width:var(--container);margin:0 auto;padding:10px 14px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-    .impact-emoji{filter:drop-shadow(0 6px 16px rgba(255,209,102,.25))}
-    .impact-cta{margin-left:auto;text-decoration:none;font-weight:900;white-space:nowrap;color:var(--brand);border:1px solid rgba(255,209,102,.45);padding:8px 12px;border-radius:999px}
+    .list-dash{padding-left:1.1rem; list-style:disc}
+    .list-dash li{margin:.3rem 0}
   </style>
 
-  <!-- Theme boot (no-FOUC) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KP5LVKN6X3"></script>
   <script>
-  (function(){
-    const KEY='wow-theme'; const pref=localStorage.getItem(KEY)||'auto';
-    const mql=window.matchMedia('(prefers-color-scheme: dark)');
-    const isDark=()=>pref==='dark'||(pref==='auto'&&mql.matches);
-    document.documentElement.setAttribute('data-theme',pref);
-    document.documentElement.style.colorScheme=isDark()?'dark':'light';
-    mql.addEventListener?.('change',()=>{ if((localStorage.getItem(KEY)||'auto')==='auto'){ document.documentElement.style.colorScheme=mql.matches?'dark':'light'; }});
-  })();
+    window.dataLayer=window.dataLayer||[];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config','G-KP5LVKN6X3');   // GA4
+    gtag('config','AW-17527927259'); // Google Ads
   </script>
 
-  <!-- Ads/GA -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config','AW-17527927259');</script>
-
-  <!-- ===== JSON-LD ===== -->
-  <!-- Breadcrumbs -->
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
-    {"@type":"ListItem","position":2,"name":"Service Areas","item":"https://www.woofofwalkstreet.com/service-areas.html"}
-  ]}
-  </script>
-
-  <!-- Collection hub + ItemList + FAQ -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@graph":[
-      {
-        "@type":"CollectionPage",
-        "@id":"https://www.woofofwalkstreet.com/service-areas.html#collection",
-        "name":"Service Areas — The Woof of Walk Street",
-        "isPartOf":{"@id":"https://www.woofofwalkstreet.com/"},
-        "description":"Solo dog walking and single-guest boutique boarding across South Melbourne, Albert Park, Port Melbourne, Middle Park, Southbank and South Yarra.",
-        "mainEntity":{"@id":"https://www.woofofwalkstreet.com/service-areas.html#areas"}
-      },
-      {
-        "@type":"ItemList",
-        "@id":"https://www.woofofwalkstreet.com/service-areas.html#areas",
-        "name":"Areas we serve",
-        "itemListElement":[
-          {"@type":"ListItem","position":1,"name":"Dog Walking in South Melbourne","item":{"@type":"WebPage","url":"https://www.woofofwalkstreet.com/dog-walking-south-melbourne.html"}},
-          {"@type":"ListItem","position":2,"name":"Dog Walker in Albert Park","item":{"@type":"WebPage","url":"https://www.woofofwalkstreet.com/dog-walker-albert-park.html"}},
-          {"@type":"ListItem","position":3,"name":"Dog Walking in Port Melbourne","item":{"@type":"WebPage","url":"https://www.woofofwalkstreet.com/dog-walker-port-melbourne.html"}},
-          {"@type":"ListItem","position":4,"name":"Dog Walker in Middle Park","item":{"@type":"WebPage","url":"https://www.woofofwalkstreet.com/dog-walker-middle-park.html"}},
-          {"@type":"ListItem","position":5,"name":"Dog Walker in Southbank","item":{"@type":"WebPage","url":"https://www.woofofwalkstreet.com/dog-walker-southbank.html"}},
-          {"@type":"ListItem","position":6,"name":"Dog Walker in South Yarra","item":{"@type":"WebPage","url":"https://www.woofofwalkstreet.com/dog-walker-south-yarra.html"}}
-        ]
-      },
-      {
-        "@type":"FAQPage",
-        "@id":"https://www.woofofwalkstreet.com/service-areas.html#faq",
-        "mainEntity":[
-          {"@type":"Question","name":"Do you cover my postcode?","acceptedAnswer":{"@type":"Answer","text":"We currently serve 3205, 3206, 3207, 3006 and parts of 3004. Use the postcode checker on this page to confirm coverage."}},
-          {"@type":"Question","name":"Do you walk more than one dog at a time?","acceptedAnswer":{"@type":"Answer","text":"No. We are strictly one-dog-only for safety, focus and calmer outings."}},
-          {"@type":"Question","name":"What proof do I get after the walk?","acceptedAnswer":{"@type":"Answer","text":"After every walk you’ll receive a GPS route, photos and quick notes."}}
-        ]
-      }
-    ]
-  }
-  </script>
-
-  <!-- Preload a hero -->
-  <link rel="preload" as="image" href="/images/brand/hero-dog-skyline-1200.webp">
 </head>
 <body>
 
-  <!-- Promo ribbon -->
-  <div id="promo" class="promo-ribbon" role="region" aria-label="Promo: 50% off Unlimited first month">
+  <!-- Promo ribbon (Walking 50% off) -->
+  <div id="promo" class="promo-ribbon promo--edge" role="region" aria-label="Promo: 50% off Casual Walks">
     <div class="promo-inner container">
       <img class="promo-dog" src="/images/brand/dog-in-suit.webp" alt="" width="28" height="28" decoding="async" />
       <span class="promo-copy">
-        <strong>50% OFF</strong> Unlimited Weekday Walks — solo 45-min walks · GPS tracked · Photo updates <strong>· Ends 30 Nov</strong>
+        Need a walk first? <strong>50% OFF</strong> Casual Walks — Use code <strong>WALK50</strong>.
       </span>
-      <a href="/unlimited-dog-walks.html" class="promo-cta">See Unlimited →</a>
+      <a class="promo-cta" href="/dog-walking-albert-park.html" rel="noopener">Explore Walking →</a>
       <button id="promo-close" class="promo-close" aria-label="Dismiss promo">✕</button>
     </div>
   </div>
-
-  <!-- Visual gap between ribbons -->
-  <div class="ribbon-gap" aria-hidden="true"></div>
 
   <!-- Impact ribbon -->
   <div class="impact-ribbon" role="note" aria-label="Walks that do more: 10% donated">
     <div class="impact-inner">
       <span class="impact-emoji" aria-hidden="true">💛</span>
-      <strong>Walks That Do More:</strong>
-      When you choose us, you’re not just booking a dog walk — you’re helping rescue dogs too.
-      <strong>We donate 10% of profits</strong> to local shelters.
+      <strong>Walks That Do More:</strong> We donate <strong>10% of profits</strong> to local rescue.
       <a class="impact-cta" href="/community.html">See our impact →</a>
     </div>
   </div>
 
-  <!-- HEADER -->
-  <header class="site-header" role="banner">
-    <div class="navbar container" role="navigation" aria-label="Main">
-      <a class="brand" href="/" aria-label="Go to home">
+  <header class="site-header">
+    <div class="navbar container">
+      <a class="brand" href="/" aria-label="Home">
         <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="56" height="56">
         <strong>The Woof of Walk Street</strong>
       </a>
@@ -247,382 +140,265 @@
       <input id="nav-toggle" type="checkbox" hidden>
       <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</label>
 
-      <nav class="nav-links gold-edge" aria-label="Primary" style="padding:10px;border-radius:12px">
-        <!-- Services -->
+      <nav class="nav-links">
         <section class="nav-group">
-          <button class="nav-group-btn" aria-expanded="false" aria-controls="nav-services">Services ▾</button>
+          <button class="nav-group-btn" aria-expanded="false" aria-controls="nav-services">Services</button>
           <ul id="nav-services" class="nav-group-list" hidden>
             <li><a href="/services.html">All Services</a></li>
-            <li><a href="/dog-walking-south-melbourne.html">Dog Walking South Melbourne</a></li>
-            <li><a href="/casual-dog-walking-south-melbourne.html">Casual Walking</a></li>
-            <li><a href="/memberships.html">Memberships — Compare Plans</a></li>
-            <li><a href="/membership-starter.html">Starter Membership</a></li>
-            <li><a href="/membership-growth.html">Growth Membership</a></li>
-            <li><a href="/unlimited-dog-walks.html">Unlimited Membership</a></li>
-            <li><a href="/boarding-services.html">Boarding Services</a></li>
+            <li><a href="/dog-walking-albert-park.html">Dog Walking Albert Park</a></li>
+            <li><a href="/casual-dog-walking-albert-park.html">Casual Dog Walking</a></li>
+            <li><a href="/dog-boarding-south-melbourne.html">Boarding — South Melbourne</a></li>
+            <li><a href="/service-areas.html">Service Areas</a></li>
+            <li><a href="/contact.html">Contact</a></li>
           </ul>
         </section>
-
-        <!-- Areas -->
-        <section class="nav-group">
-          <button class="nav-group-btn" aria-expanded="false" aria-controls="nav-areas">Areas ▾</button>
-          <ul id="nav-areas" class="nav-group-list" hidden>
-            <li><a href="/dog-walking-south-melbourne.html">South Melbourne</a></li>
-            <li><a href="/dog-walker-albert-park.html">Albert Park</a></li>
-            <li><a href="/dog-walker-port-melbourne.html">Port Melbourne</a></li>
-            <li><a href="/dog-walker-middle-park.html">Middle Park</a></li>
-            <li><a href="/dog-walker-southbank.html">Southbank</a></li>
-            <li><a href="/dog-walker-south-yarra.html">South Yarra</a></li>
-            <li><a href="/service-areas.html" aria-current="page">All Service Areas</a></li>
-          </ul>
-        </section>
-
         <a href="/about.html">About</a>
-        <a href="/testimonials.html">Testimonials</a>
-        <a href="/gallery.html">Gallery</a>
-        <a href="/contact.html" onclick="gtag && gtag('event','nav_click',{label:'header_contact'});">Contact</a>
         <a href="/blog/index.html">Blog</a>
         <a href="/faq.html">FAQs</a>
         <a href="/search.html">Search</a>
 
-        <button id="theme-toggle" class="btn btn-ghost" type="button" aria-pressed="false" aria-label="Toggle color theme" title="Theme: Auto">🌗 Auto</button>
-
-        <!-- CTAs -->
-        <a class="btn btn-outline nav-cta" href="/book-dog-walk/" onclick="gtag && gtag('event','cta_click',{label:'header_book_walks'});">Book Walks</a>
-        <a class="btn btn-primary nav-cta" href="/book-boarding.html" onclick="gtag && gtag('event','cta_click',{label:'header_book_boarding'});">Book Boarding</a>
+        <a class="btn button-primary nav-cta" href="/book-dog-walk/">Book Walks</a>
+        <a class="btn button-primary nav-cta" href="/boarding-services.html">Boarding</a>
       </nav>
-      <div class="nav-scrim" aria-hidden="true"></div>
     </div>
   </header>
 
-  <main class="page-top">
-    <!-- HERO -->
+  <main>
     <section class="hero">
-      <div class="container" data-reveal>
+      <div class="container">
         <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="/">Home</a> › Service Areas</nav>
-        <h1>Dog Walking in South Melbourne, Albert Park, Port Melbourne, Middle Park, Southbank & South Yarra</h1>
-        <p class="subhead">
-          Calm, <strong>one-dog-only</strong> walks with <strong>GPS routes</strong> and <strong>photo updates</strong>, plus
-          single-guest boutique boarding. We keep routes local for lower arousal and better manners.
-          Love the rhythm? <a href="/unlimited-dog-walks.html"><strong>Try Unlimited</strong></a> — <strong>50% off first month</strong> (ends 30 Nov), then A$1,500/month (weekdays, up to 21 walks).
+        <h1>Melbourne Dog Walking & Boutique Boarding Service Areas</h1>
+
+        <p>Welcome to the <strong>Woof of Walk Street</strong>, your local choice for premium dog care across Melbourne's Bayside and Inner-South suburbs. We proudly offer guaranteed <strong>solo dog walking</strong> and exclusive <strong>one-dog-only home boarding</strong>.</p>
+        <p>Use this page to confirm if we service your neighbourhood for either of our primary offerings. Our core service areas include Port Melbourne, South Melbourne, Albert Park, Middle Park, Southbank, Fishermans Bend, Beacon Cove, and South Yarra.</p>
+
+        <!-- Primary CTA Buttons for both services -->
+        <p class="cta-buttons" style="justify-content:center;flex-wrap:wrap;margin-top:1.5rem">
+          <a class="cta-button" href="/dog-walking-albert-park.html">Check Dog Walking Options</a>
+          <a class="cta-button secondary" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=87654321" target="_blank" rel="noopener">Check Boarding Availability</a>
         </p>
+
       </div>
-      <hr class="section-sweep" aria-hidden="true">
     </section>
 
-    <!-- AREA HIGHLIGHTS (with all thumbnails) -->
-    <section class="area-icons" aria-labelledby="area-icons-title">
-      <div class="container" data-reveal>
-        <h2 id="area-icons-title" class="sr-only">Local highlights</h2>
-        <div class="area-grid">
-          <figure class="area-card">
-            <img src="/images/service-areas/south-melbourne-market.webp" alt="South Melbourne Market at dusk — favourite local walking routes" loading="lazy" width="600" height="400">
-            <a href="/dog-walking-south-melbourne.html">South Melbourne Market</a>
-          </figure>
-
-          <figure class="area-card">
-            <img src="/images/service-areas/albert-park-lake.webp" alt="Albert Park Lake loop with palms — decompression walks and clear sight-lines" loading="lazy" width="600" height="400">
-            <a href="/dog-walker-albert-park.html">Albert Park Lake</a>
-          </figure>
-
-          <figure class="area-card">
-            <img src="/images/service-areas/port-melbourne-beach.webp" alt="Port Melbourne foreshore and dog beach — relaxed one-to-one routes" loading="lazy" width="600" height="400">
-            <a href="/dog-walker-port-melbourne.html">Port Melbourne Beach</a>
-          </figure>
-
-          <figure class="area-card">
-            <img src="/images/service-areas/middle-park-beach-dog.webp" alt="Middle Park Beach and quiet streets — steady pacing for chill pups" loading="lazy" width="600" height="400">
-            <a href="/dog-walker-middle-park.html">Middle Park Beach</a>
-          </figure>
-
-          <figure class="area-card">
-            <img src="/images/service-areas/southbank-river.webp" alt="Southbank riverside path — low arousal apartment-dog loops" loading="lazy" width="600" height="400">
-            <a href="/dog-walker-southbank.html">Southbank River Walk</a>
-          </figure>
-
-          <figure class="area-card" style="grid-column:1 / -1">
-            <img src="/images/service-areas/south-yarra.webp" alt="South Yarra leafy streets and river access — structured solo walks" loading="lazy" width="1200" height="400">
-            <a href="/dog-walker-south-yarra.html">South Yarra Highlights</a>
-          </figure>
-        </div>
-      </div>
-      <hr class="section-sweep" aria-hidden="true">
-    </section>
-
-    <!-- SOUTH MELBOURNE -->
+    <!-- Boarding Service Area Cards (High Value/Detailed Pages) -->
     <section>
-      <div class="container" data-reveal>
-        <h2><a class="h2-link" href="/dog-walking-south-melbourne.html">Dog Walking & Boarding in South Melbourne</a></h2>
-        <div class="gold-edge" style="padding:18px">
-          <h3>Why South Melbourne Works for Calm, Predictable Walks</h3>
-          <p>
-            Our home base. We start at your door and keep to <strong>local loops</strong> for a predictable, low-arousal rhythm —
-            ideal for sensitive, anxious, young or senior dogs. Every session includes <strong>GPS route + photo update</strong>.
-            Weekend boarding is <strong>one guest only</strong> in a calm, home environment.
-          </p>
-          <div class="cta-buttons">
-            <a class="btn btn-primary" href="/dog-walking-south-melbourne.html">Explore South Melbourne</a>
-            <a class="btn btn-outline" href="/unlimited-dog-walks.html">Try Unlimited — 50% Off</a>
-            <a class="btn btn-ghost" href="/casual-dog-walking-south-melbourne.html">Book a Casual 45-Minute Walk</a>
+      <div class="container">
+        <h2>Premium One-Dog-Only Dog Boarding Areas</h2>
+        <p>Our <strong>boutique home boarding</strong> service offers complimentary door-to-door pick-up and drop-off from the areas below. We only take one dog at a time, ensuring maximum attention and care.</p>
+
+        <div class="grid grid-3 grid-sm-2">
+
+          <!-- Port Melbourne Card -->
+          <div class="service-card">
+            <h3><a href="/dog-boarding-port-melbourne.html">Port Melbourne Dog Boarding</a></h3>
+            <p><strong>Boutique boarding</strong> with home comforts and easy access to the beach for solo walks. Excellent for dogs who thrive in quiet, one-on-one environments.</p>
+            <div class="details">
+              <ul class="list-dash">
+                <li>Service: <strong>Boarding & Walking</strong></li>
+                <li>Pick-up & Drop-off: <strong>Included</strong></li>
+                <li><a href="/dog-boarding-port-melbourne.html">View Port Melbourne Page</a></li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </div>
-      <hr class="section-sweep" aria-hidden="true">
-    </section>
 
-    <!-- ALBERT PARK -->
-    <section>
-      <div class="container" data-reveal>
-        <h2><a class="h2-link" href="/dog-walker-albert-park.html">Dog Walker in Albert Park</a></h2>
-        <h3>Decompression Loops Around the Lake</h3>
-        <p>
-          Wide sight-lines around <strong>Albert Park Lake</strong> make decompression easier and triggers rarer.
-          Solo pace, enrichment-first — then the <strong>GPS map</strong> and <strong>photos</strong> arrive in your inbox.
-        </p>
-        <p class="meta">Popular add-ons: <a href="/memberships.html">weekly memberships</a> for guaranteed slots.</p>
-      </div>
-      <hr class="section-sweep" aria-hidden="true">
-    </section>
+          <!-- South Melbourne Card -->
+          <div class="service-card">
+            <h3><a href="/dog-boarding-south-melbourne.html">South Melbourne Dog Boarding</a></h3>
+            <p>Our original <strong>Woof Club</strong> home base offering <strong>dedicated, one-on-one overnight care</strong>. Constant human company and peaceful home environment guaranteed.</p>
+            <div class="details">
+              <ul class="list-dash">
+                <li>Service: <strong>Boarding & Walking</strong></li>
+                <li>Pick-up & Drop-off: <strong>Included</strong></li>
+                <li><a href="/dog-boarding-south-melbourne.html">View South Melbourne Page</a></li>
+              </ul>
+            </div>
+          </div>
 
-    <!-- PORT MELBOURNE -->
-    <section>
-      <div class="container" data-reveal>
-        <h2><a class="h2-link" href="/dog-walker-port-melbourne.html">Dog Walking in Port Melbourne</a></h2>
-        <h3>Foreshore Strolls & Wide Streets</h3>
-        <p>
-          Breezy foreshore paths and spacious residential blocks are ideal for steady, predictable <strong>one-to-one</strong> walks —
-          the kind that leave your dog relaxed back at home. Great for building loose-lead habits with fewer distractions.
-        </p>
-        <p class="meta">Tip: Start with a <a href="/casual-dog-walking-south-melbourne.html">casual session</a>, then lock in an <a href="/unlimited-dog-walks.html">Unlimited</a> rhythm.</p>
-      </div>
-      <hr class="section-sweep" aria-hidden="true">
-    </section>
+          <!-- Albert Park Card (Used for both) -->
+          <div class="service-card">
+            <h3><a href="/dog-walking-albert-park.html">Albert Park Dog Care</a></h3>
+            <p>Full services available! We offer our premium <strong>solo walking</strong> right in the area, plus complimentary <strong>boarding pick-up</strong> to one of our nearby host homes.</p>
+            <div class="details">
+              <ul class="list-dash">
+                <li>Service: <strong>Boarding Pick-up & Walking</strong></li>
+                <li>Pick-up & Drop-off: <strong>Included</strong></li>
+                <li><a href="/dog-walking-albert-park.html">View Albert Park Walking/Boarding Info</a></li>
+              </ul>
+            </div>
+          </div>
 
-    <!-- MIDDLE PARK -->
-    <section>
-      <div class="container" data-reveal>
-        <h2><a class="h2-link" href="/dog-walker-middle-park.html">Dog Walker in Middle Park</a></h2>
-        <h3>Gentle Pacing for Seniors & Chill Pups</h3>
-        <p>
-          Leafy streets, pocket parks and measured pacing. We adjust distance and tempo for joints, weather and mood —
-          prioritising sniffing and smooth movement over speed.
-        </p>
-      </div>
-      <hr class="section-sweep" aria-hidden="true">
-    </section>
-
-    <!-- SOUTHBANK -->
-    <section>
-      <div class="container" data-reveal>
-        <h2><a class="h2-link" href="/dog-walker-southbank.html">Dog Walker in Southbank</a></h2>
-        <h3>Structure First for Apartment Dogs</h3>
-        <p>
-          For apartment dogs, structure is everything. Quieter backstreets and river paths help keep arousal low and skills sharp —
-          with <strong>GPS proof + photos</strong> after each walk.
-        </p>
-      </div>
-      <hr class="section-sweep" aria-hidden="true">
-    </section>
-
-    <!-- SOUTH YARRA -->
-    <section>
-      <div class="container" data-reveal>
-        <h2><a class="h2-link" href="/dog-walker-south-yarra.html">Dog Walker in South Yarra</a></h2>
-        <h3>Leafy Streets, River Access & Consistent Solo Routines</h3>
-        <p>
-          We service parts of <strong>South Yarra</strong> with the same one-dog-only focus. Structured, repeatable routes and clear
-          communication keep arousal low and confidence high. A dedicated area page is coming soon — book now and we’ll confirm coverage.
-        </p>
-        <div class="cta-buttons">
-          <a class="btn btn-primary" href="/book-dog-walk/">Book a Walk</a>
-          <a class="btn btn-outline" href="/contact.html">Ask About South Yarra</a>
-          <a class="btn btn-ghost" href="/unlimited-dog-walks.html">Go Unlimited</a>
-        </div>
-      </div>
-      <hr class="section-sweep" aria-hidden="true">
-    </section>
-
-    <!-- Postcode Checker -->
-    <section>
-      <div class="container center" data-reveal>
-        <h2>Do We Cover Your Area?</h2>
-        <p class="meta">Enter your postcode to check coverage (VIC).</p>
-        <form id="postcode-form" onsubmit="return false;" aria-describedby="pc-help">
-          <input type="tel" id="postcode-input" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" placeholder="e.g. 3205" aria-label="Postcode">
-          <button type="submit" class="btn btn-primary">Check</button>
-          <div id="pc-help" class="sr-only">Enter a 4-digit Victorian postcode.</div>
-        </form>
-        <p id="postcode-result" style="margin-top:10px;font-weight:bold" aria-live="polite"></p>
-      </div>
-      <hr class="section-sweep" aria-hidden="true">
-    </section>
-
-    <!-- SALES CTA -->
-    <section>
-      <div class="container center" data-reveal>
-        <h2>Ready for Calmer Walks? Start Casual — Then Upgrade to Unlimited</h2>
-        <p>
-          Book a <strong>casual 45-minute</strong> solo walk to feel the difference. Most new clients upgrade to
-          <a href="/unlimited-dog-walks.html"><strong>Unlimited</strong></a> for a steady weekday rhythm
-          (<strong>up to 21 walks/month</strong>) — <strong>50% off first month</strong> (ends 30 Nov), then A$1,500/month.
-          Prefer a quick comparison? See <a href="/memberships.html">Memberships</a>, or check our <a href="/testimonials.html">testimonials</a>.
-        </p>
-        <div class="cta-buttons" style="justify-content:center">
-          <a class="btn btn-primary" href="/book-dog-walk/">Book a Walk</a>
-          <a class="btn btn-ghost" href="/unlimited-dog-walks.html">See Unlimited Details</a>
-          <a class="btn btn-outline" href="/boarding-services.html">Explore Boarding</a>
         </div>
       </div>
     </section>
+    
+    <!-- Dog Walking Service Area List -->
+    <section class="section alt">
+        <div class="container">
+            <h2>Our Full Dog Walking Coverage</h2>
+            <p>We provide **daily solo walks** for dogs of all sizes across a wide catchment area in Melbourne. If your suburb is on this list, you can book our dog walking services immediately!</p>
+            
+            <p class="badge-row">
+                <span class="badge" style="background:#00bcd4; color:white">Albert Park</span>
+                <span class="badge" style="background:#00bcd4; color:white">Middle Park</span>
+                <span class="badge" style="background:#00bcd4; color:white">Port Melbourne</span>
+                <span class="badge" style="background:#00bcd4; color:white">South Melbourne</span>
+                <span class="badge" style="background:#00bcd4; color:white">Southbank</span>
+                <span class="badge" style="background:#00bcd4; color:white"><strong>South Yarra</strong></span>
+                <span class="badge" style="background:#00bcd4; color:white">Fishermans Bend</span>
+                <span class="badge" style="background:#00bcd4; color:white">Beacon Cove</span>
+            </p>
+
+            <p class="cta-buttons" style="margin-top:1.5rem">
+                <a class="cta-button" href="/dog-walking-albert-park.html">View Solo Walking Rates</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Consolidation of Services & Key Features (SEO & CRO) -->
+    <section class="section">
+      <div class="container grid grid-2 grid-md-1">
+        <article>
+          <h2>Why Choose The Woof of Walk Street?</h2>
+          <p>Whether you need daily walks or extended boarding, our dedication to <strong>one-on-one care</strong> sets us apart from large commercial operators. We focus on low-stress, consistent service, building a lasting relationship with your dog. Our local knowledge of Melbourne's Bayside ensures your dog gets the best routine and environment.</p>
+          <ul class="list-dash">
+            <li><strong>Exclusive Boarding:</strong> Guaranteed <strong>one-dog-only</strong> environment.</li>
+            <li><strong>Solo Walks:</strong> Daily **solo walk** included (no risky group walks).</li>
+            <li><strong>Value:</strong> All-inclusive boarding pricing of <strong>$150/night</strong> with no hidden fees.</li>
+            <li><strong>Safety:</strong> Full public liability insurance coverage for complete peace of mind.</li>
+            <li><strong>Convenience:</strong> Complimentary door-to-door pick-up and drop-off for all services.</li>
+          </ul>
+        </article>
+        <article>
+          <h2>Trusted by Melbourne Dog Owners</h2>
+            <div class="testimonial-block">
+                <p>"Leaving Buster has always been stressful, but the <strong>Woof Club's</strong> one-on-one approach is a game-changer. He came home happy and calm, proving he felt right at home. The best <strong>boutique dog boarding</strong> service we've ever used in Port Melbourne."</p>
+                <footer>— Sarah L., Port Melbourne</footer>
+            </div>
+            <p class="text-center">Read more genuine reviews on our <a href="/testimonials.html">Testimonials page</a>.</p>
+          </article>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section alt">
+        <div class="container text-center">
+            <h2>Ready to Secure Premium Dog Care?</h2>
+             <p>Spaces are limited for our exclusive services. Book your introductory walk or mandatory Meet & Greet today.</p>
+             <p class="cta-buttons" style="justify-content:center;flex-wrap:wrap;">
+                <a class="cta-button" href="/book-dog-walk/">Book an Introductory Walk</a>
+                <a class="cta-button secondary" href="tel:+61370731175">Prefer to call? (03) 7073 1175</a>
+            </p>
+        </div>
+    </section>
+
   </main>
 
-  <!-- FOOTER -->
+  <!-- Footer, ensuring correct phone number -->
   <footer class="site-footer" role="contentinfo">
-    <div class="container footer-banner" style="margin-top:6px">
+    <div class="footer-banner">
       <picture>
-        <source srcset="/images/brand/footer-banner-1600x600.webp" media="(min-width: 768px)">
-        <img class="gold-edge" src="/images/brand/footer-banner-800x300.webp" alt="Happy dogs in Melbourne" loading="lazy" width="800" height="300">
+        <source srcset="/images/brand/footer-banner-1600x600.webp" media="(min-width:768px)">
+        <img src="/images/brand/footer-banner-800x300.webp" alt="Happy dogs in Melbourne" width="800" height="300" loading="lazy">
       </picture>
     </div>
 
-    <div class="container footer-grid compact">
+    <div class="container footer-grid">
       <section class="footer-brand">
-        <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="56" height="56" loading="lazy">
-        <p class="org"><strong>The Woof of Walk Street</strong><br>
-          <a class="footer-map" href="https://maps.app.goo.gl/YnEoSPwhGocUZyWL9?g_st=ipc" target="_blank" rel="noopener">South Melbourne, VIC</a><br>
-          Mon–Fri 7am–7pm · <a href="tel:+61456754050">+61&nbsp;456&nbsp;754&nbsp;050</a><br>
-          <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a><br>
-          <a href="https://www.google.com/search?sca_esv=e9f55f1ce1ed95d6&authuser=0&hl=en&gl=au&nfpr=1&sxsrf=AE3TifP5_xOq9o_RWRGxs8qTS_GbH89BiA:1761708463195&q=The+Woof+of+Walk+Street+%E2%80%93+Dog+Walking+South+Melbourne&ludocid=16990922104674419629&lsig=AB86z5UXDJ3ghyzMyUkvhOKOIEF3&ved=1i%3A4%2Ct%3A109124%2Ce%3A3%2Cp%3AqokBabC5O9_NseMP-IfUoAk%3A54" target="_blank" rel="noopener">Find us on Google</a>
+        <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="60" height="60" loading="lazy">
+        <strong>The Woof of Walk Street</strong>
+        <p>
+          <a class="footer-map" href="https://maps.app.goo.gl/YnEoSPwhGocUZyWL9?g_st=ipc" target="_blank" rel="noopener">Melbourne, VIC</a> · Mon–Fri 7am–7pm<br>
+          <a href="tel:+61370731175"><strong>(03) 7073 1175</strong></a> · <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a>
         </p>
-        <p style="margin:.4rem 0 0"><em>“GPS tracked, photo updates, and the calmest walks in Melbourne.”</em></p>
-        <p class="cta-buttons" style="margin:.75rem 0 0;display:flex;gap:.5rem;flex-wrap:wrap">
-          <a class="btn btn-primary" href="/book-dog-walk/?utm_source=site&utm_medium=footer&utm_campaign=book_walk">Book a Walk</a>
-          <a class="btn btn-ghost" href="/unlimited-dog-walks.html?utm_source=site&utm_medium=footer&utm_campaign=50off_unlimited">50% Off Unlimited</a>
-          <a class="btn btn-ghost" href="/book-boarding.html?utm_source=site&utm_medium=footer&utm_campaign=20off_boarding">20% Off Boarding</a>
+        <div class="footer-socials">
+          <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram"><img src="/images/social/instagram.svg" alt="" width="24" height="24"></a>
+          <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook"><img src="/images/social/facebook.svg" alt="" width="24" height="24"></a>
+          <a href="https://x.com/woofofwalkstreet" aria-label="X"><img src="/images/social/twitter.svg" alt="" width="24" height="24"></a>
+        </div>
+        <p class="cta-buttons" style="margin-top:.4rem">
+          <a class="btn button-primary" href="/book-dog-walk/">Book Walks</a>
+          <a class="btn button-primary" href="/boarding-services.html">Boarding</a>
         </p>
       </section>
 
       <nav class="footer-col" aria-label="Services">
         <h3>Services</h3>
-        <ul class="footlist">
-          <li><a href="/dog-walking-south-melbourne.html">Dog Walking</a></li>
-          <li><a href="/casual-dog-walking-south-melbourne.html">Casual Walks</a></li>
-          <li><a href="/memberships.html">Memberships</a></li>
-          <li><a href="/boarding-services.html">Boarding Services</a></li>
+        <ul>
+          <li><a href="/services.html">All Services</a></li>
+          <li><a href="/dog-walking-albert-park.html">Dog Walking Albert Park</a></li>
+          <li><a href="/casual-dog-walking-albert-park.html">Casual Dog Walking</a></li>
+          <li><a href="/dog-boarding-port-melbourne.html">Boarding — Port Melbourne</a></li>
+          <li><a href="/service-areas.html">Service Areas</a></li>
           <li><a href="/contact.html">Contact</a></li>
-        </ul>
+          </ul>
       </nav>
 
-      <nav class="footer-col" aria-label="Local Areas">
-        <h3>Local Areas</h3>
-        <ul class="footlist">
-          <li><a href="/dog-walking-south-melbourne.html">South Melbourne</a></li>
-          <li><a href="/dog-walker-albert-park.html">Albert Park</a></li>
-          <li><a href="/dog-walker-port-melbourne.html">Port Melbourne</a></li>
-          <li><a href="/dog-walker-middle-park.html">Middle Park</a></li>
-          <li><a href="/dog-walker-southbank.html">Southbank</a></li>
-          <li><a href="/dog-walker-south-yarra.html">South Yarra</a></li>
+      <section class="footer-col collapsible">
+        <button class="collapse-btn" aria-expanded="false" aria-controls="support-list">Support</button>
+        <ul id="support-list">
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/community.html">Community</a></li>
+          <li><a href="/testimonials.html">Testimonials</a></li>
+          <li><a href="/gallery.html">Photos & Videos</a></li>
+          <li><a href="/blog/index.html">Blog</a></li>
+          <li><a href="/faq.html">FAQs</a></li>
         </ul>
-      </nav>
+      </section>
+
+      <section class="footer-col collapsible">
+        <button class="collapse-btn" aria-expanded="false" aria-controls="legal-list">Legal</button>
+        <ul id="legal-list">
+          <li><a href="/privacy.html">Privacy</a></li>
+          <li><a href="/terms.html">Terms</a></li>
+          <li><a href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </section>
     </div>
 
-    <div class="container footer-bottom">
-      <nav style="margin:10px 0 6px;display:inline-flex;gap:18px;flex-wrap:wrap">
-        <a href="/contact.html">Contact Us</a>
-        <a href="/full-terms.html">Terms &amp; Conditions</a>
-        <a href="/faq.html">FAQ</a>
-        <a href="/sitemap.html">Sitemap</a>
-      </nav>
-      Solo Dog Walking &amp; Boutique Boarding across
-      <strong>South Melbourne</strong>, <strong>Albert Park</strong>, <strong>Port Melbourne</strong>,
-      <strong>Middle Park</strong>, <strong>Southbank</strong> and <strong>South Yarra</strong>
-      · © <span id="year"></span> The Woof of Walk Street
+    <div class="container footer-geo">
+      Solo Dog Walking & Boutique Boarding across <strong>Port Melbourne</strong>, <strong>South Melbourne</strong>, <strong>Albert Park</strong>, <strong>Middle Park</strong>, <strong>Southbank</strong>, and <strong>South Yarra</strong>.
     </div>
+
+    <div class="container footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
     <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+
+    <script>
+      document.querySelectorAll('.collapsible .collapse-btn').forEach(btn=>{
+        const list = document.getElementById(btn.getAttribute('aria-controls'));
+        const sync = (open)=>{ btn.setAttribute('aria-expanded', String(open)); list.hidden = !open; };
+        sync(false);
+        btn.addEventListener('click', ()=>{ const open = btn.getAttribute('aria-expanded')==='false'; sync(open); });
+      });
+    </script>
   </footer>
 
-  <!-- ===== JS ===== -->
-  <!-- Dropdown wiring + mobile menu + close behaviour -->
   <script>
-  (function () {
-    function wire(btnSel, listId){
-      const btn=document.querySelector(btnSel); const list=document.getElementById(listId);
-      if(!btn||!list) return; const sync=()=>{list.hidden=btn.getAttribute('aria-expanded')!=='true';};
-      sync(); btn.addEventListener('click',()=>{const open=btn.getAttribute('aria-expanded')==='true';btn.setAttribute('aria-expanded',String(!open));sync();});
-      document.addEventListener('click',(e)=>{ if(!btn.contains(e.target)&&!list.contains(e.target)){ btn.setAttribute('aria-expanded','false'); sync(); } },{capture:true});
-    }
-    wire('.nav-group-btn[aria-controls="nav-services"]','nav-services');
-    wire('.nav-group-btn[aria-controls="nav-areas"]','nav-areas');
-
-    const navToggle=document.getElementById('nav-toggle');
-    const navLabel=document.querySelector('label[for="nav-toggle"]');
-    const navLinks=document.querySelector('.nav-links');
-    const closeMenu=()=>{ if(navToggle&&navToggle.checked) navToggle.checked=false; document.body.classList.remove('menu-open'); };
-    if(navToggle&&navLinks){
-      navToggle.addEventListener('change',()=>{ if(navToggle.checked) document.body.classList.add('menu-open'); else document.body.classList.remove('menu-open'); });
-      navLinks.addEventListener('click',(e)=>{ if(e.target.closest('a')) closeMenu(); });
-      document.addEventListener('click',(e)=>{ const inside=navLinks.contains(e.target)||navLabel?.contains(e.target)||e.target===navToggle; if(!inside) closeMenu(); },{capture:true});
-      let lastY=window.scrollY; window.addEventListener('scroll',()=>{ if(Math.abs(window.scrollY-lastY)>8) closeMenu(); lastY=window.scrollY; });
-    }
-  })();
-  </script>
-
-  <!-- Theme toggle -->
-  <script>
-  (function(){
-    const el=document.getElementById('theme-toggle'); if(!el) return;
-    const KEY='wow-theme', order=['auto','light','dark'], next=v=>order[(order.indexOf(v)+1)%order.length];
-    function apply(pref){
-      localStorage.setItem(KEY,pref); document.documentElement.setAttribute('data-theme',pref);
-      const systemDark=window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const effectiveDark=(pref==='dark')||(pref==='auto'&&systemDark);
-      document.documentElement.style.colorScheme=effectiveDark?'dark':'light';
-      el.setAttribute('aria-pressed',pref!=='auto'); el.title=`Theme: ${pref[0].toUpperCase()}${pref.slice(1)}`;
-      el.textContent=(pref==='auto')?'🌗 Auto':(pref==='dark')?'🌙 Dark':'🔆 Light';
-    }
-    apply(localStorage.getItem(KEY)||'auto'); el.addEventListener('click',()=>apply(next(localStorage.getItem(KEY)||'auto')));
-    const mql=window.matchMedia('(prefers-color-scheme: dark)'); mql.addEventListener?.('change',()=>{ if((localStorage.getItem(KEY)||'auto')==='auto') apply('auto'); });
-  })();
-  </script>
-
-  <!-- Promo close + TimeToPet bridge -->
-  <script>
-  (function(){
-    const promo=document.getElementById('promo'); const closeBtn=document.getElementById('promo-close'); const KEY='wow-promo-closed';
-    if(sessionStorage.getItem(KEY)==='1'&&promo) promo.style.display='none';
-    closeBtn?.addEventListener('click',()=>{ sessionStorage.setItem(KEY,'1'); promo.style.display='none'; });
-
-    // Route any direct TimeToPet links to booking bridge
-    document.addEventListener('click',function(e){
-      const a=e.target.closest('a'); if(!a) return; const href=(a.getAttribute('href')||'').trim(); if(!href) return;
-      const isTTP=href.toLowerCase().includes('timetopet.com/portal/woofofwalkstreet');
-      if(isTTP){ e.preventDefault(); try{ window.gtag && gtag('event','ttp_intercept',{value:1.0,currency:'AUD'});}catch(_){}
-        const url=new URL('/book-dog-walk/',location.origin);
-        const src=(new URL(href,location.origin)).searchParams.get('utm_source'); if(src) url.searchParams.set('utm_source',src);
-        window.location.href=url.toString();
+    (function () {
+      const btn  = document.querySelector('.nav-group-btn[aria-controls="nav-services"]');
+      const list = document.getElementById('nav-services');
+      if (btn && list){
+        const sync = () => { list.hidden = btn.getAttribute('aria-expanded') !== 'true'; };
+        sync();
+        btn.addEventListener('click', () => {
+          const open = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', String(!open));
+          sync();
+        });
+        document.addEventListener('click', (e) => {
+          if (!btn.contains(e.target) && !list.contains(e.target)) {
+            btn.setAttribute('aria-expanded', 'false'); sync();
+          }
+        }, { capture: true });
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') { btn.setAttribute('aria-expanded', 'false'); sync(); }
+        });
       }
-    },{capture:true});
-  })();
-  </script>
-
-  <!-- Reveal + postcode checker -->
-  <script>
-  (function(){
-    const io=new IntersectionObserver((entries)=>{ for(const e of entries) if(e.isIntersecting){ e.target.classList.add('revealed'); io.unobserve(e.target);} },{threshold:.12});
-    document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el));
-  })();
-
-  (function(){
-    const covered=["3205","3206","3207","3006","3004"]; // South Melbourne, Albert/Middle Park, Port Melbourne, Southbank, St Kilda Rd
-    const form=document.getElementById('postcode-form'); if(!form) return;
-    form.addEventListener('submit',()=>{
-      const input=document.getElementById('postcode-input').value.trim();
-      const result=document.getElementById('postcode-result');
-      if(/^\d{4}$/.test(input)&&covered.includes(input)){ result.textContent="✅ Yes! We cover your area."; result.style.color="limegreen"; }
-      else if(/^\d{4}$/.test(input)){ result.textContent="❌ Sorry, we don’t currently cover that postcode."; result.style.color="#ff6961"; }
-      else { result.textContent="ℹ️ Please enter a 4-digit postcode (e.g. 3205)."; result.style.color="#a9b4c0"; }
-    });
-  })();
+      // Promo close (session)
+      const promo=document.getElementById('promo'), close=document.getElementById('promo-close'), KEY='wow-promo-closed';
+      try{ if(sessionStorage.getItem(KEY)==='1') promo.style.display='none'; }catch(e){}
+      close?.addEventListener('click',()=>{ try{sessionStorage.setItem(KEY,'1');}catch(e){}; promo.style.display='none'; });
+    })();
   </script>
 </body>
 </html>

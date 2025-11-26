@@ -12,33 +12,22 @@
     const isDark = () => pref === 'dark' || (pref === 'auto' && mql.matches);
     document.documentElement.setAttribute('data-theme', pref);
     document.documentElement.style.colorScheme = isDark() ? 'dark' : 'light';
-    mql.addEventListener?.('change', () => {
-      if ((localStorage.getItem(KEY) || 'auto') === 'auto') {
-        document.documentElement.style.colorScheme = mql.matches ? 'dark' : 'light';
-      }
-    });
   })();
   </script>
 
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <title>Solo Dog Walking & Boutique Boarding — South Melbourne | The Woof of Walk Street</title>
-  <meta name="description" content="Tired of pack walks? Get one-to-one, 45-minute solo dog walks with GPS routes & photo updates. Plus, calm, single-guest Woof Club Boarding in South Melbourne. New clients: 50% off Unlimited (first month) & 20% off Boarding." />
+  <title>Solo Dog Walking South Melbourne & Boutique Boarding | The Woof of Walk Street</title>
+  <meta name="description" content="Premium one-on-one, 45-minute solo dog walks with GPS route & photo updates in South Melbourne. Calm, single-guest dog boarding (no kennels). New clients: 50% off first walk with code WALK50. Call (03) 7073 1175." />
   <link rel="canonical" href="https://www.woofofwalkstreet.com/" />
   <link rel="icon" href="/images/brand/favicon.ico" />
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Solo Dog Walking & Boutique Boarding — South Melbourne">
-  <meta property="og:description" content="One-dog-only walks, GPS routes & photo updates. Calm, single-guest Woof Club Boarding. 50% off Unlimited (first month) & 20% off Boarding for new clients.">
+  <meta property="og:description" content="One-dog-only walks (GPS & photos) and calm single-guest boarding. Get 50% off your first Casual Walk (code WALK50).">
   <meta property="og:url" content="https://www.woofofwalkstreet.com/">
   <meta property="og:image" content="https://www.woofofwalkstreet.com/images/brand/hero-dog-skyline-1200.webp">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="675">
   <meta property="og:locale" content="en_AU">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Solo Dog Walking & Boutique Boarding — South Melbourne">
-  <meta name="twitter:description" content="One-to-one walks + calm, single-guest Woof Club Boarding. 50% off Unlimited (first month) & 20% off Boarding.">
-  <meta name="twitter:image" content="https://www.woofofwalkstreet.com/images/brand/hero-dog-skyline-1200.webp">
 
   <style>
     :root{
@@ -49,122 +38,136 @@
       --header-blur: saturate(120%) blur(10px);
       --header-bg: rgba(11,14,18,.78);
       --container: 1100px; --radius-lg: 16px; --speed: .22s;
-      --font-heading: 'Space Grotesk', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      --font-body: 'Work Sans', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      --font-heading: 'Space Grotesk', sans-serif;
+      --font-body: 'Work Sans', sans-serif;
     }
 
-    html,body{background:var(--bg);color:var(--text)}
-    img{max-width:100%;height:auto}
-    a{color:inherit}
+    /* Reset & Base */
+    html,body{background:var(--bg);color:var(--text); scroll-behavior: smooth;}
+    img{max-width:100%;height:auto; display:block;}
+    a{color:inherit; transition: color var(--speed);}
+    a:hover{color:var(--brand);}
     .container{max-width:var(--container);margin:0 auto;padding:0 16px}
 
-    /* Type */
     body, p, li, span, button, input, textarea { font-family: var(--font-body); font-weight: 400; letter-spacing: .1px; line-height: 1.58; }
     h1,h2,h3,h4,h5,h6, nav a, .nav-group-btn{ font-family: var(--font-heading); letter-spacing: .25px; }
-    h1{font-weight:700} h2{font-weight:700} .meta{color:var(--muted)}
+    h1{font-weight:700} h2{font-weight:700} .meta{color:var(--muted); font-size: 0.95rem;}
 
-    /* Header */
+    /* Utilities */
+    .gold-edge{ border:1px solid rgba(255,209,102,.55); border-radius:var(--radius-lg); box-shadow:var(--ring); background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.015)); }
+    .section-sweep{ height:4px; border:0; margin:40px 0; background:linear-gradient(90deg, transparent, rgba(255,209,102,.8), transparent); filter:drop-shadow(0 8px 18px rgba(255,209,102,.25)); opacity: 0.7;}
+
+    /* Top Contact Strip */
+    .topbar{background:#0f141b;border-bottom:1px solid rgba(255,255,255,.06); font-size: 0.9rem;}
+    .topbar-inner{max-width:var(--container);margin:0 auto;display:flex;align-items:center;justify-content:center; gap:12px;padding:8px 16px;flex-wrap:wrap}
+    .topbar a{color:#fff;text-decoration:none}
+    .topbar .call{font-weight:900; color:var(--brand);}
+    .topbar .divider{opacity:.35}
+
+    /* Header & Nav */
     .site-header{ position:sticky; top:0; z-index:1000; backdrop-filter:var(--header-blur); -webkit-backdrop-filter:var(--header-blur); background:var(--header-bg); border-bottom:1px solid rgba(255,255,255,.06); }
     .navbar{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
     .brand{display:flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none;font-weight:900}
     .brand img{width:48px;height:48px}
-    .nav-toggle{color:#fff;font-size:1.6rem;margin-left:.5rem;cursor:pointer}
-    @media(min-width:900px){.nav-toggle{display:none}}
-    .nav-links{display:flex;align-items:center;gap:14px}
-    .nav-links a{color:#fff;text-decoration:none;font-weight:700;position:relative}
-    .nav-links a::after{ content:""; position:absolute; left:0; right:0; bottom:-6px; height:2px; background:linear-gradient(90deg, transparent, var(--brand), transparent); transform:scaleX(0); transform-origin:center; transition:transform var(--speed) ease; }
-    .nav-links a:hover::after{ transform:scaleX(1); }
+    
+    .nav-toggle{color:#fff;font-size:1.6rem;margin-left:.5rem;cursor:pointer; display:none;}
+    @media(max-width:899px){ .nav-toggle{display:block;} }
+
+    .nav-links{display:flex;align-items:center;gap:18px}
+    .nav-links a{color:#fff;text-decoration:none;font-weight:600;position:relative}
+    .nav-links a:hover{color:var(--brand);}
     .nav-group{position:relative}
-    .nav-group-btn{background:none;border:0;color:#fff;font:inherit;font-weight:800;cursor:pointer}
-    .nav-group-list{ position:absolute;right:0;top:calc(100% + 8px);min-width:280px;padding:10px; background:#0f141b;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow) }
+    .nav-group-btn{background:none;border:0;color:#fff;font:inherit;font-weight:700;cursor:pointer; padding:0;}
+    .nav-group-btn:hover{color:var(--brand);}
+    .nav-group-list{ position:absolute;right:0;top:calc(100% + 14px);min-width:240px;padding:12px; background:#0f141b;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow); display:grid; gap:8px; z-index: 1001; }
+    .nav-group-list a{ display:block; padding: 6px 8px; border-radius: 6px; }
+    .nav-group-list a:hover{ background: rgba(255,255,255,0.05); }
 
-    /* Mobile menu */
+    /* Mobile Menu Logic */
     @media (max-width: 899px){
-      .nav-links{ position:fixed; inset:64px 0 auto 0; background:#000; display:none; flex-direction:column; gap:12px; padding:16px; border:0; box-shadow:none; overflow-y:auto; z-index:1300; }
+      .nav-links{ position:fixed; inset:64px 0 auto 0; background:#0b0e12; display:none; flex-direction:column; gap:16px; padding:24px; border-bottom:1px solid var(--line); box-shadow:0 10px 40px rgba(0,0,0,0.8); overflow-y:auto; z-index:1300; align-items:flex-start; }
       #nav-toggle:checked ~ .nav-links{ display:flex; }
-      .nav-links.gold-edge{ border:0; box-shadow:none; background:#000; }
-      .nav-group-list{ position:static; min-width:auto; padding:0; border:0; background:#000; box-shadow:none; }
-      .nav-links a, .nav-group-btn{ color:#fff; }
-      .nav-scrim{ display:none; position:fixed; inset:64px 0 0 0; background:rgba(0,0,0,.35); z-index:1200; }
+      .nav-group-list{ position:static; min-width:auto; padding:0 0 0 16px; border:0; background:transparent; box-shadow:none; border-left: 2px solid var(--line); margin-top: 10px; display:none;}
+      .nav-group:hover .nav-group-list { display: grid; } /* Simple hover for mobile grouping */
+      .nav-cta { width: 100%; text-align: center; }
+      .nav-scrim{ display:none; position:fixed; inset:64px 0 0 0; background:rgba(0,0,0,.5); z-index:1200; backdrop-filter: blur(4px); }
       #nav-toggle:checked ~ .nav-scrim{ display:block; }
-      body.menu-open .site-header{ background:#000 !important; backdrop-filter:none !important; -webkit-backdrop-filter:none !important; border-bottom:1px solid rgba(255,255,255,.08); }
     }
-    body.menu-open{ overflow:hidden; }
-    .page-top{padding-top:74px}
-
-    /* Utilities */
-    .gold-edge{ border:1px solid rgba(255,209,102,.55); border-radius:var(--radius-lg); box-shadow:var(--ring); background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.015)); }
-    .section-sweep{ height:4px; border:0; margin:34px 0; background:linear-gradient(90deg, transparent, rgba(255,209,102,.8), transparent); filter:drop-shadow(0 8px 18px rgba(255,209,102,.25)); }
 
     /* Buttons */
-    .cta-buttons{display:flex;gap:10px;flex-wrap:wrap}
-    .btn{ -webkit-tap-highlight-color:transparent; display:inline-flex;align-items:center;justify-content:center; gap:.5rem;padding:12px 18px;border-radius:999px;border:1px solid transparent;text-decoration:none; font-weight:800;letter-spacing:.02em;transition:transform var(--speed),box-shadow var(--speed),background var(--speed),color var(--speed),border-color var(--speed) }
+    .cta-buttons{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{ -webkit-tap-highlight-color:transparent; display:inline-flex;align-items:center;justify-content:center; gap:.5rem;padding:12px 20px;border-radius:999px;border:1px solid transparent;text-decoration:none; font-weight:700;letter-spacing:.02em;transition:all var(--speed); cursor: pointer; }
     .btn-primary{background:var(--brand);color:var(--brand-ink);box-shadow:0 10px 26px rgba(255,209,102,.25)}
-    .btn-primary:hover{transform:translateY(-2px) scale(1.04); box-shadow:0 16px 46px rgba(255,209,102,.35)}
-    .btn-ghost{background:transparent;color:#fff;border-color:#2a3440;border:1px solid #2a3440}
-    .btn-ghost:hover{border-color:#fff;box-shadow:0 10px 28px rgba(0,0,0,.28);transform:translateY(-2px) scale(1.03)}
+    .btn-primary:hover{transform:translateY(-2px) scale(1.02); box-shadow:0 16px 46px rgba(255,209,102,.35); color: var(--brand-ink);}
+    .btn-ghost{background:transparent;color:#fff;border-color:#2a3440;}
+    .btn-ghost:hover{border-color:#fff;box-shadow:0 10px 28px rgba(0,0,0,.28);transform:translateY(-2px); color:#fff;}
     .btn-outline{background:transparent;border-color:var(--brand);color:var(--brand)}
-    .btn-outline:hover{transform:translateY(-2px) scale(1.03); box-shadow:0 16px 40px rgba(255,209,102,.22)}
-    #theme-toggle.btn-ghost{padding:8px 12px;border-radius:999px;line-height:1;display:inline-flex;align-items:center;gap:.4rem}
+    .btn-outline:hover{transform:translateY(-2px); box-shadow:0 16px 40px rgba(255,209,102,.22)}
 
     /* Hero */
-    .hero{ padding:28px 0 18px; background: radial-gradient(1200px 600px at 20% -20%, rgba(255,209,102,.08), transparent 60%), linear-gradient(120deg,#111824,#1b2433,#111824); background-size:200% 200%; animation: heroMove 14s ease-in-out infinite; border-bottom:1px solid rgba(255,255,255,.06) }
+    .hero{ padding:40px 0 20px; background: radial-gradient(1200px 600px at 20% -20%, rgba(255,209,102,.08), transparent 60%), linear-gradient(120deg,#111824,#1b2433,#111824); background-size:200% 200%; animation: heroMove 14s ease-in-out infinite; }
     @keyframes heroMove { 0%,100%{background-position:0% 50%} 50%{background-position:100% 50%} }
-    .hero .section-kicker{letter-spacing:.08em;color:var(--accent);font-weight:800}
-    .hero h1{ font-size:clamp(1.8rem,1.3rem + 2.4vw,2.9rem); margin:.25rem 0 .5rem; letter-spacing:.2px; }
-    .hero .subhead{max-width:70ch;color:#cfd6df}
-    .hero figure{margin:14px 0 0; will-change: transform;}
-    .hero img{width:100%;max-width:min(900px,92vw);height:auto;border-radius:16px;box-shadow:var(--shadow)}
-    @media(min-width:900px){ .hero{padding:34px 0 20px} .hero img{max-height:420px;object-fit:cover}}
+    .hero .section-kicker{letter-spacing:.08em;color:var(--accent);font-weight:800; text-transform: uppercase; font-size: 0.85rem;}
+    .hero h1{ font-size:clamp(2rem,1.5rem + 2.5vw,3.2rem); margin:.5rem 0 1rem; letter-spacing:-0.02em; line-height: 1.15; }
+    .hero .subhead{max-width:65ch;color:#cfd6df; font-size: 1.1rem; margin-bottom: 24px;}
+    .hero img{width:100%; border-radius:12px; box-shadow:var(--shadow)}
 
-    /* Cards / grids */
-    .grid{display:grid;gap:16px}
+    /* Promo Ribbons */
+    .promo-ribbon{ position:relative; z-index:900; background:linear-gradient(135deg,#f5b200,#ffd866,#f5b200); background-size:300% 300%; animation:shimmer 6s ease-in-out infinite; color:var(--brand-ink); border-bottom:1px solid rgba(255,255,255,.06); }
+    @keyframes shimmer { 0%,100%{background-position:0% 50%} 50%{background-position:100% 50%} }
+    .promo-inner{ max-width:var(--container); margin:0 auto; padding:10px 16px; display:flex; gap:12px; align-items:center; justify-content: center; flex-wrap: wrap; text-align: center;}
+    .promo-copy{ font-weight:700; letter-spacing:.2px; font-size: 0.9rem;}
+    .promo-cta{ display:inline-flex; padding:6px 12px; border-radius:999px; background:#111; color:#fff; font-size: 0.8rem; font-weight: 800; text-decoration: none;}
+    .promo-close{ background:none; border:0; font-weight:900; cursor:pointer; color:#111; padding: 0 8px;}
+
+    .impact-ribbon{ background: rgba(255,255,255,0.03); border-bottom: 1px solid var(--line); font-size: 0.9rem;}
+    .impact-inner{ max-width:var(--container); margin:0 auto; padding:8px 16px; display:flex; justify-content:center; align-items:center; gap:8px;}
+
+    /* Feature List */
+    .feature-list{list-style:none;padding:0;margin:0;display:grid;gap:20px; text-align: left;}
+    .feature-item{display:flex;align-items:flex-start;gap:14px;}
+    .feature-icon{font-size:1.6rem; line-height: 1; margin-top: 2px;}
+    .feature-item strong { color: var(--brand); }
+
+    /* Plans Grid */
+    .grid{display:grid;gap:20px; margin-top: 24px;}
     @media(min-width:860px){.grid{grid-template-columns:repeat(3,1fr)}}
-    .plan{position:relative;overflow:hidden;isolation:isolate;padding:18px; transition:transform var(--speed), box-shadow var(--speed);}
-    .plan::after{ content:"";position:absolute;inset:-40% -40% auto auto;width:220px;height:220px;border-radius:50%; background:radial-gradient(closest-side,rgba(255,209,102,.18),transparent 70%);transform:translate(20%,-20%) }
-    .plan:hover{ transform:translateY(-3px) scale(1.015); box-shadow:0 28px 80px rgba(255,209,102,.18); }
-    .plan h3{margin:.2rem 0 .4rem;font-weight:800}
-    .pill{display:inline-block;padding:.28rem .6rem;border-radius:999px;font-size:.82rem;font-weight:800;color:#111;background:var(--brand)}
-    .price{font-weight:900;font-size:1.1rem;margin:.25rem 0 .6rem}
-    .btn-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
-    .featured{box-shadow:0 18px 60px rgba(255,209,102,.18); border: 1px solid rgba(255,209,102,0.4);}
+    .plan{padding:24px; display: flex; flex-direction: column; height: 100%;}
+    .pill{display:inline-block;padding:.25rem .6rem;border-radius:999px;font-size:.75rem;font-weight:800;color:#111;background:var(--brand); text-transform: uppercase;}
+    .price{font-weight:800;font-size:1.5rem;margin:.5rem 0 1rem; color: #fff;}
+    .btn-row{margin-top:auto; padding-top: 16px;}
+    .featured{border-color:var(--brand); box-shadow: 0 0 0 1px var(--brand), var(--shadow);}
 
     /* Footer */
-    .footer-banner img{border-radius:12px}
-    .footer-banner { margin-top: 6px; }
-    .footer-grid{display:grid;gap:16px;padding:18px 0}
-    .footer-grid.compact{ row-gap:12px; column-gap:24px; align-items:start; }
-    @media(min-width:860px){ .footer-grid.compact{ grid-template-columns:1.2fr 1fr 1fr; } }
-    @media(min-width:600px) and (max-width:859px){ .footer-grid.compact{ grid-template-columns:1fr 1fr; } }
-    .footer-col h3{ font-size:1rem; margin:0 0 .4rem; color:#ffd166; }
-    .footlist{ list-style:none; padding:0; margin:0; display:grid; gap:.28rem; }
-    .footlist a{ color:#e8eef5; text-decoration:none; }
-    .footlist a:hover{ text-decoration:underline; }
-    .footer-logo{border-radius:8px}
-    .footer-bottom{padding:12px 0;color:#a9b4c0;border-top:1px solid var(--line);text-align:center}
-    .footer-brand .cta-buttons { margin: .75rem 0 0; display: flex; gap: .5rem; flex-wrap: wrap; }
+    .site-footer{ background:#080a0d; border-top:1px solid var(--line); margin-top: 60px; padding-bottom: 80px; /* Space for sticky CTA */ }
+    .footer-banner { transform: translateY(-30px); margin-bottom: -10px; }
+    .footer-banner img { border-radius: 16px; box-shadow: var(--shadow); border: 1px solid rgba(255,255,255,0.1); }
+    
+    .footer-grid{ display:grid; gap:32px; padding:40px 0; grid-template-columns: 1fr; }
+    @media(min-width: 600px){ .footer-grid{ grid-template-columns: 1fr 1fr; } }
+    @media(min-width: 900px){ .footer-grid{ grid-template-columns: 1.5fr 1fr 1fr 1fr; } }
+    
+    .footer-col h4{ color: var(--brand); font-size: 1rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .footer-links{ list-style:none; padding:0; margin:0; display:flex; flex-direction: column; gap: 8px; }
+    .footer-links a{ color: var(--muted); font-size: 0.95rem; }
+    .footer-links a:hover{ color: #fff; text-decoration: underline; }
+    .footer-bio p { color: var(--muted); font-size: 0.95rem; margin-bottom: 16px; }
 
-    /* Promo + Impact ribbons (kept) */
-    .promo-ribbon{ position:relative; z-index:1100; background:linear-gradient(135deg,#f5b200,#ffd866,#f5b200); background-size:300% 300%; animation:shimmer 6s ease-in-out infinite; color:var(--brand-ink); border-bottom:1px solid rgba(255,255,255,.06); box-shadow:0 14px 40px rgba(0,0,0,.18); isolation:isolate; }
-    @keyframes shimmer { 0%,100%{background-position:0% 50%} 50%{background-position:100% 50%} }
-    .promo-inner{ max-width:var(--container); margin:0 auto; padding:10px 14px; display:grid; grid-template-columns:auto 1fr auto auto; gap:10px; align-items:center; }
-    .promo-dog{ display:none; width:28px; height:28px; border-radius:50%; }
-    @media (min-width:720px){ .promo-dog{ display:block; } }
-    .promo-copy{ font-weight:800; letter-spacing:.2px; line-height:1.3; }
-    .promo-copy strong{ background:#111; color:#fff; padding:2px 8px; border-radius:999px; margin-right:8px; box-shadow:0 6px 18px rgba(0,0,0,.25); }
-    .promo-cta{ display:inline-flex; align-items:center; justify-content:center; text-decoration:none; white-space:nowrap; font-weight:900; padding:10px 14px; border-radius:999px; background:#111; color:#fff; border:1px solid rgba(255,255,255,.15); transition: transform var(--speed), box-shadow var(--speed), background var(--speed), color var(--speed); }
-    .promo-cta:hover{ transform: translateY(-2px) scale(1.04); box-shadow: 0 16px 46px rgba(0,0,0,.35); }
-    .promo-close{ appearance:none; border:0; background:transparent; color:#111; font:inherit; font-weight:900; width:34px; height:34px; border-radius:50%; display:grid; place-items:center; transition: background var(--speed), transform var(--speed); }
-    .promo-close:hover{ background: rgba(0,0,0,.08); transform: rotate(10deg); }
-    .ribbon-gap{ height:10px; background:linear-gradient(180deg, rgba(0,0,0,.24), rgba(0,0,0,0)); border-bottom:1px solid rgba(255,255,255,.06); box-shadow: inset 0 -1px 0 rgba(0,0,0,.18); }
-    .impact-ribbon{ background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border-bottom: 1px solid var(--line); color: var(--text); }
-    .impact-inner{ max-width: var(--container); margin: 0 auto; padding: 10px 14px; display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
-    .impact-emoji{ filter: drop-shadow(0 6px 16px rgba(255,209,102,.25)); }
-    .impact-cta{ margin-left:auto; text-decoration:none; font-weight:900; white-space:nowrap; color: var(--brand); border:1px solid rgba(255,209,102,.45); padding:8px 12px; border-radius:999px; transition: transform var(--speed), box-shadow var(--speed), background var(--speed), color var(--speed); }
-    .impact-cta:hover{ background: var(--brand); color: var(--brand-ink); box-shadow: 0 16px 46px rgba(255,209,102,.2); transform: translateY(-2px) scale(1.03); }
+    .footer-bottom{ padding:20px 0; border-top:1px solid var(--line); text-align:center; color: var(--muted); font-size: 0.85rem; }
 
-    /* Sticky bottom CTA */
-    .sticky-cta{ position:fixed; left:0; right:0; bottom:0; z-index:9999; display:flex; gap:10px; justify-content:center; padding:12px; background:rgba(0,0,0,.8); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); border-top:1px solid rgba(255,255,255,.08); }
+    /* Sticky CTA */
+    .sticky-cta{ position:fixed; left:0; right:0; bottom:0; z-index:9999; display:flex; gap:10px; justify-content:center; padding:12px 16px; background:rgba(11,14,18,.9); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); border-top:1px solid rgba(255,255,255,.1); box-shadow: 0 -10px 30px rgba(0,0,0,0.5); }
+    .sticky-cta .btn { padding: 10px 16px; font-size: 0.9rem; }
+    @media (max-width: 500px) { .sticky-cta .hide-mobile { display: none; } }
+
+    /* FAQ Details */
+    details { border-bottom: 1px solid var(--line); padding: 12px 0; }
+    summary { cursor: pointer; font-weight: 600; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: '+'; font-size: 1.2rem; color: var(--brand); font-weight: 300; }
+    details[open] summary::after { content: '-'; }
+    details > div { padding-top: 12px; color: var(--muted); }
+
   </style>
 
   <script type="application/ld+json">
@@ -175,379 +178,273 @@
     "name":"The Woof of Walk Street",
     "url":"https://www.woofofwalkstreet.com",
     "image":"https://www.woofofwalkstreet.com/images/brand/logo-lockup-gold.webp",
-    "telephone":"(03) 7073 1175",
+    "telephone":"+61370731175",
     "priceRange":"$$",
-    "description":"Premium solo dog walks and single-guest Woof Club Boarding. GPS-tracked, photo updates, and stress-free care.",
     "address":{"@type":"PostalAddress","addressLocality":"South Melbourne","addressRegion":"VIC","addressCountry":"AU"},
-    "areaServed":["South Melbourne","Albert Park","Port Melbourne","Middle Park","Southbank","South Yarra"],
-    "sameAs":["https://instagram.com/woofofwalkstreet","https://facebook.com/woofofwalkstreet","https://x.com/woofofwalkstreet"]
+    "areaServed":["South Melbourne","Albert Park","Port Melbourne","Middle Park","Southbank","South Yarra"]
   }
   </script>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Service",
-    "serviceType":"Dog Walking", 
-    "provider":{"@id":"https://www.woofofwalkstreet.com/#business"},
-    "areaServed":["South Melbourne","Albert Park","Port Melbourne","Middle Park","Southbank","South Yarra"],
-    "description":"45-minute solo dog walks with GPS route and photo updates. One-dog-only handling.",
-    "offers":{
-      "@type":"Offer",
-      "url":"https://www.woofofwalkstreet.com/book-dog-walk/",
-      "priceCurrency":"AUD",
-      "availability":"https://schema.org/InStock",
-      "priceValidUntil":"2025-11-30"
-    }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Service",
-    "serviceType":"Dog Boarding", 
-    "provider":{"@id":"https://www.woofofwalkstreet.com/#business"},
-    "areaServed":["South Melbourne","Albert Park","Port Melbourne","Middle Park","Southbank","South Yarra"],
-    "description":"Calm, single-guest Woof Club Boarding in a home environment. No kennels, personalised care, photo updates.",
-    "offers":{
-      "@type":"Offer",
-      "url":"https://www.woofofwalkstreet.com/book-boarding.html",
-      "availability":"https://schema.org/InStock",
-      "priceCurrency":"AUD"
-    }
-  }
-  </script>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"OfferCatalog","name":"Dog Walking Memberships","url":"https://www.woofofwalkstreet.com/memberships.html","itemListElement":[{"@type":"Offer","name":"Starter Membership","url":"https://www.woofofwalkstreet.com/membership-starter.html","price":"340","priceCurrency":"AUD","category":"Dog Walking","availability":"https://schema.org/InStock","description":"4 solo 45-minute walks per month. One-dog-only, GPS + photos."},{"@type":"Offer","name":"Growth Membership","url":"https://www.woofofwalkstreet.com/membership-growth.html","price":"800","priceCurrency":"AUD","category":"Dog Walking","availability":"https://schema.org/InStock","description":"10 solo 45-minute walks per month. One-dog-only, GPS + photos."},{"@type":"Offer","name":"Unlimited Membership","url":"https://www.woofofwalkstreet.com/unlimited-dog-walks.html","price":"1500","priceCurrency":"AUD","category":"Dog Walking","availability":"https://schema.org/InStock","description":"Weekday solo walks (up to 21/month, fair use). First month 50% off for new members."}]}
-  </script>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebSite","url":"https://www.woofofwalkstreet.com/","potentialAction":{"@type":"SearchAction","target":"https://www.woofofwalkstreet.com/search.html?q={search_term_string}","query-input":"required name=search_term_string"}}
-  </script>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do you offer group walks in South Melbourne?","acceptedAnswer":{"@type":"Answer","text":"No. We only offer solo dog walks for safety, attention and a calmer experience."}},{"@type":"Question","name":"Where do you walk?","acceptedAnswer":{"@type":"Answer","text":"Locally across South Melbourne, Albert Park Lake, Port Melbourne, Middle Park, Southbank and South Yarra."}},{"@type":"Question","name":"Do you send updates?","acceptedAnswer":{"@type":"Answer","text":"Yes — every walk and boarding stay includes photo updates (walks also include GPS routes)."}},{"@type":"Question","name":"Do you offer boarding?","acceptedAnswer":{"@type":"Answer","text":"Yes — our Woof Club Boarding is strictly single-guest in a calm, home environment. No kennels."}}]}
-  </script>
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'AW-17527927259');
-  </script>
-
-  <link rel="preload" as="image" href="/images/brand/hero-dog-skyline-1200.webp" imagesrcset="/images/brand/hero-dog-skyline-800.webp 800w, /images/brand/hero-dog-skyline-1200.webp 1200w, /images/brand/hero-dog-skyline-1600.webp 1600w" imagesizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px">
 </head>
 
 <body>
 
-  <div id="promo" class="promo-ribbon promo--edge" role="region" aria-label="Promo: 50% off">
-    <div class="promo-inner container">
-      <img class="promo-dog" src="/images/brand/dog-in-suit.webp" alt="" width="28" height="28" decoding="async" />
-      <span class="promo-copy">
-        <strong>50% OFF</strong> Unlimited Daily Walks — 45-minute solo walks · GPS tracked · Photo updates <strong>· Ends 30 Nov</strong>
-      </span>
-      <a href="/unlimited-dog-walks.html" class="promo-cta">Learn More →</a>
-      <button id="promo-close" class="promo-close" aria-label="Dismiss promo">✕</button>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <span>Questions?</span>
+      <a class="call" href="tel:+61370731175">Call (03) 7073 1175</a>
+      <span class="divider">·</span>
+      <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a>
     </div>
   </div>
 
-  <div class="ribbon-gap" aria-hidden="true"></div>
-
-  <div class="impact-ribbon" role="note" aria-label="Walks that do more: 10% donated">
+  <div class="impact-ribbon">
     <div class="impact-inner">
-      <span class="impact-emoji" aria-hidden="true">💛</span>
-      <strong>Walks That Do More:</strong>
-      When you choose us, you’re not just booking a dog walk — you’re helping rescue dogs too.
-      <strong>We donate 10% of profits</strong> to local shelters.
-      <a class="impact-cta" href="/community.html">See our impact →</a>
+      <span>💛</span>
+      <span><strong>Walks That Do More:</strong> We donate <strong>10% of profits</strong> to local rescue.</span>
     </div>
   </div>
 
-  <header class="site-header" role="banner">
-    <div class="navbar container" role="navigation" aria-label="Main">
-      <a class="brand" href="/" aria-label="Go to home">
-        <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="56" height="56">
+  <header class="site-header">
+    <div class="navbar container">
+      <a class="brand" href="/">
+        <img src="/images/brand/logo-lockup-gold.webp" alt="Logo" width="48" height="48">
         <strong>The Woof of Walk Street</strong>
       </a>
 
       <input id="nav-toggle" type="checkbox" hidden>
       <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</label>
 
-      <nav class="nav-links gold-edge" aria-label="Primary" style="padding:10px;border-radius:12px">
-        <section class="nav-group">
-          <button class="nav-group-btn" aria-expanded="false" aria-controls="nav-services">Services ▾</button>
-          <ul id="nav-services" class="nav-group-list" hidden>
-            <li><a href="/services.html">All Services</a></li>
-            <li><a href="/dog-walker.html">Dog Walking Services</a></li>
-            <li><a href="/casual-dog-walking-south-melbourne.html">Casual Walking</a></li>
-            <li><a href="/memberships.html">Memberships — Compare Plans</a></li>
-            <li><a href="/unlimited-dog-walks.html">Unlimited Membership</a></li>
-            <li><a href="/boarding-services.html">Woof Club Boarding</a></li>
-          </ul>
-        </section>
-
+      <nav class="nav-links">
+        <div class="nav-group">
+          <button class="nav-group-btn">Services ▾</button>
+          <div class="nav-group-list">
+            <a href="/dog-walker.html">Dog Walking</a>
+            <a href="/boarding-services.html">Boutique Boarding</a>
+            <a href="/memberships.html">Memberships</a>
+          </div>
+        </div>
         <a href="/about.html">About</a>
-
-        <section class="nav-group">
-          <button class="nav-group-btn" aria-expanded="false" aria-controls="nav-areas">Areas ▾</button>
-          <ul id="nav-areas" class="nav-group-list" hidden>
-            <li><a href="/service-areas.html">All Service Areas</a></li>
-            <li><a href="/dog-walking-south-melbourne.html">South Melbourne</a></li>
-            <li><a href="/dog-walker-albert-park.html">Albert Park</a></li>
-            <li><a href="/dog-walker-port-melbourne.html">Port Melbourne</a></li>
-            <li><a href="/dog-walker-middle-park.html">Middle Park</a></li>
-            <li><a href="/dog-walker-southbank.html">Southbank</a></li>
-            <li><a href="/dog-walker-south-yarra.html">South Yarra</a></li>
-          </ul>
-        </section>
-
-        <a href="/testimonials.html">Testimonials</a>
-        <a href="/gallery.html">Gallery</a>
-        <a href="/blog/index.html">Blog</a>
-        <a href="/faq.html">FAQs</a>
-        <a href="/search.html">Search</a>
-
-        <button id="theme-toggle" class="btn btn-ghost" type="button" aria-pressed="false" aria-label="Toggle color theme" title="Theme: Auto">🌗 Auto</button>
-
-        <a class="btn btn-outline nav-cta" href="/book-dog-walk/index.html" onclick="gtag && gtag('event','cta_click',{label:'header_book_walks'});">Book Walks</a>
-        <a class="btn btn-primary nav-cta" href="/book-boarding.html?coupon=BOARDING20" onclick="gtag && gtag('event','cta_click',{label:'header_book_boarding'});">Book Boarding</a>
+        <div class="nav-group">
+          <button class="nav-group-btn">Areas ▾</button>
+          <div class="nav-group-list">
+            <a href="/dog-walking-south-melbourne.html">South Melbourne</a>
+            <a href="/dog-walker-albert-park.html">Albert Park</a>
+            <a href="/dog-walker-port-melbourne.html">Port Melbourne</a>
+            <a href="/service-areas.html">View All Areas</a>
+          </div>
+        </div>
+        <a href="/faq.html">FAQ</a>
+        <a class="btn btn-outline nav-cta" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031912" target="_blank">Free Call</a>
+        <a class="btn btn-primary nav-cta" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931&coupon=WALK50" target="_blank">Book 50% Off</a>
       </nav>
-
-      <div class="nav-scrim" aria-hidden="true"></div>
+      <div class="nav-scrim"></div>
     </div>
   </header>
+
+  <div id="promo" class="promo-ribbon">
+    <div class="promo-inner">
+      <span class="promo-copy">
+        ✨ <strong>New Client Special:</strong> 50% OFF your first Casual Walk. Use code <strong>WALK50</strong>.
+      </span>
+      <a href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931&coupon=WALK50" class="promo-cta" target="_blank">Claim Offer →</a>
+      <button id="promo-close" class="promo-close" aria-label="Close">✕</button>
+    </div>
+  </div>
 
   <main class="page-top">
 
     <section class="hero">
       <div class="container" data-reveal>
-        <span class="section-kicker">South Melbourne</span>
-        <h1>Solo Dog Walking, Boutique Boarding & Pet Sitting Services in South Melbourne</h1>
+        <span class="section-kicker">South Melbourne & Surrounds</span>
+        <h1>Solo Dog Walking & Boutique Boarding — GPS Proof, Calm Care</h1>
         <p class="subhead">
-          <a href="/dog-walker.html"><strong>45-minute solo dog walks</strong></a> with GPS routes and photo updates.
-          No pack walks. No car ferrying — we walk locally so your dog stays relaxed.<br>
-          Prefer a weekend away? Our <a href="/boarding-services.html"><strong>Woof Club Boarding</strong></a> hosts just one guest at a time in a quiet home environment.
-          Serving <strong>South Melbourne</strong>, <strong>Albert Park</strong>, <strong>Port Melbourne</strong>, <strong>Middle Park</strong>, <strong>Southbank</strong> and <strong>South Yarra</strong>.
+          <a href="/dog-walker.html" style="color:#fff;text-decoration:underline;text-decoration-color:var(--brand)">45-minute solo walks</a> with GPS routes & photo updates. No pack walks. No vans.
+          Just predictable, one-on-one care in your local neighbourhood.
         </p>
 
-        <div class="cta-buttons" style="margin-top:10px">
-          <a href="/book-dog-walk/" class="btn btn-primary">Book 50% Off Walk</a>
-          <a href="/unlimited-dog-walks.html" class="btn btn-ghost">Unlimited — 50% Off First Month</a>
-          <a href="/book-boarding.html?coupon=BOARDING20" class="btn btn-ghost">Book Boarding — 20% Off</a>
+        <div class="cta-buttons" style="margin-top:24px">
+          <a href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931&coupon=WALK50" target="_blank" class="btn btn-primary">Claim 50% Off First Walk</a>
+          <a href="/boarding-services.html" class="btn btn-ghost">Explore Boarding</a>
         </div>
-        <p class="meta" style="margin:.8rem 0 0; font-size: 0.9rem;">
-          <a href="/contact.html" style="text-decoration:underline; color:var(--muted);">Have questions? Contact the Woof Team</a>
-        </p>
 
-        <p class="meta" style="margin:.5rem 0 0">⭐ Loved by South Melbourne cavoodles & retrievers. Fully insured & police-checked. GPS proof every time.</p>
+        <p class="meta" style="margin: 16px 0 24px;">⭐ Loved by local Oodles & Retrievers. Fully Insured. Police Checked.</p>
 
-        <figure class="gold-edge" style="display:inline-block;padding:6px;margin-top:12px" data-parallax>
-          <img src="/images/brand/hero-dog-skyline-1200.webp" srcset="/images/brand/hero-dog-skyline-800.webp 800w, /images/brand/hero-dog-skyline-1200.webp 1200w, /images/brand/hero-dog-skyline-1600.webp 1600w" sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px" alt="Solo dog walking service in South Melbourne with skyline view" width="1200" height="675" loading="eager" decoding="async" fetchpriority="high">
+        <figure class="gold-edge" style="padding:6px;">
+          <picture>
+            <source srcset="/images/brand/hero-dog-skyline-1600.webp 1600w, /images/brand/hero-dog-skyline-1200.webp 1200w" media="(min-width: 900px)">
+            <source srcset="/images/brand/hero-dog-skyline-800.webp 800w">
+            <img src="/images/brand/hero-dog-skyline-1200.webp" alt="Happy dog on a solo walk in South Melbourne with city skyline" width="1200" height="675" loading="eager" fetchpriority="high">
+          </picture>
         </figure>
       </div>
-      <hr class="section-sweep" aria-hidden="true">
     </section>
 
     <section>
-      <div class="container" data-reveal>
-        <h2>Why Solo Walks Are Better for Anxious & Reactive Dogs</h2>
-        <div class="gold-edge" style="padding:18px">
+      <div class="container" style="padding-top: 40px;">
+        <h2>Why Solo Walks Beat Pack Walks</h2>
+        <div class="gold-edge" style="padding:24px; margin-top:16px;">
           <ul class="feature-list">
-            <li class="feature-item"><span class="feature-icon">🐾</span><div><strong>One-to-One Attention:</strong> Your dog isn’t a number in a group. There’s time to sniff, settle and move at a natural pace. No van pickups or crowded routes.</div></li>
-            <li class="feature-item"><span class="feature-icon">📍</span><div><strong>Consistent, Local Routes:</strong> We keep arousal low and manners steady by walking in familiar, local streets, not ferrying dogs to random parks.</div></li>
-            <li class="feature-item"><span class="feature-icon">📸</span><div><strong>Transparent Proof:</strong> After every session, you receive a <strong>GPS route</strong> and <strong>photo updates</strong> so you can see the rhythm for yourself.</div></li>
+            <li class="feature-item"><span class="feature-icon">🐾</span><div><strong>One-to-One Attention:</strong> Your dog sets the pace. No waiting for others, no crowded vans.</div></li>
+            <li class="feature-item"><span class="feature-icon">📍</span><div><strong>Local Routes:</strong> We walk in your neighbourhood to keep anxiety low and familiarity high.</div></li>
+            <li class="feature-item"><span class="feature-icon">📸</span><div><strong>Total Transparency:</strong> GPS map route + photos sent to your phone after every single walk.</div></li>
           </ul>
-          <p style="margin-top:20px; text-align:center;">
-             <a href="/dog-walker.html" style="font-weight:bold;">Learn more about our strict solo dog walking policy and safety standards</a>.
-          </p>
-          <div class="cta-buttons" style="margin-top:20px; justify-content:center;">
-            <a href="/dog-walker.html" class="btn btn-primary">Explore Dog Walking</a>
-            <a href="/casual-dog-walking-south-melbourne.html" class="btn btn-ghost">Prefer casual?</a>
+          <div class="cta-buttons" style="margin-top:24px; justify-content:center;">
+            <a href="/dog-walker.html" class="btn btn-primary">See Walking Details</a>
+            <a href="/service-areas.html" class="btn btn-ghost">Check My Suburb</a>
           </div>
         </div>
       </div>
-      <hr class="section-sweep" aria-hidden="true">
+      <hr class="section-sweep">
     </section>
 
     <section>
-      <div class="container" data-reveal>
-        <h2>Boutique Dog Boarding (No Kennels) — Calm Home Vibes</h2>
-        <div class="gold-edge" style="padding:18px">
-          <p>
-            Our <strong>Woof Club Boarding</strong> hosts a single guest for a quiet, predictable stay — ideal for dogs who relax with routine. No kennels, no rowdy playrooms. Just a home setup, gentle walks, and photo updates.
-          </p>
-          <ul class="meta" style="margin:.4rem 0 0; padding-left:1.1rem">
-            <li>One dog at a time — personalised care</li>
-            <li>Home environment with familiar rhythms</li>
-            <li>Photo updates for peace of mind</li>
-            <li>Local walks around South Melbourne & neighbours</li>
-          </ul>
-          <div class="cta-buttons" style="margin-top:10px">
-            <a href="/boarding-services.html" class="btn btn-primary">About Boarding</a>
-            <a href="/book-boarding.html?coupon=BOARDING20" class="btn btn-ghost">Book Boarding — 20% Off</a>
-          </div>
-        </div>
-      </div>
-      <hr class="section-sweep" aria-hidden="true">
-    </section>
-
-    <section>
-      <div class="container" data-reveal>
-        <h2>Dog Walking Memberships — Built Around Your Dog</h2>
-        <p class="meta" style="max-width:60ch">Priority schedule, solo walks, GPS tracking and photo updates. Choose a rhythm that fits your dog.</p>
-        <div class="grid">
-          <article class="plan gold-edge" data-reveal>
-            <span class="pill">Starter · 4 / month</span>
-            <h3>Starter Membership</h3>
-            <p class="meta">A steady intro to our one-dog-only walking (great for 1×/week).</p>
-            <p class="price">A$340 / month</p>
-            <div class="btn-row"><a href="/membership-starter.html" class="btn btn-primary">View Starter</a></div>
-          </article>
-          <article class="plan gold-edge featured" data-reveal>
-            <span class="pill" style="background:var(--accent);color:#111">Growth · 10 / month</span>
-            <h3>Growth Membership</h3>
-            <p class="meta">Consistent rhythm for happier pups (approx 2-3×/week).</p>
-            <p class="price">A$800 / month</p>
-            <div class="btn-row"><a href="/membership-growth.html" class="btn btn-primary">View Growth</a><small style="display:block;width:100%;margin-top:4px">Most Popular</small></div>
-          </article>
-          <article class="plan gold-edge" data-reveal>
-            <span class="pill">Unlimited · Daily</span>
-            <h3>Unlimited Membership</h3>
-            <p class="meta">The ultimate weekday routine. A solo walk, every weekday.</p>
-            <p class="price">A$1500 / month</p>
-            <div class="btn-row"><a href="/unlimited-dog-walks.html" class="btn btn-primary">View Unlimited</a><span style="font-size:0.85rem; font-weight:bold; color:var(--brand);">50% Off First Month</span></div>
-          </article>
-        </div>
-        <div style="margin-top:20px; text-align:center;"><a href="/memberships.html" class="btn btn-ghost">Compare All Memberships</a></div>
-      </div>
-      <hr class="section-sweep" aria-hidden="true">
-    </section>
-
-    <section class="faq section" id="faq">
       <div class="container">
-        <div class="wrap">
-          <h2>Common Questions</h2>
-          <details><summary>Do you walk more than one dog at a time?</summary><div><p>No — all walks are strictly solo. We never group unfamiliar dogs or use car-ferrying.</p></div></details>
-          <details><summary>How long is each walk?</summary><div><p>Each session is a full 45 minutes on foot (transport/prep excluded).</p></div></details>
-          <details><summary>What updates do I get?</summary><div><p>GPS route, photo update and quick notes after each session.</p></div></details>
-          <details><summary>Which areas do you cover?</summary><div><p>We focus on the inner Melbourne area, including South Melbourne, Albert Park, Port Melbourne, Middle Park and Southbank. See our <a href="/service-areas.html">full list of areas</a>.</p></div></details>
+        <h2>Boutique Boarding (No Kennels)</h2>
+        <div class="gold-edge" style="padding:24px; margin-top:16px;">
+          <p style="font-size:1.1rem; margin-bottom:16px;">
+            Strictly <strong>single-guest home boarding</strong>. Your dog stays in a real home with a consistent carer. No cages, no loud facilities. Just a calm holiday for them while you enjoy yours.
+          </p>
+          <div class="cta-buttons">
+            <a href="/boarding-services.html" class="btn btn-primary">About Woof Club Boarding</a>
+            <a href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031912" target="_blank" class="btn btn-ghost">Free Meet & Greet Call</a>
+          </div>
+        </div>
+      </div>
+      <hr class="section-sweep">
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Memberships</h2>
+        <p class="meta">Consistent routines create calmer dogs. Secure your spot.</p>
+        <div class="grid">
+          <article class="plan gold-edge">
+            <span class="pill">Starter · 4/mo</span>
+            <p class="price">A$340 <span style="font-size:0.8rem; font-weight:400; color:var(--muted)">/ month</span></p>
+            <p class="meta">Great for a weekly adventure or top-up exercise.</p>
+            <div class="btn-row"><a href="/membership-starter.html" class="btn btn-ghost" style="width:100%">View Starter</a></div>
+          </article>
+          
+          <article class="plan gold-edge featured">
+            <span class="pill" style="background:var(--accent);color:#111">Growth · 10/mo</span>
+            <p class="price">A$800 <span style="font-size:0.8rem; font-weight:400; color:var(--muted)">/ month</span></p>
+            <p class="meta">Consistent rhythm (2-3x week). Best value for busy owners.</p>
+            <div class="btn-row">
+              <a href="/membership-growth.html" class="btn btn-primary" style="width:100%">View Growth</a>
+              <small style="display:block; text-align:center; margin-top:8px; color:var(--accent); font-weight:700;">Most Popular</small>
+            </div>
+          </article>
+          
+          <article class="plan gold-edge">
+            <span class="pill">Unlimited</span>
+            <p class="price">A$1500 <span style="font-size:0.8rem; font-weight:400; color:var(--muted)">/ month</span></p>
+            <p class="meta">Every weekday. The ultimate routine for high-energy pups.</p>
+            <div class="btn-row"><a href="/unlimited-dog-walks.html" class="btn btn-ghost" style="width:100%">View Unlimited</a></div>
+          </article>
+        </div>
+      </div>
+      <hr class="section-sweep">
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Common Questions</h2>
+        <div style="margin-top:16px;">
+          <details><summary>Do you walk multiple dogs at once?</summary><div><p>Never. We are strictly solo-only to ensure safety and quality.</p></div></details>
+          <details><summary>Where do you walk?</summary><div><p>We stick to your local neighbourhood in South Melbourne, Albert Park, Port Melbourne, etc., to avoid car sickness and anxiety.</p></div></details>
+          <details><summary>Do I get photos?</summary><div><p>Yes! You receive a "Pupdate" after every session containing a GPS map of the route, photos, and notes on how they went.</p></div></details>
         </div>
       </div>
     </section>
 
   </main>
 
-  <div class="sticky-cta" role="region" aria-label="Quick booking">
-    <a class="btn btn-primary" href="/book-dog-walk/">Book Walks</a>
-    <a class="btn btn-primary" href="/book-boarding.html?coupon=BOARDING20">Book Boarding</a>
-    <a href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031912" target="_blank" class="btn btn-outline acuity-embed-button">Chat with the Woof Team (10 min)</a>
-    <link rel="stylesheet" href="https://embed.acuityscheduling.com/embed/button/37607219.css" id="acuity-button-styles" />
-    <script src="https://embed.acuityscheduling.com/embed/button/37607219.js" async></script>
+  <div class="sticky-cta">
+    <a class="btn btn-primary" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931&coupon=WALK50" target="_blank">Book 50% Off Walk</a>
+    <a class="btn btn-outline hide-mobile" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031912" target="_blank">Free 10-min Call</a>
+    <a class="btn btn-ghost" href="/boarding-services.html" style="border-color:rgba(255,255,255,0.2)">Boarding</a>
   </div>
 
-  <footer class="site-footer" role="contentinfo">
+  <footer class="site-footer">
     <div class="container footer-banner">
       <picture>
-        <source srcset="/images/brand/footer-banner-1600x600.webp" media="(min-width: 768px)">
-        <img class="gold-edge" src="/images/brand/footer-banner-800x300.webp" alt="Happy dogs in Melbourne" width="800" height="300" loading="lazy">
+        <source srcset="/images/brand/footer-banner-1600x600.webp" media="(min-width: 900px)">
+        <img src="/images/brand/footer-banner-800.webp" alt="Happy dog walker and dog in park" width="800" height="300" loading="lazy" style="width:100%; height:auto;">
       </picture>
     </div>
 
-    <div class="container footer-grid">
-      <section class="footer-brand">
-        <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="60" height="60" loading="lazy">
-        <p><strong>The Woof of Walk Street</strong><br>
-          <a class="footer-map" href="https://maps.app.goo.gl/YnEoSPwhGocUZyWL9?g_st=ipc" target="_blank" rel="noopener">South Melbourne, VIC</a> · Mon–Fri 7am–7pm<br>
-          <a href="tel:(03)70731175">(03) 7073 1175</a> · <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a>
-        </p>
-        <div class="footer-socials">
-          <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram"><img src="/images/social/instagram.svg" alt="" width="24" height="24"></a>
-          <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook"><img src="/images/social/facebook.svg" alt="" width="24" height="24"></a>
-          <a href="https://x.com/woofofwalkstreet" aria-label="X"><img src="/images/social/twitter.svg" alt="" width="24" height="24"></a>
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-col footer-bio">
+          <a href="/" class="brand" style="margin-bottom:16px; display:inline-flex;">
+            <img src="/images/brand/logo-lockup-gold.webp" alt="Woof of Walk Street Logo" width="40" height="40">
+            <span>Woof of Walk Street</span>
+          </a>
+          <p>Premium solo dog walking and boutique boarding in South Melbourne. Police checked, insured, and dedicated to one-on-one care.</p>
+          <div style="display:flex; gap:12px;">
+            <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram">IG</a>
+            <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook">FB</a>
+          </div>
         </div>
-        <p class="cta-buttons">
-          <a class="btn btn-primary" href="/book-dog-walk/">Book Walks</a>
-          <a class="btn btn-primary" href="/book-boarding.html?coupon=BOARDING20">Book Boarding</a>
-        </p>
-      </section>
 
-      <nav class="footer-col" aria-label="Services">
-        <h3>Services</h3>
-        <ul>
-          <li><a href="/services.html">All Services</a></li>
-          <li><a href="/dog-walker.html">Dog Walking Services</a></li>
-          <li><a href="/casual-dog-walking-south-melbourne.html">Casual Dog Walking</a></li>
-          <li><a href="/unlimited-dog-walks.html">Unlimited Membership</a></li>
-          <li><a href="/boarding-services.html">Woof Club Boarding</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-        </ul>
-      </nav>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="/dog-walker.html">Solo Dog Walking</a></li>
+            <li><a href="/boarding-services.html">Home Boarding</a></li>
+            <li><a href="/casual-dog-walking-south-melbourne.html">Casual Booking</a></li>
+            <li><a href="/memberships.html">Memberships</a></li>
+          </ul>
+        </div>
 
-      <nav class="footer-col" aria-label="Local Areas">
-        <h3>Local Areas</h3>
-        <ul class="footlist">
-          <li><a href="/dog-walker-albert-park.html">Albert Park</a></li>
-          <li><a href="/dog-walker-middle-park.html">Middle Park</a></li>
-          <li><a href="/dog-walker-port-melbourne.html">Port Melbourne</a></li>
-          <li><a href="/dog-walking-south-melbourne.html">South Melbourne</a></li>
-          <li><a href="/dog-walker-southbank.html">Southbank</a></li>
-          <li><a href="/dog-walker-south-yarra.html">South Yarra</a></li>
-        </ul>
-      </nav>
+        <div class="footer-col">
+          <h4>Service Areas</h4>
+          <ul class="footer-links">
+            <li><a href="/dog-walking-south-melbourne.html">South Melbourne</a></li>
+            <li><a href="/dog-walker-albert-park.html">Albert Park</a></li>
+            <li><a href="/dog-walker-port-melbourne.html">Port Melbourne</a></li>
+            <li><a href="/dog-walker-middle-park.html">Middle Park</a></li>
+            <li><a href="/service-areas.html">View All Suburbs</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/faq.html">FAQ</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/privacy.html">Privacy Policy</a></li>
+            <li><a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        &copy; <script>document.write(new Date().getFullYear())</script> The Woof of Walk Street. All rights reserved. ABN 12 345 678 910.
+      </div>
     </div>
-
-    <div class="container footer-geo">
-      Solo Dog Walking & Boutique Boarding across <strong>South Melbourne</strong>, <strong>Albert Park</strong>, <strong>Port Melbourne</strong>, <strong>Middle Park</strong> and <strong>Southbank</strong>.
-    </div>
-
-    <div class="container footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
-    <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
-
-    <script>
-      document.querySelectorAll('.collapsible .collapse-btn').forEach(btn=>{
-        const list = document.getElementById(btn.getAttribute('aria-controls'));
-        const sync = (open)=>{ btn.setAttribute('aria-expanded', String(open)); list.hidden = !open; };
-        sync(false);
-        btn.addEventListener('click', ()=>{ const open = btn.getAttribute('aria-expanded')==='false'; sync(open); });
-      });
-    </script>
   </footer>
 
   <script>
-    (function () {
-      const btn  = document.querySelector('.nav-group-btn[aria-controls="nav-services"]');
-      const list = document.getElementById('nav-services');
-      if (btn && list){
-        const sync = () => { list.hidden = btn.getAttribute('aria-expanded') !== 'true'; };
-        sync();
-        btn.addEventListener('click', () => {
-          const open = btn.getAttribute('aria-expanded') === 'true';
-          btn.setAttribute('aria-expanded', String(!open));
-          sync();
-        });
-        document.addEventListener('click', (e) => {
-          if (!btn.contains(e.target) && !list.contains(e.target)) { btn.setAttribute('aria-expanded', 'false'); sync(); }
-        }, { capture: true });
-        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { btn.setAttribute('aria-expanded', 'false'); sync(); } });
-      }
-      const areaBtn = document.querySelector('.nav-group-btn[aria-controls="nav-areas"]');
-      const areaList = document.getElementById('nav-areas');
-      if (areaBtn && areaList){
-        const sync = () => { areaList.hidden = areaBtn.getAttribute('aria-expanded') !== 'true'; };
-        sync();
-        areaBtn.addEventListener('click', () => {
-          const open = areaBtn.getAttribute('aria-expanded') === 'true';
-          areaBtn.setAttribute('aria-expanded', String(!open)); sync();
-        });
-        document.addEventListener('click', (e) => {
-          if (!areaBtn.contains(e.target) && !areaList.contains(e.target)) { areaBtn.setAttribute('aria-expanded', 'false'); sync(); }
-        }, { capture: true });
-      }
+    // Close mobile menu on link click
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('nav-toggle').checked = false;
+      });
+    });
 
-      // Promo close (session)
-      const promo=document.getElementById('promo'), close=document.getElementById('promo-close'), KEY='wow-promo-closed';
-      try{ if(sessionStorage.getItem(KEY)==='1') promo.style.display='none'; }catch(e){}
-      close?.addEventListener('click',()=>{ try{sessionStorage.setItem(KEY,'1');}catch(e){}; promo.style.display='none'; });
-    })();
+    // Close promo banner
+    const promo = document.getElementById('promo');
+    const closeBtn = document.getElementById('promo-close');
+    if(promo && closeBtn){
+      closeBtn.addEventListener('click', () => {
+        promo.style.display = 'none';
+      });
+    }
   </script>
+
 </body>
 </html>

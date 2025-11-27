@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <!-- Theme boot -->
   <script>
   (function () {
     const key = 'wow-theme';
@@ -25,6 +26,10 @@
   <meta name="description" content="Compare premium solo dog walking memberships in South Melbourne — Starter (4 walks), Growth (10 walks) and Unlimited (Mon–Fri). GPS tracking & photo updates." />
   <link rel="canonical" href="https://www.woofofwalkstreet.com/memberships.html" />
   <link rel="icon" href="/images/brand/favicon.ico" />
+
+  <!-- Mobile theme-color to stop auto over-darkening -->
+  <meta name="theme-color" content="#0f1318" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 
   <!-- (Optional) keep your external CSS if other pages use it -->
   <link rel="stylesheet" href="/css/mini.css">
@@ -71,18 +76,20 @@
 
     .m-wrap{max-width:1100px;margin:24px auto 44px;padding:0 16px}
 
-    /* Plan cards (shared) */
+    /* Plan cards (shared) – POPPIER VERSION */
     .plan{
       position:relative;overflow:hidden;isolation:isolate;
-      background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));
-      border-radius:16px;border:2px solid #e6e1cf;padding:18px;box-shadow:0 10px 24px rgba(0,0,0,.18);
+      background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
+      border-radius:16px;border:2px solid rgba(255,209,102,.35);padding:22px;
+      box-shadow:0 18px 36px rgba(0,0,0,.35), inset 0 0 0 1px rgba(255,255,255,.05);
       transition:transform .2s ease, box-shadow .2s ease;
     }
     .plan::after{content:"";position:absolute;inset:-40% -40% auto auto;width:220px;height:220px;border-radius:50%;
       background:radial-gradient(closest-side,rgba(255,209,102,.18),transparent 70%);transform:translate(20%,-20%)}
-    .plan:hover{transform:translateY(-2px);box-shadow:0 0 22px rgba(245,178,0,.30)}
+    .plan:hover{transform:translateY(-3px);box-shadow:0 22px 46px rgba(0,0,0,.38)}
+    .plan:focus-within{outline:3px solid var(--accent);outline-offset:2px}
     .plan h3{margin:.2rem 0 .4rem;font-weight:900}
-    .plan .pill{display:inline-block;padding:.28rem .6rem;border-radius:999px;font-size:.82rem;font-weight:800;color:#111;background:var(--brand)}
+    .plan .pill{display:inline-block;padding:.28rem .6rem;border-radius:999px;font-size:.82rem;font-weight:800;color:#fff;background:rgba(255,209,102,.18);border:1px solid rgba(255,209,102,.45)}
     .plan .meta{color:var(--muted)}
     .plan .price{font-weight:900;font-size:1.1rem;margin:.25rem 0 .6rem; line-height: 1.2;}
     .plan .btn-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
@@ -99,21 +106,21 @@
     }
     @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.7; } 100% { opacity: 1; } }
 
-    /* Elevate Growth & Unlimited */
-    .plan--elite{border-color:var(--elite);box-shadow:0 0 0 2px rgba(245,178,0,.15) inset}
+    /* Tier accents (kept but stronger contrast) */
+    .plan--ultra{ border-color:#ffd166; box-shadow: inset 0 0 0 3px rgba(255,209,102,.35), 0 18px 36px rgba(0,0,0,.35); }
+    .plan--elite{ border-color:#f5b200; box-shadow: inset 0 0 0 3px rgba(245,178,0,.28), 0 18px 36px rgba(0,0,0,.35); }
+    .plan--elite-tier{ border-color:var(--accent); box-shadow: inset 0 0 0 3px rgba(90, 242, 198, .35), 0 18px 36px rgba(0,0,0,.35); }
+
     .plan--elite::before{
       content:"ELITE"; position:absolute; top:10px; right:-34px; transform:rotate(35deg);
       background:linear-gradient(90deg,#583b00,#f5b200,#583b00); color:#111; font-weight:900; font-size:.72rem;
       padding:.28rem 2.2rem; border-radius:999px; box-shadow:0 6px 20px rgba(245,178,0,.25);
     }
-    .plan--ultra{border-color:#ffd166; box-shadow:0 0 0 4px rgba(255,209,102,.30) inset}
     .plan--ultra::before{
       content:"PREMIER"; position:absolute; top:10px; right:-40px; transform:rotate(35deg);
       background:linear-gradient(90deg,#6a4b00,#ffd166,#6a4b00); color:#111; font-weight:900; font-size:.72rem;
       padding:.28rem 2.6rem; border-radius:999px; box-shadow:0 6px 22px rgba(255,209,102,.28);
     }
-    /* New Top Tier - ELITE TIER */
-    .plan--elite-tier{border-color:var(--accent); box-shadow:0 0 0 4px rgba(90, 242, 198, .35) inset}
     .plan--elite-tier::before{
       content:"ULTIMATE"; position:absolute; top:10px; right:-45px; transform:rotate(35deg);
       background:linear-gradient(90deg, #186b51, var(--accent), #186b51); color:var(--bg); font-weight:900; font-size:.72rem;
@@ -165,25 +172,37 @@
     }
     .plans-track::-webkit-scrollbar{height:8px}
     .plans-track::-webkit-scrollbar-thumb{background:#2a3440;border-radius:999px}
-    .plans-track .plan{
-      scroll-snap-align:center;
-      min-width:min(480px, 92vw);
-    }
-    .plans-nav{
-      position:absolute; inset:0; pointer-events:none;
-      display:flex; justify-content:space-between; align-items:center;
-    }
-    .plans-btn{
-      pointer-events:auto; border:0; width:42px; height:42px; border-radius:50%;
+    .plans-track .plan{scroll-snap-align:center; min-width:min(480px, 92vw);}
+    .plans-nav{position:absolute; inset:0; pointer-events:none; display:flex; justify-content:space-between; align-items:center;}
+    .plans-btn{pointer-events:auto; border:0; width:42px; height:42px; border-radius:50%;
       background:rgba(255,255,255,.1); color:#fff; cursor:pointer;
-      box-shadow:0 10px 24px rgba(0,0,0,.25); backdrop-filter:saturate(120%) blur(6px);
-    }
+      box-shadow:0 10px 24px rgba(0,0,0,.25); backdrop-filter:saturate(120%) blur(6px);}
     .plans-btn:hover{transform:scale(1.04)}
     .plans-dots{display:flex; gap:8px; justify-content:center; margin-top:8px}
     .plans-dot{width:10px; height:10px; border-radius:50%; border:0; background:#2a3440}
     .plans-dot[aria-current="true"]{background:var(--accent)}
     .btn-link{font-weight:700; color:var(--muted); text-decoration:underline}
     .btn-link:hover{color:#fff}
+
+    /* Mobile legibility and lighter dark tokens */
+    @media (max-width: 768px) {
+      :root {
+        --bg:#0e131a;      /* brightened */
+        --card:#121923;    /* brightened */
+        --line:#273140;    /* brightened */
+      }
+      .hero { 
+        background:
+          radial-gradient(900px 480px at 20% -20%, rgba(255,209,102,.10), transparent 60%),
+          linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,0));
+      }
+      .hero img { filter: brightness(1.05) contrast(1.02); }
+      .plans-track .plan{ min-width:min(92vw, 520px); }
+      .plan h3{ font-size:1.15rem; }
+      .plan .price{ font-size:1.05rem; }
+      .plan ul{ font-size:.98rem; }
+      .plans-btn{ background:rgba(0,0,0,.35); }
+    }
   </style>
 
   <meta property="og:type" content="website">
@@ -372,7 +391,7 @@
       <div class="plans-carousel" id="plans-carousel" aria-label="Memberships carousel">
         <div class="plans-track" role="listbox" aria-live="polite">
           <!-- ELITE -->
-          <article class="plan plan--elite-tier" id="elite-plan-card" style="border-color:#5af2c6; box-shadow:0 0 0 4px rgba(90, 242, 198, .35) inset">
+          <article class="plan plan--elite-tier" id="elite-plan-card">
             <img src="/images/memberships/membership-elite-tier-suit.webp" alt="ELITE Membership — guaranteed 7-day walks and peak holiday boarding (Platinum Frame)" width="1200" height="800" loading="lazy">
             <span class="pill" style="background:var(--accent); color:var(--bg)">ELITE · 7 Days/Week</span>
             <h3><span aria-hidden="true" style="color:var(--accent); margin-right:5px">💎</span> ELITE Membership</h3>
@@ -392,7 +411,7 @@
             <div class="btn-row">
               <a class="btn btn-primary" href="/membership-elite.html">View ELITE</a>
               <a class="btn btn-outline" href="/membership-elite.html#rewards">See perks →</a>
-              <a class="btn-link" href="/casual-dog-walking-south-melbourne.html#casual-pricing">See casual pricing</a>
+              <a class="btn-link" href="/membership-casual.html">See casual pricing</a>
             </div>
           </article>
 
@@ -414,7 +433,7 @@
             <div class="btn-row">
               <a class="btn btn-primary" href="/unlimited-dog-walks.html">View Unlimited</a>
               <a class="btn btn-outline" href="/unlimited-dog-walks.html#perks">See perks →</a>
-              <a class="btn-link" href="/casual-dog-walking-south-melbourne.html#casual-pricing">See casual pricing</a>
+              <a class="btn-link" href="/membership-casual.html">See casual pricing</a>
             </div>
           </article>
 
@@ -435,7 +454,7 @@
             <div class="btn-row">
               <a class="btn btn-primary" href="/membership-growth.html">View Growth</a>
               <a class="btn btn-outline" href="/membership-growth.html#rewards">See perks →</a>
-              <a class="btn-link" href="/casual-dog-walking-south-melbourne.html#casual-pricing">See casual pricing</a>
+              <a class="btn-link" href="/membership-casual.html">See casual pricing</a>
             </div>
           </article>
 
@@ -456,7 +475,7 @@
             <div class="btn-row">
               <a class="btn btn-primary" href="/membership-starter.html">View Starter</a>
               <a class="btn btn-outline" href="/membership-starter.html#rewards">See perks →</a>
-              <a class="btn-link" href="/casual-dog-walking-south-melbourne.html#casual-pricing">See casual pricing</a>
+              <a class="btn-link" href="/membership-casual.html">See casual pricing</a>
             </div>
           </article>
         </div>
@@ -476,7 +495,7 @@
         </div>
       </div>
 
-      <p style="margin-top:.75rem">Prefer ad-hoc? Try <a href="/casual-dog-walking-south-melbourne.html#casual-pricing">Casual Dog Walking in South Melbourne</a> — same solo, GPS-tracked service without a plan.</p>
+      <p style="margin-top:.75rem">Prefer ad-hoc? Try <a href="/membership-casual.html">Casual Dog Walking in South Melbourne</a> — same solo, GPS-tracked service without a plan.</p>
     </section>
 
     <section class="m-wrap faq section" aria-labelledby="faq-heading">

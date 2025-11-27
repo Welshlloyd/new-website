@@ -79,9 +79,18 @@
     .hero-overlay h1{font-size:clamp(1.8rem,1.2rem + 2vw,2.6rem);font-weight:900;color:#fff;margin:0 0 8px}
     .hero-overlay p{color:#eee;font-size:1.05rem;margin:0 0 16px}
     .deadline{display:inline-flex;gap:.5rem;align-items:center;font-weight:900;color:#111;background:var(--brand);padding:.35rem .8rem;border-radius:999px;box-shadow:0 4px 10px rgba(255,209,102,.5)}
+    
+    /* NEW: Sticky CTA styles */
+    .sticky-cta{
+      position:fixed;left:12px;right:12px;bottom:12px;z-index:1100;
+      background:#111824ee;border:1px solid #2a3440;box-shadow:0 10px 30px rgba(0,0,0,.4);
+      border-radius:16px;display:flex;gap:10px;justify-content:center;align-items:center;
+      padding:10px;backdrop-filter: blur(8px);
+    }
+    .sticky-cta .btn{padding:10px 16px;font-size:1rem;}
+    @media (min-width:860px){.sticky-cta{display:none}} /* Hide on desktop */
   </style>
 
-  <!-- Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KP5LVKN6X3"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -91,7 +100,6 @@
     gtag('config','AW-17527927259');  /* Google Ads */
   </script>
 
-  <!-- Schema -->
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
     {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
@@ -119,7 +127,6 @@
   }
   </script>
 
-  <!-- Social -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Book a 45-Minute Solo Dog Walk — 50% Off Until 31 Dec 2025">
   <meta property="og:description" content="One-dog-only, GPS-tracked 45-minute walks. Use code WALK50 — offer ends 31 December 2025.">
@@ -133,7 +140,6 @@
 </head>
 
 <body>
-  <!-- Promo ribbon: Casual focus only -->
   <div id="promo" class="promo-ribbon" role="region" aria-label="Promo: 50% off casual walks">
     <div class="promo-inner">
       <img class="promo-dog" src="/images/brand/dog-in-suit.webp" alt="" width="28" height="28" decoding="async" />
@@ -143,7 +149,6 @@
     </div>
   </div>
 
-  <!-- Header -->
   <header class="site-header">
     <div class="navbar container" role="navigation" aria-label="Main">
       <a class="brand" href="/" aria-label="Go to home">
@@ -171,13 +176,11 @@
         <a href="/faq.html">FAQs</a>
         <a href="/search.html">Search</a>
 
-        <!-- Remove TTP "Book Now" – keep page focused on Acuity -->
         <a class="btn btn-primary nav-cta" href="#" id="nav-book">Book Casual Walk</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero -->
   <section style="padding:0;border-bottom:none">
     <div class="hero-banner" style="position:relative">
       <img src="/images/brand/promo-banner-dog-in-suit.png" alt="Solo Dog Walking South Melbourne — 50% Off Casual Walks">
@@ -244,6 +247,12 @@
       </div>
     </section>
   </main>
+
+  <div class="sticky-cta" role="region" aria-label="Book your 50% off casual walk">
+    <a class="btn btn-primary" data-plan="casual_50" id="sticky-book" href="#">
+      Book 50% Off Walk
+    </a>
+  </div>
 
   <footer class="site-footer" role="contentinfo" style="margin-top:22px">
     <div class="container footer-grid">
@@ -348,7 +357,8 @@
       }
 
       // Attach to all CTAs
-      ["promo-cta","nav-book","hero-book","main-book"].forEach(wire);
+      // ADDED "sticky-book" HERE
+      ["promo-cta","nav-book","hero-book","main-book", "sticky-book"].forEach(wire);
 
       // Close promo ribbon
       const promo = document.getElementById('promo');

@@ -33,8 +33,8 @@
         imagesrcset="/images/brand/hero-dog-skyline-800.webp 800w, /images/brand/hero-dog-skyline-1200.webp 1200w, /images/brand/hero-dog-skyline-1600.webp 1600w"
         imagesizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px">
 
-  <!-- Updated preload to the new Unlimited card path -->
-  <link rel="preload" as="image" href="/images/memberships/unlimited_card_clean.webp">
+  <!-- Preload one membership card for faster first paint -->
+  <link rel="preload" as="image" href="/images/memberships/membership-unlimited-golden.webp">
 
   <style>
     :root{
@@ -89,7 +89,7 @@
     .brand img{width:48px;height:48px}
 
     .nav-links{display:flex;align-items:center;gap:16px}
-    .nav-links a{padding:8px 6px;text-decoration:none;color:#fff;opacity:.9}
+    .nav-links a{padding:8px 6px;text-decoration:none;color:#fff;opacity:.95}
     .nav-links a:hover{opacity:1}
 
     /* Services dropdown */
@@ -109,8 +109,17 @@
       .nav-scrim{display:block;position:fixed;inset:0;background:rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:opacity .25s}
       #nav-toggle:checked ~ .nav-scrim{opacity:1;pointer-events:auto}
       .nav-group{width:100%}
-      .nav-group-list{position:relative;top:auto;right:auto;display:block;background:transparent;border:none;box-shadow:none;padding:4px 0}
+
+      /* ✅ Make dropdown SOLID and readable on mobile */
+      .nav-group-list{
+        position:relative; top:auto; right:auto; display:block;
+        background: var(--card);           /* solid background */
+        border:1px solid rgba(255,255,255,.12);
+        box-shadow:none; padding:6px; border-radius:12px;
+        backdrop-filter:none; -webkit-backdrop-filter:none;
+      }
       .nav-group-btn{width:100%;text-align:left}
+      .nav-group-list a{color:#fff; opacity:1}
     }
 
     .cta-buttons{display:flex;gap:10px;flex-wrap:wrap}
@@ -357,35 +366,35 @@
         <p class="meta text-center">Priority scheduling, consistent walkers, and member-only perks.</p>
 
         <div class="membership-cards">
-          <!-- UPDATED PATHS: Unlimited -->
+          <!-- Unlimited -->
           <a class="card-link" href="/unlimited-dog-walks.html" aria-label="View Unlimited Membership - $1500/month">
             <picture>
-              <source type="image/webp" srcset="/images/memberships/unlimited_card_clean.webp">
-              <img src="/images/memberships/unlimited_card_clean.png" width="800" height="1200" loading="lazy" decoding="async" alt="Unlimited Membership card - Daily Walks">
+              <source type="image/webp" srcset="/images/memberships/membership-unlimited-golden.webp">
+              <img src="/images/memberships/membership-unlimited-golden.png" width="800" height="1200" loading="lazy" decoding="async" alt="Unlimited Membership card - Daily Walks">
             </picture>
           </a>
 
-          <!-- UPDATED PATHS: Growth -->
+          <!-- Growth -->
           <a class="card-link" href="/membership-growth.html" aria-label="View Growth Membership - $800/month">
             <picture>
-              <source type="image/webp" srcset="/images/memberships/growth_card_clean.webp">
-              <img src="/images/memberships/growth_card_clean.png" width="800" height="1200" loading="lazy" decoding="async" alt="Growth Membership card - 10 Walks/Month">
+              <source type="image/webp" srcset="/images/memberships/membership-growth-silver.webp">
+              <img src="/images/memberships/membership-growth-silver.png" width="800" height="1200" loading="lazy" decoding="async" alt="Growth Membership card - 10 Walks/Month">
             </picture>
           </a>
 
-          <!-- UPDATED PATHS: Starter -->
+          <!-- Starter -->
           <a class="card-link" href="/membership-starter.html" aria-label="View Starter Membership - $340/month">
             <picture>
-              <source type="image/webp" srcset="/images/memberships/starter_card_clean.webp">
-              <img src="/images/memberships/starter_card_clean.png" width="800" height="1200" loading="lazy" decoding="async" alt="Starter Membership card - 4 Walks/Month">
+              <source type="image/webp" srcset="/images/memberships/membership-starter-bronze.webp">
+              <img src="/images/memberships/membership-starter-bronze.png" width="800" height="1200" loading="lazy" decoding="async" alt="Starter Membership card - 4 Walks/Month">
             </picture>
           </a>
 
-          <!-- UPDATED PATHS: Elite -->
+          <!-- Elite -->
           <a class="card-link" href="/membership-elite.html" aria-label="View Elite Concierge Service - $5000/month">
             <picture>
-              <source type="image/webp" srcset="/images/memberships/elite_card_clean.webp">
-              <img src="/images/memberships/elite_card_clean.png" width="800" height="1200" loading="lazy" decoding="async" alt="Elite Concierge Service card - 7 Days/Week">
+              <source type="image/webp" srcset="/images/memberships/membership-elite-platinum.webp">
+              <img src="/images/memberships/membership-elite-platinum.png" width="800" height="1200" loading="lazy" decoding="async" alt="Elite Concierge Service card - 7 Days/Week">
             </picture>
           </a>
         </div>
@@ -400,7 +409,7 @@
           <ul class="feature-list" style="list-style:none;padding:0;margin-bottom:0">
             <li style="margin-bottom:18px">🐾 <strong>One-to-one attention:</strong> Time to sniff, settle and move at a natural pace. No crowded routes.</li>
             <li style="margin-bottom:18px">📍 <strong>Local, predictable routes:</strong> Low arousal, steady manners — no car-ferrying to random parks.</li>
-            [cite_start]<li style="margin-bottom:0">📸 <strong>Transparent proof:</strong> <strong>GPS route</strong> and <strong>photos</strong> after every session[cite: 16].</li>
+            <li style="margin-bottom:0">📸 <strong>Transparent proof:</strong> <strong>GPS route</strong> and <strong>photos</strong> after every session.</li>
           </ul>
           <div class="cta-buttons" style="margin-top:25px;justify-content:center">
             <a href="/services.html" class="btn btn-primary">See All Service Options</a>
@@ -431,7 +440,7 @@
             <li>Single-guest stays — <strong>personalised care</strong></li>
             <li><strong>Home environment</strong>, not a commercial kennel</li>
             <li>Photos for peace of mind</li>
-            [cite_start]<li><strong>Fully Insured</strong> & Complimentary pickup within our core suburbs[cite: 181].</li>
+            <li><strong>Fully Insured</strong> & Complimentary pickup within our core suburbs.</li>
           </ul>
           <div class="cta-buttons" style="margin-top:25px">
             <a href="/boarding-services.html" class="btn btn-primary">About Boarding</a>
@@ -491,7 +500,7 @@
               Do you do group walks? <span style="color:var(--brand)">+</span>
             </summary>
             <div style="padding:0 15px 15px;color:var(--muted);font-size:.95rem">
-              [cite_start]No. We specialise exclusively in <strong>solo, one-on-one walks</strong>[cite: 3, 179]. This ensures your dog gets 100% of our attention, safety, and training reinforcement without the stress of a pack.
+              No. We specialise exclusively in <strong>solo, one-on-one walks</strong>. This ensures your dog gets 100% of our attention, safety, and training reinforcement without the stress of a pack.
             </div>
           </details>
 
@@ -500,7 +509,7 @@
               Are you insured and police checked? <span style="color:var(--brand)">+</span>
             </summary>
             <div style="padding:0 15px 15px;color:var(--muted);font-size:.95rem">
-              Yes. [cite_start]All our walkers are fully insured, police-checked, and trained in canine first aid[cite: 181]. We treat your home and pet with the highest level of security and respect.
+              Yes. All our walkers are fully insured, police-checked, and trained in canine first aid.
             </div>
           </details>
 
@@ -509,7 +518,7 @@
               How do I know the walk actually happened? <span style="color:var(--brand)">+</span>
             </summary>
             <div style="padding:0 15px 15px;color:var(--muted);font-size:.95rem">
-              Transparency is our promise. [cite_start]You receive a <strong>GPS map of the route</strong>, timestamped photos, and a bathroom/mood update sent to your phone immediately after every session[cite: 16].
+              You receive a <strong>GPS map of the route</strong>, timestamped photos, and a bathroom/mood update after every session.
             </div>
           </details>
 

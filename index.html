@@ -33,9 +33,8 @@
         imagesrcset="/images/brand/hero-dog-skyline-800.webp 800w, /images/brand/hero-dog-skyline-1200.webp 1200w, /images/brand/hero-dog-skyline-1600.webp 1600w"
         imagesizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px">
 
-  <link rel="preload" as="image" href="/images/unlimited_card-1200.webp"
-        imagesrcset="/images/unlimited_card-800.webp 800w, /images/unlimited_card-1200.webp 1200w, /images/unlimited_card-1600.webp 1600w"
-        imagesizes="(max-width: 700px) 90vw, 420px">
+  <!-- Updated preload to the new Unlimited card path -->
+  <link rel="preload" as="image" href="/images/memberships/unlimited_card_clean.webp">
 
   <style>
     :root{
@@ -201,38 +200,10 @@
 
   <script type="application/ld+json">
   [
-    {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "Elite Membership",
-      "description": "7 days/week dog walking and concierge service.",
-      "brand": { "@type": "Brand", "name": "The Woof of Walk Street" },
-      "offers": { "@type": "Offer", "price": "5000", "priceCurrency": "AUD", "availability": "https://schema.org/InStock" }
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "Unlimited Membership",
-      "description": "Daily solo dog walking service (weekdays).",
-      "brand": { "@type": "Brand", "name": "The Woof of Walk Street" },
-      "offers": { "@type": "Offer", "price": "1500", "priceCurrency": "AUD", "availability": "https://schema.org/InStock" }
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "Growth Membership",
-      "description": "10 solo dog walks per month package.",
-      "brand": { "@type": "Brand", "name": "The Woof of Walk Street" },
-      "offers": { "@type": "Offer", "price": "800", "priceCurrency": "AUD", "availability": "https://schema.org/InStock" }
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "Starter Membership",
-      "description": "4 solo dog walks per month starter package.",
-      "brand": { "@type": "Brand", "name": "The Woof of Walk Street" },
-      "offers": { "@type": "Offer", "price": "340", "priceCurrency": "AUD", "availability": "https://schema.org/InStock" }
-    }
+    {"@context":"https://schema.org","@type":"Product","name":"Elite Membership","description":"7 days/week dog walking and concierge service.","brand":{"@type":"Brand","name":"The Woof of Walk Street"},"offers":{"@type":"Offer","price":"5000","priceCurrency":"AUD","availability":"https://schema.org/InStock"}},
+    {"@context":"https://schema.org","@type":"Product","name":"Unlimited Membership","description":"Daily solo dog walking service (weekdays).","brand":{"@type":"Brand","name":"The Woof of Walk Street"},"offers":{"@type":"Offer","price":"1500","priceCurrency":"AUD","availability":"https://schema.org/InStock"}},
+    {"@context":"https://schema.org","@type":"Product","name":"Growth Membership","description":"10 solo dog walks per month package.","brand":{"@type":"Brand","name":"The Woof of Walk Street"},"offers":{"@type":"Offer","price":"800","priceCurrency":"AUD","availability":"https://schema.org/InStock"}},
+    {"@context":"https://schema.org","@type":"Product","name":"Starter Membership","description":"4 solo dog walks per month starter package.","brand":{"@type":"Brand","name":"The Woof of Walk Street"},"offers":{"@type":"Offer","price":"340","priceCurrency":"AUD","availability":"https://schema.org/InStock"}}
   ]
   </script>
   
@@ -241,17 +212,11 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [{
-      "@type": "Question",
-      "name": "Do you do group walks?",
-      "acceptedAnswer": { "@type": "Answer", "text": "No. We specialise exclusively in solo, one-on-one walks to ensure safety and low arousal." }
-    }, {
-      "@type": "Question",
-      "name": "Are you insured and police checked?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes. All walkers are fully insured, police-checked, and trained in canine first aid." }
-    }, {
-      "@type": "Question",
-      "name": "How do I know the walk actually happened?",
-      "acceptedAnswer": { "@type": "Answer", "text": "You receive a GPS map of the route and photos sent to your phone after every walk." }
+      "@type": "Question","name":"Do you do group walks?","acceptedAnswer":{"@type":"Answer","text":"No. We specialise exclusively in solo, one-on-one walks to ensure safety and low arousal."}
+    },{
+      "@type": "Question","name":"Are you insured and police checked?","acceptedAnswer":{"@type":"Answer","text":"Yes. All walkers are fully insured, police-checked, and trained in canine first aid."}
+    },{
+      "@type": "Question","name":"How do I know the walk actually happened?","acceptedAnswer":{"@type":"Answer","text":"You receive a GPS map of the route and photos sent to your phone after every walk."}
     }]
   }
   </script>
@@ -335,11 +300,6 @@
           <div class="countdown" id="countdown-timer">⏳ Offer ends in: <span id="days">00</span>d <span id="hours">00</span>h</div>
         </div>
 
-        <div class="cta-buttons">
-          <a href="/book-dog-walk/?coupon=WALK50" class="btn btn-sale">Claim 50% Off First Solo Walk</a>
-          <a href="/book-boarding/?coupon=BOARDING20" class="btn btn-primary">Book 20% Off Boarding Stay</a>
-        </div>
-
         <p class="meta" style="margin-top:12px;font-size:.85rem">Valid for new customers until Dec 31st.</p>
 
         <figure class="gold-edge" style="display:inline-block;padding:6px;margin-top:24px">
@@ -397,39 +357,35 @@
         <p class="meta text-center">Priority scheduling, consistent walkers, and member-only perks.</p>
 
         <div class="membership-cards">
+          <!-- UPDATED PATHS: Unlimited -->
           <a class="card-link" href="/unlimited-dog-walks.html" aria-label="View Unlimited Membership - $1500/month">
             <picture>
-              <source type="image/webp"
-                      srcset="/images/unlimited_card-400.webp 400w, /images/unlimited_card-800.webp 800w, /images/unlimited_card-1200.webp 1200w, /images/unlimited_card-1600.webp 1600w"
-                      sizes="(max-width: 700px) 90vw, 420px">
-              <img src="/images/unlimited_card-800.png" width="800" height="1200" loading="lazy" decoding="async" alt="Unlimited Membership card - Daily Walks">
+              <source type="image/webp" srcset="/images/memberships/unlimited_card_clean.webp">
+              <img src="/images/memberships/unlimited_card_clean.png" width="800" height="1200" loading="lazy" decoding="async" alt="Unlimited Membership card - Daily Walks">
             </picture>
           </a>
 
+          <!-- UPDATED PATHS: Growth -->
           <a class="card-link" href="/membership-growth.html" aria-label="View Growth Membership - $800/month">
             <picture>
-              <source type="image/webp"
-                      srcset="/images/growth_card-400.webp 400w, /images/growth_card-800.webp 800w, /images/growth_card-1200.webp 1200w, /images/growth_card-1600.webp 1600w"
-                      sizes="(max-width: 700px) 90vw, 420px">
-              <img src="/images/growth_card-800.png" width="800" height="1200" loading="lazy" decoding="async" alt="Growth Membership card - 10 Walks/Month">
+              <source type="image/webp" srcset="/images/memberships/growth_card_clean.webp">
+              <img src="/images/memberships/growth_card_clean.png" width="800" height="1200" loading="lazy" decoding="async" alt="Growth Membership card - 10 Walks/Month">
             </picture>
           </a>
 
+          <!-- UPDATED PATHS: Starter -->
           <a class="card-link" href="/membership-starter.html" aria-label="View Starter Membership - $340/month">
             <picture>
-              <source type="image/webp"
-                      srcset="/images/starter_card-400.webp 400w, /images/starter_card-800.webp 800w, /images/starter_card-1200.webp 1200w, /images/starter_card-1600.webp 1600w"
-                      sizes="(max-width: 700px) 90vw, 420px">
-              <img src="/images/starter_card-800.png" width="800" height="1200" loading="lazy" decoding="async" alt="Starter Membership card - 4 Walks/Month">
+              <source type="image/webp" srcset="/images/memberships/starter_card_clean.webp">
+              <img src="/images/memberships/starter_card_clean.png" width="800" height="1200" loading="lazy" decoding="async" alt="Starter Membership card - 4 Walks/Month">
             </picture>
           </a>
 
+          <!-- UPDATED PATHS: Elite -->
           <a class="card-link" href="/membership-elite.html" aria-label="View Elite Concierge Service - $5000/month">
             <picture>
-              <source type="image/webp"
-                      srcset="/images/elite_card-400.webp 400w, /images/elite_card-800.webp 800w, /images/elite_card-1200.webp 1200w, /images/elite_card-1600.webp 1600w"
-                      sizes="(max-width: 700px) 90vw, 420px">
-              <img src="/images/elite_card-800.png" width="800" height="1200" loading="lazy" decoding="async" alt="Elite Concierge Service card - 7 Days/Week">
+              <source type="image/webp" srcset="/images/memberships/elite_card_clean.webp">
+              <img src="/images/memberships/elite_card_clean.png" width="800" height="1200" loading="lazy" decoding="async" alt="Elite Concierge Service card - 7 Days/Week">
             </picture>
           </a>
         </div>

@@ -1,468 +1,423 @@
 <!DOCTYPE html>
 <html lang="en-AU">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- 1. TITLE: Boarding Focus for Middle Park -->
-  <title>Boutique Dog Boarding Middle Park | $150/Night All-Inclusive | Woof Club</title>
+    <title>Boutique Dog Boarding Middle Park | $150/Night All-Inclusive | Woof Club</title>
 
-  <!-- 2. META DESCRIPTION: Boarding Offer Focus for Middle Park -->
-  <meta name="description" content="Premium, one-dog-only boarding in Middle Park for $150/night, including pick-up/drop-off, daily walks, food, and insurance. New clients get 20% off with BOARD20." />
+    <meta name="description" content="Premium, one-dog-only boarding in Middle Park for $150/night, including pick-up/drop-off, daily walks, food, and insurance. New clients get 20% off with BOARD20." />
 
-  <link rel="canonical" href="https://www.woofofwalkstreet.com/dog-boarding-middle-park.html" />
-  <meta name="robots" content="index,follow,max-image-preview:large" />
-  <link rel="icon" href="/images/brand/favicon.ico" />
+  <link rel="canonical" href="https://www.woofofwalkstreet.com/dog-boarding-middle-park.html" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="icon" href="/images/brand/favicon.ico" />
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Boutique Dog Boarding Middle Park — All-Inclusive ($150/Night)">
-  <meta property="og:description" content="Home-style, solo dog boarding in Middle Park with daily walks and all food/insurance included. Use BOARD20 for 20% off." />
-  <meta property="og:url" content="https://www.woofofwalkstreet.com/dog-boarding-middle-park.html">
-  <!-- Use a relevant boarding image for Middle Park -->
-  <meta property="og:image" content="https://www.woofofwalkstreet.com/images/pages/dog-boarding/dog-middle-park-home.jpg">
-  <meta property="og:locale" content="en_AU">
-  <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:type" content="website">
+  <meta property="og:title" content="Boutique Dog Boarding Middle Park — All-Inclusive ($150/Night)">
+  <meta property="og:description" content="Home-style, solo dog boarding in Middle Park with daily walks and all food/insurance included. Use BOARD20 for 20% off." />
+  <meta property="og:url" content="https://www.woofofwalkstreet.com/dog-boarding-middle-park.html">
+    <meta property="og:image" content="https://www.woofofwalkstreet.com/images/pages/dog-boarding/dog-middle-park-home.jpg">
+  <meta property="og:locale" content="en_AU">
+  <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="stylesheet" href="/css/mini.css">
-  <link rel="stylesheet" href="/css/mini.dark.css">
-  <link rel="stylesheet" href="/css/mini.light.css">
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/mini.css">
+  <link rel="stylesheet" href="/css/mini.dark.css">
+  <link rel="stylesheet" href="/css/mini.light.css">
+  <link rel="stylesheet" href="/css/styles.css">
 
-  <style>
-    /* Custom styles for this page */
-    .hero img{border:3px solid var(--brand); box-shadow:0 12px 30px rgba(0,0,0,.18)}
-    .list-check{padding-left:1.1rem}
-    .list-check li{margin:.35rem 0}
-    .list-dash{padding-left:1.1rem; list-style:disc}
-    .list-dash li{margin:.3rem 0}
-    .badge-row .badge{margin-right:.35rem}
+  <style>
+    /* Custom styles for this page */
+    .hero img{border:3px solid var(--brand); box-shadow:0 12px 30px rgba(0,0,0,.18)}
+    .list-check{padding-left:1.1rem}
+    .list-check li{margin:.35rem 0}
+    .list-dash{padding-left:1.1rem; list-style:disc}
+    .list-dash li{margin:.3rem 0}
+    .badge-row .badge{margin-right:.35rem}
 
-    /* Price Banner (high visibility) */
-    .price-banner{
-      background:var(--brand);
-      color:var(--bg);
-      padding:15px 20px;
-      border-radius:8px;
-      text-align:center;
-      margin-top:20px;
-      font-size:1.15rem;
-      font-weight:700;
-    }
-    .price-banner a{
-      color:var(--bg);
-      font-weight:600;
-      text-decoration:underline;
-    }
+    /* Dedicated Boarding Promo Banner (High visibility) */
+    .boarding-promo-banner{
+      background:linear-gradient(45deg, #FF6F61, #FFD166); /* Warm, high-contrast gradient */
+      color:#111;
+      padding:18px 25px;
+      border-radius:12px;
+      text-align:center;
+      margin:25px 0;
+      font-size:1.25rem;
+      font-weight:900;
+      box-shadow:0 10px 30px rgba(255,111,97,.4);
+    }
+    .boarding-promo-banner span{display:block;margin-top:5px;font-size:1rem;font-weight:700;color:rgba(17,17,17,.8)}
 
-    /* Dedicated Boarding Promo Banner (High visibility) */
-    .boarding-promo-banner{
-      background:linear-gradient(45deg, #FF6F61, #FFD166); /* Warm, high-contrast gradient */
-      color:#111;
-      padding:18px 25px;
-      border-radius:12px;
-      text-align:center;
-      margin:25px 0;
-      font-size:1.25rem;
-      font-weight:900;
-      box-shadow:0 10px 30px rgba(255,111,97,.4);
-    }
-    .boarding-promo-banner span{display:block;margin-top:5px;font-size:1rem;font-weight:700;color:rgba(17,17,17,.8)}
+    /* Coupon helper */
+    .coupon-help{
+      margin-top:10px;
+      font-size:.95rem;
+      color:#cfd6df;
+    }
+    .coupon-help .coupon-code{
+      display:inline-block;
+      font-weight:900;
+      background:#111824;
+      border:1px solid #2a3440;
+      border-radius:8px;
+      padding:.2rem .5rem;
+      user-select:all;
+    }
 
-    /* Coupon helper */
-    .coupon-help{
-      margin-top:10px;
-      font-size:.95rem;
-      color:#cfd6df;
-    }
-    .coupon-help .coupon-code{
-      display:inline-block;
-      font-weight:900;
-      background:#111824;
-      border:1px solid #2a3440;
-      border-radius:8px;
-      padding:.2rem .5rem;
-      user-select:all;
-    }
+    .cta-buttons{display:flex;gap:10px;flex-wrap:wrap}
+    .cta-button{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:999px;border:1px solid transparent;background:var(--brand);color:var(--bg);font-weight:900;text-decoration:none}
+    .cta-button.secondary{background:transparent;border-color:#2a3440;color:#fff}
 
-    .cta-buttons{display:flex;gap:10px;flex-wrap:wrap}
-    .cta-button{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:999px;border:1px solid transparent;background:var(--brand);color:var(--bg);font-weight:900;text-decoration:none}
-    .cta-button.secondary{background:transparent;border-color:#2a3440;color:#fff}
+    .sticky-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:1100;background:#111824ee;border:1px solid var(--border);box-shadow:var(--shadow);border-radius:16px;display:flex;gap:10px;justify-content:center;align-items:center;padding:10px}
+    .sticky-cta .btn,.sticky-cta .button-primary{padding:10px 16px}
+    @media (min-width:860px){.sticky-cta{display:none}}
 
-    .sticky-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:1100;background:#111824ee;border:1px solid var(--border);box-shadow:var(--shadow);border-radius:16px;display:flex;gap:10px;justify-content:center;align-items:center;padding:10px}
-    .sticky-cta .btn,.sticky-cta .button-primary{padding:10px 16px}
-    @media (min-width:860px){.sticky-cta{display:none}}
+    /* Ensure footer links are readable on dark bg */
+    .footer-brand a{color:var(--brand);}
+  </style>
 
-    /* Ensure footer links are readable on dark bg */
-    .footer-brand a{color:var(--brand);}
-  </style>
+  <link rel="preload" as="image" href="/images/pages/dog-boarding/dog-middle-park-home.jpg" />
 
-  <link rel="preload" as="image" href="/images/pages/dog-boarding/dog-middle-park-home.jpg" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KP5LVKN6X3"></script>
+  <script>
+    window.dataLayer=window.dataLayer||[];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config','G-KP5LVKN6X3');   // GA4
+    gtag('config','AW-17527927259'); // Google Ads
+  </script>
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KP5LVKN6X3"></script>
-  <script>
-    window.dataLayer=window.dataLayer||[];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config','G-KP5LVKN6X3');   // GA4
-    gtag('config','AW-17527927259'); // Google Ads
-  </script>
-
-  <!-- Structured Data - Boarding Service Schema for Middle Park -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@graph":[
-      {
-        "@type":"LocalBusiness",
-        "name":"The Woof of Walk Street",
-        "url":"https://www.woofofwalkstreet.com/",
-        "telephone":"+61370731175",
-        "address":{"@type":"PostalAddress","addressLocality":"Middle Park","addressRegion":"VIC","addressCountry":"AU"},
-        "sameAs":[
-          "https://instagram.com/woofofwalkstreet",
-          "https://facebook.com/woofofwalkstreet",
-          "https://x.com/woofofwalkstreet"
-        ]
-      },
-      {
-        "@type":"BreadcrumbList",
-        "itemListElement":[
-          {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
-          {"@type":"ListItem","position":2,"name":"Dog Boarding Middle Park","item":"https://www.woofofwalkstreet.com/dog-boarding-middle-park.html"}
-        ]
-      },
-      {
-        "@type":"Service",
-        "@id":"https://www.woofofwalkstreet.com/dog-boarding-middle-park.html#boarding",
-        "name":"Dog Boarding — Middle Park (All-Inclusive)",
-        "serviceType":"Dog Boarding",
-        "areaServed":["Middle Park", "Albert Park", "Port Melbourne"],
-        "provider":{"@type":"Organization","name":"The Woof of Walk Street","url":"https://www.woofofwalkstreet.com/"},
-        "url":"https://www.woofofwalkstreet.com/dog-boarding-middle-park.html",
-        "description":"Boutique, home-based dog boarding in Middle Park. Includes pick-up, drop-off, solo walks, food, insurance, and treats for $150/night. New clients receive 20% off.",
-        "offers":{
-          "@type":"Offer",
-          "priceCurrency":"AUD",
-          "price":"150.00", /* $150.00 base price */
-          "availability":"https://schema.org/InStock",
-          "url":"https://www.woofofwalkstreet.com/dog-boarding-middle-park.html"
-        }
-      },
-      {
-        "@type":"WebPage",
-        "@id":"https://www.woofofwalkstreet.com/dog-boarding-middle-park.html#page",
-        "name":"Boutique Dog Boarding Middle Park | $150/Night All-Inclusive",
-        "url":"https://www.woofofwalkstreet.com/dog-boarding-middle-park.html",
-        "description":"Local, one-dog-only boarding in Middle Park with daily solo walks, home comfort, and all-inclusive pricing."
-      },
-      {
-        "@type":"FAQPage",
-        "@id":"https://www.woofofwalkstreet.com/dog-boarding-middle-park.html#faq",
-        "mainEntity":[
-          {"@type":"Question","name":"What is included in the $150 nightly price?","acceptedAnswer":{"@type":"Answer","text":"The price is all-inclusive: pick-up and drop-off in Middle Park, daily solo dog walks, high-quality food, insurance coverage, and treats are included."}},
-          {"@type":"Question","name":"Do you board more than one dog at a time?","acceptedAnswer":{"@type":"Answer","text":"No, we only board one guest (or one family of dogs) at a time to ensure maximum one-on-one attention and a stress-free environment."}},
-          {"@type":"Question","name":"Where does my dog sleep?","acceptedAnswer":{"@type":"Answer","text":"Your dog sleeps indoors in a designated comfortable area, tailored to their routine (crate, bed, or couch), never outside or in a kennel."}},
-          {"@type":"Question","name":"How do I get the 20% discount?","acceptedAnswer":{"@type":"Answer","text":"New boarding clients in Middle Park can use the code BOARD20 when booking their stay."}}
-        ]
-      }
-    ]
-  }
-  </script>
+    <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"LocalBusiness",
+        "name":"The Woof of Walk Street",
+        "url":"https://www.woofofwalkstreet.com/",
+        "telephone":"+61370731175",
+        "address":{"@type":"PostalAddress","addressLocality":"Middle Park","addressRegion":"VIC","addressCountry":"AU"},
+        "sameAs":[
+          "https://instagram.com/woofofwalkstreet",
+          "https://facebook.com/woofofwalkstreet",
+          "https://x.com/woofofwalkstreet"
+        ]
+      },
+      {
+        "@type":"BreadcrumbList",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
+          {"@type":"ListItem","position":2,"name":"Dog Boarding Middle Park","item":"https://www.woofofwalkstreet.com/dog-boarding-middle-park.html"}
+        ]
+      },
+      {
+        "@type":"Service",
+        "@id":"https://www.woofofwalkstreet.com/dog-boarding-middle-park.html#boarding",
+        "name":"Dog Boarding — Middle Park (All-Inclusive)",
+        "serviceType":"Dog Boarding",
+        "areaServed":["Middle Park", "Albert Park", "Port Melbourne"],
+        "provider":{"@type":"Organization","name":"The Woof of Walk Street","url":"https://www.woofofwalkstreet.com/"},
+        "url":"https://www.woofofwalkstreet.com/dog-boarding-middle-park.html",
+        "description":"Boutique, home-based dog boarding in Middle Park. Includes pick-up, drop-off, solo walks, food, insurance, and treats for $150/night. New clients receive 20% off.",
+        "offers":{
+          "@type":"Offer",
+          "priceCurrency":"AUD",
+          "price":"150.00", /* $150.00 base price */
+          "availability":"https://schema.org/InStock",
+                    "url":"https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86032167"
+        }
+      },
+      {
+        "@type":"WebPage",
+        "@id":"https://www.woofofwalkstreet.com/dog-boarding-middle-park.html#page",
+        "name":"Boutique Dog Boarding Middle Park | $150/Night All-Inclusive",
+        "url":"https://www.woofofwalkstreet.com/dog-boarding-middle-park.html",
+        "description":"Local, one-dog-only boarding in Middle Park with daily solo walks, home comfort, and all-inclusive pricing."
+      },
+      {
+        "@type":"FAQPage",
+        "@id":"https://www.woofofwalkstreet.com/dog-boarding-middle-park.html#faq",
+        "mainEntity":[
+          {"@type":"Question","name":"What is included in the $150 nightly price?","acceptedAnswer":{"@type":"Answer","text":"The price is all-inclusive: pick-up and drop-off in Middle Park, daily solo dog walks, high-quality food, insurance coverage, and treats are included."}},
+          {"@type":"Question","name":"Do you board more than one dog at a time?","acceptedAnswer":{"@type":"Answer","text":"No, we only board one guest (or one family of dogs) at a time to ensure maximum one-on-one attention and a stress-free environment."}},
+          {"@type":"Question","name":"Where does my dog sleep?","acceptedAnswer":{"@type":"Answer","text":"Your dog sleeps indoors in a designated comfortable area, tailored to their routine (crate, bed, or couch), never outside or in a kennel."}},
+          {"@type":"Question","name":"How do I get the 20% discount?","acceptedAnswer":{"@type":"Answer","text":"New boarding clients in Middle Park can use the code BOARD20 when booking their stay."}}
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
-  <!-- Promo ribbon (Walking 50% off) -->
-  <div id="promo" class="promo-ribbon promo--edge" role="region" aria-label="Promo: 50% off Casual Walks">
-    <div class="promo-inner container">
-      <img class="promo-dog" src="/images/brand/dog-in-suit.webp" alt="" width="28" height="28" decoding="async" />
-      <span class="promo-copy">
-        Need a walk first? <strong>50% OFF</strong> Casual Walks — Use code <strong>WALK50</strong>.
-      </span>
-      <!-- Link to the central walking page, which covers Middle Park -->
-      <a class="promo-cta" href="/dog-walking-albert-park.html" rel="noopener">Explore Walking →</a>
-      <button id="promo-close" class="promo-close" aria-label="Dismiss promo">✕</button>
-    </div>
-  </div>
+    
+    <div class="impact-ribbon" role="note" aria-label="Walks that do more: 10% donated">
+    <div class="impact-inner">
+      <span class="impact-emoji" aria-hidden="true">💛</span>
+      <strong>Walks That Do More:</strong> We donate <strong>10% of profits</strong> to local rescue.
+      <a class="impact-cta" href="/community.html">See our impact →</a>
+    </div>
+  </div>
 
-  <!-- Impact ribbon -->
-  <div class="impact-ribbon" role="note" aria-label="Walks that do more: 10% donated">
-    <div class="impact-inner">
-      <span class="impact-emoji" aria-hidden="true">💛</span>
-      <strong>Walks That Do More:</strong> We donate <strong>10% of profits</strong> to local rescue.
-      <a class="impact-cta" href="/community.html">See our impact →</a>
-    </div>
-  </div>
+  <header class="site-header">
+    <div class="navbar container">
+      <a class="brand" href="/" aria-label="Home">
+        <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="56" height="56">
+        <strong>The Woof of Walk Street</strong>
+      </a>
 
-  <header class="site-header">
-    <div class="navbar container">
-      <a class="brand" href="/" aria-label="Home">
-        <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="56" height="56">
-        <strong>The Woof of Walk Street</strong>
-      </a>
+      <input id="nav-toggle" type="checkbox" hidden>
+      <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</label>
 
-      <input id="nav-toggle" type="checkbox" hidden>
-      <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</label>
+      <nav class="nav-links">
+        <section class="nav-group">
+          <button class="nav-group-btn" aria-expanded="false" aria-controls="nav-services">Services</button>
+          <ul id="nav-services" class="nav-group-list" hidden>
+            <li><a href="/services.html">All Services</a></li>
+            <li><a href="/dog-walking-albert-park.html">Dog Walking Albert Park</a></li>
+            <li><a href="/casual-dog-walking-albert-park.html">Casual Dog Walking</a></li>
+                        <li><a href="/boarding-services.html">Woof Club Boarding</a></li>
+            <li><a href="/service-areas.html">Service Areas</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </section>
+        <a href="/about.html">About</a>
+        <a href="/blog/index.html">Blog</a>
+        <a href="/faq.html">FAQs</a>
+        <a href="/search.html">Search</a>
 
-      <nav class="nav-links">
-        <section class="nav-group">
-          <button class="nav-group-btn" aria-expanded="false" aria-controls="nav-services">Services</button>
-          <ul id="nav-services" class="nav-group-list" hidden>
-            <li><a href="/services.html">All Services</a></li>
-            <li><a href="/dog-walking-albert-park.html">Dog Walking Albert Park</a></li>
-            <li><a href="/casual-dog-walking-albert-park.html">Casual Dog Walking</a></li>
-            <li><a href="/dog-boarding-south-melbourne.html">Boarding — South Melbourne</a></li>
-            <li><a href="/service-areas.html">Service Areas</a></li>
-            <li><a href="/contact.html">Contact</a></li>
-          </ul>
-        </section>
-        <a href="/about.html">About</a>
-        <a href="/blog/index.html">Blog</a>
-        <a href="/faq.html">FAQs</a>
-        <a href="/search.html">Search</a>
+        <a class="btn button-primary nav-cta" href="/book-dog-walk/">Book Walks</a>
+        <a class="btn button-primary nav-cta" href="/boarding-services.html">Boarding</a>
+      </nav>
+    </div>
+  </header>
 
-        <a class="btn button-primary nav-cta" href="/book-dog-walk/">Book Walks</a>
-        <a class="btn button-primary nav-cta" href="/boarding-services.html">Boarding</a>
-      </nav>
-    </div>
-  </header>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="/">Home</a> › Dog Boarding Middle Park</nav>
+                <h1>Boutique Dog Boarding Middle Park — All-Inclusive $150/Night</h1>
 
-  <main>
-    <section class="hero">
-      <div class="container">
-        <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="/">Home</a> › Dog Boarding Middle Park</nav>
-        <!-- H1: Boarding Keyword Rich for Middle Park -->
-        <h1>Boutique Dog Boarding Middle Park — All-Inclusive $150/Night</h1>
+                <p>The <strong>Woof Club</strong> offers luxury, home-based dog boarding right here in <strong>Middle Park</strong>. We provide <strong>one-dog-only care</strong>, ensuring a low-stress, quiet, and comfortable stay tailored to your dog's routine.</p>
 
-        <!-- Short intro -->
-        <p>The <strong>Woof Club</strong> offers luxury, home-based dog boarding right here in <strong>Middle Park</strong>. We provide <strong>one-dog-only care</strong>, ensuring a low-stress, quiet, and comfortable stay tailored to your dog's routine.</p>
+        <p>Our <strong>$150/night</strong> price is fully inclusive: <strong>pick-up/drop-off, daily solo walks, food, insurance, and treats are all covered</strong>.</p>
 
-        <p>Our <strong>$150/night</strong> price is fully inclusive: <strong>pick-up/drop-off, daily solo walks, food, insurance, and treats are all covered</strong>.</p>
+                <img src="/images/pages/dog-boarding/dog-middle-park-home.jpg"
+             alt="A small, happy dog relaxing comfortably on a plush rug in a light-filled home during a boarding stay in Middle Park"
+             width="1200" height="800"
+             style="max-width:920px;border-radius:12px;display:block;margin:0 auto"
+             loading="eager" decoding="async" fetchpriority="high">
 
-        <!-- Image relevant to Middle Park/Home Boarding -->
-        <img src="/images/pages/dog-boarding/dog-middle-park-home.jpg"
-             alt="A small, happy dog relaxing comfortably on a plush rug in a light-filled home during a boarding stay in Middle Park"
-             width="1200" height="800"
-             style="max-width:920px;border-radius:12px;display:block;margin:0 auto"
-             loading="eager" decoding="async" fetchpriority="high">
+                <div class="boarding-promo-banner">
+          🚨 <strong>20% OFF Your First Boarding Stay!</strong> 🚨
+          <span>Use code <strong style="color:#FF6F61;font-size:1.1em;user-select:all">BOARD20</strong> when booking. Limited time offer for Middle Park clients.</span>
+        </div>
 
-        <!-- Boarding Promo Banner -->
-        <div class="boarding-promo-banner">
-          🚨 <strong>20% OFF Your First Boarding Stay!</strong> 🚨
-          <span>Use code <strong style="color:#FF6F61;font-size:1.1em;user-select:all">BOARD20</strong> when booking. Limited time offer for Middle Park clients.</span>
-        </div>
+                <div class="cta-buttons" style="justify-content:center;flex-wrap:wrap;margin-top:.6rem">
+          <a class="cta-button" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86032167&coupon=BOARD20" target="_blank" rel="noopener">Book Boarding (Use BOARD20)</a>
+          <a class="cta-button secondary" href="/dog-walking-albert-park.html">Need a Dog Walker?</a>
+        </div>
 
-        <div class="cta-buttons" style="justify-content:center;flex-wrap:wrap;margin-top:.6rem">
-          <a class="cta-button" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=87654321&coupon=BOARD20" target="_blank" rel="noopener">Book Boarding (Use BOARD20)</a>
-          <a class="cta-button secondary" href="/dog-walking-albert-park.html">Need a Dog Walker?</a>
-        </div>
+                <div class="coupon-help" role="note" aria-label="Coupon help">
+          <strong>Coupon not auto-filled?</strong> Paste this on Acuity: <span class="coupon-code">BOARD20</span>
+        </div>
+      </div>
+    </section>
 
-        <!-- Coupon fallback helper (above the fold) -->
-        <div class="coupon-help" role="note" aria-label="Coupon help">
-          <strong>Coupon not auto-filled?</strong> Paste this on Acuity: <span class="coupon-code">BOARD20</span>
-        </div>
-      </div>
-    </section>
+        <section>
+      <div class="container">
+        <h2>All-Inclusive Pricing & Luxury Care in Middle Park</h2>
+        <p>Our goal is to provide a home-away-from-home that eliminates the need for expensive add-ons. The single nightly rate covers everything your dog needs for a comfortable, fun, and safe stay:</p>
 
-    <!-- Pricing & Inclusions section -->
-    <section>
-      <div class="container">
-        <h2>All-Inclusive Pricing & Luxury Care in Middle Park</h2>
-        <p>Our goal is to provide a home-away-from-home that eliminates the need for expensive add-ons. The single nightly rate covers everything your dog needs for a comfortable, fun, and safe stay:</p>
+        <div class="grid grid-2">
+            <ul class="list-check">
+                <li><strong>$150.00</strong> flat nightly rate</li>
+                <li><strong>Pick-up and Drop-off</strong> in Middle Park</li>
+                <li><strong>Daily Solo Walk</strong> (45 minutes, GPS tracked)</li>
+                <li><strong>Premium Food</strong> (or your own supplied)</li>
+            </ul>
+            <ul class="list-check">
+                <li><strong>Full Insurance Coverage</strong></li>
+                <li><strong>Regular Photo/Video Updates</strong></li>
+                <li><strong>Home Comforts</strong> (couch, bed access)</li>
+                <li><strong>One-Dog-Only</strong> (or family) guarantee</li>
+            </ul>
+        </div>
 
-        <div class="grid grid-2">
-            <ul class="list-check">
-                <li><strong>$150.00</strong> flat nightly rate</li>
-                <li><strong>Pick-up and Drop-off</strong> in Middle Park</li>
-                <li><strong>Daily Solo Walk</strong> (45 minutes, GPS tracked)</li>
-                <li><strong>Premium Food</strong> (or your own supplied)</li>
-            </ul>
-            <ul class="list-check">
-                <li><strong>Full Insurance Coverage</strong></li>
-                <li><strong>Regular Photo/Video Updates</strong></li>
-                <li><strong>Home Comforts</strong> (couch, bed access)</li>
-                <li><strong>One-Dog-Only</strong> (or family) guarantee</li>
-            </ul>
-        </div>
+                <p class="cta-buttons">
+          <a class="cta-button" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86032167&coupon=BOARD20" target="_blank" rel="noopener">Secure 20% Off Boarding (BOARD20)</a>
+          <a class="cta-button secondary" href="/boarding-services.html">See all Boarding Suburbs</a>
+        </p>
+      </div>
+    </section>
 
-        <p class="cta-buttons">
-          <a class="cta-button" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=87654321&coupon=BOARD20" target="_blank" rel="noopener">Secure 20% Off Boarding (BOARD20)</a>
-          <a class="cta-button secondary" href="/boarding-services.html">See all Boarding Suburbs</a>
-        </p>
-      </div>
-    </section>
+    <section>
+      <div class="container grid grid-2">
+        <article class="card">
+          <h2>The Woof Club Difference</h2>
+          <h3>Why Solo, Home-Based Boarding is Best</h3>
+          <p>Unlike crowded kennels or large group daycares, our boutique setup is run directly from a cozy, quiet home environment. This ensures your dog maintains their home routine, receives uninterrupted attention, and avoids the stress associated with shared spaces or strange dogs.</p>
+          <ul class="list-check">
+            <li>Low-arousal, quiet environment</li>
+            <li>Personalized care based on your routine</li>
+            <li>Familiar, safe, fully-fenced outdoor access</li>
+          </ul>
+        </article>
 
-    <section>
-      <div class="container grid grid-2">
-        <article class="card">
-          <h2>The Woof Club Difference</h2>
-          <h3>Why Solo, Home-Based Boarding is Best</h3>
-          <p>Unlike crowded kennels or large group daycares, our boutique setup is run directly from a cozy, quiet home environment. This ensures your dog maintains their home routine, receives uninterrupted attention, and avoids the stress associated with shared spaces or strange dogs.</p>
-          <ul class="list-check">
-            <li>Low-arousal, quiet environment</li>
-            <li>Personalized care based on your routine</li>
-            <li>Familiar, safe, fully-fenced outdoor access</li>
-          </ul>
-        </article>
+        <article class="card">
+          <h2>Seamless Logistics: Pick-up and Drop-off</h2>
+          <h3>Serving Middle Park, Albert Park & Port Melbourne</h3>
+          <p>Forget the stress of drop-offs. Your $150 nightly rate includes complimentary door-to-door service within the Middle Park area and immediate surrounds (Albert Park, Port Melbourne). We handle all the logistics, allowing you to focus completely on your travel plans knowing your dog is safely transitioned to and from their holiday home.</p>
+          <ul class="list-dash">
+            <li>Convenient local service</li>
+            <li>Stress-free transport for your dog</li>
+            <li>Covers all areas around Middle Park Beach</li>
+          </ul>
+        </article>
 
-        <article class="card">
-          <h2>Seamless Logistics: Pick-up and Drop-off</h2>
-          <h3>Serving Middle Park, Albert Park & Port Melbourne</h3>
-          <p>Forget the stress of drop-offs. Your $150 nightly rate includes complimentary door-to-door service within the Middle Park area and immediate surrounds (Albert Park, Port Melbourne). We handle all the logistics, allowing you to focus completely on your travel plans knowing your dog is safely transitioned to and from their holiday home.</p>
-          <ul class="list-dash">
-            <li>Convenient local service</li>
-            <li>Stress-free transport for your dog</li>
-            <li>Covers all areas around Middle Park Beach</li>
-          </ul>
-        </article>
+        <article class="card">
+          <h2>Ideal for Selective & Senior Dogs</h2>
+          <h3>Routine, Quiet, and Consistency</h3>
+          <p>Our service is perfect for dogs who are shy, reactive, or simply prefer human company over a big pack. The one-on-one structure guarantees they receive the comfort, space, and decompression they need, especially seniors who require quiet rest and strict routine.</p>
+          <p class="stack-sm">
+                        <a class="cta-button" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86032167&coupon=BOARD20" target="_blank" rel="noopener">Book Your Boarding Stay</a>
+            <a class="cta-button secondary" href="/contact.html">Questions? Contact Us First</a>
+          </p>
+        </article>
+      </div>
+    </section>
 
-        <article class="card">
-          <h2>Ideal for Selective & Senior Dogs</h2>
-          <h3>Routine, Quiet, and Consistency</h3>
-          <p>Our service is perfect for dogs who are shy, reactive, or simply prefer human company over a big pack. The one-on-one structure guarantees they receive the comfort, space, and decompression they need, especially seniors who require quiet rest and strict routine.</p>
-          <p class="stack-sm">
-            <a class="cta-button" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=87654321&coupon=BOARD20" target="_blank" rel="noopener">Book Your Boarding Stay</a>
-            <a class="cta-button secondary" href="/contact.html">Questions? Contact Us First</a>
-          </p>
-        </article>
-      </div>
-    </section>
+    <section class="section alt">
+      <div class="container">
+        <h2>Other Suburbs for Boutique Boarding</h2>
+        <p>Need boarding outside of Middle Park? We provide pick-up/drop-off service for our Woof Club from the following nearby suburbs:</p>
+        <p class="badge-row">
+          <a class="badge" href="/dog-boarding-albert-park.html">Albert Park</a>
+          <a class="badge" href="/dog-boarding-south-melbourne.html">South Melbourne</a>
+          <a class="badge" href="/dog-boarding-port-melbourne.html">Port Melbourne</a>
+          <span class="badge" aria-current="page">Middle Park</span>
+          <a class="badge" href="/dog-boarding-southbank.html">Southbank</a>
+          <a class="badge" href="/dog-boarding-south-yarra.html">South Yarra</a>
+        </p>
+      </div>
+    </section>
 
-    <section class="section alt">
-      <div class="container">
-        <h2>Other Suburbs for Boutique Boarding</h2>
-        <p>Need boarding outside of Middle Park? We provide pick-up/drop-off service for our Woof Club from the following nearby suburbs:</p>
-        <p class="badge-row">
-          <a class="badge" href="/dog-boarding-albert-park.html">Albert Park</a>
-          <a class="badge" href="/dog-boarding-south-melbourne.html">South Melbourne</a>
-          <a class="badge" href="/dog-boarding-port-melbourne.html">Port Melbourne</a>
-          <span class="badge" aria-current="page">Middle Park</span>
-          <a class="badge" href="/dog-boarding-southbank.html">Southbank</a>
-          <a class="badge" href="/dog-boarding-south-yarra.html">South Yarra</a>
-        </p>
-      </div>
-    </section>
+    <section class="faq" id="faq">
+      <div class="container">
+        <h2>Dog Boarding Middle Park — FAQs</h2>
+        <details><summary>What is included in the $150 nightly price?</summary><div><p>The price is all-inclusive: pick-up and drop-off in Middle Park, daily solo dog walks, high-quality food, insurance coverage, and treats are included. There are no hidden fees.</p></div></details>
+        <details><summary>Do you board more than one dog at a time?</summary><div><p>No, we only board one guest (or one family of dogs) at a time to ensure maximum one-on-one attention and a stress-free environment.</p></div></details>
+        <details><summary>Where does my dog sleep?</summary><div><p>Your dog sleeps indoors in a designated comfortable area, tailored to their routine (crate, bed, or couch), never outside or in a kennel.</p></div></details>
+        <details><summary><span style="white-space:nowrap;">How do I get the 20% discount in Middle Park?</span></summary><div><p>New boarding clients in Middle Park can use the code <span class="coupon-code">BOARD20</span> when booking their stay via our Acuity scheduling link.</p></div></details>
+      </div>
+    </section>
+  </main>
 
-    <section class="faq" id="faq">
-      <div class="container">
-        <h2>Dog Boarding Middle Park — FAQs</h2>
-        <details><summary>What is included in the $150 nightly price?</summary><div><p>The price is all-inclusive: pick-up and drop-off in Middle Park, daily solo dog walks, high-quality food, insurance coverage, and treats are included. There are no hidden fees.</p></div></details>
-        <details><summary>Do you board more than one dog at a time?</summary><div><p>No, we only board one guest (or one family of dogs) at a time to ensure maximum one-on-one attention and a stress-free environment.</p></div></details>
-        <details><summary>Where does my dog sleep?</summary><div><p>Your dog sleeps indoors in a designated comfortable area, tailored to their routine (crate, bed, or couch), never outside or in a kennel.</p></div></details>
-        <details><summary><span style="white-space:nowrap;">How do I get the 20% discount in Middle Park?</span></summary><div><p>New boarding clients in Middle Park can use the code <span class="coupon-code">BOARD20</span> when booking their stay via our Acuity scheduling link.</p></div></details>
-      </div>
-    </section>
-  </main>
+    <div class="sticky-cta" role="region" aria-label="Quick booking">
+        <a class="btn button-primary" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86032167&coupon=BOARD20" target="_blank" rel="noopener">Book Boarding (BOARD20)</a>
+    <a class="btn button-primary" href="/dog-walking-albert-park.html">Dog Walking</a>
+  </div>
 
-  <!-- Sticky CTA: focused on Boarding + Walking -->
-  <div class="sticky-cta" role="region" aria-label="Quick booking">
-    <a class="btn button-primary" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=87654321&coupon=BOARD20" target="_blank" rel="noopener">Book Boarding (BOARD20)</a>
-    <a class="btn button-primary" href="/dog-walking-albert-park.html">Dog Walking</a>
-  </div>
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-banner">
+      <picture>
+        <source srcset="/images/brand/footer-banner-1600x600.webp" media="(min-width:768px)">
+        <img src="/images/brand/footer-banner-800x300.webp" alt="Happy dogs in Melbourne" width="800" height="300" loading="lazy">
+      </picture>
+    </div>
 
-  <footer class="site-footer" role="contentinfo">
-    <div class="footer-banner">
-      <picture>
-        <source srcset="/images/brand/footer-banner-1600x600.webp" media="(min-width:768px)">
-        <img src="/images/brand/footer-banner-800x300.webp" alt="Happy dogs in Melbourne" width="800" height="300" loading="lazy">
-      </picture>
-    </div>
+    <div class="container footer-grid">
+      <section class="footer-brand">
+        <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="60" height="60" loading="lazy">
+        <p><strong>The Woof of Walk Street</strong><br>
+          <a class="footer-map" href="https://maps.app.goo.gl/YnEoSPwhGocUZyWL9?g_st=ipc" target="_blank" rel="noopener">South Melbourne, VIC</a> · Mon–Fri 7am–7pm<br>
+          <a href="tel:+61370731175">(03) 7073 1175</a> · <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a>
+        </p>
+        <div class="footer-socials">
+          <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram"><img src="/images/social/instagram.svg" alt="" width="24" height="24"></a>
+          <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook"><img src="/images/social/facebook.svg" alt="" width="24" height="24"></a>
+          <a href="https://x.com/woofofwalkstreet" aria-label="X"><img src="/images/social/twitter.svg" alt="" width="24" height="24"></a>
+        </div>
+        <p class="cta-buttons" style="margin-top:.4rem">
+          <a class="btn button-primary" href="/book-dog-walk/">Book Walks</a>
+          <a class="btn button-primary" href="/boarding-services.html">Boarding</a>
+        </p>
+      </section>
 
-    <div class="container footer-grid">
-      <section class="footer-brand">
-        <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="60" height="60" loading="lazy">
-        <p><strong>The Woof of Walk Street</strong><br>
-          <a class="footer-map" href="https://maps.app.goo.gl/YnEoSPwhGocUZyWL9?g_st=ipc" target="_blank" rel="noopener">South Melbourne, VIC</a> · Mon–Fri 7am–7pm<br>
-          <a href="tel:+61370731175">(03) 7073 1175</a> · <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a>
-        </p>
-        <div class="footer-socials">
-          <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram"><img src="/images/social/instagram.svg" alt="" width="24" height="24"></a>
-          <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook"><img src="/images/social/facebook.svg" alt="" width="24" height="24"></a>
-          <a href="https://x.com/woofofwalkstreet" aria-label="X"><img src="/images/social/twitter.svg" alt="" width="24" height="24"></a>
-        </div>
-        <p class="cta-buttons" style="margin-top:.4rem">
-          <a class="btn button-primary" href="/book-dog-walk/">Book Walks</a>
-          <a class="btn button-primary" href="/boarding-services.html">Boarding</a>
-        </p>
-      </section>
+      <nav class="footer-col" aria-label="Services">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="/services.html">All Services</a></li>
+          <li><a href="/dog-walking-albert-park.html">Dog Walking Albert Park</a></li>
+          <li><a href="/casual-dog-walking-albert-park.html">Casual Dog Walking</a></li>
+                    <li><a href="/boarding-services.html">Woof Club Boarding</a></li>
+          <li><a href="/service-areas.html">Service Areas</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          </ul>
+      </nav>
 
-      <nav class="footer-col" aria-label="Services">
-        <h3>Services</h3>
-        <ul>
-          <li><a href="/services.html">All Services</a></li>
-          <li><a href="/dog-walking-albert-park.html">Dog Walking Albert Park</a></li>
-          <li><a href="/casual-dog-walking-albert-park.html">Casual Dog Walking</a></li>
-          <li><a href="/dog-boarding-south-melbourne.html">Boarding — South Melbourne</a></li>
-          <li><a href="/service-areas.html">Service Areas</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-          </ul>
-      </nav>
+      <section class="footer-col collapsible">
+        <button class="collapse-btn" aria-expanded="false" aria-controls="support-list">Support</button>
+        <ul id="support-list">
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/community.html">Community</a></li>
+          <li><a href="/testimonials.html">Testimonials</a></li>
+          <li><a href="/gallery.html">Photos & Videos</a></li>
+          <li><a href="/blog/index.html">Blog</a></li>
+          <li><a href="/faq.html">FAQs</a></li>
+        </ul>
+      </section>
 
-      <section class="footer-col collapsible">
-        <button class="collapse-btn" aria-expanded="false" aria-controls="support-list">Support</button>
-        <ul id="support-list">
-          <li><a href="/about.html">About</a></li>
-          <li><a href="/community.html">Community</a></li>
-          <li><a href="/testimonials.html">Testimonials</a></li>
-          <li><a href="/gallery.html">Photos & Videos</a></li>
-          <li><a href="/blog/index.html">Blog</a></li>
-          <li><a href="/faq.html">FAQs</a></li>
-        </ul>
-      </section>
+      <section class="footer-col collapsible">
+        <button class="collapse-btn" aria-expanded="false" aria-controls="legal-list">Legal</button>
+        <ul id="legal-list">
+          <li><a href="/privacy.html">Privacy</a></li>
+          <li><a href="/terms.html">Terms</a></li>
+          <li><a href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </section>
+    </div>
 
-      <section class="footer-col collapsible">
-        <button class="collapse-btn" aria-expanded="false" aria-controls="legal-list">Legal</button>
-        <ul id="legal-list">
-          <li><a href="/privacy.html">Privacy</a></li>
-          <li><a href="/terms.html">Terms</a></li>
-          <li><a href="/sitemap.html">Sitemap</a></li>
-        </ul>
-      </section>
-    </div>
+    <div class="container footer-geo">
+      Solo Dog Walking & Boutique Boarding across <strong>South Melbourne</strong>, <strong>Albert Park</strong>, <strong>Port Melbourne</strong>, <strong>Middle Park</strong> and <strong>Southbank</strong>.
+    </div>
 
-    <div class="container footer-geo">
-      Solo Dog Walking & Boutique Boarding across <strong>South Melbourne</strong>, <strong>Albert Park</strong>, <strong>Port Melbourne</strong>, <strong>Middle Park</strong> and <strong>Southbank</strong>.
-    </div>
+    <div class="container footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
+    <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 
-    <div class="container footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
-    <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+    <script>
+      document.querySelectorAll('.collapsible .collapse-btn').forEach(btn=>{
+        const list = document.getElementById(btn.getAttribute('aria-controls'));
+        const sync = (open)=>{ btn.setAttribute('aria-expanded', String(open)); list.hidden = !open; };
+        sync(false);
+        btn.addEventListener('click', ()=>{ const open = btn.getAttribute('aria-expanded')==='false'; sync(open); });
+      });
+    </script>
+  </footer>
 
-    <script>
-      document.querySelectorAll('.collapsible .collapse-btn').forEach(btn=>{
-        const list = document.getElementById(btn.getAttribute('aria-controls'));
-        const sync = (open)=>{ btn.setAttribute('aria-expanded', String(open)); list.hidden = !open; };
-        sync(false);
-        btn.addEventListener('click', ()=>{ const open = btn.getAttribute('aria-expanded')==='false'; sync(open); });
-      });
-    </script>
-  </footer>
-
-  <script>
-    (function () {
-      const btn  = document.querySelector('.nav-group-btn[aria-controls="nav-services"]');
-      const list = document.getElementById('nav-services');
-      if (btn && list){
-        const sync = () => { list.hidden = btn.getAttribute('aria-expanded') !== 'true'; };
-        sync();
-        btn.addEventListener('click', () => {
-          const open = btn.getAttribute('aria-expanded') === 'true';
-          btn.setAttribute('aria-expanded', String(!open));
-          sync();
-        });
-        document.addEventListener('click', (e) => {
-          if (!btn.contains(e.target) && !list.contains(e.target)) {
-            btn.setAttribute('aria-expanded', 'false'); sync();
-          }
-        }, { capture: true });
-        document.addEventListener('keydown', (e) => {
-          if (e.key === 'Escape') { btn.setAttribute('aria-expanded', 'false'); sync(); }
-        });
-      }
-      // Promo close (session)
-      const promo=document.getElementById('promo'), close=document.getElementById('promo-close'), KEY='wow-promo-closed';
-      try{ if(sessionStorage.getItem(KEY)==='1') promo.style.display='none'; }catch(e){}
-      close?.addEventListener('click',()=>{ try{sessionStorage.setItem(KEY,'1');}catch(e){}; promo.style.display='none'; });
-    })();
-  </script>
+  <script>
+    (function () {
+      const btn  = document.querySelector('.nav-group-btn[aria-controls="nav-services"]');
+      const list = document.getElementById('nav-services');
+      if (btn && list){
+        const sync = () => { list.hidden = btn.getAttribute('aria-expanded') !== 'true'; };
+        sync();
+        btn.addEventListener('click', () => {
+          const open = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', String(!open));
+          sync();
+        });
+        document.addEventListener('click', (e) => {
+          if (!btn.contains(e.target) && !list.contains(e.target)) {
+            btn.setAttribute('aria-expanded', 'false'); sync();
+          }
+        }, { capture: true });
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') { btn.setAttribute('aria-expanded', 'false'); sync(); }
+        });
+      }
+      // Removed promo closing script as the promo ribbon was removed.
+    })();
+  </script>
 </body>
 </html>

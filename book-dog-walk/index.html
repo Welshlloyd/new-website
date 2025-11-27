@@ -1,424 +1,378 @@
 <!DOCTYPE html>
 <html lang="en-AU">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>50% Off Casual Solo Walk — South Melbourne | The Woof of Walk Street</title>
+  <meta name="description" content="New clients: 50% off a one-dog, 45-minute solo walk in South Melbourne. GPS route + photo proof after every session. Limited time." />
+  <link rel="icon" href="/images/brand/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-  <title>Book a 45-Minute Solo Dog Walk — 50% Off Until 31 Dec 2025 | The Woof of Walk Street</title>
-  <meta name="description" content="Book a 45-minute solo dog walk in South Melbourne. One-dog-only, GPS map & photo updates. Limited promo: 50% off casual walks with code WALK50 — ends 31 December 2025." />
-  <link rel="canonical" href="https://www.woofofwalkstreet.com/book-dog-walk/" />
-  <link rel="icon" href="/images/brand/favicon.ico" />
+  <style>
+    :root{
+      --bg1:#0f1620;         /* deep navy */
+      --bg2:#141b24;         /* warm slate */
+      --card:#f7f5ef;        /* warm cream for cards */
+      --ink:#0b0e12;         /* ink on cream */
+      --text:#e8eef5;        /* light text on dark */
+      --muted:#a9b4c0;
+      --brand:#ffd166;       /* gold */
+      --accent:#5af2c6;      /* mint accent */
+      --danger:#ff6b6b;
+      --ring:0 10px 28px rgba(255,209,102,.2);
+      --radius:16px;
+      --container:1080px;
+      --shadow:0 18px 42px rgba(0,0,0,.28);
+      --danger-light:rgba(255,107,107,.1);
+    }
 
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-    <link rel="stylesheet" href="/css/mini.css">
-  <link rel="stylesheet" href="/css/mini.dark.css">
-  <link rel="stylesheet" href="/css/mini.light.css">
-  <link rel="stylesheet" href="/css/styles.css">
+    /* smooth scroll for anchor jumps */
+    html{scroll-behavior:smooth}
 
-  <link rel="preload" as="image" href="/images/brand/promo-banner-dog-in-suit.png" imagesrcset="/images/brand/promo-banner-dog-in-suit.png 1200w" imagesizes="100vw">
+    html,body{background:linear-gradient(180deg,var(--bg1),var(--bg2));color:var(--text)}
+    body{margin:0;font-family:'Work Sans',system-ui,sans-serif;letter-spacing:.1px}
+    h1,h2,h3,strong,.btn{font-family:'Space Grotesk',system-ui,sans-serif;letter-spacing:.2px}
+    img{max-width:100%;height:auto}
+    a{color:inherit;text-decoration:none}
 
-    <script>
-    (function () {
-      const KEY='wow-theme'; const pref=localStorage.getItem(KEY)||'auto';
-      const mql=window.matchMedia('(prefers-color-scheme: dark)');
-      const isDark=()=>pref==='dark'||(pref==='auto'&&mql.matches);
-      document.documentElement.setAttribute('data-theme',pref);
-      document.documentElement.style.colorScheme=isDark()?'dark':'light';
-      mql.addEventListener?.('change',()=>{ if((localStorage.getItem(KEY)||'auto')==='auto'){ document.documentElement.style.colorScheme=mql.matches?'dark':'light'; }});
-    })();
-  </script>
+    .container{max-width:var(--container);margin:0 auto;padding:0 16px}
 
-  <style>
-    /* ===== COLOR AND FONT VARIABLES (New: Match services/boarding pages) ===== */
-    :root{
-      --bg:#0b0e12; --card:#0f1318; --text:#e8eef5; --muted:#a9b4c0; --line:#1e2630;
-      --brand:#ffd166; --brand-ink:#0b0e12; --accent:#5af2c6;
-      --shadow:0 16px 48px rgba(0,0,0,.32);
-      --ring:0 0 0 2px rgba(255,209,102,.22), 0 16px 40px rgba(255,209,102,.08);
-      --container: 1100px; --radius-lg: 16px; --speed: .22s;
-      --font-heading: 'Space Grotesk', system-ui, sans-serif;
-      --font-body: 'Work Sans', system-ui, sans-serif;
-    }
-    /* Applying new font stack to all elements */
-    body, p, li, span, button, input, textarea { font-family: var(--font-body); letter-spacing: .1px; line-height: 1.58; }
-    h1,h2,h3,h4,h5,h6, nav a, .nav-group-btn{ font-family: var(--font-heading); letter-spacing: .25px; }
+    /* Header (kept simple, with solid dropdown background) */
+    .site-header{position:sticky;top:0;z-index:50;background:rgba(17,23,34,.95);backdrop-filter:saturate(120%) blur(6px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:.6rem}
+    .brand img{width:44px;height:44px}
+    .nav-links{display:flex;align-items:center;gap:18px}
+    .nav-links a{opacity:.9}
+    .nav-links a:hover{opacity:1}
 
-    body{background:var(--bg);color:var(--text)}
+    /* Services dropdown with SOLID bg so it’s readable on mobile+desktop */
+    .nav-group{position:relative}
+    .nav-group-btn{background:transparent;border:1px solid #2a3440;color:#fff;border-radius:999px;padding:8px 12px;font-weight:700;cursor:pointer}
+    .nav-group-list{position:absolute;right:0;top:110%;min-width:240px;background:#0f1620;border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:8px 6px;box-shadow:var(--shadow);display:none}
+    .nav-group[aria-expanded="true"] .nav-group-list{display:block}
+    .nav-group-list a{display:block;padding:10px 12px;border-radius:10px}
+    .nav-group-list a:hover{background:rgba(255,255,255,.06)}
+    /* Mobile nav toggle (unchanged behaviour) */
+    .nav-toggle{display:none}
+    @media (max-width:860px){
+      .nav-toggle{display:block;cursor:pointer}
+      .nav-links{position:fixed;inset:0 0 auto auto;width:min(320px,86vw);height:100vh;background:#0f1620;padding:72px 16px 20px;flex-direction:column;gap:14px;transform:translateX(100%);transition:.25s}
+      #nav-toggle:checked ~ .nav-links{transform:translateX(0)}
+      .nav-group-list{position:relative;top:auto;right:auto;display:block;background:transparent;border:none;box-shadow:none;padding:4px 0}
+      .nav-group-btn{width:100%;text-align:left}
+    }
 
-    /* ===== PANEL / EDGE (Updated to use new variables) ===== */
-    .edge{
-      /* Renamed to .panel or kept as .edge, but styling matches new panel */
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:var(--radius-lg);
-      padding:30px; /* Increased padding to match new panel style */
-      box-shadow:0 10px 24px rgba(0,0,0,.22);
-      position:relative;isolation:isolate;transition:all var(--speed);
-      border-color:rgba(255,255,255,.12); /* Subtle default border */
-    }
-    /* Styling for the special 'gold' version of the panel */
-    .edge.promo-panel {
-      background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.02));
-      border:2px solid var(--brand); /* Use brand color */
-      box-shadow:0 0 10px rgba(255,209,102,.25),0 12px 28px rgba(0,0,0,.18);
-    }
-    .edge.promo-panel:hover{
-      box-shadow:0 0 18px rgba(255,209,102,.55),0 18px 44px rgba(0,0,0,.26);
-      transform:translateY(-2px)
-    }
+    /* Hero */
+    .hero{padding:28px 0 10px;border-bottom:1px solid rgba(255,255,255,.06)}
+    .badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#FF512F,#DD2476);color:#fff;padding:6px 12px;border-radius:999px;font-weight:700;box-shadow:0 6px 16px rgba(221,36,118,.35)}
+    .badge-urgent{background:var(--danger);color:#fff;font-weight:900;padding:4px 8px;border-radius:6px;text-transform:uppercase;font-size:.85rem;margin-left:8px}
 
-    .bridge-wrap{display:grid;gap:25px} /* Match new grid gap */
-    @media(min-width:980px){.bridge-wrap{grid-template-columns:1.15fr .85fr}}
+    .hero h1{font-size:clamp(2rem,1.2rem + 2.8vw,3.1rem);margin:.6rem 0 .4rem}
+    .hero .sub{color:#cfd6df;max-width:68ch}
+    .hero-visual{margin:18px 0 0;display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:center}
+    .poster{border-radius:14px;border:1px solid rgba(255,255,255,.08);background:#0d1520;display:flex;align-items:center;justify-content:center}
+    .poster img{display:block;max-height:360px;object-fit:contain;padding:8px}
+    .cred{display:flex;gap:16px;flex-wrap:wrap;margin-top:14px}
+    .cred .chip{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:999px;padding:8px 12px;font-weight:700}
 
-    /* ===== BUTTONS (Updated to match services/boarding pages) ===== */
-    .btn{
-      -webkit-tap-highlight-color:transparent;display:inline-flex;align-items:center;justify-content:center;
-      gap:.5rem;padding:12px 18px;border-radius:999px;border:1px solid transparent;
-      font-weight:800;letter-spacing:.02em;text-decoration:none;transition:all var(--speed);cursor:pointer;
-      font-family:var(--font-heading); /* Ensure consistency */
-    }
-    .btn-primary{background:var(--brand);color:var(--brand-ink);box-shadow:0 10px 26px rgba(255,209,102,.25)}
-    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(255,209,102,.4)} /* Match new hover effect */
-    .btn-ghost{background:transparent;color:#fff;border:1px solid var(--line)} /* Use line color for ghost border */
-    .btn-ghost:hover{border-color:var(--muted);background:rgba(255,255,255,.05);box-shadow:none;transform:none} /* Match new ghost hover */
-    .btn-outline{background:transparent;border:1px solid var(--brand);color:var(--brand);font-weight:700}
-    .btn-outline:hover{background:rgba(255,209,102,.1);transform:translateY(-1px)}
-    .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
-    .cta-row .btn-primary{padding:18px 32px;font-size:1.2rem;min-width:280px}
+    /* Offer tiles */
+    .offer{background:var(--card);color:var(--ink);border-radius:14px;border:1px solid #e6e0d1;box-shadow:var(--ring);padding:16px}
+    .offer .price-anchor{font-size:1.8rem;font-weight:800;color:var(--ink)}
+    .offer .old-price{font-size:1.1rem;color:#777;text-decoration:line-through;margin-right:8px}
 
-    /* ===== HEADINGS/HELPERS (Updated to match services/boarding pages) ===== */
-    h2{font-family:var(--font-heading); font-size:clamp(1.5rem, 1.2rem + 1.5vw, 2rem);}
-    .mini{font-size:1rem;color:#cfd6df; line-height:1.5;} /* Match font size/color from other pages */
-    .muted{color:var(--muted)}
-    .badge{display:inline-block;padding:.28rem .7rem;border-radius:999px;font-size:.85rem;color:var(--brand-ink);background:var(--brand);font-weight:800;font-family:var(--font-heading)}
-    .notice{border:1px dashed var(--line);border-radius:12px;padding:12px;margin-top:16px;color:var(--muted);font-family:var(--font-body)}
-    .notice a{font-weight:700}
-    .accent-title{position:relative;display:inline-block;padding-bottom:4px;color:var(--text);font-weight:700}
-    .accent-title::after{
-      content:"";position:absolute;left:0;right:0;bottom:0;height:3px;
-      background:var(--accent); /* Use accent color for consistency */
-      opacity:.7; border-radius:1px;
-    }
+    /* Countdown */
+    .timer-bar{background:var(--danger-light);color:var(--ink);border:1px solid var(--danger);border-radius:999px;padding:6px 12px;font-weight:700;display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:12px;font-family:'Space Grotesk',sans-serif}
+    .timer-bar span{color:var(--danger)}
+    .timer-bar .days-left{font-size:1.1rem}
 
-    /* Promo ribbon remains largely the same, just font applied */
-    .promo-ribbon{
-      /* ... existing promo styles ... */
-      font-family:var(--font-body);
-    }
-    .promo-copy{font-weight:700;letter-spacing:.2px;line-height:1.3}
-    .promo-cta{
-      /* ... existing promo-cta styles ... */
-      font-family:var(--font-heading);
-    }
-    .deadline{
-      /* ... existing deadline styles ... */
-      font-family:var(--font-heading);
-    }
-    
-    /* NEW: Sticky CTA (Updated to match book-boarding style) */
-    .sticky-cta{
-      background:var(--card); /* Match header/footer background */
-      border:1px solid var(--line);
-      padding:10px 16px;
-      box-shadow:0 -8px 24px rgba(0,0,0,.35); /* Match book-boarding shadow */
-    }
-    .sticky-cta .btn{
-      padding:12px 20px; font-size:1.05rem;
-      width:100%; /* Full width for mobile sticky */
-    }
-  </style>
+    .offer .line{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px dashed #d8d2c2}
+    .offer .line:last-child{border-bottom:0}
+    .tag{background:#0b0e12;color:var(--brand);border:1px solid #2c2c2c;border-radius:6px;padding:2px 8px;font-weight:800;font-size:.85rem}
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KP5LVKN6X3"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config','G-KP5LVKN6X3');    /* GA4 */
-    gtag('config','AW-17527927259');  /* Google Ads */
-  </script>
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:12px 18px;border-radius:999px;border:1px solid transparent;font-weight:800}
+    .btn-primary{background:var(--brand);color:#0b0e12;box-shadow:0 10px 26px rgba(255,209,102,.4);transform:scale(1);transition:transform .15s}
+    .btn-primary:hover{transform:scale(1.02)}
+    .btn-ghost{background:transparent;color:#fff;border:1px solid #2a3440}
+    .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.06)}
+    .btn-large{padding:14px 22px;font-size:1.05rem}
 
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
-    {"@type":"ListItem","position":2,"name":"Book a Dog Walk","item":"https://www.woofofwalkstreet.com/book-dog-walk/"}
-  ]}
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Service",
-    "serviceType":"Casual Dog Walking — South Melbourne",
-    "provider":{"@type":"LocalBusiness","name":"The Woof of Walk Street","address":{"@type":"PostalAddress","addressLocality":"South Melbourne","addressRegion":"VIC","addressCountry":"AU"}},
-    "areaServed":["South Melbourne","Albert Park","Port Melbourne","Middle Park","Southbank","South Yarra"],
-    "description":"Book a 45-minute solo dog walk. One-dog-only with GPS route and photo updates.",
-    "offers":{
-      "@type":"Offer",
-      "url":"https://www.woofofwalkstreet.com/book-dog-walk/",
-      "priceCurrency":"AUD",
-      "price":"100.00",
-      "priceValidUntil":"2025-12-31",
-      "eligibleCustomerType":"https://schema.org/NewCustomer",
-      "discount":"50%",
-      "availability":"https://schema.org/InStock"
-    }
-  }
-  </script>
+    /* Sections */
+    .section{padding:34px 0;border-top:1px solid rgba(255,255,255,.06)}
+    .h2{font-size:clamp(1.4rem,1rem + 1.6vw,2rem);margin:0 0 10px}
+    .meta{color:var(--muted);font-size:.95rem}
 
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Book a 45-Minute Solo Dog Walk — 50% Off Until 31 Dec 2025">
-  <meta property="og:description" content="One-dog-only, GPS-tracked 45-minute walks. Use code WALK50 — offer ends 31 December 2025.">
-  <meta property="og:url" content="https://www.woofofwalkstreet.com/book-dog-walk/">
-  <meta property="og:image" content="https://www.woofofwalkstreet.com/images/brand/promo-banner-dog-in-suit.png">
-  <meta property="og:locale" content="en_AU">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Book a 45-Minute Solo Dog Walk — 50% Off Until 31 Dec 2025">
-  <meta name="twitter:description" content="Use code WALK50 for 50% off casual walks. Ends 31 December 2025.">
-  <meta name="twitter:image" content="https://www.woofofwalkstreet.com/images/brand/promo-banner-dog-in-suit.png">
+    /* Benefits grid */
+    .benefits{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:14px}
+    .benefit{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:16px}
+    .benefit h3{color:var(--accent)}
+
+    /* Social proof */
+    .test-wrap{position:relative}
+    .slider{display:flex;gap:14px;overflow:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
+    .slide{scroll-snap-align:start;min-width:320px;background:var(--card);color:var(--ink);border-radius:14px;border:1px solid #e6e0d1;padding:16px;box-shadow:var(--ring)}
+    .stars{color:#ffb703;font-size:1.05rem}
+
+    /* Guarantee + FAQs */
+    .guarantee{background:rgba(90,242,198,.08);border:1px solid rgba(90,242,198,.22);border-radius:14px;padding:16px}
+    details.faq{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:10px 14px}
+    details.faq+details.faq{margin-top:10px}
+    details.faq summary{cursor:pointer;font-weight:700}
+
+    /* Final closer */
+    .closer{background:radial-gradient(800px 320px at 15% -10%, rgba(255,209,102,.12), transparent 60%);padding:32px 0 46px}
+    .closer .box{background:var(--card);color:var(--ink);border:1px solid #e6e0d1;border-radius:16px;padding:18px;box-shadow:var(--ring)}
+
+    /* Sticky CTA (mobile) */
+    .sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:60;background:rgba(15,22,32,.92);backdrop-filter:saturate(120%) blur(6px);border-top:1px solid rgba(255,255,255,.06);display:none;gap:10px;padding:10px 16px}
+    .sticky-cta .btn{flex:1}
+    @media (max-width:768px){.hero-visual{grid-template-columns:1fr}.sticky-cta{display:flex}}
+
+    /* Utility */
+    .sp-8{height:8px} .sp-12{height:12px} .sp-20{height:20px}
+
+    /* Scheduler frame wrapper (light border + shadow on dark bg) */
+    .scheduler-wrap{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);
+      border-radius:14px;box-shadow:0 18px 42px rgba(0,0,0,.18);padding:8px}
+    .scheduler-frame{width:100%;height:720px;border:0;border-radius:12px;background:#fff}
+  </style>
 </head>
-
 <body>
-  <div id="promo" class="promo-ribbon" role="region" aria-label="Promo: 50% off casual walks">
-    <div class="promo-inner">
-      <img class="promo-dog" src="/images/brand/dog-in-suit.webp" alt="" width="28" height="28" decoding="async" />
-      <span class="promo-copy"><strong>50% Off Casual Walks</strong> — Use code <strong>WALK50</strong>. Ends <strong>31 Dec 2025</strong>.</span>
-      <a href="#" class="promo-cta" id="promo-cta">Book Now →</a>
-      <button id="promo-close" class="promo-close" aria-label="Dismiss promo">✕</button>
-    </div>
-  </div>
 
-  <header class="site-header">
-    <div class="navbar container" role="navigation" aria-label="Main">
-      <a class="brand" href="/" aria-label="Go to home">
-        <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="56" height="56">
-        <strong>The Woof of Walk Street</strong>
-      </a>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/"><img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street"><strong>The Woof of Walk Street</strong></a>
 
-      <input id="nav-toggle" type="checkbox" hidden>
-      <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</label>
+      <input id="nav-toggle" type="checkbox" hidden>
+      <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</label>
 
-      <nav class="nav-links" aria-label="Primary">
-        <section class="nav-group">
-          <button class="nav-group-btn" aria-expanded="false" aria-controls="nav-services">Services</button>
-          <ul id="nav-services" class="nav-group-list">
-            <li><a href="/dog-walking-south-melbourne.html">Dog Walking South Melbourne</a></li>
-            <li><a href="/casual-dog-walking-south-melbourne.html">Casual Dog Walking</a></li>
-            <li><a href="/boarding-services.html">Boarding</a></li>
-            <li><a href="/contact.html">Contact</a></li>
-          </ul>
-        </section>
-        <a href="/about.html">About</a>
-        <a href="/testimonials.html">Testimonials</a>
-        <a href="/gallery.html">Gallery</a>
-        <a href="/blog/index.html">Blog</a>
-        <a href="/faq.html">FAQs</a>
-        <a href="/search.html">Search</a>
+      <nav class="nav-links" aria-label="Primary">
+        <div class="nav-group" aria-expanded="false">
+          <a href="/services.html" class="nav-group-btn" aria-haspopup="true">Services ▾</a>
+          <div class="nav-group-list" role="menu" aria-label="Services menu">
+            <a role="menuitem" href="/dog-walking-south-melbourne.html">Dog Walking</a>
+            <a role="menuitem" href="/boarding-services.html">Boutique Boarding</a>
+            <a role="menuitem" href="/memberships.html">Memberships</a>
+          </div>
+        </div>
+        <a href="/about.html">About</a>
+        <a href="/testimonials.html">Testimonials</a>
+        <a href="/contact.html">Contact</a>
+        <!-- changed to scroll-to-scheduler -->
+        <a class="btn btn-primary book-btn" href="#book">Claim 50% Walk</a>
+      </nav>
+    </div>
+  </header>
 
-        <a class="btn btn-primary nav-cta" href="#" id="nav-book">Book Casual Walk</a>
-      </nav>
-    </div>
-  </header>
+  <section class="hero">
+    <div class="container">
+      <span class="badge">⚡ New Client Offer<span class="badge-urgent">Limited Time</span></span>
+      <h1>Finally, Peace of Mind: Claim 50% Off a Proof-Driven Solo Walk</h1>
+      <p class="sub">One-dog-only, 45-minute walk at your door. Stop guessing! Get <strong>GPS route + photo proof</strong> sent instantly. Perfect for anxious or sensitive dogs needing calm, low-arousal routes.</p>
 
-  <section style="padding:0;border-bottom:none">
-    <div class="hero-banner" style="position:relative">
-      <img src="/images/brand/promo-banner-dog-in-suit.png" alt="Solo Dog Walking South Melbourne — 50% Off Casual Walks">
-      <div class="hero-overlay">
-        <div style="max-width:760px">
-          <h1>50% Off Casual Solo Walks</h1>
-          <p>One-dog-only, 45-minute walks with GPS map & photo updates. <span class="deadline">Ends <span id="days-left"></span> • 31 Dec</span></p>
-          <a href="#" class="btn btn-primary" data-plan="casual_50" id="hero-book">Book 50% Off Casual Walk</a>
-          <div style="margin-top:8px">
-            <a class="btn btn-ghost" href="/contact.html">Have a question?</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+      <div class="hero-visual">
+        <div class="offer">
+          <div id="countdown" class="timer-bar" aria-live="polite">
+            🕒 Offer Ends in <span class="days-left">...</span>
+          </div>
 
-  <main class="container" style="margin-top:30px">     <div class="bridge-wrap">
-      <section class="edge promo-panel" aria-labelledby="book-heading">         <h2 id="book-heading" class="accent-title">Get Started</h2>
-        <p class="mini" style="margin:.25rem 0 .35rem">Tap the button below to choose a time. Your discount code <strong>WALK50</strong> will be applied on the booking page.</p>
+          <div class="line">
+            <span>Casual Solo Walk (45 Min)</span>
+            <span class="tag">50% OFF</span>
+          </div>
+          <div class="line">
+            <span>Your Trial Price</span>
+            <span class="price-anchor"><span class="old-price">$35.00</span>$17.50</span>
+          </div>
+          <div class="cta-row">
+            <!-- changed to scroll-to-scheduler -->
+            <a class="btn btn-primary btn-large book-btn" href="#book">Secure My 50% Off Walk Now →</a>
+            <a class="btn btn-ghost btn-large" href="tel:+61370731175">Call Us to Ask a Question</a>
+          </div>
+        </div>
 
-        <div class="cta-row" style="margin-top:0">
-          <a class="btn btn-primary" data-plan="casual_50" id="main-book" href="#">Book 50% Off Casual Walk</a>
-        </div>
+        <figure class="poster">
+          <img src="/images/promos/50off-hero.webp" alt="50% Off Casual Walks graphic" width="720" height="420"
+               onerror="this.src='/images/brand/hero-dog-skyline-800.webp'">
+        </figure>
+      </div>
 
-        <div class="notice" role="note" style="margin-top:18px">
-          Prefer to chat first?
-          <a class="btn btn-outline" href="/contact.html" style="margin-left:8px">Ask a Question</a>
-          <a class="btn btn-ghost" href="tel:(03)70731175">Call (03) 7073 1175</a>
-        </div>
-      </section>
+      <div class="cred">
+        <span class="chip">📸 GPS & Photo Proof (Always)</span>
+        <span class="chip">🐕 Always One Dog</span>
+        <span class="chip">🛡️ Fully Insured & Local</span>
+      </div>
+    </div>
+  </section>
 
-      <aside class="edge" aria-labelledby="trust-heading">
-        <span class="badge" style="margin-bottom:6px">What you get</span>
-        <h2 id="trust-heading" class="accent-title">Calm, Solo, Proof-Driven</h2>
-        <ul class="mini" style="margin:0 0 0 18px">
-          <li>45-minute walk at your door — no group mixing</li>
-          <li>GPS route + photo update after every session</li>
-          <li>Local, low-arousal routes around your suburb</li>
-          <li>Great for anxious, reactive or senior dogs</li>
-        </ul>
-      </aside>
-    </div>
+  <section class="section">
+    <div class="container">
+      <h2 class="h2">The Zero-Stress Walk: How We Build Trust & Calm for Your Dog</h2>
+      <p class="meta">No pack mixing. No confusion. Just predictable, proven relief for you and your dog.</p>
 
-    <section class="edge" style="margin-top:25px" aria-labelledby="expect-heading">       <h2 id="expect-heading" class="accent-title">What to expect</h2>
+      <div class="benefits">
+        <div class="benefit">
+          <h3>Exclusively 1:1 Walks</h3>
+          <p>Your dog receives 100% focused attention. No group transport, just a peaceful walk from your front door.</p>
+        </div>
+        <div class="benefit">
+          <h3>Instant, Unbreakable Proof</h3>
+          <p><strong>The differentiator:</strong> GPS route tracking, time-stamped photos, and quick notes delivered immediately after <em>every</em> session.</p>
+        </div>
+        <div class="benefit">
+          <h3>Built for Anxious & Reactive Dogs</h3>
+          <p>We specialise in low-arousal, consistent routines to reduce fear and over-excitement on the street.</p>
+        </div>
+        <div class="benefit">
+          <h3>Professional, Insured, Local</h3>
+          <p>We’re South Melbourne locals. Enjoy the peace of mind that comes with professional standards and full public liability insurance.</p>
+        </div>
+      </div>
 
-      <div class="edge" style="border-width:1px;margin-top:15px;padding:20px;">         <h3 class="badge" style="margin:0 0 8px 0">On the day</h3>
-        <ol style="margin:0 0 0 18px; line-height:1.5;">
-          <li>We arrive at your scheduled time.</li>
-          <li>Your dog enjoys a calm 45-minute solo walk.</li>
-          <li>You receive a GPS map, photos and quick notes.</li>
-        </ol>
-      </div>
+      <div class="cta-row" style="margin-top:16px">
+        <!-- changed to scroll-to-scheduler -->
+        <a class="btn btn-primary book-btn" href="#book">Claim Your 50% Off First Walk →</a>
+        <a class="btn btn-ghost" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031912">Prefer a Quick 10-min Chat?</a>
+      </div>
+    </div>
+  </section>
 
-      <div class="edge" style="border-width:1px;margin-top:15px;padding:20px;">
-        <h3 class="badge" style="margin:0 0 8px 0">After your booking</h3>
-        <ul style="margin:0 0 0 18px; line-height:1.5;">
-          <li>We’ll confirm keys, access and routine (if needed).</li>
-          <li>You can reschedule or book again any time.</li>
-        </ul>
-      </div>
-    </section>
-  </main>
+  <section class="section">
+    <div class="container test-wrap">
+      <h2 class="h2">Loved by Busy Melbourne Dog Parents</h2>
+      <div class="slider" aria-label="Testimonials">
+        <article class="slide">
+          <div class="stars">★★★★★</div>
+          <p>“The GPS map and photos after every walk are brilliant. Our anxious cavoodle is calmer in the evenings now.”</p>
+          <strong>— Anna, Albert Park</strong>
+        </article>
+        <article class="slide">
+          <div class="stars">★★★★★</div>
+          <p>“No group mixing, ever. Exactly what we wanted. Super reliable and easy to book.”</p>
+          <strong>— Mark, Southbank</strong>
+        </article>
+        <article class="slide">
+          <div class="stars">★★★★★</div>
+          <p>“Professional from the first call. Loved the notes and photos — zero guesswork.”</p>
+          <strong>— Jess, Port Melbourne</strong>
+        </article>
+      </div>
+    </div>
+  </section>
 
-  <div class="sticky-cta" role="region" aria-label="Book your 50% off casual walk">
-    <a class="btn btn-primary" data-plan="casual_50" id="sticky-book" href="#">
-      Book 50% Off Walk
-    </a>
-  </div>
+  <section class="section">
+    <div class="container">
+      <div class="guarantee">
+        <h3 style="margin:.2rem 0">Our Calm-Dog Promise & 100% Guarantee</h3>
+        <p>If the first session doesn't deliver the calm experience we promised, tell us within 24 hours and we'll refund your walk in full. <strong>Zero risk for you.</strong></p>
+      </div>
 
-  <footer class="site-footer" role="contentinfo" style="margin-top:40px">
-    <div class="container footer-grid">
-      <section class="footer-brand">
-        <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="60" height="60" loading="lazy">
-        <p><strong>The Woof of Walk Street</strong><br>
-          <a class="footer-map" href="https://maps.app.goo.gl/YnEoSPwhGocUZyWL9?g_st=ipc" target="_blank" rel="noopener">South Melbourne, VIC</a> · Mon–Fri 7am–7pm<br>
-          <a href="tel:(03)70731175">(03) 7073 1175</a> · <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a>
-        </p>
-        <div class="footer-socials">
-          <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram"><img src="/images/social/instagram.svg" alt="" width="24" height="24"></a>
-          <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook"><img src="/images/social/facebook.svg" alt="" width="24" height="24"></a>
-          <a href="https://x.com/woofofwalkstreet" aria-label="X"><img src="/images/social/twitter.svg" alt="" width="24" height="24"></a>
-        </div>
-      </section>
+      <div class="sp-12"></div>
+      <details class="faq"><summary>Do you do group walks?</summary><p>No — we specialise exclusively in solo, one-on-one walks for safety and calm. <strong>We do not mix dogs.</strong></p></details>
+      <details class="faq"><summary>How do I know the walk actually happened?</summary><p>You receive a <strong>live GPS map</strong> of the route, multiple photos and quick notes right after each session. Full transparency is our standard.</p></details>
+      <details class="faq"><summary>What areas do you cover?</summary><p>South Melbourne, Albert Park, Middle Park, Port Melbourne, Southbank & South Yarra.</p></details>
 
-      <nav class="footer-col" aria-label="Services">
-        <h3>Services</h3>
-        <ul>
-          <li><a href="/dog-walking-south-melbourne.html">Dog Walking South Melbourne</a></li>
-          <li><a href="/casual-dog-walking-south-melbourne.html">Casual Dog Walking</a></li>
-          <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="cta-row" style="margin-top:16px">
+        <!-- changed to scroll-to-scheduler -->
+        <a class="btn btn-primary btn-large book-btn" href="#book">Secure Your Spot Before The Offer Ends →</a>
+        <a class="btn btn-ghost btn-large" href="tel:+61370731175">Questions? Call us (03) 7073 1175</a>
+      </div>
+    </div>
+  </section>
 
-      <section class="footer-col collapsible">
-        <button class="collapse-btn" aria-expanded="false" aria-controls="support-list">Support</button>
-        <ul id="support-list">
-          <li><a href="/about.html">About</a></li>
-          <li><a href="/testimonials.html">Testimonials</a></li>
-          <li><a href="/gallery.html">Photos & Videos</a></li>
-          <li><a href="/blog/index.html">Blog</a></li>
-          <li><a href="/faq.html">FAQs</a></li>
-          <li><a href="/privacy.html">Privacy</a></li>
-          <li><a href="/terms.html">Terms</a></li>
-        </ul>
-      </section>
-    </div>
+  <section class="closer">
+    <div class="container">
+      <div class="box">
+        <h2 class="h2">Don't Miss Out: Claim Your Discounted Trial Today</h2>
+        <p style="color:#2b2b2b;max-width:65ch">This is the easiest way to experience the difference a solo, proof-driven walk makes. Pick a time, we arrive at your door, and your dog gets a calm 45-minute walk. New clients get <strong>50% off ($17.50 trial)</strong>, but this offer is strictly limited.</p>
+        <div class="cta-row">
+          <!-- changed to scroll-to-scheduler -->
+          <a class="btn btn-primary btn-large book-btn" href="#book">Lock in 50% Off & Book Now →</a>
+          <a class="btn" style="background:#0b0e12;color:#fff;border:1px solid #2a3440" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031912" target="_blank" rel="noopener">Book a 10-min Chat First</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <div class="container footer-geo">
-      Solo Dog Walking across <strong>South Melbourne</strong>, <strong>Albert Park</strong>, <strong>Port Melbourne</strong>, <strong>Middle Park</strong>, <strong>Southbank</strong> and <strong>South Yarra</strong>.
-    </div>
+  <!-- NEW: Embedded scheduler that all book buttons scroll to -->
+  <section id="book" class="section" aria-label="Choose a time">
+    <div class="container">
+      <h2 class="h2">Choose a Time</h2>
+      <p class="meta" style="margin-bottom:12px">
+        Your discount code <strong>WALK50</strong> is applied automatically.
+      </p>
 
-    <div class="container footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-  </footer>
+      <div class="scheduler-wrap">
+        <iframe id="acuity-frame" title="Book a Walk" class="scheduler-frame" loading="lazy" src=""></iframe>
+      </div>
+    </div>
+  </section>
 
-  <script>
-    // Services dropdown (mobile)
-    (function () {
-      const btn  = document.querySelector('.nav-group-btn[aria-controls="nav-services"]');
-      const list = document.getElementById('nav-services');
-      if (!btn || !list) return;
-      const sync = () => { list.hidden = btn.getAttribute('aria-expanded') !== 'true'; };
-      sync();
-      btn.addEventListener('click', () => {
-        const open = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', String(!open));
-        list.hidden = open;
-      });
-      document.addEventListener('click', (e) => {
-        if (!btn.contains(e.target) && !list.contains(e.target)) {
-          btn.setAttribute('aria-expanded', 'false');
-          list.hidden = true;
-        }
-      }, { capture: true });
-    })();
+  <div class="sticky-cta" role="region" aria-label="Quick booking">
+    <!-- changed to scroll-to-scheduler -->
+    <a class="btn btn-primary book-btn" href="#book">Claim 50% Walk</a>
+    <a class="btn btn-ghost" href="tel:+61370731175">Call</a>
+  </div>
 
-    // Build Acuity URL with coupon + preserve UTM
-    (function(){
-      const ACUITY_BASE = "https://app.acuityscheduling.com/schedule.php";
-      const OWNER = "37607219";
-      const APPOINTMENT_TYPE = "86031931"; // 45-minute casual walk
-      const COUPON = "WALK50";            // promo code
+  <script>
+    // Services dropdown click on mobile only (solid background already handled via CSS)
+    (function(){
+      const group=document.querySelector('.nav-group');
+      const btn=document.querySelector('.nav-group-btn');
+      if(group && btn){
+        btn.addEventListener('click',e=>{
+          if(window.innerWidth<861){ e.preventDefault();
+            const open=group.getAttribute('aria-expanded')==='true';
+            group.setAttribute('aria-expanded',!open);
+            btn.setAttribute('aria-expanded',!open);
+          }
+        });
+      }
 
-      function preservedUTMs(){
-        const p = new URLSearchParams(window.location.search);
-        const keep = new URLSearchParams();
-        ["utm_source","utm_medium","utm_campaign","utm_term","utm_content"].forEach(k=>{
-          if (p.has(k)) keep.set(k, p.get(k));
-        });
-        return keep;
-      }
+      // Countdown Timer
+      const countdown = document.getElementById('countdown');
+      if (countdown) {
+        const end = new Date(new Date().getFullYear() + '-12-31T23:59:59');
+        const now = new Date();
+        if (now.getFullYear() === end.getFullYear()) {
+          const diff = end - now;
+          if (diff > 0) {
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            countdown.innerHTML = `
+              🚨 Offer Ends In: 
+              <span class="days-left">${days} Day${days !== 1 ? 's' : ''}</span> 
+              & <span>${hours} Hour${hours !== 1 ? 's' : ''}</span>
+            `;
+          } else {
+            countdown.style.display = 'none';
+          }
+        }
+      }
 
-      function buildAcuityUrl(){
-        const qs = new URLSearchParams(preservedUTMs());
-        qs.set("owner", OWNER);
-        qs.set("appointmentType", APPOINTMENT_TYPE);
-        qs.set("coupon", COUPON);
-        return ACUITY_BASE + "?" + qs.toString();
-      }
+      // Build iframe src with coupon (defaults to WALK50, but honors ?coupon= in URL)
+      const params = new URLSearchParams(location.search);
+      const coupon = params.get('coupon') || 'WALK50';
+      const base = 'https://app.acuityscheduling.com/schedule.php';
+      const src = `${base}?owner=37607219&appointmentType=86031912&coupon=${encodeURIComponent(coupon)}`;
+      const frame = document.getElementById('acuity-frame');
+      if(frame) frame.src = src;
 
-      function wire(id){
-        const el = document.getElementById(id);
-        if (!el) return;
-        el.addEventListener('click', function(e){
-          e.preventDefault();
-          try { window.gtag && gtag('event','acuity_click',{event_category:'engagement',event_label:'casual_50'}); } catch(_){}
-          window.location.href = buildAcuityUrl();
-        });
-      }
-
-      // Attach to all CTAs
-      ["promo-cta","nav-book","hero-book","main-book", "sticky-book"].forEach(wire);
-
-      // Close promo ribbon
-      const promo = document.getElementById('promo');
-      const close = document.getElementById('promo-close');
-      try{ if(sessionStorage.getItem('wow-promo-closed')==='1') promo.style.display='none'; }catch(e){}
-      close?.addEventListener('click',()=>{ try{sessionStorage.setItem('wow-promo-closed','1');}catch(e){}; promo.style.display='none'; });
-    })();
-
-    // Deadline counter to 31 Dec 2025 (local AU time ok)
-    (function(){
-      try{
-        const el = document.getElementById('days-left');
-        if(!el) return;
-        const now = new Date();
-        const deadline = new Date('2025-12-31T23:59:59+11:00'); // AEDT
-        const ms = Math.max(0, deadline - now);
-        const days = Math.ceil(ms / (1000*60*60*24));
-        el.textContent = days + (days === 1 ? ' day left' : ' days left');
-      }catch(_){}
-    })();
-  </script>
-
-  <noscript>
-    <div class="container edge promo-panel" style="margin:20px 0">
-      <p><strong>JavaScript is off.</strong> You can still book here:</p>
-      <p><a class="btn btn-primary" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931&coupon=WALK50">Open Booking</a></p>
-      </div>
-  </noscript>
+      // Extra-smooth scroll with offset for sticky header so widget isn't hidden
+      const links = document.querySelectorAll('.book-btn[href^="#book"]');
+      const target = document.getElementById('book');
+      function offsetScroll(el){
+        const headerH = document.querySelector('.site-header')?.offsetHeight || 0;
+        const top = el.getBoundingClientRect().top + window.scrollY - (headerH + 10);
+        window.scrollTo({top, behavior:'smooth'});
+      }
+      links.forEach(a=>{
+        a.addEventListener('click', e=>{
+          if(target){ e.preventDefault(); offsetScroll(target); }
+        });
+      });
+    })();
+  </script>
 </body>
 </html>

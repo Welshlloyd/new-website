@@ -1,13 +1,19 @@
+# robots.txt — woofofwalkstreet.com
+
 User-agent: *
+# Let Google fetch everything (HTML, CSS, JS, images)
 Allow: /
 
-# Block private/system paths
-Disallow: /wp-admin/
-Disallow: /wp-login.php
-Disallow: /cgi-bin/
-Disallow: /phpmyadmin/
-Disallow: /searchreplacedb2.php
+# (Optional) keep private/staging pages out of the index
 Disallow: /test-page
 
-# Sitemap location
+# (Optional) de-duplicate tracking-parameter URLs
+# Google/Bing support * and $ in robots.txt patterns
+Disallow: /*?*utm_*
+Disallow: /*?*gclid=*
+Disallow: /*?*fbclid=*
+Disallow: /*?*ref=*
+Disallow: /*?*coupon=*
+
+# Your XML sitemap
 Sitemap: https://www.woofofwalkstreet.com/sitemap.xml

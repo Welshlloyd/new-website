@@ -89,7 +89,7 @@
 
     /* Testimonials */
     .slider{display:flex;gap:14px;overflow:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
-    .slide{scroll-snap-align:start;min-width:320px;background:var(--card);color:var(--ink);border-radius:14px;border:1px solid #e6e0d1;padding:16px;box-shadow:var(--ring)}
+    .slide{scroll-snap-align:start;min-width:320px;background:var(--card);color:var(--ink);border:1px solid #e6e0d1;padding:16px;box-shadow:var(--ring)}
     .stars{color:#ffb703;font-size:1.05rem}
 
     /* Guarantee */
@@ -148,17 +148,17 @@
 
   <section class="hero">
     <div class="container">
-      <span class="badge">🐶 <strong>New Client Offer</strong><span class="badge-urgent">Limited Space</span></span>
-      <h1>Finally, Guilt-Free Travel: Secure Calm, Single-Guest Boarding for Your Dog</h1>
-      <p class="sub">Your dog stays as our <strong>only guest</strong> in a quiet, home-style environment. Includes <strong>daily solo walks</strong> and instant photo/video updates. Designed for sensitive, anxious, or VIP pups who need <strong>peace, not crowds.</strong></p>
+      <span class="badge">🔥 <strong>LIMITED OFFER: Single-Guest Boarding</strong><span class="badge-urgent">20% Off Trial</span></span>
+      <h1>Finally, Guilt-Free Travel: Secure the Last Stress-Free, Single-Guest Boarding Spot</h1>
+      <p class="sub">Your dog stays as our <strong>only guest</strong> in a quiet, home-style environment. Includes a <strong>Dedicated Daily Solo Adventure</strong> and instant photo/video updates. Designed for sensitive, anxious, or VIP pups who need <strong>peace, not crowds.</strong></p>
 
       <div class="hero-visual">
         <div class="offer">
           <div id="countdown" class="timer-bar" aria-live="polite">
-            🚨 <strong>Offer Ends in</strong> <span class="days-left">...</span>
+            🚨 <strong>BOOKING WINDOW CLOSES IN:</strong> <span class="days-left">...</span>
           </div>
           <div class="line">
-            <span>Boutique Nightly Stay</span>
+            <span>Secure Your 20% Off Trial Night</span>
             <span class="tag">20% OFF</span>
           </div>
           <div class="line">
@@ -168,9 +168,12 @@
           <div class="cta-row">
             <a class="btn btn-primary btn-large book-btn" href="#book"
                onclick="gtag('event', 'conversion', {'send_to': 'AW-YOUR_COMMON_AW_ID/YOUR_BOARDING_CONVERSION_LABEL'});">
-               <strong>Claim 20% Off & Reserve Dates →</strong>
+               <strong>Claim Trial Price & Secure the Spot →</strong>
             </a>
-            <a class="btn btn-ghost btn-large" href="tel:+61370731175">Ask a Quick Question</a>
+            <a class="btn btn-ghost btn-large" href="tel:+61370731175"
+               onclick="gtag('event', 'conversion', {'send_to': 'AW-YOUR_COMMON_AW_ID/YOUR_CALL_CONVERSION_LABEL'});">
+               Ask a Quick Question
+            </a>
           </div>
         </div>
 
@@ -197,11 +200,11 @@
       <div class="benefits">
         <div class="benefit">
           <h3>No Dog-to-Dog Contact</h3>
-          <p><strong>Zero pack mixing, ever.</strong> Your dog is our single focus, eliminating stress and social pressure found in multi-guest facilities.</p>
+          <p><strong>Zero pack mixing, ever. Eliminate the stress of forced socialization.</strong> Your dog is our single focus, ensuring total calm.</p>
         </div>
         <div class="benefit">
           <h3>Proof of Comfort Daily</h3>
-          <p>Get <strong>daily photo/video updates</strong> showing your dog is happy, settled, and enjoying their dedicated solo walk.</p>
+          <p>Get <strong>daily photo/video updates. Stop worrying about how they’re coping.</strong> We provide proof that your dog is happy, settled, and enjoying their dedicated solo walk.</p>
         </div>
         <div class="benefit">
           <h3>Perfect for Sensitive Dogs</h3>
@@ -216,7 +219,7 @@
       <div class="cta-row" style="margin-top:16px">
         <a class="btn btn-primary book-btn" href="#book"
            onclick="gtag('event', 'conversion', {'send_to': 'AW-YOUR_COMMON_AW_ID/YOUR_BOARDING_CONVERSION_LABEL'});">
-           Check Availability & Claim Discount →
+           Check Dates & Secure 20% Off Trial →
         </a>
         <a class="btn btn-ghost" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86032167">Prefer a 10-min Call?</a>
       </div>
@@ -263,7 +266,10 @@
            onclick="gtag('event', 'conversion', {'send_to': 'AW-YOUR_COMMON_AW_ID/YOUR_BOARDING_CONVERSION_LABEL'});">
            <strong>Reserve Dates at 20% Off →</strong>
         </a>
-        <a class="btn btn-ghost btn-large" href="tel:+61370731175">Questions? Call (03) 7073 1175</a>
+        <a class="btn btn-ghost btn-large" href="tel:+61370731175"
+           onclick="gtag('event', 'conversion', {'send_to': 'AW-YOUR_COMMON_AW_ID/YOUR_CALL_CONVERSION_LABEL'});">
+           Questions? Call (03) 7073 1175
+        </a>
       </div>
     </div>
   </section>
@@ -276,7 +282,7 @@
         <div class="cta-row">
           <a class="btn btn-primary btn-large book-btn" href="#book"
              onclick="gtag('event', 'conversion', {'send_to': 'AW-YOUR_COMMON_AW_ID/YOUR_BOARDING_CONVERSION_LABEL'});">
-             <strong>Lock in 20% Off & Book Now →</strong>
+             <strong>Lock in 20% Off & Book Calm Stay →</strong>
           </a>
           <a class="btn" style="background:#0b0e12;color:#fff;border:1px solid #2a3440" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86032167" target="_blank" rel="noopener">Open in Acuity</a>
         </div>
@@ -291,7 +297,7 @@
       <div class="scheduler-wrap">
         <iframe id="acuity-frame" title="Book Boutique Boarding" class="scheduler-frame" loading="lazy" src=""></iframe>
       </div>
-      </div>
+    </div>
   </section>
 
   <div class="sticky-cta" role="region" aria-label="Quick booking">
@@ -299,7 +305,10 @@
        onclick="gtag('event', 'conversion', {'send_to': 'AW-YOUR_COMMON_AW_ID/YOUR_BOARDING_CONVERSION_LABEL'});">
        Book 20% Off
     </a>
-    <a class="btn btn-ghost" href="tel:+61370731175">Call</a>
+    <a class="btn btn-ghost" href="tel:+61370731175"
+       onclick="gtag('event', 'conversion', {'send_to': 'AW-YOUR_COMMON_AW_ID/YOUR_CALL_CONVERSION_LABEL'});">
+       Call
+    </a>
   </div>
 
   <script>
@@ -317,7 +326,7 @@
         });
       }
 
-      // Countdown to Dec 31 current year (Same logic as Walk page)
+      // Countdown to Dec 31 current year
       const countdown = document.getElementById('countdown');
       if (countdown) {
         const end = new Date(new Date().getFullYear() + '-12-31T23:59:59');
@@ -326,7 +335,7 @@
         if (diff > 0) {
           const days = Math.floor(diff / (1000*60*60*24));
           const hours = Math.floor((diff % (1000*60*60*24))/(1000*60*60));
-          countdown.innerHTML = `🚨 <strong>Offer Ends In:</strong> <span class="days-left">${days} Day${days!==1?'s':''}</span> & <span>${hours} Hour${hours!==1?'s':''}</span>`;
+          countdown.innerHTML = `🚨 <strong>BOOKING WINDOW CLOSES IN:</strong> <span class="days-left">${days} Day${days!==1?'s':''}</span> & <span>${hours} Hour${hours!==1?'s':''}</span>`;
         } else {
           countdown.style.display = 'none';
         }

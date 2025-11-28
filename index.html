@@ -34,8 +34,8 @@
         imagesrcset="/images/brand/hero-dog-skyline-800.webp 800w, /images/brand/hero-dog-skyline-1200.webp 1200w, /images/brand/hero-dog-skyline-1600.webp 1600w"
         imagesizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px">
 
-  <!-- Preload first card for a snappy paint -->
-  <link rel="preload" as="image" href="/images/memberships/cards/unlimited_card_clean.webp">
+  <!-- Preload first membership card for a snappy paint (relative path) -->
+  <link rel="preload" as="image" href="images/memberships/cards/unlimited_card_clean.webp">
 
   <style>
     :root{
@@ -215,6 +215,9 @@
       :root{ --img-h: 400px; --card-h: 680px; }
     }
 
+    /* Ensure the membership images fill their frames exactly */
+    .mem-img{display:block;width:100%;height:100%;object-fit:cover}
+
     /* Footer */
     .site-footer{padding-top:40px;border-top:1px solid var(--line);margin-top:60px}
     .footer-grid{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap;padding-bottom:40px}
@@ -384,14 +387,37 @@
         <div class="carousel-shell">
           <div class="carousel-viewport" aria-roledescription="carousel">
             <div class="carousel-track" id="memTrack">
-              <!-- Slide: Unlimited -->
+
+              <!-- Elite (1st) -->
               <div class="slide">
                 <article class="mem-card gold-edge">
                   <div class="mem-media">
-                    <picture>
-                      <source type="image/webp" srcset="/images/memberships/unlimited_card_clean.webp">
-                      <img src="/images/memberships/unlimited_card_clean.png" alt="Unlimited Membership card - Daily Walks" loading="lazy" decoding="async">
-                    </picture>
+                    <img class="mem-img"
+                         src="images/memberships/cards/elite_card_clean.webp"
+                         onerror="this.onerror=null;this.src='images/memberships/cards/elite_card_clean.png';"
+                         alt="Elite Concierge Service card - 7 Days/Week" loading="lazy" decoding="async">
+                  </div>
+                  <div class="mem-body">
+                    <div>
+                      <h3>Elite Concierge</h3>
+                      <div class="mem-price">$5,000 / month</div>
+                      <p class="mem-copy">7-day coverage, white-glove care, concierge scheduling and direct support.</p>
+                    </div>
+                    <div class="mem-cta">
+                      <a class="btn btn-primary" href="/membership-elite.html">View details</a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Unlimited (2nd) -->
+              <div class="slide">
+                <article class="mem-card gold-edge">
+                  <div class="mem-media">
+                    <img class="mem-img"
+                         src="images/memberships/cards/unlimited_card_clean.webp"
+                         onerror="this.onerror=null;this.src='images/memberships/cards/unlimited_card_clean.png';"
+                         alt="Unlimited Membership card - Daily Walks" loading="lazy" decoding="async">
                   </div>
                   <div class="mem-body">
                     <div>
@@ -406,14 +432,14 @@
                 </article>
               </div>
 
-              <!-- Slide: Growth -->
+              <!-- Growth (3rd) -->
               <div class="slide">
                 <article class="mem-card gold-edge">
                   <div class="mem-media">
-                    <picture>
-                      <source type="image/webp" srcset="/images/memberships/growth_card_clean.webp">
-                      <img src="/images/memberships/growth_card_clean.png" alt="Growth Membership card - 10 Walks/Month" loading="lazy" decoding="async">
-                    </picture>
+                    <img class="mem-img"
+                         src="images/memberships/cards/growth_card_clean.webp"
+                         onerror="this.onerror=null;this.src='images/memberships/cards/growth_card_clean.png';"
+                         alt="Growth Membership card - 10 Walks/Month" loading="lazy" decoding="async">
                   </div>
                   <div class="mem-body">
                     <div>
@@ -428,14 +454,14 @@
                 </article>
               </div>
 
-              <!-- Slide: Starter -->
+              <!-- Starter (4th) -->
               <div class="slide">
                 <article class="mem-card gold-edge">
                   <div class="mem-media">
-                    <picture>
-                      <source type="image/webp" srcset="/images/memberships/starter_card_clean.webp">
-                      <img src="/images/memberships/starter_card_clean.png" alt="Starter Membership card - 4 Walks/Month" loading="lazy" decoding="async">
-                    </picture>
+                    <img class="mem-img"
+                         src="images/memberships/cards/starter_card_clean.webp"
+                         onerror="this.onerror=null;this.src='images/memberships/cards/starter_card_clean.png';"
+                         alt="Starter Membership card - 4 Walks/Month" loading="lazy" decoding="async">
                   </div>
                   <div class="mem-body">
                     <div>
@@ -450,27 +476,6 @@
                 </article>
               </div>
 
-              <!-- Slide: Elite -->
-              <div class="slide">
-                <article class="mem-card gold-edge">
-                  <div class="mem-media">
-                    <picture>
-                      <source type="image/webp" srcset="/images/memberships/elite_card_clean.webp">
-                      <img src="/images/memberships/elite_card_clean.png" alt="Elite Concierge Service card - 7 Days/Week" loading="lazy" decoding="async">
-                    </picture>
-                  </div>
-                  <div class="mem-body">
-                    <div>
-                      <h3>Elite Concierge</h3>
-                      <div class="mem-price">$5,000 / month</div>
-                      <p class="mem-copy">7-day coverage, white-glove care, concierge scheduling and direct support.</p>
-                    </div>
-                    <div class="mem-cta">
-                      <a class="btn btn-primary" href="/membership-elite.html">View details</a>
-                    </div>
-                  </div>
-                </article>
-              </div>
             </div>
           </div>
 

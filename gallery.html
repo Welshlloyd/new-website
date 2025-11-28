@@ -4,7 +4,6 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-  <!-- ===== Theme boot (no-FOUC) ===== -->
   <script>
   (function () {
     const KEY = 'wow-theme';
@@ -21,16 +20,13 @@
   })();
   </script>
 
-  <!-- ===== Fonts ===== -->
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <!-- ===== SEO ===== -->
   <title>Dog Walking & Boarding Photos & Videos — South Melbourne | The Woof of Walk Street</title>
   <meta name="description" content="See real photos and videos from our solo dog walks and single-guest boutique boarding across South Melbourne, Albert Park, Port Melbourne, Middle Park & Southbank."/>
   <link rel="canonical" href="https://www.woofofwalkstreet.com/gallery.html"/>
   <link rel="icon" href="/images/brand/favicon.ico"/>
 
-  <!-- Social -->
   <meta property="og:type" content="website"/>
   <meta property="og:title" content="Dog Walking & Boarding Photos & Videos — South Melbourne"/>
   <meta property="og:description" content="Photos of solo dog walks (GPS-tracked) and calm one-guest boarding in South Melbourne."/>
@@ -41,11 +37,9 @@
   <meta property="og:locale" content="en_AU">
   <meta name="twitter:card" content="summary_large_image"/>
 
-  <!-- CSS (global) -->
   <link rel="stylesheet" href="/css/mini.css"/>
   <link rel="stylesheet" href="/css/styles.css"/>
 
-  <!-- ===== Edge Pack CSS (matches homepage header/footer look) ===== -->
   <style>
     :root{
       --bg:#0b0e12; --card:#0f1318; --text:#e8eef5; --muted:#a9b4c0; --line:#1e2630;
@@ -67,6 +61,12 @@
 
     body, p, li, span, button, input, textarea { font-family: var(--font-body); line-height: 1.58; }
     h1,h2,h3,h4,h5,h6, nav a, .nav-group-btn{ font-family: var(--font-heading); }
+
+    /* Standard section padding and line separation (Consistent with other pages) */
+    .section{ padding:32px 0; border-top:1px solid rgba(255,255,255,.06); }
+    .section:first-of-type{ border-top:0; }
+    .h2{ font-size:clamp(1.8rem, 1rem + 2vw, 2.2rem); margin:0 0 10px; }
+
 
     /* Header (same as homepage) */
     .site-header{ position:sticky; top:0; z-index:1000; backdrop-filter:var(--header-blur); -webkit-backdrop-filter:var(--header-blur); background:var(--header-bg); border-bottom:1px solid rgba(255,255,255,.06); }
@@ -117,7 +117,7 @@
     .btn-outline{background:transparent;border:1px solid var(--brand);color:var(--brand)}
     .section-sweep{ height:4px; border:0; margin:24px 0; background:linear-gradient(90deg, transparent, rgba(255,209,102,.8), transparent); filter:drop-shadow(0 8px 18px rgba(255,209,102,.25)); }
 
-    /* Promo & Impact ribbons */
+    /* Promo & Impact ribbons - (kept for consistency) */
     .promo-ribbon{
       position:relative; z-index:1100;
       background:linear-gradient(135deg,#f5b200,#ffd866,#f5b200);
@@ -152,7 +152,6 @@
     .center{text-align:center}
   </style>
 
-  <!-- Google Ads / gtag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -161,7 +160,6 @@
     gtag('config', 'AW-17527927259');
   </script>
 
-  <!-- Preload hero image -->
   <link
     rel="preload"
     as="image"
@@ -172,7 +170,6 @@
 </head>
 
 <body>
-  <!-- Promo ribbon (matches homepage) -->
   <div id="promo" class="promo-ribbon promo--edge" role="region" aria-label="Promo: 50% off">
     <div class="promo-inner container">
       <img class="promo-dog" src="/images/brand/dog-in-suit.webp" alt="" width="28" height="28" decoding="async" />
@@ -184,7 +181,6 @@
     </div>
   </div>
 
-  <!-- Impact ribbon -->
   <div class="impact-ribbon" role="note" aria-label="Walks that do more: 10% donated">
     <div class="impact-inner">
       <span class="impact-emoji" aria-hidden="true">💛</span>
@@ -195,7 +191,6 @@
     </div>
   </div>
 
-  <!-- HEADER (copied from homepage) -->
   <header class="site-header" role="banner">
     <div class="navbar container" role="navigation" aria-label="Main">
       <a class="brand" href="/" aria-label="Go to home">
@@ -203,7 +198,6 @@
         <strong>The Woof of Walk Street</strong>
       </a>
 
-      <!-- mobile hamburger -->
       <input id="nav-toggle" type="checkbox" hidden>
       <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</label>
 
@@ -233,18 +227,15 @@
 
         <button id="theme-toggle" class="btn btn-ghost" type="button" aria-pressed="false" aria-label="Toggle color theme" title="Theme: Auto">🌗 Auto</button>
 
-        <!-- CTAs -->
         <a class="btn btn-outline nav-cta" href="/book-dog-walk/index.html" onclick="gtag && gtag('event','cta_click',{label:'header_book_walks'});">Book Walks</a>
         <a class="btn btn-primary nav-cta" href="/book-boarding.html" onclick="gtag && gtag('event','cta_click',{label:'header_book_boarding'});">Book Boarding</a>
       </nav>
 
-      <!-- SCRIM for the mobile menu -->
       <div class="nav-scrim" aria-hidden="true"></div>
     </div>
   </header>
 
   <main class="page-top">
-    <!-- HERO + Intro -->
     <section class="hero">
       <div class="container">
         <h1>Dog Walking & Boarding Photos (South Melbourne)</h1>
@@ -262,81 +253,78 @@
       </div>
     </section>
 
-    <!-- Instagram embed -->
-    <section class="container">
-      <h2>Latest on Instagram</h2>
-      <div class="embed-1x1">
-        <!-- If you swap SnapWidget ID later, just change the src below -->
-        <iframe
-          src="https://snapwidget.com/embed/1108836"
-          class="snapwidget-widget"
-          title="The Woof of Walk Street Instagram feed"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          allowtransparency="true">
-        </iframe>
+    <hr class="section-sweep" aria-hidden="true"> <section class="section">
+      <div class="container">
+        <h2 class="h2">Latest on Instagram</h2> <div class="embed-1x1">
+          <iframe
+            src="https://snapwidget.com/embed/1108836"
+            class="snapwidget-widget"
+            title="The Woof of Walk Street Instagram feed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowtransparency="true">
+          </iframe>
+        </div>
       </div>
     </section>
 
-    <!-- Highlights grid -->
-    <section class="container">
-      <h2>Photo Highlights</h2>
-      <div class="gallery-grid">
-        <figure>
-          <picture>
-            <source type="image/webp"
-              srcset="/images/gallery/dog-digging-sand.webp 1200w, /images/gallery/dog-digging-sand.jpg"
-              sizes="(max-width:640px) 100vw, 25vw">
-            <img src="/images/gallery/dog-digging-sand.jpg
-                 alt="Happy dog playing on the Port Melbourne foreshore during a solo walk"
-                 width="1200" height="900" loading="lazy" decoding="async">
-          </picture>
-        </figure>
+    <hr class="section-sweep" aria-hidden="true"> <section class="section">
+      <div class="container">
+        <h2 class="h2">Photo Highlights</h2> <div class="gallery-grid">
+          <figure>
+            <picture>
+              <source type="image/webp"
+                srcset="/images/gallery/dog-digging-sand.webp 1200w, /images/gallery/dog-digging-sand.jpg"
+                sizes="(max-width:640px) 100vw, 25vw">
+              <img src="/images/gallery/dog-digging-sand.jpg"
+                   alt="Happy dog playing on the Port Melbourne foreshore during a solo walk"
+                   width="1200" height="900" loading="lazy" decoding="async">
+            </picture>
+          </figure>
 
-        <figure>
-          <picture>
-            <source type="image/webp"
-              srcset="/images/gallery/dog-sunset-walk.webp 1200w, /images/gallery/dog-sunset-walk.jpg"
-              sizes="(max-width:640px) 100vw, 25vw">
-            <img src="/iimages/gallery/dog-sunset-walk.jpg"
-                 alt="Golden light sunset stroll near Albert Park Lake with one-dog-only walking"
-                 width="1200" height="900" loading="lazy" decoding="async">
-          </picture>
-        </figure>
+          <figure>
+            <picture>
+              <source type="image/webp"
+                srcset="/images/gallery/dog-sunset-walk.webp 1200w, /images/gallery/dog-sunset-walk.jpg"
+                sizes="(max-width:640px) 100vw, 25vw">
+              <img src="/iimages/gallery/dog-sunset-walk.jpg"
+                   alt="Golden light sunset stroll near Albert Park Lake with one-dog-only walking"
+                   width="1200" height="900" loading="lazy" decoding="async">
+            </picture>
+          </figure>
 
-        <figure>
-          <picture>
-            <source type="image/webp"
-              srcset="/images/gallery/dog-cozy-nap.webp 1200w, /images/gallery/dog-cozy-nap.jpg"
-              sizes="(max-width:640px) 100vw, 25vw">
-            <img src="/images/gallery/dog-cozy-nap.jpg"
-                 alt="Calm nap on a familiar blanket during boutique weekend boarding in South Melbourne"
-                 width="1200" height="900" loading="lazy" decoding="async">
-          </picture>
-        </figure>
+          <figure>
+            <picture>
+              <source type="image/webp"
+                srcset="/images/gallery/dog-cozy-nap.webp 1200w, /images/gallery/dog-cozy-nap.jpg"
+                sizes="(max-width:640px) 100vw, 25vw">
+              <img src="/images/gallery/dog-cozy-nap.jpg"
+                   alt="Calm nap on a familiar blanket during boutique weekend boarding in South Melbourne"
+                   width="1200" height="900" loading="lazy" decoding="async">
+            </picture>
+          </figure>
 
-        <figure>
-          <picture>
-            <source type="image/webp"
-              srcset="/images/gallery/dog-weekend-woof.webp 1200w, /images/gallery/dog-weekend-woof.jpg"
-              sizes="(max-width:640px) 100vw, 25vw">
-            <img src="/images/gallery/dog-weekend-woof.jpg"
-                 alt="Relaxed dog settling for lights-out at our one-guest Weekend Woof Club"
-                 width="1200" height="900" loading="lazy" decoding="async">
-          </picture>
-        </figure>
+          <figure>
+            <picture>
+              <source type="image/webp"
+                srcset="/images/gallery/dog-weekend-woof.webp 1200w, /images/gallery/dog-weekend-woof.jpg"
+                sizes="(max-width:640px) 100vw, 25vw">
+              <img src="/images/gallery/dog-weekend-woof.jpg"
+                   alt="Relaxed dog settling for lights-out at our one-guest Weekend Woof Club"
+                   width="1200" height="900" loading="lazy" decoding="async">
+            </picture>
+          </figure>
+        </div>
+
+        <p class="center" style="margin-top:1rem">
+          <a class="btn" href="/dog-walking-south-melbourne.html">See Dog Walking</a>
+          <a class="btn btn-primary" href="/boarding-services.html">Explore Boarding</a>
+        </p>
       </div>
-
-      <p class="center" style="margin-top:1rem">
-        <a class="btn" href="/dog-walking-south-melbourne.html">See Dog Walking</a>
-        <a class="btn btn-primary" href="/boarding-services.html">Explore Boarding</a>
-      </p>
     </section>
   </main>
 
-  <!-- FOOTER (same structure as homepage) -->
   <footer class="site-footer" role="contentinfo">
-    <!-- Banner hero -->
     <div class="container footer-banner" style="margin-top:6px">
       <picture>
         <source srcset="/images/brand/footer-banner-1600x600.webp" media="(min-width: 768px)">
@@ -344,20 +332,17 @@
       </picture>
     </div>
 
-    <!-- Grid -->
     <div class="container footer-grid compact">
-      <!-- Brand / contact -->
       <section class="footer-brand">
         <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="56" height="56" loading="lazy">
         <p class="org"><strong>The Woof of Walk Street</strong><br>
           <a class="footer-map" href="https://maps.app.goo.gl/YnEoSPwhGocUZyWL9?g_st=ipc" target="_blank" rel="noopener">South Melbourne, VIC</a><br>
-          Mon–Fri 7am–7pm · <a href="tel:+61456754050">+61&nbsp;456&nbsp;754&nbsp;050</a><br>
+          Mon–Fri 7am–7pm · <a href="tel:+61456754050">+61 456 754 050</a><br>
           <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a><br>
           <a href="https://www.google.com/search?sca_esv=e9f55f1ce1ed95d6&authuser=0&hl=en&gl=au&nfpr=1&sxsrf=AE3TifP5_xOq9o_RWRGxs8qTS_GbH89BiA:1761708463195&q=The+Woof+of+Walk+Street+%E2%80%93+Dog+Walking+South+Melbourne&ludocid=16990922104674419629&lsig=AB86z5UXDJ3ghyzMyUkvhOKOIEF3&ved=1i%3A4%2Ct%3A109124%2Ce%3A3%2Cp%3AqokBabC5O9_NseMP-IfUoAk%3A54" target="_blank" rel="noopener">Find us on Google</a>
         </p>
         <p style="margin:.4rem 0 0"><em>“GPS tracked, photo updates, and the calmest walks in Melbourne.”</em></p>
 
-        <!-- CTA row -->
         <p class="cta-buttons" style="margin:.75rem 0 0;display:flex;gap:.5rem;flex-wrap:wrap">
           <a class="btn btn-primary" href="/book-dog-walk/?utm_source=site&utm_medium=footer&utm_campaign=50off_walk">Book 50% Off Walk</a>
           <a class="btn btn-ghost"    href="/unlimited-dog-walks.html?utm_source=site&utm_medium=footer&utm_campaign=50off_unlimited">50% Off Unlimited</a>
@@ -365,7 +350,6 @@
         </p>
       </section>
 
-      <!-- Services -->
       <nav class="footer-col" aria-label="Services">
         <h3>Services</h3>
         <ul class="footlist">
@@ -377,7 +361,6 @@
         </ul>
       </nav>
 
-      <!-- Local Areas -->
       <nav class="footer-col" aria-label="Local Areas">
         <h3>Local Areas</h3>
         <ul class="footlist">
@@ -391,15 +374,14 @@
       </nav>
     </div>
 
-    <!-- Legal / SEO internal links -->
     <div class="container footer-bottom" style="text-align:center">
       <nav style="margin:10px 0 6px;display:inline-flex;gap:18px;flex-wrap:wrap">
         <a href="/contact.html">Contact Us</a>
-        <a href="/full-terms.html">Terms &amp; Conditions</a>
+        <a href="/full-terms.html">Terms & Conditions</a>
         <a href="/faq.html">FAQ</a>
       </nav>
       <div>
-        Solo Dog Walking &amp; Boutique Boarding across
+        Solo Dog Walking & Boutique Boarding across
         <strong>South Melbourne</strong>, <strong>Albert Park</strong>,
         <strong>Port Melbourne</strong>, <strong>Middle Park</strong>, <strong>Southbank</strong> and <strong>South Yarra</strong>
         · © <span id="year"></span> The Woof of Walk Street
@@ -408,7 +390,6 @@
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   </footer>
 
-  <!-- ImageGallery JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -424,9 +405,6 @@
   }
   </script>
 
-  <!-- ===== JS ===== -->
-
-  <!-- Nav services toggle + mobile menu autoclose + scroll lock -->
   <script>
   (function () {
     const btn  = document.querySelector('.nav-group-btn[aria-controls="nav-services"]');
@@ -475,7 +453,6 @@
   })();
   </script>
 
-  <!-- Theme toggle control -->
   <script>
   (function () {
     const el = document.getElementById('theme-toggle');
@@ -505,7 +482,6 @@
   })();
   </script>
 
-  <!-- Promo close persistence -->
   <script>
   (function(){
     const promo = document.getElementById('promo');
@@ -518,7 +494,6 @@
   })();
   </script>
 
-  <!-- SnapWidget script (if needed by provider) -->
   <script src="https://snapwidget.com/js/snapwidget.js" async></script>
 </body>
 </html>

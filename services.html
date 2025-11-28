@@ -89,12 +89,13 @@
     html,body{background:var(--bg);color:var(--text);overflow-x:hidden}
     body, p, li, span, button, input, textarea { font-family: var(--font-body); letter-spacing: .1px; line-height: 1.58; }
     h1,h2,h3,h4,h5,h6, nav a, .nav-group-btn{ font-family: var(--font-heading); letter-spacing: .25px; }
-    strong{ font-weight: 700; color: #fff; } /* Ensure ** content is bold */
+    /* Ensure the text is bold via the strong tag */
+    strong{ font-weight: 700; color: #fff; }
     .container{max-width:var(--container);margin:0 auto;padding:0 16px}
     a{color:var(--brand)}
     a:hover{color:#fff}
 
-    /* Promo ribbon (same pattern as home) */
+    /* Promo ribbon (synced with other pages) */
     .promo-ribbon{
       position:relative; z-index:1100;
       background:linear-gradient(135deg,#f5b200,#ffd866,#f5b200);
@@ -181,7 +182,7 @@
 
   <div class="promo-ribbon">
     <div>
-      🎉 End of Year Sale: **50% OFF** Walks (Code: <span class="promo-code">WALK50</span>) + **20% OFF** Boarding (Code: <span class="promo-code">BOARDING20</span>). Ends 31/12!
+      🎉 End of Year Sale: <strong>50% OFF</strong> Walks (Code: <span class="promo-code">WALK50</span>) + <strong>20% OFF</strong> Boarding (Code: <span class="promo-code">BOARDING20</span>). Ends 31/12!
     </div>
   </div>
 
@@ -189,7 +190,7 @@
     <div class="navbar container" role="navigation" aria-label="Main">
       <a class="brand" href="/" aria-label="Go to home">
         <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="48" height="48">
-        **The Woof of Walk Street**
+        <strong>The Woof of Walk Street</strong>
       </a>
 
       <input id="nav-toggle" type="checkbox" hidden>
@@ -220,11 +221,11 @@
       <nav class="breadcrumbs" aria-label="Breadcrumbs" style="color:var(--muted); margin-bottom:5px;">
         <a href="/" style="color:var(--muted)">Home</a> › Services
       </nav>
-      <h1>**Premium Dog Services for Sensitive Pups:** Solo Walks & Calm Boarding</h1>
+      <h1><strong>Premium Dog Services for Sensitive Pups:</strong> Solo Walks & Calm Boarding</h1>
       <p class="subhead">
-        We specialize in **uncompromising 1:1 care**. Our solo dog walking offers **low-arousal, enriching** routes with GPS tracking, and our boarding is strictly **one-dog-only** for the calmest, most predictable stays in Melbourne.
+        We specialize in <strong>uncompromising 1:1 care</strong>. Our solo dog walking offers <strong>low-arousal, enriching</strong> routes with GPS tracking, and our boarding is strictly <strong>one-dog-only</strong> for the calmest, most predictable stays in Melbourne.
       </p>
-      <p class="meta">Serving **South Melbourne, Albert Park, Middle Park, Port Melbourne & Southbank**.</p>
+      <p class="meta">Serving <strong>South Melbourne, Albert Park, Middle Park, Port Melbourne & Southbank</strong>.</p>
       <div class="cta-buttons" style="justify-content:center; margin-top:20px;">
         <a class="btn btn-sale" href="/book-dog-walk/?coupon=WALK50">Claim 50% Off First Walk</a>
         <a class="btn btn-primary" href="/book-boarding/?coupon=BOARDING20">Save 20% on Boarding</a>
@@ -235,10 +236,10 @@
   <main>
     <div class="container">
       <section>
-        <h2 class="section-h2" id="our-services">**Our Services for a Calmer, Happier Dog**</h2>
+        <h2 class="section-h2" id="our-services"><strong>Our Services for a Calmer, Happier Dog</strong></h2>
         <p class="intro-copy">
           Choosing the right care for your dog is essential, especially for sensitive breeds or those who thrive in quiet environments.
-          We intentionally offer services that eliminate the chaos of large groups and kennels, focusing instead on **predictable routines, individual attention, and genuine home comfort**.
+          We intentionally offer services that eliminate the chaos of large groups and kennels, focusing instead on <strong>predictable routines, individual attention, and genuine home comfort</strong>.
         </p>
       </section>
 
@@ -246,14 +247,14 @@
 
         <article class="card">
           <img src="/images/gallery/dog-sunset-walk.jpg" alt="Solo dog walk around Albert Park Lake — one dog only" loading="lazy">
-          <h3>🚶 **Solo Dog Walking**</h3>
+          <h3>🚶 <strong>Solo Dog Walking</strong></h3>
           <p>
-            **45 minutes of tailored 1:1 attention.** We never group walk. Routes are chosen to be **low-arousal and enriching**, focusing on loose-lead walking and mental stimulation in your local area. Ideal for anxious, nervous, or easily over-excited dogs.
+            <strong>45 minutes of tailored 1:1 attention.</strong> We never group walk. Routes are chosen to be <strong>low-arousal and enriching</strong>, focusing on loose-lead walking and mental stimulation in your local area. Ideal for anxious, nervous, or easily over-excited dogs.
           </p>
           <ul class="list-check">
-            <li>**GPS route + photo proof** after every walk</li>
+            <li><strong>GPS route + photo proof</strong> after every walk</li>
             <li>Mon–Fri, 7am–7pm availability</li>
-            <li>Local walkers who know **South Melbourne** streets</li>
+            <li>Local walkers who know <strong>South Melbourne</strong> streets</li>
           </ul>
           <div class="cta-buttons" style="margin-top:auto">
             <a class="btn btn-sale" href="/book-dog-walk/?coupon=WALK50">Claim 50% Off Walk →</a>
@@ -263,14 +264,14 @@
 
         <article class="card">
           <img src="/images/gallery/dog-weekend-woof.jpg" alt="Home-style boutique boarding — one guest only" loading="lazy">
-          <h3>🏡 **Boutique Boarding** (Weekend Woof Club)</h3>
+          <h3>🏡 <strong>Boutique Boarding</strong> (Weekend Woof Club)</h3>
           <p>
-            We are strictly **one guest only** at a time for calm, consistent care. This is home comfort, not a kennel. Your dog gets dedicated attention, gentle local walks, and continuous communication throughout their stay.
+            We are strictly <strong>one guest only</strong> at a time for calm, consistent care. This is home comfort, not a kennel. Your dog gets dedicated attention, gentle local walks, and continuous communication throughout their stay.
           </p>
           <ul class="list-check">
-            <li>**Zero kennels, pure home comforts**</li>
+            <li><strong>Zero kennels, pure home comforts</strong></li>
             <li>Daily walks & photo updates included</li>
-            <li>Perfect for sensitive dogs who need **predictability**</li>
+            <li>Perfect for sensitive dogs who need <strong>predictability</strong></li>
           </ul>
           <div class="cta-buttons" style="margin-top:auto">
             <a class="btn btn-primary" href="/book-boarding/?coupon=BOARDING20">Book 20% Off Boarding →</a>
@@ -280,14 +281,14 @@
 
         <article class="card">
           <img src="/images/gallery/dog-digging-sand.jpg" alt="Happy dog on regular solo walks through membership" loading="lazy">
-          <h3>🌟 **Memberships** (Routine & Savings)</h3>
+          <h3>🌟 <strong>Memberships</strong> (Routine & Savings)</h3>
           <p>
             Lock in a reliable, consistent routine with a monthly plan that saves you money. Consistency is key to a calm dog. Choose from plans designed for regular weekly care and priority scheduling.
           </p>
           <ul class="list-check">
-            <li>Priority access to **booking slots**</li>
-            <li>Predictable schedule for **calmer manners**</li>
-            <li>Plans from 4 walks/month up to **Unlimited Weekdays**</li>
+            <li>Priority access to <strong>booking slots</strong></li>
+            <li>Predictable schedule for <strong>calmer manners</strong></li>
+            <li>Plans from 4 walks/month up to <strong>Unlimited Weekdays</strong></li>
           </ul>
           <div class="cta-buttons" style="margin-top:auto">
             <a class="btn btn-primary" href="/memberships.html">Compare Plans →</a>
@@ -299,22 +300,22 @@
       <hr class="section-sweep" aria-hidden="true">
 
       <section>
-        <h2 class="section-h2">**The Woof of Walk Street Difference: Trust & Transparency**</h2>
+        <h2 class="section-h2"><strong>The Woof of Walk Street Difference: Trust & Transparency</strong></h2>
         <p class="intro-copy">
           We know you need more than just a service—you need peace of mind. Our care model is built around accountability and eliminating the major stress points common with traditional dog care providers.
         </p>
         <div class="service-cards-grid">
           <article class="card">
-            <h3>🧠 **Calm by Design**</h3>
-            <p>**Solo, local, low-arousal routes** keep nervous or excitable dogs in the learning zone—**no chaos of group packs or large, noisy dog parks**.</p>
+            <h3>🧠 <strong>Calm by Design</strong></h3>
+            <p><strong>Solo, local, low-arousal routes</strong> keep nervous or excitable dogs in the learning zone—<strong>no chaos of group packs or large, noisy dog parks</strong>.</p>
           </article>
           <article class="card">
-            <h3>📍 **Proof, Not Promises**</h3>
-            <p>**Every session ends with a GPS map, photos, and quick notes** delivered instantly to your portal so you know exactly what happened and how your dog felt.</p>
+            <h3>📍 <strong>Proof, Not Promises</strong></h3>
+            <p><strong>Every session ends with a GPS map, photos, and quick notes</strong> delivered instantly to your portal so you know exactly what happened and how your dog felt.</p>
           </article>
           <article class="card">
-            <h3>🤝 **Accountable & Insured**</h3>
-            <p>We’re **boutique, selective, police-checked, fully insured**, and reachable. We are locally based and dedicated to the inner-city Bayside suburbs.</p>
+            <h3>🤝 <strong>Accountable & Insured</strong></h3>
+            <p>We’re <strong>boutique, selective, police-checked, fully insured</strong>, and reachable. We are locally based and dedicated to the inner-city Bayside suburbs.</p>
           </article>
         </div>
       </section>
@@ -322,7 +323,7 @@
       <hr class="section-sweep" aria-hidden="true">
 
       <section>
-        <h3 class="section-h2" id="areas-served">**Dedicated Service Areas in Inner Melbourne**</h3>
+        <h3 class="section-h2" id="areas-served"><strong>Dedicated Service Areas in Inner Melbourne</strong></h3>
         <p class="intro-copy">
           We maintain a tight service area to ensure we are always prompt and reliable. Our premium solo dog walking and one-dog-only boarding services are available across:
         </p>
@@ -338,7 +339,7 @@
       <hr class="section-sweep" aria-hidden="true">
 
       <section style="text-align:center">
-        <h2 class="section-h2" style="margin-bottom:12px;">**Ready to try a calmer way to walk & board your dog?**</h2>
+        <h2 class="section-h2" style="margin-bottom:12px;"><strong>Ready to try a calmer way to walk & board your dog?</strong></h2>
         <div class="cta-buttons" style="justify-content:center">
           <a class="btn btn-sale" href="/book-dog-walk/?coupon=WALK50">Get 50% Off First Walk →</a>
           <a class="btn btn-primary" href="/book-boarding/?coupon=BOARDING20">Save 20% on Boarding →</a>
@@ -353,7 +354,7 @@
     <div class="container footer-grid">
       <section class="footer-brand">
         <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="60" height="60" loading="lazy">
-        <p>**The Woof of Walk Street**<br><a class="footer-map" href="#" style="color:#a9b4c0">South Melbourne, VIC</a></p>
+        <p><strong>The Woof of Walk Street</strong><br><a class="footer-map" href="#" style="color:#a9b4c0">South Melbourne, VIC</a></p>
         <p class="cta-buttons"><a class="btn btn-primary" href="/book-dog-walk/?coupon=WALK50">Book Walks</a></p>
       </section>
 

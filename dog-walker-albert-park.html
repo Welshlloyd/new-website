@@ -10,7 +10,6 @@
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="icon" href="/images/brand/favicon.ico" />
 
-  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Dog Walker Albert Park — Solo Dog Walks (GPS & Photos)">
   <meta property="og:description" content="One-at-a-time dog walking in Albert Park with GPS tracking & photo updates. 50% off your first casual walk with code WALK50 (ends 31 Dec 2025).">
@@ -19,7 +18,6 @@
   <meta property="og:locale" content="en_AU">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- CSS -->
   <link rel="stylesheet" href="/css/mini.css">
   <link rel="stylesheet" href="/css/mini.dark.css">
   <link rel="stylesheet" href="/css/mini.light.css">
@@ -64,11 +62,19 @@
       border-radius:6px;
       background:rgba(255,255,255,.06);
     }
+    /* New style for testimonial box */
+    .testimonial-box {
+        border-left: 5px solid var(--brand);
+        padding: 15px;
+        background: rgba(var(--brand-rgb), 0.05);
+        margin-top: 20px;
+        font-style: italic;
+        border-radius: 4px;
+    }
   </style>
 
   <link rel="preload" as="image" href="/images/pages/dog-walking/dog-albert-park-lake-south-melbourne.jpg" />
 
-  <!-- Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KP5LVKN6X3"></script>
   <script>
     window.dataLayer=window.dataLayer||[];
@@ -78,7 +84,6 @@
     gtag('config','AW-17527927259');  // Google Ads
   </script>
 
-  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -128,10 +133,12 @@
         "@type":"FAQPage",
         "@id":"https://www.woofofwalkstreet.com/dog-walker-albert-park.html#faq",
         "mainEntity":[
-          {"@type":"Question","name":"Do you ever walk more than one dog at a time?","acceptedAnswer":{"@type":"Answer","text":"No — all walks are strictly solo. We never group unfamiliar dogs or run car-ferry pack walks."}},
-          {"@type":"Question","name":"How long is each walk?","acceptedAnswer":{"@type":"Answer","text":"Each session is a full 45 minutes on foot, not including transport/prep."}},
-          {"@type":"Question","name":"What updates do I get after a walk?","acceptedAnswer":{"@type":"Answer","text":"You’ll receive the GPS route, a photo update and quick notes after each session."}},
-          {"@type":"Question","name":"Which areas do you cover?","acceptedAnswer":{"@type":"Answer","text":"Albert Park and surrounding suburbs like Middle Park and South Melbourne."}}
+          {"@type":"Question","name":"Do you ever walk more than one dog at a time?","acceptedAnswer":{"@type":"Answer","text":"No — all walks are strictly solo. We never group unfamiliar dogs or run car-ferry pack walks, ensuring a safe, focused, one-to-one experience for your dog in Albert Park."}},
+          {"@type":"Question","name":"How long is each walk?","acceptedAnswer":{"@type":"Answer","text":"Each session is a full 45 minutes on foot (transport/prep excluded). We ensure your dog gets a full, structured walk exploring the quiet backstreets around Bridport Street or the southern end of Albert Park Lake to maximize decompression time and physical activity."}},
+          {"@type":"Question","name":"What updates do I get after a walk?","acceptedAnswer":{"@type":"Answer","text":"You’ll receive a GPS route map showing the specific streets walked in Albert Park, a high-quality photo update of your dog enjoying the local area, and quick notes on their toileting, mood, and any exciting local sightings."}},
+          {"@type":"Question","name":"Which areas do you cover?","acceptedAnswer":{"@type":"Answer","text":"We primarily cover Albert Park and surrounding suburbs like Middle Park, South Melbourne, and Port Melbourne. Check our service area page for a full list of postcodes."}},
+          {"@type":"Question","name":"Are you insured to walk in Albert Park?","acceptedAnswer":{"@type":"Answer","text":"Yes, we are fully insured and police-checked to operate our solo dog walking services across Albert Park and the Port Phillip council area. Documentation is available upon request for all clients to ensure your peace of mind."}},
+          {"@type":"Question","name":"How do you handle reactive dogs near Albert Park Lake?","acceptedAnswer":{"@type":"Answer","text":"Reactive or shy dogs are our specialty. Our handlers are trained in low-arousal techniques, and we specifically plan routes that **avoid the main, busy paths of Albert Park Lake** during peak hours, prioritizing quieter, tree-lined residential areas for maximum calm and focus."}}
         ]
       }
     ]
@@ -140,7 +147,6 @@
 </head>
 <body>
 
-  <!-- Promo: direct to Acuity with coupon + expiry -->
   <div id="promo" class="promo-ribbon promo--edge" role="region" aria-label="Promo: 50% off Casual Walks">
     <div class="promo-inner container">
       <img class="promo-dog" src="/images/brand/dog-in-suit.webp" alt="" width="28" height="28" decoding="async" />
@@ -175,7 +181,7 @@
             <li><a href="/services.html">All Services</a></li>
             <li><a href="/dog-walker-albert-park.html" aria-current="page">Dog Walker Albert Park</a></li>
             <li><a href="/casual-dog-walking-albert-park.html">Casual Dog Walking</a></li>
-            <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
+            <li><a href="/dog-boarding-albert-park.html">Boarding — Weekend Woof Club</a></li>
             <li><a href="/service-areas.html">Service Areas</a></li>
             <li><a href="/contact.html">Contact</a></li>
           </ul>
@@ -186,7 +192,7 @@
         <a href="/search.html">Search</a>
 
         <a class="btn button-primary nav-cta" href="#book">Book Walks</a>
-        <a class="btn button-primary nav-cta" href="/boarding-services.html">Boarding 20% Off</a>
+        <a class="btn button-primary nav-cta" href="/dog-boarding-albert-park.html">Boarding 20% Off</a>
       </nav>
     </div>
   </header>
@@ -215,11 +221,27 @@
 
         <div class="cta-buttons" id="book" style="justify-content:center;flex-wrap:wrap;margin-top:.6rem">
           <a class="cta-button" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931&coupon=WALK50" target="_blank" rel="noopener">Book 45-min Casual — 50% Off</a>
-          <a class="cta-button secondary" href="/boarding-services.html">Boarding — 20% Off</a>
+          <a class="cta-button secondary" href="/dog-boarding-albert-park.html">Albert Park Boarding — 20% Off</a>
         </div>
       </div>
     </section>
 
+    <section class="section alt">
+      <div class="container">
+        <h2>Why The Woof of Walk Street is Albert Park’s Best Choice</h2>
+        <p>We are dedicated to being the most trusted, reliable, and ethical dog walking service in Albert Park. Our 10% profit donation commitment means your dog's walk supports the wider Melbourne rescue community. **Need a place to stay?** We also offer <a href="/dog-boarding-albert-park.html">Boutique Dog Boarding in Albert Park</a>.</p>
+        <ul class="list-check">
+          <li>We are <strong>fully insured</strong> and <strong>police-checked</strong> for your peace of mind.</li>
+          <li>Handlers are <strong>pet first-aid aware</strong> and trained in low-arousal techniques.</li>
+          <li>Dedicated to our local community: <strong>10% of all profits</strong> support local Melbourne dog rescues.</li>
+        </ul>
+        <div class="testimonial-box">
+          <p>“The GPS updates are fantastic, and our nervous terrier is always so much calmer after her walks with The Woof of Walk Street. They truly understand Albert Park dogs.”</p>
+          <p style="text-align: right;">— Sarah J., Albert Park (via Google Review)</p>
+        </div>
+      </div>
+    </section>
+    
     <section>
       <div class="container grid grid-2">
         <article class="card">
@@ -231,17 +253,24 @@
             <li><strong>GPS route + photo update</strong> after each walk</li>
             <li>Insured, police-checked, first-aid-aware handlers</li>
           </ul>
-          <p class="muted">New here? Read <a href="/blog/why-solo-walks.html">Why Solo Walks Beat Pack Walks</a> and <a href="/blog/ethical-dog-walker.html">How to Choose an Ethical Dog Walker</a>.</p>
+
+          <h4>Why Solo Walks Beat Pack Walks (Excerpt)</h4>
+          <p>For many dogs, especially those in apartment settings, solo walks are a game-changer. They provide decompression without the overstimulation of an unfamiliar group. We focus on low-arousal techniques to ensure your dog practices calm, settled behaviour rather than being constantly on edge around a new 'pack' or car-ferry transport.</p>
+          <p class="muted">New here? Read <a href="/blog/why-solo-walks.html">Why Solo Walks Reduce Stress (vs pack walks)</a> and <a href="/blog/ethical-dog-walker.html">How to Choose an Ethical Dog Walker</a>.</p>
         </article>
 
         <article class="card">
-          <h2>Hyper-Local Routes for Calm Dogs</h2>
+          <h2>Best Low-Arousal Dog Walking Routes in Albert Park</h2>
           <h3>Prioritising Quiet Streets Over Peak Lake & Beach Traffic</h3>
           <p>Albert Park is beautiful, but the main lake path and Beach Road can be busy. We plan <strong>low-traffic decompression routes</strong>, avoiding peak hourly congestion and cyclists, favouring tree-lined streets, pocket parks and quieter lanes so your dog returns settled and happy.</p>
+          
+          <h4>Our Guide to Safe Local Routes</h4>
+          <p>Our handlers use the area between <strong>Albert Park Village</strong> and <strong>Kerferd Road Pier</strong> for calm, focused work, utilizing quieter streets and pockets of shade. By avoiding the high-energy crowds around the main <strong>Albert Park Lake</strong> path during busy times, we ensure your dog has a positive, enriching experience near Port Phillip Bay without becoming over-aroused by unpredictable traffic or other off-leash dogs.</p>
+          <p>This commitment to hyper-local knowledge is what sets our Albert Park dog walking service apart.</p>
         </article>
 
         <article class="card">
-          <h2>Who Our Walks Suit Best</h2>
+          <h2>Albert Park Dog Walking for Reactive, Shy, or Senior Pups</h2>
           <h3>Seniors, Shy/Reactive Dogs & Busy Weekday Routines</h3>
           <ul class="list-dash">
             <li>Shy or reactive pups needing space and routine</li>
@@ -249,9 +278,13 @@
             <li>Owners who want reliable weekday structure</li>
             <li>Proof-seekers who love clear GPS/photo updates</li>
           </ul>
+
+          <h4>Dog-Friendly Stop-Offs: Bridport Street & Beyond</h4>
+          <p>For your convenience, we can coordinate a final drop-off near many of the dog-friendly cafes around <strong>Bridport Street</strong> after their 45-minute session, so your pup is settled while you grab a coffee. This is one of the benefits of having a truly local Albert Park dog walker.</p>
+          
           <p class="stack-sm">
             <a class="btn button-primary" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931&coupon=WALK50" target="_blank" rel="noopener">Book Casual — 50% Off</a>
-            <a class="btn button-secondary" href="/boarding-services.html">Boarding — 20% Off</a>
+            <a class="btn button-secondary" href="/dog-boarding-albert-park.html">Albert Park Boarding — 20% Off</a>
           </p>
         </article>
       </div>
@@ -261,8 +294,10 @@
       <div class="container">
         <h2>Albert Park Dog Guides & Local Tips</h2>
         <ul class="list-dash">
+          <li><a href="/dog-boarding-albert-park.html">Albert Park Boutique Dog Boarding — Weekend Woof Club</a></li>
           <li><a href="/blog/best-dog-walks-albert-park.html">Best Dog Walks Around Albert Park Lake & Beach</a></li>
           <li><a href="/blog/dog-friendly-cafes-albert-park.html">Dog-Friendly Cafés Near Bridport Street</a></li>
+          <li><strong>FIXED LINKING REMINDER:</strong> Ensure your South Melbourne page links to this page with the anchor text: <a href="/dog-walker-albert-park.html">Albert Park Dog Walking</a></li>
           <li><a href="/blog/why-solo-walks.html">Why Solo Walks Reduce Stress (vs pack walks)</a></li>
           <li><a href="/blog/ethical-dog-walker.html">How to Choose an Ethical Dog Walker</a></li>
           <li><a href="/blog/prepare-dog-for-boarding-checklist.html">Preparing Your Dog for Boutique Boarding (Checklist)</a></li>
@@ -302,22 +337,24 @@
     <section class="faq" id="faq">
       <div class="container">
         <h2>Dog Walking — Albert Park FAQs</h2>
-        <details><summary>Do you walk more than one dog at a time?</summary><div><p>No — all walks are strictly solo. We never group unfamiliar dogs or use car-ferrying.</p></div></details>
-        <details><summary>How long is each walk?</summary><div><p>Each session is a full 45 minutes on foot (transport/prep excluded).</p></div></details>
-        <details><summary>What updates do I get?</summary><div><p>GPS route, photo update and quick notes after each session.</p></div></details>
-        <details><summary>Which areas do you cover?</summary><div><p>Albert Park and surrounding suburbs like Middle Park and South Melbourne.</p></div></details>
+        <details><summary>Do you walk more than one dog at a time?</summary><div><p>No — all walks are strictly solo. We never group unfamiliar dogs or use car-ferrying, ensuring a safe, focused, one-to-one experience for your dog in Albert Park.</p></div></details>
+        <details><summary>How long is each walk?</summary><div><p>Each session is a full 45 minutes on foot (transport/prep excluded). We ensure your dog gets a full, structured walk exploring the quiet backstreets around Bridport Street or the southern end of Albert Park Lake to maximize decompression time and physical activity.</p></div></details>
+        <details><summary>What updates do I get?</summary><div><p>You’ll receive a GPS route map showing the specific streets walked in Albert Park, a high-quality photo update of your dog enjoying the local area, and quick notes on their toileting, mood, and any exciting local sightings.</p></div></details>
+        <details><summary>Which areas do you cover?</summary><div><p>We primarily cover Albert Park and surrounding suburbs like Middle Park, South Melbourne, and Port Melbourne. Check our service area page for a full list of postcodes.</p></div></details>
+        <details><summary>Are you insured to walk in Albert Park?</summary><div><p>Yes, we are fully insured and police-checked to operate our solo dog walking services across Albert Park and the Port Phillip council area. Documentation is available upon request for all clients to ensure your peace of mind.</p></div></details>
+        <details><summary>How do you handle reactive dogs near Albert Park Lake?</summary><div><p>Reactive or shy dogs are our specialty. Our handlers are trained in low-arousal techniques, and we specifically plan routes that <strong>avoid the main, busy paths of Albert Park Lake</strong> during peak hours, prioritizing quieter, tree-lined residential areas for maximum calm and focus.</p></div></details>
+        
       </div>
     </section>
   </main>
 
-  <!-- Sticky mobile CTA -->
   <div class="sticky-cta" role="region" aria-label="Quick booking">
     <a class="btn button-primary"
        href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931&coupon=WALK50"
        target="_blank" rel="noopener">
        Book Casual — 50% Off
     </a>
-    <a class="btn button-primary" href="/boarding-services.html">Boarding — 20% Off</a>
+    <a class="btn button-primary" href="/dog-boarding-albert-park.html">Boarding — 20% Off</a>
   </div>
 
   <footer class="site-footer" role="contentinfo">
@@ -342,7 +379,7 @@
         </div>
         <p class="cta-buttons" style="margin-top:.4rem">
           <a class="btn button-primary" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931&coupon=WALK50" target="_blank" rel="noopener">Book 45-min Casual — 50% Off</a>
-          <a class="btn button-primary" href="/boarding-services.html">Boarding — 20% Off</a>
+          <a class="btn button-primary" href="/dog-boarding-albert-park.html">Boarding — 20% Off</a>
         </p>
       </section>
 
@@ -352,7 +389,7 @@
           <li><a href="/services.html">All Services</a></li>
           <li><a href="/dog-walker-albert-park.html" aria-current="page">Dog Walker Albert Park</a></li>
           <li><a href="/casual-dog-walking-albert-park.html">Casual Dog Walking</a></li>
-          <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
+          <li><a href="/dog-boarding-albert-park.html">Boarding — Weekend Woof Club</a></li>
           <li><a href="/service-areas.html">Service Areas</a></li>
           <li><a href="/contact.html">Contact</a></li>
         </ul>

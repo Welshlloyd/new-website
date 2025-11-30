@@ -1,378 +1,451 @@
 <!DOCTYPE html>
 <html lang="en-AU">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <script>
-        (function(w,d,s,l,i){
-            w[l]=w[l]||[];
-            w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
-            var f=d.getElementsByTagName(s)[0],
-                j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
-            j.async=true;
-            j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-            f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-T3HRTM2T');
-    </script>
-    <script>
-        (function () {
-            const KEY='wow-theme'; const pref=localStorage.getItem(KEY)||'auto';
-            const mql=window.matchMedia('(prefers-color-scheme: dark)');
-            const isDark=()=>pref==='dark'||(pref==='auto'&&mql.matches);
-            document.documentElement.setAttribute('data-theme',pref);
-            document.documentElement.style.colorScheme=isDark()?'dark':'light';
-            mql.addEventListener?.('change',()=>{ if((localStorage.getItem(KEY)||'auto')==='auto'){ document.documentElement.style.colorScheme=mql.matches?'dark':'light'; }});
-        })();
-    </script>
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[]; w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl; f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T3HRTM2T');
+  </script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Theme boot (no FOUC) -->
+  <script>
+    (function () {
+      const KEY='wow-theme'; const pref=localStorage.getItem(KEY)||'auto';
+      const mql=window.matchMedia('(prefers-color-scheme: dark)');
+      const isDark=()=>pref==='dark'||(pref==='auto'&&mql.matches);
+      document.documentElement.setAttribute('data-theme',pref);
+      document.documentElement.style.colorScheme=isDark()?'dark':'light';
+      mql.addEventListener?.('change',()=>{ if((localStorage.getItem(KEY)||'auto')==='auto'){ document.documentElement.style.colorScheme=mql.matches?'dark':'light'; }});
+    })();
+  </script>
 
-    <title>Why 'One-Guest Only' Boarding is Best for Anxious Dogs | The Woof of Walk Street</title>
-    <meta name="description" content="Detailed explanation of our exclusive 'One Guest Only' boutique dog boarding policy and why it is superior for safety and reducing stress and anxiety." />
-    
-    <link rel="canonical" href="https://www.woofofwalkstreet.com/blog/why-one-guest-only-boarding.html" />
-    <link rel="icon" href="/images/brand/favicon.ico" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Why 'One-Guest Only' Boarding is Best for Anxious Dogs">
-    <meta property="og:description" content="Our exclusive policy is designed for maximum safety and calm, eliminating the risk and noise of group kennels.">
-    <meta property="og:url" content="https://www.woofofwalkstreet.com/blog/why-one-guest-only-boarding.html">
-    <meta property="og:image" content="https://www.woofofwalkstreet.com/images/blog/one-guest-boarding.webp"> <style>
-        :root{
-            --bg:#0b0e12; --card:#0f1318; --text:#e8eef5; --muted:#a9b4c0; --line:#1e2630;
-            --brand:#ffd166; --brand-ink:#0b0e12; --accent:#5af2c6;
+  <title>One-Guest Only Dog Boarding in South Melbourne for Anxious Dogs | The Woof of Walk Street</title>
+  <meta name="description" content="Calm, one-guest only boutique dog boarding in South Melbourne. Designed for anxious or sensitive dogs: zero dog-to-dog risk, predictable routines, solo walks, GPS & photo updates." />
+  <link rel="canonical" href="https://www.woofofwalkstreet.com/blog/why-one-guest-only-boarding.html" />
+  <link rel="icon" href="/images/brand/favicon.ico" />
 
-            --sale-bg: linear-gradient(135deg, #FF512F 0%, #DD2476 100%);
-            --sale-text: #fff;
+  <!-- Social -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="One-Guest Only Dog Boarding in South Melbourne for Anxious Dogs">
+  <meta property="og:description" content="Private, single-guest home stays that reduce stress and keep routines steady. Perfect for anxious dogs.">
+  <meta property="og:url" content="https://www.woofofwalkstreet.com/blog/why-one-guest-only-boarding.html">
+  <meta property="og:image" content="https://www.woofofwalkstreet.com/images/blog/why-one-guest-boarding-main.webp">
+  <meta property="og:locale" content="en_AU">
+  <meta name="twitter:card" content="summary_large_image">
 
-            --shadow:0 16px 48px rgba(0,0,0,.32);
-            --ring:0 0 0 2px rgba(255,209,102,.22), 0 16px 40px rgba(255,209,102,.08);
-            --header-blur: saturate(120%) blur(10px);
-            --header-bg: rgba(11,14,18,.78);
-            --menu-solid: #0e141b; /* solid menu bg for readability on mobile */
-            --container: 1100px; --radius-lg: 16px; --speed: .22s;
-            --font-heading: 'Space Grotesk', system-ui, sans-serif;
-            --font-body: 'Work Sans', system-ui, sans-serif;
+  <!-- Preload LCP image -->
+  <link rel="preload" as="image"
+        href="/images/blog/why-one-guest-boarding-main.webp"
+        imagesrcset="/images/blog/why-one-guest-boarding-main.webp 1200w, /images/boarding/boarding-bed-jack.webp 1600w"
+        imagesizes="(max-width: 640px) 100vw, 1100px">
 
-            --gold:#ffd166; --silver:#cfd6df; --bronze:#b78155; --platinum:#5af2c6;
+  <!-- Styles (matches homepage look) -->
+  <style>
+    :root{
+      --bg:#0b0e12; --card:#0f1318; --text:#e8eef5; --muted:#a9b4c0; --line:#1e2630;
+      --brand:#ffd166; --brand-ink:#0b0e12; --accent:#5af2c6;
+      --shadow:0 16px 48px rgba(0,0,0,.32);
+      --ring:0 0 0 2px rgba(255,209,102,.22), 0 16px 40px rgba(255,209,102,.08);
+      --header-blur: saturate(120%) blur(10px); --header-bg: rgba(11,14,18,.78);
+      --menu-solid:#0e141b; --container:1100px; --radius-lg:16px; --speed:.22s;
+      --font-heading:'Space Grotesk',system-ui,sans-serif; --font-body:'Work Sans',system-ui,sans-serif;
+      --sale-bg:linear-gradient(135deg,#FF512F 0%,#DD2476 100%); --gold:#ffd166;
+    }
+    html,body{background:var(--bg);color:var(--text);overflow-x:hidden;scroll-behavior:smooth}
+    img{max-width:100%;height:auto} a{color:inherit}
+    .container{max-width:var(--container);margin:0 auto;padding:0 16px}
+    body,p,li,span,button,input,textarea{font-family:var(--font-body);letter-spacing:.1px;line-height:1.58}
+    h1,h2,h3,h4,h5,h6,nav a,.nav-group-btn{font-family:var(--font-heading);letter-spacing:.25px}
+    h1{font-weight:700} h2{font-weight:700} .meta{color:var(--muted)}
+    .gold-edge{border:1px solid rgba(255,209,102,.55);border-radius:var(--radius-lg);box-shadow:var(--ring);background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.015))}
+    .section-sweep{height:4px;border:0;margin:34px 0;background:linear-gradient(90deg,transparent,rgba(255,209,102,.8),transparent);filter:drop-shadow(0 8px 18px rgba(255,209,102,.25))}
+    .text-center{text-align:center}
 
-            /* Carousel sizing (not needed for blog, but included for complete stylesheet) */
-            --card-w: 520px;
-            --card-h: 640px;
-            --img-h: 360px;
-        }
-        html,body{background:var(--bg);color:var(--text);overflow-x:hidden;scroll-behavior:smooth}
-        img{max-width:100%;height:auto} a{color:inherit}
-        .container{max-width:var(--container);margin:0 auto;padding:0 16px}
-        body, p, li, span, button, input, textarea { font-family: var(--font-body); letter-spacing: .1px; line-height: 1.58; }
-        h1,h2,h3,h4,h5,h6, nav a, .nav-group-btn{ font-family: var(--font-heading); letter-spacing: .25px; }
-        h1{font-weight:700} h2{font-weight:700} .meta{color:var(--muted)}
+    /* Promo ribbon */
+    .promo-ribbon{position:relative;z-index:1100;background:var(--sale-bg);color:#fff;border-bottom:1px solid rgba(255,255,255,.1);font-weight:700;text-align:center;padding:8px}
+    .promo-code{background:rgba(0,0,0,.3);padding:2px 6px;border-radius:4px;font-family:monospace}
 
-        /* Utilities */
-        .gold-edge{border:1px solid rgba(255,209,102,.55);border-radius:var(--radius-lg);box-shadow:var(--ring);background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.015))}
-        .section-sweep{height:4px;border:0;margin:34px 0;background:linear-gradient(90deg,transparent,rgba(255,209,102,.8),transparent);filter:drop-shadow(0 8px 18px rgba(255,209,102,.25))}
-        .text-center{text-align:center}
-        
-        /* Promo ribbon */
-        .promo-ribbon{position:relative;z-index:1100;background:var(--sale-bg);color:#fff;border-bottom:1px solid rgba(255,255,255,.1);font-weight:700;text-align:center;padding:8px}
-        .promo-code{background:rgba(0,0,0,.3);padding:2px 6px;border-radius:4px;font-family:monospace}
+    /* Contact strip */
+    .top-contact-strip{background:var(--line);padding:8px 0;font-size:.9rem;border-bottom:1px solid rgba(255,255,255,.05)}
+    .contact-inner{max-width:var(--container);margin:0 auto;padding:0 16px;display:flex;justify-content:flex-end;align-items:center;gap:20px}
+    .contact-inner a{color:var(--brand);text-decoration:none;font-weight:700;display:inline-flex;align-items:center;gap:6px}
+    @media (max-width:600px){.contact-inner{justify-content:center;gap:12px}.contact-inner a:first-child{display:none}}
 
-        /* Top contact strip */
-        .top-contact-strip{background:var(--line);padding:8px 0;font-size:.9rem;border-bottom:1px solid rgba(255,255,255,.05)}
-        .contact-inner{max-width:var(--container);margin:0 auto;padding:0 16px;display:flex;justify-content:flex-end;align-items:center;gap:20px}
-        .contact-inner a{color:var(--brand);text-decoration:none;font-weight:700;display:inline-flex;align-items:center;gap:6px}
-        .contact-inner a:hover{text-decoration:underline}
-        @media (max-width:600px){.contact-inner{justify-content:center;gap:12px}.contact-inner a:first-child{display:none}}
+    /* Header + nav */
+    .site-header{position:sticky;top:0;z-index:1000;background:var(--header-bg);backdrop-filter:var(--header-blur);-webkit-backdrop-filter:var(--header-blur);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none;font-weight:900}
+    .brand img{width:48px;height:48px}
+    .nav-links{display:flex;align-items:center;gap:16px}
+    .nav-links a{padding:8px 6px;text-decoration:none;color:#fff;opacity:.9}
+    .nav-links a:hover{opacity:1}
+    .nav-group{position:relative}
+    .nav-group-btn{background:transparent;border:1px solid #2a3440;color:#fff;border-radius:999px;padding:8px 12px;font-weight:800;cursor:pointer}
+    .nav-group-list{position:absolute;right:0;top:110%;min-width:240px;background:var(--menu-solid);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:8px 6px;box-shadow:var(--shadow);display:none}
+    .nav-group[aria-expanded="true"] .nav-group-list{display:block}
+    .nav-toggle{display:none} .nav-scrim{display:none}
+    @media (max-width:860px){
+      .nav-toggle{display:block;cursor:pointer}
+      .nav-links{position:fixed;inset:0 0 auto auto;width:min(320px,85vw);height:100vh;background:var(--menu-solid);padding:70px 16px 20px;flex-direction:column;gap:10px;transform:translateX(100%);transition:transform .25s}
+      #nav-toggle:checked ~ .nav-links{transform:translateX(0)}
+      .nav-scrim{display:block;position:fixed;inset:0;background:rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:opacity .25s}
+      #nav-toggle:checked ~ .nav-scrim{opacity:1;pointer-events:auto}
+      .nav-group{width:100%}.nav-group-list{position:relative;top:auto;right:auto;display:block;background:transparent;border:none;box-shadow:none;padding:4px 0}
+      .nav-group-btn{width:100%;text-align:left}
+    }
 
-        /* Header + nav */
-        .site-header{position:sticky;top:0;z-index:1000;background:var(--header-bg);backdrop-filter:var(--header-blur);-webkit-backdrop-filter:var(--header-blur);border-bottom:1px solid rgba(255,255,255,.06)}
-        .navbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
-        .brand{display:flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none;font-weight:900}
-        .brand img{width:48px;height:48px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:12px 18px;border-radius:999px;border:1px solid transparent;text-decoration:none;font-weight:800;letter-spacing:.02em;transition:all .22s}
+    .btn-primary{background:var(--brand);color:var(--brand-ink);box-shadow:0 10px 26px rgba(255,209,102,.25)}
+    .btn-ghost{background:transparent;color:#fff;border:1px solid #2a3440}
+    .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.05)}
+    .btn-sale{background:var(--sale-bg);color:#fff;border:none;box-shadow:0 10px 25px rgba(221,36,118,.4)}
 
-        .nav-links{display:flex;align-items:center;gap:16px}
-        .nav-links a{padding:8px 6px;text-decoration:none;color:#fff;opacity:.9}
-        .nav-links a:hover{opacity:1}
+    /* Blog page */
+    .blog-post-hero{padding:40px 0 20px;}
+    .blog-meta{display:flex;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:.95rem;margin:6px 0 14px}
+    .blog-content{padding:0 0 40px;}
+    .blog-content h2{font-size:2rem;margin-top:35px;color:var(--brand)}
+    .blog-content h3{font-size:1.35rem;margin-top:24px}
+    .blog-content p{margin-bottom:1.15em}
+    .toc{margin:18px 0 26px;padding:14px 16px}
+    .toc a{text-decoration:none;color:var(--text)}
+    .callout{padding:16px;border-left:3px solid var(--gold);background:rgba(255,255,255,.03)}
 
-        /* Services dropdown */
-        .nav-group{position:relative}
-        .nav-group-btn{background:transparent;border:1px solid #2a3440;color:#fff;border-radius:999px;padding:8px 12px;font-weight:800;cursor:pointer}
-        .nav-group-btn:hover{border-color:#fff}
-        .nav-group-list{position:absolute;right:0;top:110%;min-width:240px;background:var(--menu-solid); /* solid for readability */
-            border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:8px 6px;box-shadow:var(--shadow);display:none}
-        .nav-group[aria-expanded="true"] .nav-group-list{display:block}
-        .nav-group-list a{display:block;padding:10px 12px;border-radius:10px;color:#e9eef6}
-        .nav-group-list a:hover{background:rgba(255,255,255,.06)}
-        /* Show on hover/focus for desktop */
-        @media (min-width:861px){
-            .nav-group:hover .nav-group-list,
-            .nav-group:focus-within .nav-group-list{display:block}
-        }
+    .comparison-cards{display:flex;flex-wrap:wrap;gap:15px;margin-top:10px}
+    .comparison-cards .card{flex:1 1 320px;padding:16px;border-radius:var(--radius-lg)}
+    .comparison-cards .card.bad{background:rgba(255,82,82,.08);border:1px solid rgba(255,82,82,.25)}
+    .comparison-cards .card.good{background:rgba(90,242,198,.08);border:1px solid rgba(90,242,198,.25)}
 
-        .nav-toggle{display:none} .nav-scrim{display:none}
-        @media (max-width:860px){
-            .nav-toggle{display:block;cursor:pointer}
-            .nav-links{position:fixed;inset:0 0 auto auto;width:min(320px,85vw);height:100vh;background:var(--menu-solid); /* solid mobile */
-                padding:70px 16px 20px;flex-direction:column;gap:10px;transform:translateX(100%);transition:transform .25s}
-            #nav-toggle:checked ~ .nav-links{transform:translateX(0)}
-            .nav-scrim{display:block;position:fixed;inset:0;background:rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:opacity .25s}
-            #nav-toggle:checked ~ .nav-scrim{opacity:1;pointer-events:auto}
-            .nav-group{width:100%}
-            .nav-group-list{position:relative;top:auto;right:auto;display:block;background:transparent;border:none;box-shadow:none;padding:4px 0}
-            .nav-group-btn{width:100%;text-align:left}
-        }
+    /* Footer */
+    .site-footer{padding-top:40px;border-top:1px solid var(--line);margin-top:60px}
+    .footer-grid{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap;padding-bottom:40px}
+    .footer-brand{max-width:300px}
+    .footer-col{flex-basis:150px}
+    .footlist{list-style:none;padding:0;margin:0}
+    .footlist a{text-decoration:none;color:var(--muted);transition:color .22s}
+    .footlist a:hover{color:var(--brand)}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.05);padding:15px 0;text-align:center;font-size:.85rem;color:var(--muted)}
 
-        .cta-buttons{display:flex;gap:10px;flex-wrap:wrap}
-        .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:12px 18px;border-radius:999px;border:1px solid transparent;text-decoration:none;font-weight:800;letter-spacing:.02em;transition:all var(--speed)}
-        .btn-primary{background:var(--brand);color:var(--brand-ink);box-shadow:0 10px 26px rgba(255,209,102,.25)}
-        .btn-sale{background:var(--sale-bg);color:#fff;border:none;box-shadow:0 10px 25px rgba(221,36,118,.4)}
-        .btn-sale:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(221,36,118,.6)}
-        .btn-ghost{background:transparent;color:#fff;border:1px solid #2a3440}
-        .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.05)}
-        .btn-small{padding:8px 14px;font-size:.9rem;font-weight:700}
+    /* Sticky mobile CTA */
+    .sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:999;background:rgba(11,14,18,.9);backdrop-filter:var(--header-blur);display:none;justify-content:space-around;padding:10px 16px;box-shadow:0 -8px 20px rgba(0,0,0,.4)}
+    .sticky-cta .btn{flex-grow:1;margin:0 4px;padding:12px 10px;font-size:.9rem}
+    @media (max-width:768px){.sticky-cta{display:flex}.site-header{position:static}.page-top{padding-bottom:70px}}
+  </style>
 
-        /* Blog specific styling for integration */
-        .blog-post-hero{padding:40px 0 20px;}
-        .blog-content{padding:0 0 40px;}
-        .blog-content h2{font-size:2rem; margin-top:35px; color:var(--brand);}
-        .blog-content h3{font-size:1.4rem; margin-top:25px;}
-        .blog-content p{margin-bottom:1.2em;}
-        .comparison-cards .card {border-radius:var(--radius-lg); padding:20px; }
-        .comparison-cards .card h3 {color:var(--text);}
-        .comparison-cards .card:first-child h3 {color:#ff5252;} /* Highlight Bad */
-        .comparison-cards .card:last-child h3 {color:#5af2c6;} /* Highlight Good */
+  <!-- Article + FAQ schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"One-Guest Only Dog Boarding in South Melbourne for Anxious Dogs",
+    "description":"Private, single-guest home stays that reduce stress and keep routines steady—ideal for anxious or sensitive dogs.",
+    "image":"https://www.woofofwalkstreet.com/images/blog/why-one-guest-boarding-main.webp",
+    "author":{"@type":"Organization","name":"The Woof of Walk Street"},
+    "publisher":{"@type":"Organization","name":"The Woof of Walk Street","logo":{"@type":"ImageObject","url":"https://www.woofofwalkstreet.com/images/brand/logo-lockup-gold.webp"}},
+    "datePublished":"2025-01-01",
+    "dateModified":"2025-01-01",
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://www.woofofwalkstreet.com/blog/why-one-guest-only-boarding.html"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"Is one-guest only boarding right for anxious dogs?","acceptedAnswer":{"@type":"Answer","text":"Yes. Removing other dogs eliminates common triggers—noise, resource guarding, crowd stress—so sensitive dogs settle faster and sleep better."}},
+      {"@type":"Question","name":"Do you still do daily exercise during boarding?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every stay includes calm, solo neighbourhood walks with GPS route + photo updates."}},
+      {"@type":"Question","name":"How is safety handled in a home setting?","acceptedAnswer":{"@type":"Answer","text":"Single-guest stays mean zero dog-to-dog risk. Home is secured, routines are predictable, and we are fully insured and police checked."}}
+    ]
+  }
+  </script>
 
-        /* Footer */
-        .site-footer{padding-top:40px;border-top:1px solid var(--line);margin-top:60px}
-        .footer-grid{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap;padding-bottom:40px}
-        .footer-brand{max-width:300px}
-        .footer-col{flex-basis:150px}
-        .footlist{list-style:none;padding:0;margin:0}
-        .footlist a{text-decoration:none;color:var(--muted);transition:color var(--speed)}
-        .footlist a:hover{color:var(--brand)}
-        .footer-bottom{border-top:1px solid rgba(255,255,255,.05);padding:15px 0;text-align:center;font-size:.85rem;color:var(--muted)}
-
-        /* Sticky mobile CTA */
-        .sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:999;background:rgba(11,14,18,.9);backdrop-filter:var(--header-blur);display:none;justify-content:space-around;padding:10px 16px;box-shadow:0 -8px 20px rgba(0,0,0,.4)}
-        .sticky-cta .btn{flex-grow:1;margin:0 4px;padding:12px 10px;font-size:.9rem}
-        @media (max-width:768px){.sticky-cta{display:flex}.site-header{position:static}.page-top{padding-bottom:70px}}
-
-    </style>
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KP5LVKN6X3"></script>
-    <script>
-        window.dataLayer=window.dataLayer||[];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config','G-KP5LVKN6X3');
-        gtag('config','AW-17527927259');
-    </script>
+  <!-- Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KP5LVKN6X3"></script>
+  <script>
+    window.dataLayer=window.dataLayer||[];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config','G-KP5LVKN6X3');
+    gtag('config','AW-17527927259');
+  </script>
 </head>
 
 <body>
-    <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T3HRTM2T"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript>
-    <div class="promo-ribbon">
-        <div class="container">
-            🎉 End of Year Sale: <strong>50% OFF</strong> Walks (Code: <span class="promo-code">WALK50</span>) + <strong>20% OFF</strong> Boarding (Code: <span class="promo-code">BOARDING20</span>). Ends 31/12!
-        </div>
+  <!-- GTM noscript -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T3HRTM2T" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <div class="promo-ribbon">
+    <div class="container">
+      🎉 End of Year Sale: <strong>50% OFF</strong> Walks (Code: <span class="promo-code">WALK50</span>) + <strong>20% OFF</strong> Boarding (Code: <span class="promo-code">BOARDING20</span>). Ends 31/12!
     </div>
+  </div>
 
-    <div class="top-contact-strip">
-        <div class="contact-inner">
-            <a href="tel:+61370731175" onclick="gtag && gtag('event','call_click',{label:'top_header'});">📞 (03) 7073 1175</a>
-            <a href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031912" target="_blank" rel="noopener" onclick="gtag && gtag('event','chat_click',{label:'top_header'});">💬 Book a 10-min Chat →</a>
-        </div>
+  <div class="top-contact-strip">
+    <div class="contact-inner">
+      <a href="tel:+61370731175">📞 (03) 7073 1175</a>
+      <a href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031912" target="_blank" rel="noopener">💬 Book a 10-min Chat →</a>
     </div>
+  </div>
 
-    <header class="site-header" role="banner">
-        <div class="navbar container" role="navigation" aria-label="Main">
-            <a class="brand" href="/" aria-label="Go to home">
-                <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="48" height="48">
-                <strong>The Woof of Walk Street</strong>
-            </a>
+  <header class="site-header" role="banner">
+    <div class="navbar container" role="navigation" aria-label="Main">
+      <a class="brand" href="/" aria-label="Go to home">
+        <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="48" height="48">
+        <strong>The Woof of Walk Street</strong>
+      </a>
 
-            <input id="nav-toggle" type="checkbox" hidden>
-            <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</label>
+      <input id="nav-toggle" type="checkbox" hidden>
+      <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</label>
 
-            <nav class="nav-links" aria-label="Primary">
-                <div class="nav-group" aria-expanded="false">
-                    <a href="/services.html" class="nav-group-btn" aria-haspopup="true" style="text-decoration:none; display:inline-block;">Services ▾</a>
-                    <ul class="nav-group-list" role="menu" aria-label="Services menu">
-                        <li><a role="menuitem" href="/dog-walking-south-melbourne.html">Dog Walking</a></li>
-                        <li><a role="menuitem" href="/boarding-services.html">Boutique Boarding</a></li>
-                        <li><a role="menuitem" href="/memberships.html">Memberships</a></li>
-                    </ul>
-                </div>
-                <a href="/about.html">About</a>
-                <a href="/testimonials.html">Testimonials</a>
-                <a href="/blog.html">Blog</a>
-                <a href="/contact.html">Contact</a>
-                <a href="/search.html">Search</a>
-                <a class="btn btn-primary nav-cta" href="/book-dog-walk/?coupon=WALK50">Book Walks</a>
-            </nav>
-            <div class="nav-scrim" aria-hidden="true"></div>
+      <nav class="nav-links" aria-label="Primary">
+        <div class="nav-group" aria-expanded="false">
+          <a href="/services.html" class="nav-group-btn" aria-haspopup="true" style="text-decoration:none;display:inline-block;">Services ▾</a>
+          <ul class="nav-group-list" role="menu" aria-label="Services menu">
+            <li><a role="menuitem" href="/dog-walking-south-melbourne.html">Dog Walking</a></li>
+            <li><a role="menuitem" href="/boarding-services.html">Boutique Boarding</a></li>
+            <li><a role="menuitem" href="/memberships.html">Memberships</a></li>
+          </ul>
         </div>
-    </header>
-
-    <main class="page-top">
-
-        <section class="section blog-post-hero">
-            <div class="container">
-                <nav class="breadcrumbs" aria-label="Breadcrumbs" style="color:var(--muted); margin-bottom:5px;">
-                    <a href="/blog.html" style="color:var(--muted)">Blog</a> › Boutique Boarding
-                </nav>
-                <h1 style="font-size:clamp(2.1rem, 1.8rem + 2vw, 3rem); margin-top:0;">
-                    Why 'One-Guest Only' Boarding is the Best Choice for Your Dog (Especially Anxious Pups)
-                </h1>
-                <p class="subhead" style="max-width:80ch; color:#cfd6df; margin-bottom:30px;">
-                    If you’ve ever felt guilty leaving your dog at a noisy kennel, you know the stress. Our exclusive, private home stays offer a complete respite from group chaos, ensuring your dog feels secure, loved, and most importantly, at home.
-                </p>
-                <img src="/images/blog/why-one-guest-boarding-main.webp" alt="A calm dog relaxing indoors, illustrating boutique boarding." class="gold-edge" style="border-radius:var(--radius-lg); display:block; max-width:100%; height:auto;">
-            </div>
-        </section>
-
-        <section class="section blog-content">
-            <div class="container" style="max-width:800px; margin:0 auto; padding-top:0;">
-                
-                <p>
-                    At The Woof of Walk Street, we built our <a href="/boarding-services.html" style="color:var(--brand); text-decoration:underline;">**Boutique Boarding**</a> on one core principle: <strong>One Guest Only.</strong> This isn’t just a luxury; it’s a commitment to your dog’s mental health and safety.
-                </p>
-
-                <h2 id="safety">1. Safety and Health: Zero Risk of Dog-on-Dog Incidents</h2>
-                <p>
-                    In any group setting, even the most well-managed daycare or boarding facility carries an inherent risk of conflicts, fights, and injuries.
-                </p>
-                
-                <h3 style="color:var(--brand);">The "One Guest Only" Difference:</h3>
-                <ul style="padding-left: 20px;">
-                    <li><strong>Zero Dog-to-Dog Risk:</strong> With only one guest in the home at a time, the risk of altercations, resource guarding, or bullying vanishes entirely.</li>
-                    <li><strong>Disease Prevention:</strong> Your dog is not exposed to the myriad of kennel cough or gastrointestinal issues that can sweep through group environments.</li>
-                    <li><strong>Focused Supervision:</strong> Our attention is 100% dedicated to your dog's immediate needs, mood, and safety.</li>
-                </ul>
-
-                <h2 id="anxious-dogs">2. A Haven for Anxious and Sensitive Dogs</h2>
-                <p>
-                    Loud noises, strange dogs, and unfamiliar routines are primary triggers for canine anxiety. Traditional kennels are designed for volume, not tranquility. Our model is designed to minimize stress triggers:
-                </p>
-                
-                <div class="comparison-cards" style="display:flex; flex-wrap:wrap; gap:15px; margin-top:20px;">
-                    <div class="card" style="flex: 1 1 45%; padding:15px; background:rgba(255,82,82,.08); border:1px solid rgba(255,82,82,.2);">
-                        <h3 style="color:#ff5252; margin-top:0;">Traditional Kennels</h3>
-                        <ul class="muted" style="padding-left: 20px;">
-                            <li><strong>Loud Noises</strong> from barking packs and staff.</li>
-                            <li><strong>Inconsistent Structure</strong> with constantly changing dogs and shifts.</li>
-                            <li><strong>Isolation and Boredom</strong> in a small cage or run.</li>
-                        </ul>
-                    </div>
-                    <div class="card" style="flex: 1 1 45%; padding:15px; background:rgba(90,242,198,.08); border:1px solid rgba(90,242,198,.2);">
-                        <h3 style="color:#5af2c6; margin-top:0;">The Woof of Walk Street</h3>
-                        <ul class="muted" style="padding-left: 20px;">
-                            <li><strong>Quiet Home Environment</strong> that mirrors a loving home setting.</li>
-                            <li><strong>Dedicated, Consistent Caregiver</strong> who builds trust and routine.</li>
-                            <li><strong>Integrated into the Home</strong> with access to secure yards.</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <p style="margin-top:20px;">
-                    If your dog struggles with separation anxiety or noise sensitivity, an exclusive home stay is a necessary form of preventative care.
-                </p>
-
-                <h2 id="custom-care">3. Custom-Tailored Attention and Enrichment</h2>
-                <p>
-                    When your dog is the *only* guest, the schedule revolves entirely around *their* preferences and needs.
-                </p>
-                <ul style="padding-left: 20px;">
-                    <li><strong>Custom Comfort:</strong> Does your dog sleep on the bed? Need three short walks a day instead of one long one? **We accommodate it all.**</li>
-                    <li><strong>Quality Over Quantity:</strong> The focus shifts to **enriching** their experience—dedicated playtime, focused training sessions, and quiet cuddle time.</li>
-                    <li><strong>No Compromise on Solo Walks:</strong> Your dog receives dedicated, one-on-one time outside the home during their stay.</li>
-                </ul>
-
-                <h2 id="peace-of-mind">4. Peace of Mind for Pet Parents</h2>
-                <p>
-                    Our "One-Guest Only" policy allows us to focus entirely on communication with *you* and maintain the highest safety standards.
-                </p>
-                <ul style="padding-left: 20px;">
-                    <li><strong>Unparalleled Transparency:</strong> You receive detailed, personal updates, photos, and videos.</li>
-                    <li><strong>Immediate Alert:</strong> Any change in your dog's appetite, energy, or behavior is noticed and communicated immediately.</li>
-                    <li><strong>Insurance and Certification:</strong> Our team is fully insured, police-checked, and highly experienced—offering professional standards. Read our dedicated <a href="/safety.html" style="color:var(--brand); text-decoration:underline;">Safety & Insurance policies</a>.</li>
-                </ul>
-
-                <hr style="margin: 40px 0;">
-
-                <div class="card cta-card" style="padding:24px; background:var(--brand); color:var(--brand-ink); text-align:center; border-radius:var(--radius-lg);">
-                    <h2 style="color:var(--brand-ink); margin-top:0; font-size:1.8rem;">Ready to Book Your Dog's Stress-Free Stay?</h2>
-                    <p style="font-weight:600; font-size:1.1rem; margin-bottom:20px;">
-                        Claim the limited-time New Client Promotion: <strong>20% Off Your First Boutique Boarding Stay!</strong>
-                    </p>
-                    <a href="https://www.woofofwalkstreet.com/book-boarding?coupon=BOARDING20"
-                       class="btn btn-sale"
-                       style="background:var(--sale-bg); color:#fff; border:1px solid var(--brand-ink); text-decoration:none; display:inline-block; padding:12px 24px; border-radius:999px; font-weight:700;">
-                        Book Your Exclusive Stay Now &rarr;
-                    </a>
-                    <p style="margin-top:10px; font-size:.85rem; color:rgba(0,0,0,.7);">Offer valid until December 31, 2025.</p>
-                </div>
-                
-            </div>
-        </section>
-
-    </main>
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a class="brand" href="/" style="display:inline-flex; align-items:center; gap:8px;">
-                        <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="48" height="48">
-                        <strong>The Woof of Walk Street</strong>
-                    </a>
-                    <p class="meta" style="font-size:.9rem; margin-top:10px;">Premium 1:1 Dog Walking and Boutique Boarding in South Melbourne, VIC.</p>
-                </div>
-                
-                <div class="footer-col">
-                    <h4 style="margin-top:0; color:#fff;">Services</h4>
-                    <ul class="footlist">
-                        <li><a href="/dog-walking-south-melbourne.html">Solo Dog Walking</a></li>
-                        <li><a href="/boarding-services.html">Boutique Boarding</a></li>
-                        <li><a href="/memberships.html">Memberships</a></li>
-                        <li><a href="/casual-dog-walking-south-melbourne.html">Casual Walks</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h4 style="margin-top:0; color:#fff;">Company</h4>
-                    <ul class="footlist">
-                        <li><a href="/about.html">About Us</a></li>
-                        <li><a href="/testimonials.html">Testimonials</a></li>
-                        <li><a href="/blog.html">Blog & Advice</a></li>
-                        <li><a href="/contact.html">Contact Us</a></li>
-                        <li><a href="/faq.html">FAQs</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h4 style="margin-top:0; color:#fff;">Policies</h4>
-                    <ul class="footlist">
-                        <li><a href="/privacy.html">Privacy Policy</a></li>
-                        <li><a href="/terms.html">Terms of Service</a></li>
-                        <li><a href="/safety.html">Safety & Insurance</a></li>
-                        <li><a href="mailto:info@woofofwalkstreet.com">Email Us</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                &copy; 2025 The Woof of Walk Street. All rights reserved. | ABN 73 671 200 404
-            </div>
-        </div>
-    </footer>
-    <div class="sticky-cta">
-        <a href="tel:+61370731175" class="btn btn-ghost btn-small">📞 Call Now</a>
-        <a href="/book-dog-walk/?coupon=WALK50" class="btn btn-sale btn-small">Book Walks (50% Off)</a>
+        <a href="/about.html">About</a>
+        <a href="/testimonials.html">Testimonials</a>
+        <a href="/blog/" aria-current="page">Blog</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/search.html">Search</a>
+        <a class="btn btn-primary nav-cta" href="/book-dog-walk/?coupon=WALK50">Book Walks</a>
+      </nav>
+      <div class="nav-scrim" aria-hidden="true"></div>
     </div>
+  </header>
 
+  <main class="page-top">
+
+    <!-- HERO -->
+    <section class="section blog-post-hero">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumbs" style="color:var(--muted);margin-bottom:6px;">
+          <a href="/blog/" style="color:var(--muted)">Blog</a> › Boutique Boarding
+        </nav>
+
+        <h1 style="font-size:clamp(2.1rem,1.6rem + 2.4vw,3.2rem);margin-top:0;">
+          One-Guest Only Dog Boarding in South Melbourne — The Best Choice for Anxious Dogs
+        </h1>
+
+        <div class="blog-meta">
+          <span>Updated 1 Jan 2025</span>
+          <span>~6–8 min read</span>
+          <span>South Melbourne</span>
+        </div>
+
+        <figure class="gold-edge" style="display:inline-block;padding:6px;margin:10px 0 20px">
+          <img src="/images/blog/why-one-guest-boarding-main.webp"
+               srcset="/images/blog/why-one-guest-boarding-main.webp 1200w, /images/boarding/boarding-bed-jack.webp 1600w"
+               sizes="(max-width: 640px) 100vw, 1100px"
+               alt="Calm, single-guest boutique dog boarding setup" width="1200" height="675" loading="eager" fetchpriority="high">
+        </figure>
+
+        <p class="subhead" style="max-width:80ch;color:#cfd6df">
+          If kennels feel too loud or unpredictable, <strong>one-guest only boutique boarding</strong> offers a quiet home, predictable routines and <strong>zero dog-to-dog risk</strong>. It’s made for <strong>anxious or sensitive dogs</strong> who thrive with calm, 1:1 care.
+        </p>
+
+        <!-- TOC -->
+        <nav class="gold-edge toc" aria-label="Table of contents">
+          <strong style="display:block;margin-bottom:6px">In this guide</strong>
+          <ol style="margin:0;padding-left:18px">
+            <li><a href="#why-one-guest-boarding">Why One-Guest Only Dog Boarding Works</a></li>
+            <li><a href="#anxious-dogs-benefits">Benefits for Anxious & Sensitive Dogs</a></li>
+            <li><a href="#how-it-works">How Our Boutique Boarding Works (Step-by-Step)</a></li>
+            <li><a href="#compare">One-Guest Boarding vs Traditional Kennels</a></li>
+            <li><a href="#what-to-bring">What to Pack & First-Timer Tips</a></li>
+            <li><a href="#faq">FAQs</a></li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- CONTENT -->
+    <section class="section blog-content">
+      <div class="container" style="max-width:820px;margin:0 auto">
+
+        <h2 id="why-one-guest-boarding">Why One-Guest Only Dog Boarding Works for Calm, Safe Stays</h2>
+        <p>
+          In group facilities, even well-managed ones, crowding, rotating rosters and mixed temperaments add stress and risk.
+          Our <a href="/boarding-services.html">one-guest only boutique boarding</a> removes those variables:
+          there’s <strong>one guest at a time</strong>, a consistent caregiver, and a predictable home routine.
+        </p>
+        <h3>Key Safety Advantages of Single-Guest Boarding</h3>
+        <ul>
+          <li><strong>Zero dog-to-dog incidents:</strong> No pack conflict, no resource guarding, no bullying.</li>
+          <li><strong>Lower disease exposure:</strong> Minimises kennel cough / GI bugs common to group settings.</li>
+          <li><strong>True 1:1 supervision:</strong> Your dog’s mood, appetite and energy are noticed in real time.</li>
+        </ul>
+        <p class="callout">
+          Every stay includes <strong>calm, solo neighbourhood walks</strong> plus <strong>GPS route & photo updates</strong> — the same transparency we provide for our
+          <a href="/dog-walking-south-melbourne.html">solo dog walking</a> clients.
+        </p>
+
+        <h2 id="anxious-dogs-benefits">Benefits for Anxious Dogs — Predictable Routines & Lower Arousal</h2>
+        <p>
+          Noise, unfamiliar dogs and sudden changes spike arousal. Our single-guest model is engineered for stability:
+          quiet spaces, consistent handlers and repeatable routines so sensitive dogs can settle and sleep.
+        </p>
+        <h3>Stress-Reducing Features of One-Guest Boarding</h3>
+        <ul>
+          <li><strong>Quiet home environment:</strong> No echoing barks or busy reception areas.</li>
+          <li><strong>Structured day:</strong> Meals, toileting and walks at consistent times.</li>
+          <li><strong>Personal comforts:</strong> Their own bed, scent items and preferred sleep spots.</li>
+        </ul>
+
+        <h2 id="how-it-works">How Our Boutique Boarding Works (Step-by-Step)</h2>
+        <ol>
+          <li><strong>Quick fit check:</strong> Share your dog’s triggers, meds and routines via our <a href="/boarding-services.html">boarding page</a>.</li>
+          <li><strong>Video intro:</strong> A short call to meet you and see your dog’s baseline behaviour.</li>
+          <li><strong>Calm arrival:</strong> Unpack, scent items down, quiet tour, then a <em>short</em> settle period.</li>
+          <li><strong>Solo walks with proof:</strong> Local, low-arousal routes with GPS + photos sent to you.</li>
+          <li><strong>Daily updates:</strong> Food intake, mood, toileting and any enrichment completed.</li>
+        </ol>
+        <p class="callout">
+          Want predictable savings? Compare <a href="/memberships.html">walking memberships</a> or see <a href="/unlimited-dog-walks.html">Unlimited (weekdays)</a> to pair with boarding.
+        </p>
+
+        <h2 id="compare">One-Guest Boarding vs Traditional Kennels — Clear Differences</h2>
+        <div class="comparison-cards">
+          <div class="card bad">
+            <h3>Traditional Kennels</h3>
+            <ul>
+              <li>Multiple dogs, shared air and noise spikes.</li>
+              <li>Variable routines and rotating handlers.</li>
+              <li>Higher exposure to illness and crowd stress.</li>
+            </ul>
+          </div>
+          <div class="card good">
+            <h3>One-Guest Only Boutique Boarding</h3>
+            <ul>
+              <li>Single guest = no crowd triggers, no conflict risk.</li>
+              <li>Consistent caregiver and repeatable schedule.</li>
+              <li>Home comforts plus <strong>solo walks</strong> with GPS & photos.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2 id="what-to-bring">What to Pack for One-Guest Boarding (Quick Checklist)</h2>
+        <ul>
+          <li>Normal diet in labelled portions; treats that sit well.</li>
+          <li>Bed/blanket and a worn t-shirt for scent.</li>
+          <li>Lead, harness, meds with written instructions.</li>
+          <li>Current vet info and emergency contact.</li>
+        </ul>
+        <p>First stay? See our detailed <a href="/blog/weekend-woof-club-checklist.html">first-timer checklist</a> and <a href="/blog/prepare-dog-for-boarding-checklist.html">boarding prep guide</a>.</p>
+
+        <hr class="section-sweep" aria-hidden="true">
+
+        <!-- Primary CTA -->
+        <div class="gold-edge" style="padding:22px;text-align:center">
+          <h2 style="margin:0 0 6px;color:#fff">Ready for Calm, One-Guest Boarding?</h2>
+          <p class="meta" style="margin:0 0 10px">New clients: <strong>20% off</strong> your first boutique boarding stay.</p>
+          <p class="cta-buttons" style="justify-content:center">
+            <a class="btn btn-sale" href="/book-boarding/?coupon=BOARDING20">Request Boarding Dates</a>
+            <a class="btn btn-ghost" href="/boarding-services.html">See How Our Stays Work</a>
+          </p>
+        </div>
+
+        <h2 id="faq" style="margin-top:34px">FAQs: One-Guest Only Dog Boarding in South Melbourne</h2>
+        <h3>Is one-guest boarding right for separation anxiety?</h3>
+        <p>Yes. Removing crowd triggers and adding predictable structure shortens the settle-in period and improves sleep quality.</p>
+
+        <h3>Do you include exercise during boarding?</h3>
+        <p>Absolutely. Calm, solo neighbourhood walks are standard. You’ll receive GPS routes and photo updates after each session.</p>
+
+        <h3>Are you insured and police checked?</h3>
+        <p>Yes. We’re fully insured, police checked, and follow our <a href="/safety.html">Safety & Insurance</a> standards.</p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <section class="footer-brand">
+        <a class="brand" href="/" style="display:inline-flex;align-items:center;gap:8px;">
+          <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="60" height="60" loading="lazy">
+          <strong>The Woof of Walk Street</strong>
+        </a>
+        <p class="meta" style="font-size:.9rem;margin-top:10px">Premium 1:1 Dog Walking & Boutique Boarding — South Melbourne, VIC.</p>
+        <p class="cta-buttons" style="margin-top:.4rem">
+          <a class="btn btn-primary" href="/book-dog-walk/?coupon=WALK50">Book Walks</a>
+          <a class="btn btn-primary" href="/book-boarding/?coupon=BOARDING20">Book Boarding</a>
+        </p>
+      </section>
+
+      <nav class="footer-col" aria-label="Services">
+        <h3>Services</h3>
+        <ul class="footlist">
+          <li><a href="/services.html">All Services</a></li>
+          <li><a href="/dog-walking-south-melbourne.html">Solo Dog Walking</a></li>
+          <li><a href="/boarding-services.html">Boutique Boarding</a></li>
+          <li><a href="/memberships.html">Memberships</a></li>
+          <li><a href="/service-areas.html">Service Areas</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-label="Info">
+        <h3>Guides</h3>
+        <ul class="footlist">
+          <li><a href="/blog/one-guest-only-boarding.html">One-Guest Boarding</a></li>
+          <li><a href="/blog/why-solo-walks.html">Why Solo Walks Reduce Stress</a></li>
+          <li><a href="/blog/solo-vs-pack-walks.html">Solo vs Pack Walks</a></li>
+          <li><a href="/blog/best-dog-walks-south-melbourne.html">Best Dog-Friendly Spots</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-label="Legal">
+        <h3>Info & Legal</h3>
+        <ul class="footlist">
+          <li><a href="/faqs.html">FAQs</a></li>
+          <li><a href="/privacy.html">Privacy</a></li>
+          <li><a href="/terms.html">Terms</a></li>
+          <li><a href="/safety.html">Safety & Insurance</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container footer-bottom">© <span id="year"></span> The Woof of Walk Street · ABN 73 671 200 404</div>
+    <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+  </footer>
+
+  <!-- Sticky mobile CTA -->
+  <div class="sticky-cta" role="region" aria-label="Quick booking">
+    <a href="tel:+61370731175" class="btn btn-ghost">📞 Call Now</a>
+    <a href="/book-boarding/?coupon=BOARDING20" class="btn btn-sale">Book Boarding (20% Off)</a>
+  </div>
+
+  <!-- Small UX helpers -->
+  <script>
+    // Close mobile menu by tapping scrim
+    (function(){
+      const navToggle=document.getElementById('nav-toggle');
+      const scrim=document.querySelector('.nav-scrim');
+      scrim?.addEventListener('click',()=>navToggle.checked=false);
+
+      // Reveal on scroll
+      const reveals=document.querySelectorAll('[data-reveal]');
+      const obs=new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{
+          if(e.isIntersecting){ e.target.style.opacity=1; e.target.style.transform='translateY(0)'; obs.unobserve(e.target); }
+        });
+      },{threshold:0.12});
+      reveals.forEach(r=>{ r.style.opacity=0; r.style.transform='translateY(16px)'; r.style.transition='opacity .6s ease, transform .6s ease'; obs.observe(r); });
+    })();
+  </script>
 </body>
 </html>

@@ -1,4 +1,3 @@
-@@ -1,378 +1,378 @@
 <!DOCTYPE html>
 <html lang="en-AU">
 <head>
@@ -184,7 +183,6 @@
           </div>
           <div class="line">
             <span>Your Trial Price</span>
-            <span class="price-anchor"><span class="old-price">$35.00</span>$17.50</span>
             <span class="price-anchor"><span class="old-price">$100</span>$50</span>
           </div>
           <div class="cta-row">
@@ -287,7 +285,6 @@
     <div class="container">
       <div class="box">
         <h2 class="h2">Don't Miss Out: Claim Your Discounted Trial Today</h2>
-        <p style="color:#2b2b2b;max-width:65ch">This is the easiest way to experience the difference a solo, proof-driven walk makes. Pick a time, we arrive at your door, and your dog gets a calm 45-minute walk. New clients get <strong>50% off ($17.50 trial)</strong>, but this offer is strictly limited.</p>
         <p style="color:#2b2b2b;max-width:65ch">This is the easiest way to experience the difference a solo, proof-driven walk makes. Pick a time, we arrive at your door, and your dog gets a calm 45-minute walk. New clients get <strong>50% off ($50 trial)</strong>, but this offer is strictly limited.</p>
         <div class="cta-row">
           <!-- changed to scroll-to-scheduler -->
@@ -333,24 +330,22 @@
         });
       }
 
-      // Countdown Timer
+      // Countdown Timer (fixed end: 31 Dec 2025, 12:00)
       const countdown = document.getElementById('countdown');
       if (countdown) {
-        const end = new Date(new Date().getFullYear() + '-12-31T23:59:59');
+        const end = new Date('2025-12-31T12:00:00');
         const now = new Date();
-        if (now.getFullYear() === end.getFullYear()) {
-          const diff = end - now;
-          if (diff > 0) {
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            countdown.innerHTML = `
-              🚨 Offer Ends In: 
-              <span class="days-left">${days} Day${days !== 1 ? 's' : ''}</span> 
-              & <span>${hours} Hour${hours !== 1 ? 's' : ''}</span>
-            `;
-          } else {
-            countdown.style.display = 'none';
-          }
+        const diff = end - now;
+        if (diff > 0) {
+          const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          countdown.innerHTML = `
+            🚨 Offer Ends In: 
+            <span class="days-left">${days} Day${days !== 1 ? 's' : ''}</span> 
+            & <span>${hours} Hour${hours !== 1 ? 's' : ''}</span>
+          `;
+        } else {
+          countdown.style.display = 'none';
         }
       }
 
@@ -377,5 +372,49 @@
       });
     })();
   </script>
+
+  <!-- GCLID add-on: capture, persist, and inject into Acuity iframe -->
+  <script>
+  (function () {
+    // Grab gclid from URL, store it
+    const url = new URL(location.href);
+    const gclidFromUrl = url.searchParams.get('gclid');
+    if (gclidFromUrl) {
+      try { localStorage.setItem('gclid', gclidFromUrl); } catch(e) {}
+    }
+
+    const storedGclid = (() => {
+      try { return localStorage.getItem('gclid'); } catch(e){ return null; }
+    })();
+
+    // After DOM is ready, ensure the iframe src includes coupon + gclid
+    document.addEventListener("DOMContentLoaded", function () {
+      var frame = document.getElementById("acuity-frame");
+      if (!frame) return;
+
+      try {
+        var u = frame.src
+          ? new URL(frame.src)
+          : new URL("https://app.acuityscheduling.com/schedule.php");
+
+        // Required params
+        u.searchParams.set("owner", "37607219");
+        u.searchParams.set("appointmentType", "86031912");
+
+        // Keep your coupon logic
+        var coupon = new URLSearchParams(location.search).get("coupon") || "WALK50";
+        u.searchParams.set("coupon", coupon);
+
+        // Add gclid if present
+        if (storedGclid) {
+          u.searchParams.set("gclid", storedGclid);
+        }
+
+        frame.src = u.toString();
+      } catch (e) {}
+    });
+  })();
+  </script>
 </body>
 </html>
+

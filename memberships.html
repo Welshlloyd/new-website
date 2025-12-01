@@ -1,6 +1,3 @@
-Here’s the updated **full memberships page** with the plan cards switched to the new images in `images/memberships/cards`:
-
-```html
 <!DOCTYPE html>
 <html lang="en-AU">
 <head>
@@ -44,17 +41,19 @@ Here’s the updated **full memberships page** with the plan cards switched to t
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- Social -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Premium Solo Dog Walking Memberships — South Melbourne">
   <meta property="og:description" content="Guaranteed routine solo walks with GPS & photo proof. Members-only Woof Club boarding benefits.">
   <meta property="og:url" content="https://www.woofofwalkstreet.com/memberships.html">
-  <meta property="og:image" content="https://www.woofofwalkstreet.com/images/brand/elite-dog-hero.webp">
+  <meta property="og:image" content="https://www.woofofwalkstreet.com/images/gallery/dog-digging-sand.jpg">
   <meta property="og:locale" content="en_AU">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" href="/images/brand/favicon.ico" />
-  <link rel="preload" as="image" href="/images/brand/elite-dog-hero.webp"
-        imagesrcset="/images/brand/elite-dog-hero.webp 1200w"
+  <!-- Preload the hero image -->
+  <link rel="preload" as="image" href="/images/gallery/dog-digging-sand.jpg"
+        imagesrcset="/images/gallery/dog-digging-sand.jpg 1200w"
         imagesizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px" />
 
   <style>
@@ -75,7 +74,7 @@ Here’s the updated **full memberships page** with the plan cards switched to t
     h1,h2,h3,h4,h5,h6,nav a,.nav-group-btn{font-family:var(--font-heading);letter-spacing:.25px}
     .text-center{text-align:center}
 
-    /* Header / Nav (matches index) */
+    /* Header / Nav */
     .site-header{backdrop-filter:var(--header-blur);background:var(--header-bg);border-bottom:1px solid rgba(255,255,255,.06);position:sticky;top:0;z-index:50}
     .navbar{display:flex;align-items:center;justify-content:space-between;gap:14px;height:64px}
     .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700}
@@ -132,7 +131,7 @@ Here’s the updated **full memberships page** with the plan cards switched to t
     .solo-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
     .solo-card h3{color:var(--brand);margin-top:0}
 
-    /* Plans carousel (gold edges & “pills”) */
+    /* Plans carousel */
     .plans-carousel{position:relative}
     .plans-track{display:flex;gap:16px;padding:6px 6px 22px;overflow:auto hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
     .plan{position:relative;scroll-snap-align:center;min-width:min(480px,92vw);isolation:isolate;
@@ -142,7 +141,15 @@ Here’s the updated **full memberships page** with the plan cards switched to t
       transition:transform .2s ease,box-shadow .2s ease}
     .plan:hover{transform:translateY(-2px)}
     .plan--ultra{border-color:var(--brand);box-shadow:var(--ring),0 18px 36px rgba(0,0,0,.35)}
-    .plan img{border-radius:12px;margin-bottom:10px}
+    /* Uniform card image sizing */
+    .plan .plan-img{
+      width:100%;
+      aspect-ratio:3/2;            /* lock size across cards */
+      object-fit:cover;
+      border-radius:12px;
+      margin-bottom:10px;
+      display:block;
+    }
     .pill{position:absolute;top:12px;left:12px;background:rgba(255,255,255,.08);border:1px solid var(--line);padding:.3rem .6rem;border-radius:999px;font-weight:700}
     .plan .price{margin:.35rem 0 .25rem}
     .btn-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
@@ -150,7 +157,7 @@ Here’s the updated **full memberships page** with the plan cards switched to t
     .plans-dot{width:10px;height:10px;border-radius:50%;border:1px solid rgba(255,255,255,.4);background:transparent}
     .plans-dot[aria-current="true"]{background:rgba(255,255,255,.6)}
 
-    /* Terms (designated box) */
+    /* Terms box */
     #full-terms{background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.02));border:2px solid rgba(255,209,102,.55);border-radius:16px;padding:18px;box-shadow:0 10px 24px rgba(0,0,0,.18), 0 0 0 3px rgba(255,209,102,.12) inset;margin-top:22px}
     #full-terms summary{font-weight:800;font-size:1.05rem;padding:6px 0;cursor:pointer;color:var(--brand)}
     #full-terms details{border-top:1px solid var(--line)}
@@ -170,9 +177,9 @@ Here’s the updated **full memberships page** with the plan cards switched to t
     @media (max-width:860px){.footer-grid{grid-template-columns:1fr 1fr}}
   </style>
 
-  <!-- LocalBusiness (unchanged core) -->
+  <!-- LocalBusiness -->
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"LocalBusiness","@id":"https://www.woofofwalkstreet.com/#business","name":"The Woof of Walk Street","url":"https://www.woofofwalkstreet.com","image":"https://www.woofofwalkstreet.com/images/brand/logo-lockup-gold.webp","telephone":"+61 456 754 050","priceRange":"$$$","description":"Premium solo dog walks and boutique boarding. GPS-tracked, photo updates, stress-free care.","address":{"@type":"PostalAddress","addressLocality":"South Melbourne","addressRegion":"VIC","addressCountry":"AU"},"areaServed":["South Melbourne","Albert Park","Port Melbourne","Middle Park","Southbank"]}
+  {"@context":"https://schema.org","@type":"LocalBusiness","@id":"https://www.woofofwalkstreet.com/#business","name":"The Woof of Walk Street","url":"https://www.woofofwalkstreet.com","image":"https://www.woofofwalkstreet.com/images/brand/logo-lockup-gold.webp","telephone":"+61 456 754 050","priceRange":"$$$","description":"Premium solo dog walks and boutique boarding. GPS-tracked, photo updates, stress-free care.","address":{"@type":"PostalAddress","addressLocality":"South Melbourne","addressRegion":"VIC","addressCountry":"AU"},"areaServed":["South Melbourne","Albert Park","Port Melbourne","Middle Park","Southbank"]}  
   </script>
 </head>
 
@@ -245,7 +252,7 @@ Here’s the updated **full memberships page** with the plan cards switched to t
         </p>
         <a class="btn btn-primary" href="https://app.acuityscheduling.com/catalog.php?owner=37607219&action=addCart&clear=1&id=2103519" style="margin-top:10px;" data-conversion="acuity_checkout">Join Growth — Start Your Routine →</a>
         <figure style="margin-top:24px;">
-          <img class="gold-edge" src="/images/brand/elite-dog-hero.webp" alt="Premium dog walking memberships" width="1200" height="675" loading="eager" decoding="async" fetchpriority="high">
+          <img class="gold-edge" src="/images/gallery/dog-digging-sand.jpg" alt="Premium dog walking memberships" width="1200" height="675" loading="eager" decoding="async" fetchpriority="high">
         </figure>
       </div>
     </section>
@@ -297,7 +304,7 @@ Here’s the updated **full memberships page** with the plan cards switched to t
 
     <hr class="section-sweep" aria-hidden="true">
 
-    <!-- Plans -->
+    <!-- Plans (PRICE ORDER) -->
     <section class="container" data-reveal>
       <h2 style="margin:18px 0 6px">Choose Your Perfect Solo Dog Walking Routine</h2>
       <p class="meta" style="margin:0 0 18px;color:var(--muted)">All plans include <strong>45-minute solo walks</strong>, <strong>GPS tracking</strong>, and <strong>photo updates</strong>. Boarding benefits are loyalty-based or credited monthly depending on plan.</p>
@@ -305,45 +312,27 @@ Here’s the updated **full memberships page** with the plan cards switched to t
       <div class="plans-carousel" id="plans-carousel" aria-label="Membership plans carousel">
         <div class="plans-track" role="listbox" aria-live="polite">
 
-          <!-- ELITE -->
-          <article class="plan" id="elite-plan-card" aria-label="ELITE Membership">
-            <img src="/images/memberships/cards/elite_card_clean.webp" alt="ELITE membership card — daily walks and premium boarding" width="1200" height="800" loading="lazy">
-            <span class="pill" style="background:var(--accent);color:var(--bg)">ELITE · 7 Days/Week</span>
-            <h3><span aria-hidden="true" style="color:var(--accent);margin-right:5px">💎</span> ELITE Solo Dog Walking Membership</h3>
-            <p class="meta">Guaranteed daily walks plus premium boarding perks and top priority.</p>
-            <p class="price"><strong>A$5,000 / month</strong> <span class="meta">or A$55,000/year</span></p>
+          <!-- Starter -->
+          <article class="plan" id="starter-plan-card" aria-label="Starter Membership">
+            <img class="plan-img" src="/images/memberships/cards/starter_card_clean.webp" alt="Starter membership card — intro to solo walks" loading="lazy">
+            <span class="pill">Starter · 4 / month</span>
+            <h3>Starter Solo Dog Walking Plan</h3>
+            <p class="meta">A low-commitment intro: <strong>1 solo walk</strong> per week for guaranteed minimum exercise.</p>
+            <p class="price"><strong>A$340 / month</strong></p>
             <ul>
-              <li>✅ ~30 solo walks per month (1/day, 7 days)</li>
-              <li>👑 Ultimate priority on all services</li>
-              <li>🎁 <strong>3 boarding nights / month</strong> included (rollover up to 36/yr)</li>
+              <li>✅ 4 solo walks per month (about 1/week)</li>
+              <li>🎁 <strong>2 boarding nights</strong> after 12 consecutive months (loyalty bonus)</li>
+              <li>⏳ Standard booking access</li>
             </ul>
             <div class="btn-row">
-              <a class="btn btn-primary" href="#" aria-label="Apply for ELITE membership" data-conversion="elite_apply">Apply for ELITE</a>
-              <a class="btn btn-outline" href="/membership-elite.html#perks" aria-label="See full ELITE membership perks">See Full Perks →</a>
-            </div>
-          </article>
-
-          <!-- Unlimited -->
-          <article class="plan plan--ultra" id="unlimited-plan-card" aria-label="Unlimited Membership">
-            <img src="/images/memberships/cards/unlimited_card_clean.webp" alt="Unlimited membership card — weekday solo walks" width="1200" height="800" loading="lazy">
-            <span class="pill">Unlimited · Weekdays</span>
-            <h3><span aria-hidden="true" style="color:#ffd166;margin-right:5px">👑</span> Unlimited Weekday Solo Walks</h3>
-            <p class="meta">One 45-minute solo walk every weekday (Mon–Fri) — <strong>guaranteed daily routine</strong>.</p>
-            <p class="price"><strong>A$1,500 / month</strong></p>
-            <ul>
-              <li>✅ 22 weekday solo walks per month (guaranteed slot)</li>
-              <li>🎁 <strong>2 boarding nights / month</strong> included (rollover up to 24/yr)</li>
-              <li>⚠️ Weekdays only</li>
-            </ul>
-            <div class="btn-row">
-              <a class="btn btn-primary" href="https://app.acuityscheduling.com/catalog.php?owner=37607219&action=addCart&clear=1&id=2103523" target="_blank" rel="noopener" aria-label="Join Unlimited (Acuity)" data-conversion="acuity_checkout">Join Unlimited</a>
-              <a class="btn btn-outline" href="/unlimited-dog-walks.html#perks" aria-label="See Unlimited perks">See Full Perks →</a>
+              <a class="btn btn-primary" href="https://app.acuityscheduling.com/catalog.php?owner=37607219&action=addCart&clear=1&id=2103514" target="_blank" rel="noopener" aria-label="Join Starter (Acuity)" data-conversion="acuity_checkout">Join Starter</a>
+              <a class="btn btn-outline" href="/membership-starter.html#rewards" aria-label="See Starter perks">See Full Perks →</a>
             </div>
           </article>
 
           <!-- Growth -->
           <article class="plan" id="growth-plan-card" aria-label="Growth Membership">
-            <img src="/images/memberships/cards/growth_card_clean.webp" alt="Growth membership card — routine-building solo walks" width="1200" height="800" loading="lazy">
+            <img class="plan-img" src="/images/memberships/cards/growth_card_clean.webp" alt="Growth membership card — routine-building solo walks" loading="lazy">
             <span class="pill">Growth · 10 / month</span>
             <h3>Growth Solo Dog Walking Plan</h3>
             <p class="meta">The ideal routine builder: <strong>2–3 solo walks</strong> each week for consistent exercise.</p>
@@ -359,30 +348,49 @@ Here’s the updated **full memberships page** with the plan cards switched to t
             </div>
           </article>
 
-          <!-- Starter -->
-          <article class="plan" id="starter-plan-card" aria-label="Starter Membership">
-            <img src="/images/memberships/cards/starter_card_clean.webp" alt="Starter membership card — intro to solo walks" width="1200" height="800" loading="lazy">
-            <span class="pill">Starter · 4 / month</span>
-            <h3>Starter Solo Dog Walking Plan</h3>
-            <p class="meta">A low-commitment intro: <strong>1 solo walk</strong> per week for guaranteed minimum exercise.</p>
-            <p class="price"><strong>A$340 / month</strong></p>
+          <!-- Unlimited -->
+          <article class="plan plan--ultra" id="unlimited-plan-card" aria-label="Unlimited Membership">
+            <img class="plan-img" src="/images/memberships/cards/unlimited_card_clean.webp" alt="Unlimited membership card — weekday solo walks" loading="lazy">
+            <span class="pill">Unlimited · Weekdays</span>
+            <h3><span aria-hidden="true" style="color:#ffd166;margin-right:5px">👑</span> Unlimited Weekday Solo Walks</h3>
+            <p class="meta">One 45-minute solo walk every weekday (Mon–Fri) — <strong>guaranteed daily routine</strong>.</p>
+            <p class="price"><strong>A$1,500 / month</strong></p>
             <ul>
-              <li>✅ 4 solo walks per month (about 1/week)</li>
-              <li>🎁 <strong>2 boarding nights</strong> after 12 consecutive months (loyalty bonus)</li>
-              <li>⏳ Standard booking access</li>
+              <li>✅ 22 weekday solo walks per month (guaranteed slot)</li>
+              <li>🎁 <strong>2 boarding nights / month</strong> included (rollover up to 24/yr)</li>
+              <li>⚠️ Weekdays only</li>
             </ul>
             <div class="btn-row">
-              <a class="btn btn-primary" href="https://app.acuityscheduling.com/catalog.php?owner=37607219&action=addCart&clear=1&id=2103514" target="_blank" rel="noopener" aria-label="Join Starter (Acuity)" data-conversion="acuity_checkout">Join Starter</a>
-              <a class="btn btn-outline" href="/membership-starter.html#rewards" aria-label="See Starter perks">See Full Perks →</a>
+              <a class="btn btn-primary" href="https://app.acuityscheduling.com/catalog.php?owner=37607219&action=addCart&clear=1&id=2103523" target="_blank" rel="noopener" aria-label="Join Unlimited (Acuity)" data-conversion="acuity_checkout">Join Unlimited</a>
+              <a class="btn btn-outline" href="/unlimited-dog-walks.html#perks" aria-label="See Unlimited perks">See Full Perks →</a>
+            </div>
+          </article>
+
+          <!-- ELITE -->
+          <article class="plan" id="elite-plan-card" aria-label="ELITE Membership">
+            <img class="plan-img" src="/images/memberships/cards/elite_card_clean.webp" alt="ELITE membership card — daily walks and premium boarding" loading="lazy">
+            <span class="pill" style="background:var(--accent);color:var(--bg)">ELITE · 7 Days/Week</span>
+            <h3><span aria-hidden="true" style="color:var(--accent);margin-right:5px">💎</span> ELITE Solo Dog Walking Membership</h3>
+            <p class="meta">Guaranteed daily walks plus premium boarding perks and top priority.</p>
+            <p class="price"><strong>A$5,000 / month</strong> <span class="meta">or A$55,000/year</span></p>
+            <ul>
+              <li>✅ ~30 solo walks per month (1/day, 7 days)</li>
+              <li>👑 Ultimate priority on all services</li>
+              <li>🎁 <strong>3 boarding nights / month</strong> included (rollover up to 36/yr)</li>
+            </ul>
+            <div class="btn-row">
+              <a class="btn btn-primary" href="#" aria-label="Apply for ELITE membership" data-conversion="elite_apply">Apply for ELITE</a>
+              <a class="btn btn-outline" href="/membership-elite.html#perks" aria-label="See full ELITE membership perks">See Full Perks →</a>
             </div>
           </article>
         </div>
 
+        <!-- Dots reordered to match price order -->
         <div class="plans-dots" role="tablist" aria-label="Slide navigation" style="margin-top:8px">
-          <button class="plans-dot" data-index="0" aria-label="Elite" aria-current="true"></button>
-          <button class="plans-dot" data-index="1" aria-label="Unlimited"></button>
-          <button class="plans-dot" data-index="2" aria-label="Growth"></button>
-          <button class="plans-dot" data-index="3" aria-label="Starter"></button>
+          <button class="plans-dot" data-index="0" aria-label="Starter" aria-current="true"></button>
+          <button class="plans-dot" data-index="1" aria-label="Growth"></button>
+          <button class="plans-dot" data-index="2" aria-label="Unlimited"></button>
+          <button class="plans-dot" data-index="3" aria-label="Elite"></button>
         </div>
       </div>
 
@@ -393,7 +401,7 @@ Here’s the updated **full memberships page** with the plan cards switched to t
 
     <hr class="section-sweep" aria-hidden="true">
 
-    <!-- FAQ + designated Terms box -->
+    <!-- FAQ + Terms -->
     <section class="container" aria-labelledby="faq-heading" data-reveal>
       <h2 id="faq-heading">Frequently Asked Questions</h2>
       <details><summary><strong>Are walks truly solo?</strong></summary>
@@ -426,11 +434,12 @@ Here’s the updated **full memberships page** with the plan cards switched to t
         </details>
       </div>
 
+      <!-- Footer-CTA row: unified button colour -->
       <div class="faq-cta" style="margin-top:24px;display:flex;gap:10px;flex-wrap:wrap">
         <a class="btn btn-primary" href="#" aria-label="Apply for ELITE via Typeform" data-conversion="elite_apply">Apply: ELITE</a>
-        <a class="btn btn-ghost" href="https://app.acuityscheduling.com/catalog.php?owner=37607219&action=addCart&clear=1&id=2103523" target="_blank" rel="noopener" data-conversion="acuity_checkout">Join: Unlimited</a>
-        <a class="btn btn-ghost" href="https://app.acuityscheduling.com/catalog.php?owner=37607219&action=addCart&clear=1&id=2103519" target="_blank" rel="noopener" data-conversion="acuity_checkout">Join: Growth</a>
-        <a class="btn btn-outline" href="https://app.acuityscheduling.com/catalog.php?owner=37607219&action=addCart&clear=1&id=2103514" target="_blank" rel="noopener" data-conversion="acuity_checkout">Join: Starter</a>
+        <a class="btn btn-primary" href="https://app.acuityscheduling.com/catalog.php?owner=37607219&action=addCart&clear=1&id=2103523" target="_blank" rel="noopener" data-conversion="acuity_checkout">Join: Unlimited</a>
+        <a class="btn btn-primary" href="https://app.acuityscheduling.com/catalog.php?owner=37607219&action=addCart&clear=1&id=2103519" target="_blank" rel="noopener" data-conversion="acuity_checkout">Join: Growth</a>
+        <a class="btn btn-primary" href="https://app.acuityscheduling.com/catalog.php?owner=37607219&action=addCart&clear=1&id=2103514" target="_blank" rel="noopener" data-conversion="acuity_checkout">Join: Starter</a>
       </div>
     </section>
   </main>
@@ -447,8 +456,8 @@ Here’s the updated **full memberships page** with the plan cards switched to t
   <!-- Sticky mobile CTA -->
   <div class="sticky-cta" role="region" aria-label="Quick membership join">
     <a class="btn btn-primary" href="https://app.acuityscheduling.com/catalog.php?owner=37607219&action=addCart&clear=1&id=2103519" target="_blank" rel="noopener" data-conversion="acuity_checkout">Join Growth</a>
-    <a class="btn btn-ghost" href="https://app.acuityscheduling.com/catalog.php?owner=37607219&action=addCart&clear=1&id=2103523" target="_blank" rel="noopener" data-conversion="acuity_checkout">Join Unlimited</a>
-    <a class="btn btn-outline" href="https://app.acuityscheduling.com/catalog.php?owner=37607219&action=addCart&clear=1&id=2103514" target="_blank" rel="noopener" data-conversion="acuity_checkout">Join Starter</a>
+    <a class="btn btn-primary" href="https://app.acuityscheduling.com/catalog.php?owner=37607219&action=addCart&clear=1&id=2103523" target="_blank" rel="noopener" data-conversion="acuity_checkout">Join Unlimited</a>
+    <a class="btn btn-primary" href="https://app.acuityscheduling.com/catalog.php?owner=37607219&action=addCart&clear=1&id=2103514" target="_blank" rel="noopener" data-conversion="acuity_checkout">Join Starter</a>
   </div>
 
   <!-- Footer -->
@@ -502,7 +511,7 @@ Here’s the updated **full memberships page** with the plan cards switched to t
   <!-- JS: menus, reveal, carousel, tracking -->
   <script>
     (function(){
-      // Close services menu on outside click (mobile/desktop)
+      // Close services menu on outside click
       const group = document.querySelector('.nav-group');
       const btn = document.querySelector('.nav-group-btn');
       document.addEventListener('click',(e)=>{
@@ -553,4 +562,3 @@ Here’s the updated **full memberships page** with the plan cards switched to t
   </script>
 </body>
 </html>
-```

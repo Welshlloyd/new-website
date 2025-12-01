@@ -4,10 +4,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <!-- Google Tag Manager (container: GTM-T3HRTM2T) -->
   <script>
     (function(w,d,s,l,i){
@@ -117,16 +113,30 @@
     .nav-links a{padding:8px 6px;text-decoration:none;color:#fff;opacity:.9}
     .nav-links a:hover{opacity:1}
 
-    /* Services dropdown */
+    /* Services dropdown (UPDATED) */
     .nav-group{position:relative}
-    .nav-group-btn{background:transparent;border:1px solid #2a3440;color:#fff;border-radius:999px;padding:8px 12px;font-weight:800;cursor:pointer}
+    .nav-group-btn{
+      background:transparent;border:1px solid #2a3440;color:#fff;border-radius:999px;
+      padding:8px 12px;font-weight:800;cursor:pointer
+    }
     .nav-group-btn:hover{border-color:#fff}
-    .nav-group-list{position:absolute;right:0;top:110%;min-width:240px;background:var(--menu-solid); /* solid for readability */
-      border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:8px 6px;box-shadow:var(--shadow);display:none}
+
+    .nav-group-list{
+      position:absolute; right:0; top:calc(100% + 8px);
+      min-width:260px;
+      background:var(--menu-solid);
+      border:1px solid rgba(255,255,255,.16);
+      border-radius:12px; padding:8px 6px;
+      box-shadow:var(--shadow);
+      display:none;
+      z-index:2000;            /* ensure above header/hero */
+      pointer-events:auto;     /* ensure links are clickable */
+    }
     .nav-group[aria-expanded="true"] .nav-group-list{display:block}
     .nav-group-list a{display:block;padding:10px 12px;border-radius:10px;color:#e9eef6}
     .nav-group-list a:hover{background:rgba(255,255,255,.06)}
-    /* Show on hover/focus for desktop */
+
+    /* Hover/focus open on desktop */
     @media (min-width:861px){
       .nav-group:hover .nav-group-list,
       .nav-group:focus-within .nav-group-list{display:block}
@@ -135,14 +145,22 @@
     .nav-toggle{display:none} .nav-scrim{display:none}
     @media (max-width:860px){
       .nav-toggle{display:block;cursor:pointer}
-      .nav-links{position:fixed;inset:0 0 auto auto;width:min(320px,85vw);height:100vh;background:var(--menu-solid); /* solid mobile */
-        padding:70px 16px 20px;flex-direction:column;gap:10px;transform:translateX(100%);transition:transform .25s}
+      .nav-links{
+        position:fixed;inset:0 0 auto auto;width:min(320px,85vw);height:100vh;background:var(--menu-solid);
+        padding:70px 16px 20px;flex-direction:column;gap:10px;transform:translateX(100%);transition:transform .25s
+      }
       #nav-toggle:checked ~ .nav-links{transform:translateX(0)}
       .nav-scrim{display:block;position:fixed;inset:0;background:rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:opacity .25s}
       #nav-toggle:checked ~ .nav-scrim{opacity:1;pointer-events:auto}
+
       .nav-group{width:100%}
-      .nav-group-list{position:relative;top:auto;right:auto;display:block;background:transparent;border:none;box-shadow:none;padding:4px 0}
-      .nav-group-btn{width:100%;text-align:left}
+      .nav-group-list{
+        position:relative; top:auto; right:auto; display:block;
+        background:var(--menu-solid);
+        border:1px solid rgba(255,255,255,.12);
+        border-radius:12px; padding:6px; box-shadow:none; margin-top:8px;
+      }
+      .nav-group-btn{width:100%; text-align:left}
     }
 
     .cta-buttons{display:flex;gap:10px;flex-wrap:wrap}
@@ -184,19 +202,18 @@
     .carousel-head{text-align:center;color:var(--muted);margin-bottom:8px}
     .carousel-viewport{
       overflow:hidden;border-radius:16px;
-      /* slight inner border glow */
       box-shadow: inset 0 0 0 1px rgba(255,255,255,.05);
     }
     .carousel-track{
       display:flex;gap:16px;will-change:transform;transition:transform .35s ease;
-      touch-action:pan-y; /* allow horizontal swipe */
+      touch-action:pan-y;
     }
     .slide{
-      flex:0 0 calc(100% / var(--slides,1)); /* JS sets --slides: 1 or 2 */
+      flex:0 0 calc(100% / var(--slides,1));
       display:flex;justify-content:center;
     }
     .mem-card{
-      width:min(var(--card-w), 92vw); /* clamp for small screens */
+      width:min(var(--card-w), 92vw);
       height:var(--card-h);
       background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
       border:2px solid rgba(255,209,102,.25);
@@ -309,8 +326,14 @@
 
       <nav class="nav-links" aria-label="Primary">
         <div class="nav-group" aria-expanded="false">
-          <a href="/services.html" class="nav-group-btn" aria-haspopup="true" style="text-decoration:none; display:inline-block;">Services ▾</a>
-          <ul class="nav-group-list" role="menu" aria-label="Services menu">
+          <button type="button"
+                  class="nav-group-btn"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  aria-controls="nav-services">
+            Services ▾
+          </button>
+          <ul id="nav-services" class="nav-group-list" role="menu" aria-label="Services">
             <li><a role="menuitem" href="/dog-walking-south-melbourne.html">Dog Walking</a></li>
             <li><a role="menuitem" href="/boarding-services.html">Boutique Boarding</a></li>
             <li><a role="menuitem" href="/memberships.html">Memberships</a></li>
@@ -658,20 +681,6 @@
       const scrim=document.querySelector('.nav-scrim');
       if(navToggle && scrim){ scrim.addEventListener('click',()=>navToggle.checked=false); }
 
-      // Mobile dropdown toggle (Services)
-      const navGroupBtn=document.querySelector('.nav-group-btn');
-      const navGroup=document.querySelector('.nav-group');
-      if(navGroupBtn && navGroup){
-        navGroupBtn.addEventListener('click',(e)=>{
-          if(window.innerWidth < 860) {
-            e.preventDefault();
-            const expand = navGroup.getAttribute('aria-expanded')==='true';
-            navGroup.setAttribute('aria-expanded',!expand);
-            navGroupBtn.setAttribute('aria-expanded',!expand);
-          }
-        });
-      }
-
       // Reveal on scroll
       const reveals=document.querySelectorAll('[data-reveal]');
       const obs=new IntersectionObserver((entries)=>{
@@ -756,6 +765,52 @@
       // Resize
       window.addEventListener('resize', computeSlidesPerView);
       computeSlidesPerView();
+    })();
+  </script>
+
+  <!-- Dropdown accessibility & behavior (NEW) -->
+  <script>
+    (function(){
+      const navGroup = document.querySelector('.nav-group');
+      const btn = document.querySelector('.nav-group-btn');
+      const list = document.getElementById('nav-services');
+      if(!navGroup || !btn || !list) return;
+
+      // Toggle on click (desktop & mobile)
+      btn.addEventListener('click', (e)=>{
+        e.preventDefault();
+        const open = navGroup.getAttribute('aria-expanded') === 'true';
+        navGroup.setAttribute('aria-expanded', String(!open));
+        btn.setAttribute('aria-expanded', String(!open));
+      });
+
+      // Close on outside click
+      document.addEventListener('click', (e)=>{
+        if(!navGroup.contains(e.target)) {
+          navGroup.setAttribute('aria-expanded','false');
+          btn.setAttribute('aria-expanded','false');
+        }
+      });
+
+      // Close with Escape
+      document.addEventListener('keydown', (e)=>{
+        if(e.key === 'Escape'){
+          navGroup.setAttribute('aria-expanded','false');
+          btn.setAttribute('aria-expanded','false');
+          btn.focus();
+        }
+      });
+
+      // Reset when switching between mobile/desktop
+      let lastIsMobile = window.innerWidth <= 860;
+      window.addEventListener('resize', ()=>{
+        const isMobile = window.innerWidth <= 860;
+        if(isMobile !== lastIsMobile){
+          navGroup.setAttribute('aria-expanded','false');
+          btn.setAttribute('aria-expanded','false');
+          lastIsMobile = isMobile;
+        }
+      });
     })();
   </script>
 </body>

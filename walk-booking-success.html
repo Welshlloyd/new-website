@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walk Booked — The Woof of Walk Street</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="/images/brand/favicon.ico" />
+    <style>
+        :root{
+            --bg:#0b0e12; --bg2:#0f1318; --text:#e8eef5; --muted:#a9b4c0;
+            --brand:#ffd166; --accent:#5af2c6;
+        }
+        body{
+            background:linear-gradient(180deg,#0b0e12,#0f1318);
+            color:var(--text);
+            font-family:'Work Sans',system-ui,sans-serif;
+            text-align:center;
+            padding: 50px 20px;
+        }
+        .container{
+            max-width:600px;
+            margin:0 auto;
+            background:#0f1318;
+            border:1px solid rgba(255,255,255,.1);
+            border-radius:16px;
+            padding:30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+        h1{
+            font-family:'Space Grotesk',system-ui,sans-serif;
+            color:var(--accent);
+            font-size:clamp(1.6rem, 1.2rem + 2vw, 2.2rem);
+            margin-top:0;
+        }
+        .offer-highlight{
+            color:var(--brand);
+            font-weight:700;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street Logo" width="50" height="50" style="margin: 0 auto 15px;">
+        <h1>Walk Booked! Your 50% Discount is Applied.</h1>
+        <p>Thank you for booking your dog's first walk. We've locked in your <span class="offer-highlight">50% off introductory offer</span>.</p>
+        <p>You will receive a **confirmation email** shortly with all the details, including the meeting time, location, and your walker's profile.</p>
+        <p style="margin-top:25px;">We look forward to giving your dog the best walk in Melbourne!</p>
+        
+        <p style="margin-top:25px; font-size: 0.9em; color: var(--muted);">
+            <a href="/" style="color:var(--muted);">Return to Homepage</a> | 
+            <span id="transactionIdDisplay">Booking ID: [Loading...]</span>
+        </p>
+    </div>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script> 
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-XXXXXXXXX'); 
+    </script>
+    
+    <script>
+        function getUrlParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        const conversionId = getUrlParam('id');
+        const conversionPrice = parseFloat(getUrlParam('price')) || 0; 
+        
+        if (conversionId) {
+             document.getElementById('transactionIdDisplay').textContent = 'Booking ID: ' + conversionId;
+        }
+
+        // Conversion Action for 50% OFF WALKS
+        gtag('event', 'conversion', {
+            'send_to': 'AW-XXXXXXXXX/WALK_50_OFF_LABEL', // <--- IMPORTANT: Unique Conversion Label for Walks
+            'value': conversionPrice,
+            'currency': 'AUD', 
+            'transaction_id': conversionId
+        });
+    </script>
+    </body>
+</html>

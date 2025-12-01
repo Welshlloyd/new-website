@@ -3,343 +3,309 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Exclusive Luxury Dog Walking Concierge — $5,000/month | The Woof of Walk Street</title>
-  <meta name="description" content="Invitation-only Luxury Elite Concierge Membership. $5,000/month, strictly limited client cap, 7-day guaranteed coverage, absolute discretion, and private, white-glove care. Request a confidential interview." />
-  <link rel="icon" href="/images/brand/favicon.ico" />
+
+  <title>Elite Concierge Dog Walking — Invitation-Only, 7-Day Guarantee | The Woof of Walk Street</title>
+  <meta name="description" content="Invitation-only Elite concierge membership for VIP dogs: guaranteed 7-day walk coverage, guaranteed monthly boarding availability, private onboarding, absolute discretion. Request a confidential interview." />
   <link rel="canonical" href="https://www.woofofwalkstreet.com/membership-elite.html" />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="/images/brand/favicon.ico" />
 
   <!-- Social -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Elite Luxury Dog Walking Concierge — Private & Guaranteed">
-  <meta property="og:description" content="Strictly limited. Private onboarding. 7-day guaranteed coverage. Apply for a private interview.">
+  <meta property="og:title" content="Elite Concierge — Private, Guaranteed, Invitation-Only">
+  <meta property="og:description" content="Strict client cap. Guaranteed 7-day coverage + guaranteed boarding availability. Apply for a private interview.">
   <meta property="og:url" content="https://www.woofofwalkstreet.com/membership-elite.html">
   <meta property="og:image" content="https://www.woofofwalkstreet.com/images/memberships/cards/elite_card_clean.webp">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Preload hero card for snappier first paint -->
-  <link rel="preload" as="image" href="/images/memberships/cards/elite_card_clean.webp">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="/images/memberships/cards/elite_card_clean.webp"/>
 
   <style>
     :root{
-      --bg:#0b0e12; --bg2:#0f1318; --text:#e8eef5; --muted:#a9b4c0; --line:#1e2630;
-      --brand:#ffd166; --brand-ink:#0b0e12; --accent:#5af2c6; --danger:#ff6b6b;
-      --ring:0 0 0 2px rgba(255,209,102,.25), 0 16px 46px rgba(255,209,102,.08);
-      --shadow:0 18px 46px rgba(0,0,0,.35);
-      --radius:16px; --container:1100px;
+      --bg:#0b0e12; --card:#0f1318; --text:#e6edf3; --muted:#a9b4c0; --line:#1d232c;
+      --brand:#ffd166; --brand-ink:#0b0e12; --accent:#5af2c6;
+      --shadow:0 16px 48px rgba(0,0,0,.32);
+      --ring:0 0 0 2px rgba(255,209,102,.22), 0 16px 40px rgba(255,209,102,.08);
+      --header-bg:rgba(11,14,18,.78); --header-blur:saturate(120%) blur(10px);
+      --container:1100px; --radius:14px; --radius-lg:16px;
+      --font-heading:'Space Grotesk',system-ui,sans-serif; --font-body:'Work Sans',system-ui,sans-serif;
     }
-    html,body{background:linear-gradient(180deg,#0b0e12,#0f1318);color:var(--text)}
-    body{margin:0;font-family:'Work Sans',system-ui,sans-serif;letter-spacing:.1px}
-    h1,h2,h3,strong,.btn{font-family:'Space Grotesk',system-ui,sans-serif;letter-spacing:.2px}
-    a{color:inherit;text-decoration:none}
+    html,body{background:var(--bg);color:var(--text)}
+    body,p,li,span,button,input,textarea{font-family:var(--font-body);letter-spacing:.1px;line-height:1.58}
+    h1,h2,h3,h4,h5,h6,nav a{font-family:var(--font-heading);letter-spacing:.25px}
     img{max-width:100%;height:auto;display:block}
+    a{color:inherit;text-decoration:none}
     .container{max-width:var(--container);margin:0 auto;padding:0 16px}
 
-    /* Header */
-    .site-header{position:sticky;top:0;z-index:1000;background:rgba(11,14,18,.78);backdrop-filter:saturate(120%) blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
-    .brand{display:flex;align-items:center;gap:.6rem}
-    .brand img{width:48px;height:48px}
+    /* Header (match membership page) */
+    .site-header{position:sticky;top:0;z-index:50;backdrop-filter:var(--header-blur);background:var(--header-bg);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navbar{display:flex;align-items:center;justify-content:space-between;gap:14px;height:64px}
+    .brand{display:flex;align-items:center;gap:10px}
     .nav-links{display:flex;align-items:center;gap:16px}
-    .nav-toggle{display:none}
-    @media (max-width:860px){
-      .nav-toggle{display:block;cursor:pointer}
-      .nav-links{position:fixed;inset:0 0 auto auto;width:min(320px,85vw);height:100vh;background:#0e141b;padding:70px 16px 20px;flex-direction:column;gap:12px;transform:translateX(100%);transition:.25s}
-      #nav-toggle:checked ~ .nav-links{transform:translateX(0)}
-    }
-
-    /* Services dropdown (solid bg) */
     .nav-group{position:relative}
-    .nav-group-btn{background:transparent;border:1px solid #2a3440;color:#fff;border-radius:999px;padding:8px 12px;font-weight:800;cursor:pointer}
-    .nav-group-list{position:absolute;right:0;top:110%;min-width:240px;background:#0e141b;border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:8px 6px;box-shadow:var(--shadow);display:none}
+    .nav-group-btn{background:transparent;border:1px solid rgba(255,255,255,.08);border-radius:999px;padding:8px 12px;color:#fff;cursor:pointer}
     .nav-group[aria-expanded="true"] .nav-group-list{display:block}
-    .nav-group-list a{display:block;padding:10px 12px;border-radius:10px;color:#e9eef6}
+    .nav-group-list{display:none;position:absolute;top:42px;left:0;background:var(--card);border:1px solid var(--line);border-radius:12px;min-width:220px;box-shadow:var(--shadow);padding:8px}
+    .nav-group-list a{display:block;padding:8px 10px;border-radius:8px}
     .nav-group-list a:hover{background:rgba(255,255,255,.06)}
-    @media (max-width:860px){
-      .nav-group{width:100%}
-      .nav-group-list{position:relative;top:auto;right:auto;display:block;background:transparent;border:none;box-shadow:none;padding:4px 0}
-      .nav-group-btn{width:100%;text-align:left}
-    }
 
-    /* Hero */
-    .hero{position:relative;isolation:isolate;padding:46px 0 22px;border-bottom:1px solid rgba(255,255,255,.06);
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:12px 18px;border-radius:999px;border:1px solid transparent;font-weight:900;letter-spacing:.01em;transition:transform .15s,box-shadow .15s,background .15s,color .15s,border-color .15s}
+    .btn-primary{background:var(--brand);color:var(--brand-ink);box-shadow:0 10px 26px rgba(255,209,102,.25)}
+    .btn-primary:hover{transform:translateY(-1px) scale(1.02)}
+    .btn-ghost{background:transparent;color:#fff;border-color:#2a3440}
+    .btn-ghost:hover{border-color:#fff;box-shadow:0 6px 18px rgba(0,0,0,.22)}
+    .btn-outline{background:transparent;border-color:var(--brand);color:var(--brand)}
+    .btn-outline:hover{background:var(--brand);color:var(--brand-ink)}
+
+    /* Hero (Style A – prestige gold radial) */
+    .hero{padding:40px 0 24px;text-align:center;border-bottom:1px solid rgba(255,255,255,.06);
       background:
-        radial-gradient(900px 360px at 15% -10%, rgba(255,209,102,.10), transparent 60%),
-        linear-gradient(120deg,#0b0e12,#111722,#0b0e12);
+        radial-gradient(1200px 600px at 20% -20%, rgba(255,209,102,.10), transparent 60%),
+        linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0));
+      position:relative}
+    .section-kicker{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-weight:800;color:#dfe6ee}
+    .elite-label{display:inline-flex;gap:6px;align-items:center;background:linear-gradient(90deg,#2b1f08,#6e5210,#2b1f08);border:1px solid rgba(255,209,102,.45);color:#ffefb3;padding:4px 10px;border-radius:999px;font-weight:900;box-shadow:var(--ring)}
+    h1{margin:.55rem 0 .25rem;font-weight:700}
+    .subhead{max-width:70ch;margin:0 auto;color:#cfd6df}
+    .gold-edge{border:1px solid rgba(255,209,102,.55);border-radius:16px;box-shadow:var(--ring);background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.015))}
+
+    /* Subtle animated gold shimmer around hero image */
+    .shimmer{position:relative}
+    .shimmer::after{
+      content:""; position:absolute; inset:-2px; border-radius:16px; pointer-events:none;
+      background:conic-gradient(from 0deg, rgba(255,209,102,.0), rgba(255,209,102,.35), rgba(255,209,102,.0) 25%);
+      filter:blur(10px); opacity:.25; animation:spin 6s linear infinite;
     }
-    .hero-grid{display:grid;grid-template-columns:1.2fr .9fr;gap:24px;align-items:center}
-    @media (max-width:980px){.hero-grid{grid-template-columns:1fr;gap:18px}}
-    .eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);padding:6px 10px;border-radius:999px;font-weight:800}
-    .badge-lock{background:#101722;color:var(--brand);border:1px solid rgba(255,209,102,.35);padding:2px 8px;border-radius:6px;font-weight:900}
-    .hero h1{font-size:clamp(2rem,1.2rem + 2.6vw,3.2rem);margin:.5rem 0 .35rem}
-    .hero p.sub{color:#cfd6df;max-width:64ch}
-    .price-chip{display:inline-flex;align-items:center;gap:8px;background:#0c1117;border:1px solid rgba(255,209,102,.35);color:var(--brand);padding:6px 10px;border-radius:999px;font-weight:900}
-    .cap-line{color:var(--muted);font-size:.95rem}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    @media (prefers-reduced-motion:reduce){.shimmer::after{animation:none}}
 
-    /* Card + hover */
-    .elite-card{
-      background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
-      border:2px solid rgba(255,209,102,.35);
-      border-radius:16px;overflow:hidden;box-shadow:var(--shadow);transition:all .3s ease;
-    }
-    .elite-card:hover{transform:translateY(-2px) scale(1.005);box-shadow:0 24px 60px rgba(0,0,0,.45);border-color:rgba(255,209,102,.5)}
+    /* Section sweeps */
+    .section-sweep{height:4px;border:0;margin:34px 0;background:linear-gradient(90deg,transparent,rgba(255,209,102,.8),transparent);filter:drop-shadow(0 8px 18px rgba(255,209,102,.25))}
 
-    .elite-media{height:360px;background:#0a0f14;border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center}
-    .elite-media img{width:100%;height:100%;object-fit:cover}
-    .elite-body{padding:16px}
+    /* Feature chips */
+    .chip{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:8px 12px;font-weight:800}
+    .proof{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:10px}
 
-    /* Scarcity banner */
-    .scarcity-banner{display:inline-block;margin-top:10px;font-size:.85rem;font-weight:700;color:var(--accent);
-      padding:6px 10px;border:1px solid rgba(90,242,198,.3);border-radius:999px;background:rgba(90,242,198,.08);animation:pulse 2s infinite}
-    @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(90,242,198,.3)}70%{box-shadow:0 0 0 8px rgba(90,242,198,0)}100%{box-shadow:0 0 0 0 rgba(90,242,198,0)}}
-    @media (prefers-reduced-motion:reduce){.scarcity-banner{animation:none}}
-
-    /* Authority quote */
-    .authority-quote{border-left:4px solid var(--brand);padding-left:18px;margin:20px 0;font-style:italic;color:var(--muted)}
-    .authority-quote strong{display:block;margin-top:8px;font-style:normal;color:var(--text)}
-
-    /* Sections */
-    .section{padding:28px 0;border-top:1px solid rgba(255,255,255,.06)}
+    .section{padding:26px 0;border-top:1px solid rgba(255,255,255,.06)}
     .h2{font-size:clamp(1.4rem,1rem + 1.6vw,2rem);margin:0 0 10px}
-    .meta{color:var(--muted);font-size:.98rem}
+    .meta{color:var(--muted)}
 
     /* Feature grid */
     .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:12px}
-    .feature{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.10);border-radius:14px;padding:14px}
+    .feature{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
     .feature h3{margin:.2rem 0 .4rem;color:var(--accent)}
 
-    /* Proof row */
-    .proof{display:flex;flex-wrap:wrap;gap:12px}
-    .chip{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:8px 12px;font-weight:800}
+    /* Gold box */
+    .gold-edge-box{padding:16px;border:1px solid rgba(255,209,102,.45);border-radius:16px;box-shadow:var(--ring);background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.015))}
 
-    /* Apply box + buttons */
+    /* Apply */
     .apply{background:linear-gradient(180deg,rgba(90,242,198,.06),rgba(90,242,198,.03));border:1px solid rgba(90,242,198,.25);border-radius:16px;padding:16px}
-    .apply .row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:12px 18px;border-radius:999px;border:1px solid transparent;font-weight:900;transition:transform .2s ease, box-shadow .2s ease;}
-    .btn-primary{background:var(--brand);color:#0b0e12;box-shadow:0 10px 26px rgba(255,209,102,.38)}
-    .btn-primary:hover{transform:translateY(-1px) scale(1.01);box-shadow:0 14px 30px rgba(255,209,102,.5)}
-    .btn-ghost{background:transparent;color:#fff;border:1px solid #2a3440}
-    .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.06)}
-    .btn-dark{background:#0b0e12;color:#fff;border:1px solid #2a3440}
+    .apply .row{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:center}
 
-    /* FAQ */
-    details.faq{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.10);border-radius:12px;padding:10px 14px}
-    details.faq+details.faq{margin-top:10px}
-    details.faq summary{cursor:pointer;font-weight:800}
-
-    /* Closer */
-    .closer{background:radial-gradient(800px 320px at 15% -10%, rgba(255,209,102,.12), transparent 60%);padding:28px 0 42px}
-    .gold-edge{border:1px solid rgba(255,209,102,.45);border-radius:16px;box-shadow:var(--ring);background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.015))}
+    /* Footer */
+    .site-footer{border-top:1px solid var(--line);padding:18px 0;text-align:center;color:var(--muted)}
   </style>
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="/"><img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street"><strong>The Woof of Walk Street</strong></a>
-
-      <input id="nav-toggle" type="checkbox" hidden>
-      <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</label>
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="navbar container" role="navigation" aria-label="Main">
+      <a class="brand" href="/" aria-label="Go to home">
+        <img src="/images/brand/logo-lockup-gold.webp" width="48" height="48" alt="">
+        <strong>The Woof of Walk Street</strong>
+      </a>
 
       <nav class="nav-links" aria-label="Primary">
         <div class="nav-group" aria-expanded="false">
-          <a href="/services.html" class="nav-group-btn" aria-haspopup="true">Services ▾</a>
-          <div class="nav-group-list" role="menu" aria-label="Services menu">
-            <a role="menuitem" href="/dog-walking-south-melbourne.html">Dog Walking</a>
-            <a role="menuitem" href="/boarding-services.html">Boutique Boarding</a>
-            <a role="menuitem" href="/memberships.html">Memberships</a>
-          </div>
+          <button class="nav-group-btn" aria-haspopup="true" aria-controls="nav-services-list">Services ▾</button>
+          <ul class="nav-group-list" id="nav-services-list" role="menu" aria-label="Services menu">
+            <li><a role="menuitem" href="/dog-walking-south-melbourne.html">Dog Walking</a></li>
+            <li><a role="menuitem" href="/boarding-services.html">Boutique Boarding</a></li>
+            <li><a role="menuitem" href="/memberships.html">Memberships</a></li>
+          </ul>
         </div>
         <a href="/about.html">About</a>
         <a href="/testimonials.html">Testimonials</a>
         <a href="/contact.html">Contact</a>
-        <a class="btn btn-primary" href="/book-dog-walk/?coupon=WALK50">Book Walks</a>
       </nav>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <span class="eyebrow">Invitation-Only <span class="badge-lock">Client Cap Enforced</span></span>
-        <h1>Exclusive Luxury Concierge Dog Walking — Discretion &amp; Certainty</h1>
-        <p class="sub">
-          The most <strong>private, reliable, and white-glove dog care</strong> available in Melbourne's affluent suburbs.
-          This membership guarantees <strong>7-day coverage, guaranteed availability</strong>, and a dedicated,
-          <strong>one-to-one specialist</strong> committed to your dog’s calm and routine. This tier is not for everyone;
-          it is built for <strong>zero compromise</strong>.
+  <!-- Hero -->
+  <main>
+    <section class="hero">
+      <div class="container">
+        <span class="section-kicker"><span class="elite-label">ELITE • Invitation-Only</span> Client Cap Enforced</span>
+        <h1>Exclusive Concierge Dog Walking — Discretion & Certainty</h1>
+        <p class="subhead">
+          The only membership designed for <strong>zero compromise</strong>. <strong>Guaranteed 7-day walk coverage</strong>,
+          <strong>guaranteed monthly boarding availability</strong>, private onboarding, and a dedicated one-to-one specialist.
         </p>
-        <div class="sp-8" style="height:8px"></div>
-        <div class="price-chip">Membership: $5,000 / month</div>
-        <div class="scarcity-banner">⚠️ <strong>STRICT SCARCITY:</strong> Only 1 slot remains for Q1 2026.</div>
-        <p class="cap-line" style="margin-top:10px;">
-          We maintain a <strong>strict and enforced client cap</strong> to protect service quality.
-          We typically onboard <strong>1–2 Elite clients per quarter</strong>. Enrolment is subject to availability and a private suitability interview.
-        </p>
-        <div class="sp-12" style="height:12px"></div>
-        <div class="proof">
-          <span class="chip">📸 GPS &amp; Photo Proof (Every Session)</span>
-          <span class="chip">🛡️ Fully Insured &amp; Bonded</span>
-          <span class="chip">📍 Local, <strong>Private</strong> Routes Only</span>
-          <span class="chip">🔒 <strong>Absolute Confidentiality</strong> by Default</span>
-        </div>
-      </div>
 
-      <aside class="elite-card">
-        <div class="elite-media" aria-hidden="true">
-          <picture>
-            <source type="image/webp" srcset="/images/memberships/cards/elite_card_clean.webp">
-            <img src="/images/memberships/cards/elite_card_clean.png" alt="Elite Concierge Membership card with golden edges" loading="eager" width="900" height="600">
-          </picture>
+        <div class="proof">
+          <span class="chip">📸 GPS & Photo Proof (Every Session)</span>
+          <span class="chip">🛡️ Fully Insured & Police-Checked</span>
+          <span class="chip">🔒 Absolute Confidentiality</span>
         </div>
-        <div class="elite-body">
-          <ul style="list-style:none;padding:0;margin:0;color:#cfd6df">
-            <li style="margin:.4rem 0">• <strong>Guaranteed 7-day coverage</strong> with locked-in walk slots</li>
-            <li style="margin:.4rem 0">• <strong>Dedicated 1:1 specialist; zero substitutions</strong></li>
-            <li style="margin:.4rem 0">• <strong>Private, in-home onboarding</strong> &amp; access documentation</li>
-            <li style="margin:.4rem 0">• <strong>Concierge scheduling</strong> with <strong>priority changes</strong></li>
-            <li style="margin:.4rem 0">• <strong>Emergency Priority</strong> &amp; rapid response protocols</li>
-          </ul>
-          <div class="sp-12" style="height:12px"></div>
+
+        <div style="margin-top:18px">
           <a class="btn btn-primary" href="https://form.typeform.com/to/elite-apply" target="_blank" rel="noopener">Request Confidential Interview →</a>
         </div>
-      </aside>
-    </div>
-  </section>
 
-  <div class="container">
-    <div class="authority-quote">
-      "We designed the Elite tier not to be expensive, but to be <strong>absolutely indispensable</strong>.
-      If certainty, discretion, and reliability are your true currency, this is the only service that accepts it."
-      <strong>— James (Founder -The Woof of Walk Street)</strong>
-    </div>
-  </div>
+        <figure style="margin-top:22px;">
+          <picture class="shimmer">
+            <source type="image/webp" srcset="/images/memberships/cards/elite_card_clean.webp">
+            <img class="gold-edge" src="/images/memberships/cards/elite_card_clean.png" alt="Elite membership presentation card" width="1200" height="675" loading="eager" decoding="async" fetchpriority="high">
+          </picture>
+        </figure>
 
-  <section class="section">
-    <div class="container">
-      <h2 class="h2">The Executive Standard: Certainty, Discretion, and Zero Compromise</h2>
-      <p class="meta">The Elite Concierge tier is reserved for founders, executives, public figures, and high-profile families who demand absolute <strong>certainty</strong>, absolute <strong>discretion</strong>, and <strong>guaranteed availability</strong>—where the value of your time is non-negotiable.</p>
+        <p style="margin:.6rem auto 0;max-width:60ch;color:#a9f5df">
+          ⚠️ <strong>STRICT SCARCITY:</strong> 1 allocation remains for Q1 2026.
+        </p>
+      </div>
+    </section>
 
-      <p style="margin-top:16px;max-width:85ch;">
-        This tier exists because <strong>reliability matters more than price</strong>. We understand that for our clientele,
-        a single missed appointment or a scheduling conflict is an unacceptable disruption. Elite is designed to eliminate
-        this friction entirely, providing a <strong>predictable, calm, and private routine</strong> for your dog, managed by a
-        dedicated professional who operates with the utmost <strong>confidentiality and precision</strong>.
-      </p>
+    <hr class="section-sweep" aria-hidden="true">
 
-      <div class="features">
-        <div class="feature">
-          <h3>Guaranteed Availability</h3>
-          <p>Your required walk windows are <strong>locked in</strong>. Last-minute changes are immediately prioritised. Your demanding schedule rules — <strong>we accommodate, we do not inconvenience</strong>.</p>
-        </div>
-        <div class="feature">
-          <h3>Private 1:1 Care. Always.</h3>
-          <p>This is a <strong>one-dog-only</strong> service. No group walks. No car shuttles. Just <strong>predictable, low-arousal, private routes</strong> starting and ending at your residence.</p>
-        </div>
-        <div class="feature">
-          <h3>Meticulous Private Onboarding</h3>
-          <p>An <strong>in-home walkthrough</strong> to meticulously document preferences, health notes, access, and contingencies. All data is highly restricted and <strong>kept confidential</strong>.</p>
-        </div>
-        <div class="feature">
-          <h3>Concierge Responsiveness</h3>
-          <p>A <strong>direct, dedicated line</strong> to your specialist. Rapid confirmations, proactive updates, and zero administrative friction. We handle all logistics seamlessly.</p>
-        </div>
-        <div class="feature">
-          <h3>Absolute Proof of Service</h3>
-          <p>GPS route, time-stamped photos, and detailed notes are delivered immediately after each session — <strong>transparency by default</strong> for your peace of mind.</p>
-        </div>
-        <div class="feature">
-          <h3>Exclusivity: Client Cap Enforced</h3>
-          <p>We maintain a <strong>severe limit</strong> on Elite enrolments. This <strong>scarcity</strong> protects the quality of service for existing clients. If full, we maintain a <strong>private, prioritised waitlist</strong>.</p>
+    <!-- Positioning -->
+    <section class="section">
+      <div class="container">
+        <h2 class="h2">The Executive Standard: Certainty, Discretion, Zero Friction</h2>
+        <p class="meta" style="max-width:85ch">
+          Built for founders, executives and public figures who value <strong>time, privacy and predictability</strong>.
+          We remove calendar friction entirely and deliver a <strong>calm, private routine</strong> that simply happens.
+        </p>
+
+        <div class="features">
+          <div class="feature">
+            <h3>Guaranteed 7-Day Walk Coverage</h3>
+            <p>Your preferred windows are <strong>locked</strong>. We adapt to last-minute changes and protect your routine against conflicts.</p>
+          </div>
+          <div class="feature">
+            <h3>Guaranteed Boarding Availability</h3>
+            <p><strong>7 nights per month</strong> of boarding availability guaranteed at Woof Club. Peak seasons included — no waitlists, no compromises.</p>
+          </div>
+          <div class="feature">
+            <h3>Dedicated 1:1 Specialist</h3>
+            <p>No rotations. Your dog’s routine is delivered by the same trusted professional, with explicit owner-approved backups only.</p>
+          </div>
+          <div class="feature">
+            <h3>Private In-Home Onboarding</h3>
+            <p>Meticulous documentation of preferences, health, access and contingencies. Data access is strictly restricted.</p>
+          </div>
+          <div class="feature">
+            <h3>Concierge Scheduling</h3>
+            <p>Rapid confirmations, proactive updates and a direct line. We accommodate — we never inconvenience.</p>
+          </div>
+          <div class="feature">
+            <h3>Transparent Proof</h3>
+            <p>GPS route, time-stamped photos and notes after every session. <strong>Transparency by default</strong>.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="gold-edge" style="padding:16px">
-        <h2 class="h2">Absolute Discretion &amp; Private References</h2>
-        <p class="meta">We serve clients who value <strong>absolute privacy</strong>. Public testimonials are optional; the majority of our Elite clientele prefer <strong>private, vetted references only</strong>. Your identity, location, schedule, and routines are <strong>never used for marketing</strong>.</p>
-        <div style="background:#141a21;border:1px solid rgba(255,209,102,.2);padding:12px;border-radius:8px;margin-top:12px;font-weight:600;color:var(--text);">
-          <span style="color:var(--brand);margin-right:8px;">★</span> <strong>Private Reference Available:</strong> Access to a confidential list of Elite client references is available upon request during your private interview.
+    <!-- Discretion -->
+    <section class="section">
+      <div class="container">
+        <div class="gold-edge-box">
+          <h2 class="h2">Absolute Discretion & Private References</h2>
+          <p class="meta">Your identity, location and routine are never used for marketing. Public testimonials are optional; vetted private references are available during interview.</p>
+          <div style="background:#141a21;border:1px solid rgba(255,209,102,.2);padding:12px;border-radius:8px;margin-top:12px;font-weight:600">
+            ★ <strong>Private Reference Access:</strong> Provided upon request as part of the confidential review.
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section">
-    <div class="container apply">
-      <h2 class="h2">Selective Application for Exclusive Service</h2>
-      <p class="meta">We onboard selectively to protect the service quality and wellbeing of all dogs under our care. If accepted, membership begins immediately, or you may secure your month's slot for a future start date.</p>
-      <div class="row">
-        <a class="btn btn-primary" href="https://form.typeform.com/to/elite-apply" target="_blank" rel="noopener">Start Private Application →</a>
-        <a class="btn btn-dark" href="tel:+61370731175">Prefer a confidential discussion? Call (03) 7073 1175</a>
-        <a class="btn btn-ghost" href="/contact.html">Ask a quick, private question</a>
+    <!-- Boarding Guarantee -->
+    <section class="section" style="background:#0e141b;border-top:1px solid rgba(255,255,255,.06)">
+      <div class="container">
+        <h2 class="h2" style="color:var(--brand)">7-Night Boarding Availability — Guaranteed</h2>
+        <p class="meta" style="max-width:85ch">
+          Travel plans change. Your boarding allocation doesn’t. Elite members may book up to <strong>7 nights per month</strong>, including peak periods, with reasonable notice (typically 72 hours).
+        </p>
+        <div class="proof" style="margin-top:12px">
+          <span class="chip">📅 Guaranteed Allocation</span>
+          <span class="chip">🛡️ Peak Season Protection</span>
+          <span class="chip">🏠 Calm, Home-based Care</span>
+        </div>
       </div>
-      <p class="meta" style="margin-top:10px">Due to the client cap, if we are at capacity, we will offer a <strong>private, priority waitlist</strong> with a guaranteed callback the moment a slot is available.</p>
-    </div>
-  </section>
+    </section>
 
-  <section class="section">
-    <div class="container" style="max-width:880px">
-      <h2 class="h2">Elite Standards &amp; Protocols</h2>
-      <details class="faq"><summary>Is there an annual option or discount?</summary><p>No. Elite is <strong>$5,000/month</strong>. There are <strong>no discounts, no prepay incentives, and no negotiation</strong>—this ensures equitable value and preserves the exclusive positioning of the service.</p></details>
-      <details class="faq"><summary>Can I cancel?</summary><p>Yes. Membership is month-to-month with <strong>30 days’ notice</strong>. We rarely experience client loss because the value is the <strong>guaranteed certainty</strong> we provide.</p></details>
-      <details class="faq"><summary>Who will walk my dog?</summary><p>A <strong>dedicated 1:1 specialist</strong> who is meticulously trained on your dog’s specific routine and environment. We never rotate staff without your explicit approval.</p></details>
-      <details class="faq"><summary>What suburbs do you cover?</summary><p>We focus on the affluent suburbs of South Melbourne, Albert Park, Middle Park, Port Melbourne, Southbank, and South Yarra.</p></details>
-      <details class="faq"><summary>How private is the service?</summary><p>It is <strong>highly private</strong>. Your schedule, address, and routines are restricted to your specialist and the owner-operator. A <strong>Non-Disclosure Agreement (NDA) is available upon request</strong> at the time of your interview.</p></details>
-    </div>
-  </section>
-
-  <section class="closer">
-    <div class="container">
-      <div class="gold-edge" style="padding:18px">
-        <h2 class="h2">The Cost of Certainty: When Reliability Trumps All Other Factors</h2>
-        <p class="meta" style="color:#cfd6df;max-width:65ch">If your requirement is for <strong>absolute certainty, unshakeable privacy</strong>, and the calm assurance of a perfectly executed, predictable routine, the Elite Concierge tier is the only service designed to meet your standard. We <strong>strictly enforce our client cap</strong> to protect the quality and exclusivity of this service.</p>
-        <div class="sp-12" style="height:12px"></div>
-        <a class="btn btn-primary" href="https://form.typeform.com/to/elite-apply" target="_blank" rel="noopener">Start Formal Application &amp; Commitment Check →</a>
+    <!-- Apply -->
+    <section class="section">
+      <div class="container apply">
+        <h2 class="h2">Selective Application • Strict Client Cap</h2>
+        <p class="meta">We typically onboard <strong>1–2 Elite members per quarter</strong>. If accepted, your allocation can start immediately or be reserved for a future date.</p>
+        <div class="row" style="margin-top:8px">
+          <a class="btn btn-primary" href="https://form.typeform.com/to/elite-apply" target="_blank" rel="noopener">Start Private Application →</a>
+          <a class="btn btn-outline" href="tel:+61370731175">Prefer a confidential call? (03) 7073 1175</a>
+          <a class="btn btn-ghost" href="/contact.html">Ask a quick private question</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer class="site-footer" role="contentinfo" style="border-top:1px solid rgba(255,255,255,.06);padding:18px 0;text-align:center;color:#a9b4c0">
+    <!-- FAQs -->
+    <section class="section">
+      <div class="container" style="max-width:880px">
+        <h2 class="h2">Elite Standards & Protocols</h2>
+        <details class="feature"><summary><strong>Is there an annual discount?</strong></summary><p>No. Elite is <strong>A$5,000/month</strong>. No discounts or negotiation — preserving equity and exclusivity.</p></details>
+        <details class="feature"><summary><strong>Can I cancel?</strong></summary><p>Yes — month-to-month with <strong>30 days’ notice</strong>. Most clients retain due to the certainty we provide.</p></details>
+        <details class="feature"><summary><strong>Who walks my dog?</strong></summary><p>A <strong>dedicated 1:1 specialist</strong> trained to your exact routine. Substitutions occur only with your explicit approval.</p></details>
+        <details class="feature"><summary><strong>Which suburbs?</strong></summary><p>South Melbourne, Albert Park, Middle Park, Port Melbourne, Southbank and South Yarra.</p></details>
+        <details class="feature"><summary><strong>How private is it?</strong></summary><p>Highly private by default. NDA available on request during your interview.</p></details>
+        <details class="feature"><summary><strong>Boarding guarantee details?</strong></summary><p>Up to <strong>7 nights/month</strong> at Woof Club with reasonable notice (typically 72h). This is an allocation guarantee, separate from general availability.</p></details>
+      </div>
+    </section>
+
+    <!-- Closer -->
+    <section class="section">
+      <div class="container">
+        <div class="gold-edge-box">
+          <h2 class="h2">When Reliability Is Priceless</h2>
+          <p class="meta" style="max-width:65ch">If your standard is <strong>certainty, privacy, and precision</strong> — for both walks and boarding — Elite is the only tier designed around your reality. We enforce the client cap to protect service quality.</p>
+          <div style="margin-top:10px">
+            <a class="btn btn-primary" href="https://form.typeform.com/to/elite-apply" target="_blank" rel="noopener">Request Confidential Interview →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
     © <span id="year"></span> The Woof of Walk Street · South Melbourne, VIC
   </footer>
   <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 
   <script>
+    // Simple services dropdown toggle
     (function(){
-      // Mobile services dropdown
       const group=document.querySelector('.nav-group');
       const btn=document.querySelector('.nav-group-btn');
-      if(group && btn){
-        btn.addEventListener('click',e=>{
-          if(window.innerWidth<861){ e.preventDefault();
-            const open=group.getAttribute('aria-expanded')==='true';
-            group.setAttribute('aria-expanded',!open);
-            btn.setAttribute('aria-expanded',!open);
-          }
-        });
-      }
+      document.addEventListener('click',(e)=>{
+        if(!group||!btn) return;
+        if(btn.contains(e.target)){ group.setAttribute('aria-expanded', group.getAttribute('aria-expanded')!=='true'); return; }
+        if(!group.contains(e.target)) group.setAttribute('aria-expanded','false');
+      });
     })();
   </script>
 
-  <!-- Product schema -->
+  <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"Product",
-    "name":"Exclusive Luxury Dog Walking Concierge Membership",
+    "name":"Elite Concierge Dog Walking Membership",
     "brand":{"@type":"Brand","name":"The Woof of Walk Street"},
-    "description":"Invitation-only luxury concierge membership with 7-day guaranteed coverage, absolute privacy, and one-to-one specialist care for high-net-worth clients.",
+    "description":"Invitation-only concierge membership with 7-day guaranteed walk coverage, guaranteed monthly boarding availability, private onboarding and absolute discretion.",
+    "image":"https://www.woofofwalkstreet.com/images/memberships/cards/elite_card_clean.webp",
     "url":"https://www.woofofwalkstreet.com/membership-elite.html",
-    "offers":{
-      "@type":"Offer",
-      "price":"5000",
-      "priceCurrency":"AUD",
-      "availability":"https://schema.org/InStock"
-    },
+    "offers":{"@type":"Offer","price":"5000","priceCurrency":"AUD","availability":"https://schema.org/InStock"},
     "areaServed":["South Melbourne","Albert Park","Middle Park","Port Melbourne","Southbank","South Yarra"]
   }
   </script>

@@ -1,4 +1,582 @@
-<!DOCTYPE html>
+<!<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <!-- Google Tag Manager (container: GTM-T3HRTM2T) -->
+  <script>
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[]; w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl; f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T3HRTM2T');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Theme boot (no-FOUC) -->
+  <script>
+    (function () {
+      const KEY='wow-theme'; const pref=localStorage.getItem(KEY)||'auto';
+      const mql=window.matchMedia('(prefers-color-scheme: dark)');
+      const isDark=()=>pref==='dark'||(pref==='auto'&&mql.matches);
+      document.documentElement.setAttribute('data-theme',pref);
+      document.documentElement.style.colorScheme=isDark()?'dark':'light';
+      mql.addEventListener?.('change',()=>{ if((localStorage.getItem(KEY)||'auto')==='auto'){ document.documentElement.style.colorScheme=mql.matches?'dark':'light'; }});
+    })();
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <title>Ethical Dog Walker South Melbourne — Solo Walks, Safety Checklist, Hiring Guide</title>
+  <meta name="description" content="Hire a safe, ethical dog walker in South Melbourne, Albert Park & Port Melbourne. One-dog-only walks, proof (GPS/photos), insurance & police checks, transport & hygiene policy, pricing clarity and the 30-second checklist."/>
+  <link rel="canonical" href="https://www.woofofwalkstreet.com/blog/ethical-dog-walker.html"/>
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="icon" href="/images/brand/favicon.ico"/>
+
+  <!-- Social / Open Graph -->
+  <meta property="og:type" content="article"/>
+  <meta property="og:title" content="Ethical Dog Walker South Melbourne — Solo Walks, Safety & Hiring Guide"/>
+  <meta property="og:description" content="Calm, safety-first dog walking: solo walks vs pack ratios, proof of service, insurance & police checks, transport & weather policies, and the questions to ask."/>
+  <meta property="og:url" content="https://www.woofofwalkstreet.com/blog/ethical-dog-walker.html"/>
+  <meta property="og:image" content="https://www.woofofwalkstreet.com/images/blog/blog-ethical-dog-walker-1200.webp"/>
+  <meta property="og:locale" content="en_AU"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+
+  <!-- Preload hero -->
+  <link
+    rel="preload" as="image"
+    href="/images/blog/blog-ethical-dog-walker-1200.webp"
+    imagesrcset="/images/blog/blog-ethical-dog-walker-800.webp 800w, /images/blog/blog-ethical-dog-walker-1200.webp 1200w, /images/blog/blog-ethical-dog-walker-1600.webp 1600w"
+    imagesizes="(max-width: 640px) 100vw, (max-width: 1200px) 92vw, 1100px"
+  >
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {"@type":"BreadcrumbList","itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
+        {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.woofofwalkstreet.com/blog/index.html"},
+        {"@type":"ListItem","position":3,"name":"Ethical Dog Walker South Melbourne","item":"https://www.woofofwalkstreet.com/blog/ethical-dog-walker.html"}
+      ]},
+      {"@type":"BlogPosting",
+       "headline":"How to Choose an Ethical Dog Walker in South Melbourne — Solo Walks & Safety Checklist",
+       "description":"A practical hiring checklist for calm, safe dog walking in South Melbourne — solo walking benefits, proof (GPS/photos/notes), insurance & police checks, transport & hygiene, pricing clarity and essential interview questions.",
+       "image":"https://www.woofofwalkstreet.com/images/blog/blog-ethical-dog-walker-1200.webp",
+       "datePublished":"2025-10-08",
+       "dateModified":"2025-12-02",
+       "author":{"@type":"Organization","name":"The Woof of Walk Street"},
+       "publisher":{"@type":"Organization","name":"The Woof of Walk Street","logo":{"@type":"ImageObject","url":"https://www.woofofwalkstreet.com/images/brand/logo-lockup-gold.webp","width":600,"height":60}},
+       "mainEntityOfPage":{"@type":"WebPage","@id":"https://www.woofofwalkstreet.com/blog/ethical-dog-walker.html"}
+      }
+    ]
+  }
+  </script>
+
+  <!-- Analytics (kept + GA4 site id) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KP5LVKN6X3"></script>
+  <script>
+    window.dataLayer=window.dataLayer||[];
+    function gtag(){dataLayer.push(arguments);} 
+    gtag('js', new Date());
+    gtag('config','G-KP5LVKN6X3');
+    gtag('config','AW-17527927259');
+  </script>
+
+  <style>
+    :root{
+      --bg:#0b0e12; --card:#0f1318; --text:#e8eef5; --muted:#a9b4c0; --line:#1e2630;
+      --brand:#ffd166; --brand-ink:#0b0e12; --accent:#5af2c6;
+      --sale-bg: linear-gradient(135deg, #FF512F 0%, #DD2476 100%);
+      --sale-text: #fff; --shadow:0 16px 48px rgba(0,0,0,.32);
+      --ring:0 0 0 2px rgba(255,209,102,.22), 0 16px 40px rgba(255,209,102,.08);
+      --header-blur: saturate(120%) blur(10px); --header-bg: rgba(11,14,18,.78);
+      --menu-solid: #0e141b; --container: 1100px; --radius-lg: 16px; --speed:.22s;
+      --font-heading: 'Space Grotesk', system-ui, sans-serif; --font-body: 'Work Sans', system-ui, sans-serif;
+    }
+    html,body{background:var(--bg);color:var(--text);overflow-x:hidden;scroll-behavior:smooth}
+    img{max-width:100%;height:auto} a{color:inherit}
+    .container{max-width:var(--container);margin:0 auto;padding:0 16px}
+    body, p, li, span, button, input, textarea { font-family: var(--font-body); letter-spacing: .1px; line-height: 1.58; }
+    h1,h2,h3,h4,h5,h6, nav a, .nav-group-btn{ font-family: var(--font-heading); letter-spacing: .25px; }
+    h1{font-weight:800} h2{font-weight:800} .meta{color:var(--muted)}
+
+    /* Promo ribbon */
+    .promo-ribbon{position:relative;z-index:1100;background:var(--sale-bg);color:#fff;border-bottom:1px solid rgba(255,255,255,.1);font-weight:700;text-align:center;padding:8px}
+    .promo-code{background:rgba(0,0,0,.3);padding:2px 6px;border-radius:4px;font-family:monospace}
+
+    /* Top contact strip */
+    .top-contact-strip{background:var(--line);padding:8px 0;font-size:.9rem;border-bottom:1px solid rgba(255,255,255,.05)}
+    .contact-inner{max-width:var(--container);margin:0 auto;padding:0 16px;display:flex;justify-content:flex-end;align-items:center;gap:20px}
+    .contact-inner a{color:var(--brand);text-decoration:none;font-weight:700;display:inline-flex;align-items:center;gap:6px}
+    .contact-inner a:hover{text-decoration:underline}
+    @media (max-width:600px){.contact-inner{justify-content:center;gap:12px}.contact-inner a:first-child{display:none}}
+
+    /* Header + nav (index style) */
+    .site-header{position:sticky;top:0;z-index:1000;background:var(--header-bg);backdrop-filter:var(--header-blur);-webkit-backdrop-filter:var(--header-blur);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none;font-weight:900}
+    .brand img{width:48px;height:48px}
+    .nav-links{display:flex;align-items:center;gap:16px}
+    .nav-links a{padding:8px 6px;text-decoration:none;color:#fff;opacity:.9}
+    .nav-links a:hover{opacity:1}
+    .nav-group{position:relative}
+    .nav-group-btn{background:transparent;border:1px solid #2a3440;color:#fff;border-radius:999px;padding:8px 12px;font-weight:800;cursor:pointer}
+    .nav-group-btn:hover{border-color:#fff}
+    .nav-group-list{position:absolute;right:0;top:calc(100% + 8px);min-width:260px;background:var(--menu-solid);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:8px 6px;box-shadow:var(--shadow);display:none;z-index:2000}
+    .nav-group[aria-expanded="true"] .nav-group-list{display:block}
+    .nav-group-list a{display:block;padding:10px 12px;border-radius:10px;color:#e9eef6}
+    .nav-group-list a:hover{background:rgba(255,255,255,.06)}
+    @media (min-width:861px){.nav-group:hover .nav-group-list,.nav-group:focus-within .nav-group-list{display:block}}
+    .nav-toggle{display:none} .nav-scrim{display:none}
+    @media (max-width:860px){
+      .nav-toggle{display:block;cursor:pointer}
+      .nav-links{position:fixed;inset:0 0 auto auto;width:min(320px,85vw);height:100vh;background:var(--menu-solid);padding:70px 16px 20px;flex-direction:column;gap:10px;transform:translateX(100%);transition:transform .25s}
+      #nav-toggle:checked ~ .nav-links{transform:translateX(0)}
+      .nav-scrim{display:block;position:fixed;inset:0;background:rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:opacity .25s}
+      #nav-toggle:checked ~ .nav-scrim{opacity:1;pointer-events:auto}
+      .nav-group{width:100%}
+      .nav-group-list{position:relative;top:auto;right:auto;display:block;background:var(--menu-solid);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:6px;box-shadow:none;margin-top:8px}
+      .nav-group-btn{width:100%;text-align:left}
+    }
+
+    .cta-buttons{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:12px 18px;border-radius:999px;border:1px solid transparent;text-decoration:none;font-weight:800;letter-spacing:.02em;transition:all var(--speed)}
+    .btn-primary{background:var(--brand);color:var(--brand-ink);box-shadow:0 10px 26px rgba(255,209,102,.25)}
+    .btn-sale{background:var(--sale-bg);color:#fff;border:none;box-shadow:0 10px 25px rgba(221,36,118,.4)}
+    .btn-sale:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(221,36,118,.6)}
+    .btn-ghost{background:transparent;color:#fff;border:1px solid #2a3440}
+    .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.05)}
+    .btn-inline{border-radius:10px;border:1px solid #2a3440;background:rgba(255,255,255,.04);color:#fff}
+
+    /* Hero */
+    .hero{padding:28px 0 18px;background:radial-gradient(1200px 600px at 20% -20%,rgba(255,209,102,.08),transparent 60%),linear-gradient(120deg,#111824,#1b2433,#111824);border-bottom:1px solid rgba(255,255,255,.06)}
+    .hero h1{font-size:clamp(2rem,1.5rem + 2.5vw,3.2rem);margin:.25rem 0 .5rem;line-height:1.1}
+    .hero .subhead{max-width:72ch;color:#cfd6df;font-size:1.1rem;margin:0 auto}
+
+    /* Content */
+    .post-hero img{max-width:1100px;border-radius:14px;display:block;margin:12px auto;box-shadow:0 14px 34px rgba(0,0,0,.18)}
+    .lede{max-width:72ch;color:#cfd6df}
+    .content{max-width:980px;margin:0 auto;padding:0 16px 88px}
+    .content h2{margin:1.2rem 0 .6rem}
+    .content h3{margin:1rem 0 .35rem}
+    .grid{display:grid;gap:14px}
+    @media(min-width:780px){.grid{grid-template-columns:1fr 1fr}}
+    .card{border:1px solid var(--line);border-radius:12px;padding:14px;background:rgba(255,255,255,.03)}
+    .callout{border:2px solid var(--brand);border-radius:14px;background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));padding:16px;box-shadow:var(--ring)}
+    .tip{background:#fff8e6;color:#111;border:1px solid #ffe0a6;padding:12px;border-radius:10px}
+    .checklist{list-style:none;padding-left:0}
+    .checklist li{position:relative;padding-left:28px;margin:.5rem 0}
+    .checklist li::before{content:"✔";position:absolute;left:0;top:0;color:#10b981;font-weight:900}
+    .pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:.14rem .6rem;font-size:.84rem;margin:0 .35rem .35rem 0}
+    .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:.6rem}
+
+    /* Table */
+    table.compare{width:100%;border-collapse:separate;border-spacing:0;margin:.8rem 0;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+    table.compare th,table.compare td{padding:12px 14px;vertical-align:top}
+    table.compare thead th{background:#1a2230;font-weight:900}
+    table.compare tbody tr:nth-child(odd){background:#121a24}
+
+    /* Footer */
+    .site-footer{padding-top:40px;border-top:1px solid var(--line);margin-top:60px}
+    .footer-grid{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap;padding-bottom:40px}
+    .footer-brand{max-width:300px}
+    .footer-col{flex-basis:150px}
+    .footlist{list-style:none;padding:0;margin:0}
+    .footlist a{text-decoration:none;color:#a9b4c0;transition:color var(--speed)}
+    .footlist a:hover{color:var(--brand)}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.05);padding:15px 0;text-align:center;font-size:.85rem;color:#a9b4c0}
+
+    /* Sticky mobile CTA */
+    .sticky-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:999;background:#ffffffee;border:1px solid #d1d5db;box-shadow:0 10px 24px rgba(0,0,0,.24);border-radius:16px;display:flex;gap:10px;justify-content:center;align-items:center;padding:10px}
+    .sticky-cta .btn{border-radius:999px}
+    @media(min-width:860px){.sticky-cta{display:none}}
+  </style>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T3HRTM2T" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Promo: SAME COPY AS INDEX (50% walks + 20% boarding) -->
+  <div class="promo-ribbon">
+    <div class="container">
+      🎉 End of Year Sale: <strong>50% OFF</strong> Walks (Code: <span class="promo-code">WALK50</span>) + <strong>20% OFF</strong> Boarding (Code: <span class="promo-code">BOARDING20</span>). Ends 31/12!
+    </div>
+  </div>
+
+  <!-- Top contact strip (same as index) -->
+  <div class="top-contact-strip">
+    <div class="contact-inner">
+      <a href="tel:+61370731175" onclick="gtag && gtag('event','call_click',{label:'top_header'});">📞 (03) 7073 1175</a>
+      <a href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031912" target="_blank" rel="noopener" onclick="gtag && gtag('event','chat_click',{label:'top_header'});">💬 Book a 10-min Chat →</a>
+    </div>
+  </div>
+
+  <!-- Header (unified with index) -->
+  <header class="site-header" role="banner">
+    <div class="navbar container" role="navigation" aria-label="Main">
+      <a class="brand" href="/" aria-label="Go to home">
+        <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="48" height="48">
+        <strong>The Woof of Walk Street</strong>
+      </a>
+
+      <input id="nav-toggle" type="checkbox" hidden>
+      <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</label>
+
+      <nav class="nav-links" aria-label="Primary">
+        <div class="nav-group" aria-expanded="false">
+          <button type="button" class="nav-group-btn" aria-haspopup="true" aria-expanded="false" aria-controls="nav-services">Services ▾</button>
+          <ul id="nav-services" class="nav-group-list" role="menu" aria-label="Services">
+            <li><a role="menuitem" href="/dog-walking-south-melbourne.html">Dog Walking</a></li>
+            <li><a role="menuitem" href="/boarding-services.html">Boutique Boarding</a></li>
+            <li><a role="menuitem" href="/memberships.html">Memberships</a></li>
+          </ul>
+        </div>
+        <a href="/about.html">About</a>
+        <a href="/testimonials.html">Testimonials</a>
+        <a href="/blog.html" aria-current="page">Blog</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/search.html">Search</a>
+        <a class="btn btn-primary nav-cta" href="/book-dog-walk/?coupon=WALK50">Book Walks</a>
+      </nav>
+      <div class="nav-scrim" aria-hidden="true"></div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container" style="text-align:center">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="/">Home</a> › <a href="/blog/index.html">Blog</a> › Ethical Dog Walker</nav>
+      <h1>Ethical Dog Walker South Melbourne — Solo Walks, Safety Checklist, Proof & Pricing</h1>
+      <p class="subhead lede">Hiring a <strong>dog walker in South Melbourne</strong> shouldn’t feel like guesswork. Use this calm, safety-first guide to choose an <strong>ethical dog walker</strong>: we cover <strong>one-dog-only</strong> ratios, GPS/photo proof, insurance & police checks, transport & hygiene policies, pricing clarity and the exact interview questions to ask.</p>
+      <div class="post-hero">
+        <picture>
+          <source srcset="/images/blog/blog-ethical-dog-walker-1600.webp 1600w, /images/blog/blog-ethical-dog-walker-1200.webp 1200w, /images/blog/blog-ethical-dog-walker-800.webp 800w" type="image/webp">
+          <img src="/images/blog/blog-ethical-dog-walker-1200.webp"
+               alt="Calm handler and dog crossing a quiet South Melbourne street on a loose lead"
+               width="1200" height="750" loading="eager" decoding="async" fetchpriority="high">
+        </picture>
+      </div>
+      <p class="meta"><strong>Keywords:</strong> Ethical Dog Walker • Solo Dog Walks • South Melbourne • Albert Park • Port Melbourne • Dog Safety Checklist • Force‑Free Handling</p>
+    </div>
+  </section>
+
+  <main class="content" id="content" role="main">
+    <!-- On-page index CTA row (index style) -->
+    <section class="card" aria-label="On this page">
+      <strong>On this page:</strong>
+      <div class="cta-row">
+        <a class="btn btn-inline" href="#quick">30‑second Checklist</a>
+        <a class="btn btn-inline" href="#philosophy">Handling Philosophy</a>
+        <a class="btn btn-inline" href="#ratios">Ratios & Safety</a>
+        <a class="btn btn-inline" href="#proof">Proof & Transparency</a>
+        <a class="btn btn-inline" href="#transport">Transport & Hygiene</a>
+        <a class="btn btn-inline" href="#price">Pricing Clarity</a>
+        <a class="btn btn-inline" href="#questions">Interview Questions</a>
+        <a class="btn btn-inline" href="#references">References & Standards</a>
+        <a class="btn btn-inline" href="#postcode">Postcode Coverage</a>
+        <a class="btn btn-inline" href="#whyus">Why Choose Us</a>
+      </div>
+    </section>
+
+    <section id="quick" class="card">
+      <h2>Ethical Dog Walker Hiring Checklist (30 Seconds)</h2>
+      <p>When trusting someone with your dog’s safety in busy inner‑Melbourne, you need confidence, not convenience. If a walker hesitates on any point below, keep looking.</p>
+      <ul class="checklist">
+        <li><strong>One‑dog‑only walks</strong> (or a clearly stated max ratio, ideally never beyond 1:2 for matched housemates).</li>
+        <li><strong>GPS tracking + photo updates</strong> after every walk via a professional client portal.</li>
+        <li><strong>Force‑free, consent‑based handling</strong> — no prong/choke/e‑collars; no forced greetings.</li>
+        <li><strong>Public Liability Insurance + Police Check</strong> and written emergency protocols.</li>
+        <li><strong>Hygienic gear</strong> and minimal‑stress <strong>transport policy</strong> (walks start near home).</li>
+        <li><strong>Transparent pricing & cancellation terms</strong> — all fees published and easy to compare.</li>
+      </ul>
+      <p class="cta-row">
+        <a class="btn btn-primary" href="/dog-walking-south-melbourne.html">See Our Solo Walks in South Melbourne</a>
+        <a class="btn btn-ghost" href="/memberships.html">Compare Memberships</a>
+      </p>
+    </section>
+
+    <section id="philosophy">
+      <h2>Handling Philosophy for Ethical Dog Walkers: Calm First, Consent Always</h2>
+      <p>An ethical dog walker prioritises your dog’s emotional and physical safety. We embrace <strong>force‑free, positive reinforcement</strong> techniques so each walk reduces arousal and builds trust over time — not instant compliance through fear.</p>
+      <h3>Positive, Force‑Free Methods (No Aversives)</h3>
+      <ul>
+        <li><strong>Food Reinforcement</strong> to pay for loose‑lead walking, check‑ins and calm settles.</li>
+        <li><strong>Choice & Distance</strong> so dogs can disengage from triggers; we create space proactively.</li>
+        <li><strong>Calm Repetition</strong> on predictable neighbourhood routes to cement safety and routine.</li>
+      </ul>
+      <p><em>Never used:</em> choke chains, prong collars, electronic collars, leash pops, physical corrections or forced interactions with unfamiliar dogs/people.</p>
+      <div class="tip"><strong>Tip:</strong> Ask any walker to explain their methods. If you hear “balanced training”, “dominance theory” or “corrections”, those aren’t aligned with modern welfare‑first standards.</div>
+    </section>
+
+    <section id="ratios" class="grid">
+      <article class="card">
+        <h2>Why Dog‑to‑Walker Ratios Matter (And Why We’re One‑Dog‑Only)</h2>
+        <p>High ratios multiply risk: leash tangles, crowding, resource guarding, and a sharp rise in arousal. With <strong>one‑dog‑only</strong> walks we remove those risks and tailor pace, distance and exposure for your dog — not the group.</p>
+        <ul>
+          <li><strong>Predictable Pace:</strong> your dog walks at their speed — no pulling to match others.</li>
+          <li><strong>Cleaner Training Reps:</strong> every moment can be a calm skill repetition.</li>
+          <li><strong>Safer Handling:</strong> one leash = full attention on body language and environment.</li>
+        </ul>
+        <p>Curious? Read <a href="/blog/solo-vs-pack-walks.html">Solo vs Pack Walks — What’s Better for a Calm Dog?</a></p>
+      </article>
+      <aside class="card">
+        <h3>Minimum Safety & Ethical Standards (Quick Audit)</h3>
+        <ul class="checklist">
+          <li>Public <strong>ratio policy</strong> (with housemate‑only exceptions explained).</li>
+          <li>Written <strong>incident & emergency escalation</strong> process.</li>
+          <li>Clear rules for pairing housemates (size/age/temperament compatibility).</li>
+        </ul>
+        <p class="pill">One‑dog‑only</p><p class="pill">GPS + Photos</p><p class="pill">Consent‑based</p>
+      </aside>
+    </section>
+
+    <section id="proof">
+      <h2>Proof & Transparency: Accountability After Every Walk</h2>
+      <p>In 2025, transparency is non‑negotiable. A professional service should provide <strong>GPS + photos + notes</strong> through a client portal. It’s more than courtesy — it’s proof of due diligence.</p>
+      <table class="compare" aria-describedby="proof-caption">
+        <caption id="proof-caption" class="visually-hidden">Transparency features to request from a walker</caption>
+        <thead><tr><th scope="col">Ask For</th><th scope="col">Why It Matters</th></tr></thead>
+        <tbody>
+          <tr><td><strong>GPS‑tracked route</strong></td><td>Confirms time on lead and suitable locations.</td></tr>
+          <tr><td><strong>Photo update</strong></td><td>Shows relaxed body language and weather‑sensible handling.</td></tr>
+          <tr><td><strong>Detailed notes</strong></td><td>Toileting, exposures (e.g., “2 dogs at 10m”), wins/concerns.</td></tr>
+          <tr><td><strong>Coverage & availability page</strong></td><td>Sets expectations for zones (e.g., <strong>South Melbourne 3205</strong>) and times.</td></tr>
+        </tbody>
+      </table>
+      <p>We send a full report every time via our client portal. See <a href="/dog-walking-south-melbourne.html">how our solo walks work</a>.</p>
+    </section>
+
+    <section id="transport" class="grid">
+      <div class="card">
+        <h2>Transport, Hygiene & Weather Policies for Ethical Dog Walking</h2>
+        <ul class="checklist">
+          <li><strong>No crowded shuttles:</strong> walks start near home in South/Port/Albert Park to minimise car time.</li>
+          <li><strong>Clean gear:</strong> leads/harnesses sanitised between dogs; walker carries poop bags and water bowl.</li>
+          <li><strong>Weather‑sensible:</strong> shorter, sniff‑heavier routes on hot days; shade and cool surfaces; enrichment visits during storms.
+          </li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Insurance, Police Check & Home Security — Non‑Negotiables</h2>
+        <ul class="checklist">
+          <li><strong>Current Public Liability Insurance</strong> — request the certificate.</li>
+          <li><strong>Verified Police Check</strong> for anyone handling keys and entering your home.</li>
+          <li><strong>Secure key handling</strong> — coded tags; no address labels; safe storage.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="price" class="card">
+      <h2>Transparent Pricing Beats Too‑Cheap Rates (Here’s Why)</h2>
+      <p>Ethical dog walking is skilled professional work. Very low pricing often signals compromises: <strong>higher pack ratios</strong>, limited proof of service or inexperienced handlers. Look for clearly published rates and fair cancellation terms.</p>
+      <p>We publish <a href="/memberships.html">membership pricing</a> and also offer <a href="/casual-dog-walking-south-melbourne.html">casual solo walks</a> for flexibility.</p>
+      <div class="cta-row">
+        <a class="btn btn-ghost" href="/membership-starter.html">Starter — 4 walks/month</a>
+        <a class="btn btn-ghost" href="/membership-growth.html">Growth — 10 walks/month</a>
+        <a class="btn btn-primary" href="/unlimited-dog-walks.html">Unlimited — Weekdays</a>
+      </div>
+    </section>
+
+    <section id="questions">
+      <h2>The 7 Essential Questions to Ask Any Dog Walker (With Answers You Want)</h2>
+      <ol>
+        <li><strong>How many dogs per walker?</strong> <em>Best:</em> one‑dog‑only or a firm 1:2 for matched housemates.</li>
+        <li><strong>What handling methods do you use?</strong> <em>Best:</em> positive, force‑free, consent‑based; space creation and distance management.</li>
+        <li><strong>Do you provide GPS + photos + notes each walk?</strong> <em>Best:</em> yes — every single time via a client portal.</li>
+        <li><strong>Where do you walk?</strong> <em>Best:</em> near home on predictable, low‑stimulus routes (e.g., Middle Park/Albert Park surrounds).</li>
+        <li><strong>What’s your emergency plan?</strong> <em>Best:</em> notify owner → go to owner’s preferred vet → continuous updates.</li>
+        <li><strong>How do you manage heat, rain and wind?</strong> <em>Best:</em> adjust duration, seek shade/cool ground, provide in‑home enrichment options on extremes.</li>
+        <li><strong>Are you insured and police‑checked?</strong> <em>Best:</em> yes — proof available promptly.</li>
+      </ol>
+      <p class="callout">Want to see how this looks in practice? <a href="/dog-walking-south-melbourne.html">Our solo walking service</a> shows routes, proof and scheduling.</p>
+    </section>
+
+    <hr/>
+
+    <section id="references" aria-label="References and Professional Standards">
+      <h2>References & Professional Standards for Ethical, Force‑Free Dog Walking</h2>
+      <ul>
+        <li><strong>LIMA Principle</strong> (Least Intrusive, Minimally Aversive) in handling and training decisions.</li>
+        <li><strong>Canine body language</strong> literacy — watching for lip‑licking, whale eye, stress panting, shake‑offs.</li>
+        <li><strong>Professional service standards</strong> — public liability insurance, police checks and client reporting.
+        </li>
+        <li><strong>Local etiquette</strong> — considerate use of public spaces across South Melbourne/Port/Albert/Middle Park & Southbank.
+        </li>
+      </ul>
+      <p>Choosing an ethical walker means putting your dog’s psychological welfare ahead of convenience — and it pays off at home in calmer behaviour.</p>
+    </section>
+
+    <hr/>
+
+    <section id="postcode" class="card">
+      <h2>Postcode Coverage — Quick Check (Inner Melbourne)</h2>
+      <p>We’re based in South Melbourne and regularly walk in Albert Park, Middle Park, Port Melbourne and Southbank. Check your postcode below:</p>
+      <form class="pc-form" id="pc-form" action="/service-areas.html" method="get" role="search" aria-label="Postcode coverage checker">
+        <label for="pc-input" class="visually-hidden">Enter your postcode</label>
+        <input id="pc-input" name="postcode" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="e.g., 3205" aria-describedby="pc-help" />
+        <button type="submit" class="btn btn-primary">Check coverage</button>
+        <small id="pc-help">We currently service 3205, 3206, 3207 and 3006.</small>
+      </form>
+      <div class="pc-result" id="pc-result" aria-live="polite"></div>
+      <script>
+        (function(){
+          const form=document.getElementById('pc-form');
+          const input=document.getElementById('pc-input');
+          const result=document.getElementById('pc-result');
+          const supported=new Set(['3205','3206','3207','3006']);
+          form.addEventListener('submit',(e)=>{
+            e.preventDefault();
+            if(!input.value) return;
+            const pc=input.value.replace(/\D/g,'').slice(0,4);
+            if(!pc) return;
+            result.textContent = supported.has(pc)
+              ? `Yes — we walk in ${pc}. You can book right now.`
+              : `We don’t regularly service ${pc} yet. Message us — we may still help.`;
+            input.value='';
+          });
+        })();
+      </script>
+    </section>
+
+    <section id="whyus" class="card">
+      <h2>Why South Melbourne Families Choose The Woof of Walk Street</h2>
+      <ul class="checklist">
+        <li><strong>One‑dog‑only walks</strong> — calmer, safer, tailored sessions.</li>
+        <li><strong>GPS + photo + notes</strong> after every walk.</li>
+        <li><strong>Positive, consent‑based handling</strong> — no aversives, ever.</li>
+        <li><strong>Neighbourhood routes</strong> — less car time, more calm steps.</li>
+        <li><strong>Membership rhythm</strong> — progress you can feel at home.</li>
+        <li><strong>10% profits donated</strong> to local rescue partners.</li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/dog-walking-south-melbourne.html">See Solo Walking</a>
+        <a class="btn btn-ghost" href="/memberships.html">Compare Memberships</a>
+        <a class="btn btn-ghost" href="/book-dog-walk/?coupon=WALK50">Book Walks — 50% Off</a>
+      </div>
+    </section>
+
+    <hr/>
+
+    <section id="related" aria-label="Related reading">
+      <h2>Related Reading</h2>
+      <ul>
+        <li><a href="/blog/why-solo-walks.html">Why Solo Walks Reduce Stress</a></li>
+        <li><a href="/blog/solo-vs-pack-walks.html">Solo vs Pack Walks — What’s Better?</a></li>
+        <li><a href="/blog/best-dog-walks-south-melbourne.html">Best Dog‑Friendly Spots in South Melbourne</a></li>
+        <li><a href="/blog/weekend-woof-club-checklist.html">Weekend Woof Club: First‑Timer Checklist</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Impact ribbon (same as index) -->
+  <div class="impact-ribbon" role="note" aria-label="Walks that do more: 10% donated">
+    <div class="impact-inner">
+      <span class="impact-emoji" aria-hidden="true">💛</span>
+      <strong>Walks That Do More:</strong> We donate <strong>10% of profits</strong> to local rescue shelters.
+      <a class="impact-cta" href="/community.html">See our impact →</a>
+    </div>
+  </div>
+
+  <!-- Sticky mobile CTA (same copy and coupons as index) -->
+  <div class="sticky-cta" role="region" aria-label="Quick booking">
+    <a class="btn btn-sale" href="/book-dog-walk/?coupon=WALK50">Claim 50% Off Walk</a>
+    <a class="btn" style="border:1px solid #2a3440;color:#111;background:#fff" href="/book-boarding/?coupon=BOARDING20">Book 20% Off Boarding</a>
+  </div>
+
+  <!-- Footer (unified with index) -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <section class="footer-brand">
+        <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="60" height="60" loading="lazy">
+        <p><strong>The Woof of Walk Street</strong><br><a class="footer-map" href="#" style="color:var(--muted)">South Melbourne, VIC</a></p>
+        <p class="cta-buttons"><a class="btn btn-primary" href="/book-dog-walk/?coupon=WALK50">Book Walks</a></p>
+      </section>
+
+      <nav class="footer-col" aria-label="Services">
+        <h3>Services</h3>
+        <ul class="footlist">
+          <li><a href="/services.html">All Services</a></li>
+          <li><a href="/dog-walking-south-melbourne.html">Dog Walking</a></li>
+          <li><a href="/boarding-services.html">Boutique Boarding</a></li>
+          <li><a href="/memberships.html">Memberships</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-label="Areas">
+        <h3>Areas Served</h3>
+        <ul class="footlist">
+          <li><a href="/dog-walking-south-melbourne.html">South Melbourne</a></li>
+          <li><a href="/dog-walker-albert-park.html">Albert Park</a></li>
+          <li><a href="/dog-walker-middle-park.html">Middle Park</a></li>
+          <li><a href="/dog-walker-port-melbourne.html">Port Melbourne</a></li>
+          <li><a href="/dog-walker-southbank.html">Southbank</a></li>
+          <li><a href="/dog-walker-south-yarra.html">South Yarra</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-label="Info & Legal">
+        <h3>Info & Legal</h3>
+        <ul class="footlist">
+          <li><a href="/faqs.html">FAQs</a></li>
+          <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="/terms-and-conditions.html">Full Terms & Conditions</a></li>
+          <li><a href="/mini-terms.html">Mini Terms</a></li>
+          <li><a href="/community.html">Community Impact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="container footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
+    <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+  </footer>
+
+  <script>
+    // Dropdown accessibility & behavior (index parity)
+    (function(){
+      const navGroup = document.querySelector('.nav-group');
+      const btn = document.querySelector('.nav-group-btn');
+      const list = document.getElementById('nav-services');
+      if(!navGroup || !btn || !list) return;
+      btn.addEventListener('click', (e)=>{
+        e.preventDefault();
+        const open = navGroup.getAttribute('aria-expanded') === 'true';
+        navGroup.setAttribute('aria-expanded', String(!open));
+        btn.setAttribute('aria-expanded', String(!open));
+      });
+      document.addEventListener('click', (e)=>{
+        if(!navGroup.contains(e.target)) {
+          navGroup.setAttribute('aria-expanded','false');
+          btn.setAttribute('aria-expanded','false');
+        }
+      });
+      document.addEventListener('keydown', (e)=>{
+        if(e.key === 'Escape'){
+          navGroup.setAttribute('aria-expanded','false');
+          btn.setAttribute('aria-expanded','false');
+          btn.focus();
+        }
+      });
+      let lastIsMobile = window.innerWidth <= 860;
+      window.addEventListener('resize', ()=>{
+        const isMobile = window.innerWidth <= 860;
+        if(isMobile !== lastIsMobile){
+          navGroup.setAttribute('aria-expanded','false');
+          btn.setAttribute('aria-expanded','false');
+          lastIsMobile = isMobile;
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
+DOCTYPE html>
 <html lang="en-AU">
 <head>
   <meta charset="utf-8"/>

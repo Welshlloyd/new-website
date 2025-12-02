@@ -2,7 +2,35 @@
 <html lang="en-AU">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Google Tag Manager (container: GTM-T3HRTM2T) -->
+  <script>
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[];
+      w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T3HRTM2T');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Theme boot (no-FOUC) -->
+  <script>
+    (function () {
+      const KEY='wow-theme'; const pref=localStorage.getItem(KEY)||'auto';
+      const mql=window.matchMedia('(prefers-color-scheme: dark)');
+      const isDark=()=>pref==='dark'||(pref==='auto'&&mql.matches);
+      document.documentElement.setAttribute('data-theme',pref);
+      document.documentElement.style.colorScheme=isDark()?'dark':'light';
+      mql.addEventListener?.('change',()=>{ if((localStorage.getItem(KEY)||'auto')==='auto'){ document.documentElement.style.colorScheme=mql.matches?'dark':'light'; }});
+    })();
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <title>Best Dog Walks in South Yarra — Fawkner Park, Como Park & Yarra River Paths</title>
   <meta name="description" content="Low-arousal, repeatable dog walks in South Yarra: Fawkner Park loops, Como Park edges and Yarra River paths. Route ideas, distance tips and calm routines." />
@@ -19,12 +47,6 @@
   <meta property="article:section" content="Guides" />
   <meta property="og:locale" content="en_AU" />
   <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Fonts / CSS -->
-  <link rel="stylesheet" href="/css/mini.css" />
-  <link rel="stylesheet" href="/css/mini.dark.css" />
-  <link rel="stylesheet" href="/css/mini.light.css" />
-  <link rel="stylesheet" href="/css/styles.css" />
 
   <!-- Preload hero -->
   <link rel="preload" as="image" href="/images/blog/hero-best-dog-walks-south-yarra.webp" />
@@ -55,101 +77,305 @@
     ]
   }
   </script>
+
+  <!-- Analytics (kept) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KP5LVKN6X3"></script>
+  <script>
+    window.dataLayer=window.dataLayer||[];
+    function gtag(){dataLayer.push(arguments);} 
+    gtag('js', new Date());
+    gtag('config','G-KP5LVKN6X3');
+    gtag('config','AW-17527927259');
+  </script>
+
+  <style>
+    :root{
+      --bg:#0b0e12; --card:#0f1318; --text:#e8eef5; --muted:#a9b4c0; --line:#1e2630;
+      --brand:#ffd166; --brand-ink:#0b0e12; --accent:#5af2c6;
+      --sale-bg: linear-gradient(135deg, #FF512F 0%, #DD2476 100%);
+      --sale-text: #fff;
+      --shadow:0 16px 48px rgba(0,0,0,.32);
+      --ring:0 0 0 2px rgba(255,209,102,.22), 0 16px 40px rgba(255,209,102,.08);
+      --header-blur: saturate(120%) blur(10px);
+      --header-bg: rgba(11,14,18,.78);
+      --menu-solid: #0e141b;
+      --container: 1100px; --radius-lg: 16px; --speed: .22s;
+      --font-heading: 'Space Grotesk', system-ui, sans-serif;
+      --font-body: 'Work Sans', system-ui, sans-serif;
+    }
+    html,body{background:var(--bg);color:var(--text);overflow-x:hidden;scroll-behavior:smooth}
+    img{max-width:100%;height:auto} a{color:inherit}
+    .container{max-width:var(--container);margin:0 auto;padding:0 16px}
+    body, p, li, span, button, input, textarea { font-family: var(--font-body); letter-spacing: .1px; line-height: 1.58; }
+    h1,h2,h3,h4,h5,h6, nav a, .nav-group-btn{ font-family: var(--font-heading); letter-spacing: .25px; }
+    h1{font-weight:700} h2{font-weight:700} .meta{color:var(--muted)}
+
+    /* Promo ribbon */
+    .promo-ribbon{position:relative;z-index:1100;background:var(--sale-bg);color:#fff;border-bottom:1px solid rgba(255,255,255,.1);font-weight:700;text-align:center;padding:8px}
+    .promo-code{background:rgba(0,0,0,.3);padding:2px 6px;border-radius:4px;font-family:monospace}
+
+    /* Top contact strip */
+    .top-contact-strip{background:var(--line);padding:8px 0;font-size:.9rem;border-bottom:1px solid rgba(255,255,255,.05)}
+    .contact-inner{max-width:var(--container);margin:0 auto;padding:0 16px;display:flex;justify-content:flex-end;align-items:center;gap:20px}
+    .contact-inner a{color:var(--brand);text-decoration:none;font-weight:700;display:inline-flex;align-items:center;gap:6px}
+    .contact-inner a:hover{text-decoration:underline}
+    @media (max-width:600px){.contact-inner{justify-content:center;gap:12px}.contact-inner a:first-child{display:none}}
+
+    /* Header + nav */
+    .site-header{position:sticky;top:0;z-index:1000;background:var(--header-bg);backdrop-filter:var(--header-blur);-webkit-backdrop-filter:var(--header-blur);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none;font-weight:900}
+    .brand img{width:48px;height:48px}
+
+    .nav-links{display:flex;align-items:center;gap:16px}
+    .nav-links a{padding:8px 6px;text-decoration:none;color:#fff;opacity:.9}
+    .nav-links a:hover{opacity:1}
+
+    .nav-group{position:relative}
+    .nav-group-btn{background:transparent;border:1px solid #2a3440;color:#fff;border-radius:999px;padding:8px 12px;font-weight:800;cursor:pointer}
+    .nav-group-btn:hover{border-color:#fff}
+    .nav-group-list{position:absolute; right:0; top:calc(100% + 8px);min-width:260px;background:var(--menu-solid);border:1px solid rgba(255,255,255,.16);border-radius:12px; padding:8px 6px;box-shadow:var(--shadow);display:none;z-index:2000;pointer-events:auto}
+    .nav-group[aria-expanded="true"] .nav-group-list{display:block}
+    .nav-group-list a{display:block;padding:10px 12px;border-radius:10px;color:#e9eef6}
+    .nav-group-list a:hover{background:rgba(255,255,255,.06)}
+
+    @media (min-width:861px){
+      .nav-group:hover .nav-group-list,
+      .nav-group:focus-within .nav-group-list{display:block}
+    }
+
+    .nav-toggle{display:none} .nav-scrim{display:none}
+    @media (max-width:860px){
+      .nav-toggle{display:block;cursor:pointer}
+      .nav-links{position:fixed;inset:0 0 auto auto;width:min(320px,85vw);height:100vh;background:var(--menu-solid);padding:70px 16px 20px;flex-direction:column;gap:10px;transform:translateX(100%);transition:transform .25s}
+      #nav-toggle:checked ~ .nav-links{transform:translateX(0)}
+      .nav-scrim{display:block;position:fixed;inset:0;background:rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:opacity .25s}
+      #nav-toggle:checked ~ .nav-scrim{opacity:1;pointer-events:auto}
+      .nav-group{width:100%}
+      .nav-group-list{position:relative; top:auto; right:auto; display:block;background:var(--menu-solid);border:1px solid rgba(255,255,255,.12);border-radius:12px; padding:6px; box-shadow:none; margin-top:8px}
+      .nav-group-btn{width:100%; text-align:left}
+    }
+
+    .cta-buttons{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:12px 18px;border-radius:999px;border:1px solid transparent;text-decoration:none;font-weight:800;letter-spacing:.02em;transition:all var(--speed)}
+    .btn-primary{background:var(--brand);color:var(--brand-ink);box-shadow:0 10px 26px rgba(255,209,102,.25)}
+    .btn-sale{background:var(--sale-bg);color:#fff;border:none;box-shadow:0 10px 25px rgba(221,36,118,.4)}
+    .btn-sale:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(221,36,118,.6)}
+    .btn-ghost{background:transparent;color:#fff;border:1px solid #2a3440}
+    .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.05)}
+
+    /* Hero strip specific to article */
+    .hero{padding:28px 0 18px;background:radial-gradient(1200px 600px at 20% -20%,rgba(255,209,102,.08),transparent 60%),linear-gradient(120deg,#111824,#1b2433,#111824);border-bottom:1px solid rgba(255,255,255,.06)}
+    .hero h1{font-size:clamp(2rem,1.5rem + 2.5vw,3rem);margin:.25rem 0 .5rem;line-height:1.1}
+    .subhead{max-width:70ch;color:#cfd6df;font-size:1.1rem}
+
+    /* Footer */
+    .site-footer{padding-top:40px;border-top:1px solid var(--line);margin-top:60px}
+    .footer-grid{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap;padding-bottom:40px}
+    .footer-brand{max-width:300px}
+    .footer-col{flex-basis:150px}
+    .footlist{list-style:none;padding:0;margin:0}
+    .footlist a{text-decoration:none;color:var(--muted);transition:color var(--speed)}
+    .footlist a:hover{color:var(--brand)}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.05);padding:15px 0;text-align:center;font-size:.85rem;color:var(--muted)}
+
+    /* Sticky mobile CTA */
+    .sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:999;background:rgba(11,14,18,.9);backdrop-filter:var(--header-blur);display:none;justify-content:space-around;padding:10px 16px;box-shadow:0 -8px 20px rgba(0,0,0,.4)}
+    .sticky-cta .btn{flex-grow:1;margin:0 4px;padding:12px 10px;font-size:.9rem}
+    @media (max-width:768px){.sticky-cta{display:flex}.site-header{position:static}.page-top{padding-bottom:70px}}
+  </style>
 </head>
+
 <body>
-  <!-- Promo -->
-  <div id="promo" class="promo-ribbon" role="region" aria-label="Promo">
-    <div class="promo-inner container">
-      <img class="promo-dog" src="/images/brand/dog-in-suit.webp" alt="" width="28" height="28" />
-      <span class="promo-copy"><strong>50% OFF</strong> Unlimited Weekday Walks — solo 45-min walks · GPS · Photos</span>
-      <a class="promo-cta" href="/unlimited-dog-walks.html">See Unlimited →</a>
-      <button id="promo-close" class="promo-close" aria-label="Dismiss promo">✕</button>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T3HRTM2T" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Promo: SAME COPY AS INDEX (50% walks + 20% boarding) -->
+  <div class="promo-ribbon">
+    <div class="container">
+      🎉 End of Year Sale: <strong>50% OFF</strong> Walks (Code: <span class="promo-code">WALK50</span>) + <strong>20% OFF</strong> Boarding (Code: <span class="promo-code">BOARDING20</span>). Ends 31/12!
     </div>
   </div>
 
-  <!-- Impact -->
-  <div class="impact-ribbon">
-    <div class="impact-inner">
-      <span class="impact-emoji" aria-hidden="true">💛</span>
-      <strong>Walks That Do More:</strong> We donate <strong>10% of profits</strong> to local rescue.
-      <a class="impact-cta" href="/community.html">See our impact →</a>
+  <!-- Top contact strip (same as index) -->
+  <div class="top-contact-strip">
+    <div class="contact-inner">
+      <a href="tel:+61370731175" onclick="gtag && gtag('event','call_click',{label:'top_header'});">📞 (03) 7073 1175</a>
+      <a href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031912" target="_blank" rel="noopener" onclick="gtag && gtag('event','chat_click',{label:'top_header'});">💬 Book a 10-min Chat →</a>
     </div>
   </div>
 
-  <!-- Header -->
-  <header class="site-header"><div class="navbar container">
-    <a class="brand" href="/"><img src="/images/brand/logo-lockup-gold.webp" alt="" width="56" height="56"><strong>The Woof of Walk Street</strong></a>
-    <input id="nav-toggle" type="checkbox" hidden><label for="nav-toggle" class="nav-toggle">☰</label>
-    <nav class="nav-links">
-      <a href="/services.html">Services</a>
-      <a href="/service-areas.html">Areas</a>
-      <a href="/memberships.html">Memberships</a>
-      <a href="/unlimited-dog-walks.html">Unlimited</a>
-      <a href="/contact.html">Contact</a>
-      <a href="/blog/index.html" aria-current="page">Blog</a>
-      <a class="btn button-primary nav-cta" href="/book-dog-walk/">Book Walks</a>
-    </nav>
-  </div></header>
+  <!-- Header copied from index -->
+  <header class="site-header" role="banner">
+    <div class="navbar container" role="navigation" aria-label="Main">
+      <a class="brand" href="/" aria-label="Go to home">
+        <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="48" height="48">
+        <strong>The Woof of Walk Street</strong>
+      </a>
 
-  <main>
+      <input id="nav-toggle" type="checkbox" hidden>
+      <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</label>
+
+      <nav class="nav-links" aria-label="Primary">
+        <div class="nav-group" aria-expanded="false">
+          <button type="button" class="nav-group-btn" aria-haspopup="true" aria-expanded="false" aria-controls="nav-services">Services ▾</button>
+          <ul id="nav-services" class="nav-group-list" role="menu" aria-label="Services">
+            <li><a role="menuitem" href="/dog-walking-south-melbourne.html">Dog Walking</a></li>
+            <li><a role="menuitem" href="/boarding-services.html">Boutique Boarding</a></li>
+            <li><a role="menuitem" href="/memberships.html">Memberships</a></li>
+          </ul>
+        </div>
+        <a href="/about.html">About</a>
+        <a href="/testimonials.html">Testimonials</a>
+        <a href="/blog.html" aria-current="page">Blog</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/search.html">Search</a>
+        <a class="btn btn-primary nav-cta" href="/book-dog-walk/?coupon=WALK50">Book Walks</a>
+      </nav>
+      <div class="nav-scrim" aria-hidden="true"></div>
+    </div>
+  </header>
+
+  <main class="page-top">
     <section class="hero">
       <div class="container">
-        <nav class="breadcrumbs"><a href="/">Home</a> › <a href="/blog/index.html">Blog</a> › Best Dog Walks in South Yarra</nav>
+        <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="/">Home</a> › <a href="/blog.html">Blog</a> › South Yarra</nav>
         <h1>Best Dog Walks in South Yarra — Low-Arousal, Repeatable Routes</h1>
-        <p class="subhead">Use predictable loops with clear sight-lines to keep arousal low and skills sharp. Here are our favourite options.</p>
+        <p class="subhead">Use predictable loops with clear sight-lines to keep arousal low and skills sharp. Here are our favourite options near Fawkner Park, Como Park and the Yarra River paths.</p>
         <img src="/images/blog/hero-best-dog-walks-south-yarra.webp" alt="Yarra River path near South Yarra" width="1200" height="800" style="max-width:920px;border-radius:12px;display:block;margin:0 auto" loading="eager" decoding="async" />
       </div>
     </section>
 
-    <section><div class="container">
-      <h2 id="fawkner-park">Fawkner Park Loop (Edges First)</h2>
-      <p>Start on the outer edges for wider space and fewer crossings. Do one or two rectangles depending on pace, then finish with a short decompression sniff on a quiet verge.</p>
-      <ul class="list-check">
-        <li>Why it’s great: broad sight-lines, easy distance control</li>
-        <li>Time/Distance: ~20–45 mins depending on cut-throughs</li>
-        <li>Pair with: <a href="/blog/dog-friendly-cafes-south-yarra.html">dog-friendly cafés nearby</a></li>
-      </ul>
+    <section>
+      <div class="container">
+        <h2 id="fawkner-park">Fawkner Park Loop (Edges First)</h2>
+        <p>Start on the outer edges for wider space and fewer crossings. Do one or two rectangles depending on pace, then finish with a short decompression sniff on a quiet verge.</p>
+        <ul class="list-check">
+          <li>Why it’s great: broad sight-lines, easy distance control</li>
+          <li>Time/Distance: ~20–45 mins depending on cut-throughs</li>
+          <li>Pair with: <a href="/blog/dog-friendly-cafes-south-yarra.html">dog-friendly cafés nearby</a></li>
+        </ul>
 
-      <h2 id="como-park">Como Park Edges (Avoid the Middle)</h2>
-      <p>Skirt the oval edge paths for clearer exits and predictable rhythm. Keep to one side if sports are on to maintain distance and focus.</p>
-      <ul class="list-check">
-        <li>Why it’s great: space to create distance and practice loose-lead</li>
-        <li>Time/Distance: stack 10–15 minute laps to taste</li>
-        <li>Link: <a href="/dog-walker-south-yarra.html">Dog Walker South Yarra</a></li>
-      </ul>
+        <h2 id="como-park">Como Park Edges (Avoid the Middle)</h2>
+        <p>Skirt the oval edge paths for clearer exits and predictable rhythm. Keep to one side if sports are on to maintain distance and focus.</p>
+        <ul class="list-check">
+          <li>Why it’s great: space to create distance and practice loose-lead</li>
+          <li>Time/Distance: stack 10–15 minute laps to taste</li>
+          <li>Link: <a href="/dog-walker-south-yarra.html">Dog Walker South Yarra</a></li>
+        </ul>
 
-      <h2 id="yarra-river">Yarra River Out-and-Back (Alexandra Ave side)</h2>
-      <p>Pick a direction and repeat the same out-and-back. Predictability lowers decision-load for sensitive pups.</p>
-      <ul class="list-check">
-        <li>Why it’s great: linear route = fewer surprises</li>
-        <li>Tip: go off-peak and avoid pinch points</li>
-        <li>Pair with: <a href="/blog/dog-friendly-cafes-south-yarra.html">river-adjacent cafés</a></li>
-      </ul>
+        <h2 id="yarra-river">Yarra River Out-and-Back (Alexandra Ave side)</h2>
+        <p>Pick a direction and repeat the same out-and-back. Predictability lowers decision-load for sensitive pups.</p>
+        <ul class="list-check">
+          <li>Why it’s great: linear route = fewer surprises</li>
+          <li>Tip: go off-peak and avoid pinch points</li>
+          <li>Pair with: <a href="/blog/dog-friendly-cafes-south-yarra.html">river-adjacent cafés</a></li>
+        </ul>
 
-      <h2>Apartment-Friendly Backstreet Loops</h2>
-      <p>Build a block loop you can repeat daily. Keep it the same for a week so your dog “predicts” what’s next, then adjust slightly.</p>
-      <ul class="list-check">
-        <li>Why it’s great: routine builds calm</li>
-        <li>Tip: use quiet streets parallel to Chapel/Toorak Rd</li>
-      </ul>
+        <h2>Apartment-Friendly Backstreet Loops</h2>
+        <p>Build a block loop you can repeat daily. Keep it the same for a week so your dog “predicts” what’s next, then adjust slightly.</p>
+        <ul class="list-check">
+          <li>Why it’s great: routine builds calm</li>
+          <li>Tip: use quiet streets parallel to Chapel/Toorak Rd</li>
+        </ul>
 
-      <div class="cta-buttons" style="margin-top:10px">
-        <a class="btn button-primary" href="/book-dog-walk/">Book a South Yarra Walk</a>
-        <a class="btn button-secondary" href="/unlimited-dog-walks.html">Try Unlimited — 50% Off</a>
+        <div class="cta-buttons" style="margin-top:10px">
+          <a class="btn btn-primary" href="/book-dog-walk/?coupon=WALK50">Book a South Yarra Walk</a>
+          <a class="btn btn-ghost" href="/book-boarding/?coupon=BOARDING20">Boarding — 20% Off</a>
+        </div>
+
+        <p class="meta" style="margin-top:.8rem">Also see: <a href="/dog-walker-south-yarra.html">South Yarra area page</a>, <a href="/blog/why-solo-walks.html">Why Solo Walks</a>, <a href="/blog/ethical-dog-walker.html">The Ethical Dog Walker</a>.</p>
       </div>
-
-      <p class="meta" style="margin-top:.8rem">Also see: <a href="/dog-walker-south-yarra.html">South Yarra area page</a>, <a href="/blog/why-solo-walks.html">Why Solo Walks</a>, <a href="/blog/ethical-dog-walker.html">The Ethical Dog Walker</a>.</p>
-    </div></section>
+    </section>
   </main>
 
-  <footer class="site-footer">
+  <!-- Impact ribbon (same as index) -->
+  <div class="impact-ribbon" role="note" aria-label="Walks that do more: 10% donated">
+    <div class="impact-inner">
+      <span class="impact-emoji" aria-hidden="true">💛</span>
+      <strong>Walks That Do More:</strong> We donate <strong>10% of profits</strong> to local rescue shelters.
+      <a class="impact-cta" href="/community.html">See our impact →</a>
+    </div>
+  </div>
+
+  <!-- Sticky mobile CTA (same copy and coupons as index) -->
+  <div class="sticky-cta" role="region" aria-label="Quick booking">
+    <a class="btn btn-sale" href="/book-dog-walk/?coupon=WALK50">Claim 50% Off Walk</a>
+    <a class="btn btn-ghost" href="/book-boarding/?coupon=BOARDING20">Book 20% Off Boarding</a>
+  </div>
+
+  <!-- Footer copied from index -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <section class="footer-brand">
+        <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="60" height="60" loading="lazy">
+        <p><strong>The Woof of Walk Street</strong><br><a class="footer-map" href="#" style="color:var(--muted)">South Melbourne, VIC</a></p>
+        <p class="cta-buttons"><a class="btn btn-primary" href="/book-dog-walk/?coupon=WALK50">Book Walks</a></p>
+      </section>
+
+      <nav class="footer-col" aria-label="Services">
+        <h3>Services</h3>
+        <ul class="footlist">
+          <li><a href="/services.html">All Services</a></li>
+          <li><a href="/dog-walking-south-melbourne.html">Dog Walking</a></li>
+          <li><a href="/boarding-services.html">Boutique Boarding</a></li>
+          <li><a href="/memberships.html">Memberships</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-label="Areas">
+        <h3>Areas Served</h3>
+        <ul class="footlist">
+          <li><a href="/dog-walking-south-melbourne.html">South Melbourne</a></li>
+          <li><a href="/dog-walker-albert-park.html">Albert Park</a></li>
+          <li><a href="/dog-walker-middle-park.html">Middle Park</a></li>
+          <li><a href="/dog-walker-port-melbourne.html">Port Melbourne</a></li>
+          <li><a href="/dog-walker-southbank.html">Southbank</a></li>
+          <li><a href="/dog-walker-south-yarra.html">South Yarra</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-label="Info & Legal">
+        <h3>Info & Legal</h3>
+        <ul class="footlist">
+          <li><a href="/faqs.html">FAQs</a></li>
+          <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="/terms-and-conditions.html">Full Terms & Conditions</a></li>
+          <li><a href="/mini-terms.html">Mini Terms</a></li>
+          <li><a href="/community.html">Community Impact</a></li>
+        </ul>
+      </nav>
+    </div>
+
     <div class="container footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
     <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
   </footer>
 
   <script>
-    document.getElementById('promo-close')?.addEventListener('click',()=>{document.getElementById('promo').style.display='none';sessionStorage.setItem('promoDismissed','1')});
-    if(sessionStorage.getItem('promoDismissed')==='1'){document.getElementById('promo').style.display='none'}
+    (function(){
+      // Reveal on scroll
+      const reveals=document.querySelectorAll('[data-reveal]');
+      const obs=new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{ if(e.isIntersecting){ e.target.style.opacity=1; e.target.style.transform='translateY(0)'; obs.unobserve(e.target);} });
+      },{threshold:0.1});
+      reveals.forEach(r=>{ r.style.opacity=0; r.style.transform='translateY(20px)'; r.style.transition='opacity .6s ease, transform .6s ease'; obs.observe(r); });
+
+      // Dropdown accessibility from index
+      const navGroup = document.querySelector('.nav-group');
+      const btn = document.querySelector('.nav-group-btn');
+      const list = document.getElementById('nav-services');
+      if(navGroup && btn && list){
+        btn.addEventListener('click',(e)=>{ e.preventDefault(); const open=navGroup.getAttribute('aria-expanded')==='true'; navGroup.setAttribute('aria-expanded', String(!open)); btn.setAttribute('aria-expanded', String(!open)); });
+        document.addEventListener('click',(e)=>{ if(!navGroup.contains(e.target)){ navGroup.setAttribute('aria-expanded','false'); btn.setAttribute('aria-expanded','false'); }});
+        document.addEventListener('keydown',(e)=>{ if(e.key==='Escape'){ navGroup.setAttribute('aria-expanded','false'); btn.setAttribute('aria-expanded','false'); btn.focus(); }});
+        let lastIsMobile = window.innerWidth <= 860;
+        window.addEventListener('resize', ()=>{ const isMobile = window.innerWidth <= 860; if(isMobile !== lastIsMobile){ navGroup.setAttribute('aria-expanded','false'); btn.setAttribute('aria-expanded','false'); lastIsMobile = isMobile; } });
+      }
+    })();
   </script>
 </body>
 </html>

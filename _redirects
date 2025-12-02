@@ -1,11 +1,13 @@
-# CRITICAL FIX: Redirect old South Melbourne Hub to the new generic Hub
+# =======================================
+# CRITICAL FIX: Old South Melbourne hub → new generic Hub
+# =======================================
 /dog-walking-south-melbourne.html       /dog-walker.html                                    301
 /dog-walking-south-melbourne            /dog-walker.html                                    301
 /dog-walking-south-melbourne/           /dog-walker.html                                    301
 
-# ================================
+# =======================================
 # Canonical: HTTPS + www
-# ================================
+# =======================================
 http://woofofwalkstreet.com/            https://www.woofofwalkstreet.com/                   301
 https://woofofwalkstreet.com/*          https://www.woofofwalkstreet.com/:splat             301
 
@@ -13,8 +15,9 @@ https://woofofwalkstreet.com/*          https://www.woofofwalkstreet.com/:splat 
 /book-boarding                          /book-boarding.html                                 301
 /book-boarding/                         /book-boarding.html                                 301
 
-# ================================
+# =======================================
 # MAIN DOG WALKING LANDING (new canonical)
+# =======================================
 /dog-walking-services.html              /dog-walker.html                                    301
 /dog-walking-services                   /dog-walker.html                                    301
 /dog-walking-services/                  /dog-walker.html                                    301
@@ -22,10 +25,9 @@ https://woofofwalkstreet.com/*          https://www.woofofwalkstreet.com/:splat 
 /dog-walking                            /dog-walker.html                                    301
 /dog-walking/                           /dog-walker.html                                    301
 
-# ================================
-# Key fixes
-# ================================
-# (Updated) All booking intents → new booking bridge
+# =======================================
+# Booking intents → booking bridge
+# =======================================
 /book                                   /book-dog-walk/                                     301
 /book-now                               /book-dog-walk/                                     301
 /book-now.html                          /book-dog-walk/                                     301
@@ -33,22 +35,19 @@ https://woofofwalkstreet.com/*          https://www.woofofwalkstreet.com/:splat 
 /booking.html                           /book-dog-walk/                                     301
 /bookings                               /book-dog-walk/                                     301
 /bookings.html                          /book-dog-walk/                                     301
-# Wildcard fallbacks (catch any subpaths)
 /booking/*                              /book-dog-walk/                                     301
 /bookings/*                             /book-dog-walk/                                     301
 
 /blog                                   /blog/                                              301
 /blog/index                             /blog/                                              301
+/blog.html                              /blog/                                              301   # NEW
 
-# ================================
-# Canonical pages (explicit .html targets)
-# Put these BEFORE trailing-slash rules to avoid loops
-# ================================
-# Existing canonicalisation
+# =======================================
+# Canonical pages (.html targets) — keep BEFORE trailing-slash rules
+# =======================================
 /dog-walking-south-melbourne            /dog-walking-south-melbourne.html                   301
 /dog-walking-south-melbourne/           /dog-walking-south-melbourne.html                   301
 
-# NEW: unify extensionless hits to .html canonicals (fixes 404s & consolidates signals)
 # Unlimited membership
 /unlimited-dog-walks                    /unlimited-dog-walks.html                           301
 /unlimited-dog-walks/                   /unlimited-dog-walks.html                           301
@@ -57,7 +56,7 @@ https://woofofwalkstreet.com/*          https://www.woofofwalkstreet.com/:splat 
 /memberships                            /memberships.html                                   301
 /memberships/                           /memberships.html                                   301
 
-# Boarding services (7 days)
+# Boarding services
 /boarding-services                      /boarding-services.html                              301
 /boarding-services/                     /boarding-services.html                              301
 
@@ -65,9 +64,9 @@ https://woofofwalkstreet.com/*          https://www.woofofwalkstreet.com/:splat 
 /casual-dog-walking-south-melbourne     /casual-dog-walking-south-melbourne.html            301
 /casual-dog-walking-south-melbourne/    /casual-dog-walking-south-melbourne.html            301
 
-# ================================
-# Service-area pages (FIXED SLUGS: 'dog-walker-' to match canonicals)
-# ================================
+# =======================================
+# Service-area pages (slug fixes to 'dog-walker-')
+# =======================================
 # Albert Park
 /dog-walking-albert-park                /dog-walker-albert-park.html                        301
 /dog-walking-albert-park/               /dog-walker-albert-park.html                        301
@@ -86,9 +85,21 @@ https://woofofwalkstreet.com/*          https://www.woofofwalkstreet.com/:splat 
 /dog-walker-port-melbourne              /dog-walker-port-melbourne.html                     301
 /dog-walker-port-melbourne/             /dog-walker-port-melbourne.html                     301
 
-# ================================
+# Southbank (NEW)
+/dog-walking-southbank                  /dog-walker-southbank.html                          301
+/dog-walking-southbank/                 /dog-walker-southbank.html                          301
+/dog-walker-southbank                   /dog-walker-southbank.html                          301
+/dog-walker-southbank/                  /dog-walker-southbank.html                          301
+
+# South Yarra (NEW)
+/dog-walking-south-yarra                /dog-walker-south-yarra.html                        301
+/dog-walking-south-yarra/               /dog-walker-south-yarra.html                        301
+/dog-walker-south-yarra                 /dog-walker-south-yarra.html                        301
+/dog-walker-south-yarra/                /dog-walker-south-yarra.html                        301
+
+# =======================================
 # Unlimited slug consolidation → /unlimited-dog-walks.html
-# ================================
+# =======================================
 /membership-unlimited-plan.html         /unlimited-dog-walks.html                           301
 /membership-unlimited.html              /unlimited-dog-walks.html                           301
 /membership-unlimited                   /unlimited-dog-walks.html                           301
@@ -97,15 +108,14 @@ https://woofofwalkstreet.com/*          https://www.woofofwalkstreet.com/:splat 
 /unlimited/                             /unlimited-dog-walks.html                           301
 /memberships.html#unlimited             /unlimited-dog-walks.html                           301
 
-# ================================
+# =======================================
 # Booking bridge canonical (directory-style)
-# ================================
 /book-dog-walk                          /book-dog-walk/                                     301
 /book-dog-walk.html                     /book-dog-walk/                                     301
 
-# ================================
+# =======================================
 # Common legacy/typo variants
-# ================================
+# =======================================
 /blog/index.html                        /blog/                                              301
 /sitemap                                /sitemap.html                                       301
 /services                               /services.html                                      301
@@ -114,54 +124,49 @@ https://woofofwalkstreet.com/*          https://www.woofofwalkstreet.com/:splat 
 /privacy                                /privacy.html                                       301
 /terms                                  /terms.html                                         301
 
-# ================================
-# Legacy 404 recovery (new)
-# ================================
+# =======================================
+# Legacy 404 recovery
+# =======================================
 /walking-services.html                  /services.html                                      301
 /walking-services                       /services.html                                      301
-/blog/blog4.html                        /blog/index.html                                    301
-/blog/blog4                             /blog/index.html                                    301
+/blog/blog4.html                        /blog/                                              301
+/blog/blog4                             /blog/                                              301
 
-# ================================
+# =======================================
 # Strip index.html → pretty links
-# ================================
+# =======================================
 */index.html                            /:splat/                                            301
 
-# ================================
-# Guard: never add slashes to real files
-# (Must be BEFORE trailing-slash section)
-# ================================
+# =======================================
+# Guard: never add slashes to real files (must stay BEFORE trailing-slash rules)
+# =======================================
 /:file.:ext                             /:file.:ext                                         200!
 /:parent/:file.:ext                     /:parent/:file.:ext                                 200!
 
-# ================================
+# =======================================
 # Enforce trailing slash on directory-style paths
-# (Specific .html canonicals above will win)
-# ================================
+# =======================================
 /:slug                                  /:slug/                                             301
 /:slug/:child                           /:slug/:child/                                      301
 
-# ================================
+# =======================================
 # Membership Pages (legacy → current)
-# (Unlimited handled above)
-# ================================
+# =======================================
 /membership-credit-booking.html         /membership-credit-booking-south-melbourne.html     301
 /membership-sniffvestment.html          /membership-starter.html                            301
 /membership-starter-sniffvestment.html  /membership-starter.html                            301
 /membership-growth-plan.html            /membership-growth.html                             301
 
-# ================================
+# =======================================
 # Friendly short links for campaigns
-# (Note: '/unlimited' handled above in consolidation)
-# ================================
+# =======================================
 /starter                                /membership-starter.html                            301
 /growth                                 /membership-growth.html                             301
 /credit                                 /membership-credit-booking-south-melbourne.html     301
 /join                                   /memberships.html                                   301
 
-# ================================
+# =======================================
 # Campaign short links (with attribution tracking)
-# ================================
 /book-adwords       /book-dog-walk/?utm_source=google&utm_medium=cpc&utm_campaign=booking_bridge             302
 /book-meta          /book-dog-walk/?utm_source=meta&utm_medium=ads&utm_campaign=booking_bridge               302
 /book-organic       /book-dog-walk/?utm_source=google&utm_medium=organic&utm_campaign=booking_bridge         302
@@ -171,28 +176,22 @@ https://woofofwalkstreet.com/*          https://www.woofofwalkstreet.com/:splat 
 /book-cta           /book-dog-walk/?utm_source=website&utm_medium=cta&utm_campaign=booking_bridge            302
 /book-test          /book-dog-walk/?utm_source=website&utm_medium=cta&utm_campaign=test_variant              302
 
-# ================================
+# =======================================
 # QR-friendly direct booking links with UTM tracking (Flyers)
-# ================================
 /join-starter       https://www.timetopet.com/portal/woofofwalkstreet/create-account?utm_source=qr&utm_medium=flyer&utm_campaign=starter_membership      302
 /join-growth        https://www.timetopet.com/portal/woofofwalkstreet/create-account?utm_source=qr&utm_medium=flyer&utm_campaign=growth_membership       302
 /join-unlimited     https://www.timetopet.com/portal/woofofwalkstreet/create-account?utm_source=qr&utm_medium=flyer&utm_campaign=unlimited_membership    302
 
-# ================================
 # Vanity QR links (Social vs Flyers split)
-# ================================
 /qr-starter         https://www.timetopet.com/portal/woofofwalkstreet/create-account?utm_source=qr&utm_medium=social&utm_campaign=starter_membership     302
 /qr-growth          https://www.timetopet.com/portal/woofofwalkstreet/create-account?utm_source=qr&utm_medium=social&utm_campaign=growth_membership      302
 /qr-unlimited       https://www.timetopet.com/portal/woofofwalkstreet/create-account?utm_source=qr&utm_medium=social&utm_campaign=unlimited_membership   302
 
-# ================================
 # Catch-all membership redirect
-# ================================
 /membership/*                             /memberships.html                                  301
 
-# ================================
+# =======================================
 # Clean removals (410 Gone)
-# ================================
 /wp-admin/*                               -                                                  410
 /wp-login.php                             -                                                  410
 /cgi-bin/*                                -                                                  410
@@ -200,3 +199,8 @@ https://woofofwalkstreet.com/*          https://www.woofofwalkstreet.com/:splat 
 /searchreplacedb2.php                     -                                                  410
 /old-page                                 -                                                  410
 /test-page                                -                                                  410
+
+# =======================================
+# Default 404 → custom page
+# (Netlify serves /404.html as a soft 404 automatically; this keeps it explicit)
+/*                                        /404.html                                          404

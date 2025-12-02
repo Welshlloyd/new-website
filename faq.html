@@ -1,9 +1,10 @@
-l<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-AU">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <!-- Theme boot -->
   <script>
   (function () {
     const KEY = 'wow-theme';
@@ -20,16 +21,18 @@ l<!DOCTYPE html>
   })();
   </script>
 
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <title>Your Questions Answered: FAQs for Solo Dog Walking & Boutique Boarding (South Melbourne)</title>
-  <meta name="description" content="Find quick answers about our one-dog-only walking, premium memberships, and single-guest boutique boarding in South Melbourne, Albert Park, & Port Melbourne. Includes promo rules, pricing, and booking steps." />
+  <title>Dog Walking & Boutique Boarding FAQs (South Melbourne, Albert Park, Port Melbourne)</title>
+  <meta name="description" content="Answers to common questions about premium solo dog walking and one-guest-only boutique boarding in South Melbourne, Albert Park & Port Melbourne. Learn about pricing, memberships, booking, safety, and what to expect." />
   <link rel="canonical" href="https://www.woofofwalkstreet.com/faq.html" />
   <link rel="icon" href="/images/brand/favicon.ico">
 
+  <!-- Open Graph -->
   <meta property="og:type" content="website"/>
-  <meta property="og:title" content="FAQs: Solo Dog Walking & Boutique Boarding Questions Answered"/>
-  <meta property="og:description" content="Get fast answers on solo walks, memberships, and one-guest-only boarding in South Melbourne."/>
+  <meta property="og:title" content="FAQs — Solo Dog Walking & One-Guest Boutique Boarding"/>
+  <meta property="og:description" content="Get clear answers on solo walks, memberships, and calm one-guest-only boarding in South Melbourne."/>
   <meta property="og:url" content="https://www.woofofwalkstreet.com/faq.html"/>
   <meta property="og:image" content="https://www.woofofwalkstreet.com/images/brand/hero-dog-skyline-1200.webp"/>
   <meta property="og:image:width" content="1200">
@@ -37,6 +40,7 @@ l<!DOCTYPE html>
   <meta property="og:locale" content="en_AU">
   <meta name="twitter:card" content="summary_large_image"/>
 
+  <!-- CSS -->
   <link rel="stylesheet" href="/css/mini.css"/>
   <link rel="stylesheet" href="/css/styles.css"/>
 
@@ -59,8 +63,6 @@ l<!DOCTYPE html>
     .page-top{padding-top:74px}
     a{color:var(--brand)}
     a:hover{color:#fff}
-
-    /* Buttons & utilities */
     .btn{ display:inline-flex;align-items:center;justify-content:center; gap:.5rem;padding:12px 18px;border-radius:999px;border:1px solid transparent;text-decoration:none;font-weight:800;transition:transform var(--speed),box-shadow var(--speed) }
     .btn-primary{background:var(--brand);color:var(--brand-ink);box-shadow:0 10px 26px rgba(255,209,102,.25)}
     .btn-primary:hover{transform:translateY(-2px) scale(1.04); box-shadow:0 16px 46px rgba(255,209,102,.35)}
@@ -69,33 +71,38 @@ l<!DOCTYPE html>
     .btn-outline{background:transparent;border:1px solid var(--brand);color:var(--brand)}
     .gold-edge{ border:1px solid rgba(255,209,102,.55); border-radius:var(--radius-lg); box-shadow:var(--ring); background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.015)); }
 
-    /* Page-specific overrides */
+    /* Page */
     .hero{padding:28px 0 16px; border-bottom:1px solid rgba(255,255,255,.06)}
-    .hero h1{font-size:clamp(1.8rem,1.3rem + 2.4vw,2.6rem); margin:.25rem 0 .4rem;}
-    .subhead{ max-width:70ch; color:var(--muted); }
+    .hero h1{font-size:clamp(1.9rem,1.2rem + 2.6vw,2.7rem); margin:.25rem 0 .4rem; letter-spacing:-.01em}
+    .subhead{ max-width:72ch; color:var(--muted) }
     .section-title{ font-weight:800; font-size:clamp(1.5rem, 1rem + 1.2vw, 2rem); letter-spacing:-.01em; margin-top:28px; }
-    .h2-intro{ max-width: 82ch; color: var(--muted); margin: 0 0 15px; }
+    .h2-intro{ max-width: 85ch; color: var(--muted); margin: 0 0 15px; }
 
-    /* FAQ Styling */
-    .faq-grid{display:grid;gap:24px; padding-top:28px; padding-bottom:32px;}
-    @media(min-width:900px){ .faq-grid{grid-template-columns:1.1fr .9fr} }
-    .card{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; margin-top:8px; }
-    details.card summary{cursor:pointer;font-weight:700; color:#fff; padding:4px 0}
-    details.card p{ padding-top:10px; border-top:1px solid var(--line); margin:10px 0 0;}
-    .promo-note{background:rgba(255,209,102,.08);border:1px dashed var(--brand);border-radius:10px;padding:12px}
-    .promo-badge{display:inline-flex;align-items:center;gap:.5rem;padding:.28rem .6rem;border-radius:999px;background:var(--brand);color:var(--brand-ink);font-weight:900}
-    .cta-stack{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
-    .link-list{margin:.4rem 0 0 1.2rem}
-    .link-list li{margin:.25rem 0}
     .breadcrumbs{font-size:.95rem;color:var(--muted)}
     .breadcrumbs a{color:var(--muted)}
     .mini{color:var(--muted); font-size:.9rem}
-    aside .edge{background:var(--card); padding:16px; border:1px solid var(--line); box-shadow:none; transform:none; }
-    aside .edge:hover{ transform:none; box-shadow:none; }
-    aside .edge h3{ margin-top:0; font-size:1.4rem; }
+
+    /* Layout */
+    .faq-grid{display:grid;gap:24px; padding-top:28px; padding-bottom:32px;}
+    @media(min-width:900px){ .faq-grid{grid-template-columns:1.12fr .88fr} }
+
+    /* Cards / details */
+    .card{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; margin-top:8px; }
+    details.card summary{cursor:pointer;font-weight:700; color:#fff; padding:4px 0}
+    details.card[open] summary{color:var(--brand)}
+    details.card p{ padding-top:10px; border-top:1px solid var(--line); margin:10px 0 0;}
+    .cta-stack{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .link-list{margin:.4rem 0 0 1.2rem}
+    .link-list li{margin:.25rem 0}
+
+    /* Aside */
+    aside .edge{background:var(--card); padding:16px; border:1px solid var(--line); border-radius:12px}
+    aside .edge h3{ margin:0 0 6px 0; font-size:1.25rem }
     aside .edge ul{ list-style:disc; padding-left:1.2rem; margin:10px 0 0; }
+    .snapwrap{margin-top:12px}
   </style>
 
+  <!-- Schema: FAQPage -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -103,65 +110,45 @@ l<!DOCTYPE html>
     "mainEntity":[
       {
         "@type":"Question",
-        "name":"Do you ever walk more than one dog at the same time?",
-        "acceptedAnswer":{"@type":"Answer","text":"Absolutely not. We’re strictly **one-dog-only**. This guarantees focused attention, a calm experience, and ensures proper exercise for your dog, especially if they are sensitive or anxious. We never group walk."}
+        "name":"Do you walk more than one dog at a time?",
+        "acceptedAnswer":{"@type":"Answer","text":"No. We are strictly one-dog-only for safety, calm handling, and focused exercise—ideal for sensitive or anxious dogs. We never group walk."}
       },
       {
         "@type":"Question",
-        "name":"What's included in a casual dog walk?",
-        "acceptedAnswer":{"@type":"Answer","text":"A casual solo walk is **45 minutes** of dedicated one-on-one time, plus transport. Every walk includes **GPS tracking, photo updates, and detailed notes** delivered to your secure client portal."}
+        "name":"What’s included in a casual solo dog walk?",
+        "acceptedAnswer":{"@type":"Answer","text":"A 45-minute one-on-one walk with GPS tracking, photo updates, and detailed notes delivered to your secure client portal."}
       },
       {
         "@type":"Question",
-        "name":"When are the solo dog walks available?",
-        "acceptedAnswer":{"@type":"Answer","text":"Our standard hours are **Monday–Friday, 7:00am–7:00pm**. All walks must be booked through the portal calendar and are subject to availability. We recommend booking in advance."}
+        "name":"How do your walking memberships work?",
+        "acceptedAnswer":{"@type":"Answer","text":"Memberships provide consistent weekday solo walks and better value. Plans include Starter (4 walks/month), Tail Growth (10), and Unlimited (Mon–Fri). Book via the portal; availability applies."}
       },
       {
         "@type":"Question",
-        "name":"What are your walking membership plans and pricing?",
-        "acceptedAnswer":{"@type":"Answer","text":"We offer three plans for consistency and savings:\n\n- **Starter Sniffvestment:** 4 solo walks/month — $300\n- **Tail Growth Plan:** 10 solo walks/month — $750\n- **Unlimited Pawfolio:** One solo walk per weekday (Mon–Fri) — $1,500\n\nWalks do not roll over. See the Memberships page for full terms."}
+        "name":"How many dogs stay during boutique boarding?",
+        "acceptedAnswer":{"@type":"Answer","text":"One guest only. Your dog is the only boarder, enjoying a calm, home environment without kennel stress."}
       },
       {
         "@type":"Question",
-        "name":"How does the 'Unlimited Pawfolio' membership work?",
-        "acceptedAnswer":{"@type":"Answer","text":"It allows **one 45-minute solo walk per weekday** (Monday–Friday) for the membership month for that specific dog. It is our best value plan for frequent walkers who need daily consistency."}
-      },
-      {
-        "@type":"Question",
-        "name":"How many dogs stay at once for your boutique boarding service?",
-        "acceptedAnswer":{"@type":"Answer","text":"We are strictly **one-guest-only** for boarding. This is our core promise. Your dog is the only guest, ensuring a calm, predictable, and clean home environment, just like staying with family. Zero kennel stress."}
-      },
-      {
-        "@type":"Question",
-        "name":"Where does my dog sleep during boarding?",
-        "acceptedAnswer":{"@type":"Answer","text":"We provide **home-style comfort**. We are happy to follow your routine—whether that means sleeping on our bed, the sofa, or in their own crate/bed. We can often pick up their bedding locally before the stay."}
-      },
-      {
-        "@type":"Question",
-        "name":"What do you feed during a boarding stay?",
-        "acceptedAnswer":{"@type":"Answer","text":"We prefer you supply your dog’s food to maintain consistency. Alternatively, we can supply high-quality kibble plus cooked chicken on request. Please detail any allergies or dietary needs in your client portal profile."}
-      },
-      {
-        "@type":"Question",
-        "name":"How do I book a service and manage my bookings?",
-        "acceptedAnswer":{"@type":"Answer","text":"All bookings and service management are handled through our secure online **Time To Pet Client Portal**. Once you create a profile, you can view real-time availability, schedule walks, confirm boarding dates, and see report cards."}
-      },
-      {
-        "@type":"Question",
-        "name":"What promotions are currently available and what are the rules?",
-        "acceptedAnswer":{"@type":"Answer","text":"Promos are valid until **30 November 2025** (Melbourne time) unless otherwise stated. Only one discount per customer per service:\n\n1. **Casual Walk:** 50% off your first 45-minute walk.\n2. **Boarding:** 20% off one stay (up to 14 nights).\n3. **Unlimited Membership:** 50% off the first month.\n\nDiscounts cannot be combined, are not transferable, and are subject to our service availability."}
+        "name":"How do I book and manage services?",
+        "acceptedAnswer":{"@type":"Answer","text":"Create a profile in the Time To Pet client portal to check availability, schedule solo walks, confirm boarding dates, and read report cards."}
       }
     ]
   }
   </script>
 
+  <!-- Schema: Breadcrumbs -->
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
-    {"@type":"ListItem","position":2,"name":"FAQs","item":"https://www.woofofwalkstreet.com/faq.html"}
-  ]}
+  {
+    "@context":"https://schema.org","@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
+      {"@type":"ListItem","position":2,"name":"FAQs","item":"https://www.woofofwalkstreet.com/faq.html"}
+    ]
+  }
   </script>
 
+  <!-- Ads/Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
   <script>
     window.dataLayer=window.dataLayer||[];
@@ -170,6 +157,7 @@ l<!DOCTYPE html>
     gtag('config','AW-17527927259');
   </script>
 
+  <!-- Preload -->
   <link
     rel="preload"
     as="image"
@@ -180,157 +168,193 @@ l<!DOCTYPE html>
 </head>
 <body>
 
-  <div id="promo" class="promo-ribbon promo--edge" role="region" aria-label="Promotions">
+  <!-- Optional promo: NOTE this date is past; update or remove -->
+  <!-- TODO: Update promo validity or hide ribbon if expired -->
+  <div id="promo" class="promo-ribbon promo--edge" role="region" aria-label="Promotions" hidden>
     <div class="promo-inner container">
       <img class="promo-dog" src="/images/brand/dog-in-suit.webp" alt="" width="28" height="28" decoding="async" />
       <span class="promo-copy">
-        <strong>Promos to 30 Nov:</strong> 50% off first Casual Walk · 20% off one Boarding stay · 50% off first month of Unlimited
-        <span class="promo-badge"><span id="days-left"></span></span>
+        <strong>Promos</strong> • Check current offers in memberships and boarding
       </span>
       <a href="/unlimited-dog-walks.html" class="promo-cta">See Unlimited →</a>
       <button id="promo-close" class="promo-close" aria-label="Dismiss promo">✕</button>
     </div>
   </div>
 
+  <!-- HEADER: paste the same markup used on index.html inside this element -->
   <header class="site-header" role="banner">
-    </header>
+    <!-- BEGIN: site header (from index.html) -->
+    <!-- ... -->
+    <!-- END: site header -->
+  </header>
 
-  <main>
+  <main id="top" role="main">
     <section class="hero">
       <div class="container">
         <nav class="breadcrumbs" aria-label="Breadcrumbs">
           <a href="/">Home</a> › FAQs
         </nav>
-        <h1>FAQs: Quick Answers on Solo Walks, Memberships, & Calm Boarding</h1>
+        <h1>FAQs — Premium Solo Dog Walking & One-Guest Boutique Boarding in South Melbourne</h1>
         <p class="subhead">
-          We answer your most frequent questions about our **one-dog-only services** across South Melbourne, Albert Park, and Port Melbourne.
-          Our services are designed for calm, safety, and sensitivity. If it’s not covered here, <a href="/contact.html">message us</a> or call <a href="tel:+61456754050">0456 754 050</a>.
+          Clear answers about <strong>one-dog-only walking</strong>, <strong>one-guest boutique boarding</strong>, pricing, memberships, service areas
+          (South Melbourne, Albert Park, Port Melbourne, Middle Park, Southbank), and how booking works.
+          Need something not listed? <a href="/contact.html">Contact us</a> or call <a href="tel:+61456754050">0456 754 050</a>.
         </p>
       </div>
     </section>
 
-    <section>
+    <section aria-labelledby="walking-questions">
       <div class="container faq-grid">
         <div>
-          <h2 id="walking" class="section-title">Solo Dog Walking & Care: Core Questions</h2>
+          <h2 id="walking-questions" class="section-title">Solo Dog Walking — Safety, Pricing & Scheduling</h2>
           <p class="h2-intro">
-            Our premium solo dog walking is built on safety and personalized care, ideal for sensitive or anxious dogs.
-            We service South Melbourne, Albert Park, Port Melbourne, Middle Park, and Southbank. Find out why **one-dog-only** is better.
+            Our <strong>premium solo dog walking</strong> is designed for calm handling and focused attention—perfect for
+            <strong>anxious or sensitive dogs</strong>. We never group walk; every outing is tailored.
           </p>
 
-          <details class="card"><summary>Do you ever walk more than one dog at the same time?</summary>
-            <p>Absolutely not. We’re strictly **one-dog-only**. This guarantees focused attention, a calm experience, and ensures proper exercise for your dog, especially if they are sensitive or anxious. We never group walk. <a href="/dog-walking-south-melbourne.html">See walking details →</a></p>
-          </details>
-
-          <details class="card"><summary>What's included in a casual walk?</summary>
-            <p>A casual solo walk is **45 minutes** of dedicated one-on-one time, plus transport. Every walk includes **GPS tracking, photo updates, and detailed notes** delivered to your secure client portal.</p>
-          </details>
-
-          <details class="card"><summary>When are the solo dog walks available?</summary>
-            <p>Our standard hours are **Monday–Friday, 7:00am–7:00pm**. All walks must be booked through the portal calendar and are **subject to availability**. We recommend booking in advance.</p>
-          </details>
-
-          <details class="card"><summary>What does a casual walk cost?</summary>
-            <p>**$80** per 45-minute walk (incl. GST). Frequent walkers save significantly with a membership. <a href="/memberships.html">Compare memberships →</a></p>
-          </details>
-
-          <div class="cta-stack">
-            <a class="btn btn-primary" href="/book-dog-walk/?utm_source=faq&utm_medium=cta&utm_campaign=casual_50">Book 50% Off First Walk →</a>
-            <a class="btn btn-outline" href="/unlimited-dog-walks.html">See Unlimited Membership</a>
-          </div>
-
-          <h2 id="memberships" class="section-title">Exclusive Walking Memberships — Maximize Value</h2>
-          <p class="h2-intro">
-            Our memberships offer the best value and consistency. They are designed to ensure your dog has a scheduled, stress-free routine. You manage all bookings in your secure client portal.
-          </p>
-
-          <details class="card"><summary>What plans do you offer and pricing?</summary>
-            <p>We offer three tiers for consistency and savings:</p>
-            <ul style="margin-left: 20px;">
-              <li>**Starter Sniffvestment** — 4 solo walks/month — **$300**</li>
-              <li>**Tail Growth Plan** — 10 solo walks/month — **$750**</li>
-              <li>**Unlimited Pawfolio** — One solo walk per weekday (Mon–Fri) — **$1,500**</li>
-            </ul>
-            <p>Walks are Mon–Fri 7am–7pm, calendar booking required, subject to availability, and unused walks do not roll over. <a href="/unlimited-dog-walks.html">See the Unlimited breakdown →</a></p>
-          </details>
-
-          <details class="card"><summary>How does the 'Unlimited Pawfolio' membership work?</summary>
-            <p>It allows **one 45-minute solo walk per weekday** (Monday–Friday) for the membership month for that specific dog. It is our best value plan for frequent walkers who need daily consistency. <a href="/unlimited-dog-walks.html">Learn more →</a></p>
-          </details>
-
-          <details class="card"><summary>Can I change times or skip a week?</summary>
-            <p>You can move bookings inside our change window if a slot is available on the calendar. Please note, due to high demand, unused walks cannot roll over to the next month.</p>
-          </details>
-
-          <h2 id="boarding" class="section-title">Boutique Dog Boarding — Weekend Woof Club</h2>
-          <p class="h2-intro">
-            Our boarding is strictly **one-guest-only**. We provide a calm, home-style experience that eliminates kennel stress and keeps your sensitive dog relaxed while you're away.
-          </p>
-
-          <details class="card"><summary>How many dogs stay at once for your boutique boarding service?</summary>
-            <p>We are strictly **one-guest-only** for boarding. Your dog is the only guest, ensuring a calm, predictable, and clean home environment. It's more like staying with family. <a href="/boarding-services.html">Boarding overview →</a></p>
-          </details>
-
-          <details class="card"><summary>Where does my dog sleep during boarding?</summary>
-            <p>**Home-style comfort:** we follow your routine. We are happy to welcome your dog to sleep on our bed or the sofa. We can also **pick up their familiar bed or crate** locally before the stay to maximize their comfort.</p>
-          </details>
-
-          <details class="card"><summary>What do you feed during a boarding stay?</summary>
-            <p>We prefer you supply your dog’s food to maintain consistency. Alternatively, we can supply high-quality kibble plus cooked chicken on request. Please detail any allergies or dietary needs in your client portal profile.</p>
-          </details>
-
-          <details class="card"><summary>Do you support local shelters?</summary>
-            <p>Yes. We believe in giving back to the community that supports us. We donate **10% of our profits** to local dog charities. <a href="/community.html">See our impact →</a></p>
-          </details>
-
-          <div class="cta-stack">
-            <a class="btn btn-primary" href="/book-boarding.html?utm_source=faq&utm_medium=cta&utm_campaign=boarding_20">Book 20% Off Boarding Stay →</a>
-            <a class="btn btn-ghost" href="/gallery.html">See Photos & Videos</a>
-          </div>
-
-          <h2 id="booking" class="section-title" style="margin-top:28px">Booking & Your Dog's Profile</h2>
-          <p class="h2-intro">
-            We use the secure **Time To Pet** portal for all bookings and updates. This ensures your data is secure and all communication is centralized.
-          </p>
-          <details class="card"><summary>How do I book a service and manage my bookings?</summary>
-            <p>All bookings and service management are handled through our secure online **Time To Pet Client Portal**. Once you create a profile, you can view real-time availability, schedule walks, confirm boarding dates, and see report cards.</p>
-          </details>
-          <details class="card"><summary>Do I need to schedule a meet and greet?</summary>
-            <p>We require a free, no-obligation meet and greet for all new boarding clients and recommend one for dog walking, especially for sensitive dogs. This ensures a comfortable first experience for your dog.</p>
-          </details>
-
-          <h2 id="promos" class="section-title" style="margin-top:28px">Current Promotions, Rules & Expiry</h2>
-          <div class="card">
-            <p class="promo-note">
-              **Valid to:** <u>30 November 2025</u> (Melbourne time). **<span id="days-left-inline"></span>** Availability limits may apply.
-            </p>
-            <ul style="margin-left: 20px;">
-              <li>**Casual Walk:** <u>50% off</u> your first 45-minute walk — one per customer.</li>
-              <li>**Boarding:** <u>20% off</u> one stay (up to **14 nights**) — one per customer.</li>
-              <li>**Unlimited Membership:** <u>50% off</u> the first month — one per customer.</li>
-            </ul>
-            <p class="mini">Promos are not transferable and cannot be combined. Standard terms, availability, and portal booking requirements apply. See our <a href="/full-terms.html">full terms and conditions</a> for details.</p>
-            <div class="cta-stack">
-              <a class="btn btn-primary" href="/book-dog-walk/?utm_source=faq&utm_medium=cta&utm_campaign=casual_50">Book 50% Off Walk</a>
-              <a class="btn btn-primary" href="/book-boarding.html?utm_source=faq&utm_medium=cta&utm_campaign=boarding_20">Book 20% Off Boarding</a>
-              <a class="btn btn-outline" href="/unlimited-dog-walks.html?utm_source=faq&utm_medium=cta&utm_campaign=unlimited_50">Get 50% Off Unlimited</a>
+          <details class="card">
+            <summary aria-controls="q-one-dog" aria-expanded="false">Do you ever walk more than one dog at the same time?</summary>
+            <div id="q-one-dog">
+              <p>Never. We’re <strong>strictly one-dog-only</strong> to keep your dog relaxed and safe, and to ensure they get true one-on-one exercise.
+                Group walks can be overwhelming, especially for sensitive dogs.</p>
+              <p class="mini">Learn more: <a href="/dog-walking-south-melbourne.html">Premium Solo Dog Walking</a></p>
             </div>
+          </details>
+
+          <details class="card">
+            <summary aria-controls="q-included" aria-expanded="false">What’s included in a casual solo walk?</summary>
+            <div id="q-included">
+              <p>Each casual walk includes <strong>45 minutes</strong> of one-on-one walking (plus transport), with <strong>GPS tracking</strong>, photo updates,
+                and a <strong>report card</strong> delivered to your secure client portal.</p>
+            </div>
+          </details>
+
+          <details class="card">
+            <summary aria-controls="q-hours" aria-expanded="false">When are walks available and how do I book?</summary>
+            <div id="q-hours">
+              <p>Standard hours are <strong>Mon–Fri, 7:00am–7:00pm</strong>. Use the <a href="https://www.timetopet.com/portal/woofofwalkstreet/create-account" target="_blank" rel="noopener">Time To Pet client portal</a> for real-time availability and bookings.</p>
+            </div>
+          </details>
+
+          <details class="card">
+            <summary aria-controls="q-pricing" aria-expanded="false">What does a casual walk cost?</summary>
+            <div id="q-pricing">
+              <p><strong>$80</strong> per 45-minute solo walk (incl. GST). Regular walkers save with memberships.</p>
+              <div class="cta-stack">
+                <a class="btn btn-primary" href="/book-dog-walk/?utm_source=faq&utm_medium=cta&utm_campaign=casual">Book a Walk</a>
+                <a class="btn btn-outline" href="/unlimited-dog-walks.html">Compare Memberships</a>
+              </div>
+            </div>
+          </details>
+
+          <h2 id="memberships" class="section-title">Walking Memberships — Consistency & Best Value</h2>
+          <p class="h2-intro">
+            Set a predictable routine with better value. Book via the client portal; availability applies.
+          </p>
+
+          <details class="card">
+            <summary aria-controls="q-plans" aria-expanded="false">What plans do you offer?</summary>
+            <div id="q-plans">
+              <ul>
+                <li><strong>Starter</strong> — 4 solo walks/month</li>
+                <li><strong>Tail Growth</strong> — 10 solo walks/month</li>
+                <li><strong>Unlimited</strong> — one solo walk per weekday (Mon–Fri)</li>
+              </ul>
+              <p class="mini"><a href="/unlimited-dog-walks.html">Membership details</a></p>
+            </div>
+          </details>
+
+          <details class="card">
+            <summary aria-controls="q-unlimited" aria-expanded="false">How does Unlimited work?</summary>
+            <div id="q-unlimited">
+              <p><strong>One 45-minute solo walk per weekday</strong> (Mon–Fri) for the membership month for that specific dog—ideal for daily consistency.</p>
+            </div>
+          </details>
+
+          <details class="card">
+            <summary aria-controls="q-changes" aria-expanded="false">Can I change times or skip weeks?</summary>
+            <div id="q-changes">
+              <p>You can move bookings within our change window if a slot is available; due to demand, unused walks don’t roll over.</p>
+            </div>
+          </details>
+
+          <h2 id="boarding" class="section-title">Boutique Dog Boarding — One Guest Only</h2>
+          <p class="h2-intro">
+            Our boarding is <strong>strictly one-guest-only</strong>, replicating a calm home routine—no kennels, no stress.
+          </p>
+
+          <details class="card">
+            <summary aria-controls="q-how-many" aria-expanded="false">How many dogs stay at once?</summary>
+            <div id="q-how-many">
+              <p>Your dog is the <strong>only guest</strong>, ensuring a predictable, clean environment and one-on-one care.</p>
+              <p class="mini"><a href="/boarding-services.html">Boarding overview</a></p>
+            </div>
+          </details>
+
+          <details class="card">
+            <summary aria-controls="q-sleep" aria-expanded="false">Where will my dog sleep?</summary>
+            <div id="q-sleep">
+              <p><strong>Home-style comfort</strong>—we follow your routine (bed/sofa/crate). We can pick up familiar bedding locally before the stay.</p>
+            </div>
+          </details>
+
+          <details class="card">
+            <summary aria-controls="q-food" aria-expanded="false">What do you feed during a stay?</summary>
+            <div id="q-food">
+              <p>We prefer you supply food for consistency. We can provide high-quality kibble plus cooked chicken on request. List allergies in your portal profile.</p>
+            </div>
+          </details>
+
+          <details class="card">
+            <summary aria-controls="q-giveback" aria-expanded="false">Do you support local shelters?</summary>
+            <div id="q-giveback">
+              <p>Yes—<strong>10% of profits</strong> go to local dog charities. <a href="/community.html">See our impact</a>.</p>
+            </div>
+          </details>
+
+          <div class="cta-stack">
+            <a class="btn btn-primary" href="/book-boarding.html?utm_source=faq&utm_medium=cta&utm_campaign=boarding">Book Boarding</a>
+            <a class="btn btn-ghost" href="/gallery.html">Photos &amp; Videos</a>
           </div>
+
+          <h2 id="booking" class="section-title" style="margin-top:28px">Booking & Client Portal — How It Works</h2>
+          <p class="h2-intro">We use the secure <strong>Time To Pet</strong> portal for bookings, updates, and report cards.</p>
+
+          <details class="card">
+            <summary aria-controls="q-book" aria-expanded="false">How do I book and manage services?</summary>
+            <div id="q-book">
+              <p>Create a profile to view real-time availability, schedule walks, confirm boarding dates, and read report cards.</p>
+              <div class="cta-stack">
+                <a class="btn btn-primary" href="https://www.timetopet.com/portal/woofofwalkstreet/create-account" target="_blank" rel="noopener">Open Client Portal</a>
+                <a class="btn btn-outline" href="/contact.html">Speak to Us First</a>
+              </div>
+            </div>
+          </details>
+
+          <details class="card">
+            <summary aria-controls="q-meet" aria-expanded="false">Do I need a meet & greet?</summary>
+            <div id="q-meet">
+              <p>We require a free meet & greet for new boarding clients and recommend one for walking—especially for sensitive dogs.</p>
+            </div>
+          </details>
 
           <h2 id="more" class="section-title" style="margin-top:28px">More Resources</h2>
           <ul class="link-list">
-            <li><a href="/blog/why-solo-walks">Why Solo Dog Walking is Ideal for Sensitive Dogs</a></li>
-            <li><a href="/testimonials.html">What owners say (read testimonials)</a></li>
-            <li><a href="/gallery.html">Photos & Videos (proof of calm)</a></li>
-            <li><a href="/full-terms.html">Full Terms & Conditions</a></li>
-            <li><a href="/contact.html">Contact Us Directly</a></li>
+            <li><a href="/blog/why-solo-walks">Why Solo Dog Walking Helps Sensitive Dogs</a></li>
+            <li><a href="/dog-walking-south-melbourne.html">Premium Solo Dog Walking</a></li>
+            <li><a href="/boarding-services.html">Boutique Boarding Overview</a></li>
+            <li><a href="/unlimited-dog-walks.html">Unlimited Memberships</a></li>
+            <li><a href="/testimonials.html">Client Reviews</a></li>
+            <li><a href="/contact.html">Contact</a></li>
           </ul>
+
+          <p class="mini" style="margin-top:12px"><a href="#top">Back to top ↑</a></p>
         </div>
 
-        <aside>
+        <aside aria-label="Helpful extras">
           <div class="edge">
-            <h3 style="margin-top:0">Ready to Book?</h3>
-            <p>Create your profile in our secure **Time To Pet Client Portal** to check availability and book your first service now.</p>
+            <h3>Ready to Book?</h3>
+            <p>Create your profile in our secure portal to check availability and book your first service.</p>
             <div class="cta-stack">
               <a class="btn btn-primary" href="https://www.timetopet.com/portal/woofofwalkstreet/create-account" target="_blank" rel="noopener">Open Client Portal</a>
               <a class="btn btn-ghost" href="/contact.html">Speak to Us First</a>
@@ -338,21 +362,27 @@ l<!DOCTYPE html>
           </div>
 
           <div class="edge" style="margin-top:12px">
-            <h3 style="margin-top:0">Popular Links</h3>
+            <h3>Popular Links</h3>
             <ul>
               <li><a href="/dog-walking-south-melbourne.html">Premium Solo Dog Walking</a></li>
               <li><a href="/boarding-services.html">Weekend Woof Club (Boarding)</a></li>
               <li><a href="/unlimited-dog-walks.html">Unlimited Membership Details</a></li>
               <li><a href="/testimonials.html">Trusted Client Reviews</a></li>
-              <li><a href="/gallery.html">Gallery (See the Calm)</a></li>
-              <li><a href="/contact.html">Direct Contact</a></li>
+              <li><a href="/gallery.html">Gallery</a></li>
             </ul>
           </div>
 
+          <!-- SNAPWIDGET: if used elsewhere, include the same embed here -->
+          <div class="edge snapwrap" style="margin-top:12px">
+            <h3>Latest on Instagram</h3>
+            <script src="https://snapwidget.com/js/snapwidget.js"></script>
+            <!-- Replace src with your actual SnapWidget iframe src -->
+            <iframe title="Instagram feed" src="https://snapwidget.com/embed/XXXXX" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%;"></iframe>
+          </div>
+
           <div class="edge" style="margin-top:12px">
-            <h3 style="margin-top:0">Service Zone</h3>
-            <p class="mini">We primarily serve:</p>
-            <ul style="list-style:disc; padding-left:1.2rem; margin:10px 0 0;">
+            <h3>Service Zone</h3>
+            <ul>
               <li>South Melbourne</li>
               <li>Albert Park</li>
               <li>Port Melbourne</li>
@@ -365,8 +395,21 @@ l<!DOCTYPE html>
     </section>
   </main>
 
+  <!-- FOOTER: paste the same markup used on index.html inside this element -->
   <footer class="site-footer">
-    </footer>
+    <!-- BEGIN: site footer (from index.html) -->
+    <!-- ... -->
+    <!-- END: site footer -->
+  </footer>
 
-  </body>
+  <script>
+    // Expand/collapse a11y tweak
+    document.querySelectorAll('details.card summary').forEach(s => {
+      s.addEventListener('click', () => {
+        const p = s.parentElement;
+        s.setAttribute('aria-expanded', p.open ? 'false' : 'true');
+      });
+    });
+  </script>
+</body>
 </html>

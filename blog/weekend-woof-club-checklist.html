@@ -4,54 +4,71 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
+  <!-- Google Tag Manager (container: GTM-T3HRTM2T) -->
+  <script>
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[]; w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl; f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T3HRTM2T');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Theme boot (no-FOUC) -->
+  <script>
+    (function () {
+      const KEY='wow-theme'; const pref=localStorage.getItem(KEY)||'auto';
+      const mql=window.matchMedia('(prefers-color-scheme: dark)');
+      const isDark=()=>pref==='dark'||(pref==='auto'&&mql.matches);
+      document.documentElement.setAttribute('data-theme',pref);
+      document.documentElement.style.colorScheme=isDark()?'dark':'light';
+      mql.addEventListener?.('change',()=>{ if((localStorage.getItem(KEY)||'auto')==='auto'){ document.documentElement.style.colorScheme=mql.matches?'dark':'light'; }});
+    })();
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <!-- SEO -->
-  <title>Boarding Prep: A Handy Checklist (South Melbourne) — Calm First Stays</title>
-  <meta name="description" content="Everything you need for a calm first boarding stay in South Melbourne: packing list, trial visit, feeding & meds, first-night routine, updates, and how memberships keep dogs settled between trips."/>
-  <link rel="canonical" href="https://www.woofofwalkstreet.com/blog/prepare-dog-for-boarding-checklist.html"/>
+  <title>Dog Boarding Checklist South Melbourne — What to Pack & How to Prepare | Woof Club (7 Nights)</title>
+  <meta name="description" content="Exactly what to pack and how to prepare your dog for a calm, one-guest-only stay at the Woof Club in South Melbourne. Downloadable checklist, 7‑day prep timeline, drop‑off routine, feeding/meds tips, and how memberships keep dogs settled between trips."/>
+  <link rel="canonical" href="https://www.woofofwalkstreet.com/blog/weekend-woof-club-checklist.html"/>
+  <meta name="robots" content="index,follow,max-image-preview:large"/>
   <link rel="icon" href="/images/brand/favicon.ico"/>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="/css/mini.css"/>
-  <link rel="stylesheet" href="/css/styles.css"/>
-
-  <!-- Social -->
+  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="article"/>
-  <meta property="og:title" content="Boarding Prep: A Handy Checklist (South Melbourne)"/>
-  <meta property="og:description" content="Packing list, trial visit, first-night routine and how we keep stays calm at the Weekend Woof Club."/>
-  <meta property="og:url" content="https://www.woofofwalkstreet.com/blog/prepare-dog-for-boarding-checklist.html"/>
+  <meta property="og:title" content="Dog Boarding Checklist South Melbourne — Woof Club (7 Nights)"/>
+  <meta property="og:description" content="Packing list, calm drop‑off routine, 7‑day prep and how our one‑guest‑only Woof Club keeps boarding stress‑free."/>
+  <meta property="og:url" content="https://www.woofofwalkstreet.com/blog/weekend-woof-club-checklist.html"/>
   <meta property="og:image" content="https://www.woofofwalkstreet.com/images/blog/blog-boarding-prep-checklist-1200.webp"/>
   <meta property="og:locale" content="en_AU"/>
   <meta name="twitter:card" content="summary_large_image"/>
 
-  <!-- Breadcrumbs + BlogPosting Schema -->
+  <!-- JSON-LD: Breadcrumbs + BlogPosting -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@graph":[
-      {
-        "@type":"BreadcrumbList",
-        "itemListElement":[
-          {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
-          {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.woofofwalkstreet.com/blog/index.html"},
-          {"@type":"ListItem","position":3,"name":"Boarding Prep: A Handy Checklist","item":"https://www.woofofwalkstreet.com/blog/prepare-dog-for-boarding-checklist.html"}
-        ]
-      },
-      {
-        "@type":"BlogPosting",
-        "headline":"Boarding Prep: A Handy Checklist",
-        "description":"How to prepare your dog for a calm first boarding stay: packing list, trial visit, feeding & meds, first-night routine, updates and aftercare.",
-        "image":"https://www.woofofwalkstreet.com/images/blog/blog-boarding-prep-checklist-1200.webp",
-        "datePublished":"2025-10-23",
-        "dateModified":"2025-10-23",
-        "author":{"@type":"Organization","name":"The Woof of Walk Street"},
-        "publisher":{"@type":"Organization","name":"The Woof of Walk Street","logo":{"@type":"ImageObject","url":"https://www.woofofwalkstreet.com/images/brand/logo-lockup-gold.webp","width":600,"height":60}},
-        "mainEntityOfPage":{"@type":"WebPage","@id":"https://www.woofofwalkstreet.com/blog/prepare-dog-for-boarding-checklist.html"}
+      {"@type":"BreadcrumbList","itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
+        {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.woofofwalkstreet.com/blog/index.html"},
+        {"@type":"ListItem","position":3,"name":"Dog Boarding Checklist South Melbourne","item":"https://www.woofofwalkstreet.com/blog/weekend-woof-club-checklist.html"}
+      ]},
+      {"@type":"BlogPosting",
+       "headline":"Dog Boarding Checklist South Melbourne — What to Pack & How to Prepare (Woof Club)",
+       "description":"How to prepare your dog for a calm boarding stay at the Woof Club: packing list, trial visit, feeding & meds, first‑night routine, updates and aftercare.",
+       "image":"https://www.woofofwalkstreet.com/images/blog/blog-boarding-prep-checklist-1200.webp",
+       "datePublished":"2025-10-23",
+       "dateModified":"2025-12-02",
+       "author":{"@type":"Organization","name":"The Woof of Walk Street"},
+       "publisher":{"@type":"Organization","name":"The Woof of Walk Street","logo":{"@type":"ImageObject","url":"https://www.woofofwalkstreet.com/images/brand/logo-lockup-gold.webp","width":600,"height":60}},
+       "mainEntityOfPage":{"@type":"WebPage","@id":"https://www.woofofwalkstreet.com/blog/weekend-woof-club-checklist.html"}
       }
     ]
   }
   </script>
 
-  <!-- Google Ads / Analytics -->
+  <!-- Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -61,184 +78,223 @@
   </script>
 
   <!-- Preload hero -->
-  <link
-    rel="preload"
-    as="image"
-    href="/images/blog/blog-boarding-prep-checklist-1200.webp"
-    imagesrcset="/images/blog/blog-boarding-prep-checklist-800.webp 800w,
-                 /images/blog/blog-boarding-prep-checklist-1200.webp 1200w,
-                 /images/blog/blog-boarding-prep-checklist-1600.webp 1600w"
-    imagesizes="(max-width: 640px) 100vw, (max-width: 1200px) 92vw, 1100px"
-  >
+  <link rel="preload" as="image" href="/images/blog/blog-boarding-prep-checklist-1200.webp"
+        imagesrcset="/images/blog/blog-boarding-prep-checklist-800.webp 800w, /images/blog/blog-boarding-prep-checklist-1200.webp 1200w, /images/blog/blog-boarding-prep-checklist-1600.webp 1600w"
+        imagesizes="(max-width: 640px) 100vw, (max-width: 1200px) 92vw, 1100px" />
 
-  <!-- Page styles -->
+  <!-- Global styles (unified) -->
   <style>
-    :root{ --line:#e5e7eb; --muted:#6b7280; --gold:#ffd166; --ink:#0b0e12; }
+    :root{
+      --bg:#0b0e12; --card:#0f1318; --text:#e8eef5; --muted:#a9b4c0; --line:#1e2630;
+      --brand:#ffd166; --brand-ink:#0b0e12; --accent:#5af2c6;
+      --sale-bg: linear-gradient(135deg, #FF512F 0%, #DD2476 100%);
+      --sale-text:#fff; --shadow:0 16px 48px rgba(0,0,0,.32);
+      --ring:0 0 0 2px rgba(255,209,102,.22), 0 16px 40px rgba(255,209,102,.08);
+      --header-blur:saturate(120%) blur(10px); --header-bg:rgba(11,14,18,.78);
+      --menu-solid:#0e141b; --container:1100px; --radius-lg:16px; --speed:.22s;
+      --font-heading:'Space Grotesk', system-ui, sans-serif; --font-body:'Work Sans', system-ui, sans-serif;
+    }
+    html,body{background:var(--bg);color:var(--text);overflow-x:hidden;scroll-behavior:smooth}
+    img{max-width:100%;height:auto} a{color:inherit}
+    .container{max-width:var(--container);margin:0 auto;padding:0 16px}
+    body, p, li, span, button, input, textarea { font-family: var(--font-body); letter-spacing: .1px; line-height: 1.58; }
+    h1,h2,h3,h4,h5,h6, nav a, .nav-group-btn{ font-family: var(--font-heading); letter-spacing: .25px; }
+    h1{font-weight:800} h2{font-weight:800} .meta{color:var(--muted)}
+
+    /* Promo ribbon */
+    .promo-ribbon{position:relative;z-index:1100;background:var(--sale-bg);color:#fff;border-bottom:1px solid rgba(255,255,255,.1);font-weight:700;text-align:center;padding:8px}
+    .promo-code{background:rgba(0,0,0,.3);padding:2px 6px;border-radius:4px;font-family:monospace}
+
+    /* Header + nav */
+    .site-header{position:sticky;top:0;z-index:1000;background:var(--header-bg);backdrop-filter:var(--header-blur);-webkit-backdrop-filter:var(--header-blur);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none;font-weight:900}
+    .brand img{width:48px;height:48px}
+    .nav-links{display:flex;align-items:center;gap:16px}
+    .nav-links a{padding:8px 6px;text-decoration:none;color:#fff;opacity:.9}
+    .nav-links a:hover{opacity:1}
+    .nav-group{position:relative}
+    .nav-group-btn{background:transparent;border:1px solid #2a3440;color:#fff;border-radius:999px;padding:8px 12px;font-weight:800;cursor:pointer}
+    .nav-group-btn:hover{border-color:#fff}
+    .nav-group-list{position:absolute;right:0;top:calc(100% + 8px);min-width:260px;background:var(--menu-solid);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:8px 6px;box-shadow:var(--shadow);display:none;z-index:2000}
+    .nav-group[aria-expanded="true"] .nav-group-list{display:block}
+    .nav-group-list a{display:block;padding:10px 12px;border-radius:10px;color:#e9eef6}
+    .nav-group-list a:hover{background:rgba(255,255,255,.06)}
+    @media (min-width:861px){.nav-group:hover .nav-group-list,.nav-group:focus-within .nav-group-list{display:block}}
+    .nav-toggle{display:none} .nav-scrim{display:none}
+    @media (max-width:860px){
+      .nav-toggle{display:block;cursor:pointer}
+      .nav-links{position:fixed;inset:0 0 auto auto;width:min(320px,85vw);height:100vh;background:var(--menu-solid);padding:70px 16px 20px;flex-direction:column;gap:10px;transform:translateX(100%);transition:transform .25s}
+      #nav-toggle:checked ~ .nav-links{transform:translateX(0)}
+      .nav-scrim{display:block;position:fixed;inset:0;background:rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:opacity .25s}
+      #nav-toggle:checked ~ .nav-scrim{opacity:1;pointer-events:auto}
+      .nav-group{width:100%}
+      .nav-group-list{position:relative;top:auto;right:auto;display:block;background:var(--menu-solid);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:6px;box-shadow:none;margin-top:8px}
+      .nav-group-btn{width:100%;text-align:left}
+    }
+
+    .cta-buttons{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:12px 18px;border-radius:999px;border:1px solid transparent;text-decoration:none;font-weight:800;letter-spacing:.02em;transition:all var(--speed)}
+    .btn-primary{background:var(--brand);color:var(--brand-ink);box-shadow:0 10px 26px rgba(255,209,102,.25)}
+    .btn-ghost{background:transparent;color:#fff;border:1px solid #2a3440}
+    .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.05)}
+
+    /* Hero */
+    .hero{padding:28px 0 18px;background:radial-gradient(1200px 600px at 20% -20%,rgba(255,209,102,.08),transparent 60%),linear-gradient(120deg,#111824,#1b2433,#111824);border-bottom:1px solid rgba(255,255,255,.06)}
+    .hero h1{font-size:clamp(2rem,1.5rem + 2.5vw,3.2rem);margin:.25rem 0 .5rem;line-height:1.1}
+    .hero .subhead{max-width:70ch;color:#cfd6df;font-size:1.1rem;margin:0 auto}
+
+    /* Content */
     .post-hero img{max-width:1100px;border-radius:14px;display:block;margin:12px auto;box-shadow:0 14px 34px rgba(0,0,0,.18)}
-    .lede{max-width:74ch;color:#4a5560}
-    .meta{color:#6b7280}
+    .lede{max-width:72ch;color:#cfd6df}
     .content{max-width:980px;margin:0 auto;padding:0 16px 88px}
-    .content h2{margin:1.1rem 0 .55rem}
-    .content h3{margin:.9rem 0 .35rem}
+    .content h2{margin:1.2rem 0 .6rem}
+    .content h3{margin:1rem 0 .35rem}
     .grid{display:grid;gap:14px}
     @media(min-width:780px){.grid{grid-template-columns:1fr 1fr}}
-    .card{border:1px solid var(--line);border-radius:12px;padding:14px}
-    .callout{background:#eef6ff;border:1px solid #cfe5ff;padding:14px;border-radius:12px}
-    .tip{background:#fff8e6;border:1px solid #ffe0a6;padding:12px;border-radius:10px}
+    .card{border:1px solid var(--line);border-radius:12px;padding:14px;background:rgba(255,255,255,.03)}
+    .callout{border:2px solid var(--brand);border-radius:14px;background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));padding:16px;box-shadow:var(--ring)}
+    .tip{background:#fff8e6;color:#111;border:1px solid #ffe0a6;padding:12px;border-radius:10px}
     .checklist{list-style:none;padding-left:0}
     .checklist li{position:relative;padding-left:28px;margin:.5rem 0}
     .checklist li::before{content:"✔";position:absolute;left:0;top:0;color:#10b981;font-weight:900}
     .pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:.14rem .6rem;font-size:.84rem;margin:0 .35rem .35rem 0}
-    .idx{border:1px solid var(--line);border-radius:12px;padding:8px 12px;background:#fafafa}
-    .idx a{display:inline-block;margin:.2rem .6rem .2rem 0}
     .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:.6rem}
-    .btn{display:inline-block;text-decoration:none;font-weight:800;border-radius:10px;padding:10px 14px;border:1px solid #d1d5db}
-    .button-primary{background:var(--gold);color:#111;border-color:#f1c24f}
-    .button-secondary{background:#111;color:#fff;border-color:#111}
-    /* Sticky CTAs (mobile) */
-    .sticky-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:1100;background:#ffffffee;border:1px solid var(--line);box-shadow:0 10px 24px rgba(0,0,0,.24);border-radius:16px;display:flex;gap:10px;justify-content:center;align-items:center;padding:10px}
+
+    /* Footer */
+    .site-footer{padding-top:40px;border-top:1px solid var(--line);margin-top:60px}
+    .footer-grid{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap;padding-bottom:40px}
+    .footer-brand{max-width:300px}
+    .footer-col{flex-basis:150px}
+    .footlist{list-style:none;padding:0;margin:0}
+    .footlist a{text-decoration:none;color:#a9b4c0;transition:color var(--speed)}
+    .footlist a:hover{color:var(--brand)}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.05);padding:15px 0;text-align:center;font-size:.85rem;color:#a9b4c0}
+
+    /* Sticky mobile CTA */
+    .sticky-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:999;background:#ffffffee;border:1px solid #d1d5db;box-shadow:0 10px 24px rgba(0,0,0,.24);border-radius:16px;display:flex;gap:10px;justify-content:center;align-items:center;padding:10px}
     .sticky-cta .btn{border-radius:999px}
     @media(min-width:860px){.sticky-cta{display:none}}
-    /* Postcode checker */
-    .pc-form{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-    .pc-form input{padding:10px 12px;border:1px solid var(--line);border-radius:10px;min-width:180px}
-    .pc-result{margin-top:.5rem;font-size:.95rem}
   </style>
 </head>
 
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T3HRTM2T" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
   <!-- Promo ribbon -->
-  <div id="promo" class="promo-ribbon promo--edge" role="region" aria-label="Promo: 50% off">
-    <div class="promo-inner container">
-      <img class="promo-dog" src="/images/brand/dog-in-suit.webp" alt="" width="28" height="28" decoding="async" />
-      <span class="promo-copy"><strong>50% OFF</strong> Unlimited Weekday Walks — solo, GPS-tracked, photo updates</span>
-      <a class="promo-cta" href="/membership-unlimited.html">Learn More →</a>
-      <button id="promo-close" class="promo-close" aria-label="Dismiss promo">✕</button>
-    </div>
+  <div class="promo-ribbon">
+    <div class="container">🎉 End of Year Sale: <strong>50% OFF</strong> Walks (Code: <span class="promo-code">WALK50</span>) + <strong>20% OFF</strong> Boarding (Code: <span class="promo-code">BOARDING20</span>). Ends 31/12!</div>
   </div>
 
-  <!-- Impact ribbon -->
-  <div class="impact-ribbon" role="note" aria-label="Walks that do more: 10% donated">
-    <div class="impact-inner">
-      <span class="impact-emoji" aria-hidden="true">💛</span>
-      <strong>Walks That Do More:</strong> We donate <strong>10% of profits</strong> to local rescue partners.
-      <a class="impact-cta" href="/community.html">See our impact →</a>
-    </div>
-  </div>
-
-  <!-- HEADER -->
+  <!-- Header (unified) -->
   <header class="site-header" role="banner">
     <div class="navbar container" role="navigation" aria-label="Main">
-      <a class="brand" href="/" aria-label="Home">
-        <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="56" height="56">
+      <a class="brand" href="/" aria-label="Go to home">
+        <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="48" height="48">
         <strong>The Woof of Walk Street</strong>
       </a>
-
       <input id="nav-toggle" type="checkbox" hidden>
       <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</label>
-
       <nav class="nav-links" aria-label="Primary">
-        <section class="nav-group">
-          <button class="nav-group-btn" aria-expanded="false" aria-controls="nav-services">Services</button>
-          <ul id="nav-services" class="nav-group-list">
-            <li><a href="/services.html">All Services</a></li>
-            <li><a href="/dog-walking-south-melbourne.html">Dog Walking South Melbourne</a></li>
-            <li><a href="/casual-dog-walking-south-melbourne.html">Casual Dog Walking</a></li>
-            <li><a href="/membership-starter.html">Starter Membership</a></li>
-            <li><a href="/membership-growth.html">Growth Membership</a></li>
-            <li><a href="/membership-unlimited.html">Unlimited Membership</a></li>
-            <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
-            <li><a href="/service-areas.html">Service Areas</a></li>
-            <li><a href="/contact.html">Contact</a></li>
+        <div class="nav-group" aria-expanded="false">
+          <button type="button" class="nav-group-btn" aria-haspopup="true" aria-expanded="false" aria-controls="nav-services">Services ▾</button>
+          <ul id="nav-services" class="nav-group-list" role="menu" aria-label="Services">
+            <li><a role="menuitem" href="/dog-walking-south-melbourne.html">Dog Walking</a></li>
+            <li><a role="menuitem" href="/boarding-services.html">Boutique Boarding — Woof Club</a></li>
+            <li><a role="menuitem" href="/memberships.html">Memberships</a></li>
           </ul>
-        </section>
+        </div>
         <a href="/about.html">About</a>
+        <a href="/testimonials.html">Testimonials</a>
         <a href="/blog/index.html" aria-current="page">Blog</a>
-        <a href="/faq.html">FAQs</a>
+        <a href="/contact.html">Contact</a>
         <a href="/search.html">Search</a>
-
-        <a class="btn button-secondary nav-cta" href="/book-boarding.html">Book Boarding</a>
-        <a class="btn button-primary nav-cta" href="/book-dog-walk/index.html">Book Walks</a>
+        <a class="btn btn-primary nav-cta" href="/book-dog-walk/?coupon=WALK50">Book Walks</a>
       </nav>
+      <div class="nav-scrim" aria-hidden="true"></div>
     </div>
   </header>
 
-  <!-- Sticky dual CTA (mobile) -->
+  <!-- Sticky dual CTA -->
   <div class="sticky-cta" role="region" aria-label="Quick booking">
-    <a class="btn button-secondary" href="/book-boarding.html">Request Boarding</a>
-    <a class="btn button-primary" href="/book-dog-walk/index.html">Book Walks — 50% Off</a>
+    <a class="btn" style="border:1px solid #2a3440;color:#111;background:#fff" href="/book-boarding/?coupon=BOARDING20">Request Boarding — 20% Off</a>
+    <a class="btn btn-primary" href="/book-dog-walk/?coupon=WALK50">Book Walks — 50% Off</a>
   </div>
 
   <!-- HERO -->
   <section class="hero">
     <div class="container" style="text-align:center">
-      <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="/">Home</a> › <a href="/blog/index.html">Blog</a> › Boarding Prep</nav>
-      <h1>Boarding Prep: A Handy Checklist</h1>
-      <p class="lede">The calmest stays start before you pack the bag. Here’s a simple, behaviour-first plan to set your dog up for a relaxed weekend away — what to bring, how arrival works, first-night routine, updates and aftercare.</p>
+      <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="/">Home</a> › <a href="/blog/index.html">Blog</a> › Boarding</nav>
+      <h1>Dog Boarding Checklist (South Melbourne) — What to Pack & How to Prepare for the Woof Club</h1>
+      <p class="subhead lede">Set your pup up for a relaxed, one‑guest‑only stay at the <strong>Woof Club</strong> — now open <strong>7 nights a week</strong>. This guide covers packing, routines, a calm drop‑off, our 7‑day prep timeline and how walking memberships make repeat stays easy.</p>
       <div class="post-hero">
         <picture>
           <source srcset="/images/blog/blog-boarding-prep-checklist-1600.webp 1600w, /images/blog/blog-boarding-prep-checklist-1200.webp 1200w, /images/blog/blog-boarding-prep-checklist-800.webp 800w" type="image/webp">
-          <img src="/images/blog/blog-boarding-prep-checklist-1200.webp"
-               alt="Neatly packed dog boarding bag with labelled meals, harness, ID tags and a cosy blanket"
-               width="1200" height="750" loading="eager" decoding="async" fetchpriority="high">
+          <img src="/images/blog/blog-boarding-prep-checklist-1200.webp" alt="Neatly packed dog boarding bag with labelled meals, harness, ID tags and a cosy blanket" width="1200" height="750" loading="eager" decoding="async" fetchpriority="high">
         </picture>
       </div>
-      <p class="meta">South Melbourne • One-guest-only boarding • Daily solo walk • Photo updates</p>
+      <p class="meta"><strong>Keywords:</strong> South Melbourne Dog Boarding • Woof Club Boarding • One‑Guest‑Only • Calm Drop‑Off Routine • Dog Boarding Checklist</p>
     </div>
   </section>
 
   <!-- CONTENT -->
   <main class="content" id="content" role="main">
     <!-- On this page -->
-    <section class="idx" aria-label="On this page">
+    <section class="card" aria-label="On this page">
       <strong>On this page:</strong>
-      <a href="#tldr">TL;DR packing list</a>
-      <a href="#checklist">Detailed checklist</a>
-      <a href="#timeline">The 7-day timeline</a>
-      <a href="#arrival">Arrival & first night</a>
-      <a href="#meals-meds">Meals & medications</a>
-      <a href="#safety">Safety & hygiene</a>
-      <a href="#updates">Updates & comms</a>
-      <a href="#pickup">Pickup & aftercare</a>
-      <a href="#postcode">Postcode coverage</a>
-      <a href="#memberships">Memberships</a>
-      <a href="#boarding">Boarding (Weekend Woof Club)</a>
-      <a href="#related">Related reading</a>
+      <div class="cta-row">
+        <a class="btn btn-ghost" href="#tldr">TL;DR Packing List</a>
+        <a class="btn btn-ghost" href="#checklist">Detailed Checklist</a>
+        <a class="btn btn-ghost" href="#timeline">7‑Day Prep Timeline</a>
+        <a class="btn btn-ghost" href="#arrival">Arrival & First Night</a>
+        <a class="btn btn-ghost" href="#meals-meds">Meals & Medications</a>
+        <a class="btn btn-ghost" href="#safety">Safety & Hygiene</a>
+        <a class="btn btn-ghost" href="#updates">Updates & Comms</a>
+        <a class="btn btn-ghost" href="#pickup">Pickup & Aftercare</a>
+        <a class="btn btn-ghost" href="#postcode">Postcode Coverage</a>
+        <a class="btn btn-ghost" href="#memberships">Memberships</a>
+        <a class="btn btn-ghost" href="#boarding">Woof Club Boarding</a>
+        <a class="btn btn-ghost" href="#related">Related Reading</a>
+      </div>
     </section>
 
     <!-- TL;DR -->
     <section id="tldr" class="callout">
-      <h2>TL;DR: What to pack</h2>
+      <h2>TL;DR: Dog Boarding Packing List (Woof Club)</h2>
       <ul class="checklist">
-        <li><strong>Lead, fitted harness & ID</strong> (escape-proof, current phone number).</li>
-        <li><strong>Comfort item</strong> — bed/blanket or a worn T-shirt from home.</li>
-        <li><strong>Meals pre-portioned</strong> + <em>feeding notes</em> (allergies, routine).</li>
-        <li><strong>Treats/chew</strong> for first-night settling (e.g., stuffed Kong).</li>
+        <li><strong>Lead, fitted harness & ID</strong> (escape‑proof, current phone number).</li>
+        <li><strong>Comfort item</strong> — bed/blanket or a worn T‑shirt from home.</li>
+        <li><strong>Meals pre‑portioned</strong> + <em>feeding notes</em> (allergies, routine).</li>
+        <li><strong>Treats/chew</strong> for first‑night settling (e.g., stuffed Kong).</li>
         <li><strong>Medications</strong> in original packaging + written timing.</li>
         <li><strong>Emergency contacts</strong> — your mobile + one backup.</li>
       </ul>
       <div class="cta-row">
-        <a class="btn button-secondary" href="/boarding-services.html">See Boarding</a>
-        <a class="btn button-primary" href="/book-boarding.html">Request Boarding</a>
+        <a class="btn btn-ghost" href="/boarding-services.html">See Woof Club Boarding</a>
+        <a class="btn btn-primary" href="/book-boarding/?coupon=BOARDING20">Request Boarding</a>
       </div>
     </section>
 
     <!-- Detailed checklist -->
     <section id="checklist" class="grid">
       <article class="card">
-        <h2>Detailed packing checklist</h2>
+        <h2>Boarding Essentials: What to Pack for a Calm Woof Club Stay</h2>
         <ul class="checklist">
           <li><strong>Everyday gear:</strong> lead, harness, ID tag, poo bags.</li>
           <li><strong>Comfort:</strong> bed/blanket + 1–2 safe toys (no squeakers for bedtime).</li>
-          <li><strong>Food:</strong> labelled zip-locks or tubs; include “AM/PM” and amount.</li>
-          <li><strong>Treats:</strong> small, high-value rewards; 1 long-lasting chew/night.</li>
+          <li><strong>Food:</strong> labelled zip‑locks or tubs; include “AM/PM” and amount.</li>
+          <li><strong>Treats:</strong> small, high‑value rewards; 1 long‑lasting chew/night.</li>
           <li><strong>Supplements/meds:</strong> original packets; clear written instructions.</li>
           <li><strong>Notes:</strong> feeding, toileting, quirks, signals, do’s/don’ts.</li>
         </ul>
-        <p class="tip"><strong>Tip:</strong> Pre-pack the first night’s meal on top so we can settle in fast with a predictable routine.</p>
+        <p class="tip"><strong>Tip:</strong> Pre‑pack the first night’s meal on top so we can settle in fast with a predictable routine.</p>
       </article>
       <aside class="card">
-        <h3>Optional add-ons</h3>
+        <h3>Optional Add‑Ons</h3>
         <ul class="checklist">
           <li><strong>Crate (familiar only)</strong> if your dog chooses it at home.</li>
           <li><strong>Rain jacket</strong> for winter loops.</li>
@@ -250,31 +306,31 @@
 
     <!-- Timeline -->
     <section id="timeline">
-      <h2>The calm-first timeline (7 days out → drop-off)</h2>
+      <h2>The Calm‑First 7‑Day Timeline (Practice → Drop‑Off)</h2>
       <ol>
         <li><strong>7 days out:</strong> Short practice separations at home; 10–15 minutes with a chew in a different room.</li>
         <li><strong>5 days out:</strong> Keep routines boring — normal walks, normal bedtime. Avoid big new exposures.</li>
-        <li><strong>3 days out:</strong> Pack bag; introduce the settle mat during TV time so it smells like home.</li>
+        <li><strong>3 days out:</strong> Pack the bag; add the settle mat during TV time so it smells like home.</li>
         <li><strong>Day before:</strong> Early evening walk + normal meal; no extra treats that could upset tummies.</li>
-        <li><strong>Drop-off day:</strong> Unrushed handover; we’ll do a sniff-around + short decompression walk.</li>
+        <li><strong>Drop‑off day:</strong> Unrushed handover; sniff‑around + short decompression walk.</li>
       </ol>
-      <p>New to us? We start with a <a href="/blog/weekend-woof-club-checklist.html">video trial visit</a> so you can see the space and we can tailor routines.</p>
+      <p>New to us? We start with a quick <a href="/boarding-services.html#trial">video trial visit</a> so you can see the space and we can tailor routines.</p>
     </section>
 
     <!-- Arrival & first night -->
     <section id="arrival" class="grid">
       <article class="card">
-        <h2>Arrival & first night routine</h2>
+        <h2>Arrival & First‑Night Routine at the Woof Club</h2>
         <ul class="checklist">
           <li>Sniff tour, water, and a short decompression loop.</li>
           <li>Quiet settle with a lick mat or stuffed Kong.</li>
-          <li>Normal mealtime window; lights-down earlier than usual for deeper sleep.</li>
+          <li>Normal mealtime window; lights‑down earlier than usual for deeper sleep.</li>
           <li>No forced introductions; we keep things <em>calm and predictable</em>.</li>
         </ul>
-        <p class="tip"><strong>Trainer tip:</strong> Bring a worn T-shirt. Familiar scent helps most dogs drop into rest faster that first night.</p>
+        <p class="tip"><strong>Trainer tip:</strong> Bring a worn T‑shirt. Familiar scent helps most dogs drop into rest faster that first night.</p>
       </article>
       <aside class="card">
-        <h3>What if my dog’s fussy?</h3>
+        <h3>What if My Dog’s Fussy?</h3>
         <p>We follow your notes first. If appetite dips, we can switch to our gentle <em>kibble & cooked chicken</em> fallback (logged in your portal) so dogs don’t go to bed hungry.</p>
       </aside>
     </section>
@@ -282,16 +338,16 @@
     <!-- Meals & meds -->
     <section id="meals-meds" class="grid">
       <article class="card">
-        <h2>Meals & medications</h2>
+        <h2>Feeding, Supplements & Medications During Boarding</h2>
         <ul class="checklist">
-          <li>Use labelled portions with AM/PM and any add-ins.</li>
+          <li>Use labelled portions with AM/PM and any add‑ins.</li>
           <li>Tell us about food allergies or intolerances.</li>
           <li>Med timings: exact clock times or “with meal”.</li>
           <li>Emergency vet preference + microchip # in your notes.</li>
         </ul>
       </article>
       <aside class="card">
-        <h3>Meds we can give</h3>
+        <h3>Meds We Can Give</h3>
         <p>Tablets, liquids, powders and simple topicals — just provide original packaging and written instructions. Reach out before booking if your dog needs injections.</p>
       </aside>
     </section>
@@ -299,23 +355,23 @@
     <!-- Safety & hygiene -->
     <section id="safety" class="grid">
       <article class="card">
-        <h2>Safety, hygiene & walks</h2>
+        <h2>Safety, Hygiene & Daily Walks (One‑Guest‑Only)</h2>
         <ul class="checklist">
-          <li><strong>One guest only.</strong> No multi-dog boarding dynamics.</li>
-          <li><strong>Daily 45-minute solo walk</strong> (weather-sensible) on familiar routes.</li>
+          <li><strong>One guest only.</strong> No multi‑dog boarding dynamics.</li>
+          <li><strong>Daily 45‑minute solo walk</strong> (weather‑sensible) on familiar routes.</li>
           <li><strong>Cleaned gear</strong> between guests; dedicated food/water bowls.</li>
-          <li><strong>Escape-proof harness</strong> and double-check ID on arrival.</li>
+          <li><strong>Escape‑proof harness</strong> and double‑check ID on arrival.</li>
         </ul>
       </article>
       <aside class="card">
-        <h3>Weather plan</h3>
-        <p>Hot/windy days get shorter, shadier loops and extra indoor enrichment. See our <a href="/blog/rainy-day-enrichment.html">Rainy-Day Enrichment Games</a> for examples we use.</p>
+        <h3>Weather Plan</h3>
+        <p>Hot/windy days get shorter, shadier loops and extra indoor enrichment. See our <a href="/blog/rainy-day-enrichment.html">Rainy‑Day Enrichment Games</a> for examples we use.</p>
       </aside>
     </section>
 
     <!-- Updates & comms -->
     <section id="updates" class="card">
-      <h2>Updates you’ll receive</h2>
+      <h2>What Updates You’ll Receive During a Woof Club Stay</h2>
       <ul class="checklist">
         <li><strong>Arrival note + photo</strong> once settled.</li>
         <li><strong>Daily photo & short summary</strong> of meals, toilets, sleep and walk.</li>
@@ -327,15 +383,15 @@
     <!-- Pickup & aftercare -->
     <section id="pickup" class="grid">
       <article class="card">
-        <h2>Pickup & aftercare</h2>
+        <h2>Pickup & Aftercare (Decompression Wins)</h2>
         <ul class="checklist">
           <li>We’ll hand over a quick summary (meals, walks, sleep, notes).</li>
-          <li>Plan a low-key evening: water, short sniff, light meal, early bed.</li>
+          <li>Plan a low‑key evening: water, short sniff, light meal, early bed.</li>
           <li>Skip the dog park the next day — decompression first.</li>
         </ul>
       </article>
       <aside class="card">
-        <h3>Common post-stay behaviours</h3>
+        <h3>Common Post‑Stay Behaviours</h3>
         <ul class="checklist">
           <li><strong>Extra sleepy:</strong> normal after new smells and stimulation.</li>
           <li><strong>Slightly clingy:</strong> a settle mat at home helps reset.</li>
@@ -345,28 +401,28 @@
     </section>
 
     <!-- Postcode checker -->
-    <section id="postcode">
-      <h2>Postcode coverage — quick check</h2>
+    <section id="postcode" class="card">
+      <h2>South Melbourne Boarding & Walking Postcodes — Quick Check</h2>
       <p>We’re based in South Melbourne and regularly host dogs from Albert Park, Middle Park, Port Melbourne and Southbank. Check your postcode:</p>
       <form class="pc-form" id="pc-form" action="/service-areas.html" method="get" role="search" aria-label="Postcode coverage checker">
         <label for="pc-input" class="visually-hidden">Enter your postcode</label>
         <input id="pc-input" name="postcode" inputmode="numeric" pattern="[0-9]*" maxlength="4" placeholder="e.g., 3205" aria-describedby="pc-help" />
-        <button type="submit" class="btn button-primary">Check coverage</button>
+        <button type="submit" class="btn btn-primary">Check coverage</button>
         <small id="pc-help">We currently service 3205, 3206, 3207 and 3006.</small>
       </form>
       <div class="pc-result" id="pc-result" aria-live="polite"></div>
       <script>
         (function(){
-          const form = document.getElementById('pc-form');
-          const input = document.getElementById('pc-input');
-          const result = document.getElementById('pc-result');
-          const supported = new Set(['3205','3206','3207','3006']);
-          form.addEventListener('submit', (e)=>{
-            if(!input.value) return;
-            const pc = input.value.replace(/\D/g,'').slice(0,4);
+          const form=document.getElementById('pc-form');
+          const input=document.getElementById('pc-input');
+          const result=document.getElementById('pc-result');
+          const supported=new Set(['3205','3206','3207','3006']);
+          form.addEventListener('submit',(e)=>{
+            e.preventDefault();
+            const pc=(input.value||'').replace(/\D/g,'').slice(0,4);
             if(!pc) return;
             result.textContent = supported.has(pc)
-              ? `Yes — we service ${pc}. You can request boarding now.`
+              ? `Yes — we service ${pc}. You can request Woof Club boarding now.`
               : `We don’t regularly service ${pc} yet. Message us — we may still help.`;
           });
         })();
@@ -375,22 +431,22 @@
 
     <!-- Memberships -->
     <section id="memberships" class="callout">
-      <h2 style="margin:.2rem 0 .4rem">Keep calm between trips — memberships</h2>
-      <p>Weekly rhythm beats last-minute cramming. Our <a href="/memberships.html">memberships</a> keep dogs in a low-arousal groove so boarding feels like an easy extension of home.</p>
+      <h2 style="margin:.2rem 0 .4rem">Keep Calm Between Trips — Walking Memberships</h2>
+      <p>Weekly rhythm beats last‑minute cramming. Our <a href="/memberships.html">memberships</a> keep dogs in a low‑arousal groove so boarding feels like an easy extension of home.</p>
       <div class="cta-row">
-        <a class="btn" href="/membership-starter.html">Starter — 4 walks/month</a>
-        <a class="btn" href="/membership-growth.html">Growth — 10 walks/month</a>
-        <a class="btn button-primary" href="/membership-unlimited.html">Unlimited — Weekdays</a>
+        <a class="btn btn-ghost" href="/membership-starter.html">Starter — 4 walks/month</a>
+        <a class="btn btn-ghost" href="/membership-growth.html">Growth — 10 walks/month</a>
+        <a class="btn btn-primary" href="/unlimited-dog-walks.html">Unlimited — Weekdays</a>
       </div>
     </section>
 
     <!-- Boarding -->
     <section id="boarding" class="callout">
-      <h2 style="margin:.2rem 0 .4rem">Weekend Woof Club — one guest only</h2>
-      <p>Our <a href="/boarding-services.html">boutique boarding</a> hosts <strong>one guest only</strong> for calmer, safer stays. Daily solo walk, cosy home setup, photo updates — and a first-timer video visit so you can see it all.</p>
+      <h2 style="margin:.2rem 0 .4rem">Woof Club Boarding — One Guest Only, 7 Nights</h2>
+      <p>Our <a href="/boarding-services.html">boutique boarding</a> hosts <strong>one guest only</strong> for calmer, safer stays, now open <strong>seven nights</strong> a week. Daily solo walk, cosy home setup, photo updates — and a first‑timer video visit so you can see it all.</p>
       <div class="cta-row">
-        <a class="btn button-secondary" href="/boarding-services.html">See Boarding</a>
-        <a class="btn button-primary" href="/book-boarding.html">Request Boarding</a>
+        <a class="btn btn-ghost" href="/boarding-services.html">See Boarding</a>
+        <a class="btn btn-primary" href="/book-boarding/?coupon=BOARDING20">Request Boarding</a>
       </div>
     </section>
 
@@ -400,138 +456,110 @@
     <section id="related" aria-label="Related reading">
       <h2>Related Reading</h2>
       <ul>
-        <li><a href="/blog/weekend-woof-club-checklist.html">Weekend Woof Club: First-Timer Checklist</a></li>
         <li><a href="/blog/why-solo-walks.html">Why Solo Walks Reduce Stress</a></li>
         <li><a href="/blog/solo-vs-pack-walks.html">Solo vs Pack Walks — What’s Better?</a></li>
-        <li><a href="/blog/best-dog-walks-south-melbourne.html">Best Dog-Friendly Spots in South Melbourne</a></li>
-        <li><a href="/blog/rainy-day-enrichment.html">Rainy-Day Enrichment Games</a></li>
+        <li><a href="/blog/best-dog-walks-south-melbourne.html">Best Dog‑Friendly Spots in South Melbourne</a></li>
+        <li><a href="/blog/rainy-day-enrichment.html">Rainy‑Day Enrichment Games</a></li>
+        <li><a href="/blog/dog-friendly-cafes-south-melbourne.html">Dog‑Friendly Cafés Nearby</a></li>
       </ul>
       <p class="cta-row">
-        <a class="btn button-primary" href="/book-boarding.html">Request Boarding</a>
-        <a class="btn" href="/book-dog-walk/index.html">Book Walks — 50% Off</a>
+        <a class="btn btn-primary" href="/book-boarding/?coupon=BOARDING20">Request Boarding</a>
+        <a class="btn btn-ghost" href="/book-dog-walk/?coupon=WALK50">Book Walks — 50% Off</a>
       </p>
     </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="site-footer" role="contentinfo">
-    <div class="footer-banner">
-      <picture>
-        <source srcset="/images/brand/footer-banner-1600x600.webp" media="(min-width: 768px)">
-        <img src="/images/brand/footer-banner-800x300.webp" alt="Happy dogs in Melbourne" loading="lazy" width="800" height="300">
-      </picture>
+  <!-- Impact ribbon (same as index) -->
+  <div class="impact-ribbon" role="note" aria-label="Walks that do more: 10% donated">
+    <div class="impact-inner">
+      <span class="impact-emoji" aria-hidden="true">💛</span>
+      <strong>Walks That Do More:</strong> We donate <strong>10% of profits</strong> to local rescue shelters.
+      <a class="impact-cta" href="/community.html">See our impact →</a>
     </div>
+  </div>
 
+  <!-- Footer (unified with index) -->
+  <footer class="site-footer" role="contentinfo">
     <div class="container footer-grid">
       <section class="footer-brand">
         <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="60" height="60" loading="lazy">
-        <p><strong>The Woof of Walk Street</strong><br>
-          <a class="footer-map" href="https://maps.app.goo.gl/YnEoSPwhGocUZyWL9?g_st=ipc" target="_blank" rel="noopener">South Melbourne, VIC</a> · Mon–Fri 7am–7pm<br>
-          <a href="tel:+61456754050">+61 456 754 050</a> · <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a>
-        </p>
-        <div class="footer-socials">
-          <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram"><img src="/images/social/instagram.svg" alt="" width="24" height="24"></a>
-          <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook"><img src="/images/social/facebook.svg" alt="" width="24" height="24"></a>
-          <a href="https://x.com/woofofwalkstreet" aria-label="X"><img src="/images/social/twitter.svg" alt="" width="24" height="24"></a>
-        </div>
-        <p class="cta-buttons" style="margin-top:.4rem">
-          <a class="btn button-primary" href="/book-dog-walk/index.html">Book Walks</a>
-          <a class="btn button-secondary" href="/book-boarding.html">Request Boarding</a>
-        </p>
+        <p><strong>The Woof of Walk Street</strong><br><a class="footer-map" href="#" style="color:var(--muted)">South Melbourne, VIC</a></p>
+        <p class="cta-buttons"><a class="btn btn-primary" href="/book-dog-walk/?coupon=WALK50">Book Walks</a></p>
       </section>
 
-      <nav class="footer-col" aria-label="Primary">
+      <nav class="footer-col" aria-label="Services">
         <h3>Services</h3>
-        <ul>
+        <ul class="footlist">
           <li><a href="/services.html">All Services</a></li>
-          <li><a href="/dog-walking-south-melbourne.html">Dog Walking South Melbourne</a></li>
-          <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
+          <li><a href="/dog-walking-south-melbourne.html">Dog Walking</a></li>
+          <li><a href="/boarding-services.html">Boutique Boarding — Woof Club</a></li>
           <li><a href="/memberships.html">Memberships</a></li>
-          <li><a href="/service-areas.html">Service Areas</a></li>
-          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
         </ul>
       </nav>
 
-      <section class="footer-col collapsible">
-        <button class="collapse-btn" aria-expanded="false" aria-controls="support-list">Support</button>
-        <ul id="support-list">
-          <li><a href="/about.html">About</a></li>
-          <li><a href="/testimonials.html">Testimonials</a></li>
-          <li><a href="/gallery.html">Photos & Videos</a></li>
-          <li><a href="/blog/index.html" aria-current="page">Blog</a></li>
-          <li><a href="/faq.html">FAQs</a></li>
+      <nav class="footer-col" aria-label="Areas">
+        <h3>Areas Served</h3>
+        <ul class="footlist">
+          <li><a href="/dog-walking-south-melbourne.html">South Melbourne</a></li>
+          <li><a href="/dog-walker-albert-park.html">Albert Park</a></li>
+          <li><a href="/dog-walker-middle-park.html">Middle Park</a></li>
+          <li><a href="/dog-walker-port-melbourne.html">Port Melbourne</a></li>
+          <li><a href="/dog-walker-southbank.html">Southbank</a></li>
+          <li><a href="/dog-walker-south-yarra.html">South Yarra</a></li>
         </ul>
-      </section>
+      </nav>
 
-      <section class="footer-col collapsible">
-        <button class="collapse-btn" aria-expanded="false" aria-controls="legal-list">Legal</button>
-        <ul id="legal-list">
-          <li><a href="/privacy.html">Privacy</a></li>
-          <li><a href="/terms.html">Terms</a></li>
-          <li><a href="/sitemap.html">Sitemap</a></li>
+      <nav class="footer-col" aria-label="Info & Legal">
+        <h3>Info & Legal</h3>
+        <ul class="footlist">
+          <li><a href="/faqs.html">FAQs</a></li>
+          <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="/terms-and-conditions.html">Full Terms & Conditions</a></li>
+          <li><a href="/mini-terms.html">Mini Terms</a></li>
+          <li><a href="/community.html">Community Impact</a></li>
         </ul>
-      </section>
-    </div>
-
-    <div class="container footer-geo">
-      Solo Dog Walking & Boutique Boarding across <strong>South Melbourne</strong>, <strong>Albert Park</strong>, <strong>Port Melbourne</strong>, <strong>Middle Park</strong> and <strong>Southbank</strong>.
+      </nav>
     </div>
 
     <div class="container footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-
-    <!-- Footer accordions (mobile) -->
-    <script>
-      document.querySelectorAll('.collapsible .collapse-btn').forEach(btn=>{
-        btn.addEventListener('click', ()=>{
-          const list = document.getElementById(btn.getAttribute('aria-controls'));
-          const open = btn.getAttribute('aria-expanded') === 'true';
-          btn.setAttribute('aria-expanded', String(!open));
-          list.hidden = open;
-        });
-        const list = document.getElementById(btn.getAttribute('aria-controls'));
-        if (window.matchMedia('(max-width:640px)').matches) list.hidden = true;
-      });
-    </script>
-
-    <!-- Global TTP click tracker -->
-    <script>
-      (function () {
-        document.addEventListener('click', function (e) {
-          const a = e.target.closest('a');
-          if (!a) return;
-          const href = (a.getAttribute('href') || '').toLowerCase();
-          if (href.includes('timetopet.com/portal/woofofwalkstreet')) {
-            try {
-              gtag('event','ttp_booking_click',{
-                'send_to':'AW-17527927259/ePjJCLT8p6cbENvj-6VB','value':1.0,'currency':'AUD'
-              });
-            } catch (err) {}
-          }
-        }, { capture: true });
-      })();
-    </script>
+    <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
   </footer>
 
-  <!-- Services flyout a11y -->
+  <!-- Dropdown accessibility -->
   <script>
-    (function () {
-      const btn  = document.querySelector('.nav-group-btn[aria-controls="nav-services"]');
+    (function(){
+      const navGroup = document.querySelector('.nav-group');
+      const btn = document.querySelector('.nav-group-btn');
       const list = document.getElementById('nav-services');
-      if (!btn || !list) return;
-      const sync = () => { list.hidden = btn.getAttribute('aria-expanded') !== 'true'; };
-      sync();
-      btn.addEventListener('click', () => {
-        const open = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', String(!open)); sync();
+      if(!navGroup || !btn || !list) return;
+      btn.addEventListener('click', (e)=>{
+        e.preventDefault();
+        const open = navGroup.getAttribute('aria-expanded') === 'true';
+        navGroup.setAttribute('aria-expanded', String(!open));
+        btn.setAttribute('aria-expanded', String(!open));
       });
-      document.addEventListener('click', (e) => {
-        if (!btn.contains(e.target) && !list.contains(e.target)) {
-          btn.setAttribute('aria-expanded', 'false'); sync();
+      document.addEventListener('click', (e)=>{
+        if(!navGroup.contains(e.target)){
+          navGroup.setAttribute('aria-expanded','false');
+          btn.setAttribute('aria-expanded','false');
         }
-      }, { capture: true });
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') { btn.setAttribute('aria-expanded', 'false'); sync(); }
+      });
+      document.addEventListener('keydown', (e)=>{
+        if(e.key==='Escape'){
+          navGroup.setAttribute('aria-expanded','false');
+          btn.setAttribute('aria-expanded','false');
+          btn.focus();
+        }
+      });
+      let lastIsMobile = window.innerWidth <= 860;
+      window.addEventListener('resize', ()=>{
+        const isMobile = window.innerWidth <= 860;
+        if(isMobile !== lastIsMobile){
+          navGroup.setAttribute('aria-expanded','false');
+          btn.setAttribute('aria-expanded','false');
+          lastIsMobile = isMobile;
+        }
       });
     })();
   </script>

@@ -1,3 +1,5 @@
+Here’s your page with all the CRO tweaks merged in (preconnect, coupon confirmation, direct-link offset, mobile height, noscript fallback, and event tracking). It keeps your countdown, coupon + GCLID, and smooth-scroll behavior.
+
 <!DOCTYPE html>
 <html lang="en-AU">
 <head>
@@ -7,6 +9,9 @@
   <meta name="description" content="New clients: 50% off a one-dog, 45-minute solo walk in South Melbourne. GPS route + photo proof after every session. Limited time." />
   <link rel="icon" href="/images/brand/favicon.ico" />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Speed up Acuity -->
+  <link rel="preconnect" href="https://app.acuityscheduling.com" crossorigin>
+  <link rel="dns-prefetch" href="https://app.acuityscheduling.com">
 
   <style>
     :root{
@@ -102,6 +107,11 @@
     .scheduler-wrap{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);
       border-radius:14px;box-shadow:0 18px 42px rgba(0,0,0,.18);padding:8px}
     .scheduler-frame{width:100%;height:720px;border:0;border-radius:12px;background:#fff}
+    /* mobile min-height so the widget never feels cramped */
+    @media (max-width:480px){ .scheduler-frame{height:860px} }
+    /* coupon confirmation styling */
+    .coupon-ok{background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.35);
+      color:#c8f5e4;padding:8px 10px;border-radius:8px;display:inline-block}
   </style>
 </head>
 <body>
@@ -125,7 +135,7 @@
         <a href="/about.html">About</a>
         <a href="/testimonials.html">Testimonials</a>
         <a href="/contact.html">Contact</a>
-        <!-- changed to scroll-to-scheduler -->
+        <!-- scroll-to-scheduler -->
         <a class="btn btn-primary book-btn" href="#book">Claim 50% Walk</a>
       </nav>
     </div>
@@ -152,7 +162,7 @@
             <span class="price-anchor"><span class="old-price">$100</span>$50</span>
           </div>
           <div class="cta-row">
-            <!-- changed to scroll-to-scheduler -->
+            <!-- scroll-to-scheduler -->
             <a class="btn btn-primary btn-large book-btn" href="#book">Secure My 50% Off Walk Now →</a>
             <a class="btn btn-ghost btn-large" href="tel:+61370731175">Call Us to Ask a Question</a>
           </div>
@@ -197,7 +207,7 @@
       </div>
 
       <div class="cta-row" style="margin-top:16px">
-        <!-- changed to scroll-to-scheduler -->
+        <!-- scroll-to-scheduler -->
         <a class="btn btn-primary book-btn" href="#book">Claim Your 50% Off First Walk →</a>
         <a class="btn btn-ghost" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031912">Prefer a Quick 10-min Chat?</a>
       </div>
@@ -240,7 +250,7 @@
       <details class="faq"><summary>What areas do you cover?</summary><p>South Melbourne, Albert Park, Middle Park, Port Melbourne, Southbank & South Yarra.</p></details>
 
       <div class="cta-row" style="margin-top:16px">
-        <!-- changed to scroll-to-scheduler -->
+        <!-- scroll-to-scheduler -->
         <a class="btn btn-primary btn-large book-btn" href="#book">Secure Your Spot Before The Offer Ends →</a>
         <a class="btn btn-ghost btn-large" href="tel:+61370731175">Questions? Call us (03) 7073 1175</a>
       </div>
@@ -253,7 +263,7 @@
         <h2 class="h2">Don't Miss Out: Claim Your Discounted Trial Today</h2>
         <p style="color:#2b2b2b;max-width:65ch">This is the easiest way to experience the difference a solo, proof-driven walk makes. Pick a time, we arrive at your door, and your dog gets a calm 45-minute walk. New clients get <strong>50% off ($50 trial)</strong>, but this offer is strictly limited.</p>
         <div class="cta-row">
-          <!-- changed to scroll-to-scheduler -->
+          <!-- scroll-to-scheduler -->
           <a class="btn btn-primary btn-large book-btn" href="#book">Lock in 50% Off & Book Now →</a>
           <a class="btn" style="background:#0b0e12;color:#fff;border:1px solid #2a3440" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031912" target="_blank" rel="noopener">Book a 10-min Chat First</a>
         </div>
@@ -261,22 +271,29 @@
     </div>
   </section>
 
-  <!-- NEW: Embedded scheduler that all book buttons scroll to -->
+  <!-- Embedded scheduler -->
   <section id="book" class="section" aria-label="Choose a time">
     <div class="container">
       <h2 class="h2">Choose a Time</h2>
-      <p class="meta" style="margin-bottom:12px">
-        Your discount code <strong>WALK50</strong> is applied automatically.
-      </p>
+      <p class="meta" id="coupon-note" style="margin-bottom:12px">Applying discount code <strong>WALK50</strong>…</p>
+      <p class="meta" style="margin:8px 0 12px">⏱️ <strong>Takes ~60 seconds.</strong> No payment needed for your trial booking.</p>
 
       <div class="scheduler-wrap">
         <iframe id="acuity-frame" title="Book a Walk" class="scheduler-frame" loading="lazy" src=""></iframe>
       </div>
+
+      <noscript>
+        <p style="margin-top:12px">
+          JavaScript is required to book online. You can
+          <a class="btn btn-primary" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931&coupon=WALK50" target="_blank" rel="noopener">open the booking page here</a>
+          or call <a href="tel:+61370731175">(03) 7073 1175</a>.
+        </p>
+      </noscript>
     </div>
   </section>
 
   <div class="sticky-cta" role="region" aria-label="Quick booking">
-    <!-- changed to scroll-to-scheduler -->
+    <!-- scroll-to-scheduler -->
     <a class="btn btn-primary book-btn" href="#book">Claim 50% Walk</a>
     <a class="btn btn-ghost" href="tel:+61370731175">Call</a>
   </div>
@@ -319,10 +336,20 @@
       const params = new URLSearchParams(location.search);
       const coupon = params.get('coupon') || 'WALK50';
       const base = 'https://app.acuityscheduling.com/schedule.php';
-      // CHANGED: appointmentType set to 86031931 (Casual Solo Walk)
+      // appointmentType = 86031931 (Casual Solo Walk)
       const src = `${base}?owner=37607219&appointmentType=86031931&coupon=${encodeURIComponent(coupon)}`;
       const frame = document.getElementById('acuity-frame');
       if(frame) frame.src = src;
+
+      // Coupon confirmation UI
+      if (frame) {
+        const note = document.getElementById('coupon-note');
+        const applied = (new URL(frame.src)).searchParams.get('coupon');
+        if (applied) {
+          note.className='meta coupon-ok';
+          note.innerHTML = `Your discount code <strong>${applied}</strong> is applied automatically.`;
+        }
+      }
 
       // Extra-smooth scroll with offset for sticky header so widget isn't hidden
       const links = document.querySelectorAll('.book-btn[href^="#book"]');
@@ -336,6 +363,15 @@
         a.addEventListener('click', e=>{
           if(target){ e.preventDefault(); offsetScroll(target); }
         });
+      });
+
+      // If user lands directly on #book, offset after load so header doesn't cover it
+      window.addEventListener('load', ()=>{
+        if (location.hash === '#book' && target) {
+          const headerH = document.querySelector('.site-header')?.offsetHeight || 0;
+          const top = target.getBoundingClientRect().top + window.scrollY - (headerH + 10);
+          window.scrollTo({ top, behavior: ('instant' in window) ? 'instant' : 'auto' });
+        }
       });
     })();
   </script>
@@ -366,7 +402,7 @@
 
         // Required params
         u.searchParams.set("owner", "37607219");
-        // CHANGED: appointmentType set to 86031931 (Casual Solo Walk)
+        // appointmentType = 86031931 (Casual Solo Walk)
         u.searchParams.set("appointmentType", "86031931");
 
         // Keep your coupon logic
@@ -382,6 +418,24 @@
       } catch (e) {}
     });
   })();
+  </script>
+
+  <!-- Lightweight event tracking (works if gtag is present) -->
+  <script>
+    (function(){
+      const send = (action,label)=>{ try{ gtag('event', action, {event_category:'booking', event_label:label}); }catch(e){} };
+
+      document.querySelectorAll('.book-btn').forEach(btn=>{
+        btn.addEventListener('click', ()=>send('cta_click','scroll_to_scheduler'));
+      });
+      document.querySelectorAll('a[href^="tel:"]').forEach(a=>{
+        a.addEventListener('click', ()=>send('call_click','tel_top_or_bottom'));
+      });
+      const frame = document.getElementById('acuity-frame');
+      if (frame) {
+        frame.addEventListener('load', ()=>send('scheduler_loaded','acuity_iframe'));
+      }
+    })();
   </script>
 </body>
 </html>

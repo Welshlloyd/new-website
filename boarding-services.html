@@ -66,12 +66,7 @@
        "url":"https://www.woofofwalkstreet.com/boarding-services.html",
        "description":"One-guest-only, home-style dog boarding with solo walks and photo updates. Calm routines ideal for anxious or reactive dogs.",
        "offers":{"@type":"Offer","priceCurrency":"AUD","price":"150","availability":"https://schema.org/InStock","url":"https://www.woofofwalkstreet.com/book-boarding.html"}
-      },
-      {"@type":"FAQPage","mainEntity":[
-        {"@type":"Question","name":"Is this suitable for anxious or reactive dogs?","acceptedAnswer":{"@type":"Answer","text":"Yes. We only host one dog at a time, keep a quiet home routine and use solo, GPS-tracked walks. This reduces triggers and helps dogs settle."}},
-        {"@type":"Question","name":"What’s included each day?","acceptedAnswer":{"@type":"Answer","text":"Multiple solo walks, enrichment time, feeding to your routine, medication given as instructed, and daily photo/video updates."}},
-        {"@type":"Question","name":"Can my dog sleep on the bed or sofa?","acceptedAnswer":{"@type":"Answer","text":"Yes. We mirror your home routine — bed, sofa or their own bed/crate if that’s what they prefer."}}
-      ]}
+      }
     ]
   }
   </script>
@@ -83,37 +78,26 @@
   <link rel="stylesheet" href="/css/mini.css"/>
   <link rel="stylesheet" href="/css/styles.css"/>
 
+  <!-- Speed up Acuity -->
+  <link rel="preconnect" href="https://app.acuityscheduling.com" crossorigin>
+  <link rel="dns-prefetch" href="https://app.acuityscheduling.com">
+
   <style>
-    /* ===== Contrast tuning (lighter panels & clearer text) ===== */
     :root{
-      --bg:#0b0e12;                /* page background */
-      --panel:#161d27;             /* lighter than bg (↑ contrast) */
-      --panel-soft:#1a2230;        /* callouts / hover */
-      --text:#f1f6fd;              /* brighter body text */
-      --muted:#c3ceda;             /* meta text */
-      --line:#314155;              /* clearer borders */
-      --brand:#ffd166;
-      --brand-ink:#0b0e12;
-      --accent:#5af2c6;
-      --container:1100px;
+      --bg:#0b0e12; --panel:#161d27; --panel-soft:#1a2230; --text:#f1f6fd; --muted:#c3ceda; --line:#314155;
+      --brand:#ffd166; --brand-ink:#0b0e12; --accent:#5af2c6; --container:1100px;
       --sale-bg:linear-gradient(135deg,#FF512F 0%,#DD2476 100%);
-      --shadow:0 18px 46px rgba(0,0,0,.40);
-      --radius:14px;
-      --speed:.22s;
+      --shadow:0 18px 46px rgba(0,0,0,.40); --radius:14px; --speed:.22s;
     }
     html,body{background:var(--bg);color:var(--text)}
     img{max-width:100%;height:auto}
     .container{max-width:var(--container);margin:0 auto;padding:0 16px}
     body,p,li,span,button,input,textarea{font-family:'Work Sans',system-ui,sans-serif;line-height:1.62;letter-spacing:.1px}
     h1,h2,h3,.nav-group-btn{font-family:'Space Grotesk',system-ui,sans-serif}
-    h1,h2{letter-spacing:.2px}
-    h1{color:#ffffff; text-shadow:0 1px 0 rgba(0,0,0,.25);}
-
-    /* Promo ribbon */
+    h1{color:#fff;text-shadow:0 1px 0 rgba(0,0,0,.25)}
     .promo-ribbon{position:relative;z-index:1100;background:var(--sale-bg);color:#fff;border-bottom:1px solid rgba(255,255,255,.1);font-weight:700;text-align:center;padding:8px}
     .promo-code{background:rgba(0,0,0,.3);padding:2px 6px;border-radius:4px;font-family:monospace}
 
-    /* Header/nav (stronger backdrop for readability) */
     .site-header{position:sticky;top:0;z-index:1000;background:rgba(15,20,28,.94);backdrop-filter:saturate(120%) blur(10px);border-bottom:1px solid rgba(255,255,255,.10)}
     .navbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
     .brand{display:flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none;font-weight:900}
@@ -128,7 +112,6 @@
     .nav-group[aria-expanded="true"] .nav-group-list{display:block}
     @media (min-width:861px){.nav-group:hover .nav-group-list,.nav-group:focus-within .nav-group-list{display:block}}
 
-    /* Buttons */
     .cta-buttons{display:flex;gap:10px;flex-wrap:wrap}
     .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:12px 18px;border-radius:999px;border:1px solid transparent;text-decoration:none;font-weight:800;letter-spacing:.02em;transition:all var(--speed)}
     .btn-primary{background:var(--brand);color:#111;box-shadow:0 10px 26px rgba(255,209,102,.28)}
@@ -136,65 +119,46 @@
     .btn-ghost:hover{border-color:#fff;background:#ffffff18}
     .btn-sale{background:var(--sale-bg);color:#fff;border:none;box-shadow:0 10px 25px rgba(221,36,118,.4)}
 
-    /* Hero (more luminous gradient & brighter copy) */
-    .hero{
-      padding:28px 0 18px;
-      background:
-        radial-gradient(1200px 600px at 20% -20%,rgba(255,209,102,.12),transparent 60%),
-        linear-gradient(120deg,#0f1621,#172236,#0f1621);
-      border-bottom:1px solid rgba(255,255,255,.12)
-    }
-    .hero .subhead{max-width:72ch;color:#e3e8f0}
-
+    .hero{padding:28px 0 18px;background:radial-gradient(1200px 600px at 20% -20%,rgba(255,209,102,.12),transparent 60%),linear-gradient(120deg,#0f1621,#172236,#0f1621);border-bottom:1px solid rgba(255,255,255,.12)}
+    .subhead{max-width:72ch;color:#e3e8f0}
     .post-hero img{max-width:1100px;border-radius:14px;display:block;margin:12px auto;box-shadow:0 16px 38px rgba(0,0,0,.35)}
 
-    /* Sections / cards (lighter panels) */
     .section{padding:22px 0}
     .grid{display:grid;gap:16px}
     @media(min-width:780px){.grid.two{grid-template-columns:1fr 1fr}}
-    .card{
-      border:1px solid var(--line);
-      border-radius:12px;
-      padding:16px;
-      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03)), var(--panel);
-      box-shadow:0 8px 24px rgba(0,0,0,.28)
-    }
+    .card{border:1px solid var(--line);border-radius:12px;padding:16px;background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03)), var(--panel);box-shadow:0 8px 24px rgba(0,0,0,.28)}
     .card h2,.card h3{color:#f7fbff}
     .card p,.card li{color:#e7edf6}
-    .callout{
-      border:2px solid var(--brand);
-      border-radius:14px;
-      background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.05)), var(--panel-soft);
-      padding:16px;
-      box-shadow:0 0 0 2px rgba(255,209,102,.15), 0 12px 30px rgba(0,0,0,.28)
-    }
+    .callout{border:2px solid var(--brand);border-radius:14px;background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.05)), var(--panel-soft);padding:16px;box-shadow:0 0 0 2px rgba(255,209,102,.15), 0 12px 30px rgba(0,0,0,.28)}
 
-    /* Checklists */
     .checklist{list-style:none;padding-left:0}
     .checklist li{position:relative;padding-left:28px;margin:.52rem 0}
     .checklist li::before{content:"✔";position:absolute;left:0;top:0;color:#10b981;font-weight:900}
 
-    /* Blog cards */
     .blog-cards{display:grid;gap:14px}
     @media(min-width:780px){.blog-cards{grid-template-columns:repeat(3,1fr)}}
     .blog-card{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:rgba(255,255,255,.06)}
     .blog-card .inner{padding:12px}
     .blog-card h3{margin:.2rem 0 .4rem;font-size:1.05rem;color:#fff}
 
-    /* Sticky mobile CTA */
     .sticky-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:999;background:#ffffffee;border:1px solid #d1d5db;box-shadow:0 10px 24px rgba(0,0,0,.24);border-radius:16px;display:flex;gap:10px;justify-content:center;align-items:center;padding:10px}
     .sticky-cta .btn{border-radius:999px}
     @media(min-width:860px){.sticky-cta{display:none}}
 
-    /* Footer */
     .site-footer{padding-top:40px;border-top:1px solid var(--line);margin-top:40px}
     .footer-grid{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap;padding-bottom:40px}
     .footer-brand{max-width:300px}
     .footer-col{flex-basis:150px}
     .footlist{list-style:none;padding:0;margin:0}
     .footlist a{text-decoration:none;color:#c3ceda;transition:color var(--speed)}
-    .footlist a:hover{color:var(--brand)}
+    .footlist a:hover{color:#ffd166}
     .footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding:15px 0;text-align:center;font-size:.85rem;color:#c3ceda}
+
+    /* Embedded schedulers */
+    .scheduler-wrap{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;box-shadow:0 18px 42px rgba(0,0,0,.18);padding:8px}
+    .scheduler-frame{width:100%;height:720px;border:0;border-radius:12px;background:#fff}
+    @media (max-width:480px){ .scheduler-frame{height:860px} }
+    .coupon-ok{background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.35);color:#c8f5e4;padding:8px 10px;border-radius:8px;display:inline-block}
   </style>
 </head>
 
@@ -232,7 +196,8 @@
         <a href="/blog/index.html">Blog</a>
         <a href="/contact.html">Contact</a>
         <a href="/search.html">Search</a>
-        <a class="btn btn-primary nav-cta btn-book-boarding" href="/book-boarding/?coupon=BOARDING20" data-utm-medium="header">Book Boarding — 20% Off</a>
+        <!-- CHANGED: header CTA scrolls to embedded booking -->
+        <a class="btn btn-primary nav-cta book-stay-btn" href="#book-stay" data-utm-medium="header">Book Boarding — 20% Off</a>
       </nav>
       <div class="nav-scrim" aria-hidden="true"></div>
     </div>
@@ -250,7 +215,9 @@
         </div>
         <p class="meta">South Melbourne • One-guest-only • No kennels • GPS-tracked solo walks • Photo updates</p>
         <p class="cta-buttons" style="justify-content:center">
-          <a class="btn btn-primary btn-book-boarding" href="/book-boarding/?coupon=BOARDING20" data-utm-medium="hero">Check Availability — 20% Off</a>
+          <!-- CHANGED: scroll to embedded booking -->
+          <a class="btn btn-primary book-stay-btn" href="#book-stay" data-utm-medium="hero">Check Availability — 20% Off</a>
+          <!-- Chat first (10-min) still direct to Acuity -->
           <a class="btn btn-ghost" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031912&utm_source=website&utm_medium=hero&utm_campaign=10min_catchup" target="_blank" rel="noopener">Chat first — Free 10-min</a>
         </p>
       </div>
@@ -278,7 +245,8 @@
             <li><strong>Weekends (2–3 nights)</strong> — popular Fri–Sun / Fri–Mon bundles</li>
             <li><strong>Long stays (7–14 nights)</strong> — deeper routine = calmer dog</li>
           </ul>
-          <p class="cta-buttons"><a class="btn btn-primary btn-book-boarding" href="/book-boarding/?coupon=BOARDING20" data-utm-medium="rates">Book Woof Club — 20% Off</a></p>
+          <!-- CHANGED: scroll to embedded booking -->
+          <p class="cta-buttons"><a class="btn btn-primary book-stay-btn" href="#book-stay" data-utm-medium="rates">Book Woof Club — 20% Off</a></p>
         </aside>
       </div>
     </section>
@@ -290,7 +258,7 @@
           <h2>How Woof Club Boarding Works (Step-by-Step)</h2>
           <ol>
             <li><strong>Quick intro call</strong> or message to confirm fit and dates.</li>
-            <li><strong>Simple booking</strong> via our online scheduler — instant confirmation.</li>
+            <li><strong>Simple booking</strong> below — instant confirmation.</li>
             <li><strong>Packing list</strong> sent (meals pre-portioned, harness/ID, comfort item).</li>
             <li><strong>Calm arrival</strong>: sniff tour + short decompression loop.</li>
             <li><strong>Daily rhythm</strong>: solo walk, rest, enrichment, routine mealtimes, early lights-down.</li>
@@ -305,6 +273,8 @@
             <li>Anxious/reactive pups that prefer <strong>solo walks</strong> and quiet spaces.</li>
             <li><em>Please chat first</em> if your dog needs injections or complex medical care.</li>
           </ul>
+          <!-- Secondary CTA still fine -->
+          <p class="cta-buttons"><a class="btn btn-ghost" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031912" target="_blank" rel="noopener">Prefer a 10-min chat?</a></p>
         </aside>
       </div>
     </section>
@@ -355,7 +325,7 @@
       </div>
     </section>
 
-    <!-- FAQs + CTA -->
+    <!-- FAQs -->
     <section class="section">
       <div class="container grid two">
         <article class="card">
@@ -368,7 +338,8 @@
         <aside class="callout">
           <h3>Ready to Book Dog Boarding in South Melbourne?</h3>
           <p>Use code <strong>BOARDING20</strong> at checkout for 20% off eligible dates.</p>
-          <p class="cta-buttons"><a class="btn btn-primary btn-book-boarding" href="/book-boarding/?coupon=BOARDING20" data-utm-medium="faq">Check Dates — 20% Off</a></p>
+          <!-- CHANGED: scroll to embedded booking -->
+          <p class="cta-buttons"><a class="btn btn-primary book-stay-btn" href="#book-stay" data-utm-medium="faq">Check Dates — 20% Off</a></p>
         </aside>
       </div>
     </section>
@@ -378,7 +349,50 @@
       <div class="container card">
         <h2>Areas We Cover for Boutique Dog Boarding</h2>
         <p>Local focus means calmer logistics and familiar walking loops. We serve <strong>South Melbourne (3205)</strong>, <strong>Albert Park & Middle Park (3206)</strong>, <strong>Port Melbourne (3207)</strong>, <strong>Southbank (3006)</strong> and <strong>South Yarra (3141)</strong>.</p>
-        <p class="cta-buttons"><a class="btn btn-ghost" href="/contact.html">Ask About Your Dates</a> <a class="btn btn-primary btn-book-boarding" href="/book-boarding/?coupon=BOARDING20" data-utm-medium="areas">Book Now</a></p>
+        <!-- CHANGED: scroll to embedded booking -->
+        <p class="cta-buttons"><a class="btn btn-ghost" href="/contact.html">Ask About Your Dates</a> <a class="btn btn-primary book-stay-btn" href="#book-stay" data-utm-medium="areas">Book Now</a></p>
+      </div>
+    </section>
+
+    <!-- NEW: Embedded BOARDING scheduler (Book Now) -->
+    <section class="section" id="book-stay" aria-label="Book your boarding stay">
+      <div class="container">
+        <h2>Book Your Boarding Stay</h2>
+        <p class="meta" id="coupon-note" style="margin-bottom:12px">Applying discount code <strong>BOARDING20</strong>…</p>
+        <p class="meta" style="margin:8px 0 12px">⏱️ <strong>Takes ~60 seconds.</strong> Instant confirmation. No payment needed to reserve.</p>
+
+        <div class="scheduler-wrap">
+          <iframe
+            id="acuity-stay"
+            class="scheduler-frame"
+            title="Book boutique boarding"
+            src="" loading="lazy" allow="payment">
+          </iframe>
+        </div>
+
+        <noscript>
+          <p style="margin-top:12px">
+            JavaScript is required to book online. You can
+            <a class="btn btn-primary" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86032167&coupon=BOARDING20" target="_blank" rel="noopener">open the booking page here</a>
+            or call <a href="tel:+61370731175">(03) 7073 1175</a>.
+          </p>
+        </noscript>
+      </div>
+    </section>
+
+    <!-- 10-min Chat embed (kept) -->
+    <section class="section" id="book-chat" aria-label="Book a 10-min chat">
+      <div class="container">
+        <h2>Chat to Us First (10-min Call)</h2>
+        <p class="subhead" style="color:#cfd6df;max-width:70ch">Many families like to chat before booking a stay. Pick a time below and we’ll call you for a quick fit + questions check.</p>
+        <div class="scheduler-wrap">
+          <iframe
+            class="scheduler-frame"
+            title="Book a 10-minute chat"
+            src="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031912"
+            loading="lazy" allow="payment">
+          </iframe>
+        </div>
       </div>
     </section>
   </main>
@@ -390,7 +404,8 @@
 
   <!-- Sticky mobile CTA -->
   <div class="sticky-cta" role="region" aria-label="Quick booking">
-    <a class="btn btn-sale" href="/book-boarding/?coupon=BOARDING20">Book Boarding — 20% Off</a>
+    <!-- CHANGED: scroll to embedded booking -->
+    <a class="btn btn-sale book-stay-btn" href="#book-stay">Book Boarding — 20% Off</a>
     <a class="btn" style="border:1px solid #2a3440;color:#111;background:#fff" href="tel:+61370731175">Call (03) 7073 1175</a>
   </div>
 
@@ -400,7 +415,8 @@
       <section class="footer-brand">
         <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="60" height="60" loading="lazy">
         <p><strong>The Woof of Walk Street</strong><br><a class="footer-map" href="#" style="color:#c3ceda">South Melbourne, VIC</a></p>
-        <p class="cta-buttons"><a class="btn btn-primary" href="/book-dog-walk/?coupon=WALK50">Book Walks</a> <a class="btn btn-ghost btn-book-boarding" href="/book-boarding/?coupon=BOARDING20" data-utm-medium="footer">Boarding — 20% Off</a></p>
+        <!-- CHANGED: scroll to embedded booking -->
+        <p class="cta-buttons"><a class="btn btn-primary" href="/book-dog-walk/?coupon=WALK50">Book Walks</a> <a class="btn btn-ghost book-stay-btn" href="#book-stay" data-utm-medium="footer">Boarding — 20% Off</a></p>
       </section>
 
       <nav class="footer-col" aria-label="Services">
@@ -441,8 +457,19 @@
     <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
   </footer>
 
+  <!-- Optional Acuity pop-up button CSS/JS (safe to include once per page) -->
+  <link rel="stylesheet" href="https://embed.acuityscheduling.com/embed/button/37607219.css" id="acuity-button-styles">
+  <script src="https://embed.acuityscheduling.com/embed/button/37607219.js" async></script>
+
+  <!-- Optional Acuity booking bar (floating) -->
+  <div class="acuity-booking-bar" style="display: none;">
+    Woof of Walk Street
+    <a href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86032167" target="_blank" class="acuity-embed-button">Schedule Boarding</a>
+  </div>
+  <script src="https://embed.acuityscheduling.com/embed/bar/37607219.js" async></script>
+
+  <!-- Dropdown accessibility -->
   <script>
-    // Dropdown accessibility (unified)
     (function(){
       const navGroup=document.querySelector('.nav-group');
       const btn=document.querySelector('.nav-group-btn');
@@ -455,5 +482,62 @@
       window.addEventListener('resize',()=>{const isMobile=window.innerWidth<=860;if(isMobile!==lastIsMobile){navGroup.setAttribute('aria-expanded','false');btn.setAttribute('aria-expanded','false');lastIsMobile=isMobile;}});
     })();
   </script>
+
+  <!-- Build embedded BOARDING iframe src + coupon + gclid; smooth-scroll offset -->
+  <script>
+    (function(){
+      // Coupon default + honor ?coupon=
+      const params = new URLSearchParams(location.search);
+      const coupon = params.get('coupon') || 'BOARDING20';
+
+      // GCLID persistence
+      const gclidParam = params.get('gclid');
+      if (gclidParam) { try { localStorage.setItem('gclid', gclidParam); } catch(e) {} }
+      const storedGclid = (()=>{ try { return localStorage.getItem('gclid'); } catch(e){ return null; }})();
+
+      // Build iframe URL
+      const frame = document.getElementById('acuity-stay');
+      if (frame) {
+        const u = new URL('https://app.acuityscheduling.com/schedule.php');
+        u.searchParams.set('owner','37607219');
+        u.searchParams.set('appointmentType','86032167'); // BOARDING
+        u.searchParams.set('coupon', coupon);
+        if (storedGclid) u.searchParams.set('gclid', storedGclid);
+        frame.src = u.toString();
+
+        // Coupon confirmation UI
+        const note = document.getElementById('coupon-note');
+        if (note) {
+          note.className='meta coupon-ok';
+          note.innerHTML = `Your discount code <strong>${coupon}</strong> is applied automatically.`;
+        }
+      }
+
+      // Smooth scroll with header offset for all .book-stay-btn
+      const target = document.getElementById('book-stay');
+      function offsetScroll(el){
+        const headerH = document.querySelector('.site-header')?.offsetHeight || 0;
+        const top = el.getBoundingClientRect().top + window.scrollY - (headerH + 10);
+        window.scrollTo({top, behavior:'smooth'});
+      }
+      document.querySelectorAll('.book-stay-btn[href^="#book-stay"]').forEach(a=>{
+        a.addEventListener('click', e=>{
+          if(target){ e.preventDefault(); offsetScroll(target); }
+        });
+      });
+
+      // If land on #book-stay directly, adjust after load so header doesn't cover
+      window.addEventListener('load', ()=>{
+        if (location.hash === '#book-stay' && target) {
+          const headerH = document.querySelector('.site-header')?.offsetHeight || 0;
+          const top = target.getBoundingClientRect().top + window.scrollY - (headerH + 10);
+          window.scrollTo({ top, behavior: ('instant' in window) ? 'instant' : 'auto' });
+        }
+      });
+    })();
+  </script>
+
+  <!-- Generic Acuity embed script (not required for iframe, but fine to include) -->
+  <script src="https://embed.acuityscheduling.com/js/embed.js" async></script>
 </body>
 </html>

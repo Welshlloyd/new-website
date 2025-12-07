@@ -481,3 +481,19 @@ body.about .impact-ribbon a:hover{text-decoration:underline}
 }
 .btn.btn-outline:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(0,0,0,.18)}
 }
+/* ===== Mobile header: solid background, better contrast ===== */
+@media (max-width: 860px) {
+  .site-header{
+    background:#0b0e12 !important;      /* solid, no transparency */
+    border-bottom:1px solid rgba(255,255,255,.08);
+    backdrop-filter:none !important;     /* prevents blur mixing with hero */
+    -webkit-backdrop-filter:none !important;
+  }
+
+  .navbar .brand,
+  .navbar .nav-toggle { 
+    color:#fff; 
+    text-shadow:none; 
+  }
+}
+

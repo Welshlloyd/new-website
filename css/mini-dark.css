@@ -132,3 +132,18 @@
   stroke: #fff;
   fill: #fff;
 }
+/* ===== Mobile header: solid background, better contrast ===== */
+@media (max-width: 860px) {
+  .site-header{
+    background:#0b0e12 !important;      /* solid, no transparency */
+    border-bottom:1px solid rgba(255,255,255,.08);
+    backdrop-filter:none !important;     /* prevents blur mixing with hero */
+    -webkit-backdrop-filter:none !important;
+  }
+
+  .navbar .brand,
+  .navbar .nav-toggle { 
+    color:#fff; 
+    text-shadow:none; 
+  }
+}

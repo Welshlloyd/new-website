@@ -12,7 +12,7 @@
       j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl; f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-T3HRTM2T');
   </script>
-  <!-- End Google Tag Manager -->
+  <!-- End GTM -->
 
   <!-- Theme boot (no-FOUC) -->
   <script>
@@ -159,6 +159,16 @@
     .scheduler-frame{width:100%;height:720px;border:0;border-radius:12px;background:#fff}
     @media (max-width:480px){ .scheduler-frame{height:860px} }
     .coupon-ok{background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.35);color:#c8f5e4;padding:8px 10px;border-radius:8px;display:inline-block}
+
+    /* Mobile header: solid background (prevents hero bleed) */
+    @media (max-width: 860px){
+      .site-header{
+        background:#0b0e12 !important;
+        backdrop-filter:none !important;
+        -webkit-backdrop-filter:none !important;
+        border-bottom:1px solid rgba(255,255,255,.08);
+      }
+    }
   </style>
 </head>
 
@@ -196,7 +206,7 @@
         <a href="/blog/index.html">Blog</a>
         <a href="/contact.html">Contact</a>
         <a href="/search.html">Search</a>
-        <!-- CHANGED: header CTA scrolls to embedded booking -->
+        <!-- Scroll to embedded booking -->
         <a class="btn btn-primary nav-cta book-stay-btn" href="#book-stay" data-utm-medium="header">Book Boarding — 20% Off</a>
       </nav>
       <div class="nav-scrim" aria-hidden="true"></div>
@@ -215,9 +225,7 @@
         </div>
         <p class="meta">South Melbourne • One-guest-only • No kennels • GPS-tracked solo walks • Photo updates</p>
         <p class="cta-buttons" style="justify-content:center">
-          <!-- CHANGED: scroll to embedded booking -->
           <a class="btn btn-primary book-stay-btn" href="#book-stay" data-utm-medium="hero">Check Availability — 20% Off</a>
-          <!-- Chat first (10-min) still direct to Acuity -->
           <a class="btn btn-ghost" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031912&utm_source=website&utm_medium=hero&utm_campaign=10min_catchup" target="_blank" rel="noopener">Chat first — Free 10-min</a>
         </p>
       </div>
@@ -245,7 +253,6 @@
             <li><strong>Weekends (2–3 nights)</strong> — popular Fri–Sun / Fri–Mon bundles</li>
             <li><strong>Long stays (7–14 nights)</strong> — deeper routine = calmer dog</li>
           </ul>
-          <!-- CHANGED: scroll to embedded booking -->
           <p class="cta-buttons"><a class="btn btn-primary book-stay-btn" href="#book-stay" data-utm-medium="rates">Book Woof Club — 20% Off</a></p>
         </aside>
       </div>
@@ -273,7 +280,6 @@
             <li>Anxious/reactive pups that prefer <strong>solo walks</strong> and quiet spaces.</li>
             <li><em>Please chat first</em> if your dog needs injections or complex medical care.</li>
           </ul>
-          <!-- Secondary CTA still fine -->
           <p class="cta-buttons"><a class="btn btn-ghost" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031912" target="_blank" rel="noopener">Prefer a 10-min chat?</a></p>
         </aside>
       </div>
@@ -338,7 +344,6 @@
         <aside class="callout">
           <h3>Ready to Book Dog Boarding in South Melbourne?</h3>
           <p>Use code <strong>BOARDING20</strong> at checkout for 20% off eligible dates.</p>
-          <!-- CHANGED: scroll to embedded booking -->
           <p class="cta-buttons"><a class="btn btn-primary book-stay-btn" href="#book-stay" data-utm-medium="faq">Check Dates — 20% Off</a></p>
         </aside>
       </div>
@@ -349,12 +354,11 @@
       <div class="container card">
         <h2>Areas We Cover for Boutique Dog Boarding</h2>
         <p>Local focus means calmer logistics and familiar walking loops. We serve <strong>South Melbourne (3205)</strong>, <strong>Albert Park & Middle Park (3206)</strong>, <strong>Port Melbourne (3207)</strong>, <strong>Southbank (3006)</strong> and <strong>South Yarra (3141)</strong>.</p>
-        <!-- CHANGED: scroll to embedded booking -->
         <p class="cta-buttons"><a class="btn btn-ghost" href="/contact.html">Ask About Your Dates</a> <a class="btn btn-primary book-stay-btn" href="#book-stay" data-utm-medium="areas">Book Now</a></p>
       </div>
     </section>
 
-    <!-- NEW: Embedded BOARDING scheduler (Book Now) -->
+    <!-- Embedded BOARDING scheduler -->
     <section class="section" id="book-stay" aria-label="Book your boarding stay">
       <div class="container">
         <h2>Book Your Boarding Stay</h2>
@@ -366,7 +370,9 @@
             id="acuity-stay"
             class="scheduler-frame"
             title="Book boutique boarding"
-            src="" loading="lazy" allow="payment">
+            src=""
+            loading="lazy"
+            allow="payment">
           </iframe>
         </div>
 
@@ -380,7 +386,7 @@
       </div>
     </section>
 
-    <!-- 10-min Chat embed (kept) -->
+    <!-- 10-min Chat embed -->
     <section class="section" id="book-chat" aria-label="Book a 10-min chat">
       <div class="container">
         <h2>Chat to Us First (10-min Call)</h2>
@@ -390,7 +396,8 @@
             class="scheduler-frame"
             title="Book a 10-minute chat"
             src="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031912"
-            loading="lazy" allow="payment">
+            loading="lazy"
+            allow="payment">
           </iframe>
         </div>
       </div>
@@ -404,7 +411,6 @@
 
   <!-- Sticky mobile CTA -->
   <div class="sticky-cta" role="region" aria-label="Quick booking">
-    <!-- CHANGED: scroll to embedded booking -->
     <a class="btn btn-sale book-stay-btn" href="#book-stay">Book Boarding — 20% Off</a>
     <a class="btn" style="border:1px solid #2a3440;color:#111;background:#fff" href="tel:+61370731175">Call (03) 7073 1175</a>
   </div>
@@ -414,9 +420,13 @@
     <div class="container footer-grid">
       <section class="footer-brand">
         <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="60" height="60" loading="lazy">
-        <p><strong>The Woof of Walk Street</strong><br><a class="footer-map" href="#" style="color:#c3ceda">South Melbourne, VIC</a></p>
-        <!-- CHANGED: scroll to embedded booking -->
-        <p class="cta-buttons"><a class="btn btn-primary" href="/book-dog-walk/?coupon=WALK50">Book Walks</a> <a class="btn btn-ghost book-stay-btn" href="#book-stay" data-utm-medium="footer">Boarding — 20% Off</a></p>
+        <p><strong>The Woof of Walk Street</strong><br>
+          <a class="footer-map" href="https://maps.google.com/?q=South+Melbourne,+VIC" target="_blank" rel="noopener" style="color:#c3ceda">South Melbourne, VIC</a>
+        </p>
+        <p class="cta-buttons">
+          <a class="btn btn-primary" href="/book-dog-walk/?coupon=WALK50">Book Walks</a>
+          <a class="btn btn-ghost book-stay-btn" href="#book-stay" data-utm-medium="footer">Boarding — 20% Off</a>
+        </p>
       </section>
 
       <nav class="footer-col" aria-label="Services">
@@ -445,9 +455,9 @@
       <nav class="footer-col" aria-label="Info & Legal">
         <h3>Info & Legal</h3>
         <ul class="footlist">
-          <li><a href="/faqs.html">FAQs</a></li>
-          <li><a href="/privacy-policy.html">Privacy Policy</a></li>
-          <li><a href="/terms-and-conditions.html">Full Terms & Conditions</a></li>
+          <li><a href="/faq.html">FAQs</a></li> <!-- fixed -->
+          <li><a href="/privacy.html">Privacy Policy</a></li> <!-- fixed -->
+          <li><a href="/terms.html">Full Terms & Conditions</a></li> <!-- fixed -->
           <li><a href="/mini-terms.html">Mini Terms</a></li>
           <li><a href="/community.html">Community Impact</a></li>
         </ul>
@@ -457,11 +467,9 @@
     <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
   </footer>
 
-  <!-- Optional Acuity pop-up button CSS/JS (safe to include once per page) -->
+  <!-- Acuity embed helpers (optional) -->
   <link rel="stylesheet" href="https://embed.acuityscheduling.com/embed/button/37607219.css" id="acuity-button-styles">
   <script src="https://embed.acuityscheduling.com/embed/button/37607219.js" async></script>
-
-  <!-- Optional Acuity booking bar (floating) -->
   <div class="acuity-booking-bar" style="display: none;">
     Woof of Walk Street
     <a href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86032167" target="_blank" class="acuity-embed-button">Schedule Boarding</a>
@@ -537,7 +545,7 @@
     })();
   </script>
 
-  <!-- Generic Acuity embed script (not required for iframe, but fine to include) -->
+  <!-- Generic Acuity embed script (optional for popups) -->
   <script src="https://embed.acuityscheduling.com/js/embed.js" async></script>
 </body>
 </html>

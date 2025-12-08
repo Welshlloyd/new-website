@@ -19,7 +19,7 @@
   <meta name="twitter:title" content="Community Impact: 10% Donation to Melbourne Dog Rescue">
   <meta name="twitter:description" content="Walking with purpose: how your booking funds Melbourne dog rescue and welfare.">
 
-  <!-- GTM -->
+  <!-- Google Tag Manager (container: GTM-T3HRTM2T) -->
   <script>
     (function(w,d,s,l,i){
       w[l]=w[l]||[]; w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
@@ -43,11 +43,15 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Preload hero image -->
+  <!-- Preload hero image (match index) -->
   <link rel="preload" as="image"
         href="/images/brand/hero-dog-skyline-1200.webp"
         imagesrcset="/images/brand/hero-dog-skyline-800.webp 800w, /images/brand/hero-dog-skyline-1200.webp 1200w, /images/brand/hero-dog-skyline-1600.webp 1600w"
         imagesizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px">
+
+  <!-- Acuity embed button CSS (for “Schedule Appointment” buttons/bars) -->
+  <link rel="stylesheet" href="https://embed.acuityscheduling.com/embed/button/37607219.css" id="acuity-button-styles" />
+  <script src="https://embed.acuityscheduling.com/embed/button/37607219.js" async></script>
 
   <!-- Styles (match index) -->
   <style>
@@ -66,20 +70,23 @@
       --font-body:'Work Sans',system-ui,sans-serif;
     }
     html,body{background:var(--bg);color:var(--text);overflow-x:hidden;scroll-behavior:smooth}
-    img{max-width:100%;height:auto}
-    a{color:inherit}
+    img{max-width:100%;height:auto} a{color:inherit}
     .container{max-width:var(--container);margin:0 auto;padding:0 16px}
     body, p, li, span, button, input, textarea { font-family: var(--font-body); letter-spacing:.1px; line-height:1.58; }
     h1,h2,h3,h4,h5,h6, nav a, .nav-group-btn{ font-family: var(--font-heading); letter-spacing:.25px; }
-    h1{font-weight:800}
-    h2{font-weight:700}
+    h1{font-weight:800} h2{font-weight:700}
     .meta{color:var(--muted)}
 
-    /* Promo ribbon (match index) */
+    /* Top contact strip (from index) */
+    .top-contact-strip{background:var(--line);padding:8px 0;font-size:.9rem;border-bottom:1px solid rgba(255,255,255,.05)}
+    .contact-inner{max-width:var(--container);margin:0 auto;padding:0 16px;display:flex;justify-content:flex-end;align-items:center;gap:20px}
+    .contact-inner a{color:var(--brand);text-decoration:none;font-weight:700;display:inline-flex;align-items:center;gap:6px}
+
+    /* Promo ribbon */
     .promo-ribbon{position:relative;z-index:1100;background:var(--sale-bg);color:#fff;border-bottom:1px solid rgba(255,255,255,.1);font-weight:700;text-align:center;padding:8px}
     .promo-code{background:rgba(0,0,0,.3);padding:2px 6px;border-radius:4px;font-family:monospace}
 
-    /* Header + nav (match index incl. dropdown fixes) */
+    /* Header + nav (match index) */
     .site-header{position:sticky;top:0;z-index:1000;background:var(--header-bg);backdrop-filter:var(--header-blur);-webkit-backdrop-filter:var(--header-blur);border-bottom:1px solid rgba(255,255,255,.06)}
     .navbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
     .brand{display:flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none;font-weight:900}
@@ -90,39 +97,29 @@
     .nav-group{position:relative}
     .nav-group-btn{background:transparent;border:1px solid #2a3440;color:#fff;border-radius:999px;padding:8px 12px;font-weight:800;cursor:pointer}
     .nav-group-btn:hover{border-color:#fff}
-    .nav-group-list{
-      position:absolute;right:0;top:calc(100% + 8px);min-width:260px;background:var(--menu-solid);
-      border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:8px 6px;box-shadow:var(--shadow);display:none;z-index:2000;pointer-events:auto
-    }
+    .nav-group-list{position:absolute;right:0;top:calc(100% + 8px);min-width:260px;background:var(--menu-solid);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:8px 6px;box-shadow:var(--shadow);display:none;z-index:2000}
     .nav-group[aria-expanded="true"] .nav-group-list{display:block}
     .nav-group-list a{display:block;padding:10px 12px;border-radius:10px;color:#e9eef6}
     .nav-group-list a:hover{background:rgba(255,255,255,.06)}
-    @media (min-width:861px){
-      .nav-group:hover .nav-group-list,
-      .nav-group:focus-within .nav-group-list{display:block}
-    }
-    .nav-toggle{display:none}
-    .nav-scrim{display:none}
+    .nav-toggle{display:none} .nav-scrim{display:none}
     @media (max-width:860px){
       .nav-toggle{display:block;cursor:pointer}
-      .nav-links{position:fixed;inset:0 0 auto auto;width:min(320px,85vw);height:100vh;background:var(--menu-solid);
-        padding:70px 16px 20px;flex-direction:column;gap:10px;transform:translateX(100%);transition:transform .25s}
+      .nav-links{position:fixed;inset:0 0 auto auto;width:min(320px,85vw);height:100vh;background:var(--menu-solid);padding:70px 16px 20px;flex-direction:column;gap:10px;transform:translateX(100%);transition:transform .25s}
       #nav-toggle:checked ~ .nav-links{transform:translateX(0)}
       .nav-scrim{display:block;position:fixed;inset:0;background:rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:opacity .25s}
       #nav-toggle:checked ~ .nav-scrim{opacity:1;pointer-events:auto}
       .nav-group{width:100%}
-      .nav-group-list{position:relative;top:auto;right:auto;display:block;background:var(--menu-solid);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:6px;box-shadow:none;margin-top:8px}
+      .nav-group-list{position:relative;display:block;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:6px;box-shadow:none;margin-top:8px}
       .nav-group-btn{width:100%;text-align:left}
     }
 
     /* Buttons (match index) */
     .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:12px 18px;border-radius:999px;border:1px solid transparent;text-decoration:none;font-weight:800;letter-spacing:.02em;transition:all var(--speed)}
     .btn-primary{background:var(--brand);color:var(--brand-ink);box-shadow:0 10px 26px rgba(255,209,102,.25)}
-    .btn-primary:hover{transform:translateY(-2px)}
     .btn-ghost{background:transparent;color:#fff;border:1px solid #2a3440}
-    .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.05)}
-    .btn-outline{background:transparent;border:1px solid var(--brand);color:var(--brand);font-weight:700}
-    .btn-outline:hover{background:rgba(255,209,102,.1);transform:translateY(-1px)}
+    .btn-outline{background:transparent;border:1px solid var(--brand);color:var(--brand)}
+    .btn-ghost:hover{border-color:#fff}
+    .btn-outline:hover{background:rgba(255,209,102,.1)}
 
     /* Sections */
     .hero{padding:28px 0 18px;background:radial-gradient(1200px 600px at 20% -20%,rgba(255,209,102,.08),transparent 60%),linear-gradient(120deg,#111824,#1b2433,#111824);border-bottom:1px solid rgba(255,255,255,.06)}
@@ -142,7 +139,11 @@
     /* Section sweep */
     .section-sweep{height:4px;border:0;margin:34px 0;background:linear-gradient(90deg,transparent,rgba(255,209,102,.8),transparent);filter:drop-shadow(0 8px 18px rgba(255,209,102,.25))}
 
-    /* Sticky mobile CTA (match index) */
+    /* Scheduler embeds (match index) */
+    .scheduler-wrap{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#0e141b}
+    .scheduler-frame{width:100%;height:900px;border:0}
+
+    /* Sticky mobile CTA */
     .sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:999;background:rgba(11,14,18,.9);backdrop-filter:var(--header-blur);display:none;justify-content:space-around;padding:10px 16px;box-shadow:0 -8px 20px rgba(0,0,0,.4)}
     .sticky-cta .btn{flex-grow:1;margin:0 4px;padding:12px 10px;font-size:.9rem}
     @media (max-width:768px){.sticky-cta{display:flex}.site-header{position:static}.page-top{padding-bottom:70px}}
@@ -150,7 +151,6 @@
     /* Footer (match index) */
     .site-footer{padding-top:40px;border-top:1px solid var(--line);margin-top:60px}
     .footer-grid{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap;padding-bottom:40px}
-    .footer-brand{max-width:300px}
     .footer-col{flex-basis:150px}
     .footlist{list-style:none;padding:0;margin:0}
     .footlist a{text-decoration:none;color:var(--muted);transition:color var(--speed)}
@@ -170,17 +170,13 @@
   {"@context":"https://schema.org","@type":"LocalBusiness","@id":"https://www.woofofwalkstreet.com/#business","name":"The Woof of Walk Street","url":"https://www.woofofwalkstreet.com","image":"https://www.woofofwalkstreet.com/images/brand/logo-lockup-gold.webp","telephone":"+61370731175","priceRange":"$$","description":"Premium solo dog walks and one-dog-only boutique boarding. GPS-tracked, photo updates, and low-stress care.","address":{"@type":"PostalAddress","addressLocality":"South Melbourne","addressRegion":"VIC","addressCountry":"AU"},"areaServed":["South Melbourne","Albert Park","Middle Park","Port Melbourne","Southbank","South Yarra"],"sameAs":["https://instagram.com/woofofwalkstreet","https://facebook.com/woofofwalkstreet"]}
   </script>
 
-  <!-- FAQPage JSON-LD for donation transparency -->
+  <!-- FAQPage JSON-LD -->
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {"@type":"Question","name":"How does the 10% donation to Melbourne dog rescue work?","acceptedAnswer":{"@type":"Answer","text":"We donate 10% of our profits from solo dog walking and boutique boarding to Melbourne-based animal rescue and welfare groups. Donations are tallied monthly and published in our annual impact summary."}},
-      {"@type":"Question","name":"Which local dog rescue organisations do you support?","acceptedAnswer":{"@type":"Answer","text":"We prioritise grassroots shelters and foster networks in South Melbourne, Port Melbourne, Albert Park, Middle Park and across Victoria. We rotate beneficiaries and welcome recommendations from clients."}},
-      {"@type":"Question","name":"How can I verify donations or recommend a charity?","acceptedAnswer":{"@type":"Answer","text":"You can read our published updates on the blog and request details via our contact page. We also invite Melbourne-based charities to contact us to be considered as beneficiaries."}}
-    ]
-  }
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"How does the 10% donation to Melbourne dog rescue work?","acceptedAnswer":{"@type":"Answer","text":"We donate 10% of our profits from solo dog walking and boutique boarding to Melbourne-based animal rescue and welfare groups. Donations are tallied monthly and published in our annual impact summary."}},
+    {"@type":"Question","name":"Which local dog rescue organisations do you support?","acceptedAnswer":{"@type":"Answer","text":"We prioritise grassroots shelters and foster networks in South Melbourne, Port Melbourne, Albert Park, Middle Park and across Victoria. We rotate beneficiaries and welcome recommendations from clients."}},
+    {"@type":"Question","name":"How can I verify donations or recommend a charity?","acceptedAnswer":{"@type":"Answer","text":"You can read our published updates on the blog and request details via our contact page. We also invite Melbourne-based charities to contact us to be considered as beneficiaries."}}
+  ]}
   </script>
 
   <!-- Analytics -->
@@ -195,17 +191,23 @@
 </head>
 
 <body>
-  <!-- GTM (noscript) -->
+  <!-- GTM noscript -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T3HRTM2T" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <!-- Promo ribbon (match index) -->
+  <!-- Promo -->
   <div class="promo-ribbon">
-    <div class="container">
-      🎉 End of Year Sale: <strong>50% OFF</strong> Walks (Code: <span class="promo-code">WALK50</span>) + <strong>20% OFF</strong> Boarding (Code: <span class="promo-code">BOARDING20</span>). Ends 31/12!
+    <div class="container">🎉 End of Year Sale: <strong>50% OFF</strong> Walks (Code: <span class="promo-code">WALK50</span>) + <strong>20% OFF</strong> Boarding (Code: <span class="promo-code">BOARDING20</span>). Ends 31/12!</div>
+  </div>
+
+  <!-- Top contact -->
+  <div class="top-contact-strip">
+    <div class="contact-inner">
+      <a href="tel:+61370731175" onclick="gtag && gtag('event','call_click',{label:'top_header'});">📞 (03) 7073 1175</a>
+      <a href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031912" target="_blank" rel="noopener" onclick="gtag && gtag('event','chat_click',{label:'top_header'});">💬 Book a 10-min Chat →</a>
     </div>
   </div>
 
-  <!-- Header (match index) -->
+  <!-- Header -->
   <header class="site-header" role="banner">
     <div class="navbar container" role="navigation" aria-label="Main">
       <a class="brand" href="/" aria-label="Go to home">
@@ -220,8 +222,7 @@
         <div class="nav-group" aria-expanded="false">
           <button type="button" class="nav-group-btn" aria-haspopup="true" aria-expanded="false" aria-controls="nav-services">Services ▾</button>
           <ul id="nav-services" class="nav-group-list" role="menu" aria-label="Services">
-            <li><a role="menuitem" href="/services.html">All Services</a></li>
-            <li><a role="menuitem" href="/dog-walking-south-melbourne.html">Dog Walking — South Melbourne</a></li>
+            <li><a role="menuitem" href="/dog-walking-south-melbourne.html">Dog Walking</a></li>
             <li><a role="menuitem" href="/boarding-services.html">Boutique Boarding</a></li>
             <li><a role="menuitem" href="/memberships.html">Memberships</a></li>
           </ul>
@@ -231,7 +232,8 @@
         <a href="/blog.html">Blog</a>
         <a href="/contact.html">Contact</a>
         <a href="/search.html">Search</a>
-        <a class="btn btn-primary nav-cta" href="/book-dog-walk/?coupon=WALK50">Book Walks</a>
+        <!-- Nav CTA uses your DIRECT walking link -->
+        <a class="btn btn-primary nav-cta" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931" target="_blank" rel="noopener">Book Walks</a>
       </nav>
       <div class="nav-scrim" aria-hidden="true"></div>
     </div>
@@ -243,6 +245,7 @@
       <div class="container" data-reveal>
         <h1>Community Impact: 10% Donation to Melbourne Dog Rescue & Animal Welfare</h1>
         <p class="subhead">Walking with purpose in <strong>South Melbourne</strong> and neighbouring suburbs. Every <a href="/dog-walking-south-melbourne.html"><strong>solo dog walk</strong></a> and <a href="/boarding-services.html"><strong>boutique boarding stay</strong></a> helps fund local rescue, vet care and rehoming.</p>
+
         <figure class="gold-edge" style="display:inline-block;padding:6px;margin-top:18px">
           <img src="/images/brand/hero-dog-skyline-1200.webp"
                srcset="/images/brand/hero-dog-skyline-800.webp 800w, /images/brand/hero-dog-skyline-1200.webp 1200w, /images/brand/hero-dog-skyline-1600.webp 1600w"
@@ -252,7 +255,7 @@
       </div>
     </section>
 
-    <!-- SECTION: Why & Where -->
+    <!-- Why & Where -->
     <section>
       <div class="container grid-2">
         <article>
@@ -274,8 +277,8 @@
               <li>🐾 Keeps dogs safe while they wait for homes</li>
             </ul>
             <div style="margin-top:14px">
-              <a class="btn btn-primary" href="/book-dog-walk/?coupon=WALK50">Book a Walk</a>
-              <a class="btn btn-ghost" href="/boarding-services.html">Boarding Details</a>
+              <a class="btn btn-primary" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931&coupon=WALK50" target="_blank" rel="noopener">Book a Walk</a>
+              <a class="btn btn-ghost" href="#book-boarding">Boarding Details</a>
             </div>
           </div>
         </aside>
@@ -283,12 +286,12 @@
       <hr class="section-sweep" aria-hidden="true">
     </section>
 
-    <!-- SECTION: Get Involved / Transparency -->
+    <!-- Get Involved / Transparency -->
     <section>
       <div class="container grid-2">
         <article class="edge">
           <h2>Get Involved: Your Booking = Real Support for Melbourne Dog Rescue</h2>
-          <p>The simplest way to help is to <a href="/book-dog-walk/?coupon=WALK50"><strong>book a solo walk</strong></a> or <a href="/book-boarding/"><strong>book a boutique boarding stay</strong></a>. Every completed service contributes to the monthly donation pool—so your dog’s routine directly funds a dog in need.</p>
+          <p>The simplest way to help is to <a href="#book-walks"><strong>book a solo walk</strong></a> or <a href="#book-boarding"><strong>book a boutique boarding stay</strong></a>. Every completed service contributes to the monthly donation pool—so your dog’s routine directly funds a dog in need.</p>
 
           <h3>Transparency You Can Trust</h3>
           <p>We’re accountable to our community. Read our <a href="/blog.html"><strong>blog updates</strong></a> for beneficiary highlights and milestones, and contact us any time if you’d like more detail. We also welcome <a href="#recommend">charity recommendations</a> from clients and neighbours.</p>
@@ -313,7 +316,7 @@
       <hr class="section-sweep" aria-hidden="true">
     </section>
 
-    <!-- SECTION: Recommend / Charities -->
+    <!-- Recommend / Charities -->
     <section id="recommend">
       <div class="container">
         <h2>Recommend a Melbourne Dog Charity or Apply for Support</h2>
@@ -335,15 +338,13 @@
       </div>
     </section>
 
-    <!-- SECTION: FAQs -->
+    <!-- FAQs -->
     <section>
       <div class="container">
         <h2>Community Impact & Donation FAQs</h2>
         <details class="edge" style="margin-top:12px">
           <summary style="cursor:pointer;font-weight:700;padding:12px 16px">Do my bookings really support Melbourne dog rescue?</summary>
-          <div style="padding:0 16px 12px">
-            Yes. We allocate <strong>10% of profits</strong> from walking and boarding to local rescue partners every month.
-          </div>
+          <div style="padding:0 16px 12px">Yes. We allocate <strong>10% of profits</strong> from walking and boarding to local rescue partners every month.</div>
         </details>
         <details class="edge" style="margin-top:12px">
           <summary style="cursor:pointer;font-weight:700;padding:12px 16px">Which suburbs do you serve (and support)?</summary>
@@ -353,39 +354,105 @@
         </details>
         <details class="edge" style="margin-top:12px">
           <summary style="cursor:pointer;font-weight:700;padding:12px 16px">How do you keep donation reporting transparent?</summary>
-          <div style="padding:0 16px 12px">
-            We post periodic <a href="/blog.html">impact updates</a> and publish an annual summary; you can <a href="/contact.html">contact us</a> for further information.
-          </div>
+          <div style="padding:0 16px 12px">We post periodic <a href="/blog.html">impact updates</a> and publish an annual summary; you can <a href="/contact.html">contact us</a> for further information.</div>
         </details>
       </div>
     </section>
 
-    <!-- SECTION: CTA -->
+    <!-- CTA -->
     <section>
       <div class="container" style="text-align:center">
         <h2>Ready to Help Dogs in Need While Your Dog Thrives?</h2>
         <p>Book a calm, GPS-tracked <strong>solo walk</strong> or a <strong>single-guest boarding stay</strong>. Routine for your dog, real funding for rescue.</p>
         <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:12px">
-          <a class="btn btn-primary" href="/book-dog-walk/?coupon=WALK50">Book Walks</a>
-          <a class="btn btn-ghost" href="/book-boarding/?coupon=BOARDING20">Book Boarding</a>
+          <a class="btn btn-primary" href="#book-walks">Book Walks</a>
+          <a class="btn btn-ghost" href="#book-boarding">Book Boarding</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOKING EMBEDS (match index) -->
+    <section class="section" id="book-walks" aria-label="Book a solo walk">
+      <div class="container">
+        <h2>Book Dog Walking Online</h2>
+        <p class="meta" style="margin:8px 0 12px"><strong>Payment required to reserve.</strong> New clients can use code <strong>WALK50</strong>.</p>
+        <div class="scheduler-wrap">
+          <iframe
+            class="scheduler-frame"
+            title="Book a solo dog walk"
+            src="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931&coupon=WALK50"
+            loading="lazy"
+            allow="payment">
+          </iframe>
+        </div>
+        <p class="meta" style="margin-top:10px">Prefer a popup?&nbsp;
+          <a href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931"
+             target="_blank"
+             class="acuity-embed-button"
+             style="background:#FFFFFF;color:#111;padding:8px 12px;border:0;box-shadow:0 -2px 0 rgba(0,0,0,0.15) inset;border-radius:4px;text-decoration:none;display:inline-block">
+             Schedule Appointment
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="book-boarding" aria-label="Book boutique boarding">
+      <div class="container">
+        <h2>Book Dog Boarding Online</h2>
+        <p class="meta" style="margin:8px 0 12px"><strong>Pick-up & drop-off included</strong> in our local area. <strong>Payment required to reserve.</strong> Code <strong>BOARDING20</strong> auto-applies.</p>
+        <div class="scheduler-wrap">
+          <iframe
+            class="scheduler-frame"
+            title="Book boutique boarding"
+            src="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86032167&coupon=BOARDING20"
+            loading="lazy"
+            allow="payment">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="free-chat" aria-label="Book a free 10-minute chat">
+      <div class="container">
+        <h2>Book a Free 10-Minute Chat</h2>
+        <p class="meta" style="margin:8px 0 12px">Got a quick question before booking? Schedule a brief call below.</p>
+        <div class="scheduler-wrap">
+          <iframe
+            class="scheduler-frame"
+            title="Book a free 10-minute chat"
+            src="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031912"
+            loading="lazy"
+            allow="payment">
+          </iframe>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Sticky CTA (match index) -->
+  <!-- Impact ribbon (match index) -->
+  <div class="impact-ribbon" role="note" aria-label="Walks that do more: 10% donated" style="border-top:1px solid rgba(255,255,255,.06);padding:10px 0;margin-top:10px">
+    <div class="container" style="display:flex;justify-content:center;gap:8px;align-items:center">
+      <span class="impact-emoji" aria-hidden="true">💛</span>
+      <strong>Walks That Do More:</strong> We donate <strong>10% of profits</strong> to local rescue shelters.
+      <a class="impact-cta" href="/community.html" style="text-decoration:underline">See our impact →</a>
+    </div>
+  </div>
+
+  <!-- Sticky mobile CTA -->
   <div class="sticky-cta" role="region" aria-label="Quick booking">
-    <a class="btn btn-primary" href="/book-dog-walk/?coupon=WALK50">Claim 50% Off Walk</a>
-    <a class="btn btn-ghost" href="/book-boarding/?coupon=BOARDING20">Book 20% Off Boarding</a>
+    <a class="btn btn-sale" href="#book-walks">Book Walk (50% Off)</a>
+    <a class="btn btn-ghost" href="#book-boarding">Book Boarding (20% Off)</a>
   </div>
 
   <!-- Footer (match index) -->
   <footer class="site-footer" role="contentinfo">
     <div class="container footer-grid">
-      <section class="footer-brand">
+      <section class="footer-col">
         <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="60" height="60" loading="lazy">
         <p><strong>The Woof of Walk Street</strong><br><a class="footer-map" href="#" style="color:var(--muted)">South Melbourne, VIC</a></p>
-        <p class="cta-buttons"><a class="btn btn-primary" href="/book-dog-walk/?coupon=WALK50">Book Walks</a></p>
+        <p class="cta-buttons">
+          <a class="btn btn-primary" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931" target="_blank" rel="noopener">Book Walks</a>
+        </p>
       </section>
 
       <nav class="footer-col" aria-label="Services">
@@ -396,7 +463,6 @@
           <li><a href="/boarding-services.html">Boutique Boarding</a></li>
           <li><a href="/memberships.html">Memberships</a></li>
           <li><a href="/contact.html">Contact Us</a></li>
-          <li><a href="/community.html" aria-current="page">Community Impact</a></li>
         </ul>
       </nav>
 
@@ -415,18 +481,24 @@
       <nav class="footer-col" aria-label="Info & Legal">
         <h3>Info & Legal</h3>
         <ul class="footlist">
-          <li><a href="/faqs.html">FAQs</a></li>
-          <li><a href="/privacy-policy.html">Privacy Policy</a></li>
-          <li><a href="/terms-and-conditions.html">Full Terms & Conditions</a></li>
+          <li><a href="/faq.html">FAQs</a></li>
+          <li><a href="/privacy.html">Privacy Policy</a></li>
+          <li><a href="/terms.html">Full Terms & Conditions</a></li>
           <li><a href="/mini-terms.html">Mini Terms</a></li>
           <li><a href="/community.html" aria-current="page">Community Impact</a></li>
         </ul>
       </nav>
     </div>
-
     <div class="container footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
     <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
   </footer>
+
+  <!-- Optional Acuity booking BAR (popup trigger) -->
+  <div class="acuity-booking-bar" style="display:none">
+    The Woof of Walk Street
+    <a href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931" target="_blank" class="acuity-embed-button">Schedule Appointment</a>
+  </div>
+  <script src="https://embed.acuityscheduling.com/embed/bar/37607219.js" async></script>
 
   <!-- Behaviours (dropdown + reveal) -->
   <script>
@@ -437,47 +509,27 @@
       if(navToggle && scrim){ scrim.addEventListener('click',()=>navToggle.checked=false); }
 
       // Dropdown accessibility/behavior
-      const navGroup = document.querySelector('.nav-group');
-      const btn = document.querySelector('.nav-group-btn');
-      const list = document.getElementById('nav-services');
+      const navGroup=document.querySelector('.nav-group');
+      const btn=document.querySelector('.nav-group-btn');
+      const list=document.getElementById('nav-services');
       if(navGroup && btn && list){
-        btn.addEventListener('click',(e)=>{
-          e.preventDefault();
-          const open = navGroup.getAttribute('aria-expanded')==='true';
+        btn.addEventListener('click',(e)=>{e.preventDefault();
+          const open=navGroup.getAttribute('aria-expanded')==='true';
           navGroup.setAttribute('aria-expanded', String(!open));
           btn.setAttribute('aria-expanded', String(!open));
         });
-        document.addEventListener('click',(e)=>{
-          if(!navGroup.contains(e.target)){
-            navGroup.setAttribute('aria-expanded','false');
-            btn.setAttribute('aria-expanded','false');
-          }
-        },{capture:true});
-        document.addEventListener('keydown',(e)=>{
-          if(e.key==='Escape'){
-            navGroup.setAttribute('aria-expanded','false');
-            btn.setAttribute('aria-expanded','false');
-            btn.focus();
-          }
-        });
+        document.addEventListener('click',(e)=>{ if(!navGroup.contains(e.target)){ navGroup.setAttribute('aria-expanded','false'); btn.setAttribute('aria-expanded','false'); }},{capture:true});
+        document.addEventListener('keydown',(e)=>{ if(e.key==='Escape'){ navGroup.setAttribute('aria-expanded','false'); btn.setAttribute('aria-expanded','false'); btn.focus(); }});
+        let lastIsMobile=window.innerWidth<=860;
+        window.addEventListener('resize',()=>{const isMobile=window.innerWidth<=860;if(isMobile!==lastIsMobile){navGroup.setAttribute('aria-expanded','false');btn.setAttribute('aria-expanded','false');lastIsMobile=isMobile;}});
       }
 
       // Simple reveal effect
       const reveals=document.querySelectorAll('[data-reveal]');
       const obs=new IntersectionObserver((entries)=>{
-        entries.forEach(e=>{
-          if(e.isIntersecting){
-            e.target.style.opacity=1;
-            e.target.style.transform='translateY(0)';
-            obs.unobserve(e.target);
-          }
-        });
+        entries.forEach(e=>{ if(e.isIntersecting){ e.target.style.opacity=1; e.target.style.transform='translateY(0)'; obs.unobserve(e.target);} });
       },{threshold:0.1});
-      reveals.forEach(r=>{
-        r.style.opacity=0; r.style.transform='translateY(20px)';
-        r.style.transition='opacity .6s ease, transform .6s ease';
-        obs.observe(r);
-      });
+      reveals.forEach(r=>{ r.style.opacity=0; r.style.transform='translateY(20px)'; r.style.transition='opacity .6s ease, transform .6s ease'; obs.observe(r); });
     })();
   </script>
 </body>

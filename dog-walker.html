@@ -25,6 +25,10 @@
   <link rel="stylesheet" href="/css/styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 
+  <!-- Acuity embed (buttons & optional bar) -->
+  <link rel="stylesheet" href="https://embed.acuityscheduling.com/embed/button/37607219.css" id="acuity-button-styles" />
+  <script src="https://embed.acuityscheduling.com/embed/button/37607219.js" async></script>
+
   <style>
     :root { --bg:#0b0e12; --bg2:#0f1318; --text:#e8eef5; --muted:#a9b4c0; --line:#1e2630; --brand:#ffd166; --brand-ink:#0b0e12; --accent:#5af2c6; --shadow:0 18px 46px rgba(0,0,0,.35); }
     body { background:linear-gradient(180deg, var(--bg), var(--bg2)); color:var(--text); }
@@ -70,6 +74,10 @@
     .testimonial-bar .stars{color:var(--brand);font-size:1.5rem;margin-bottom:.5rem}
 
     .footer-geo{background:var(--bg2);border-top:1px solid var(--line);padding:15px 16px;color:var(--muted);font-size:.95rem;text-align:center}
+
+    /* Simple styles for schedulers */
+    .scheduler-wrap{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#0e141b}
+    .scheduler-frame{width:100%;height:900px;border:0}
   </style>
 
   <link rel="preload" as="image" href="/images/pages/dog-walking/dog-albert-park-lake-south-melbourne.jpg" />
@@ -83,7 +91,7 @@
     gtag('config','AW-17527927259'); // Google Ads
   </script>
 
-  <!-- JSON-LD: validated & typed correctly -->
+  <!-- JSON-LD (unchanged) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -152,7 +160,7 @@
     <div class="promo-inner container">
       <img class="promo-dog" src="/images/brand/dog-in-suit.webp" alt="" width="28" height="28" decoding="async" />
       <span class="promo-copy"><strong>50% OFF</strong> your first <strong>Casual Walk</strong> — use code <strong>WALK50</strong> · Ends <strong>31/12/2025</strong></span>
-      <a href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931&coupon=WALK50" class="promo-cta" target="_blank" rel="noopener">Book Now →</a>
+      <a href="#book-walks" class="promo-cta">Book Now →</a>
       <button id="promo-close" class="promo-close" aria-label="Dismiss promo">✕</button>
     </div>
   </div>
@@ -182,17 +190,17 @@
             <li><a href="/services.html">All Services</a></li>
             <li><a href="/dog-walker.html" aria-current="page">Dog Walking (Solo)</a></li>
             <li><a href="/casual-dog-walking-south-melbourne.html">Casual Dog Walking</a></li>
-            <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
+            <li><a href="/boarding-services.html">Boutique Boarding</a></li>
             <li><a href="/service-areas.html">Service Areas</a></li>
             <li><a href="/contact.html">Contact</a></li>
           </ul>
         </section>
         <a href="/about.html">About</a>
         <a href="/blog/index.html">Blog</a>
-        <a href="/faq.html">FAQs</a>
+        <a href="/faqs.html">FAQs</a>
         <a href="/search.html">Search</a>
-        <a class="btn button-primary nav-cta" href="#book">Book Walks</a>
-        <a class="btn button-primary nav-cta" href="/boarding-services.html">Boarding 20% Off</a>
+        <a class="btn button-primary nav-cta" href="#book-walks">Book Walks</a>
+        <a class="btn button-primary nav-cta" href="#book-boarding">Boarding 20% Off</a>
       </nav>
     </div>
   </header>
@@ -215,6 +223,7 @@
         <div class="value-prop-block">
           <h3>Why Compromise? Choose Calm, Predictable, <strong>Solo</strong> Walks.</h3>
           <p>Our method is ideal for <strong>reactive, anxious, or senior dogs</strong> who don’t thrive in group settings. We guarantee a dedicated 45-minute focus period, ensuring your dog's routine is respected and their stress is minimized.</p>
+          <p class="meta" style="margin-top:10px">Serving South Melbourne, Albert Park, Middle Park, Port Melbourne, Southbank & South Yarra. Explore all <a href="/service-areas.html">Service Areas →</a></p>
         </div>
 
         <div class="price-banner">
@@ -222,11 +231,8 @@
           <div class="coupon-help" aria-live="polite">If the discount doesn’t auto-apply, paste this into the coupon field: <code>WALK50</code>.</div>
         </div>
 
-        <div class="hero-cta-row" id="book">
-          <a class="btn button-primary"
-             href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931&coupon=WALK50"
-             target="_blank" rel="noopener"
-             onclick="gtag && gtag('event','book_casual_click',{label:'hero_casual'});">
+        <div class="hero-cta-row">
+          <a class="btn button-primary" href="#book-walks" onclick="gtag && gtag('event','book_casual_click',{label:'hero_casual'});">
              Book Your 50% Off Walk Today →
           </a>
           <a class="btn button-secondary" href="/memberships.html">Explore Membership Plans</a>
@@ -293,14 +299,11 @@
         <h2>Ready for a Calmer, Happier Dog? Book Your First Solo Walk Now</h2>
         <p class="subhead">Take advantage of our <strong>50% off new client offer</strong> and feel the difference of a dedicated, <strong>solo walk</strong>.</p>
         <p class="cta-buttons" style="margin-top:20px">
-          <a class="btn button-primary"
-             href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931&coupon=WALK50"
-             target="_blank" rel="noopener"
-             onclick="gtag && gtag('event','book_casual_click',{label:'final_cta'});">
+          <a class="btn button-primary" href="#book-walks" onclick="gtag && gtag('event','book_casual_click',{label:'final_cta'});">
              Book Your 50% Off Casual Walk →
           </a>
           <a class="btn button-secondary" href="/memberships.html">Commit to a Regular Plan</a>
-          <a class="btn button-secondary" href="https://app.acuityscheduling.com/schedule/de831367/appointment/86031912/calendar/13101521?appointmentTypeIds[]=86031912" target="_blank" rel="noopener">Chat with the Team (10 min)</a>
+          <a class="btn button-secondary" href="#free-chat">Chat with the Team (10 min)</a>
         </p>
       </div>
     </section>
@@ -311,11 +314,69 @@
         <p>Choosing your local area ensures the shortest travel time and the most consistent routes for your dog. Click your suburb to see local details and book:</p>
         <div class="area-chip-row">
           <a class="area-chip" href="/dog-walking-south-melbourne.html">📍 South Melbourne</a>
-          <a class="area-chip" href="/dog-walking-albert-park.html">📍 Albert Park</a>
-          <a class="area-chip" href="/dog-walking-port-melbourne.html">📍 Port Melbourne</a>
-          <a class="area-chip" href="/dog-walking-middle-park.html">📍 Middle Park</a>
-          <a class="area-chip" href="/dog-walking-southbank.html">📍 Southbank</a>
-          <a class="area-chip" href="/dog-walking-south-yarra.html">📍 South Yarra (New Area)</a>
+          <a class="area-chip" href="/dog-walker-albert-park.html">📍 Albert Park</a>
+          <a class="area-chip" href="/dog-walker-port-melbourne.html">📍 Port Melbourne</a>
+          <a class="area-chip" href="/dog-walker-middle-park.html">📍 Middle Park</a>
+          <a class="area-chip" href="/dog-walker-southbank.html">📍 Southbank</a>
+          <a class="area-chip" href="/dog-walker-south-yarra.html">📍 South Yarra</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bookings (EMBEDS) -->
+    <section class="section" id="book-walks" aria-label="Book a solo walk">
+      <div class="container">
+        <h2>Book Dog Walking Online</h2>
+        <p class="meta" style="margin:8px 0 12px"><strong>Payment required to reserve.</strong> New clients can use code <strong>WALK50</strong>.</p>
+        <div class="scheduler-wrap">
+          <iframe
+            class="scheduler-frame"
+            title="Book a solo dog walk"
+            src="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931&coupon=WALK50"
+            loading="lazy"
+            allow="payment">
+          </iframe>
+        </div>
+        <p class="meta" style="margin-top:10px">Prefer a popup?&nbsp;
+          <a href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931"
+             target="_blank"
+             class="acuity-embed-button"
+             style="background:#FFFFFF;color:#111;padding:8px 12px;border:0;box-shadow:0 -2px 0 rgba(0,0,0,0.15) inset;border-radius:4px;text-decoration:none;display:inline-block">
+             Schedule Appointment
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="book-boarding" aria-label="Book boutique boarding">
+      <div class="container">
+        <h2>Book Dog Boarding Online</h2>
+        <p class="meta" style="margin:8px 0 12px"><strong>Pick-up & drop-off included</strong> in our local area. <strong>Payment required to reserve.</strong> Code <strong>BOARDING20</strong> auto-applies.</p>
+        <div class="scheduler-wrap">
+          <iframe
+            class="scheduler-frame"
+            title="Book boutique boarding"
+            src="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86032167&coupon=BOARDING20"
+            loading="lazy"
+            allow="payment">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- FREE CHAT -->
+    <section class="section" id="free-chat" aria-label="Book a free 10-minute chat">
+      <div class="container">
+        <h2>Book a Free 10-Minute Chat</h2>
+        <p class="meta" style="margin:8px 0 12px">Got a quick question before booking? Schedule a brief call below.</p>
+        <div class="scheduler-wrap">
+          <iframe
+            class="scheduler-frame"
+            title="Book a free 10-minute chat"
+            src="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031912"
+            loading="lazy"
+            allow="payment">
+          </iframe>
         </div>
       </div>
     </section>
@@ -349,20 +410,16 @@
         <details><summary>Do you walk more than one dog at a time?</summary><div><p>No — all walks are <strong>strictly solo</strong>. We never group unfamiliar dogs or use car-ferrying. This is our core promise for <strong>low-arousal, safe</strong> care.</p></div></details>
         <details><summary>How long is each solo walk session?</summary><div><p>Each session is a <strong>full 45 minutes on foot</strong> (transport/prep excluded), giving your dog plenty of time to decompress and enjoy the environment.</p></div></details>
         <details><summary>What proof and updates do I receive after the walk?</summary><div><p>You’ll receive a time-stamped <strong>GPS route</strong>, a happy <strong>photo update</strong>, and quick notes on mood, toileting, and energy level.</p></div></details>
-        <details><summary>Which Melbourne areas do you cover for solo dog walking?</summary><div><p>We focus on the inner south suburbs: <strong>South Melbourne</strong>, plus <a href="/dog-walking-albert-park.html">Albert Park</a>, <a href="/dog-walking-middle-park.html">Middle Park</a>, <a href="/dog-walking-port-melbourne.html">Port Melbourne</a>, <a href="/dog-walking-southbank.html">Southbank</a>, and <strong>South Yarra</strong>.</p></div></details>
+        <details><summary>Which Melbourne areas do you cover for solo dog walking?</summary><div><p>We focus on the inner south suburbs: <strong>South Melbourne</strong>, plus <a href="/dog-walker-albert-park.html">Albert Park</a>, <a href="/dog-walker-middle-park.html">Middle Park</a>, <a href="/dog-walker-port-melbourne.html">Port Melbourne</a>, <a href="/dog-walker-southbank.html">Southbank</a>, and <strong>South Yarra</strong>.</p></div></details>
       </div>
     </section>
   </main>
 
+  <!-- Sticky mobile CTA -->
   <div class="sticky-cta" role="region" aria-label="Quick booking">
-    <a class="btn button-primary"
-       href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931&coupon=WALK50"
-       target="_blank" rel="noopener"
-       onclick="gtag && gtag('event','book_casual_click',{label:'sticky_casual'});">
-       Book Casual — 50% Off
-    </a>
-    <a class="btn button-primary" href="/boarding-services.html">Boarding — 20% Off</a>
-    <a class="btn button-secondary" href="https://app.acuityscheduling.com/schedule/de831367/appointment/86031912/calendar/13101521?appointmentTypeIds[]=86031912" target="_blank" rel="noopener">Chat with the Team</a>
+    <a class="btn button-primary" href="#book-walks" onclick="gtag && gtag('event','book_casual_click',{label:'sticky_casual'});">Book Casual — 50% Off</a>
+    <a class="btn button-primary" href="#book-boarding">Boarding — 20% Off</a>
+    <a class="btn button-secondary" href="#free-chat">Chat with the Team</a>
   </div>
 
   <footer class="site-footer" role="contentinfo">
@@ -386,13 +443,8 @@
           <a href="https://x.com/woofofwalkstreet" aria-label="X"><img src="/images/social/twitter.svg" alt="" width="24" height="24"></a>
         </div>
         <p class="cta-buttons" style="margin-top:.4rem">
-          <a class="btn button-primary"
-             href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931&coupon=WALK50"
-             target="_blank" rel="noopener"
-             onclick="gtag && gtag('event','book_casual_click',{label:'footer_casual'});">
-             Book 45-min Casual — 50% Off
-          </a>
-          <a class="btn button-primary" href="/boarding-services.html">Boarding — 20% Off</a>
+          <a class="btn button-primary" href="#book-walks" onclick="gtag && gtag('event','book_casual_click',{label:'footer_casual'});">Book 45-min Casual — 50% Off</a>
+          <a class="btn button-primary" href="#book-boarding">Boarding — 20% Off</a>
         </p>
       </section>
 
@@ -402,7 +454,7 @@
           <li><a href="/services.html">All Services</a></li>
           <li><a href="/dog-walker.html" aria-current="page">Dog Walking (Solo)</a></li>
           <li><a href="/casual-dog-walking-south-melbourne.html">Casual Dog Walking</a></li>
-          <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
+          <li><a href="/boarding-services.html">Boutique Boarding</a></li>
           <li><a href="/service-areas.html">Service Areas</a></li>
           <li><a href="/contact.html">Contact</a></li>
         </ul>
@@ -416,15 +468,16 @@
           <li><a href="/testimonials.html">Testimonials</a></li>
           <li><a href="/gallery.html">Photos & Videos</a></li>
           <li><a href="/blog/index.html">Blog</a></li>
-          <li><a href="/faq.html">FAQs</a></li>
+          <li><a href="/faqs.html">FAQs</a></li>
         </ul>
       </section>
 
       <section class="footer-col collapsible">
         <button class="collapse-btn" aria-expanded="false" aria-controls="legal-list">Legal</button>
         <ul id="legal-list">
-          <li><a href="/privacy.html">Privacy</a></li>
-          <li><a href="/terms.html">Terms</a></li>
+          <li><a href="/privacy-policy.html">Privacy</a></li>
+          <li><a href="/terms-and-conditions.html">Terms</a></li>
+          <li><a href="/mini-terms.html">Mini Terms</a></li>
           <li><a href="/sitemap.html">Sitemap</a></li>
         </ul>
       </section>
@@ -440,7 +493,7 @@
     <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
   </footer>
 
-  <!-- Optional: SnapWidget script (activate when you add the real embed) -->
+  <!-- Optional: SnapWidget script (activate with your embed) -->
   <script async src="https://snapwidget.com/js/snapwidget.js"></script>
 
   <script>
@@ -473,11 +526,13 @@
       try{ if(sessionStorage.getItem(KEY)==='1') promo.style.display='none'; }catch(e){}
       close?.addEventListener('click',()=>{ try{sessionStorage.setItem(KEY,'1');}catch(e){}; promo.style.display='none'; });
 
-      // Ensure coupon + carry UTM on ALL Acuity links
-      const ensureCoupon = (url, coupon) => {
+      // Ensure coupon + carry UTM on ALL Acuity links (walking vs boarding)
+      const ensureCoupon = (url) => {
         try{
           const u = new URL(url, location.origin);
           if (/acuityscheduling\.com\/schedule\.php/.test(u.href)){
+            const type = u.searchParams.get('appointmentType');
+            const coupon = (type === '86032167') ? 'BOARDING20' : 'WALK50';
             if (coupon && !u.searchParams.has('coupon')) u.searchParams.set('coupon', coupon);
             const src = new URLSearchParams(location.search);
             ['utm_source','utm_medium','utm_campaign','utm_term','utm_content'].forEach(k=>{
@@ -489,8 +544,8 @@
         return url;
       };
       document.querySelectorAll('a[href*="acuityscheduling.com/schedule.php"]').forEach(a=>{
-        a.href = ensureCoupon(a.href, 'WALK50');
-        a.addEventListener('click', ()=>{ try{ window.gtag && gtag('event','acuity_click', {event_category:'engagement',event_label:'WALK50_services_lp'});}catch(_){}} );
+        a.href = ensureCoupon(a.href);
+        a.addEventListener('click', ()=>{ try{ window.gtag && gtag('event','acuity_click', {event_category:'engagement',event_label:'scheduler_click'});}catch(_){}} );
       });
     })();
   </script>

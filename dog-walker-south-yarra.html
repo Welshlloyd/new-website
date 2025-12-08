@@ -1,604 +1,433 @@
 <!DOCTYPE html>
 <html lang="en-AU">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- ===== Fonts ===== -->
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-
-  <!-- ===== SEO ===== -->
-  <title>Dog Walker South Yarra — Solo 45-Minute Walks & Calm Boutique Boarding | The Woof of Walk Street</title>
-  <meta name="description" content="One-dog-only dog walking in South Yarra — 45-minute solo walks around the Tan, Fawkner Park & leafy backstreets. GPS routes & photo updates every time. Calm, single-guest boutique boarding. New: 50% off Unlimited (Ends 30 Nov)." />
+  <title>Dog Walker South Yarra — Solo Dog Walking, GPS Tracked & Low-Arousal Routes | The Woof of Walk Street</title>
+  <meta name="description" content="South Yarra’s solo dog walker for apartment dogs. Calm, one-dog-only 45-minute walks with GPS route, photo updates & notes. New clients: 50% off your first casual walk with code WALK50." />
   <link rel="canonical" href="https://www.woofofwalkstreet.com/dog-walker-south-yarra.html" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="icon" href="/images/brand/favicon.ico" />
 
   <!-- Social -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Dog Walker South Yarra — Solo 45-Minute Walks & Calm Boutique Boarding">
-  <meta property="og:description" content="One-dog-only walks with GPS & photos in South Yarra. Plus calm, single-guest boarding. 50% off Unlimited (Ends 30 Nov).">
+  <meta property="og:title" content="Dog Walker South Yarra — Solo Dog Walking, GPS Tracked & Low-Arousal Routes">
+  <meta property="og:description" content="One-at-a-time dog walking in South Yarra with GPS tracking & photo updates. 50% off your first casual walk with code WALK50.">
   <meta property="og:url" content="https://www.woofofwalkstreet.com/dog-walker-south-yarra.html">
   <meta property="og:image" content="https://www.woofofwalkstreet.com/images/service-areas/south-yarra.webp">
   <meta property="og:locale" content="en_AU">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://www.woofofwalkstreet.com/images/service-areas/south-yarra.webp">
 
-  <!-- ===== Theme boot (no-FOUC) ===== -->
-  <script>
-  (function () {
-    const KEY='wow-theme';
-    const pref=localStorage.getItem(KEY)||'auto';
-    const mql=window.matchMedia('(prefers-color-scheme: dark)');
-    const isDark=()=>pref==='dark'||(pref==='auto'&&mql.matches);
-    document.documentElement.setAttribute('data-theme',pref);
-    document.documentElement.style.colorScheme=isDark()?'dark':'light';
-    mql.addEventListener?.('change',()=>{ if((localStorage.getItem(KEY)||'auto')==='auto'){ document.documentElement.style.colorScheme=mql.matches?'dark':'light'; } });
-  })();
-  </script>
+  <!-- Fonts + global styles (match index/dog-walker) -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/mini.css">
+  <link rel="stylesheet" href="/css/mini.dark.css">
+  <link rel="stylesheet" href="/css/mini.light.css">
+  <link rel="stylesheet" href="/css/styles.css">
 
-  <!-- ===== Edge Pack CSS (matches homepage) ===== -->
+  <!-- LCP image preload -->
+  <link rel="preload" as="image" href="/images/service-areas/south-yarra.webp" />
+
   <style>
-    :root{
-      --bg:#0b0e12; --card:#0f1318; --text:#e8eef5; --muted:#a9b4c0; --line:#1e2630;
-      --brand:#ffd166; --brand-ink:#0b0e12; --accent:#5af2c6;
-      --shadow:0 16px 48px rgba(0,0,0,.32);
-      --ring:0 0 0 2px rgba(255,209,102,.22), 0 16px 40px rgba(255,209,102,.08);
-      --header-blur: saturate(120%) blur(10px);
-      --header-bg: rgba(11,14,18,.78);
-      --container: 1100px; --radius-lg: 16px; --speed: .22s;
-      --font-heading:'Space Grotesk',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      --font-body:'Work Sans',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-    }
-    html,body{background:var(--bg);color:var(--text)}
-    img{max-width:100%;height:auto}
-    a{color:inherit}
-    .container{max-width:var(--container);margin:0 auto;padding:0 16px}
-    body,p,li,span,button,input,textarea{font-family:var(--font-body);letter-spacing:.1px;line-height:1.58}
-    h1,h2,h3,h4,h5,h6, nav a, .nav-group-btn{font-family:var(--font-heading);letter-spacing:.25px}
-    h1{font-weight:700} h2{font-weight:700}
-    .meta{color:var(--muted)}
+    :root { --bg:#0b0e12; --bg2:#0f1318; --text:#e8eef5; --muted:#a9b4c0; --line:#1e2630; --brand:#ffd166; --brand-ink:#0b0e12; --accent:#5af2c6; --shadow:0 18px 46px rgba(0,0,0,.35); }
+    body { background:linear-gradient(180deg, var(--bg), var(--bg2)); color:var(--text); }
+    h1,h2,h3,strong,.btn{font-family:'Space Grotesk',system-ui,sans-serif;letter-spacing:.2px}
 
-    /* Header */
-    .site-header{position:sticky;top:0;z-index:1000;backdrop-filter:var(--header-blur);-webkit-backdrop-filter:var(--header-blur);background:var(--header-bg);border-bottom:1px solid rgba(255,255,255,.06)}
-    .navbar{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
-    .brand{display:flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none;font-weight:900}
-    .brand img{width:48px;height:48px}
-    .nav-toggle{color:#fff;font-size:1.6rem;margin-left:.5rem;cursor:pointer}
-    @media(min-width:900px){.nav-toggle{display:none}}
-    .nav-links{display:flex;align-items:center;gap:14px}
-    .nav-links a{color:#fff;text-decoration:none;font-weight:700;position:relative}
-    .nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:linear-gradient(90deg,transparent,var(--brand),transparent);transform:scaleX(0);transform-origin:center;transition:transform var(--speed) ease}
-    .nav-links a:hover::after{transform:scaleX(1)}
-    .nav-group{position:relative}
-    .nav-group-btn{background:none;border:0;color:#fff;font:inherit;font-weight:800;cursor:pointer}
-    .nav-group-list{position:absolute;right:0;top:calc(100% + 8px);min-width:280px;padding:10px;background:#0f141b;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow)}
-    @media (max-width: 899px){
-      .nav-links{position:fixed;inset:64px 0 auto 0;background:#000;display:none;flex-direction:column;gap:12px;padding:16px;z-index:1300}
-      #nav-toggle:checked ~ .nav-links{display:flex}
-      .nav-group-list{position:static;min-width:auto;padding:0;border:0;background:#000;box-shadow:none}
-      .nav-links a,.nav-group-btn{color:#fff}
-      .nav-scrim{display:none;position:fixed;inset:64px 0 0 0;background:rgba(0,0,0,.35);z-index:1200}
-      #nav-toggle:checked ~ .nav-scrim{display:block}
-      body.menu-open .site-header{background:#000!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;border-bottom:1px solid rgba(255,255,255,.08)}
-    }
-    body.menu-open{overflow:hidden}
-    .page-top{padding-top:74px}
+    .hero img{border:3px solid var(--brand); box-shadow:0 12px 30px rgba(0,0,0,.18)}
+    .list-check{padding-left:1.1rem; list-style:none}
+    .list-check li{margin:.6rem 0; position:relative; padding-left:1.6rem; font-weight:600;}
+    .list-check li::before { content: '✅'; position: absolute; left: 0; }
+    .list-dash{padding-left:1.1rem; list-style:disc}
+    .list-dash li{margin:.3rem 0}
+    .badge-row .badge{margin-right:.35rem}
 
-    /* Utilities */
-    .gold-edge{border:1px solid rgba(255,209,102,.55);border-radius:var(--radius-lg);box-shadow:var(--ring);background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.015))}
-    .section-sweep{height:4px;border:0;margin:34px 0;background:linear-gradient(90deg,transparent,rgba(255,209,102,.8),transparent);filter:drop-shadow(0 8px 18px rgba(255,209,102,.25))}
-    .cta-buttons{display:flex;gap:10px;flex-wrap:wrap}
-    .btn{-webkit-tap-highlight-color:transparent;display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:12px 18px;border-radius:999px;border:1px solid transparent;text-decoration:none;font-weight:800;letter-spacing:.02em;transition:transform var(--speed),box-shadow var(--speed),background var(--speed),color var(--speed),border-color var(--speed)}
-    .btn-primary{background:var(--brand);color:var(--brand-ink);box-shadow:0 10px 26px rgba(255,209,102,.25)}
-    .btn-primary:hover{transform:translateY(-2px) scale(1.04);box-shadow:0 16px 46px rgba(255,209,102,.35)}
-    .btn-ghost{background:transparent;color:#fff;border:1px solid #2a3440}
-    .btn-ghost:hover{border-color:#fff;box-shadow:0 10px 28px rgba(0,0,0,.28);transform:translateY(-2px) scale(1.03)}
-    .btn-outline{background:transparent;border-color:var(--brand);color:var(--brand)}
-    .btn-outline:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 16px 40px rgba(255,209,102,.22)}
+    .price-banner{background:linear-gradient(90deg,#1e2630,#2a3440);color:var(--text);border:2px solid var(--accent);padding:16px 22px;border-radius:10px;text-align:center;margin-top:20px;font-size:1.12rem;font-weight:800;box-shadow:0 10px 20px rgba(90,242,198,.2)}
+    .price-banner a{color:var(--accent);font-weight:700;text-decoration:underline}
+    .price-banner strong{color:var(--brand)}
 
-    /* Hero */
-    .hero{padding:28px 0 18px;background:radial-gradient(1200px 600px at 20% -20%, rgba(255,209,102,.08), transparent 60%),linear-gradient(120deg,#111824,#1b2433,#111824);background-size:200% 200%;animation:heroMove 14s ease-in-out infinite;border-bottom:1px solid rgba(255,255,255,.06)}
-    @keyframes heroMove{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
-    .hero .section-kicker{letter-spacing:.08em;color:var(--accent);font-weight:800}
-    .hero h1{font-size:clamp(1.8rem,1.3rem + 2.4vw,2.6rem);margin:.25rem 0 .5rem;letter-spacing:.2px}
-    .hero .subhead{max-width:70ch;color:#cfd6df}
+    .hero-cta-row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:18px}
+    .hero-cta-row .btn{transform:scale(1.03);box-shadow:0 10px 20px rgba(255,209,102,.35)}
+    .hero-cta-row .btn:hover{transform:translateY(-2px) scale(1.06);box-shadow:0 14px 30px rgba(255,209,102,.5)}
 
-    /* Grids / cards */
-    .grid{display:grid;gap:16px}
-    @media(min-width:860px){.grid{grid-template-columns:repeat(3,1fr)}}
-    .plan{position:relative;overflow:hidden;isolation:isolate;padding:18px;transition:transform var(--speed), box-shadow var(--speed)}
-    .plan::after{content:"";position:absolute;inset:-40% -40% auto auto;width:220px;height:220px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,209,102,.18),transparent 70%);transform:translate(20%,-20%)}
-    .plan:hover{transform:translateY(-3px) scale(1.015);box-shadow:0 28px 80px rgba(255,209,102,.18)}
-    .plan h3{margin:.2rem 0 .4rem;font-weight:800}
-    .pill{display:inline-block;padding:.28rem .6rem;border-radius:999px;font-size:.82rem;font-weight:800;color:#111;background:var(--brand)}
+    .value-prop-block{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:20px;margin:26px 0;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.2)}
+    .value-prop-block h3{font-size:1.45rem;color:var(--accent);margin-top:0}
+    .value-prop-block p{font-size:1.05rem;max-width:800px;margin:0 auto 10px}
 
-    /* Ribbons */
-    .promo-ribbon{position:relative;z-index:1100;background:linear-gradient(135deg,#f5b200,#ffd866,#f5b200);background-size:300% 300%;animation:shimmer 6s ease-in-out infinite;color:var(--brand-ink);border-bottom:1px solid rgba(255,255,255,.06);box-shadow:0 14px 40px rgba(0,0,0,.18);isolation:isolate}
-    @keyframes shimmer{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
-    .promo-inner{max-width:var(--container);margin:0 auto;padding:10px 14px;display:grid;grid-template-columns:auto 1fr auto auto;gap:10px;align-items:center}
-    .promo-dog{display:none;width:28px;height:28px;border-radius:50%}
-    @media(min-width:720px){.promo-dog{display:block}}
-    .promo-copy{font-weight:800;letter-spacing:.2px;line-height:1.3}
-    .promo-copy strong{background:#111;color:#fff;padding:2px 8px;border-radius:999px;margin-right:8px;box-shadow:0 6px 18px rgba(0,0,0,.25)}
-    .promo-cta{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;white-space:nowrap;font-weight:900;padding:10px 14px;border-radius:999px;background:#111;color:#fff;border:1px solid rgba(255,255,255,.15);transition:transform var(--speed), box-shadow var(--speed), background var(--speed)}
-    .promo-cta:hover{transform:translateY(-2px) scale(1.04);box-shadow:0 16px 46px rgba(0,0,0,.35)}
-    .promo-close{appearance:none;border:0;background:transparent;color:#111;font:inherit;font-weight:900;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;transition:background var(--speed), transform var(--speed)}
-    .promo-close:hover{background:rgba(0,0,0,.08);transform:rotate(10deg)}
-    .impact-ribbon{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));border-bottom:1px solid var(--line);color:var(--text)}
-    .impact-inner{max-width:var(--container);margin:0 auto;padding:10px 14px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-    .impact-emoji{filter:drop-shadow(0 6px 16px rgba(255,209,102,.25))}
-    .impact-cta{margin-left:auto;text-decoration:none;font-weight:900;white-space:nowrap;color:var(--brand);border:1px solid rgba(255,209,102,.45);padding:8px 12px;border-radius:999px;transition:transform var(--speed), box-shadow var(--speed), background var(--speed), color var(--speed)}
-    .impact-cta:hover{background:var(--brand);color:var(--brand-ink);box-shadow:0 16px 46px rgba(255,209,102,.2);transform:translateY(-2px) scale(1.03)}
+    .sticky-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:1100;background:#111824ee;border:1px solid var(--line);box-shadow:var(--shadow);border-radius:16px;display:flex;gap:10px;justify-content:center;align-items:center;padding:10px}
+    .sticky-cta .btn,.sticky-cta .button-primary{padding:10px 16px}
+    @media (min-width:860px){.sticky-cta{display:none}}
 
-    /* Footer */
-    .footer-grid{display:grid;gap:16px;padding:18px 0}
-    .footer-grid.compact{row-gap:12px;column-gap:24px;align-items:start}
-    @media(min-width:860px){.footer-grid.compact{grid-template-columns:1.2fr 1fr 1fr}}
-    @media(min-width:600px) and (max-width:859px){.footer-grid.compact{grid-template-columns:1fr 1fr}}
-    .footer-col h3{font-size:1rem;margin:0 0 .4rem;color:#ffd166}
-    .footlist{list-style:none;padding:0;margin:0;display:grid;gap:.28rem}
-    .footlist a{color:#e8eef5;text-decoration:none}
-    .footlist a:hover{text-decoration:underline}
-    .footer-bottom{padding:12px 0;color:#a9b4c0;border-top:1px solid var(--line);text-align:center}
+    .footer-geo{background:var(--bg2);border-top:1px solid var(--line);padding:15px 16px;color:var(--muted);font-size:.95rem;text-align:center}
+    .footer-brand a{color:var(--brand);}
   </style>
 
-  <!-- Structured Data -->
-  <!-- Breadcrumbs -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
-      {"@type":"ListItem","position":2,"name":"South Yarra Dog Walker","item":"https://www.woofofwalkstreet.com/dog-walker-south-yarra.html"}
-    ]
-  }
+  <!-- GA/Ads -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KP5LVKN6X3"></script>
+  <script>
+    window.dataLayer=window.dataLayer||[];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config','G-KP5LVKN6X3');  // GA4
+    gtag('config','AW-17527927259'); // Google Ads
   </script>
 
-  <!-- LocalBusiness + areaServed -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"LocalBusiness",
-    "@id":"https://www.woofofwalkstreet.com/#business",
-    "name":"The Woof of Walk Street",
-    "url":"https://www.woofofwalkstreet.com",
-    "image":"https://www.woofofwalkstreet.com/images/brand/logo-lockup-gold.webp",
-    "telephone":"+61 456 754 050",
-    "priceRange":"$$",
-    "description":"Premium solo dog walks and single-guest boutique boarding. GPS-tracked, photo updates, and stress-free care.",
-    "address":{"@type":"PostalAddress","addressLocality":"South Melbourne","addressRegion":"VIC","addressCountry":"AU"},
-    "areaServed":["South Melbourne","Albert Park","Port Melbourne","Middle Park","Southbank","South Yarra"]
-  }
-  </script>
-
-  <!-- Services (Dog Walking + Boarding) for South Yarra -->
+  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@graph":[
       {
-        "@type":"Service",
-        "serviceType":"Dog Walking South Yarra (Solo 45-minute)",
-        "provider":{"@id":"https://www.woofofwalkstreet.com/#business"},
-        "areaServed":["South Yarra"],
-        "description":"One-dog-only walks in South Yarra with GPS route and photo updates.",
-        "offers":{
-          "@type":"Offer",
-          "priceCurrency":"AUD",
-          "price":"90",
-          "availability":"https://schema.org/InStock",
-          "url":"https://www.woofofwalkstreet.com/book-dog-walk/"
-        }
+        "@type":"LocalBusiness",
+        "@id":"https://www.woofofwalkstreet.com/#business",
+        "name":"The Woof of Walk Street",
+        "url":"https://www.woofofwalkstreet.com/",
+        "telephone":"+61-3-7073-1175",
+        "image":"https://www.woofofwalkstreet.com/images/brand/logo-lockup-gold.webp",
+        "address":{"@type":"PostalAddress","addressLocality":"South Yarra","addressRegion":"VIC","addressCountry":"AU"}
+      },
+      {
+        "@type":"BreadcrumbList",
+        "@id":"https://www.woofofwalkstreet.com/dog-walker-south-yarra.html#breadcrumbs",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
+          {"@type":"ListItem","position":2,"name":"Dog Walker South Yarra","item":"https://www.woofofwalkstreet.com/dog-walker-south-yarra.html"}
+        ]
       },
       {
         "@type":"Service",
-        "serviceType":"Dog Boarding South Yarra (Single Guest)",
+        "@id":"https://www.woofofwalkstreet.com/dog-walker-south-yarra.html#service",
+        "name":"Solo Dog Walking — South Yarra (45 minutes, GPS Tracked)",
+        "serviceType":"Dog Walking",
         "provider":{"@id":"https://www.woofofwalkstreet.com/#business"},
-        "areaServed":["South Yarra"],
-        "description":"Calm, single-guest weekend boarding with photo updates — home environment near South Yarra.",
+        "areaServed":["South Yarra","Southbank","South Melbourne","Albert Park"],
+        "url":"https://www.woofofwalkstreet.com/dog-walker-south-yarra.html",
+        "description":"Calm, one-dog-only walks in South Yarra with GPS route, photo updates and route notes. Ideal for apartment dogs and reactive pups.",
         "offers":{
           "@type":"Offer",
           "priceCurrency":"AUD",
+          "price":"100.00",
           "availability":"https://schema.org/InStock",
-          "url":"https://www.woofofwalkstreet.com/book-boarding.html"
+          "url":"https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931"
         }
       },
       {
-        "@type":"Offer",
-        "@id":"https://www.woofofwalkstreet.com/#unlimited-offer",
-        "name":"Unlimited Solo Walks — Weekdays (South Yarra eligible)",
-        "priceCurrency":"AUD",
-        "price":"1500",
-        "url":"https://www.woofofwalkstreet.com/unlimited-dog-walks.html",
-        "validThrough":"2025-11-30",
-        "description":"Unlimited weekday solo walks (capped at 21 per month). First month 50% off for new members."
+        "@type":"FAQPage",
+        "@id":"https://www.woofofwalkstreet.com/dog-walker-south-yarra.html#faq",
+        "mainEntity":[
+          {"@type":"Question","name":"Do you ever walk more than one dog at a time?","acceptedAnswer":{"@type":"Answer","text":"No — all walks are strictly solo. We never group unfamiliar dogs or run car-ferry pack walks, keeping arousal low and safety high."}},
+          {"@type":"Question","name":"How long is each solo walk?","acceptedAnswer":{"@type":"Answer","text":"Each session is a full 45 minutes on foot (prep/transport excluded), designed for decompression and calm sniffing."}},
+          {"@type":"Question","name":"What proof and updates do I receive?","acceptedAnswer":{"@type":"Answer","text":"You’ll receive a time-stamped GPS route, a photo update, and quick notes on mood, toileting and energy level after every walk."}},
+          {"@type":"Question","name":"Where do you walk in South Yarra?","acceptedAnswer":{"@type":"Answer","text":"We favour Tan loops at off-peak times, Fawkner Park edges, and quieter leafy backstreets to avoid high-stimulus pinch-points."}}
+        ]
       }
     ]
   }
   </script>
-
-  <!-- FAQPage -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {"@type":"Question","name":"Do you do pack walks in South Yarra?","acceptedAnswer":{"@type":"Answer","text":"No — we only offer one-dog-only walks for calmer outings and full attention."}},
-      {"@type":"Question","name":"What updates do I get?","acceptedAnswer":{"@type":"Answer","text":"Every walk includes a GPS route and photo update. Boarding includes daily photo updates."}},
-      {"@type":"Question","name":"Can I trial before joining Unlimited?","acceptedAnswer":{"@type":"Answer","text":"Yes — book a casual walk, then upgrade to Unlimited (first month 50% off, Ends 30 Nov)."}}
-    ]
-  }
-  </script>
-
-  <!-- Google Ads / gtag -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'AW-17527927259');
-  </script>
-
-  <!-- Preload LCP hero image -->
-  <link rel="preload" as="image" href="/images/service-areas/south-yarra.webp" />
 </head>
 <body>
 
-  <!-- Promo ribbon -->
-  <div id="promo" class="promo-ribbon" role="region" aria-label="Promo: 50% off">
+  <!-- Promo -->
+  <div id="promo" class="promo-ribbon promo--edge" role="region" aria-label="Promo: 50% off Casual Walks">
     <div class="promo-inner container">
       <img class="promo-dog" src="/images/brand/dog-in-suit.webp" alt="" width="28" height="28" decoding="async" />
-      <span class="promo-copy">
-        <strong>50% OFF</strong> Unlimited Weekday Walks — solo 45-minute walks · GPS · photos <strong>· Ends 30 Nov</strong>
-      </span>
-      <a href="/unlimited-dog-walks.html" class="promo-cta">Join Unlimited →</a>
+      <span class="promo-copy"><strong>50% OFF</strong> your first <strong>Casual Walk</strong> — use code <strong>WALK50</strong> · Ends <strong>31/12/2025</strong></span>
+      <a href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931&coupon=WALK50" class="promo-cta" target="_blank" rel="noopener">Book Now →</a>
       <button id="promo-close" class="promo-close" aria-label="Dismiss promo">✕</button>
     </div>
   </div>
 
-  <!-- Impact ribbon -->
+  <!-- Impact -->
   <div class="impact-ribbon" role="note" aria-label="Walks that do more: 10% donated">
     <div class="impact-inner">
       <span class="impact-emoji" aria-hidden="true">💛</span>
-      <strong>Walks That Do More:</strong> We donate <strong>10% of profits</strong> to local rescues.
+      <strong>Walks That Do More:</strong> We donate <strong>10% of profits</strong> to local rescue.
       <a class="impact-cta" href="/community.html">See our impact →</a>
     </div>
   </div>
 
-  <!-- HEADER -->
-  <header class="site-header" role="banner">
-    <div class="navbar container" role="navigation" aria-label="Main">
-      <a class="brand" href="/" aria-label="Go to home">
+  <!-- Header -->
+  <header class="site-header">
+    <div class="navbar container">
+      <a class="brand" href="/" aria-label="Home">
         <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="56" height="56">
         <strong>The Woof of Walk Street</strong>
       </a>
 
-      <!-- mobile hamburger -->
       <input id="nav-toggle" type="checkbox" hidden>
       <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</label>
 
-      <nav class="nav-links" aria-label="Primary">
+      <nav class="nav-links">
         <section class="nav-group">
-          <button class="nav-group-btn" aria-expanded="false" aria-controls="nav-services">Services ▾</button>
+          <button class="nav-group-btn" aria-expanded="false" aria-controls="nav-services">Services</button>
           <ul id="nav-services" class="nav-group-list" hidden>
             <li><a href="/services.html">All Services</a></li>
-            <li><a href="/dog-walking-south-melbourne.html">Dog Walking South Melbourne</a></li>
-            <li><a href="/casual-dog-walking-south-melbourne.html">Casual Walking (South Melbourne)</a></li>
-            <li><a href="/memberships.html">Memberships — Compare Plans</a></li>
-            <li><a href="/unlimited-dog-walks.html">Unlimited Membership</a></li>
-            <li><a href="/boarding-services.html">Boarding Services</a></li>
+            <li><a href="/dog-walker.html">Dog Walking (Solo)</a></li>
+            <li><a href="/casual-dog-walking-south-yarra.html">Casual Dog Walking</a></li>
+            <li><a href="/boarding-services.html">Boutique Boarding</a></li>
+            <li><a href="/dog-boarding-south-yarra.html">Dog Boarding South Yarra</a></li>
+            <li><a href="/service-areas.html">Service Areas</a></li>
+            <li><a href="/contact.html">Contact</a></li>
           </ul>
         </section>
-
-        <section class="nav-group">
-          <button class="nav-group-btn" aria-expanded="false" aria-controls="nav-areas">Areas ▾</button>
-          <ul id="nav-areas" class="nav-group-list" hidden>
-            <li><a href="/service-areas.html">All Areas</a></li>
-            <li><a href="/dog-walking-south-melbourne.html">South Melbourne</a></li>
-            <li><a href="/dog-walker-albert-park.html">Albert Park</a></li>
-            <li><a href="/dog-walker-port-melbourne.html">Port Melbourne</a></li>
-            <li><a href="/dog-walker-middle-park.html">Middle Park</a></li>
-            <li><a href="/dog-walker-southbank.html">Southbank</a></li>
-            <li><a href="/dog-walker-south-yarra.html" aria-current="page">South Yarra</a></li>
-          </ul>
-        </section>
-
         <a href="/about.html">About</a>
-        <a href="/testimonials.html">Testimonials</a>
-        <a href="/gallery.html">Gallery</a>
         <a href="/blog/index.html">Blog</a>
         <a href="/faq.html">FAQs</a>
         <a href="/search.html">Search</a>
-
-        <a class="btn btn-outline nav-cta" href="/book-dog-walk/">Book Walks</a>
-        <a class="btn btn-primary nav-cta" href="/book-boarding.html">Book Boarding</a>
+        <a class="btn button-primary nav-cta" href="#book">Book Walks</a>
+        <a class="btn button-primary nav-cta" href="/dog-boarding-south-yarra.html">Boarding — South Yarra</a>
       </nav>
-
-      <div class="nav-scrim" aria-hidden="true"></div>
     </div>
   </header>
 
-  <main class="page-top">
+  <main>
     <!-- HERO -->
     <section class="hero">
       <div class="container">
-        <span class="section-kicker">South Yarra</span>
-        <h1>Dog Walker South Yarra — Solo 45-Minute Walks & Calm, Single-Guest Boarding</h1>
-        <p class="subhead">
-          One-dog-only walking around the Tan, Fawkner Park and leafy backstreets — with <strong>GPS routes</strong> and <strong>photo updates</strong> every time.
-          Prefer weekends away? Our <a href="/boarding-services.html"><strong>Boutique Boarding</strong></a> hosts just one guest at a time for a quiet, predictable stay.
-        </p>
+        <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="/">Home</a> › Dog Walker South Yarra</nav>
 
-        <figure class="gold-edge" style="display:inline-block;padding:6px;margin-top:12px">
-          <img
-            src="/images/service-areas/south-yarra.webp"
-            alt="Calm solo dog walk in South Yarra along the Tan and leafy streets"
-            width="1200" height="800" loading="eager" decoding="async" fetchpriority="high"
-            style="max-width:920px;border-radius:12px;margin:0 auto;display:block;">
-        </figure>
+        <h1>Dog Walker South Yarra — Solo Dog Walking, GPS Tracked & Low-Arousal Routes</h1>
+        <p class="subhead">South Yarra’s preferred <strong>one-dog-only</strong> walking service for apartment dogs. Calm <strong>45-minute</strong> sessions with a <strong>GPS route</strong>, <strong>photo update</strong>, and clear notes — designed to decompress around the <strong>Tan</strong>, <strong>Fawkner Park</strong> and leafy backstreets.</p>
 
-        <div class="cta-buttons" style="margin-top:12px">
-          <a href="/book-dog-walk/" class="btn btn-primary">Book a Casual Walk — A$90</a>
-          <a href="/unlimited-dog-walks.html" class="btn btn-ghost">Try Unlimited — 50% Off First Month</a>
-          <a href="/book-boarding.html" class="btn btn-ghost">Book Boarding</a>
-          <a href="/contact.html" class="btn btn-outline">Questions? Contact Us</a>
+        <img src="/images/service-areas/south-yarra.webp"
+             alt="Solo dog walk through leafy South Yarra streets and around the Tan"
+             width="1200" height="800"
+             style="max-width:920px;border-radius:12px;display:block;margin:0 auto"
+             loading="eager" decoding="async" fetchpriority="high">
+
+        <div class="value-prop-block">
+          <h3>Solo Means Calm: Predictable, <strong>Low-Arousal</strong> Routes</h3>
+          <p>We time Tan loops for off-peak, use Fawkner Park’s edges for space, and connect quiet backstreets to avoid high-stimulus pinch-points. This suits <strong>reactive, anxious, senior and apartment-dwelling dogs</strong> who need routine and decompression.</p>
+        </div>
+
+        <div class="price-banner">
+          <p><strong>A$100 Casual Solo Walk</strong> — <strong>NEW CLIENT SPECIAL:</strong> 50% off your first casual walk with code <strong>WALK50</strong>. <a href="/memberships.html">Memberships</a> available.</p>
+        </div>
+
+        <div class="hero-cta-row" id="book">
+          <a class="btn button-primary"
+             href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931&coupon=WALK50"
+             target="_blank" rel="noopener">
+             Book Your 50% Off Walk →
+          </a>
+          <a class="btn button-secondary" href="/dog-boarding-south-yarra.html">Need Overnight Care? South Yarra Boarding</a>
+          <a class="btn button-secondary" href="/memberships.html">Compare Membership Plans</a>
         </div>
       </div>
-      <hr class="section-sweep" aria-hidden="true">
     </section>
 
-    <!-- WHY SOLO -->
-    <section>
-      <div class="container" data-reveal>
-        <h2>Why South Yarra Dogs Do Better with Solo Walks</h2>
-        <div class="gold-edge" style="padding:18px">
-          <p>
-            Pack walks ramp arousal and split attention. Our <strong>one-dog-only</strong> approach keeps things predictable:
-            steady pace, lots of sniffing, and routes your pup actually knows. We avoid crowded pinch points, time our Tan
-            loops, and use <strong>Fawkner Park</strong> edges and quieter streets to keep stress low.
-          </p>
-          <ul class="meta" style="margin:.4rem 0 0; padding-left:1.1rem">
-            <li>Full <strong>45-minute</strong> walk on foot — no van laps</li>
-            <li><strong>GPS route + photo update</strong> after every session</li>
-            <li>Fully insured · Pet first-aid trained</li>
-            <li>South Yarra focus with neighbouring links to Southbank & Albert Park</li>
+    <!-- BENEFITS / LOCAL SEO -->
+    <section class="section">
+      <div class="container grid grid-2">
+        <article class="card">
+          <h2>Solo Dog Walking in South Yarra — Proof, Safety & Calm</h2>
+          <h3>GPS Route & Photo Updates After Every Walk</h3>
+          <p>Each walk includes <strong>time-stamped GPS tracking</strong>, a <strong>photo update</strong>, and quick notes on mood, toileting and energy. Your dog gets 100% of our focus — never group mixing — which keeps arousal low and consistency high.</p>
+          <ul class="list-check">
+            <li><strong>Strictly Solo:</strong> No pack walks, ever</li>
+            <li><strong>Predictable Routes:</strong> Tan off-peak, Fawkner edges, quiet streets</li>
+            <li><strong>Experienced Handlers:</strong> Insured, police-checked, low-arousal trained</li>
           </ul>
-          <div class="cta-buttons" style="margin-top:10px">
-            <a href="/book-dog-walk/" class="btn btn-primary">Book a Casual Walk</a>
-            <a href="/unlimited-dog-walks.html" class="btn btn-outline">Unlimited — 50% Off (Ends 30 Nov)</a>
-          </div>
-        </div>
+          <p class="muted">Further reading: <a href="/blog/why-solo-walks.html">Why Solo Walks Beat Pack Walks</a> · <a href="/blog/ethical-dog-walker.html">Choosing an Ethical Dog Walker</a></p>
+        </article>
+
+        <article class="card">
+          <h2>Best South Yarra Walking Spots for Decompression</h2>
+          <h3>Tan Tracks, Fawkner Park & Leafy Backstreet Loops</h3>
+          <p>We tailor routes to your building and your dog’s needs. Common loops include <strong>Tan</strong> circuits at quiet times, <strong>Fawkner Park</strong> for sniffs and breaks, and the calmer residential grid between Domain Road and Alexandra Avenue.</p>
+        </article>
       </div>
-      <hr class="section-sweep" aria-hidden="true">
     </section>
 
-    <!-- BOARDING -->
-    <section>
-      <div class="container" data-reveal>
-        <h2>Boutique Boarding for South Yarra — One Guest, Home Comforts</h2>
-        <div class="gold-edge" style="padding:18px">
-          <p>
-            If you’re heading away, we host <strong>one guest only</strong> for a calm, home-style weekend. Familiar
-            rhythms, gentle walks and daily <strong>photo updates</strong>. No kennels. No chaos.
-          </p>
-          <div class="cta-buttons" style="margin-top:8px">
-            <a href="/boarding-services.html" class="btn btn-primary">About Boarding</a>
-            <a href="/book-boarding.html" class="btn btn-ghost">Book Boarding</a>
-          </div>
-        </div>
-      </div>
-      <hr class="section-sweep" aria-hidden="true">
-    </section>
-
-    <!-- UNLIMITED SELL -->
-    <section>
-      <div class="container" data-reveal>
-        <h2>From Casual to Consistent — Try Unlimited (Weekdays)</h2>
-        <p class="meta" style="max-width:60ch">
-          Most South Yarra clients start with a <strong>Casual Walk</strong> then switch to <strong>Unlimited</strong> for rhythm and results.
-          Unlimited = one 45-minute solo walk every weekday (Mon–Fri), <em>capped at 21/month</em> — <strong>A$1,500/month</strong>.
-          <strong>First month 50% off</strong> for new members <strong>(Ends 30 Nov)</strong>.
+    <!-- HOW TO BOOK -->
+    <section class="section">
+      <div class="container">
+        <h2>How to Book Your South Yarra Dog Walker</h2>
+        <h3>Simple Steps, Clear Proof of Service</h3>
+        <ol class="list-check">
+          <li><strong>Choose a time:</strong> Mon–Fri, 7am–7pm — we start at your door.</li>
+          <li><strong>Walk the plan:</strong> Calm 45-minute solo route tailored to your building.</li>
+          <li><strong>Get proof:</strong> GPS route, photo, and short notes after every session.</li>
+        </ol>
+        <p class="hero-cta-row" style="margin-top:10px">
+          <a class="btn button-primary" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931&coupon=WALK50" target="_blank" rel="noopener">Book a Casual Walk</a>
+          <a class="btn button-secondary" href="/memberships.html">See Membership Savings</a>
+          <a class="btn button-secondary" href="/dog-boarding-south-yarra.html">Book South Yarra Boarding</a>
         </p>
-        <div class="cta-buttons" style="margin-top:8px">
-          <a href="/unlimited-dog-walks.html" class="btn btn-primary">Join Unlimited — First Month 50% Off</a>
-          <a href="/memberships.html" class="btn btn-ghost">Compare Memberships</a>
-        </div>
       </div>
-      <hr class="section-sweep" aria-hidden="true">
     </section>
 
-    <!-- LOCAL GUIDES / BLOG LINKS -->
-    <section>
-      <div class="container" data-reveal>
-        <h2>South Yarra Dog-Friendly Guides</h2>
-        <p class="meta" style="max-width:70ch">Plan your next outing with our local guides — great for gentle decompression walks and a coffee after:</p>
-        <div class="grid">
-          <article class="gold-edge plan">
-            <span class="pill">Local Walks</span>
-            <h3><a href="/blog/dog-friendly-walks-south-yarra.html">Dog-Friendly Walks in South Yarra →</a></h3>
-            <p class="meta">Tan loops, Fawkner Park edges & low-arousal backstreet routes.</p>
-          </article>
-          <article class="gold-edge plan">
-            <span class="pill">Cafés</span>
-            <h3><a href="/blog/dog-friendly-cafes-south-yarra.html">Dog-Friendly Cafés in South Yarra →</a></h3>
-            <p class="meta">Patio-friendly cafés and tips for a calm coffee with your pup.</p>
-          </article>
-          <article class="gold-edge plan">
-            <span class="pill">Nearby</span>
-            <h3><a href="/dog-walker-southbank.html">Dog Walker Southbank →</a></h3>
-            <p class="meta">Lower-arousal river routes for apartment dogs, GPS + photo updates.</p>
-          </article>
-        </div>
+    <!-- GUIDES / INTERNAL LINKS -->
+    <section class="section alt">
+      <div class="container">
+        <h2>South Yarra Dog Guides & Helpful Reads</h2>
+        <ul class="list-dash">
+          <li><a href="/blog/dog-friendly-walks-south-yarra.html">Best Calm Dog Walks around South Yarra</a></li>
+          <li><a href="/blog/dog-friendly-cafes-south-yarra.html">Dog-Friendly Cafés near the Tan</a></li>
+          <li><a href="/blog/why-solo-walks.html">Why Solo Walks Reduce Stress (vs pack walks)</a></li>
+          <li><a href="/blog/ethical-dog-walker.html">How to Choose an Ethical Dog Walker</a></li>
+          <li><a href="/blog/prepare-dog-for-boarding-checklist.html">Preparing for Boutique Boarding (Checklist)</a></li>
+        </ul>
       </div>
-      <hr class="section-sweep" aria-hidden="true">
     </section>
 
-    <!-- NEARBY LINKS -->
-    <section>
-      <div class="container" data-reveal>
-        <h2>Nearby Suburbs We Also Serve</h2>
-        <div class="grid">
-          <article class="gold-edge plan">
-            <span class="pill">Albert Park</span>
-            <h3><a href="/dog-walker-albert-park.html">Dog Walker Albert Park →</a></h3>
-            <p class="meta">Lake loops with clear sight-lines for sniff-heavy decompression.</p>
-          </article>
-          <article class="gold-edge plan">
-            <span class="pill">South Melbourne</span>
-            <h3><a href="/dog-walking-south-melbourne.html">Dog Walking South Melbourne →</a></h3>
-            <p class="meta">Home base, steady local routes, and quick response times.</p>
-          </article>
-          <article class="gold-edge plan">
-            <span class="pill">Port Melbourne</span>
-            <h3><a href="/dog-walker-port-melbourne.html">Dog Walker Port Melbourne →</a></h3>
-            <p class="meta">Bayside breezes and broad paths for easy, predictable walks.</p>
-          </article>
-        </div>
+    <!-- NEARBY / SERVICE AREAS -->
+    <section class="section" aria-label="Nearby areas we walk">
+      <div class="container">
+        <h2>Nearby Areas for Solo Dog Walking</h2>
+        <p class="badge-row">
+          <a class="badge" href="/dog-walker-southbank.html">Southbank</a>
+          <a class="badge" href="/dog-walking-south-melbourne.html">South Melbourne</a>
+          <a class="badge" href="/dog-walking-albert-park.html">Albert Park</a>
+          <a class="badge" href="/dog-walking-middle-park.html">Middle Park</a>
+          <a class="badge" href="/dog-walking-port-melbourne.html">Port Melbourne</a>
+          <span class="badge" aria-current="page">South Yarra</span>
+        </p>
+        <p>See all <a href="/service-areas.html">Service Areas →</a></p>
       </div>
-      <hr class="section-sweep" aria-hidden="true">
     </section>
 
     <!-- FAQ -->
-    <section class="faq section">
-      <div class="container" data-reveal>
-        <div class="wrap gold-edge" style="padding:18px;background:#fff;color:#111;border:2px solid #f5b200;border-radius:14px;box-shadow:0 0 0 3px rgba(245,178,0,.18), 0 22px 60px rgba(245,178,0,.18);">
-          <h2>South Yarra — FAQs</h2>
-          <details open><summary>Do you offer group walks?</summary><p>No — never. We are strictly <strong>one-dog-only</strong> for calm, focused outings.</p></details>
-          <details><summary>Where do you walk in South Yarra?</summary><p>Tan loops, Fawkner Park edges, and quieter residential streets — we pick routes for space and predictability.</p></details>
-          <details><summary>What do I receive after a walk?</summary><p>A <strong>GPS route</strong>, <strong>photos</strong>, and quick notes so you can see the rhythm.</p></details>
-          <details><summary>How do I try Unlimited?</summary><p>Book a casual walk first, then switch to <a href="/unlimited-dog-walks.html"><strong>Unlimited</strong></a> — <strong>first month 50% off</strong> (Ends 30 Nov).</p></details>
-          <div class="cta-buttons" style="margin-top:10px">
-            <a class="btn btn-primary" href="/book-dog-walk/">Book a Casual Walk</a>
-            <a class="btn btn-ghost" href="/unlimited-dog-walks.html">Join Unlimited</a>
-            <a class="btn btn-ghost" href="/book-boarding.html">Book Boarding</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact strip -->
-    <section class="contact-strip">
-      <div class="container gold-edge" style="display:grid;gap:14px;align-items:center;grid-template-columns:1fr">
-        <div>
-          <h2 style="margin:0 0 6px;font-weight:900">Ready to book?</h2>
-          <p class="meta" style="margin:0">
-            Mon–Fri <strong>7:00am–7:00pm</strong> · South Yarra, Southbank, Albert Park & South Melbourne
-          </p>
-          <p class="meta" style="margin:.35rem 0 0">
-            <strong>Trust:</strong> GPS-tracked solo walks · Photo updates · Fully insured · Pet first aid
-          </p>
-        </div>
-        <div class="cta-buttons" style="flex-wrap:wrap">
-          <a href="/book-dog-walk/" class="btn btn-primary">Book a Walk</a>
-          <a href="tel:+61456754050" class="btn btn-ghost">Call +61 456 754 050</a>
-          <a href="mailto:info@woofofwalkstreet.com" class="btn btn-ghost">Email Us</a>
-          <a href="/book-boarding.html" class="btn btn-outline">Book Boarding</a>
-        </div>
+    <section class="faq" id="faq">
+      <div class="container">
+        <h2>Dog Walker South Yarra — FAQs</h2>
+        <details><summary>Do you walk more than one dog at a time?</summary><div><p>No — all walks are <strong>strictly solo</strong>. We never group unfamiliar dogs or use car-ferrying. This keeps arousal low and focus high.</p></div></details>
+        <details><summary>How long is each walk?</summary><div><p>Each session is a <strong>full 45 minutes on foot</strong> (prep/transport excluded) tailored to your dog’s routine and building location.</p></div></details>
+        <details><summary>What updates do I get?</summary><div><p>Time-stamped <strong>GPS route</strong>, a happy <strong>photo update</strong>, and short notes (mood, toileting, energy) after every walk.</p></div></details>
+        <details><summary>Do you cover my street in South Yarra?</summary><div><p>Yes — we operate across South Yarra and immediate surrounds (Southbank, South Melbourne, Albert Park). We select low-arousal loops from your building entrance.</p></div></details>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER -->
+  <!-- Sticky mobile CTA -->
+  <div class="sticky-cta" role="region" aria-label="Quick booking">
+    <a class="btn button-primary" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931&coupon=WALK50" target="_blank" rel="noopener">Book Walks — 50% Off</a>
+    <a class="btn button-primary" href="/dog-boarding-south-yarra.html">South Yarra Boarding</a>
+  </div>
+
+  <!-- Footer -->
   <footer class="site-footer" role="contentinfo">
-    <div class="container footer-grid compact">
-      <!-- Brand / contact -->
+    <div class="footer-banner">
+      <picture>
+        <source srcset="/images/brand/footer-banner-1600x600.webp" media="(min-width:768px)">
+        <img src="/images/brand/footer-banner-800x300.webp" alt="Happy dogs in Melbourne" width="800" height="300" loading="lazy">
+      </picture>
+    </div>
+
+    <div class="container footer-grid">
       <section class="footer-brand">
-        <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="56" height="56" loading="lazy">
-        <p class="org"><strong>The Woof of Walk Street</strong><br>
-          <a class="footer-map" href="https://maps.app.goo.gl/YnEoSPwhGocUZyWL9?g_st=ipc" target="_blank" rel="noopener">South Melbourne, VIC</a><br>
-          Mon–Fri 7am–7pm · <a href="tel:+61456754050">+61&nbsp;456&nbsp;754&nbsp;050</a><br>
-          <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a>
+        <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="60" height="60" loading="lazy">
+        <p><strong>The Woof of Walk Street</strong><br>
+          <a class="footer-map" href="https://maps.app.goo.gl/YnEoSPwhGocUZyWL9?g_st=ipc" target="_blank" rel="noopener">South Yarra, VIC</a> · Mon–Fri 7am–7pm<br>
+          <a href="tel:+61370731175">(03) 7073 1175</a> · <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a>
         </p>
-        <p style="margin:.4rem 0 0"><em>“GPS tracked, photo updates, and the calmest walks in Melbourne.”</em></p>
-        <p class="cta-buttons" style="margin:.75rem 0 0;display:flex;gap:.5rem;flex-wrap:wrap">
-          <a class="btn btn-primary" href="/book-dog-walk/?utm_source=site&utm_medium=footer&utm_campaign=50off_walk">Book 50% Off Walk</a>
-          <a class="btn btn-ghost" href="/unlimited-dog-walks.html?utm_source=site&utm_medium=footer&utm_campaign=50off_unlimited">50% Off Unlimited</a>
-          <a class="btn btn-ghost" href="/book-boarding.html?utm_source=site&utm_medium=footer&utm_campaign=boarding">Book Boarding</a>
+        <div class="footer-socials">
+          <a href="https://instagram.com/woofofwalkstreet" aria-label="Instagram"><img src="/images/social/instagram.svg" alt="" width="24" height="24"></a>
+          <a href="https://facebook.com/woofofwalkstreet" aria-label="Facebook"><img src="/images/social/facebook.svg" alt="" width="24" height="24"></a>
+          <a href="https://x.com/woofofwalkstreet" aria-label="X"><img src="/images/social/twitter.svg" alt="" width="24" height="24"></a>
+        </div>
+        <p class="cta-buttons" style="margin-top:.4rem">
+          <a class="btn button-primary" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931&coupon=WALK50" target="_blank" rel="noopener">Book Walks</a>
+          <a class="btn button-primary" href="/dog-boarding-south-yarra.html">Book Boarding</a>
         </p>
       </section>
 
-      <!-- Services -->
       <nav class="footer-col" aria-label="Services">
         <h3>Services</h3>
-        <ul class="footlist">
-          <li><a href="/dog-walking-south-melbourne.html">Dog Walking</a></li>
-          <li><a href="/casual-dog-walking-south-melbourne.html">Casual Walks</a></li>
-          <li><a href="/memberships.html">Memberships</a></li>
-          <li><a href="/unlimited-dog-walks.html">Unlimited Membership</a></li>
-          <li><a href="/boarding-services.html">Boarding Services</a></li>
+        <ul>
+          <li><a href="/services.html">All Services</a></li>
+          <li><a href="/dog-walker.html">Dog Walking (Solo)</a></li>
+          <li><a href="/casual-dog-walking-south-yarra.html">Casual Dog Walking</a></li>
+          <li><a href="/boarding-services.html">Boutique Boarding</a></li>
+          <li><a href="/dog-boarding-south-yarra.html">Dog Boarding South Yarra</a></li>
+          <li><a href="/service-areas.html">Service Areas</a></li>
           <li><a href="/contact.html">Contact</a></li>
         </ul>
       </nav>
 
-      <!-- Local Areas -->
-      <nav class="footer-col" aria-label="Local Areas">
-        <h3>Local Areas</h3>
-        <ul class="footlist">
-          <li><a href="/dog-walking-south-melbourne.html">South Melbourne</a></li>
-          <li><a href="/dog-walker-albert-park.html">Albert Park</a></li>
-          <li><a href="/dog-walker-port-melbourne.html">Port Melbourne</a></li>
-          <li><a href="/dog-walker-middle-park.html">Middle Park</a></li>
-          <li><a href="/dog-walker-southbank.html">Southbank</a></li>
-          <li><a href="/dog-walker-south-yarra.html" aria-current="page">South Yarra</a></li>
+      <section class="footer-col collapsible">
+        <button class="collapse-btn" aria-expanded="false" aria-controls="support-list">Support</button>
+        <ul id="support-list">
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/community.html">Community</a></li>
+          <li><a href="/testimonials.html">Testimonials</a></li>
+          <li><a href="/gallery.html">Photos & Videos</a></li>
+          <li><a href="/blog/index.html">Blog</a></li>
+          <li><a href="/faq.html">FAQs</a></li>
         </ul>
-      </nav>
+      </section>
+
+      <section class="footer-col collapsible">
+        <button class="collapse-btn" aria-expanded="false" aria-controls="legal-list">Legal</button>
+        <ul id="legal-list">
+          <li><a href="/privacy.html">Privacy</a></li>
+          <li><a href="/terms.html">Terms</a></li>
+          <li><a href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </section>
     </div>
 
-    <div class="container footer-bottom">
-      Solo Dog Walking & Boutique Boarding across
-      <strong>South Yarra</strong>, <strong>Southbank</strong>, <strong>Albert Park</strong>, and <strong>South Melbourne</strong>
-      · © <span id="year"></span> The Woof of Walk Street
+    <div class="container footer-geo">
+      Solo Dog Walking & Boutique Boarding across <strong>South Yarra</strong>, <strong>Southbank</strong>, <strong>South Melbourne</strong>, <strong>Albert Park</strong> and <strong>Middle Park</strong>.
     </div>
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+    <div class="container footer-bottom">© <span id="year"></span> The Woof of Walk Street · <a href="/sitemap.html">Sitemap</a></div>
+    <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+
+    <script>
+      // Footer collapsibles
+      document.querySelectorAll('.collapsible .collapse-btn').forEach(btn=>{
+        const list = document.getElementById(btn.getAttribute('aria-controls'));
+        const sync = (open)=>{ btn.setAttribute('aria-expanded', String(open)); list.hidden = !open; };
+        sync(false);
+        btn.addEventListener('click', ()=>{ const open = btn.getAttribute('aria-expanded')==='false'; sync(open); });
+      });
+    </script>
   </footer>
 
-  <!-- ===== JS ===== -->
-
-  <!-- Services/Areas dropdown + mobile menu, close on interactions -->
+  <!-- Behaviour JS: dropdowns, promo close, UTM + coupon carry for Acuity -->
   <script>
-  (function () {
-    function bindMenu(btnSel, listId){
-      const btn=document.querySelector(btnSel);
-      const list=document.getElementById(listId);
-      if(!btn||!list) return;
-      const sync=()=>{ list.hidden = btn.getAttribute('aria-expanded')!=='true'; };
-      sync();
-      btn.addEventListener('click',()=>{ const open=btn.getAttribute('aria-expanded')==='true'; btn.setAttribute('aria-expanded', String(!open)); sync(); });
-      document.addEventListener('click',(e)=>{ if(!btn.contains(e.target)&&!list.contains(e.target)){ btn.setAttribute('aria-expanded','false'); sync(); } },{capture:true});
-      document.addEventListener('keydown',(e)=>{ if(e.key==='Escape'){ btn.setAttribute('aria-expanded','false'); sync(); }});
-    }
-    bindMenu('.nav-group-btn[aria-controls="nav-services"]','nav-services');
-    bindMenu('.nav-group-btn[aria-controls="nav-areas"]','nav-areas');
+    (function(){
+      // Header Services dropdown accessibility
+      const btn = document.querySelector('.nav-group-btn[aria-controls="nav-services"]');
+      const list = document.getElementById('nav-services');
+      if (btn && list){
+        btn.addEventListener('click', () => {
+          const open = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', String(!open));
+          list.hidden = open;
+        });
+        document.addEventListener('click', (e) => {
+          if (!btn.contains(e.target) && !list.contains(e.target)) { btn.setAttribute('aria-expanded','false'); list.hidden = true; }
+        }, { capture: true });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { btn.setAttribute('aria-expanded','false'); list.hidden = true; }});
+      }
 
-    const navToggle=document.getElementById('nav-toggle');
-    const navLabel=document.querySelector('label[for="nav-toggle"]');
-    const navLinks=document.querySelector('.nav-links');
-    const scrim=document.querySelector('.nav-scrim');
-    const closeMenu=()=>{ if(navToggle&&navToggle.checked) navToggle.checked=false; document.body.classList.remove('menu-open'); };
-    if(navToggle&&navLinks){
-      navToggle.addEventListener('change',()=>{ if(navToggle.checked) document.body.classList.add('menu-open'); else document.body.classList.remove('menu-open'); });
-      navLinks.addEventListener('click',(e)=>{ if(e.target.closest('a')) closeMenu(); });
-      document.addEventListener('click',(e)=>{ const inside=navLinks.contains(e.target)||navLabel?.contains(e.target)||e.target===navToggle; if(!inside) closeMenu(); },{capture:true});
-      let lastY=window.scrollY; window.addEventListener('scroll',()=>{ if(Math.abs(window.scrollY-lastY)>8) closeMenu(); lastY=window.scrollY; });
-    }
+      // Promo close (session)
+      const promo=document.getElementById('promo'), close=document.getElementById('promo-close'), KEY='wow-promo-closed';
+      try{ if(sessionStorage.getItem(KEY)==='1') promo.style.display='none'; }catch(e){}
+      close?.addEventListener('click',()=>{ try{sessionStorage.setItem(KEY,'1');}catch(e){}; promo.style.display='none'; });
 
-    // Promo close persistence
-    const promo=document.getElementById('promo');
-    const closeBtn=document.getElementById('promo-close');
-    const KEY='wow-promo-closed';
-    if (sessionStorage.getItem(KEY)==='1' && promo) promo.style.display='none';
-    closeBtn?.addEventListener('click',()=>{ sessionStorage.setItem(KEY,'1'); promo.style.display='none'; });
-  })();
-  </script>
-
-  <!-- Reveal + light parallax (optional) -->
-  <script>
-  (function(){
-    // Reveal
-    const io=new IntersectionObserver((entries)=>{ for(const e of entries) if(e.isIntersecting){ e.target.classList.add('revealed'); io.unobserve(e.target); } },{threshold:.12});
-    document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el));
-  })();
+      // Ensure coupon + carry UTM on ALL Acuity links
+      const ensureCoupon = (url, coupon) => {
+        try{
+          const u = new URL(url, location.origin);
+          if (/acuityscheduling\.com\/schedule\.php/.test(u.href)){
+            if (coupon && !u.searchParams.has('coupon')) u.searchParams.set('coupon', coupon);
+            const src = new URLSearchParams(location.search);
+            ['utm_source','utm_medium','utm_campaign','utm_term','utm_content'].forEach(k=>{
+              if (src.has(k) && !u.searchParams.has(k)) u.searchParams.set(k, src.get(k));
+            });
+            return u.toString();
+          }
+        }catch(_){}
+        return url;
+      };
+      document.querySelectorAll('a[href*="acuityscheduling.com/schedule.php"]').forEach(a=>{
+        a.href = ensureCoupon(a.href, 'WALK50');
+        a.addEventListener('click', ()=>{ try{ window.gtag && gtag('event','acuity_click', {event_category:'engagement',event_label:'WALK50_south_yarra_lp'});}catch(_){}} );
+      });
+    })();
   </script>
 </body>
 </html>

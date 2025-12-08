@@ -1,4 +1,4 @@
-<!D<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-AU">
 <head>
   <meta charset="UTF-8" />
@@ -13,7 +13,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Theme boot (no-FOUC) -->
+  <!-- Theme boot -->
   <script>
     (function () {
       const KEY='wow-theme'; const pref=localStorage.getItem(KEY)||'auto';
@@ -25,99 +25,95 @@
     })();
   </script>
 
-  <!-- Open Graph / Twitter -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Growth Dog Walking Membership — 10 Solo Walks + Monthly Boarding Night (South Melbourne)" />
-  <meta property="og:description" content="Ten 45-minute solo walks/month plus 1 included boarding night. GPS tracking, photo updates, insured & police-checked walker. A$800/month." />
+  <meta property="og:title" content="Growth Dog Walking Membership — 10 Solo Walks + Monthly Boarding Night" />
+  <meta property="og:description" content="Ten solo walks per month plus one included boarding night. Ethical one-dog walking in South Melbourne." />
   <meta property="og:url" content="https://www.woofofwalkstreet.com/membership-growth.html" />
   <meta property="og:image" content="https://www.woofofwalkstreet.com/images/growth_card_clean.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Growth Membership — 10 Solo Walks + Boarding Night" />
-  <meta name="twitter:description" content="Solo, GPS-tracked dog walks with photo updates in South Melbourne. A$800/month + one included boarding night." />
-  <meta name="twitter:image" content="https://www.woofofwalkstreet.com/images/growth_card_clean.png" />
 
   <!-- Preload hero image -->
   <link rel="preload" as="image" href="/images/growth_card_clean.png">
 
-  <!-- Styles (copied from Starter for 1:1 consistency) -->
+  <!-- Shared Starter/Growth CSS -->
   <style>
     :root{
       --bg:#0b0e12; --card:#0f1318; --text:#e8eef5; --muted:#a9b4c0; --line:#1e2630;
       --brand:#ffd166; --brand-ink:#0b0e12; --accent:#5af2c6;
-      --sale-bg: linear-gradient(135deg, #FF512F 0%, #DD2476 100%);
       --shadow:0 16px 48px rgba(0,0,0,.32);
-      --ring:0 0 0 2px rgba(255,209,102,.22), 0 16px 40px rgba(255,209,102,.08);
-      --header-blur:saturate(120%) blur(10px); --header-bg:rgba(11,14,18,.78); --menu-solid:#0e141b;
       --container:1100px; --radius-lg:16px; --speed:.22s;
-      --font-heading:'Space Grotesk',system-ui,sans-serif; --font-body:'Work Sans',system-ui,sans-serif;
+      --font-heading:'Space Grotesk',sans-serif; --font-body:'Work Sans',sans-serif;
     }
     html,body{background:var(--bg);color:var(--text);overflow-x:hidden;scroll-behavior:smooth}
-    img{max-width:100%;height:auto} a{color:inherit}
-    .container{max-width:var(--container);margin:0 auto;padding:0 16px}
-    body, p, li, span, button, input, textarea { font-family: var(--font-body); letter-spacing:.1px; line-height:1.58; }
-    h1,h2,h3,h4,h5,h6, nav a, .nav-group-btn{ font-family: var(--font-heading); letter-spacing:.25px; font-weight:700 }
-
-    /* Header / Nav */
-    .site-header{position:sticky;top:0;z-index:1000;background:var(--header-bg);backdrop-filter:var(--header-blur);-webkit-backdrop-filter:var(--header-blur);border-bottom:1px solid rgba(255,255,255,.06)}
-    .navbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
-    .brand{display:flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none;font-weight:900}
-    .brand img{width:48px;height:48px}
-    .nav-links{display:flex;align-items:center;gap:16px}
-    .nav-links a{padding:8px 6px;text-decoration:none;color:#fff;opacity:.9}
-    .nav-links a:hover{opacity:1}
-    .nav-group{position:relative}
-    .nav-group-btn{background:transparent;border:1px solid #2a3440;color:#fff;border-radius:999px;padding:8px 12px;cursor:pointer}
-    .nav-group-btn:hover{border-color:#fff}
-    .nav-group-list{position:absolute;right:0;top:calc(100% + 8px);min-width:260px;background:var(--menu-solid);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:8px 6px;box-shadow:var(--shadow);display:none;z-index:2000}
-    .nav-group[aria-expanded="true"] .nav-group-list{display:block}
-    .nav-group-list a{display:block;padding:10px 12px;border-radius:10px;color:#e9eef6}
-    .nav-group-list a:hover{background:rgba(255,255,255,.06)}
-    .nav-toggle{display:none} .nav-scrim{display:none}
-    @media (max-width:860px){
-      .nav-toggle{display:block;cursor:pointer}
-      .nav-links{position:fixed;inset:0 0 auto auto;width:min(320px,85vw);height:100vh;background:var(--menu-solid);padding:70px 16px 20px;flex-direction:column;gap:10px;transform:translateX(100%);transition:transform .25s}
-      #nav-toggle:checked ~ .nav-links{transform:translateX(0)}
-      .nav-scrim{display:block;position:fixed;inset:0;background:rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:opacity .25s}
-      #nav-toggle:checked ~ .nav-scrim{opacity:1;pointer-events:auto}
-      .nav-group{width:100%}
-      .nav-group-list{position:relative;display:block;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:6px;box-shadow:none;margin-top:8px}
-      .nav-group-btn{width:100%;text-align:left}
-    }
+    img{max-width:100%;height:auto}
+    a{color:inherit;text-decoration:none}
 
     /* Buttons */
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:12px 18px;border-radius:999px;border:1px solid transparent;text-decoration:none;font-weight:800;letter-spacing:.02em;transition:all var(--speed)}
-    .btn-primary{background:var(--brand);color:var(--brand-ink);box-shadow:0 10px 26px rgba(255,209,102,.25)}
-    .btn-ghost{background:transparent;color:#fff;border:1px solid #2a3440}
-    .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.05)}
-    .btn-red{background:linear-gradient(90deg,#FF512F 0%,#DD2476 100%);color:#fff !important;border:none !important;box-shadow:0 8px 22px rgba(221,36,118,.35);font-weight:900}
-    .btn-red:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(221,36,118,.55)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:999px;font-weight:800;transition:all var(--speed)}
+    .btn-red{background:linear-gradient(90deg,#FF512F 0%,#DD2476 100%);color:#fff;border:none;box-shadow:0 8px 20px rgba(221,36,118,.35)}
+    .btn-red:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(221,36,118,.5)}
+    .btn-ghost{border:1px solid #2a3440}
+    .btn-ghost:hover{background:rgba(255,255,255,.05)}
+    .btn-primary{background:var(--brand);color:var(--brand-ink);border:0;box-shadow:0 10px 24px rgba(255,209,102,.25)}
+    .btn-primary:hover{transform:translateY(-2px)}
+
+    /* Impact ribbon (charity) */
+    .impact-ribbon{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border-bottom:1px solid var(--line);color:var(--text); padding:10px 0;}
+    .impact-inner{max-width:var(--container);margin:0 auto;padding:0 14px;display:flex;align-items:center;gap:10px;flex-wrap:wrap; justify-content:center;}
+    .impact-emoji{filter:drop-shadow(0 6px 16px rgba(255,209,102,.25))}
+    .impact-cta{margin-left:auto;text-decoration:none;font-weight:900;white-space:nowrap;color:var(--brand);border:1px solid rgba(255,209,102,.45);padding:8px 12px;border-radius:999px;transition:transform var(--speed),box-shadow var(--speed),background var(--speed),color var(--speed);}
+    .impact-cta:hover{background:var(--brand);color:var(--brand-ink);box-shadow:0 16px 46px rgba(255,209,102,.2);transform:translateY(-2px) scale(1.03)}
+
+    /* Header */
+    .site-header{position:sticky;top:0;z-index:1000;background:rgba(11,14,18,.78);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navbar{max-width:var(--container);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:10px 16px}
+    .brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:900}
 
     /* Hero */
-    .m-hero{padding:34px 16px 18px;text-align:center;border-bottom:1px solid rgba(255,255,255,.06);
-      background:radial-gradient(1200px 600px at 20% -20%, rgba(255,209,102,.10), transparent 60%), linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0));
-    }
-    .m-hero h1{margin:0 0 .4rem;font-weight:900}
-    .m-hook{margin:.4rem auto .8rem;max-width:62ch;color:#cfd6df;font-size:1.06rem}
-    .m-badge{display:inline-block;margin:.25rem 0 .9rem;padding:.45rem .9rem;background:var(--brand);color:var(--brand-ink);border-radius:999px;font-weight:900}
-    .m-cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
-    .hero-img{max-width:min(980px,92vw);height:auto;border-radius:14px;margin:14px auto 0;display:block;box-shadow:var(--shadow)}
+    .m-hero{text-align:center;padding:40px 16px;background:radial-gradient(1200px 600px at 20% -20%, rgba(255,209,102,.1), transparent 60%)}
+    .m-hero h1{font-weight:900;margin-bottom:.6rem}
+    .micro-badges{display:inline-flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:.2rem 0 1rem}
+    .micro-badges .chip{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);padding:.38rem .7rem;border-radius:999px;font-weight:700;color:#cfd6df}
+    .m-hook{max-width:62ch;margin:0 auto 1rem;color:#cfd6df}
+    .m-badge{display:inline-block;background:var(--brand);color:var(--brand-ink);padding:.45rem .9rem;border-radius:999px;font-weight:900;margin-bottom:1rem}
+
+    .hero-img{max-width:min(980px,92vw);margin:20px auto;border-radius:14px;box-shadow:var(--shadow)}
+
     .m-trust{list-style:none;padding:0;margin:12px auto 10px;max-width:46ch;color:#a9b4c0}
     .m-trust li{position:relative;padding-left:22px;margin:.25rem 0}
-    .m-trust li::before{content:"✔";position:absolute;left:0;top:0;line-height:1;color:#5af2c6;font-weight:800}
+    .m-trust li::before{content:"✔";position:absolute;left:0;color:#5af2c6;font-weight:800}
 
-    /* Cards / Sections */
+    /* Layout / cards */
     .m-wrap{max-width:960px;margin:24px auto 44px;padding:0 16px}
-    .m-card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:14px;padding:18px;margin-top:16px;color:var(--text);box-shadow:0 10px 24px rgba(0,0,0,.18)}
+    .m-card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:14px;padding:18px;margin-top:16px;box-shadow:0 10px 24px rgba(0,0,0,.18)}
     .m-card h2{margin:.2rem 0 .6rem}
-    .m-card .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
-    .section-sweep{height:4px;border:0;margin:34px 0;background:linear-gradient(90deg,transparent,rgba(255,209,102,.8),transparent);filter:drop-shadow(0 8px 18px rgba(255,209,102,.25))}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
 
-    /* Rewards (cream card) */
+    /* Savings table */
+    .s-table{width:100%;border-collapse:collapse;margin-top:12px}
+    .s-table td{padding:8px 0;color:#cfd6df}
+    .s-table .sep td{padding:0}
+    .s-table .sep hr{border:0;border-top:1px solid #333;margin:10px 0}
+    .s-table .highlight{color:#5af2c6;font-weight:800}
+
+    /* Perks (cream card, same as Starter/Growth pattern) */
     .rewards{background:#fff;color:#111;border:2px solid var(--brand);border-radius:14px;box-shadow:0 0 14px rgba(255,209,102,.25)}
     .rewards h2,.rewards h3{color:#111}
     .rewards p,.rewards li{color:#222}
     .rewards .perk{display:grid;gap:8px;margin:.5rem 0}
-    .rewards .perk .tag{display:inline-block;border-radius:999px;background:var(--brand);color:#111;font-weight:900;padding:.28rem .6rem}
+    .rewards .tag{display:inline-block;border-radius:999px;background:var(--brand);color:#111;font-weight:900;padding:.28rem .6rem}
+
+    /* Monthly Boarding Benefit (dark Growth-style card) */
+    .benefit-card{
+      background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));
+      border:1px solid var(--line);
+      border-left:4px solid var(--brand);
+      border-radius:14px;
+      padding:18px;
+      box-shadow:0 10px 24px rgba(0,0,0,.18);
+    }
+    .benefit-card h2{display:flex;align-items:center;gap:.5rem;margin:.2rem 0 .6rem}
+    .badge-gold{display:inline-block;background:rgba(255,209,102,.14);border:1px solid rgba(255,209,102,.45);color:#ffe7a1;border-radius:999px;padding:.28rem .6rem;font-weight:800}
 
     /* Value strip */
     .ipoo-strip{background:#0b0e12;color:#f7f3e8;border-block:4px solid var(--brand)}
@@ -127,12 +123,11 @@
     @media(min-width:820px){.ipoo-inner{grid-template-columns:260px 1fr}}
     .ipoo-graphic img{width:min(220px,52vw);height:auto;border-radius:14px;box-shadow:var(--shadow)}
 
-    /* Impact ribbon (charity) */
-    .impact-ribbon{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border-bottom:1px solid var(--line);color:var(--text); padding:10px 0;}
-    .impact-inner{max-width:var(--container);margin:0 auto;padding:0 14px;display:flex;align-items:center;gap:10px;flex-wrap:wrap; justify-content:center;}
-    .impact-emoji{filter:drop-shadow(0 6px 16px rgba(255,209,102,.25))}
-    .impact-cta{margin-left:auto;text-decoration:none;font-weight:900;white-space:nowrap;color:var(--brand);border:1px solid rgba(255,209,102,.45);padding:8px 12px;border-radius:999px;transition:transform var(--speed),box-shadow var(--speed),background var(--speed),color var(--speed);}
-    .impact-cta:hover{background:var(--brand);color:var(--brand-ink);box-shadow:0 16px 46px rgba(255,209,102,.2);transform:translateY(-2px) scale(1.03)}
+    /* Sticky mobile CTA */
+    @media (max-width: 820px){
+      .sticky-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:999;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border:1px solid rgba(0,0,0,.08);border-radius:16px;box-shadow:0 8px 24px rgba(0,0,0,.14);display:flex;gap:10px;justify-content:center;align-items:center;padding:10px}
+      .sticky-cta .btn{padding:10px 14px}
+    }
 
     /* Footer */
     .site-footer{padding-top:40px;border-top:1px solid var(--line);margin-top:60px}
@@ -140,350 +135,292 @@
     .footer-brand{max-width:300px}
     .footer-col{flex-basis:150px}
     .footlist{list-style:none;padding:0;margin:0}
-    .footlist a{text-decoration:none;color:var(--muted);transition:color var(--speed)}
-    .footlist a:hover{color:var(--brand)}
+    .footlist a{color:var(--muted)}
     .footer-bottom{border-top:1px solid rgba(255,255,255,.05);padding:15px 0;text-align:center;font-size:.85rem;color:var(--muted)}
-
-    /* Sticky mobile CTA */
-    @media (max-width: 820px){
-      .sticky-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:999;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border:1px solid rgba(0,0,0,.08);border-radius:16px;box-shadow:0 8px 24px rgba(0,0,0,.14);display:flex;gap:10px;justify-content:center;align-items:center;padding:10px}
-      .sticky-cta .btn{padding:10px 14px}
-    }
   </style>
 
-  <!-- Breadcrumbs JSON-LD -->
+  <!-- JSON-LD (breadcrumbs/service/product) kept minimal for brevity -->
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
     {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
     {"@type":"ListItem","position":2,"name":"Memberships","item":"https://www.woofofwalkstreet.com/memberships.html"},
     {"@type":"ListItem","position":3,"name":"Growth Membership","item":"https://www.woofofwalkstreet.com/membership-growth.html"}]}
   </script>
-
-  <!-- Service + Offer JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Service",
-    "serviceType":"Growth Dog Walking Membership",
-    "provider":{"@type":"LocalBusiness","name":"The Woof of Walk Street","url":"https://www.woofofwalkstreet.com","telephone":"+61-456-754-050","address":{"@type":"PostalAddress","addressLocality":"South Melbourne","addressRegion":"VIC","addressCountry":"AU"}},
-    "areaServed":["South Melbourne","Albert Park","Port Melbourne","Middle Park","Southbank","South Yarra"],
-    "description":"Growth membership: ten 45-minute solo dog walks every month plus 1 included boarding night. GPS tracking and photo updates.",
-    "offers":{"@type":"Offer","priceCurrency":"AUD","price":"800","availability":"https://schema.org/InStock","url":"https://app.acuityscheduling.com/catalog.php?owner=37607219&action=addCart&clear=1&id=2103519"}
-  }
-  </script>
-
-  <!-- Product JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Product",
-    "name":"Growth Dog Walking Membership — 10 Solo Walks / Month + Boarding Night",
-    "description":"Ten 45-minute solo dog walks every month in South Melbourne plus one included boarding night. GPS tracking and photo updates. Ethical, one-dog-only walking.",
-    "brand":{"@type":"Brand","name":"The Woof of Walk Street"},
-    "image":"https://www.woofofwalkstreet.com/images/growth_card_clean.png",
-    "url":"https://www.woofofwalkstreet.com/membership-growth.html",
-    "offers":{"@type":"Offer","priceCurrency":"AUD","price":"800","availability":"https://schema.org/InStock","url":"https://app.acuityscheduling.com/catalog.php?owner=37607219&action=addCart&clear=1&id=2103519"}
-  }
-  </script>
-
-  <!-- Google Ads (optional; match Starter) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'AW-17527927259');
-  </script>
 </head>
 
 <body>
-  <!-- Impact / Charity ribbon (no promo banner at top) -->
+  <!-- Charity ribbon -->
   <div class="impact-ribbon" role="note" aria-label="Walks that do more: 10% donated">
     <div class="impact-inner">
       <span class="impact-emoji" aria-hidden="true">💛</span>
-      <strong>Walks That Do More:</strong>
-      We donate <strong>10% of profits</strong> to local rescue shelters.
+      <strong>Walks That Do More:</strong> We donate <strong>10% of profits</strong> to local rescue shelters.
       <a class="impact-cta" href="/community.html">See our impact →</a>
     </div>
   </div>
 
   <!-- HEADER -->
-  <header class="site-header" role="banner">
-    <div class="navbar container" role="navigation" aria-label="Main">
-      <a class="brand" href="/" aria-label="Go to home">
-        <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="48" height="48">
+  <header class="site-header">
+    <div class="navbar">
+      <a class="brand" href="/">
+        <img src="/images/brand/logo-lockup-gold.webp" width="48" height="48" alt="The Woof of Walk Street">
         <strong>The Woof of Walk Street</strong>
       </a>
 
-      <input id="nav-toggle" type="checkbox" hidden>
-      <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</label>
-
-      <nav class="nav-links" aria-label="Primary">
-        <div class="nav-group" aria-expanded="false">
-          <button type="button" class="nav-group-btn" aria-haspopup="true" aria-expanded="false" aria-controls="nav-services">Services ▾</button>
-          <ul id="nav-services" class="nav-group-list" role="menu" aria-label="Services">
-            <li><a role="menuitem" href="/services.html">All Services</a></li>
-            <li><a role="menuitem" href="/dog-walking-south-melbourne.html">Dog Walking — South Melbourne</a></li>
-            <li><a role="menuitem" href="/memberships.html">Memberships</a></li>
-            <li><a role="menuitem" href="/membership-starter.html">Starter Membership</a></li>
-            <li><a role="menuitem" href="/membership-growth.html" aria-current="page">Growth Membership</a></li>
-            <li><a role="menuitem" href="/unlimited-dog-walks.html">Unlimited Membership</a></li>
-            <li><a role="menuitem" href="/boarding-services.html">Boutique Boarding</a></li>
-            <li><a role="menuitem" href="/contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <a href="/about.html">About</a>
-        <a href="/testimonials.html">Testimonials</a>
-        <a href="/gallery.html">Gallery</a>
-        <a href="/blog.html">Blog</a>
-        <a href="/faq.html">FAQs</a>
-        <a href="/search.html">Search</a>
-
-        <a class="btn btn-red nav-cta"
-           href="https://app.acuityscheduling.com/catalog.php?owner=37607219&action=addCart&clear=1&id=2103519">
-           Join Growth
-        </a>
-      </nav>
-      <div class="nav-scrim" aria-hidden="true"></div>
+      <a class="btn btn-red"
+         href="https://app.acuityscheduling.com/catalog.php?owner=37607219&action=addCart&clear=1&id=2103519">
+         Join Growth
+      </a>
     </div>
   </header>
 
-  <main>
-    <!-- HERO -->
-    <section class="m-hero">
-      <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="/">Home</a> › <a href="/memberships.html">Memberships</a> › Growth</nav>
-      <h1>Growth Dog Walking Membership — 10 Solo Walks / Month (South Melbourne)</h1>
-      <p class="m-hook">
-        <strong>10 solo 45-minute dog walks</strong> every month + <strong>1 included boarding night</strong> per month.
-        Perfect for dogs that thrive on consistent routine and calm one-on-one walking.
-      </p>
-      <p class="m-badge">A$800 / month · One-to-one</p>
+  <!-- HERO -->
+  <section class="m-hero">
+    <nav class="breadcrumbs"><a href="/">Home</a> › <a href="/memberships.html">Memberships</a> › Growth</nav>
 
-      <div class="m-cta">
-        <a class="btn btn-red"
-           href="https://app.acuityscheduling.com/catalog.php?owner=37607219&action=addCart&clear=1&id=2103519">
-          Join Growth — A$800 / month
-        </a>
-        <a class="btn btn-ghost" href="/membership-starter.html">Need fewer walks? Try Starter</a>
+    <h1>Growth Membership — 10 Solo Walks + 1 Boarding Night / Month</h1>
+
+    <!-- Micro-badges -->
+    <div class="micro-badges" aria-label="Key features">
+      <span class="chip">10 Solo Walks</span>
+      <span class="chip">1 Boarding Night / Month</span>
+      <span class="chip">GPS + Photo Updates</span>
+    </div>
+
+    <p class="m-hook">
+      A structured, steady rhythm of <strong>10 solo 45-minute walks</strong> every month —
+      plus <strong>1 included boarding night</strong>. Calm, predictable,
+      ethical one-dog walking with GPS tracking and photo updates.
+    </p>
+
+    <p class="m-badge">A$800 / month · One-to-one</p>
+
+    <div class="m-cta">
+      <a class="btn btn-red"
+        href="https://app.acuityscheduling.com/catalog.php?owner=37607219&action=addCart&clear=1&id=2103519">
+        Join Growth — A$800 / month
+      </a>
+      <a class="btn btn-ghost" href="/membership-starter.html">Need fewer walks? Try Starter</a>
+    </div>
+
+    <img class="hero-img"
+         src="/images/growth_card_clean.png"
+         alt="Growth Membership — 10 solo walks per month">
+
+    <ul class="m-trust">
+      <li>Always solo — never pack walked or car-ferried</li>
+      <li>GPS-tracked routes + photo updates after every walk</li>
+      <li>Dedicated loops across South Melbourne & neighbouring suburbs</li>
+    </ul>
+  </section>
+
+  <!-- VALUE STRIP -->
+  <section class="ipoo-strip" aria-labelledby="value-title">
+    <div class="ipoo-inner">
+      <div class="ipoo-graphic">
+        <img src="/images/brand/dog-in-suit.webp" width="220" height="220" alt="">
       </div>
-
-      <img
-        class="hero-img"
-        src="/images/growth_card_clean.png"
-        alt="Growth Membership — 10 Solo Walks Per Month"
-        width="1200" height="800"
-        loading="eager" decoding="async" fetchpriority="high">
-
-      <ul class="m-trust">
-        <li>Always <strong>solo</strong> — never pack walked or car-ferried</li>
-        <li><strong>GPS-tracked</strong> routes + <strong>photo updates</strong> after each walk</li>
-        <li>Local loops around South Melbourne & neighbouring suburbs</li>
-      </ul>
-    </section>
-
-    <!-- Value nudge / Cross-sell -->
-    <section class="ipoo-strip" aria-labelledby="value-title">
-      <div class="ipoo-inner">
-        <div class="ipoo-graphic" aria-hidden="true">
-          <picture>
-            <source srcset="/images/brand/dog-in-suit.webp" type="image/webp" />
-            <img src="/images/brand/dog-in-suit.webp" width="220" height="220" alt="" loading="lazy">
-          </picture>
-        </div>
-        <div class="ipoo-copy">
-          <h2 id="value-title">Want weekday daily walks?</h2>
-          <p>Step up to <a href="/unlimited-dog-walks.html">Unlimited</a> for a daily rhythm, or keep things flexible with <a href="/membership-starter.html">Starter</a>.</p>
-          <a class="ipoo-badge" href="/memberships.html">Compare Memberships →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTENT WRAP -->
-    <div class="m-wrap">
-      <!-- WHAT'S INCLUDED (Acuity wording) -->
-      <div class="m-card">
-        <h2>What’s Included</h2>
-        <ul>
-          <li><strong>10 × 45-minute solo walks</strong> per month</li>
-          <li><strong>Guaranteed weekly walk availability</strong></li>
-          <li><strong>GPS tracking</strong> + <strong>photo update</strong> after every walk</li>
-          <li><strong>1 boarding night per month included</strong> (A$150 value)</li>
-          <li><strong>Unused boarding nights roll over</strong> (up to 12 nights per membership year)</li>
-          <li>Boarding nights reset annually on your membership anniversary</li>
-          <li>Insured & police-checked walker</li>
-        </ul>
-      </div>
-
-      <!-- BOARDING BENEFIT -->
-      <div class="m-card rewards" id="rewards">
-        <h2>✨ Monthly Boarding Benefit</h2>
-
-        <div class="perk">
-          <span class="tag">Included</span>
-          <h3>1 Boarding Night Every Month</h3>
-          <p>Growth includes <strong>one boarding night per month</strong>. Pre-book to secure your preferred dates.</p>
-        </div>
-
-        <ul>
-          <li>Unused nights roll over up to <strong>12 per membership year</strong></li>
-          <li>Nights reset annually on your membership anniversary</li>
-        </ul>
-      </div>
-
-      <!-- BOOKING RULES -->
-      <div class="m-card">
-        <h2>Booking Rules</h2>
-        <ul>
-          <li><strong>Max 1 walk per day</strong></li>
-          <li>Recommended max <strong>3 walks per week</strong></li>
-          <li><strong>Boarding must be pre-booked</strong> to secure dates</li>
-          <li>Service area: South Melbourne zone (Albert Park, Middle Park, Port Melbourne, Southbank by agreement)</li>
-          <li>Rescheduling requires <strong>24 hours’ notice</strong></li>
-        </ul>
-      </div>
-
-      <!-- MEMBERSHIP TERMS -->
-      <div class="m-card">
-        <h2>Membership Terms</h2>
-        <ul>
-          <li>Renews monthly until cancelled</li>
-          <li>Cancel at least <strong>48 hours before renewal</strong> to avoid the next charge</li>
-          <li><strong>Unused walk credits do not roll over</strong></li>
-          <li><strong>Boarding nights roll over</strong> up to 12 nights per membership year</li>
-        </ul>
-      </div>
-
-      <!-- HOW TO JOIN -->
-      <div class="m-card">
-        <h2>How to Join</h2>
-        <ol>
-          <li>Click <strong>Join Growth</strong> to open our Acuity page.</li>
-          <li>Enter your details to create your client profile.</li>
-          <li>Complete checkout for the Growth Membership (A$800/month).</li>
-          <li>After confirmation, book your walk times and boarding night in Acuity.</li>
-        </ol>
-        <div class="cta-row">
-          <a class="btn btn-red"
-             href="https://app.acuityscheduling.com/catalog.php?owner=37607219&action=addCart&clear=1&id=2103519">
-            Join Growth — A$800 / month
-          </a>
-          <a class="btn btn-ghost" href="/memberships.html">Compare Plans</a>
-        </div>
-      </div>
-
-      <!-- WHY ETHICAL SOLO WALKING WORKS -->
-      <div class="m-card">
-        <h2>Why Ethical Solo Walking Works</h2>
-        <p>
-          Growth establishes a predictable rhythm of <strong>2–3 one-to-one walks per week</strong>.
-          Without group hype or car shuttles, sessions stay low-arousal and focused — reinforcing leash manners,
-          reducing over-stimulation, and helping dogs settle calmly at home.
-        </p>
-      </div>
-
-      <!-- WHO GROWTH IS PERFECT FOR -->
-      <div class="m-card">
-        <h2>Who Growth Is Perfect For</h2>
-        <ul>
-          <li>Dogs that thrive on a steady weekly routine without daily commitment</li>
-          <li>Owners wanting more structure and built-in monthly boarding</li>
-          <li>Inner-city pups needing calm, familiar local routes</li>
-        </ul>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="/unlimited-dog-walks.html">Want weekday daily? Try Unlimited →</a>
-          <a class="btn btn-ghost" href="/memberships.html">Compare All Plans</a>
-        </div>
-      </div>
-
-      <!-- SCHEDULING & SERVICE DETAILS -->
-      <div class="m-card">
-        <h2>Scheduling & Service Details</h2>
-        <ul>
-          <li>Walk window: <strong>Mon–Fri, 7:00am–7:00pm</strong> (public holidays excluded)</li>
-          <li>Choose any weekdays across the month (subject to availability)</li>
-          <li><strong>Maximum 1 walk per day</strong>; recommended up to 3 per week</li>
-          <li>Service zones: South Melbourne (Albert Park, Middle Park, Port Melbourne, Southbank by agreement)</li>
-          <li>Rescheduling requires <strong>24 hours’ notice</strong></li>
-          <li><strong>Unused walk credits do not roll over</strong> — consistency keeps dogs settled</li>
-        </ul>
-        <div class="cta-row">
-          <a class="btn btn-red"
-             href="https://app.acuityscheduling.com/catalog.php?owner=37607219&action=addCart&clear=1&id=2103519">
-            Join Growth Now
-          </a>
-        </div>
-      </div>
-
-      <!-- GROWTH — FAQs -->
-      <div class="m-card" itemscope itemtype="https://schema.org/FAQPage">
-        <h2>Growth — FAQs</h2>
-
-        <details>
-          <summary>What’s included in the Growth membership?</summary>
-          <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-            <meta itemprop="name" content="What’s included in the Growth membership?">
-            <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-              <p itemprop="text">
-                <strong>10 × 45-minute solo walks</strong> per month, <strong>GPS tracking</strong> and a <strong>photo update</strong> after each walk,
-                <strong>guaranteed weekly availability</strong>, and <strong>1 boarding night included every month</strong> (rollover up to 12 nights per membership year).
-              </p>
-            </div>
-          </div>
-        </details>
-
-        <details>
-          <summary>Do unused walks roll over?</summary>
-          <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-            <meta itemprop="name" content="Do unused walks roll over?">
-            <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-              <p itemprop="text">No. Walk credits reset each month to keep routines predictable and behaviour calm.</p>
-            </div>
-          </div>
-        </details>
-
-        <details>
-          <summary>Do boarding nights roll over?</summary>
-          <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-            <meta itemprop="name" content="Do boarding nights roll over?">
-            <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-              <p itemprop="text">Yes — unused boarding nights roll over up to <strong>12 nights per membership year</strong> and reset on your membership anniversary.</p>
-            </div>
-          </div>
-        </details>
-
-        <details>
-          <summary>Where do you walk?</summary>
-          <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-            <meta itemprop="name" content="Where do you walk?">
-            <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-              <p itemprop="text">Calm, local routes around South Melbourne (Albert Park, Middle Park, Port Melbourne, and Southbank by agreement).</p>
-            </div>
-          </div>
-        </details>
+      <div class="ipoo-copy">
+        <h2 id="value-title">Need weekday daily walks?</h2>
+        <p>Step up to <a href="/unlimited-dog-walks.html">Unlimited</a> for Mon–Fri daily solo walks, or stay flexible with Starter.</p>
+        <a class="ipoo-badge" href="/memberships.html">Compare All Plans →</a>
       </div>
     </div>
-  </main>
+  </section>
 
-  <!-- Sticky mobile CTA -->
+  <!-- CONTENT -->
+  <div class="m-wrap">
+    <!-- SAVINGS -->
+    <div class="m-card">
+      <h2>Monthly Savings</h2>
+      <p>Growth gives you ongoing savings every month compared with casual rates.</p>
+      <table class="s-table" aria-label="Savings calculation">
+        <tr>
+          <td>10 solo 45-minute walks @ A$100 each</td>
+          <td style="text-align:right">A$1,000</td>
+        </tr>
+        <tr>
+          <td>1 boarding night (value)</td>
+          <td style="text-align:right">A$150</td>
+        </tr>
+        <tr class="sep"><td colspan="2"><hr></td></tr>
+        <tr>
+          <td><strong>Total monthly value</strong></td>
+          <td style="text-align:right"><strong>A$1,150</strong></td>
+        </tr>
+        <tr>
+          <td>Your Growth price</td>
+          <td style="text-align:right">A$800</td>
+        </tr>
+        <tr class="sep"><td colspan="2"><hr></td></tr>
+        <tr>
+          <td><strong>You save</strong></td>
+          <td class="highlight" style="text-align:right"><strong>A$350 / month</strong></td>
+        </tr>
+      </table>
+      <div class="cta-row">
+        <a class="btn btn-red" href="https://app.acuityscheduling.com/catalog.php?owner=37607219&action=addCart&clear=1&id=2103519">
+          Join Growth — Save A$350/mo
+        </a>
+      </div>
+    </div>
+
+    <!-- WHAT'S INCLUDED -->
+    <div class="m-card">
+      <h2>What’s Included</h2>
+      <ul>
+        <li><strong>10 × 45-minute solo walks</strong> per month</li>
+        <li><strong>Guaranteed weekly walk availability</strong></li>
+        <li><strong>GPS tracking + photo update</strong> after every walk</li>
+        <li><strong>1 boarding night per month included</strong> (A$150 value)</li>
+        <li><strong>Unused boarding nights roll over</strong> (up to 12 per membership year)</li>
+        <li>Boarding nights reset annually on your membership anniversary</li>
+        <li>Insured & police-checked walker</li>
+      </ul>
+    </div>
+
+    <!-- MONTHLY BOARDING BENEFIT (dark Growth card) -->
+    <div class="benefit-card" role="region" aria-label="Monthly Boarding Benefit">
+      <h2>✨ Monthly Boarding Benefit <span class="badge-gold">Included</span></h2>
+      <p>Every month of Growth includes <strong>1 boarding night</strong>. Pre-book early to secure your preferred dates.</p>
+      <ul>
+        <li>Unused nights <strong>roll over</strong> up to <strong>12 per membership year</strong></li>
+        <li>Nights <strong>reset annually</strong> on your membership anniversary</li>
+        <li>Subject to availability; one dog; standard policies apply</li>
+      </ul>
+    </div>
+
+    <!-- PERKS (kept consistent with Starter/Growth style) -->
+    <div class="m-card rewards" aria-label="Growth Perks">
+      <h2>✨ Growth Perks</h2>
+      <div class="perk">
+        <span class="tag">Predictable Routine</span>
+        <h3>Guaranteed Weekly Slot</h3>
+        <p>Keep a steady 2–3 day rhythm that helps dogs settle and build calm habits.</p>
+      </div>
+      <div class="perk">
+        <span class="tag">Transparency</span>
+        <h3>GPS + Photo After Every Walk</h3>
+        <p>See the route and a snap from each solo session.</p>
+      </div>
+      <div class="perk">
+        <span class="tag">Flex-Friendly</span>
+        <h3>Rollover Boarding Nights</h3>
+        <p>Haven’t used this month’s night? Save it — up to 12 per membership year.</p>
+      </div>
+    </div>
+
+    <!-- BOOKING RULES -->
+    <div class="m-card">
+      <h2>Booking Rules</h2>
+      <ul>
+        <li><strong>Max 1 walk per day</strong></li>
+        <li>Recommended max <strong>3 walks per week</strong></li>
+        <li><strong>Boarding must be pre-booked</strong> to secure dates</li>
+        <li>Service area: South Melbourne zone (Albert Park, Middle Park, Port Melbourne, Southbank by agreement)</li>
+        <li>Rescheduling requires <strong>24 hours’ notice</strong></li>
+      </ul>
+    </div>
+
+    <!-- MEMBERSHIP TERMS -->
+    <div class="m-card">
+      <h2>Membership Terms</h2>
+      <ul>
+        <li>Renews monthly until cancelled</li>
+        <li>Cancel at least <strong>48 hours before renewal</strong> to avoid the next charge</li>
+        <li><strong>Unused walk credits do not roll over</strong></li>
+        <li><strong>Boarding nights roll over</strong> up to 12 per membership year</li>
+      </ul>
+    </div>
+
+    <!-- HOW TO JOIN -->
+    <div class="m-card">
+      <h2>How to Join</h2>
+      <ol>
+        <li>Click <strong>Join Growth</strong> to open Acuity.</li>
+        <li>Enter your details and complete the membership form.</li>
+        <li>After checkout, book your 10 monthly walks.</li>
+        <li>Pre-book boarding to use your included night.</li>
+      </ol>
+      <div class="cta-row">
+        <a class="btn btn-red" href="https://app.acuityscheduling.com/catalog.php?owner=37607219&action=addCart&clear=1&id=2103519">
+          Join Growth — A$800 / month
+        </a>
+        <a class="btn btn-ghost" href="/memberships.html">Compare Plans</a>
+      </div>
+    </div>
+
+    <!-- WHY ETHICAL SOLO WALKING WORKS -->
+    <div class="m-card">
+      <h2>Why Ethical Solo Walking Works</h2>
+      <p>
+        Growth creates a predictable rhythm of <strong>2–3 solo walks per week</strong>.
+        No group hype or shuttle vans — just calm, focused, one-on-one walking.
+        This helps reinforce good leash habits and reduces overstimulation.
+      </p>
+    </div>
+
+    <!-- WHO IT'S PERFECT FOR -->
+    <div class="m-card">
+      <h2>Who Growth Is Perfect For</h2>
+      <ul>
+        <li>Dogs that benefit from a consistent weekly routine</li>
+        <li>Owners wanting included monthly boarding nights</li>
+        <li>Dogs that thrive with calm, familiar solo walking</li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/unlimited-dog-walks.html">Need weekday daily? Try Unlimited →</a>
+        <a class="btn btn-ghost" href="/memberships.html">Compare All Plans</a>
+      </div>
+    </div>
+
+    <!-- FAQs -->
+    <div class="m-card" itemscope itemtype="https://schema.org/FAQPage">
+      <h2>Growth — FAQs</h2>
+
+      <details>
+        <summary>What do I get each month?</summary>
+        <p><strong>10 × 45-minute solo walks</strong> + <strong>1 included boarding night</strong> (rollover up to 12 per year).</p>
+      </details>
+
+      <details>
+        <summary>Do unused walks roll over?</summary>
+        <p>No — walk credits reset monthly for routine consistency.</p>
+      </details>
+
+      <details>
+        <summary>Do boarding nights roll over?</summary>
+        <p>Yes — up to <strong>12 nights per membership year</strong>. Reset annually.</p>
+      </details>
+
+      <details>
+        <summary>Where do you walk?</summary>
+        <p>South Melbourne + Albert Park, Middle Park, Port Melbourne, Southbank (by agreement).</p>
+      </details>
+
+      <details>
+        <summary>How do I use my boarding night?</summary>
+        <p>Pre-book via Acuity to secure your preferred dates.</p>
+      </details>
+    </div>
+  </div>
+
+  <!-- STICKY MOBILE CTA -->
   <div class="sticky-cta">
-    <a class="btn btn-red"
-       href="https://app.acuityscheduling.com/catalog.php?owner=37607219&action=addCart&clear=1&id=2103519">
-       Join Growth — A$800 / month
+    <a class="btn btn-red" href="https://app.acuityscheduling.com/catalog.php?owner=37607219&action=addCart&clear=1&id=2103519">
+      Join Growth — A$800/mo
     </a>
     <a class="btn btn-ghost" href="/membership-starter.html">Compare Starter</a>
   </div>
 
-  <!-- FOOTER (matches Starter) -->
-  <footer class="site-footer" role="contentinfo">
+  <!-- FOOTER -->
+  <footer class="site-footer">
     <div class="container footer-grid">
       <section class="footer-brand">
-        <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="60" height="60" loading="lazy">
-        <p><strong>The Woof of Walk Street</strong><br>
-          <a class="footer-map" href="https://maps.google.com/?q=South+Melbourne,+VIC" target="_blank" rel="noopener" style="color:var(--muted)">South Melbourne, VIC</a>
-        </p>
-        <p class="cta-buttons">
-          <a class="btn btn-red" href="https://app.acuityscheduling.com/catalog.php?owner=37607219&action=addCart&clear=1&id=2103519">Join Growth</a>
-        </p>
+        <img src="/images/brand/logo-lockup-gold.webp" width="60" height="60" alt="">
+        <p><strong>The Woof of Walk Street</strong><br>South Melbourne, VIC</p>
+        <a class="btn btn-red" href="https://app.acuityscheduling.com/catalog.php?owner=37607219&action=addCart&clear=1&id=2103519">
+          Join Growth
+        </a>
       </section>
 
       <nav class="footer-col" aria-label="Services">
@@ -495,590 +432,31 @@
           <li><a href="/membership-starter.html">Starter Membership</a></li>
           <li><a href="/membership-growth.html" aria-current="page">Growth Membership</a></li>
           <li><a href="/unlimited-dog-walks.html">Unlimited Membership</a></li>
-          <li><a href="/boarding-services.html">Boutique Boarding</a></li>
-          <li><a href="/contact.html">Contact Us</a></li>
         </ul>
       </nav>
 
       <nav class="footer-col" aria-label="Areas">
-        <h3>Areas Served</h3>
+        <h3>Areas</h3>
         <ul class="footlist">
-          <li><a href="/dog-walking-south-melbourne.html">South Melbourne</a></li>
           <li><a href="/dog-walker-albert-park.html">Albert Park</a></li>
           <li><a href="/dog-walker-middle-park.html">Middle Park</a></li>
           <li><a href="/dog-walker-port-melbourne.html">Port Melbourne</a></li>
           <li><a href="/dog-walker-southbank.html">Southbank</a></li>
-          <li><a href="/dog-walker-south-yarra.html">South Yarra</a></li>
         </ul>
       </nav>
 
-      <nav class="footer-col" aria-label="Info & Legal">
-        <h3>Info & Legal</h3>
+      <nav class="footer-col" aria-label="Info">
+        <h3>Info</h3>
         <ul class="footlist">
           <li><a href="/faq.html">FAQs</a></li>
           <li><a href="/privacy.html">Privacy Policy</a></li>
-          <li><a href="/terms.html">Terms & Conditions</a></li>
-          <li><a href="/community.html">Community Impact</a></li>
+          <li><a href="/terms.html">Terms</a></li>
         </ul>
       </nav>
     </div>
 
-    <div class="container footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
+    <div class="footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   </footer>
-
-  <!-- Nav / dropdown behaviour -->
-  <script>
-    (function(){
-      const navToggle=document.getElementById('nav-toggle');
-      const scrim=document.querySelector('.nav-scrim');
-      if(navToggle && scrim){ scrim.addEventListener('click',()=>navToggle.checked=false); }
-
-      const navGroup = document.querySelector('.nav-group');
-      const btn = document.querySelector('.nav-group-btn');
-      const list = document.getElementById('nav-services');
-      if(navGroup && btn && list){
-        btn.addEventListener('click',(e)=>{
-          e.preventDefault();
-          const open = navGroup.getAttribute('aria-expanded')==='true';
-          navGroup.setAttribute('aria-expanded', String(!open));
-          btn.setAttribute('aria-expanded', String(!open));
-        });
-        document.addEventListener('click',(e)=>{
-          if(!navGroup.contains(e.target)){
-            navGroup.setAttribute('aria-expanded','false');
-            btn.setAttribute('aria-expanded','false');
-          }
-        },{capture:true});
-        document.addEventListener('keydown',(e)=>{
-          if(e.key==='Escape'){
-            navGroup.setAttribute('aria-expanded','false');
-            btn.setAttribute('aria-expanded','false');
-            btn.focus();
-          }
-        });
-      }
-    })();
-  </script>
-</body>
-</html>
-OCTYPE html>
-<html lang="en-AU">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>Growth Dog Walking Membership South Melbourne — 10 Solo Walks + 1 Boarding Night / Month</title>
-  <meta name="description" content="Growth dog walking membership in South Melbourne: ten 45-minute solo walks per month + 1 included boarding night. GPS tracking, photo updates, insured & police-checked walker, guaranteed weekly walk availability." />
-  <link rel="canonical" href="https://www.woofofwalkstreet.com/membership-growth.html" />
-  <link rel="icon" href="/images/brand/favicon.ico" />
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Base CSS -->
-  <link rel="stylesheet" href="/css/mini.css" />
-  <link rel="stylesheet" href="/css/styles.css" />
-
-  <!-- Page styles -->
-  <style>
-    :root{
-      --brand:#ffd166; --brand-ink:#0b0e12;
-      --ink:#0b0e12; --bg:#0b0e12; --card:#0f1318; --line:#1d232c;
-      --text:#e6edf3; --muted:#a9b4c0; --shadow:0 14px 40px rgba(0,0,0,.28);
-      --accent:#5af2c6;
-      --ring:0 0 0 2px rgba(255,209,102,.22), 0 16px 40px rgba(255,209,102,.08);
-    }
-    body{background:#0b0e12;color:var(--text)}
-    .container{max-width:1100px;margin:0 auto;padding:0 16px}
-
-    /* Header (match memberships) */
-    .site-header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(120%) blur(8px);background:rgba(11,14,18,.72);border-bottom:1px solid rgba(255,255,255,.06)}
-    .navbar{display:flex;align-items:center;justify-content:space-between;gap:14px;height:64px}
-    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;color:#fff}
-    .nav-links{display:flex;align-items:center;gap:16px}
-    .nav-links a{color:#fff;text-decoration:none;opacity:.95}
-    .nav-links a:hover{opacity:1}
-    .nav-group{position:relative;display:flex;align-items:center}
-    .nav-group-btn{background:transparent;border:1px solid rgba(255,255,255,.08);border-radius:999px;padding:8px 12px;color:#fff;cursor:pointer}
-    .nav-group[aria-expanded="true"] .nav-group-list{display:block}
-    .nav-group-list{display:none;position:absolute;top:42px;left:0;background:var(--card);border:1px solid var(--line);border-radius:12px;min-width:260px;box-shadow:var(--shadow);padding:8px;z-index:1000}
-    .nav-group-list a{display:block;padding:10px 12px;border-radius:10px;color:#e9eef6}
-    .nav-group-list a:hover{background:rgba(255,255,255,.06)}
-
-    /* Buttons */
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:12px 18px;border-radius:999px;border:1px solid transparent;font-weight:900;letter-spacing:.01em;text-decoration:none;transition:transform .15s,box-shadow .15s,background .15s,color .15s,border-color .15s}
-    .btn-primary{background:var(--brand);color:var(--brand-ink);box-shadow:0 10px 26px rgba(255,209,102,.25)}
-    .btn-primary:hover{transform:translateY(-1px) scale(1.02)}
-    .btn-ghost{background:transparent;color:#fff;border-color:#2a3440}
-    .btn-ghost:hover{border-color:#fff;box-shadow:0 6px 18px rgba(0,0,0,.22)}
-    .btn-outline{background:transparent;border-color:var(--brand);color:var(--brand)}
-    .btn-outline:hover{background:var(--brand);color:var(--brand-ink)}
-
-    /* Hero */
-    .m-hero{
-      padding:34px 16px 18px;text-align:center;border-bottom:1px solid rgba(255,255,255,.06);
-      background:
-        radial-gradient(1200px 600px at 20% -20%, rgba(255,209,102,.08), transparent 60%),
-        linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0));
-      position:relative;
-    }
-    .m-hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:linear-gradient(90deg,transparent,rgba(255,209,102,.45),transparent)}
-    .breadcrumbs{color:var(--muted);font-size:.9rem;margin:0 0 6px}
-    .breadcrumbs a{color:var(--muted);text-decoration:none}
-    .m-hero h1{margin:0 0 .55rem;font-weight:900}
-    .m-hero h1::after{
-      content:"";display:block;width:120px;height:4px;border-radius:999px;margin:.45rem auto 0;
-      background:linear-gradient(90deg,transparent,#ffd166,#ffd166,transparent);box-shadow:0 0 18px rgba(255,209,102,.45);
-    }
-    .m-hook{margin:.45rem auto .9rem;max-width:62ch;color:#cfd6df;font-size:1.06rem}
-    .m-cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
-
-    .hero-img{max-width:min(980px,92vw);height:auto;border-radius:14px;margin:16px auto 0;display:block;box-shadow:var(--shadow);filter:brightness(1.06) contrast(1.03)}
-    .m-trust{list-style:none;padding:0;margin:12px auto 10px;max-width:46ch;color:#a9b4c0}
-    .m-trust li{position:relative;padding-left:22px;margin:.25rem 0}
-    .m-trust li::before{content:"✔";position:absolute;left:0;top:0;line-height:1;color:#5af2c6;font-weight:800}
-
-    /* Content cards */
-    .m-wrap{max-width:1100px;margin:24px auto 44px;padding:0 16px}
-    .m-card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:14px;padding:18px;margin-top:16px;box-shadow:0 10px 24px rgba(0,0,0,.18)}
-    .m-card h2{margin:.2rem 0 .6rem;font-weight:900}
-    .m-card li{color:#cdd7e1}
-
-    /* Rewards (cream with gold trim) */
-    .rewards{background:#fff;color:#111;border:2px solid var(--brand);border-radius:14px;box-shadow:0 0 14px rgba(255,209,102,.25)}
-    .rewards h2,.rewards h3{color:#111}
-    .rewards .perk{display:grid;gap:8px;margin:.5rem 0}
-    .rewards .tag{display:inline-block;border-radius:999px;background:var(--brand);color:#111;font-weight:900;padding:.28rem .6rem}
-
-    /* Terms (gold edge box) */
-    .terms-card{
-      background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.02));
-      border:2px solid rgba(255,209,102,.55);
-      border-radius:14px;padding:18px 18px 14px;
-      box-shadow:0 10px 24px rgba(0,0,0,.18), 0 0 0 3px rgba(255,209,102,.12) inset;
-      color:var(--text)
-    }
-    .terms-card h2{display:flex;align-items:center;gap:.5rem;margin:.2rem 0 .6rem;font-weight:900;color:#fff}
-    .terms-note{color:var(--muted);font-size:.95rem;margin:.35rem 0 .9rem}
-    .terms-list{margin:.2rem 0 .2rem;padding-left:1.1rem}
-    .terms-list li{margin:.35rem 0;color:#cdd7e1}
-    .terms-card .badge{display:inline-block;background:var(--brand);color:#111;font-weight:900;border-radius:999px;padding:.28rem .6rem;margin-left:.25rem}
-
-    /* Simple 2-col layout on desktop */
-    @media (min-width: 900px){
-      .m-grid{display:grid;grid-template-columns:2fr 1.45fr;gap:24px;margin-top:24px}
-    }
-
-    /* Sticky mobile CTA */
-    @media (max-width:820px){
-      .sticky-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:999;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border:1px solid rgba(0,0,0,.08);border-radius:16px;box-shadow:0 8px 24px rgba(0,0,0,.14);display:flex;gap:10px;justify-content:space-between;align-items:center;padding:10px}
-      .sticky-cta .btn{padding:10px 14px;flex-grow:1;max-width:48%}
-      .sticky-cta .price{font-size:1.1rem;font-weight:900;color:var(--ink)}
-    }
-    @media (min-width:821px){.sticky-cta{display:none}}
-
-    /* Reveal animation */
-    [data-reveal]{opacity:0;transform:translateY(20px);transition:opacity .6s ease, transform .6s ease}
-    [data-reveal].revealed{opacity:1;transform:translateY(0)}
-  </style>
-
-  <!-- Open Graph / Twitter -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Growth Dog Walking Membership — 10 Solo Walks + 1 Boarding Night / Month" />
-  <meta property="og:description" content="Ten 45-minute solo walks every month plus 1 included boarding night. GPS tracking, photo updates, insured & police-checked walker, guaranteed weekly walk availability." />
-  <meta property="og:url" content="https://www.woofofwalkstreet.com/membership-growth.html" />
-  <meta property="og:image" content="https://www.woofofwalkstreet.com/images/growth_card_clean.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Growth Membership — 10 Solo Walks + 1 Boarding Night / Month" />
-  <meta name="twitter:description" content="Solo, GPS-tracked dog walks with photo updates in South Melbourne. Includes 1 boarding night per month (A$150 value)." />
-  <meta name="twitter:image" content="https://www.woofofwalkstreet.com/images/growth_card_clean.png" />
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
-    {"@type":"ListItem","position":2,"name":"Memberships","item":"https://www.woofofwalkstreet.com/memberships.html"},
-    {"@type":"ListItem","position":3,"name":"Growth Membership","item":"https://www.woofofwalkstreet.com/membership-growth.html"}]}
-  </script>
-
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Service","serviceType":"Growth Dog Walking Membership",
-   "provider":{"@type":"LocalBusiness","name":"The Woof of Walk Street","url":"https://www.woofofwalkstreet.com","telephone":"+61 456 754 050",
-     "address":{"@type":"PostalAddress","addressLocality":"South Melbourne","addressRegion":"VIC","addressCountry":"AU"}},
-   "areaServed":["South Melbourne","Albert Park","Middle Park","Port Melbourne","Southbank","South Yarra"],
-   "description":"Growth: 10 solo 45-minute dog walks every month + 1 included boarding night per month. GPS tracking and photo update after every walk. Insured & police-checked walker. Guaranteed weekly walk availability.",
-   "offers":{"@type":"Offer","priceCurrency":"AUD","price":"800","availability":"https://schema.org/InStock",
-     "url":"https://app.acuityscheduling.com/catalog.php?owner=37607219&action=addCart&clear=1&id=2103519"}}
-  </script>
-
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Product",
-   "name":"Growth Dog Walking Membership — 10 Solo Walks / Month",
-   "description":"Ten 45-minute solo walks per month + 1 boarding night per month. GPS tracking and photo updates. Ethical, one-dog-only walking.",
-   "brand":{"@type":"Brand","name":"The Woof of Walk Street"},
-   "image":"https://www.woofofwalkstreet.com/images/growth_card_clean.png",
-   "url":"https://www.woofofwalkstreet.com/membership-growth.html",
-   "offers":{"@type":"Offer","priceCurrency":"AUD","price":"800","availability":"https://schema.org/InStock",
-     "url":"https://app.acuityscheduling.com/catalog.php?owner=37607219&action=addCart&clear=1&id=2103519"}}
-  </script>
-
-  <!-- GTM / Ads -->
-  <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
-      var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
-      j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-T3HRTM2T');
-  </script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','AW-17527927259');</script>
-
-  <!-- Preload hero -->
-  <link rel="preload" as="image" href="/images/growth_card_clean.png">
-</head>
-<body>
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T3HRTM2T" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
-  <!-- Header -->
-  <header class="site-header" role="banner">
-    <div class="navbar container" role="navigation" aria-label="Main">
-      <a class="brand" href="/" aria-label="Go to home">
-        <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="56" height="56">
-        <strong>The Woof of Walk Street</strong>
-      </a>
-
-      <input id="nav-toggle" type="checkbox" hidden>
-      <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</label>
-
-      <nav class="nav-links" aria-label="Primary">
-        <section class="nav-group" aria-expanded="false">
-          <button class="nav-group-btn" aria-haspopup="true" aria-controls="nav-services">Services ▾</button>
-          <ul id="nav-services" class="nav-group-list" role="menu" aria-label="Services menu">
-            <li><a role="menuitem" href="/services.html">All Services</a></li>
-            <li><a role="menuitem" href="/dog-walking-south-melbourne.html">Dog Walking — South Melbourne</a></li>
-            <li><a role="menuitem" href="/casual-dog-walking-south-melbourne.html">Casual Dog Walking</a></li>
-            <li><a role="menuitem" href="/memberships.html">Memberships — Compare Plans</a></li>
-            <li><a role="menuitem" href="/membership-starter.html">Starter Membership</a></li>
-            <li><a role="menuitem" href="/membership-growth.html" aria-current="page">Growth Membership</a></li>
-            <li><a role="menuitem" href="/unlimited-dog-walks.html">Unlimited Membership</a></li>
-            <li><a role="menuitem" href="/boarding-services.html">Boarding — Woof Club</a></li>
-            <li><a role="menuitem" href="/contact.html">Contact</a></li>
-          </ul>
-        </section>
-
-        <a href="/about.html">About</a>
-        <a href="/testimonials.html">Testimonials</a>
-        <a href="/gallery.html">Photos & Videos</a>
-        <a href="/blog/index.html">Blog</a>
-        <a href="/faqs.html">FAQs</a>
-        <a href="/search.html">Search</a>
-
-        <a class="btn btn-primary nav-cta"
-           href="https://app.acuityscheduling.com/catalog.php?owner=37607219&action=addCart&clear=1&id=2103519"
-           target="_blank" rel="noopener" data-conversion="acuity_checkout">Join Growth</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <!-- HERO -->
-    <section class="m-hero" data-reveal>
-      <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="/">Home</a> › <a href="/memberships.html">Memberships</a> › Growth</nav>
-      <h1>Growth Membership: 10 Solo Dog Walks + 1 Boarding Night per Month</h1>
-      <p class="m-hook">
-        <strong>10 solo 45-minute dog walks every month</strong> + <strong>1 included boarding night per month</strong>. Perfect for dogs that thrive on consistent routine and calm one-on-one walking. Every walk includes <strong>GPS tracking</strong> and a <strong>photo update</strong> from an insured & police-checked walker, with guaranteed weekly walk availability.
-      </p>
-
-      <div class="m-cta">
-        <a class="btn btn-primary"
-           href="https://app.acuityscheduling.com/catalog.php?owner=37607219&action=addCart&clear=1&id=2103519"
-           target="_blank" rel="noopener" data-conversion="acuity_checkout">Join Growth Now</a>
-        <a class="btn btn-outline" href="/membership-starter.html" data-conversion="link_starter">Need fewer walks? Try Starter</a>
-        <a class="btn btn-ghost" href="/unlimited-dog-walks.html" data-conversion="link_unlimited">Want weekday dailies? See Unlimited</a>
-      </div>
-
-      <img
-        class="hero-img"
-        src="/images/growth_card_clean.png"
-        alt="Growth Membership — 10 solo walks + 1 boarding night each month"
-        width="1200" height="800"
-        loading="eager" decoding="async" fetchpriority="high">
-
-      <ul class="m-trust">
-        <li>Always <strong>solo</strong> — never pack walked or car-ferried</li>
-        <li><strong>GPS-tracked</strong> routes + <strong>photo updates</strong> after each walk</li>
-        <li>Local loops around South Melbourne & neighbouring suburbs</li>
-      </ul>
-    </section>
-
-    <!-- BODY -->
-    <section class="m-wrap" data-reveal>
-      <div class="m-card">
-        <h2>What’s Included</h2>
-        <ul>
-          <li><strong>10 × 45-minute solo walks</strong> per month</li>
-          <li><strong>Guaranteed weekly walk availability</strong></li>
-          <li><strong>GPS tracking</strong> + <strong>photo update</strong> after every walk</li>
-          <li><strong>1 boarding night per month included</strong> (A$150 value)</li>
-          <li><strong>Unused boarding nights roll over</strong> (up to 12 nights per membership year)</li>
-          <li><strong>Boarding nights reset annually</strong> on your membership anniversary</li>
-          <li>Insured & police-checked walker</li>
-        </ul>
-      </div>
-
-      <div class="m-grid">
-        <section class="grid-primary">
-          <div class="m-card">
-            <h2>Booking Rules</h2>
-            <ul>
-              <li><strong>Max 1 walk per day</strong></li>
-              <li><strong>Recommended max 3 walks per week</strong></li>
-              <li><strong>Boarding must be pre-booked</strong> to secure dates</li>
-              <li><strong>South Melbourne zone</strong> (Albert Park, Middle Park, Port Melbourne, Southbank by agreement)</li>
-              <li><strong>Rescheduling requires 24 hours’ notice</strong></li>
-            </ul>
-          </div>
-
-          <div class="m-card">
-            <h2>How to Join on Acuity (New Customers)</h2>
-            <ol style="padding-left:1.2rem">
-              <li>Click <strong>Join Growth</strong> to open our Acuity checkout.</li>
-              <li>Enter your details and complete the membership form.</li>
-              <li>After checkout, <strong>book your 10 monthly walks</strong> in the calendar.</li>
-              <li>To use your included boarding night, choose dates and apply your credit (nights <strong>roll over</strong> up to 12 per membership year).</li>
-            </ol>
-            <p class="meta" style="margin-top:.4rem">Tip: set up recurring walk times to keep a predictable weekly routine.</p>
-            <p><a class="btn btn-primary" href="https://app.acuityscheduling.com/catalog.php?owner=37607219&action=addCart&clear=1&id=2103519" target="_blank" rel="noopener" data-conversion="acuity_checkout">Join Growth</a></p>
-          </div>
-
-          <div class="m-card terms-card" id="terms" data-reveal>
-            <h2>📜 Growth Membership Terms <span class="badge">A$800/mo</span></h2>
-            <p class="terms-note">This summary complements our <a href="/terms-and-conditions.html">Full Terms &amp; Conditions</a>.</p>
-            <ul class="terms-list">
-              <li><strong>Renews monthly until cancelled.</strong></li>
-              <li><strong>Cancel at least 48 hours before renewal</strong> to avoid the next charge.</li>
-              <li><strong>Walk credits:</strong> 10 × 45-minute solo walks each month; <strong>unused walk credits do not roll over</strong>.</li>
-              <li><strong>Included boarding:</strong> 1 boarding night per month (<strong>rollover up to 12 nights per membership year</strong>); nights reset annually on your membership anniversary; boarding must be pre-booked; availability may vary.</li>
-              <li><strong>Service area:</strong> South Melbourne zone (Albert Park, Middle Park, Port Melbourne, Southbank by agreement).</li>
-              <li><strong>Rescheduling:</strong> 24 hours’ notice required.</li>
-              <li><strong>Safety & welfare:</strong> One-dog-only. Sessions may be modified for heat, storms, injury, or safety.</li>
-              <li><strong>Payments:</strong> Billed monthly via Acuity subscription.</li>
-            </ul>
-          </div>
-
-          <div class="m-card" itemscope itemtype="https://schema.org/FAQPage" data-reveal>
-            <h2>Growth — FAQs</h2>
-            <details>
-              <summary>What exactly do I get each month?</summary>
-              <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-                <meta itemprop="name" content="What exactly do I get each month?">
-                <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-                  <p itemprop="text">You receive <strong>10 × 45-minute solo walks</strong> with GPS tracking and photo updates, plus <strong>1 included boarding night</strong> per month (A$150 value).</p>
-                </div>
-              </div>
-            </details>
-            <details>
-              <summary>Do unused walks or boarding nights roll over?</summary>
-              <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-                <meta itemprop="name" content="Do unused walks or boarding nights roll over?">
-                <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-                  <p itemprop="text"><strong>Walks:</strong> Unused walk credits do not roll over. <br><strong>Boarding:</strong> Unused boarding nights <strong>do roll over</strong>, up to <strong>12 nights per membership year</strong>. They reset annually on your membership anniversary.</p>
-                </div>
-              </div>
-            </details>
-            <details>
-              <summary>How many walks per week do you recommend?</summary>
-              <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-                <meta itemprop="name" content="How many walks per week do you recommend?">
-                <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-                  <p itemprop="text">We recommend a <strong>maximum of 3 solo walks per week</strong> on Growth. You can schedule 2–3 consistent sessions to keep your dog settled and in routine.</p>
-                </div>
-              </div>
-            </details>
-            <details>
-              <summary>Where do you operate?</summary>
-              <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-                <meta itemprop="name" content="Where do you operate?">
-                <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-                  <p itemprop="text"><strong>South Melbourne</strong> zone, with <strong>Albert Park</strong>, <strong>Middle Park</strong>, <strong>Port Melbourne</strong> and <strong>Southbank</strong> by agreement.</p>
-                </div>
-              </div>
-            </details>
-            <details>
-              <summary>How do I use my included boarding night?</summary>
-              <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-                <meta itemprop="name" content="How do I use my included boarding night?">
-                <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-                  <p itemprop="text">Pre-book your preferred dates in advance through Acuity. If you don’t use your night, it rolls over (up to 12 per membership year) and resets annually on your membership anniversary.</p>
-                </div>
-              </div>
-            </details>
-            <details>
-              <summary>What’s your rescheduling and cancellation policy?</summary>
-              <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-                <meta itemprop="name" content="What’s your rescheduling and cancellation policy?">
-                <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-                  <p itemprop="text"><strong>Rescheduling:</strong> 24 hours’ notice is required. <br><strong>Membership:</strong> Renews monthly until cancelled; cancel at least <strong>48 hours before renewal</strong> to avoid the next charge.</p>
-                </div>
-              </div>
-            </details>
-          </div>
-        </section>
-
-        <section class="grid-side">
-          <div class="m-card rewards" id="rewards" data-reveal>
-            <h2>✨ Growth Perks & Notes</h2>
-
-            <div class="perk">
-              <span class="tag">Included Night</span>
-              <h3>1 Boarding Night per Month</h3>
-              <p>Each month includes <strong>1 boarding night</strong> (A$150 value). <strong>Pre-book</strong> to secure your dates. Nights <strong>roll over</strong> up to 12 per membership year and <strong>reset annually</strong>.</p>
-            </div>
-
-            <div class="perk">
-              <span class="tag">Weekly Rhythm</span>
-              <h3>Guaranteed Weekly Walk Availability</h3>
-              <p>Lock in a predictable routine with guaranteed weekly availability for Growth members.</p>
-            </div>
-
-            <div class="perk">
-              <span class="tag">Transparency</span>
-              <h3>GPS & Photo After Every Walk</h3>
-              <p>Every session includes a GPS route and photo update, delivered after your dog’s solo walk.</p>
-            </div>
-
-            <p style="margin-top:.6rem;opacity:.85">Eligibility & usage subject to availability and standard policies; see <a href="/terms-and-conditions.html">Full Terms</a>.</p>
-          </div>
-
-          <div class="m-card" id="pricing" data-reveal>
-            <h2>Pricing — A$800/month</h2>
-            <p><strong>A$800 / month</strong> — Includes <strong>10 × 45-minute solo walks</strong> and <strong>1 boarding night per month</strong> (A$150 value), plus GPS tracking and photo updates after every walk.</p>
-            <p><a class="btn btn-primary" href="https://app.acuityscheduling.com/catalog.php?owner=37607219&action=addCart&clear=1&id=2103519" target="_blank" rel="noopener" data-conversion="acuity_checkout">Join Growth — A$800 / month</a></p>
-          </div>
-        </section>
-      </div>
-    </section>
-  </main>
-
-  <!-- Sticky mobile CTA -->
-  <div class="sticky-cta" role="region" aria-label="Join Growth now">
-    <span class="price">A$800/mo</span>
-    <a class="btn btn-primary"
-       href="https://app.acuityscheduling.com/catalog.php?owner=37607219&action=addCart&clear=1&id=2103519"
-       target="_blank" rel="noopener" data-conversion="acuity_checkout">Join Growth Now</a>
-    <a class="btn btn-ghost" href="/unlimited-dog-walks.html" data-conversion="link_unlimited">Compare Unlimited</a>
-  </div>
-
-  <!-- Footer -->
-  <footer class="site-footer" role="contentinfo" style="border-top:1px solid rgba(255,255,255,.06);margin-top:22px">
-    <div class="footer-banner">
-      <picture>
-        <source srcset="/images/brand/footer-banner-1600x600.webp" media="(min-width: 768px)">
-        <img src="/images/brand/footer-banner-800x300.webp" alt="Happy dogs in Melbourne" loading="lazy" width="800" height="300">
-      </picture>
-    </div>
-
-    <div class="container footer-grid" style="display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:18px;padding:28px 0">
-      <section class="footer-brand">
-        <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="60" height="60" loading="lazy">
-        <p><strong>The Woof of Walk Street</strong><br>
-          <a class="footer-map" href="https://maps.app.goo.gl/YnEoSPwhGocUZyWL9?g_st=ipc" target="_blank" rel="noopener">South Melbourne, VIC</a> · Mon–Fri 7am–7pm<br>
-          <a href="tel:+61456754050" data-conversion="call_click">+61 456 754 050</a> · <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a>
-        </p>
-        <p>
-          <a class="btn btn-primary" target="_blank" rel="noopener"
-             href="https://app.acuityscheduling.com/catalog.php?owner=37607219&action=addCart&clear=1&id=2103519" data-conversion="acuity_checkout">Join Growth</a>
-        </p>
-      </section>
-
-      <nav class="footer-col" aria-label="Services">
-        <h3>Services</h3>
-        <ul style="list-style:none;margin:0;padding:0">
-          <li><a href="/services.html">All Services</a></li>
-          <li><a href="/dog-walking-south-melbourne.html">Dog Walking — South Melbourne</a></li>
-          <li><a href="/casual-dog-walking-south-melbourne.html">Casual Dog Walking</a></li>
-          <li><a href="/memberships.html">Memberships — Compare Plans</a></li>
-          <li><a href="/membership-starter.html" data-conversion="link_starter">Starter Membership</a></li>
-          <li><a href="/membership-growth.html" aria-current="page">Growth Membership</a></li>
-          <li><a href="/unlimited-dog-walks.html" data-conversion="link_unlimited">Unlimited Membership</a></li>
-          <li><a href="/boarding-services.html">Boarding — Woof Club</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-        </ul>
-      </nav>
-
-      <section class="footer-col collapsible">
-        <h3>Support</h3>
-        <ul style="list-style:none;margin:0;padding:0">
-          <li><a href="/about.html">About</a></li>
-          <li><a href="/testimonials.html">Testimonials</a></li>
-          <li><a href="/gallery.html">Photos & Videos</a></li>
-          <li><a href="/blog/index.html">Blog</a></li>
-          <li><a href="/faqs.html">FAQs</a></li>
-        </ul>
-      </section>
-
-      <section class="footer-col collapsible">
-        <h3>Legal</h3>
-        <ul id="legal-list" style="list-style:none;margin:0;padding:0">
-          <li><a href="/privacy.html">Privacy</a></li>
-          <li><a href="/terms-and-conditions.html">Terms</a></li>
-          <li><a href="/sitemap.html">Sitemap</a></li>
-        </ul>
-      </section>
-    </div>
-
-    <div class="container footer-geo" style="color:var(--muted);padding-bottom:8px">
-      Solo Dog Walking &amp; Boutique Boarding across <strong>South Melbourne</strong>, <strong>Albert Park</strong>,
-      <strong>Port Melbourne</strong>, <strong>Middle Park</strong> and <strong>Southbank</strong>.
-    </div>
-
-    <div class="container footer-bottom" style="border-top:1px solid var(--line);padding:12px 0;text-align:center;color:var(--muted)">
-      © <span id="year"></span> The Woof of Walk Street
-    </div>
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-  </footer>
-
-  <!-- JS: menus, reveal, tracking -->
-  <script>
-    // Services dropdown (close on outside click)
-    (function(){
-      const group=document.querySelector('.nav-group');
-      const btn=document.querySelector('.nav-group-btn');
-      if(!group||!btn) return;
-      document.addEventListener('click',(e)=>{
-        if(btn.contains(e.target)){ e.preventDefault(); group.setAttribute('aria-expanded', group.getAttribute('aria-expanded')!=='true'); return; }
-        if(!group.contains(e.target)) group.setAttribute('aria-expanded','false');
-      },{capture:true});
-    })();
-
-    // Reveal on scroll
-    (function() {
-      const reveals = document.querySelectorAll('[data-reveal]');
-      const obs = new IntersectionObserver((entries) => {
-        entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('revealed'); obs.unobserve(e.target);} });
-      }, { threshold: 0.1 });
-      reveals.forEach(r => obs.observe(r));
-    })();
-
-    // Simple conversion tracking hooks
-    const trackEvent=(action,params={})=>{
-      if(window.dataLayer) window.dataLayer.push({event:action,...params});
-      if(window.gtag) gtag('event',action,params);
-    };
-    document.addEventListener('click',(e)=>{
-      const a=e.target.closest('a'); if(!a) return;
-      const id=a.getAttribute('data-conversion'); if(!id) return;
-      const label=a.textContent.trim(); const page='growth_membership';
-      if(id==='acuity_checkout'){
-        trackEvent('membership_checkout',{event_category:'membership_funnel',event_label:`Growth_Join_Click: ${label}`,page, membership_tier:'Growth'});
-      }else if(id==='link_starter'||id==='link_unlimited'){
-        trackEvent('compare_plan_click',{event_category:'navigation',event_label:`From_Growth_To_${id==='link_unlimited'?'Unlimited':'Starter'}`,page});
-      }else if(id==='call_click'){
-        trackEvent('call_click',{event_category:'contact',event_label:'Footer_Phone_Number',page});
-      }
-    },{capture:true});
-  </script>
 </body>
 </html>

@@ -5,35 +5,106 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Terms & Policies — The Woof of Walk Street (South Melbourne)</title>
-  <meta name="description" content="Read The Woof of Walk Street’s terms and policies for solo dog walking and boutique one-guest-only boarding in South Melbourne. Access our Full Terms, Short-Form Terms and Privacy Policy, plus helpful links to services and FAQs." />
+  <meta name="description" content="Read The Woof of Walk Street’s terms and policies for solo dog walking and boutique one-guest-only boarding in South Melbourne. Access Full Terms, Short-Form Terms, and Privacy Policy, plus helpful links to services and FAQs." />
   <link rel="canonical" href="https://www.woofofwalkstreet.com/terms.html" />
   <link rel="icon" href="/images/brand/favicon.ico" />
 
-  <!-- Site styles -->
-  <link rel="stylesheet" href="/css/mini.css">
-  <link rel="stylesheet" href="/css/styles.css">
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Terms & Policies — The Woof of Walk Street"/>
+  <meta property="og:description" content="Full Terms, Short-Form Terms and Privacy Policy for The Woof of Walk Street."/>
+  <meta property="og:url" content="https://www.woofofwalkstreet.com/terms.html"/>
+  <meta property="og:image" content="https://www.woofofwalkstreet.com/images/brand/hero-dog-skyline-1200.webp"/>
+  <meta property="og:site_name" content="The Woof of Walk Street"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Terms & Policies — The Woof of Walk Street"/>
+  <meta name="twitter:description" content="Full Terms, Short-Form Terms and Privacy Policy for The Woof of Walk Street."/>
+  <meta name="twitter:image" content="https://www.woofofwalkstreet.com/images/brand/hero-dog-skyline-1200.webp"/>
 
-  <!-- Page polish -->
+  <!-- GA4 + Google Ads -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KP5LVKN6X3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-KP5LVKN6X3');
+    gtag('config', 'AW-17527927259');
+  </script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles (match site) -->
   <style>
-    .container{max-width:1120px;margin:0 auto;padding:0 16px}
-    .lede{color:#5b6775;max-width:70ch}
-    .edge{
-      background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.02));
-      border:2px solid #f5b200;border-radius:14px;
-      box-shadow:0 0 10px rgba(245,178,0,.25),0 10px 24px rgba(0,0,0,.18);
-      padding:16px;transition:.2s ease
+    :root{
+      --bg:#0b0e12; --card:#0f1318; --text:#e8eef5; --muted:#a9b4c0; --line:#1e2630;
+      --brand:#ffd166; --brand-ink:#0b0e12; --accent:#5af2c6;
+      --sale-bg: linear-gradient(135deg, #FF512F 0%, #DD2476 100%);
+      --shadow:0 16px 48px rgba(0,0,0,.32);
+      --header-blur:saturate(120%) blur(10px); --header-bg:rgba(11,14,18,.78);
+      --menu-solid:#0e141b; --container:1100px; --speed:.22s;
+      --font-heading:'Space Grotesk',system-ui,sans-serif; --font-body:'Work Sans',system-ui,sans-serif;
     }
-    .edge:hover{transform:translateY(-2px);box-shadow:0 0 16px rgba(245,178,0,.5),0 16px 36px rgba(0,0,0,.24)}
+    html,body{background:var(--bg);color:var(--text);overflow-x:hidden;scroll-behavior:smooth}
+    img{max-width:100%;height:auto}
+    a{color:inherit}
+    .container{max-width:var(--container);margin:0 auto;padding:0 16px}
+    body, p, li, span, button, input, textarea { font-family: var(--font-body); letter-spacing:.1px; line-height:1.58; }
+    h1,h2,h3,h4,h5,h6, nav a, .nav-group-btn{ font-family: var(--font-heading); letter-spacing:.25px; }
+
+    /* Promo ribbon */
+    .promo-ribbon{position:relative;z-index:1100;background:var(--sale-bg);color:#fff;border-bottom:1px solid rgba(255,255,255,.1);font-weight:700;text-align:center;padding:8px}
+    .promo-code{background:rgba(0,0,0,.3);padding:2px 6px;border-radius:4px;font-family:monospace}
+
+    /* Impact ribbon */
+    .impact-ribbon{background:linear-gradient(90deg, rgba(255,209,102,.12), rgba(255,209,102,.04));border-bottom:1px solid rgba(255,209,102,.22)}
+    .impact-inner{max-width:var(--container);margin:0 auto;padding:10px 16px;display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap}
+    .impact-cta{font-weight:800;text-decoration:none;border-bottom:2px solid rgba(255,209,102,.6)}
+
+    /* Header + nav */
+    .site-header{position:sticky;top:0;z-index:1000;background:var(--header-bg);backdrop-filter:var(--header-blur);-webkit-backdrop-filter:var(--header-blur);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none;font-weight:900}
+    .brand img{width:48px;height:48px}
+    .nav-links{display:flex;align-items:center;gap:16px}
+    .nav-links a{padding:8px 6px;text-decoration:none;color:#fff;opacity:.9}
+    .nav-links a:hover{opacity:1}
+    .nav-group{position:relative}
+    .nav-group-btn{background:transparent;border:1px solid #2a3440;color:#fff;border-radius:999px;padding:8px 12px;font-weight:800;cursor:pointer}
+    .nav-group-btn:hover{border-color:#fff}
+    .nav-group-list{position:absolute;right:0;top:calc(100% + 8px);min-width:260px;background:var(--menu-solid);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:8px 6px;box-shadow:var(--shadow);display:none;z-index:2000}
+    .nav-group[aria-expanded="true"] .nav-group-list{display:block}
+    .nav-group-list a{display:block;padding:10px 12px;border-radius:10px;color:#e9eef6}
+    .nav-group-list a:hover{background:rgba(255,255,255,.06)}
+    @media (min-width:861px){.nav-group:hover .nav-group-list,.nav-group:focus-within .nav-group-list{display:block}}
+    .nav-toggle{display:none}
+    .nav-scrim{display:none}
+    @media (max-width:860px){
+      .nav-toggle{display:block;cursor:pointer}
+      .nav-links{position:fixed;inset:0 0 auto auto;width:min(320px,85vw);height:100vh;background:var(--menu-solid);padding:70px 16px 20px;flex-direction:column;gap:10px;transform:translateX(100%);transition:transform .25s}
+      #nav-toggle:checked ~ .nav-links{transform:translateX(0)}
+      .nav-scrim{display:block;position:fixed;inset:0;background:rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:opacity .25s}
+      #nav-toggle:checked ~ .nav-scrim{opacity:1;pointer-events:auto}
+      .nav-group{width:100%}
+      .nav-group-list{position:relative;top:auto;right:auto;display:block;background:var(--menu-solid);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:6px;box-shadow:none;margin-top:8px}
+      .nav-group-btn{width:100%;text-align:left}
+    }
+
+    /* Page polish */
+    .hero{padding:28px 0 18px;background:radial-gradient(1200px 600px at 20% -20%,rgba(255,209,102,.08),transparent 60%),linear-gradient(120deg,#111824,#1b2433,#111824);border-bottom:1px solid rgba(255,255,255,.06)}
+    .lede{color:#cfd6df;max-width:70ch}
+    .edge{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:16px;transition:.2s ease}
+    .edge:hover{transform:translateY(-2px)}
     .grid{display:grid;gap:14px}
     @media(min-width:900px){ .grid{grid-template-columns:1.05fr .95fr} }
     .doc-list{list-style:none;padding:0;margin:0}
-    .doc-item{display:flex;align-items:center;justify-content:space-between;gap:12px;border:1px solid #eceff3;border-radius:12px;padding:14px}
+    .doc-item{display:flex;align-items:center;justify-content:space-between;gap:12px;border:1px solid var(--line);border-radius:12px;padding:14px}
     .doc-item h3{margin:.1rem 0 .25rem;font-weight:900}
     .btn{display:inline-flex;align-items:center;gap:.5rem;padding:10px 16px;border-radius:999px;border:1px solid transparent;font-weight:900;text-decoration:none}
-    .btn-primary{background:#ffd166;color:#111;box-shadow:0 8px 20px rgba(255,209,102,.25)}
+    .btn-primary{background:var(--brand);color:var(--brand-ink);box-shadow:0 8px 20px rgba(255,209,102,.25)}
     .btn-ghost{background:transparent;border:1px solid #2a3440;color:inherit}
-    .tag{display:inline-block;padding:.22rem .5rem;border-radius:999px;background:#f5b200;color:#111;font-weight:800;font-size:.82rem}
-    .subtle{color:#5b6775}
+    .tag{display:inline-block;padding:.22rem .5rem;border-radius:999px;background:var(--brand);color:#111;font-weight:800;font-size:.82rem}
+    .subtle{color:#a9b4c0}
     .link-list{margin:.4rem 0 0 1.2rem}
     .link-list li{margin:.25rem 0}
     .section-title{font-weight:900;letter-spacing:-.01em}
@@ -52,43 +123,57 @@
     "@type":"ItemList",
     "name":"The Woof of Walk Street — Terms & Policies",
     "itemListElement":[
-      {"@type":"ListItem","position":1,
-       "item":{"@type":"WebPage","name":"Full Terms","url":"https://www.woofofwalkstreet.com/full-terms.html"}},
-      {"@type":"ListItem","position":2,
-       "item":{"@type":"WebPage","name":"Short-Form Terms","url":"https://www.woofofwalkstreet.com/mini-terms.html"}},
-      {"@type":"ListItem","position":3,
-       "item":{"@type":"WebPage","name":"Privacy Policy","url":"https://www.woofofwalkstreet.com/privacy.html"}}
+      {"@type":"ListItem","position":1, "item":{"@type":"WebPage","name":"Full Terms","url":"https://www.woofofwalkstreet.com/terms-and-conditions.html"}},
+      {"@type":"ListItem","position":2, "item":{"@type":"WebPage","name":"Short-Form Terms","url":"https://www.woofofwalkstreet.com/mini-terms.html"}},
+      {"@type":"ListItem","position":3, "item":{"@type":"WebPage","name":"Privacy Policy","url":"https://www.woofofwalkstreet.com/privacy-policy.html"}}
     ]
   }
   </script>
 </head>
 <body>
+  <!-- Promo ribbon -->
+  <div class="promo-ribbon" role="region" aria-label="Promo">
+    <div class="container">
+      🎉 End of Year Sale: <strong>50% OFF</strong> Walks (Code: <span class="promo-code">WALK50</span>) + <strong>20% OFF</strong> Boarding (Code: <span class="promo-code">BOARDING20</span>). Ends 31/12!
+    </div>
+  </div>
+
+  <!-- Impact ribbon (charity) -->
+  <div class="impact-ribbon" role="note" aria-label="Walks that do more: 10% donated">
+    <div class="impact-inner">
+      <span aria-hidden="true">💛</span>
+      <strong>Walks That Do More:</strong>
+      We donate <strong>10% of profits</strong> to Melbourne rescue groups.
+      <a class="impact-cta" href="/community.html">See our impact →</a>
+    </div>
+  </div>
+
   <!-- HEADER -->
   <header class="site-header" role="banner">
     <div class="navbar container" role="navigation" aria-label="Main">
       <a class="brand" href="/" aria-label="Go to home">
-        <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="56" height="56" loading="lazy">
+        <img src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street logo" width="48" height="48" loading="lazy">
         <strong>The Woof of Walk Street</strong>
       </a>
+      <input id="nav-toggle" type="checkbox" hidden>
+      <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</label>
       <nav class="nav-links" aria-label="Primary">
-        <section class="nav-group">
-          <button class="nav-group-btn" aria-expanded="false" aria-controls="nav-services">Services</button>
-          <ul id="nav-services" class="nav-group-list">
-            <li><a href="/services.html">All Services</a></li>
-            <li><a href="/dog-walking-south-melbourne.html">Dog Walking South Melbourne</a></li>
-            <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
-            <li><a href="/unlimited-dog-walks.html">Unlimited Membership</a></li>
-            <li><a href="/contact.html">Contact</a></li>
+        <section class="nav-group" aria-expanded="false">
+          <button class="nav-group-btn" aria-expanded="false" aria-controls="nav-services">Services ▾</button>
+          <ul id="nav-services" class="nav-group-list" role="menu" aria-label="Services">
+            <li><a role="menuitem" href="/services.html">All Services</a></li>
+            <li><a role="menuitem" href="/dog-walking-south-melbourne.html">Dog Walking — South Melbourne</a></li>
+            <li><a role="menuitem" href="/boarding-services.html">Boutique Boarding</a></li>
+            <li><a role="menuitem" href="/memberships.html">Memberships</a></li>
           </ul>
         </section>
         <a href="/about.html">About</a>
-        <a href="/blog/index.html">Blog</a>
-        <a href="/faq.html">FAQs</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/faqs.html">FAQs</a>
         <a href="/search.html">Search</a>
-        <a class="btn btn-primary nav-cta"
-           href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=header&utm_campaign=book_now"
-           target="_blank" rel="noopener">Open Portal</a>
+        <a class="btn btn-primary nav-cta" href="/book-dog-walk/?coupon=WALK50">Book Walks</a>
       </nav>
+      <div class="nav-scrim" aria-hidden="true"></div>
     </div>
   </header>
 
@@ -115,21 +200,21 @@
                 <h3>Full Terms</h3>
                 <p class="subtle">The complete legal terms for walking, memberships and one-guest-only boarding.</p>
               </div>
-              <a class="btn btn-primary" href="/terms-full.html">Open</a>
+              <a class="btn btn-primary" href="/terms-and-conditions.html">Open</a>
             </li>
             <li class="doc-item" role="listitem">
               <div>
                 <h3>Short-Form Terms</h3>
                 <p class="subtle">A human-friendly summary of the key points (great for a quick read).</p>
               </div>
-              <a class="btn btn-primary" href="mini-terms">Open</a>
+              <a class="btn btn-primary" href="/mini-terms.html">Open</a>
             </li>
             <li class="doc-item" role="listitem">
               <div>
                 <h3>Privacy Policy</h3>
                 <p class="subtle">How we handle your data in the booking portal and on our website.</p>
               </div>
-              <a class="btn btn-primary" href="/privacy.html">Open</a>
+              <a class="btn btn-primary" href="/privacy-policy.html">Open</a>
             </li>
           </ul>
 
@@ -145,13 +230,14 @@
           <ul class="link-list">
             <li>Walks include <strong>GPS route</strong> and <strong>photo updates</strong>—see exactly how their day went. <a href="/dog-walking-south-melbourne.html">Explore dog walking →</a></li>
             <li>Boarding is <strong>home-style</strong>: dogs may <strong>sleep on our bed or the sofa</strong> if that’s your routine. <a href="/boarding-services.html">See boarding details →</a></li>
-            <li>Frequent walkers save with <strong>memberships</strong> (including our Unlimited weekday option). <a href="/unlimited-dog-walks.html">Compare memberships →</a></li>
+            <li>Frequent walkers save with <strong>memberships</strong>. <a href="/memberships.html">Compare memberships →</a></li>
             <li>We donate <strong>10% of profits</strong> to local shelters. <a href="/community.html">See our impact →</a></li>
           </ul>
-          <p>If you’re new here, the fastest way to get started is via our secure portal — it takes about a minute to create your account and request your first booking.</p>
+          <p>If you’re new here, the fastest way to get started is to book online — it takes about a minute to request your first walk or boarding dates.</p>
           <p class="link-list" style="list-style:none;margin-top:8px">
-            <a class="btn btn-primary" href="https://www.timetopet.com/portal/woofofwalkstreet/create-account" target="_blank" rel="noopener">Open Client Portal</a>
-            <a class="btn btn-ghost" href="/faq.html">Read FAQs</a>
+            <a class="btn btn-primary" href="/book-dog-walk/?utm_source=terms&utm_medium=cta&utm_campaign=book_walks">Book Walks</a>
+            <a class="btn btn-ghost" href="/book-boarding/?utm_source=terms&utm_medium=cta&utm_campaign=book_boarding">Book Boarding</a>
+            <a class="btn btn-ghost" href="/faqs.html">Read FAQs</a>
           </p>
         </aside>
       </div>
@@ -165,13 +251,11 @@
         <ul>
           <li><strong>Casual Walk:</strong> 50% off your first 45-minute walk — one per customer.</li>
           <li><strong>Boarding:</strong> 20% off one stay (up to <strong>14 nights</strong>) — one per customer.</li>
-          <li><strong>Unlimited Membership:</strong> 50% off the first month — one per customer.</li>
         </ul>
-        <p class="subtle">Valid until <strong>30 November 2025</strong> (Melbourne time). Not transferable. Not combinable. <a href="/faq.html#promos">See full promo rules →</a></p>
+        <p class="subtle">Valid until <strong>30 November 2025</strong> (Melbourne time). Not transferable. Not combinable. <a href="/faqs.html#promos">See full promo rules →</a></p>
         <div class="link-list" style="list-style:none;margin-top:8px">
           <a class="btn btn-ghost" href="/book-dog-walk/?utm_source=terms&utm_medium=cta&utm_campaign=casual_50">Book 50% Off Casual Walk</a>
-          <a class="btn btn-ghost" href="/book-boarding.html?utm_source=terms&utm_medium=cta&utm_campaign=boarding_20">Book 20% Off Boarding</a>
-          <a class="btn btn-ghost" href="/unlimited-dog-walks.html?utm_source=terms&utm_medium=cta&utm_campaign=unlimited_50">Get 50% Off Unlimited</a>
+          <a class="btn btn-ghost" href="/book-boarding/?utm_source=terms&utm_medium=cta&utm_campaign=boarding_20">Book 20% Off Boarding</a>
         </div>
       </div>
     </section>
@@ -182,88 +266,79 @@
         <h2 id="helpful" class="section-title" style="margin-top:0">Helpful Links</h2>
         <ul class="link-list">
           <li><a href="/services.html">All Services</a> · <a href="/gallery.html">Photos & Videos</a> · <a href="/testimonials.html">Testimonials</a></li>
-          <li><a href="/blog/best-dog-walks-south-melbourne">Blog: Best Dog Walks in South Melbourne</a> · <a href="/blog/why-solo-walks">Blog: Why Solo Walks</a></li>
-          <li><a href="/faq.html">Frequently Asked Questions</a> · <a href="/contact.html">Contact</a></li>
+          <li><a href="/blog.html">Blog: Best Dog Walks in South Melbourne</a> · <a href="/blog.html">Blog: Why Solo Walks</a></li>
+          <li><a href="/faqs.html">Frequently Asked Questions</a> · <a href="/contact.html">Contact</a></li>
           <li><a href="/sitemap.html">HTML Sitemap</a></li>
         </ul>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER -->
+  <!-- FOOTER (match site) -->
   <footer class="site-footer" role="contentinfo">
-    <div class="footer-banner">
-      <picture>
-        <source srcset="/images/brand/footer-banner-1600x600.webp" media="(min-width: 768px)">
-        <img src="/images/brand/footer-banner-800x300.webp" alt="Happy dogs in Melbourne" loading="lazy" width="800" height="300">
-      </picture>
-    </div>
-
     <div class="container footer-grid">
       <section class="footer-brand">
         <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="60" height="60" loading="lazy">
         <p><strong>The Woof of Walk Street</strong><br>
-          <a class="footer-map" href="https://maps.app.goo.gl/YnEoSPwhGocUZyWL9?g_st=ipc" target="_blank" rel="noopener">South Melbourne, VIC</a> · Mon–Fri 7am–7pm<br>
-          <a href="tel:+61456754050">+61 456 754 050</a> · <a href="mailto:info@woofofwalkstreet.com">info@woofofwalkstreet.com</a>
+          <a class="footer-map" href="https://maps.app.goo.gl/YnEoSPwhGocUZyWL9?g_st=ipc" target="_blank" rel="noopener" style="color:var(--muted)">South Melbourne, VIC</a>
         </p>
-        <p><a class="btn btn-primary" target="_blank" rel="noopener"
-              href="https://www.timetopet.com/portal/woofofwalkstreet?utm_source=website&utm_medium=footer&utm_campaign=book_now">Open Client Portal</a>
-        </p>
+        <p class="cta-buttons"><a class="btn btn-primary" href="/book-dog-walk/?coupon=WALK50">Book Walks</a></p>
       </section>
 
       <nav class="footer-col" aria-label="Primary">
         <h3>Services</h3>
         <ul>
+          <li><a href="/services.html">All Services</a></li>
           <li><a href="/dog-walking-south-melbourne.html">Dog Walking South Melbourne</a></li>
-          <li><a href="/boarding-services.html">Boarding — Weekend Woof Club</a></li>
-          <li><a href="/unlimited-dog-walks.html">Unlimited Membership</a></li>
+          <li><a href="/boarding-services.html">Boutique Boarding</a></li>
+          <li><a href="/memberships.html">Memberships</a></li>
           <li><a href="/contact.html">Contact</a></li>
-          <li><a href="/sitemap.html">Sitemap</a></li>
         </ul>
       </nav>
 
-      <section class="footer-col collapsible">
-        <button class="collapse-btn" aria-expanded="false" aria-controls="support-list">Support</button>
-        <ul id="support-list">
-          <li><a href="/faq.html">FAQs</a></li>
+      <section class="footer-col">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="/about.html">About</a></li>
           <li><a href="/testimonials.html">Testimonials</a></li>
           <li><a href="/gallery.html">Photos & Videos</a></li>
-          <li><a href="/blog/index.html">Blog</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/faqs.html">FAQs</a></li>
         </ul>
       </section>
 
-      <section class="footer-col collapsible">
-        <button class="collapse-btn" aria-expanded="false" aria-controls="legal-list">Legal</button>
-        <ul id="legal-list">
-          <li><a href="/terms.html" aria-current="page">Terms (Index)</a></li>
-          <li><a href="/full-terms.html">Full Terms</a></li>
-          <li><a href="/mini-terms.html">Short-Form Terms</a></li>
-          <li><a href="/privacy.html">Privacy Policy</a></li>
+      <section class="footer-col">
+        <h3>Info & Legal</h3>
+        <ul>
+          <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="/terms-and-conditions.html">Full Terms & Conditions</a></li>
+          <li><a href="/mini-terms.html">Mini Terms</a></li>
+          <li><a href="/community.html">Community Impact</a></li>
+          <li><a href="/sitemap.html">Sitemap</a></li>
         </ul>
       </section>
-    </div>
-
-    <div class="container footer-geo">
-      Solo Dog Walking & Boutique Boarding across <strong>South Melbourne</strong>, <strong>Albert Park</strong>,
-      <strong>Port Melbourne</strong>, <strong>Middle Park</strong> and <strong>Southbank</strong>.
     </div>
 
     <div class="container footer-bottom">© <span id="year"></span> The Woof of Walk Street</div>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   </footer>
 
-  <!-- Services dropdown a11y -->
+  <!-- Behaviours (dropdown) -->
   <script>
-    (function () {
+    (function(){
+      const navToggle=document.getElementById('nav-toggle');
+      const scrim=document.querySelector('.nav-scrim');
+      if(navToggle && scrim){ scrim.addEventListener('click',()=>navToggle.checked=false); }
+
       const btn  = document.querySelector('.nav-group-btn[aria-controls="nav-services"]');
       const list = document.getElementById('nav-services');
       if (!btn || !list) return;
       const sync = () => { list.hidden = btn.getAttribute('aria-expanded') !== 'true'; };
       sync();
-      btn.addEventListener('click', () => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
         const open = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', String(!open));
-        sync();
+        btn.setAttribute('aria-expanded', String(!open)); sync();
       });
       document.addEventListener('click', (e) => {
         if (!btn.contains(e.target) && !list.contains(e.target)) {

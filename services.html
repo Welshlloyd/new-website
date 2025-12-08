@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <!-- Theme boot (no-FOUC) -->
   <script>
     (function () {
       const KEY='wow-theme'; const pref=localStorage.getItem(KEY)||'auto';
@@ -22,13 +23,16 @@
   <link rel="canonical" href="https://www.woofofwalkstreet.com/services.html" />
   <link rel="icon" href="/images/brand/favicon.ico" />
 
+  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Premium Dog Services: Solo Walking & One-Guest Boarding">
-  <meta property="og:description" content="Uncompromising 1:1 care. Solo dog walking, one-dog-only boarding, GPS tracking & photo updates." />
+  <meta property="og:description" content="Uncompromising 1:1 care. Solo dog walking, one-dog-only boarding, GPS tracking & photo updates.">
   <meta property="og:url" content="https://www.woofofwalkstreet.com/services.html">
   <meta property="og:image" content="https://www.woofofwalkstreet.com/images/brand/hero-dog-skyline-1200.webp">
+  <meta property="og:site_name" content="The Woof of Walk Street">
   <meta name="twitter:card" content="summary_large_image">
 
+  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -59,15 +63,17 @@
   }
   </script>
 
+  <!-- Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KP5LVKN6X3"></script>
   <script>
     window.dataLayer=window.dataLayer||[];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){dataLayer.push(arguments);} 
     gtag('js', new Date());
     gtag('config','G-KP5LVKN6X3');
     gtag('config','AW-17527927259');
   </script>
 
+  <!-- Preload hero image -->
   <link rel="preload" as="image" href="/images/brand/hero-dog-skyline-1200.webp"
         imagesrcset="/images/brand/hero-dog-skyline-800.webp 800w, /images/brand/hero-dog-skyline-1200.webp 1200w, /images/brand/hero-dog-skyline-1600.webp 1600w"
         imagesizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px">
@@ -87,28 +93,26 @@
       --font-body:'Work Sans',system-ui,sans-serif;
     }
     html,body{background:var(--bg);color:var(--text);overflow-x:hidden}
-    body, p, li, span, button, input, textarea { font-family: var(--font-body); letter-spacing: .1px; line-height: 1.58; }
-    h1,h2,h3,h4,h5,h6, nav a, .nav-group-btn{ font-family: var(--font-heading); letter-spacing: .25px; }
-    /* Ensure the text is bold via the strong tag */
+    body, p, li, span, button, input, textarea { font-family: var(--font-body); letter-spacing:.1px; line-height:1.58; }
+    h1,h2,h3,h4,h5,h6, nav a, .nav-group-btn{ font-family: var(--font-heading); letter-spacing:.25px; }
     strong{ font-weight: 700; color: #fff; }
     .container{max-width:var(--container);margin:0 auto;padding:0 16px}
     a{color:var(--brand)}
     a:hover{color:#fff}
 
-    /* Promo ribbon (synced with other pages) */
-    .promo-ribbon{
-      position:relative; z-index:1100;
-      background:linear-gradient(135deg,#f5b200,#ffd866,#f5b200);
-      background-size:300% 300%; animation:shimmer 6s ease-in-out infinite;
-      color:#111; border-bottom:1px solid rgba(255,255,255,.06);
-      box-shadow:0 14px 40px rgba(0,0,0,.18);
-    }
+    /* Promo ribbon */
+    .promo-ribbon{position:relative; z-index:1100; background:linear-gradient(135deg,#f5b200,#ffd866,#f5b200); background-size:300% 300%; animation:shimmer 6s ease-in-out infinite; color:#111; border-bottom:1px solid rgba(255,255,255,.06); box-shadow:0 14px 40px rgba(0,0,0,.18)}
     @keyframes shimmer { 0%,100%{background-position:0% 50%} 50%{background-position:100% 50%} }
     .promo-ribbon div{ max-width:var(--container); margin:0 auto; padding:10px 14px; text-align:center; }
     .promo-code{ background:rgba(0,0,0,.15); color:var(--brand-ink); padding:2px 6px; border-radius:4px; font-family:monospace; font-weight:900; }
     .promo-ribbon strong{ color: #000; font-weight: 900; }
 
-    /* Header + nav (match home) */
+    /* Impact ribbon */
+    .impact-ribbon{background:linear-gradient(90deg, rgba(255,209,102,.12), rgba(255,209,102,.04));border-bottom:1px solid rgba(255,209,102,.22)}
+    .impact-inner{max-width:var(--container);margin:0 auto;padding:10px 16px;display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap}
+    .impact-cta{font-weight:800;text-decoration:none;border-bottom:2px solid rgba(255,209,102,.6)}
+
+    /* Header + nav */
     .site-header{position:sticky;top:0;z-index:1000;background:var(--header-bg);backdrop-filter:var(--header-blur);-webkit-backdrop-filter:var(--header-blur);border-bottom:1px solid rgba(255,255,255,.06)}
     .navbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
     .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:#fff;font-weight:900}
@@ -120,15 +124,11 @@
     .nav-group-btn{background:transparent;border:1px solid #2a3440;color:#fff;border-radius:999px;padding:8px 12px;font-weight:800;cursor:pointer}
     .nav-group-list{position:absolute;right:0;top:110%;min-width:240px;background:var(--menu-solid);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:8px 6px;box-shadow:var(--shadow);display:none}
     .nav-group[aria-expanded="true"] .nav-group-list{display:block}
-    @media (min-width:861px){
-      .nav-group:hover .nav-group-list,
-      .nav-group:focus-within .nav-group-list{display:block}
-    }
+    @media (min-width:861px){ .nav-group:hover .nav-group-list, .nav-group:focus-within .nav-group-list{display:block} }
     .nav-toggle{display:none} .nav-scrim{display:none}
     @media (max-width:860px){
       .nav-toggle{display:block;cursor:pointer}
-      .nav-links{position:fixed;inset:0 0 auto auto;width:min(320px,85vw);height:100vh;background:var(--menu-solid);
-        padding:70px 16px 20px;flex-direction:column;gap:10px;transform:translateX(100%);transition:transform .25s}
+      .nav-links{position:fixed;inset:0 0 auto auto;width:min(320px,85vw);height:100vh;background:var(--menu-solid);padding:70px 16px 20px;flex-direction:column;gap:10px;transform:translateX(100%);transition:transform .25s}
       #nav-toggle:checked ~ .nav-links{transform:translateX(0)}
       .nav-scrim{display:block;position:fixed;inset:0;background:rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:opacity .25s}
       #nav-toggle:checked ~ .nav-scrim{opacity:1;pointer-events:auto}
@@ -136,6 +136,7 @@
       .nav-group-list{position:relative;top:auto;right:auto;display:block;background:transparent;border:none;box-shadow:none;padding:4px 0}
       .nav-group-btn{width:100%;text-align:left}
     }
+
     .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:12px 18px;border-radius:999px;border:1px solid transparent;text-decoration:none;font-weight:800;letter-spacing:.02em;transition:all var(--speed)}
     .btn-primary{background:var(--brand);color:var(--brand-ink);box-shadow:0 10px 26px rgba(255,209,102,.25)}
     .btn-primary:hover{transform:translateY(-2px) scale(1.04); box-shadow:0 16px 46px rgba(255,209,102,.35)}
@@ -162,12 +163,11 @@
     .list-check li{margin:.35rem 0; color:#fff}
     .list-check li::before{content:"✓";color:var(--brand);margin-right:8px}
 
-    /* New H2/H3 Styles */
+    /* H2/H3 Styles */
     .section-h2{font-size:clamp(1.8rem, 1rem + 2vw, 2.2rem); margin: 32px 0 15px; text-align: center; }
-    .section-h3{font-size:clamp(1.5rem, 1rem + 1.2vw, 2rem); margin: 24px 0 12px; border-left: 4px solid var(--brand); padding-left: 12px; }
     .intro-copy{ max-width: 85ch; margin: 0 auto 30px; color: var(--muted); text-align: center; }
 
-    /* Footer (synced with other pages) */
+    /* Footer */
     .site-footer{padding-top:40px;border-top:1px solid var(--line);margin-top:60px}
     .footer-grid{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap;padding-bottom:40px}
     .footer-brand{max-width:300px}
@@ -180,9 +180,20 @@
 </head>
 <body>
 
+  <!-- Promo ribbon -->
   <div class="promo-ribbon">
     <div>
       🎉 End of Year Sale: <strong>50% OFF</strong> Walks (Code: <span class="promo-code">WALK50</span>) + <strong>20% OFF</strong> Boarding (Code: <span class="promo-code">BOARDING20</span>). Ends 31/12!
+    </div>
+  </div>
+
+  <!-- Impact ribbon -->
+  <div class="impact-ribbon" role="note" aria-label="Walks that do more: 10% donated">
+    <div class="impact-inner">
+      <span aria-hidden="true">💛</span>
+      <strong>Walks That Do More:</strong>
+      We donate <strong>10% of profits</strong> to Melbourne rescue groups.
+      <a class="impact-cta" href="/community.html">See our impact →</a>
     </div>
   </div>
 
@@ -207,7 +218,7 @@
         </div>
         <a href="/about.html">About</a>
         <a href="/testimonials.html">Testimonials</a>
-        <a href="/blog/index.html">Blog</a>
+        <a href="/blog.html">Blog</a>
         <a href="/contact.html">Contact</a>
         <a href="/search.html">Search</a>
         <a class="btn btn-primary nav-cta" href="/book-dog-walk/?coupon=WALK50">Book Walks</a>
@@ -264,7 +275,7 @@
 
         <article class="card">
           <img src="/images/gallery/dog-weekend-woof.jpg" alt="Home-style boutique boarding — one guest only" loading="lazy">
-          <h3>🏡 <strong>Boutique Boarding</strong> (Weekend Woof Club)</h3>
+          <h3>🏡 <strong>Boutique Boarding</strong></h3>
           <p>
             We are strictly <strong>one guest only</strong> at a time for calm, consistent care. This is home comfort, not a kennel. Your dog gets dedicated attention, gentle local walks, and continuous communication throughout their stay.
           </p>
@@ -288,11 +299,9 @@
           <ul class="list-check">
             <li>Priority access to <strong>booking slots</strong></li>
             <li>Predictable schedule for <strong>calmer manners</strong></li>
-            <li>Plans from 4 walks/month up to <strong>Unlimited Weekdays</strong></li>
           </ul>
           <div class="cta-buttons" style="margin-top:auto">
             <a class="btn btn-primary" href="/memberships.html">Compare Plans →</a>
-            <a class="btn btn-ghost" href="/unlimited-dog-walks.html">Unlimited Details</a>
           </div>
         </article>
       </div>
@@ -311,7 +320,7 @@
           </article>
           <article class="card">
             <h3>📍 <strong>Proof, Not Promises</strong></h3>
-            <p><strong>Every session ends with a GPS map, photos, and quick notes</strong> delivered instantly to your portal so you know exactly what happened and how your dog felt.</p>
+            <p><strong>Every session ends with a GPS map, photos, and quick notes</strong> delivered so you know exactly what happened and how your dog felt.</p>
           </article>
           <article class="card">
             <h3>🤝 <strong>Accountable & Insured</strong></h3>
@@ -378,6 +387,17 @@
           <li><a href="/dog-walker-port-melbourne.html">Port Melbourne</a></li>
           <li><a href="/dog-walker-southbank.html">Southbank</a></li>
           <li><a href="/dog-walker-south-yarra.html">South Yarra</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-label="Info & Legal">
+        <h3>Info & Legal</h3>
+        <ul class="footlist">
+          <li><a href="/privacy.html">Privacy Policy</a></li>
+          <li><a href="/full-terms.html">Full Terms</a></li>
+          <li><a href="/mini-terms.html">Mini Terms</a></li>
+          <li><a href="/community.html">Community Impact</a></li>
+          <li><a href="/sitemap.html">Sitemap</a></li>
         </ul>
       </nav>
     </div>

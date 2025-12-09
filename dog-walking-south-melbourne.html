@@ -5,19 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Dog Walking South Melbourne — Solo Dog Walker (GPS & Photos)</title>
-  <meta name="description" content="South Melbourne dog walking with a local solo dog walker. Calm, one-dog-only 45-minute walks with GPS route & photo updates. New clients: 50% off your first casual walk (code WALK50) until 31 Dec 2025." />
+
+  <!-- UPDATED: exact-match keyword added -->
+  <meta name="description" content="Dog walking South Melbourne with a local solo dog walker. Calm, one-dog-only 45-minute walks with GPS route & photo updates. New clients: 50% off your first casual walk (code WALK50) until 31 Dec 2025." />
+
   <link rel="canonical" href="https://www.woofofwalkstreet.com/dog-walking-south-melbourne.html" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="icon" href="/images/brand/favicon.ico" />
 
-  <!-- Open Graph / Twitter -->
+  <!-- Open Graph / Twitter (UPDATED descriptions + extra tags) -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Dog Walking South Melbourne — Solo Dog Walker (GPS & Photos)">
-  <meta property="og:description" content="One-at-a-time dog walking in South Melbourne with GPS tracking & photo updates. 50% off your first casual walk (code WALK50) ends 31 Dec 2025.">
+  <meta property="og:description" content="Dog walking South Melbourne done one-at-a-time with GPS tracking & photo updates. 50% off your first casual walk (code WALK50) ends 31 Dec 2025.">
   <meta property="og:url" content="https://www.woofofwalkstreet.com/dog-walking-south-melbourne.html">
   <meta property="og:image" content="https://www.woofofwalkstreet.com/images/pages/dog-walking/dog-albert-park-lake-south-melbourne.jpg">
+  <meta property="og:image:alt" content="Solo dog walking South Melbourne near St Vincent Gardens with GPS-tracked route">
   <meta property="og:locale" content="en_AU">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dog Walking South Melbourne — Solo Dog Walker (GPS & Photos)">
+  <meta name="twitter:description" content="Dog walking South Melbourne with calm, one-dog-only walks, GPS & photos. New clients get 50% off with code WALK50 until 31 Dec 2025.">
 
   <!-- Styles -->
   <link rel="stylesheet" href="/css/mini.css">
@@ -92,7 +98,7 @@
     gtag('config','AW-17527927259'); /* Google Ads */
   </script>
 
-  <!-- Schema -->
+  <!-- Schema (kept; description already contains South Melbourne variants) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -216,8 +222,9 @@
         <h1>Dog Walking South Melbourne — Solo Dog Walker with GPS & Photos</h1>
         <p class="subhead">Looking for a reliable <strong>dog walker in South Melbourne</strong>? We do <strong>one-dog-only</strong> 45-minute walks that prioritise calm decompression and predictable routes. After every session you’ll receive a <strong>GPS map</strong>, <strong>photo update</strong> and quick notes.</p>
 
+        <!-- UPDATED: alt now includes exact keyword -->
         <img src="/images/pages/dog-walking/dog-albert-park-lake-south-melbourne.jpg"
-             alt="Solo dog walk near St Vincent Gardens in South Melbourne"
+             alt="Solo dog walking South Melbourne near St Vincent Gardens"
              width="1200" height="800"
              style="max-width:920px;border-radius:12px;display:block;margin:0 auto"
              loading="eager" decoding="async" fetchpriority="high">
@@ -464,13 +471,11 @@
       close?.addEventListener('click',()=>{ try{sessionStorage.setItem(KEY,'1');}catch(e){}; promo.style.display='none'; });
 
       // Carry UTM + ensure coupon on all Acuity links
-      const ACUITY_BASE = "https://app.acuityscheduling.com/schedule.php";
       const ensureCoupon = (url, coupon) => {
         try{
           const u = new URL(url, location.origin);
           if (/acuityscheduling\.com\/schedule\.php/.test(u.href)){
             if (!u.searchParams.has('coupon') && coupon) u.searchParams.set('coupon', coupon);
-            // Carry core UTM params
             const src = new URLSearchParams(location.search);
             ['utm_source','utm_medium','utm_campaign','utm_term','utm_content'].forEach(k=>{
               if (src.has(k) && !u.searchParams.has(k)) u.searchParams.set(k, src.get(k));

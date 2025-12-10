@@ -13,14 +13,16 @@
       document.documentElement.setAttribute('data-theme',pref);
       document.documentElement.style.colorScheme=isDark()?'dark':'light';
       mql.addEventListener?.('change',()=>{ if((localStorage.getItem(KEY)||'auto')==='auto'){ document.documentElement.style.colorScheme=mql.matches?'dark':'light'; }});
+      // Optional helper for a 🌓 toggle
+      window.__wowTheme={ set(v){ localStorage.setItem(KEY,v); const dark=v==='dark'||(v==='auto'&&mql.matches); document.documentElement.setAttribute('data-theme',v); document.documentElement.style.colorScheme=dark?'dark':'light'; }, cycle(){ const c=localStorage.getItem(KEY)||'auto'; this.set(c==='light'?'dark':c==='dark'?'auto':'light'); const el=document.querySelector('#theme-current'); if(el) el.textContent=localStorage.getItem(KEY)||'auto'; } };
     })();
   </script>
 
-  <!-- Fonts to match index -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- Title + Meta (SEO-first, localised) -->
+  <!-- Title + Meta -->
   <title>Dog Walking Albert Park — Solo & GPS-Tracked</title>
   <meta name="description" content="Calm, one-dog-only 45-minute walks in Albert Park with GPS route, photo updates & notes. Low-arousal routes near Albert Park Lake, Gasworks & Bridport Street. New clients: 50% off with code WALK50." />
   <link rel="canonical" href="https://www.woofofwalkstreet.com/dog-walking-albert-park.html" />
@@ -36,7 +38,7 @@
   <meta property="og:locale" content="en_AU">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Global styles (same stack as index) -->
+  <!-- Global CSS (your existing) -->
   <link rel="stylesheet" href="/css/mini.css">
   <link rel="stylesheet" href="/css/mini.dark.css">
   <link rel="stylesheet" href="/css/mini.light.css">
@@ -45,96 +47,103 @@
   <!-- LCP image preload -->
   <link rel="preload" as="image" href="/images/pages/dog-walking/dog-albert-park-lake-south-melbourne.jpg" />
 
+  <!-- ===== WOW theme tokens + components (light + dark) ===== -->
   <style>
     :root{
+      /* Light defaults */
+      --bg:#f6f7f9; --bg2:#ffffff; --text:#0b0e12; --muted:#475466; --line:#e6ecf2;
+      --brand:#ffd166; --brand-ink:#0b0e12; --accent:#12d6a7; --shadow:0 18px 46px rgba(0,0,0,.10);
+      --container:1100px; --radius:14px; --speed:.22s; --header-bg:rgba(255,255,255,.72); --header-blur:saturate(120%) blur(10px);
+    }
+    [data-theme="dark"]{
       --bg:#0b0e12; --bg2:#0f1318; --text:#e8eef5; --muted:#a9b4c0; --line:#1e2630;
       --brand:#ffd166; --brand-ink:#0b0e12; --accent:#5af2c6; --shadow:0 18px 46px rgba(0,0,0,.35);
+      --header-bg:rgba(11,14,18,.78);
     }
+
     html,body{background:var(--bg);color:var(--text)}
+    img{max-width:100%;height:auto}
+    .container{max-width:var(--container);margin:0 auto;padding:0 16px}
     body, p, li, span, button, input, textarea { font-family:'Work Sans',system-ui,sans-serif; letter-spacing:.1px; line-height:1.58 }
     h1,h2,h3,h4, .btn, nav a, .nav-group-btn { font-family:'Space Grotesk',system-ui,sans-serif; letter-spacing:.25px; font-weight:700 }
-    .hero{padding:28px 0 18px;background:radial-gradient(1200px 600px at 20% -20%,rgba(255,209,102,.08),transparent 60%),linear-gradient(120deg,#111824,#1b2433,#111824);border-bottom:1px solid rgba(255,255,255,.06)}
+    .meta{color:var(--muted)}
+
+    /* Promo */
+    .promo-ribbon{position:relative;z-index:1100;background:linear-gradient(135deg,#FF512F,#DD2476);color:#fff;border-bottom:1px solid color-mix(in oklab, var(--text) 10%, transparent);font-weight:700;text-align:center;padding:8px}
+    [data-theme="dark"] .promo-ribbon{border-bottom:1px solid rgba(255,255,255,.10)}
+    .promo-ribbon .promo-code{background:rgba(0,0,0,.3);padding:2px 6px;border-radius:4px;font-family:ui-monospace, SFMono-Regular, Menlo, monospace}
+
+    /* Impact */
+    .impact-ribbon{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+    .impact-inner{max-width:var(--container);margin:0 auto;padding:10px 14px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center}
+    .impact-cta{margin-left:auto;text-decoration:none;font-weight:900;white-space:nowrap;color:var(--brand);border:1px solid rgba(255,209,102,.45);padding:8px 12px;border-radius:999px;transition:all var(--speed)}
+    .impact-cta:hover{background:var(--brand);color:var(--brand-ink);box-shadow:0 16px 46px rgba(255,209,102,.2);transform:translateY(-2px) scale(1.03)}
+
+    /* Header */
+    .site-header{position:sticky;top:0;z-index:1000;background:var(--header-bg);backdrop-filter:var(--header-blur);-webkit-backdrop-filter:var(--header-blur);border-bottom:1px solid color-mix(in oklab, var(--text) 10%, transparent)}
+    [data-theme="dark"] .site-header{border-bottom:1px solid rgba(255,255,255,.10)}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:.6rem;color:inherit;text-decoration:none;font-weight:900}
+    .brand img{width:56px;height:56px}
+    .nav-links{display:flex;align-items:center;gap:16px}
+    .nav-links a{padding:8px 6px;text-decoration:none;color:inherit;opacity:.96}
+    .nav-links a:hover{opacity:1}
+
+    .nav-group{position:relative}
+    .nav-group-btn{background:transparent;border:1px solid color-mix(in oklab, var(--text) 15%, transparent);color:inherit;border-radius:999px;padding:8px 12px;font-weight:800;cursor:pointer}
+    .nav-group-btn:hover{border-color:color-mix(in oklab, var(--text) 45%, transparent)}
+    .nav-group-list{position:absolute;right:0;top:calc(100% + 8px);min-width:260px;background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:8px 6px;box-shadow:var(--shadow);}
+
+    /* Buttons */
+    .cta-buttons{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:12px 18px;border-radius:999px;border:1px solid transparent;text-decoration:none;font-weight:800;transition:all var(--speed)}
+    .btn-primary{background:var(--brand);color:var(--brand-ink);box-shadow:0 10px 26px rgba(255,209,102,.25)}
+    .btn-secondary,.btn-ghost{background:color-mix(in oklab, var(--text) 6%, transparent);color:inherit;border:1px solid color-mix(in oklab, var(--text) 20%, transparent)}
+    .btn-secondary:hover,.btn-ghost:hover{border-color:color-mix(in oklab, var(--text) 40%, transparent);background:color-mix(in oklab, var(--text) 10%, transparent)}
+
+    /* Hero */
+    .hero{padding:28px 0 18px;background:radial-gradient(1200px 600px at 20% -20%,color-mix(in oklab, var(--brand) 18%, transparent),transparent 60%),linear-gradient(120deg,color-mix(in oklab, var(--bg2) 96%, transparent), var(--bg2));border-bottom:1px solid var(--line)}
+    [data-theme="dark"] .hero{background:radial-gradient(1200px 600px at 20% -20%,rgba(255,209,102,.08),transparent 60%),linear-gradient(120deg,#111824,#1b2433,#111824)}
     .hero img{border:3px solid var(--brand); border-radius:12px; box-shadow:0 12px 30px rgba(0,0,0,.18)}
-    .promo-ribbon{position:relative;z-index:1100;background:linear-gradient(135deg,#FF512F,#DD2476);color:#fff;border-bottom:1px solid rgba(255,255,255,.1);font-weight:700;text-align:center;padding:8px}
-    .promo-ribbon .promo-code{background:rgba(0,0,0,.3);padding:2px 6px;border-radius:4px;font-family:monospace}
-    .price-banner{background:linear-gradient(90deg,#1e2630,#2a3440);color:var(--text);border:2px solid var(--accent);padding:16px 22px;border-radius:10px;text-align:center;margin-top:20px;font-size:1.12rem;font-weight:800;box-shadow:0 10px 20px rgba(90,242,198,.2)}
+    .subhead{max-width:70ch;color:var(--muted)}
+
+    /* Sections / cards */
+    .section{padding:24px 0}
+    .grid{display:grid;gap:20px}
+    .grid-2{grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));}
+    .card{border:1px solid var(--line);border-radius:12px;padding:16px;background:linear-gradient(180deg, color-mix(in oklab, var(--text) 6%, transparent), color-mix(in oklab, var(--text) 2%, transparent)), var(--bg2);box-shadow:0 8px 24px rgba(0,0,0,.12)}
+    [data-theme="dark"] .card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03)), var(--bg2);box-shadow:0 8px 24px rgba(0,0,0,.28)}
+
+    .value-prop{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:20px;margin:22px 0;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.12)}
+    [data-theme="dark"] .value-prop{box-shadow:0 4px 12px rgba(0,0,0,.2)}
+
+    .price-banner{background:linear-gradient(90deg,color-mix(in oklab, var(--text) 8%, transparent),color-mix(in oklab, var(--text) 16%, transparent));color:var(--text);border:2px solid var(--accent);padding:16px 22px;border-radius:10px;text-align:center;margin-top:20px;font-size:1.12rem;font-weight:800;box-shadow:0 10px 20px color-mix(in oklab, var(--accent) 30%, transparent)}
     .price-banner a{color:var(--accent);text-decoration:underline}
     .price-banner strong{color:var(--brand)}
-    .list-check{padding-left:1.1rem; list-style:none}
-    .list-check li{margin:.5rem 0; position:relative; padding-left:1.6rem; font-weight:600}
+
+    .list-check{list-style:none;padding-left:0}
+    .list-check li{position:relative;padding-left:28px;margin:.5rem 0;font-weight:600}
     .list-check li::before{content:'✅'; position:absolute; left:0}
     .list-dash{padding-left:1.1rem; list-style:disc}
-    .list-dash li{margin:.35rem 0}
-    .badge-row .badge{margin-right:.35rem}
-    .value-prop{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:20px;margin:22px 0;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.2)}
-    .value-prop h3{font-size:1.4rem;color:var(--accent);margin:0 0 8px}
-    .cta-buttons{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:12px 18px;border-radius:999px;border:1px solid transparent;text-decoration:none;font-weight:800}
-    .button-primary,.btn-primary{background:var(--brand);color:var(--brand-ink);box-shadow:0 10px 26px rgba(255,209,102,.25)}
-    .button-secondary,.btn-secondary{background:transparent;color:#fff;border:1px solid #2a3440}
-    .sticky-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:1100;background:#111824ee;border:1px solid var(--line);box-shadow:var(--shadow);border-radius:16px;display:flex;gap:10px;justify-content:center;align-items:center;padding:10px}
+
+    .badge-row .badge{display:inline-flex;align-items:center;gap:.4rem;border:1px solid var(--line);border-radius:999px;padding:.25rem .6rem;margin-right:.35rem;background:color-mix(in oklab, var(--text) 6%, transparent)}
+
+    /* Sticky mobile CTA */
+    .sticky-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:1100;background:var(--bg2);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:16px;display:flex;gap:10px;justify-content:center;align-items:center;padding:10px}
     .sticky-cta .btn{padding:10px 16px}
     @media (min-width:860px){.sticky-cta{display:none}}
+
+    /* Footer */
+    .site-footer{padding-top:40px;border-top:1px solid var(--line);margin-top:40px}
+    .footer-grid{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap;padding-bottom:40px}
+    .footer-col{flex-basis:150px}
     .footer-geo{background:var(--bg2);border-top:1px solid var(--line);padding:15px 16px;color:var(--muted);font-size:.95rem;text-align:center}
-    .footer-brand a{color:var(--brand)}
-    .muted{color:var(--muted)}
+    .footlist, .footer-col ul{list-style:none;padding:0;margin:0}
+    .footer-bottom{border-top:1px solid color-mix(in oklab, var(--text) 10%, transparent);padding:15px 0;text-align:center;font-size:.85rem;color:var(--muted)}
+
+    /* Fancy divider */
+    .section-sweep{height:4px;border:0;margin:34px 0;background:linear-gradient(90deg,transparent,rgba(255,209,102,.8),transparent);filter:drop-shadow(0 8px 18px rgba(255,209,102,.25))}
   </style>
-
-  <!-- Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KP5LVKN6X3"></script>
-  <script>
-    window.dataLayer=window.dataLayer||[];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config','G-KP5LVKN6X3');  /* GA4 */
-    gtag('config','AW-17527927259'); /* Google Ads */
-  </script>
-
-  <!-- JSON-LD: Service + FAQ + Breadcrumbs (LocalBusiness lives on hub) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@graph":[
-      {
-        "@type":"Service",
-        "@id":"https://www.woofofwalkstreet.com/dog-walking-albert-park.html#service",
-        "name":"Solo Dog Walking — Albert Park",
-        "serviceType":"Dog Walking",
-        "description":"Calm, one-dog-only 45-minute walk in Albert Park with GPS route, photo update and notes. Reactive- and anxious-dog friendly.",
-        "areaServed":["Albert Park"],
-        "provider":{"@id":"https://www.woofofwalkstreet.com/#business"},
-        "url":"https://www.woofofwalkstreet.com/dog-walking-albert-park.html",
-        "offers":{
-          "@type":"Offer",
-          "priceCurrency":"AUD",
-          "price":"100.00",
-          "validThrough":"2025-12-31",
-          "availability":"https://schema.org/InStock",
-          "url":"https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931&coupon=WALK50"
-        }
-      },
-      {
-        "@type":"FAQPage",
-        "@id":"https://www.woofofwalkstreet.com/dog-walking-albert-park.html#faq",
-        "mainEntity":[
-          {"@type":"Question","name":"Do you walk more than one dog at a time?","acceptedAnswer":{"@type":"Answer","text":"No — all walks are strictly solo. We never group unfamiliar dogs or use car-ferry pack walks, which keeps arousal low and safety high in Albert Park."}},
-          {"@type":"Question","name":"How long is each walk?","acceptedAnswer":{"@type":"Answer","text":"Each session is a full 45 minutes on foot (prep/transport excluded). We tailor calm routes around Albert Park Lake, Gasworks and quieter backstreets near Bridport Street."}},
-          {"@type":"Question","name":"What proof do I receive after a walk?","acceptedAnswer":{"@type":"Answer","text":"You’ll receive a time-stamped GPS route, a photo update and quick notes on mood, toileting and energy after every session."}},
-          {"@type":"Question","name":"Do you handle reactive or shy dogs?","acceptedAnswer":{"@type":"Answer","text":"Yes. We specialise in low-arousal, one-to-one walks for reactive, anxious and senior dogs. We avoid peak-time pinch points around the main lake loop and busy Beach Road paths."}}
-        ]
-      },
-      {
-        "@type":"BreadcrumbList",
-        "@id":"https://www.woofofwalkstreet.com/dog-walking-albert-park.html#breadcrumbs",
-        "itemListElement":[
-          {"@type":"ListItem","position":1,"name":"Home","item":"https://www.woofofwalkstreet.com/"},
-          {"@type":"ListItem","position":2,"name":"Dog Walking Melbourne","item":"https://www.woofofwalkstreet.com/dog-walker.html"},
-          {"@type":"ListItem","position":3,"name":"Dog Walking Albert Park","item":"https://www.woofofwalkstreet.com/dog-walking-albert-park.html"}
-        ]
-      }
-    ]
-  }
-  </script>
 </head>
 <body>
 
@@ -155,7 +164,7 @@
     </div>
   </div>
 
-  <!-- Header (same as index) -->
+  <!-- Header -->
   <header class="site-header">
     <div class="navbar container">
       <a class="brand" href="/" aria-label="Home">
@@ -171,7 +180,7 @@
           <button class="nav-group-btn" aria-expanded="false" aria-controls="nav-services">Services ▾</button>
           <ul id="nav-services" class="nav-group-list" hidden>
             <li><a href="/services.html">All Services</a></li>
-            <li><a href="/dog-walker.html">Dog Walking (Solo)</a></li><!-- hub -->
+            <li><a href="/dog-walker.html">Dog Walking (Solo)</a></li>
             <li><a href="/casual-dog-walking-albert-park.html" aria-current="page">Casual Dog Walking</a></li>
             <li><a href="/dog-boarding-albert-park.html">Boutique Boarding — Albert Park</a></li>
             <li><a href="/service-areas.html">Service Areas</a></li>
@@ -184,7 +193,8 @@
         <a href="/search.html">Search</a>
 
         <a class="btn btn-primary nav-cta" href="#book">Book Walks</a>
-        <a class="btn btn-primary nav-cta" href="/dog-boarding-albert-park.html">Boarding 20% Off</a>
+        <a class="btn btn-ghost nav-cta" href="/dog-boarding-albert-park.html">Boarding 20% Off</a>
+        <button class="btn btn-ghost" type="button" onclick="__wowTheme.cycle()">🌓 <span id="theme-current">auto</span></button>
       </nav>
       <div class="nav-scrim" aria-hidden="true"></div>
     </div>
@@ -207,21 +217,23 @@
         <div class="value-prop">
           <h3>Solo Means Calm — Low-Arousal Routes Near Albert Park Lake</h3>
           <p>We plan decompression loops using quieter backstreets around <strong>Bridport Street</strong>, the shady edges near <strong>Gasworks</strong>, and off-peak sections around the southern end of <strong>Albert Park Lake</strong>. Perfect for <strong>reactive, anxious, senior</strong> and apartment dogs.</p>
-          <p class="muted" style="margin-top:8px">Nearby: <a href="/dog-walking-middle-park.html">Middle Park</a> · <a href="/dog-walking-south-melbourne.html">South Melbourne</a> · <a href="/dog-walking-port-melbourne.html">Port Melbourne</a></p>
+          <p class="meta" style="margin-top:8px">Nearby: <a href="/dog-walking-middle-park.html">Middle Park</a> · <a href="/dog-walking-south-melbourne.html">South Melbourne</a> · <a href="/dog-walking-port-melbourne.html">Port Melbourne</a></p>
         </div>
 
         <div class="price-banner">
           <p><strong>A$100 Casual Solo Walk</strong> — <strong>NEW CLIENT SPECIAL:</strong> 50% off your first casual walk with code <strong>WALK50</strong>. <a href="/memberships.html">Memberships</a> available for routine & savings.</p>
-          <div class="muted" style="margin-top:8px">If the discount doesn’t auto-apply on Acuity, paste this into the coupon field: <code>WALK50</code>.</div>
+          <div class="meta" style="margin-top:8px">If the discount doesn’t auto-apply on Acuity, paste this into the coupon field: <code>WALK50</code>.</div>
         </div>
 
         <p class="cta-buttons" id="book" style="margin-top:14px">
           <a class="btn btn-primary" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931&coupon=WALK50" target="_blank" rel="noopener">Book 45-min Casual — 50% Off</a>
-          <a class="btn btn-secondary" href="/dog-boarding-albert-park.html">Albert Park Boarding — 20% Off</a>
-          <a class="btn btn-secondary" href="/memberships.html">Compare Membership Plans</a>
+          <a class="btn btn-ghost" href="/dog-boarding-albert-park.html">Albert Park Boarding — 20% Off</a>
+          <a class="btn btn-ghost" href="/memberships.html">Compare Membership Plans</a>
         </p>
       </div>
     </section>
+
+    <hr class="section-sweep" aria-hidden="true" />
 
     <!-- BENEFITS / LOCAL SEO -->
     <section class="section">
@@ -235,7 +247,7 @@
             <li><strong>Predictable Routes:</strong> Lake off-peak, Gasworks edges, quiet streets</li>
             <li><strong>Experienced Handlers:</strong> Insured, police-checked, low-arousal trained</li>
           </ul>
-          <p class="muted">Further reading: <a href="/blog/why-solo-walks.html">Why Solo Walks Beat Pack Walks</a> · <a href="/blog/ethical-dog-walker.html">How to Choose an Ethical Dog Walker</a></p>
+          <p class="meta">Further reading: <a href="/blog/why-solo-walks.html">Why Solo Walks Beat Pack Walks</a> · <a href="/blog/ethical-dog-walker.html">How to Choose an Ethical Dog Walker</a></p>
         </article>
 
         <article class="card">
@@ -272,8 +284,8 @@
           </ol>
           <p class="cta-buttons" style="margin-top:10px">
             <a class="btn btn-primary" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931&coupon=WALK50" target="_blank" rel="noopener">Book Casual — 50% Off</a>
-            <a class="btn btn-secondary" href="/memberships.html">See Membership Savings</a>
-            <a class="btn btn-secondary" href="/dog-boarding-albert-park.html">Book Boutique Boarding</a>
+            <a class="btn btn-ghost" href="/memberships.html">See Membership Savings</a>
+            <a class="btn btn-ghost" href="/dog-boarding-albert-park.html">Book Boutique Boarding</a>
           </p>
         </article>
       </div>
@@ -309,7 +321,7 @@
     </section>
 
     <!-- FAQ -->
-    <section class="faq" id="faq">
+    <section class="section" id="faq">
       <div class="container">
         <h2>Dog Walking Albert Park — FAQs</h2>
         <details><summary>Do you walk more than one dog at a time?</summary><div><p>No — all walks are <strong>strictly solo</strong>. We never group unfamiliar dogs or use car-ferrying. This keeps arousal low and focus high.</p></div></details>
@@ -323,10 +335,10 @@
   <!-- Sticky mobile CTA -->
   <div class="sticky-cta" role="region" aria-label="Quick booking">
     <a class="btn btn-primary" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931&coupon=WALK50" target="_blank" rel="noopener">Book Walks — 50% Off</a>
-    <a class="btn btn-secondary" href="/dog-boarding-albert-park.html">Albert Park Boarding</a>
+    <a class="btn btn-ghost" href="/dog-boarding-albert-park.html">Albert Park Boarding</a>
   </div>
 
-  <!-- Footer (consistent) -->
+  <!-- Footer -->
   <footer class="site-footer" role="contentinfo">
     <div class="footer-banner">
       <picture>
@@ -349,15 +361,15 @@
         </div>
         <p class="cta-buttons" style="margin-top:.4rem">
           <a class="btn btn-primary" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931&coupon=WALK50" target="_blank" rel="noopener">Book Walks</a>
-          <a class="btn btn-primary" href="/dog-boarding-albert-park.html">Book Boarding</a>
+          <a class="btn btn-ghost" href="/dog-boarding-albert-park.html">Book Boarding</a>
         </p>
       </section>
 
       <nav class="footer-col" aria-label="Services">
         <h3>Services</h3>
-        <ul>
+        <ul class="footlist">
           <li><a href="/services.html">All Services</a></li>
-          <li><a href="/dog-walker.html">Dog Walking (Solo)</a></li><!-- hub -->
+          <li><a href="/dog-walker.html">Dog Walking (Solo)</a></li>
           <li><a href="/casual-dog-walking-albert-park.html" aria-current="page">Casual Dog Walking</a></li>
           <li><a href="/dog-boarding-albert-park.html">Boutique Boarding — Albert Park</a></li>
           <li><a href="/service-areas.html">Service Areas</a></li>
@@ -410,7 +422,7 @@
     </script>
   </footer>
 
-  <!-- Behaviours: dropdown, promo close, coupon/UTM carry -->
+  <!-- Behaviour: dropdown + coupon carry -->
   <script>
     (function () {
       // Services dropdown a11y
@@ -431,11 +443,6 @@
         }, { capture: true });
         document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { btn.setAttribute('aria-expanded','false'); group.setAttribute('aria-expanded','false'); sync(); }});
       }
-
-      // Promo close (session)
-      const promo=document.getElementById('promo'), KEY='wow-promo-closed';
-      promo?.querySelector('#promo-close')?.addEventListener('click',()=>{ try{ sessionStorage.setItem(KEY,'1'); }catch(_){ } promo.style.display='none'; });
-      try{ if(sessionStorage.getItem(KEY)==='1' && promo) promo.style.display='none'; }catch(_){}
 
       // Ensure coupon + carry UTM on ALL Acuity links
       const ensureCoupon = (url, coupon) => {

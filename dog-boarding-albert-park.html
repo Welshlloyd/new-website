@@ -10,7 +10,7 @@
       w[l]=w[l]||[]; w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
       var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
       j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl; f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-T3HRTM2T');
+    })(window,document,'script','dataLayer','GTM-T3HRTM2T);
   </script>
   <!-- End GTM -->
 
@@ -23,6 +23,11 @@
       document.documentElement.setAttribute('data-theme',pref);
       document.documentElement.style.colorScheme=isDark()?'dark':'light';
       mql.addEventListener?.('change',()=>{ if((localStorage.getItem(KEY)||'auto')==='auto'){ document.documentElement.style.colorScheme=mql.matches?'dark':'light'; }});
+      // tiny helper for optional toggle buttons
+      window.__wowTheme={
+        set(v){ localStorage.setItem(KEY,v); const dark=v==='dark'||(v==='auto'&&mql.matches); document.documentElement.setAttribute('data-theme',v); document.documentElement.style.colorScheme=dark?'dark':'light'; },
+        cycle(){ const cur=localStorage.getItem(KEY)||'auto'; const nxt=cur==='light'?'dark':cur==='dark'?'auto':'light'; this.set(nxt); const el=document.querySelector('#theme-current'); if(el) el.textContent=nxt; }
+      }
     })();
   </script>
 
@@ -75,62 +80,80 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17527927259"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config','AW-17527927259'); gtag('config','G-KP5LVKN6X3');</script>
 
-  <link rel="stylesheet" href="/css/mini.css"/>
-  <link rel="stylesheet" href="/css/styles.css"/>
-
   <!-- Speed up Acuity -->
   <link rel="preconnect" href="https://app.acuityscheduling.com" crossorigin>
   <link rel="dns-prefetch" href="https://app.acuityscheduling.com">
 
+  <!-- ========= WOW Theme tokens (light + dark) ========= -->
   <style>
     :root{
-      --bg:#0b0e12; --panel:#161d27; --panel-soft:#1a2230; --text:#f1f6fd; --muted:#c3ceda; --line:#314155;
-      --brand:#ffd166; --brand-ink:#0b0e12; --accent:#5af2c6; --container:1100px;
+      /* Light defaults */
+      --bg:#f6f7f9; --panel:#ffffff; --panel-soft:#fbfcfe; --text:#0b0e12; --muted:#475466; --line:#e6ecf2;
+      --brand:#ffd166; --brand-ink:#0b0e12; --accent:#12d6a7; --container:1100px;
       --sale-bg:linear-gradient(135deg,#FF512F 0%,#DD2476 100%);
-      --shadow:0 18px 46px rgba(0,0,0,.40); --radius:14px; --speed:.22s;
+      --shadow:0 18px 46px rgba(0,0,0,.10); --radius:14px; --speed:.22s;
+      --header-bg:rgba(255,255,255,.72); --header-blur:saturate(120%) blur(10px);
     }
-    html,body{background:var(--bg);color:var(--text)}
+    [data-theme="dark"]{
+      --bg:#0b0e12; --panel:#161d27; --panel-soft:#1a2230; --text:#e8eef5; --muted:#a9b4c0; --line:#1e2630;
+      --brand:#ffd166; --brand-ink:#0b0e12; --accent:#5af2c6;
+      --shadow:0 18px 46px rgba(0,0,0,.40); --header-bg:rgba(11,14,18,.78);
+    }
+
+    html,body{background:var(--bg);color:var(--text);overflow-x:hidden}
     img{max-width:100%;height:auto}
     .container{max-width:var(--container);margin:0 auto;padding:0 16px}
     body,p,li,span,button,input,textarea{font-family:'Work Sans',system-ui,sans-serif;line-height:1.62;letter-spacing:.1px}
     h1,h2,h3,.nav-group-btn{font-family:'Space Grotesk',system-ui,sans-serif}
-    h1{color:#fff;text-shadow:0 1px 0 rgba(0,0,0,.25)}
-    .promo-ribbon{position:relative;z-index:1100;background:var(--sale-bg);color:#fff;border-bottom:1px solid rgba(255,255,255,.1);font-weight:700;text-align:center;padding:8px}
-    .promo-code{background:rgba(0,0,0,.3);padding:2px 6px;border-radius:4px;font-family:monospace}
+    .meta{color:var(--muted)}
 
-    .site-header{position:sticky;top:0;z-index:1000;background:rgba(15,20,28,.94);backdrop-filter:saturate(120%) blur(10px);border-bottom:1px solid rgba(255,255,255,.10)}
+    /* Top promo */
+    .promo-ribbon{position:relative;z-index:1100;background:var(--sale-bg);color:#fff;border-bottom:1px solid rgba(0,0,0,.06);font-weight:700;text-align:center;padding:8px}
+    [data-theme="dark"] .promo-ribbon{border-bottom:1px solid rgba(255,255,255,.1)}
+    .promo-code{background:rgba(0,0,0,.3);padding:2px 6px;border-radius:4px;font-family:ui-monospace, SFMono-Regular, Menlo, monospace}
+
+    /* Header */
+    .site-header{position:sticky;top:0;z-index:1000;background:var(--header-bg);backdrop-filter:var(--header-blur);-webkit-backdrop-filter:var(--header-blur);border-bottom:1px solid color-mix(in oklab, var(--text) 10%, transparent)}
+    [data-theme="dark"] .site-header{border-bottom:1px solid rgba(255,255,255,.10)}
     .navbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
-    .brand{display:flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none;font-weight:900}
+    .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-weight:900;color:inherit}
     .brand img{width:48px;height:48px}
     .nav-links{display:flex;align-items:center;gap:16px}
-    .nav-links a{padding:8px 6px;text-decoration:none;color:#fff;opacity:.96}
+    .nav-links a{padding:8px 6px;text-decoration:none;color:inherit;opacity:.96}
     .nav-links a:hover{opacity:1}
+
     .nav-group{position:relative}
-    .nav-group-btn{background:transparent;border:1px solid #2a3440;color:#fff;border-radius:999px;padding:8px 12px;font-weight:800;cursor:pointer}
-    .nav-group-btn:hover{border-color:#fff}
-    .nav-group-list{position:absolute;right:0;top:calc(100% + 8px);min-width:260px;background:#0f141b;border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:8px 6px;box-shadow:var(--shadow);display:none}
+    .nav-group-btn{background:transparent;border:1px solid color-mix(in oklab, var(--text) 15%, transparent);color:inherit;border-radius:999px;padding:8px 12px;font-weight:800;cursor:pointer}
+    .nav-group-btn:hover{border-color:color-mix(in oklab, var(--text) 45%, transparent)}
+    .nav-group-list{position:absolute;right:0;top:calc(100% + 8px);min-width:260px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px 6px;box-shadow:var(--shadow);display:none}
     .nav-group[aria-expanded="true"] .nav-group-list{display:block}
     @media (min-width:861px){.nav-group:hover .nav-group-list,.nav-group:focus-within .nav-group-list{display:block}}
 
+    /* Buttons */
     .cta-buttons{display:flex;gap:10px;flex-wrap:wrap}
     .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:12px 18px;border-radius:999px;border:1px solid transparent;text-decoration:none;font-weight:800;letter-spacing:.02em;transition:all var(--speed)}
-    .btn-primary{background:var(--brand);color:#111;box-shadow:0 10px 26px rgba(255,209,102,.28)}
-    .btn-ghost{background:#ffffff10;color:#fff;border:1px solid #41526a}
-    .btn-ghost:hover{border-color:#fff;background:#ffffff18}
-    .btn-sale{background:var(--sale-bg);color:#fff;border:none;box-shadow:0 10px 25px rgba(221,36,118,.4)}
+    .btn-primary{background:var(--brand);color:var(--brand-ink);box-shadow:0 10px 26px rgba(255,209,102,.28)}
+    .btn-ghost{background:color-mix(in oklab, var(--text) 6%, transparent);color:inherit;border:1px solid color-mix(in oklab, var(--text) 20%, transparent)}
+    .btn-ghost:hover{border-color:color-mix(in oklab, var(--text) 40%, transparent);background:color-mix(in oklab, var(--text) 10%, transparent)}
+    .btn-sale{background:var(--sale-bg);color:#fff;border:none;box-shadow:0 10px 25px rgba(221,36,118,.35)}
 
-    .hero{padding:22px 0 14px;background:radial-gradient(1200px 600px at 20% -20%,rgba(255,209,102,.10),transparent 60%),linear-gradient(120deg,#0f1621,#172236,#0f1621);border-bottom:1px solid rgba(255,255,255,.12)}
-    .subhead{max-width:68ch;color:#e3e8f0}
-    .post-hero img{max-width:980px;border-radius:14px;display:block;margin:10px auto;box-shadow:0 16px 38px rgba(0,0,0,.35)}
-    .meta{color:#c3ceda}
+    /* Hero */
+    .hero{padding:22px 0 14px;background:radial-gradient(1200px 600px at 20% -20%,color-mix(in oklab, var(--brand) 22%, transparent),transparent 60%),linear-gradient(120deg,color-mix(in oklab, var(--panel) 96%, transparent), var(--panel)) ;border-bottom:1px solid var(--line)}
+    [data-theme="dark"] .hero{background:radial-gradient(1200px 600px at 20% -20%,rgba(255,209,102,.10),transparent 60%),linear-gradient(120deg,#0f1621,#172236,#0f1621)}
+    .subhead{max-width:68ch;color:var(--muted);margin-inline:auto}
+    .post-hero img{max-width:980px;border-radius:14px;display:block;margin:10px auto;box-shadow:var(--shadow)}
 
     .section{padding:22px 0}
     .grid{display:grid;gap:16px}
     @media(min-width:780px){.grid.two{grid-template-columns:1fr 1fr}}
-    .card{border:1px solid var(--line);border-radius:12px;padding:16px;background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03)), var(--panel);box-shadow:0 8px 24px rgba(0,0,0,.28)}
-    .card h2,.card h3{color:#f7fbff}
-    .card p,.card li{color:#e7edf6}
-    .callout{border:2px solid var(--brand);border-radius:14px;background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.05)), var(--panel-soft);padding:16px;box-shadow:0 0 0 2px rgba(255,209,102,.15), 0 12px 30px rgba(0,0,0,.28)}
+
+    .card{border:1px solid var(--line);border-radius:12px;padding:16px;background:linear-gradient(180deg, color-mix(in oklab, var(--text) 6%, transparent), color-mix(in oklab, var(--text) 2%, transparent)), var(--panel);box-shadow:0 8px 24px rgba(0,0,0,.12)}
+    [data-theme="dark"] .card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03)), var(--panel);box-shadow:0 8px 24px rgba(0,0,0,.28)}
+
+    .card h2,.card h3{color:inherit}
+    .card p,.card li{color:inherit}
+
+    .callout{border:2px solid var(--brand);border-radius:14px;background:linear-gradient(180deg,color-mix(in oklab, var(--brand) 18%, transparent),transparent), var(--panel-soft);padding:16px;box-shadow:0 0 0 2px rgba(255,209,102,.15), 0 12px 30px rgba(0,0,0,.18)}
 
     .checklist{list-style:none;padding-left:0}
     .checklist li{position:relative;padding-left:28px;margin:.52rem 0}
@@ -138,11 +161,12 @@
 
     .blog-cards{display:grid;gap:14px}
     @media(min-width:780px){.blog-cards{grid-template-columns:repeat(3,1fr)}}
-    .blog-card{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:rgba(255,255,255,.06)}
+    .blog-card{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:color-mix(in oklab, var(--text) 6%, transparent)}
+    [data-theme="dark"] .blog-card{background:rgba(255,255,255,.06)}
     .blog-card .inner{padding:12px}
-    .blog-card h3{margin:.2rem 0 .4rem;font-size:1.05rem;color:#fff}
+    .blog-card h3{margin:.2rem 0 .4rem;font-size:1.05rem}
 
-    .sticky-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:999;background:#ffffffee;border:1px solid #d1d5db;box-shadow:0 10px 24px rgba(0,0,0,.24);border-radius:16px;display:flex;gap:10px;justify-content:center;align-items:center;padding:10px}
+    .sticky-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:999;background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:16px;display:flex;gap:10px;justify-content:center;align-items:center;padding:10px}
     .sticky-cta .btn{border-radius:999px}
     @media(min-width:860px){.sticky-cta{display:none}}
 
@@ -151,24 +175,24 @@
     .footer-brand{max-width:300px}
     .footer-col{flex-basis:150px}
     .footlist{list-style:none;padding:0;margin:0}
-    .footlist a{text-decoration:none;color:#c3ceda;transition:color var(--speed)}
-    .footlist a:hover{color:#ffd166}
-    .footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding:15px 0;text-align:center;font-size:.85rem;color:#c3ceda}
+    .footlist a{text-decoration:none;color:var(--muted);transition:color var(--speed)}
+    .footlist a:hover{color:var(--brand)}
+    .footer-bottom{border-top:1px solid color-mix(in oklab, var(--text) 10%, transparent);padding:15px 0;text-align:center;font-size:.85rem;color:var(--muted)}
 
     /* Embedded scheduler */
-    .scheduler-wrap{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;box-shadow:0 18px 42px rgba(0,0,0,.18);padding:8px}
+    .scheduler-wrap{background:color-mix(in oklab, var(--text) 6%, transparent);border:1px solid color-mix(in oklab, var(--text) 10%, transparent);border-radius:14px;box-shadow:0 18px 42px rgba(0,0,0,.18);padding:8px}
+    [data-theme="dark"] .scheduler-wrap{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
     .scheduler-frame{width:100%;height:720px;border:0;border-radius:12px;background:#fff}
     @media (max-width:480px){ .scheduler-frame{height:860px} }
-    .coupon-ok{background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.35);color:#c8f5e4;padding:8px 10px;border-radius:8px;display:inline-block}
+    .coupon-ok{background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.35);color:#0f5132;padding:8px 10px;border-radius:8px;display:inline-block}
+    [data-theme="dark"] .coupon-ok{color:#c8f5e4}
 
     @media (max-width: 860px){
-      .site-header{
-        background:#0b0e12 !important;
-        backdrop-filter:none !important;
-        -webkit-backdrop-filter:none !important;
-        border-bottom:1px solid rgba(255,255,255,.08);
-      }
+      .site-header{background:var(--bg) !important;backdrop-filter:none !important;-webkit-backdrop-filter:none !important;border-bottom:1px solid var(--line)}
     }
+
+    /* Fancy divider reused from About */
+    .section-sweep{height:4px;border:0;margin:34px 0;background:linear-gradient(90deg,transparent,rgba(255,209,102,.8),transparent);filter:drop-shadow(0 8px 18px rgba(255,209,102,.25))}
   </style>
 </head>
 
@@ -207,6 +231,7 @@
         <a href="/contact.html">Contact</a>
         <a href="/search.html">Search</a>
         <a class="btn btn-primary book-stay-btn" href="#book-stay" data-utm-medium="header">Book Boarding — 20% Off</a>
+        <button class="btn btn-ghost" type="button" onclick="__wowTheme.cycle()" aria-label="Cycle theme">🌓 <span id="theme-current">auto</span></button>
       </nav>
       <div class="nav-scrim" aria-hidden="true"></div>
     </div>
@@ -228,6 +253,8 @@
         </p>
       </div>
     </section>
+
+    <hr class="section-sweep" aria-hidden="true" />
 
     <!-- WHAT'S INCLUDED / RATES -->
     <section class="section">
@@ -284,7 +311,6 @@
       </div>
     </section>
 
-    <!-- STANDARDS + BLOG -->
     <section class="section">
       <div class="container grid two">
         <article class="card">
@@ -377,14 +403,18 @@
   </main>
 
   <!-- Impact ribbon -->
-  <div class="impact-ribbon" role="note" aria-label="Walks that do more: 10% donated">
-    <div class="impact-inner"><span class="impact-emoji" aria-hidden="true">💛</span><strong>Walks That Do More:</strong> We donate <strong>10% of profits</strong> to local rescue shelters. <a class="impact-cta" href="/community.html">See our impact →</a></div>
+  <div class="impact-ribbon" role="note" aria-label="Walks that do more: 10% donated" style="border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel)">
+    <div class="container" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;padding:10px 0">
+      <span class="impact-emoji" aria-hidden="true">💛</span>
+      <strong>Walks That Do More:</strong> We donate <strong>10% of profits</strong> to local rescue shelters.
+      <a class="btn btn-ghost" href="/community.html">See our impact →</a>
+    </div>
   </div>
 
   <!-- Sticky mobile CTA -->
   <div class="sticky-cta" role="region" aria-label="Quick booking">
     <a class="btn btn-sale book-stay-btn" href="#book-stay">Book Boarding — 20% Off</a>
-    <a class="btn" style="border:1px solid #2a3440;color:#111;background:#fff" href="tel:+61370731175">Call (03) 7073 1175</a>
+    <a class="btn" style="border:1px solid color-mix(in oklab, var(--text) 20%, transparent);background:#fff" href="tel:+61370731175">Call (03) 7073 1175</a>
   </div>
 
   <!-- Footer -->
@@ -393,7 +423,7 @@
       <section class="footer-brand">
         <img class="footer-logo" src="/images/brand/logo-lockup-gold.webp" alt="The Woof of Walk Street" width="60" height="60" loading="lazy">
         <p><strong>The Woof of Walk Street</strong><br>
-          <a class="footer-map" href="https://maps.google.com/?q=Albert+Park,+VIC" target="_blank" rel="noopener" style="color:#c3ceda">Albert Park, VIC</a>
+          <a class="footer-map" href="https://maps.google.com/?q=Albert+Park,+VIC" target="_blank" rel="noopener" style="color:var(--muted)">Albert Park, VIC</a>
         </p>
         <p class="cta-buttons">
           <a class="btn btn-primary" href="/book-dog-walk/?coupon=WALK50">Book Walks</a>

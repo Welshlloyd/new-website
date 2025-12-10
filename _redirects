@@ -1,185 +1,227 @@
 # =======================================
 # CRITICAL FIX: Old South Melbourne walking hub → new generic Hub
 # =======================================
-/dog-walking-south-melbourne.html       /dog-walker.html                                    301
-/dog-walking-south-melbourne            /dog-walker.html                                    301
-/dog-walking-south-melbourne/           /dog-walker.html                                    301
+/dog-walking-south-melbourne.html       /dog-walker.html                            301
+/dog-walking-south-melbourne            /dog-walker.html                            301
+/dog-walking-south-melbourne/           /dog-walker.html                            301
 
 # =======================================
 # Canonical: HTTPS + www
 # =======================================
-http://woofofwalkstreet.com/            https://www.woofofwalkstreet.com/                   301
-https://woofofwalkstreet.com/*          https://www.woofofwalkstreet.com/:splat             301
+http://woofofwalkstreet.com/            https://www.woofofwalkstreet.com/           301
+https://woofofwalkstreet.com/* https://www.woofofwalkstreet.com/:splat     301
 
 # =======================================
 # Explicit known pages
 # =======================================
-/book-boarding                          /book-boarding.html                                 301
-/book-boarding/                         /book-boarding.html                                 301
+/book-boarding                          /book-boarding.html                         301
+/book-boarding/                         /book-boarding.html                         301
 
 # =======================================
 # MAIN DOG WALKING LANDING (new canonical)
-/dog-walking-services.html              /dog-walker.html                                    301
-/dog-walking-services                   /dog-walker.html                                    301
-/dog-walking-services/                  /dog-walker.html                                    301
-/dog-walking.html                       /dog-walker.html                                    301
-/dog-walking                            /dog-walker.html                                    301
-/dog-walking/                           /dog-walker.html                                    301
+/dog-walking-services.html              /dog-walker.html                            301
+/dog-walking-services                   /dog-walker.html                            301
+/dog-walking-services/                  /dog-walker.html                            301
+/dog-walking.html                       /dog-walker.html                            301
+/dog-walking                            /dog-walker.html                            301
+/dog-walking/                           /dog-walker.html                            301
 
 # =======================================
 # Booking intents → booking bridge
 # =======================================
-/book                                   /book-dog-walk/                                     301
-/book-now                               /book-dog-walk/                                     301
-/book-now.html                          /book-dog-walk/                                     301
-/booking                                /book-dog-walk/                                     301
-/booking.html                           /book-dog-walk/                                     301
-/bookings                               /book-dog-walk/                                     301
-/bookings.html                          /book-dog-walk/                                     301
-/booking/*                              /book-dog-walk/                                     301
-/bookings/*                             /book-dog-walk/                                     301
+/book                                   /book-dog-walk/                             301
+/book-now                               /book-dog-walk/                             301
+/book-now.html                          /book-dog-walk/                             301
+/booking                                /book-dog-walk/                             301
+/booking.html                           /book-dog-walk/                             301
+/bookings                               /book-dog-walk/                             301
+/bookings.html                          /book-dog-walk/                             301
+/booking/* /book-dog-walk/                             301
+/bookings/* /book-dog-walk/                             301
 
 # Blog canonical (filters work on /blog/)
-/blog                                   /blog/                                              301
-/blog/index                             /blog/                                              301
-/blog.html                              /blog/                                              301
-/blog/index.html                        /blog/                                              301
+/blog                                   /blog/                                      301
+/blog/index                             /blog/                                      301
+/blog.html                              /blog/                                      301
+/blog/index.html                        /blog/                                      301
 
 # =======================================
 # Canonical pages (.html targets) — keep BEFORE trailing-slash rules
-# (NOTE: Do NOT send South Melbourne walking to its .html; that hub now maps to /dog-walker.html above.)
 # =======================================
 
 # Unlimited membership
-/unlimited-dog-walks                    /unlimited-dog-walks.html                           301
-/unlimited-dog-walks/                   /unlimited-dog-walks.html                           301
+/unlimited-dog-walks                    /unlimited-dog-walks.html                   301
+/unlimited-dog-walks/                   /unlimited-dog-walks.html                   301
 
 # Memberships hub
-/memberships                            /memberships.html                                   301
-/memberships/                           /memberships.html                                   301
+/memberships                            /memberships.html                           301
+/memberships/                           /memberships.html                           301
 
 # Boarding services hub
-/boarding-services                      /boarding-services.html                             301
-/boarding-services/                     /boarding-services.html                             301
+/boarding-services                      /boarding-services.html                     301
+/boarding-services/                     /boarding-services.html                     301
 
 # Casual walking (legacy)
-/casual-dog-walking-south-melbourne     /casual-dog-walking-south-melbourne.html            301
-/casual-dog-walking-south-melbourne/    /casual-dog-walking-south-melbourne.html            301
+/casual-dog-walking-south-melbourne     /casual-dog-walking-south-melbourne.html    301
+/casual-dog-walking-south-melbourne/    /casual-dog-walking-south-melbourne.html    301
 
 # =======================================
 # Service-area pages (slug fixes to 'dog-walker-')
 # Albert Park
-/dog-walking-albert-park                /dog-walker-albert-park.html                        301
-/dog-walking-albert-park/               /dog-walker-albert-park.html                        301
-/dog-walker-albert-park                 /dog-walker-albert-park.html                        301
-/dog-walker-albert-park/                /dog-walker-albert-park.html                        301
+/dog-walking-albert-park                /dog-walker-albert-park.html                301
+/dog-walking-albert-park/               /dog-walker-albert-park.html                301
+/dog-walker-albert-park                 /dog-walker-albert-park.html                301
+/dog-walker-albert-park/                /dog-walker-albert-park.html                301
 # Middle Park
-/dog-walking-middle-park                /dog-walker-middle-park.html                        301
-/dog-walking-middle-park/               /dog-walker-middle-park.html                        301
-/dog-walker-middle-park                 /dog-walker-middle-park.html                        301
-/dog-walker-middle-park/                /dog-walker-middle-park.html                        301
+/dog-walking-middle-park                /dog-walker-middle-park.html                301
+/dog-walking-middle-park/               /dog-walker-middle-park.html                301
+/dog-walker-middle-park                 /dog-walker-middle-park.html                301
+/dog-walker-middle-park/                /dog-walker-middle-park.html                301
 # Port Melbourne
-/dog-walking-port-melbourne             /dog-walker-port-melbourne.html                     301
-/dog-walking-port-melbourne/            /dog-walker-port-melbourne.html                     301
-/dog-walker-port-melbourne              /dog-walker-port-melbourne.html                     301
-/dog-walker-port-melbourne/             /dog-walker-port-melbourne.html                     301
+/dog-walking-port-melbourne             /dog-walker-port-melbourne.html             301
+/dog-walking-port-melbourne/            /dog-walker-port-melbourne.html             301
+/dog-walker-port-melbourne              /dog-walker-port-melbourne.html             301
+/dog-walker-port-melbourne/             /dog-walker-port-melbourne.html             301
 # Southbank
-/dog-walking-southbank                  /dog-walker-southbank.html                          301
-/dog-walking-southbank/                 /dog-walker-southbank.html                          301
-/dog-walker-southbank                   /dog-walker-southbank.html                          301
-/dog-walker-southbank/                  /dog-walker-southbank.html                          301
+/dog-walking-southbank                  /dog-walker-southbank.html                  301
+/dog-walking-southbank/                 /dog-walker-southbank.html                  301
+/dog-walker-southbank                   /dog-walker-southbank.html                  301
+/dog-walker-southbank/                  /dog-walker-southbank.html                  301
 # South Yarra
-/dog-walking-south-yarra                /dog-walker-south-yarra.html                        301
-/dog-walking-south-yarra/               /dog-walker-south-yarra.html                        301
-/dog-walker-south-yarra                 /dog-walker-south-yarra.html                        301
-/dog-walker-south-yarra/                /dog-walker-south-yarra.html                        301
+/dog-walking-south-yarra                /dog-walker-south-yarra.html                301
+/dog-walking-south-yarra/               /dog-walker-south-yarra.html                301
+/dog-walker-south-yarra                 /dog-walker-south-yarra.html                301
+/dog-walker-south-yarra/                /dog-walker-south-yarra.html                301
 
 # =======================================
 # Boarding suburb pages (new)
-/dog-boarding-south-melbourne           /dog-boarding-south-melbourne.html                  301
-/dog-boarding-south-melbourne/          /dog-boarding-south-melbourne.html                  301
-/dog-boarding-port-melbourne            /dog-boarding-port-melbourne.html                   301
-/dog-boarding-port-melbourne/           /dog-boarding-port-melbourne.html                   301
-/dog-boarding-albert-park               /dog-boarding-albert-park.html                      301
-/dog-boarding-albert-park/              /dog-boarding-albert-park.html                      301
-/dog-boarding-middle-park               /dog-boarding-middle-park.html                      301
-/dog-boarding-middle-park/              /dog-boarding-middle-park.html                      301
-/dog-boarding-southbank                 /dog-boarding-southbank.html                        301
-/dog-boarding-southbank/                /dog-boarding-southbank.html                        301
-/dog-boarding-south-yarra               /dog-boarding-south-yarra.html                      301
-/dog-boarding-south-yarra/              /dog-boarding-south-yarra.html                      301
+/dog-boarding-south-melbourne           /dog-boarding-south-melbourne.html          301
+/dog-boarding-south-melbourne/          /dog-boarding-south-melbourne.html          301
+/dog-boarding-port-melbourne            /dog-boarding-port-melbourne.html           301
+/dog-boarding-port-melbourne/           /dog-boarding-port-melbourne.html           301
+/dog-boarding-albert-park               /dog-boarding-albert-park.html              301
+/dog-boarding-albert-park/              /dog-boarding-albert-park.html              301
+/dog-boarding-middle-park               /dog-boarding-middle-park.html              301
+/dog-boarding-middle-park/              /dog-boarding-middle-park.html              301
+/dog-boarding-southbank                 /dog-boarding-southbank.html                301
+/dog-boarding-southbank/                /dog-boarding-southbank.html                301
+/dog-boarding-south-yarra               /dog-boarding-south-yarra.html              301
+/dog-boarding-south-yarra/              /dog-boarding-south-yarra.html              301
 # Generic legacy
-/dog-boarding                           /boarding-services.html                              301
-/dog-boarding/                          /boarding-services.html                              301
+/dog-boarding                           /boarding-services.html                     301
+/dog-boarding/                          /boarding-services.html                     301
 
 # =======================================
 # Unlimited slug consolidation → /unlimited-dog-walks.html
-/membership-unlimited-plan.html         /unlimited-dog-walks.html                           301
-/membership-unlimited.html              /unlimited-dog-walks.html                           301
-/membership-unlimited                   /unlimited-dog-walks.html                           301
-/membership-unlimited/                  /unlimited-dog-walks.html                           301
-/unlimited                              /unlimited-dog-walks.html                           301
-/unlimited/                             /unlimited-dog-walks.html                           301
-/memberships.html#unlimited             /unlimited-dog-walks.html                           301
+/membership-unlimited-plan.html         /unlimited-dog-walks.html                   301
+/membership-unlimited.html              /unlimited-dog-walks.html                   301
+/membership-unlimited                   /unlimited-dog-walks.html                   301
+/membership-unlimited/                  /unlimited-dog-walks.html                   301
+/unlimited                              /unlimited-dog-walks.html                   301
+/unlimited/                             /unlimited-dog-walks.html                   301
+/memberships.html#unlimited             /unlimited-dog-walks.html                   301
 
 # =======================================
 # Booking bridge canonical (directory-style)
-/book-dog-walk                          /book-dog-walk/                                     301
-/book-dog-walk.html                     /book-dog-walk/                                     301
+/book-dog-walk                          /book-dog-walk/                             301
+/book-dog-walk.html                     /book-dog-walk/                             301
 
 # =======================================
 # Common legacy/typo variants
-/blog/index.html                        /blog/                                              301
-/sitemap                                /sitemap.html                                       301
-/services                               /services.html                                      301
-/about                                  /about.html                                         301
-/contact                                /contact.html                                       301
-/faq                                     /faq.html                                           301
-/faq/                                    /faq.html                                           301
-/privacy                                /privacy.html                                       301
-/privacy-policy                         /privacy.html                                       301
-/privacy-policy.html                    /privacy.html                                       301
-/terms                                  /full-terms.html                                    301
-/terms.html                             /full-terms.html                                    301
-/mini-terms                             /mini-terms.html                                    301
-/mini-terms/                            /mini-terms.html                                    301
-/full-terms                             /full-terms.html                                    301
-/full-terms/                            /full-terms.html                                    301
+/blog/index.html                        /blog/                                      301
+/sitemap                                /sitemap.html                               301
+/services                               /services.html                              301
+/about                                  /about.html                                 301
+/contact                                /contact.html                               301
+/faq                                    /faq.html                                   301
+/faq/                                   /faq.html                                   301
+/privacy                                /privacy.html                               301
+/privacy-policy                         /privacy.html                               301
+/privacy-policy.html                    /privacy.html                               301
+/terms                                  /full-terms.html                            301
+/terms.html                             /full-terms.html                            301
+/mini-terms                             /mini-terms.html                            301
+/mini-terms/                            /mini-terms.html                            301
+/full-terms                             /full-terms.html                            301
+/full-terms/                            /full-terms.html                            301
 
 # =======================================
 # Legacy 404 recovery
-/walking-services.html                  /services.html                                      301
-/walking-services                       /services.html                                      301
-/blog/blog4.html                        /blog/                                              301
-/blog/blog4                             /blog/                                              301
+/walking-services.html                  /services.html                              301
+/walking-services                       /services.html                              301
+/blog/blog4.html                        /blog/                                      301
+/blog/blog4                             /blog/                                      301
+
+# =======================================
+# FIX 404s (2025 Audit Cleanup)
+# =======================================
+
+# Blog Posts (moved or renamed)
+/best-dog-walks-south-melbourne.html        /blog/best-dog-walks-south-melbourne        301
+/dog-friendly-cafes-south-melbourne.html    /blog/dog-friendly-cafes-south-melbourne    301
+/ethical-dog-walker.html                    /blog/ethical-dog-walker                    301
+/prepare-dog-for-boarding-checklist.html    /blog/prepare-dog-for-boarding-checklist    301
+/rainy-day-enrichment-games.html            /blog/rainy-day-enrichment                  301
+/blog/rainy-day-enrichment.html             /blog/rainy-day-enrichment                  301
+/blog/albert-park-dog-friendly-zones.html   /blog/best-dog-walks-south-melbourne        301
+/blog/best-dog-walks-albert-park.html       /blog/best-dog-walks-south-melbourne        301
+/blog/best-dog-walks-middle-park.html       /blog/best-dog-walks-south-melbourne        301
+/blog/best-dog-walks-port-melbourne.html    /blog/best-dog-walks-south-melbourne        301
+/blog/best-dog-walks-southbank.html         /blog/best-dog-walks-south-melbourne        301
+/blog/dog-friendly-cafes-albert-park.html   /blog/dog-friendly-cafes-albert-park-middle-park 301
+/blog/dog-friendly-cafes-middle-park.html   /blog/dog-friendly-cafes-albert-park-middle-park 301
+/blog/dog-friendly-cafes-southbank.html     /blog/dog-friendly-cafes-south-melbourne    301
+/blog/dog-friendly-cafes-bay-street.html    /blog/dog-friendly-cafes-south-melbourne    301
+/blog/dog-friendly-walks-south-yarra.html   /blog/dog-friendly-cafes-south-yarra        301
+
+# Legacy Service Pages (.html variants that were 404ing)
+/dog-walking-albert-park.html               /dog-walker-albert-park.html                301
+/dog-walking-middle-park.html               /dog-walker-middle-park.html                301
+/dog-walking-port-melbourne.html            /dog-walker-port-melbourne.html             301
+/dog-walking-south-yarra.html               /dog-walker-south-yarra.html                301
+/dog-walking-southbank.html                 /dog-walker-southbank.html                  301
+
+# Casual Walking Legacy Pages
+/casual-dog-walking-albert-park.html        /dog-walker-albert-park.html                301
+/casual-dog-walking-middle-park.html        /dog-walker-middle-park.html                301
+/casual-dog-walking-port-melbourne.html     /dog-walker-port-melbourne.html             301
+/casual-dog-walking-south-yarra.html        /dog-walker-south-yarra.html                301
+/casual-dog-walking-southbank.html          /dog-walker-southbank.html                  301
+
+# Utility / Misc
+/faqs.html                                  /faq.html                                   301
+/privacy-policy.html                        /privacy.html                               301
+/terms-and-conditions.html                  /full-terms.html                            301
+/safety.html                                /about.html                                 301
+/why-solo-walks.html                        /dog-walking-south-melbourne.html           301
 
 # =======================================
 # Strip index.html → pretty links
-*/index.html                            /:splat/                                            301
+*/index.html                            /:splat/                                    301
 
 # =======================================
 # Guard: never add slashes to real files (must stay BEFORE trailing-slash rules)
-/:file.:ext                             /:file.:ext                                         200!
-/:parent/:file.:ext                     /:parent/:file.:ext                                 200!
+/:file.:ext                             /:file.:ext                                 200!
+/:parent/:file.:ext                     /:parent/:file.:ext                         200!
 
 # =======================================
 # Enforce trailing slash on directory-style paths
-/:slug                                  /:slug/                                             301
-/:slug/:child                           /:slug/:child/                                      301
+/:slug                                  /:slug/                                     301
+/:slug/:child                           /:slug/:child/                              301
 
 # =======================================
 # Membership Pages (legacy → current)
-/membership-credit-booking.html         /membership-credit-booking-south-melbourne.html     301
-/membership-sniffvestment.html          /membership-starter.html                            301
-/membership-starter-sniffvestment.html  /membership-starter.html                            301
-/membership-growth-plan.html            /membership-growth.html                             301
+/membership-credit-booking.html         /membership-credit-booking-south-melbourne.html 301
+/membership-sniffvestment.html          /membership-starter.html                    301
+/membership-starter-sniffvestment.html  /membership-starter.html                    301
+/membership-growth-plan.html            /membership-growth.html                     301
 
 # =======================================
 # Friendly short links for campaigns
-/starter                                /membership-starter.html                            301
-/growth                                 /membership-growth.html                             301
-/credit                                 /membership-credit-booking-south-melbourne.html     301
-/join                                   /memberships.html                                   301
+/starter                                /membership-starter.html                    301
+/growth                                 /membership-growth.html                     301
+/credit                                 /membership-credit-booking-south-melbourne.html 301
+/join                                   /memberships.html                           301
 
 # =======================================
 # Campaign short links (with attribution tracking)
@@ -202,18 +244,18 @@ https://woofofwalkstreet.com/*          https://www.woofofwalkstreet.com/:splat 
 /qr-unlimited       /book-dog-walk/?utm_source=qr&utm_medium=social&utm_campaign=unlimited_membership        302
 
 # Catch-all membership redirect
-/membership/*                             /memberships.html                                  301
+/membership/* /memberships.html                                           301
 
 # =======================================
 # Clean removals (410 Gone)
-/wp-admin/*                               -                                                  410
-/wp-login.php                             -                                                  410
-/cgi-bin/*                                -                                                  410
-/phpmyadmin/*                             -                                                  410
-/searchreplacedb2.php                     -                                                  410
-/old-page                                 -                                                  410
-/test-page                                -                                                  410
+/wp-admin/* -                                           410
+/wp-login.php                           -                                           410
+/cgi-bin/* -                                           410
+/phpmyadmin/* -                                           410
+/searchreplacedb2.php                   -                                           410
+/old-page                               -                                           410
+/test-page                              -                                           410
 
 # =======================================
 # Default 404 → custom page
-/*                                        /404.html                                          404
+/* /404.html                                   404

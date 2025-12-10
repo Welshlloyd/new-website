@@ -15,7 +15,8 @@
   <meta property="og:title" content="Solo Dog Walking Melbourne — No Pack Walks, GPS Tracked">
   <meta property="og:description" content="One-at-a-time dog walking in Melbourne with GPS tracking & photo updates. 50% off your first casual walk with code WALK50.">
   <meta property="og:url" content="https://www.woofofwalkstreet.com/dog-walker.html">
-  <meta property="og:image" content="https://www.woofofwalkstreet.com/images/pages/dog-walking/dog-albert-park-lake-south-melbourne.jpg">
+  <!-- Match index hero for full visual parity -->
+  <meta property="og:image" content="https://www.woofofwalkstreet.com/images/brand/hero-dog-skyline-1200.webp">
   <meta property="og:locale" content="en_AU">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -23,61 +24,72 @@
   <link rel="stylesheet" href="/css/mini.dark.css">
   <link rel="stylesheet" href="/css/mini.light.css">
   <link rel="stylesheet" href="/css/styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <!-- Fonts: align with index -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Acuity embed (buttons & optional bar) -->
   <link rel="stylesheet" href="https://embed.acuityscheduling.com/embed/button/37607219.css" id="acuity-button-styles" />
   <script src="https://embed.acuityscheduling.com/embed/button/37607219.js" async></script>
 
   <style>
-    :root { --bg:#0b0e12; --bg2:#0f1318; --text:#e8eef5; --muted:#a9b4c0; --line:#1e2630; --brand:#ffd166; --brand-ink:#0b0e12; --accent:#5af2c6; --shadow:0 18px 46px rgba(0,0,0,.35); }
-    body { background:linear-gradient(180deg, var(--bg), var(--bg2)); color:var(--text); }
-    h1,h2,h3,strong,.btn{font-family:'Space Grotesk',system-ui,sans-serif;letter-spacing:.2px}
+    :root{ --bg:#0b0e12; --bg2:#0f1318; --text:#e8eef5; --muted:#a9b4c0; --line:#1e2630; --brand:#ffd166; --brand-ink:#0b0e12; --accent:#5af2c6; --shadow:0 18px 46px rgba(0,0,0,.35); }
 
-    .hero img{border:3px solid var(--brand); box-shadow:0 12px 30px rgba(0,0,0,.18)}
-    .list-check{padding-left:1.1rem; list-style:none}
-    .list-check li{margin:.65rem 0; position:relative; padding-left:1.8rem; font-weight:600;}
-    .list-check li::before { content: '✅'; position: absolute; left: 0; }
-    .list-dash{padding-left:1.1rem; list-style:disc}
-    .list-dash li{margin:.3rem 0}
+    /* Match index dark look + typography */
+    html,body{ background:linear-gradient(180deg,var(--bg),var(--bg2)); color:var(--text); }
+    body, p, li, span, button, input, textarea{ font-family:'Work Sans',system-ui,-apple-system,Segoe UI,Roboto,sans-serif; letter-spacing:.1px; line-height:1.58; }
+    h1,h2,h3, strong, .btn, .nav-group-btn, .nav-links a{ font-family:'Space Grotesk',system-ui,sans-serif; letter-spacing:.2px; }
 
-    .area-chip-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:20px;justify-content:center;padding:10px 0;}
-    .area-chip{display:inline-block;padding:12px 22px;border-radius:999px;background:var(--bg2);color:var(--brand);border:2px solid var(--brand);font-weight:800;text-decoration:none;transition:all .2s;}
-    .area-chip:hover{transform:translateY(-2px) scale(1.02);box-shadow:0 8px 20px rgba(255,209,102,.4);background:var(--brand-ink);color:var(--brand);}
+    /* Ensure contrast inside dark cards/sections */
+    .card, .card *:not(a){ color:var(--text); }
+    .muted{ color:var(--muted); }
+    details > summary{ color:var(--text); }
 
-    .badge-row .badge{margin-right:.35rem}
+    /* Hero tweaks for smaller LCP */
+    .hero{ padding:26px 0 12px; }
+    .hero img{ border:3px solid var(--brand); box-shadow:0 12px 30px rgba(0,0,0,.18); max-width:860px; max-height:520px; width:100%; object-fit:cover; }
+    @media (max-width:640px){ .hero img{ max-height:360px; } }
 
-    .price-banner{background:linear-gradient(90deg,#1e2630,#2a3440);color:var(--text);border:2px solid var(--accent);padding:18px 25px;border-radius:10px;text-align:center;margin-top:24px;font-size:1.2rem;font-weight:700;box-shadow:0 10px 20px rgba(90,242,198,.2)}
-    .price-banner p{margin:0}
-    .price-banner strong{color:var(--brand)}
-    .price-banner a{color:var(--accent);font-weight:700;text-decoration:underline;transition:color .2s}
-    .price-banner a:hover{color:var(--brand)}
+    .list-check{ padding-left:1.1rem; list-style:none; }
+    .list-check li{ margin:.65rem 0; position:relative; padding-left:1.8rem; font-weight:600; }
+    .list-check li::before{ content:'✅'; position:absolute; left:0; }
+    .list-dash{ padding-left:1.1rem; list-style:disc; }
+    .list-dash li{ margin:.3rem 0; }
 
-    .hero-cta-row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:20px}
-    .hero-cta-row .btn{transform:scale(1.05);box-shadow:0 10px 20px rgba(255,209,102,.35)}
-    .hero-cta-row .btn:hover{transform:translateY(-2px) scale(1.07);box-shadow:0 14px 30px rgba(255,209,102,.5)}
+    .area-chip-row{ display:flex; flex-wrap:wrap; gap:14px; margin-top:20px; justify-content:center; padding:10px 0; }
+    .area-chip{ display:inline-block; padding:12px 22px; border-radius:999px; background:var(--bg2); color:var(--brand); border:2px solid var(--brand); font-weight:800; text-decoration:none; transition:all .2s; }
+    .area-chip:hover{ transform:translateY(-2px) scale(1.02); box-shadow:0 8px 20px rgba(255,209,102,.4); background:var(--brand-ink); color:var(--brand); }
 
-    .coupon-help{margin-top:12px;font-size:.95rem;background:var(--bg2);border:1px dashed var(--brand);border-radius:10px;padding:10px 12px;color:var(--text)}
-    .coupon-help code{font-weight:900;padding:.1rem .4rem;border-radius:6px;background:rgba(255,209,102,.1);color:var(--brand);border:1px solid var(--brand)}
+    .price-banner{ background:linear-gradient(90deg,#1e2630,#2a3440); color:var(--text); border:2px solid var(--accent); padding:18px 25px; border-radius:10px; text-align:center; margin-top:24px; font-size:1.08rem; font-weight:700; line-height:1.5; box-shadow:0 10px 20px rgba(90,242,198,.2) }
+    .price-banner p{ margin:0 0 .35rem 0; }
+    .price-banner strong{ color:var(--brand); }
+    .price-banner a{ color:var(--accent); font-weight:700; text-decoration:underline; transition:color .2s; }
+    .price-banner a:hover{ color:var(--brand); }
 
-    .sticky-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:1100;background:#111824ee;border:1px solid var(--line);box-shadow:var(--shadow);border-radius:16px;display:flex;gap:10px;justify-content:center;align-items:center;padding:10px}
-    .sticky-cta .btn,.sticky-cta .button-primary{padding:10px 16px}
-    @media (min-width:860px){.sticky-cta{display:none}}
+    .hero-cta-row{ display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin-top:20px; }
+    .hero-cta-row .btn{ transform:scale(1.05); box-shadow:0 10px 20px rgba(255,209,102,.35); }
+    .hero-cta-row .btn:hover{ transform:translateY(-2px) scale(1.07); box-shadow:0 14px 30px rgba(255,209,102,.5); }
 
-    .value-prop-block{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:20px;margin:30px 0;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.2)}
-    .value-prop-block h3{font-size:1.5rem;color:var(--accent);margin-top:0}
-    .value-prop-block p{font-size:1.1rem;max-width:800px;margin:0 auto 10px}
+    .coupon-help{ margin-top:12px; font-size:.95rem; background:var(--bg2); border:1px dashed var(--brand); border-radius:10px; padding:10px 12px; color:var(--text); }
+    .coupon-help code{ font-weight:900; padding:.1rem .4rem; border-radius:6px; background:rgba(255,209,102,.1); color:var(--brand); border:1px solid var(--brand); }
 
-    .testimonial-bar{padding:2.5rem 0;text-align:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2)}
-    .testimonial-bar p{font-style:italic;max-width:900px;margin:0 auto;font-size:1.2rem;line-height:1.5;color:var(--muted)}
-    .testimonial-bar strong{display:block;margin-top:.6rem;font-weight:700;color:var(--brand);font-size:1rem}
-    .testimonial-bar .stars{color:var(--brand);font-size:1.5rem;margin-bottom:.5rem}
+    .sticky-cta{ position:fixed; left:12px; right:12px; bottom:12px; z-index:1100; background:#111824ee; border:1px solid var(--line); box-shadow:var(--shadow); border-radius:16px; display:flex; gap:10px; justify-content:center; align-items:center; padding:10px }
+    .sticky-cta .btn,.sticky-cta .button-primary{ padding:10px 16px }
+    @media (min-width:860px){ .sticky-cta{ display:none } }
 
-    .footer-geo{background:var(--bg2);border-top:1px solid var(--line);padding:15px 16px;color:var(--muted);font-size:.95rem;text-align:center}
+    .value-prop-block{ background:var(--bg2); border:1px solid var(--line); border-radius:12px; padding:20px; margin:30px 0; text-align:center; box-shadow:0 4px 12px rgba(0,0,0,.2) }
+    .value-prop-block h3{ font-size:1.5rem; color:var(--accent); margin-top:0 }
+    .value-prop-block p{ font-size:1.1rem; max-width:800px; margin:0 auto 10px }
 
-    /* Simple styles for schedulers */
-    .scheduler-wrap{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#0e141b}
-    .scheduler-frame{width:100%;height:900px;border:0}
+    .testimonial-bar{ padding:2.5rem 0; text-align:center; border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:var(--bg2) }
+    .testimonial-bar p{ font-style:italic; max-width:900px; margin:0 auto; font-size:1.2rem; line-height:1.5; color:var(--muted) }
+    .testimonial-bar strong{ display:block; margin-top:.6rem; font-weight:700; color:var(--brand); font-size:1rem }
+    .testimonial-bar .stars{ color:var(--brand); font-size:1.5rem; margin-bottom:.5rem }
+
+    .footer-geo{ background:var(--bg2); border-top:1px solid var(--line); padding:15px 16px; color:var(--muted); font-size:.95rem; text-align:center }
+
+    /* Scheduler shells (index parity) */
+    .scheduler-wrap{ border:1px solid var(--line); border-radius:16px; overflow:hidden; background:#0e141b }
+    .scheduler-frame{ width:100%; height:900px; border:0 }
   </style>
 
   <link rel="preload" as="image" href="/images/pages/dog-walking/dog-albert-park-lake-south-melbourne.jpg" />
@@ -91,7 +103,7 @@
     gtag('config','AW-17527927259'); // Google Ads
   </script>
 
-  <!-- JSON-LD (unchanged) -->
+  <!-- JSON-LD (unchanged core, left as-is) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -160,7 +172,7 @@
     <div class="promo-inner container">
       <img class="promo-dog" src="/images/brand/dog-in-suit.webp" alt="" width="28" height="28" decoding="async" />
       <span class="promo-copy"><strong>50% OFF</strong> your first <strong>Casual Walk</strong> — use code <strong>WALK50</strong> · Ends <strong>31/12/2025</strong></span>
-      <a href="#book-walks" class="promo-cta">Book Now →</a>
+      <a href="#book-walks" class="promo-cta">Book 45-min Walk — 50% Off →</a>
       <button id="promo-close" class="promo-close" aria-label="Dismiss promo">✕</button>
     </div>
   </div>
@@ -197,9 +209,9 @@
         </section>
         <a href="/about.html">About</a>
         <a href="/blog/index.html">Blog</a>
-        <a href="/faqs.html">FAQs</a>
+        <a href="/faq.html">FAQs</a>
         <a href="/search.html">Search</a>
-        <a class="btn button-primary nav-cta" href="#book-walks">Book Walks</a>
+        <a class="btn button-primary nav-cta" href="#book-walks">Book 45-min Walk — 50% Off</a>
         <a class="btn button-primary nav-cta" href="#book-boarding">Boarding 20% Off</a>
       </nav>
     </div>
@@ -217,7 +229,7 @@
         <img src="/images/pages/dog-walking/dog-albert-park-lake-south-melbourne.jpg"
              alt="Happy solo dog walk near a lake, emphasizing individual attention"
              width="1200" height="800"
-             style="max-width:920px;border-radius:12px;display:block;margin:0 auto"
+             style="border-radius:12px;display:block;margin:0 auto"
              loading="eager" decoding="async" fetchpriority="high">
 
         <div class="value-prop-block">
@@ -233,7 +245,7 @@
 
         <div class="hero-cta-row">
           <a class="btn button-primary" href="#book-walks" onclick="gtag && gtag('event','book_casual_click',{label:'hero_casual'});">
-             Book Your 50% Off Walk Today →
+             Book Your 45-min Walk — 50% Off →
           </a>
           <a class="btn button-secondary" href="/memberships.html">Explore Membership Plans</a>
         </div>
@@ -300,7 +312,7 @@
         <p class="subhead">Take advantage of our <strong>50% off new client offer</strong> and feel the difference of a dedicated, <strong>solo walk</strong>.</p>
         <p class="cta-buttons" style="margin-top:20px">
           <a class="btn button-primary" href="#book-walks" onclick="gtag && gtag('event','book_casual_click',{label:'final_cta'});">
-             Book Your 50% Off Casual Walk →
+             Book Your 45-min Walk — 50% Off →
           </a>
           <a class="btn button-secondary" href="/memberships.html">Commit to a Regular Plan</a>
           <a class="btn button-secondary" href="#free-chat">Chat with the Team (10 min)</a>
@@ -417,7 +429,7 @@
 
   <!-- Sticky mobile CTA -->
   <div class="sticky-cta" role="region" aria-label="Quick booking">
-    <a class="btn button-primary" href="#book-walks" onclick="gtag && gtag('event','book_casual_click',{label:'sticky_casual'});">Book Casual — 50% Off</a>
+    <a class="btn button-primary" href="#book-walks" onclick="gtag && gtag('event','book_casual_click',{label:'sticky_casual'});">Book 45-min Walk — 50% Off</a>
     <a class="btn button-primary" href="#book-boarding">Boarding — 20% Off</a>
     <a class="btn button-secondary" href="#free-chat">Chat with the Team</a>
   </div>
@@ -443,7 +455,7 @@
           <a href="https://x.com/woofofwalkstreet" aria-label="X"><img src="/images/social/twitter.svg" alt="" width="24" height="24"></a>
         </div>
         <p class="cta-buttons" style="margin-top:.4rem">
-          <a class="btn button-primary" href="#book-walks" onclick="gtag && gtag('event','book_casual_click',{label:'footer_casual'});">Book 45-min Casual — 50% Off</a>
+          <a class="btn button-primary" href="#book-walks" onclick="gtag && gtag('event','book_casual_click',{label:'footer_casual'});">Book 45-min Walk — 50% Off</a>
           <a class="btn button-primary" href="#book-boarding">Boarding — 20% Off</a>
         </p>
       </section>
@@ -468,7 +480,7 @@
           <li><a href="/testimonials.html">Testimonials</a></li>
           <li><a href="/gallery.html">Photos & Videos</a></li>
           <li><a href="/blog/index.html">Blog</a></li>
-          <li><a href="/faqs.html">FAQs</a></li>
+          <li><a href="/faq.html">FAQs</a></li>
         </ul>
       </section>
 
@@ -500,25 +512,19 @@
     (function(){
       // Footer collapsibles
       document.querySelectorAll('.collapsible .collapse-btn').forEach(btn=>{
-        const list = document.getElementById(btn.getAttribute('aria-controls'));
-        const sync = (open)=>{ btn.setAttribute('aria-expanded', String(open)); list.hidden = !open; };
+        const list=document.getElementById(btn.getAttribute('aria-controls'));
+        const sync=open=>{ btn.setAttribute('aria-expanded',String(open)); list.hidden=!open; };
         sync(false);
-        btn.addEventListener('click', ()=>{ const open = btn.getAttribute('aria-expanded')==='false'; sync(open); });
+        btn.addEventListener('click',()=>{ const open=btn.getAttribute('aria-expanded')==='false'; sync(open); });
       });
 
       // Header Services dropdown accessibility
-      const btn = document.querySelector('.nav-group-btn[aria-controls="nav-services"]');
-      const list = document.getElementById('nav-services');
-      if (btn && list){
-        btn.addEventListener('click', () => {
-          const open = btn.getAttribute('aria-expanded') === 'true';
-          btn.setAttribute('aria-expanded', String(!open));
-          list.hidden = open;
-        });
-        document.addEventListener('click', (e) => {
-          if (!btn.contains(e.target) && !list.contains(e.target)) { btn.setAttribute('aria-expanded','false'); list.hidden = true; }
-        }, { capture: true });
-        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { btn.setAttribute('aria-expanded','false'); list.hidden = true; }});
+      const btn=document.querySelector('.nav-group-btn[aria-controls="nav-services"]');
+      const list=document.getElementById('nav-services');
+      if(btn && list){
+        btn.addEventListener('click',()=>{ const open=btn.getAttribute('aria-expanded')==='true'; btn.setAttribute('aria-expanded',String(!open)); list.hidden=open; });
+        document.addEventListener('click',(e)=>{ if(!btn.contains(e.target) && !list.contains(e.target)){ btn.setAttribute('aria-expanded','false'); list.hidden=true; } },{capture:true});
+        document.addEventListener('keydown',(e)=>{ if(e.key==='Escape'){ btn.setAttribute('aria-expanded','false'); list.hidden=true; }});
       }
 
       // Promo close (session)
@@ -527,25 +533,23 @@
       close?.addEventListener('click',()=>{ try{sessionStorage.setItem(KEY,'1');}catch(e){}; promo.style.display='none'; });
 
       // Ensure coupon + carry UTM on ALL Acuity links (walking vs boarding)
-      const ensureCoupon = (url) => {
+      const ensureCoupon=(url)=>{
         try{
-          const u = new URL(url, location.origin);
-          if (/acuityscheduling\.com\/schedule\.php/.test(u.href)){
-            const type = u.searchParams.get('appointmentType');
-            const coupon = (type === '86032167') ? 'BOARDING20' : 'WALK50';
-            if (coupon && !u.searchParams.has('coupon')) u.searchParams.set('coupon', coupon);
-            const src = new URLSearchParams(location.search);
-            ['utm_source','utm_medium','utm_campaign','utm_term','utm_content'].forEach(k=>{
-              if (src.has(k) && !u.searchParams.has(k)) u.searchParams.set(k, src.get(k));
-            });
+          const u=new URL(url,location.origin);
+          if(/acuityscheduling\.com\/schedule\.php/.test(u.href)){
+            const type=u.searchParams.get('appointmentType');
+            const coupon=(type==='86032167')?'BOARDING20':'WALK50';
+            if(coupon && !u.searchParams.has('coupon')) u.searchParams.set('coupon',coupon);
+            const src=new URLSearchParams(location.search);
+            ['utm_source','utm_medium','utm_campaign','utm_term','utm_content'].forEach(k=>{ if(src.has(k) && !u.searchParams.has(k)) u.searchParams.set(k,src.get(k)); });
             return u.toString();
           }
         }catch(_){}
         return url;
       };
       document.querySelectorAll('a[href*="acuityscheduling.com/schedule.php"]').forEach(a=>{
-        a.href = ensureCoupon(a.href);
-        a.addEventListener('click', ()=>{ try{ window.gtag && gtag('event','acuity_click', {event_category:'engagement',event_label:'scheduler_click'});}catch(_){}} );
+        a.href=ensureCoupon(a.href);
+        a.addEventListener('click',()=>{ try{ window.gtag && gtag('event','acuity_click',{event_category:'engagement',event_label:'scheduler_click'});}catch(_){}} );
       });
     })();
   </script>

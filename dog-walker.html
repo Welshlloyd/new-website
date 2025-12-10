@@ -116,6 +116,31 @@
 
     /* Footer */
     .footer-geo{ background:var(--bg2); border-top:1px solid var(--line); padding:15px 16px; color:var(--muted); font-size:.95rem; text-align:center }
+      /* === Contrast fixes: ensure light text on dark backgrounds, override any global light-theme rules === */
+    .hero, .section, .card, .faq, .boarding-geo-links { color: var(--text) !important; }
+    .card p, .card li, .card h2, .card h3, .card h4, .card strong { color: var(--text) !important; }
+    .list-check li, .list-dash li { color: var(--text) !important; }
+    .muted { color: var(--muted) !important; }
+    .subhead, .meta { color: #d4dee9 !important; }
+    .breadcrumbs, .breadcrumbs a { color: #cbd6e3 !important; }
+
+    /* Links in dark cards/sections */
+    .card a, .section a { color: var(--accent); }
+    .card a:hover, .section a:hover { color: var(--brand); }
+
+    /* Stop dimming nav links */
+    .nav-links a { opacity: 1 !important; }
+
+    /* FAQ readability */
+    .faq details > summary { color: var(--text) !important; font-weight: 700; }
+    .faq details > div, .faq p { color: var(--text) !important; }
+
+    /* Impact ribbon text contrast */
+    .impact-ribbon, .impact-ribbon * { color: var(--text) !important; }
+
+    /* Buttons always readable */
+    .btn, .button-primary, .button-secondary { color: inherit; }
+
   </style>
 
   <!-- Analytics -->

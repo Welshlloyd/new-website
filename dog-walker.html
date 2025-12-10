@@ -141,6 +141,36 @@
     /* Buttons always readable */
     .btn, .button-primary, .button-secondary { color: inherit; }
 
+  
+
+    /* === Contrast hardening pass (fix lingering dark-on-dark text) === */
+    /* Force headings to inherit light text across all dark sections */
+    :where(.hero,.section,.card,.faq,.boarding-geo-links,.testimonial-bar) :where(h1,h2,h3,h4,h5,h6){
+      color: var(--text) !important;
+    }
+    /* Ensure all common text elements inside cards/boxes render light */
+    .card :where(p,li,small,strong,em,span,div),
+    .section :where(p,li,small,strong,em,span),
+    .faq :where(p,li,small,strong,em,span){
+      color: var(--text) !important;
+    }
+    /* Price/CTA banners and ribbons */
+    .price-banner, .price-banner *,
+    .impact-ribbon, .impact-ribbon *{
+      color: var(--text) !important;
+    }
+    /* Dropdown menu colors */
+    .nav-group-list, .nav-group-list a{ color:#fff !important; }
+    /* Any badge/chip styles that might default to dark text */
+    .badge, .area-chip{ color: var(--brand) !important; border-color: var(--brand) !important; background: var(--bg2) !important; }
+    /* Details/summary inside dark sections */
+    details > summary{ color: var(--text) !important; }
+    details > div{ color: var(--text) !important; }
+    /* Breadcrumbs */
+    .breadcrumbs, .breadcrumbs a{ color:#cbd6e3 !important; }
+    /* Footer collapsibles */
+    .footer-col, .footer-col *{ color: var(--text) !important; }
+
   </style>
 
   <!-- Analytics -->

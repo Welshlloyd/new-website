@@ -53,30 +53,39 @@
     .container{max-width:1100px;margin:0 auto;padding:0 16px}
     body, p, li, span, button, input, textarea { font-family:'Work Sans',system-ui,sans-serif; letter-spacing:.1px; line-height:1.58 }
     h1,h2,h3,h4, .btn, nav a, .nav-group-btn { font-family:'Space Grotesk',system-ui,sans-serif; letter-spacing:.25px; font-weight:700 }
+
     .hero{padding:28px 0 18px;background:radial-gradient(1200px 600px at 20% -20%,rgba(255,209,102,.08),transparent 60%),linear-gradient(120deg,#111824,#1b2433,#111824);border-bottom:1px solid rgba(255,255,255,.06)}
     .hero img{border:3px solid var(--brand); border-radius:12px; box-shadow:0 12px 30px rgba(0,0,0,.18)}
+
     .promo-ribbon{position:relative;z-index:1100;background:linear-gradient(135deg,#FF512F,#DD2476);color:#fff;border-bottom:1px solid rgba(255,255,255,.1);font-weight:700;text-align:center;padding:8px}
     .promo-ribbon .promo-code{background:rgba(0,0,0,.3);padding:2px 6px;border-radius:4px;font-family:monospace}
+    .promo-close{margin-left:8px;background:transparent;border:0;color:#fff;font-weight:700;cursor:pointer}
+
     .price-banner{background:linear-gradient(90deg,#1e2630,#2a3440);color:var(--text);border:2px solid var(--accent);padding:16px 22px;border-radius:10px;text-align:center;margin-top:20px;font-size:1.12rem;font-weight:800;box-shadow:0 10px 20px rgba(90,242,198,.2)}
     .price-banner a{color:var(--accent);text-decoration:underline}
     .price-banner strong{color:var(--brand)}
+
     .list-check{padding-left:1.1rem; list-style:none}
     .list-check li{margin:.5rem 0; position:relative; padding-left:1.6rem; font-weight:600}
     .list-check li::before{content:'✅'; position:absolute; left:0}
     .list-dash{padding-left:1.1rem; list-style:disc}
     .list-dash li{margin:.35rem 0}
-    .badge-row .badge{margin-right:.35rem}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:20px}
+    .card{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:12px;padding:18px}
+
     .value-prop{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:20px;margin:22px 0;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.2)}
     .value-prop h3{font-size:1.4rem;color:var(--accent);margin:0 0 8px}
+
     .cta-buttons{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
     .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:12px 18px;border-radius:999px;border:1px solid transparent;text-decoration:none;font-weight:800}
     .button-primary,.btn-primary{background:var(--brand);color:var(--brand-ink);box-shadow:0 10px 26px rgba(255,209,102,.25)}
     .button-secondary,.btn-secondary{background:transparent;color:#fff;border:1px solid #2a3440}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:20px}
-    .card{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:12px;padding:18px}
+
     .sticky-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:1100;background:#111824ee;border:1px solid var(--line);box-shadow:var(--shadow);border-radius:16px;display:flex;gap:10px;justify-content:center;align-items:center;padding:10px}
     .sticky-cta .btn{padding:10px 16px}
     @media (min-width:860px){.sticky-cta{display:none}}
+
     .footer-geo{background:var(--bg2);border-top:1px solid var(--line);padding:15px 16px;color:var(--muted);font-size:.95rem;text-align:center}
     .footer-brand a{color:var(--brand)}
     .muted{color:var(--muted)}
@@ -161,6 +170,7 @@
     <div class="container">
       <strong>50% OFF</strong> your first <strong>Casual Walk</strong> — code <span class="promo-code">WALK50</span> · Ends 31/12/2025
       &nbsp;•&nbsp; <a class="btn btn-primary" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931&coupon=WALK50" target="_blank" rel="noopener" style="margin-left:8px">Book Now →</a>
+      <button id="promo-close" class="promo-close" aria-label="Dismiss promo">✕</button>
     </div>
   </div>
 
@@ -189,6 +199,7 @@
           <button class="nav-group-btn" aria-expanded="false" aria-controls="nav-services">Services ▾</button>
           <ul id="nav-services" class="nav-group-list" hidden>
             <li><a href="/services.html">All Services</a></li>
+            <li><a href="/dog-walker-southbank.html" aria-current="page">Dog Walker Southbank</a></li>
             <li><a href="/dog-walker.html">Dog Walking (Solo)</a></li>
             <li><a href="/casual-dog-walking-southbank.html">Casual Dog Walking</a></li>
             <li><a href="/boarding-services.html">Boutique Boarding</a></li>
@@ -242,7 +253,7 @@
 
     <!-- BENEFITS / LOCAL SEO -->
     <section class="section">
-      <div class="container grid grid-2">
+      <div class="container grid">
         <article class="card">
           <h2>Solo Dog Walking in Southbank — GPS Proof, Photos & Notes</h2>
           <h3>Ethical, One-to-One Dog Walker for Southbank Apartments</h3>
@@ -266,7 +277,7 @@
 
     <!-- WHO IT'S FOR / BOOKING -->
     <section class="section">
-      <div class="container grid grid-2">
+      <div class="container grid">
         <article class="card">
           <h2>Southbank Dog Walker for Reactive, Shy & Senior Dogs</h2>
           <h3>Calm, Consent-Based Handling on Quiet Local Loops</h3>
@@ -375,6 +386,7 @@
         <h3>Services</h3>
         <ul>
           <li><a href="/services.html">All Services</a></li>
+          <li><a href="/dog-walker-southbank.html" aria-current="page">Dog Walker Southbank</a></li>
           <li><a href="/dog-walker.html">Dog Walking (Solo)</a></li>
           <li><a href="/casual-dog-walking-southbank.html">Casual Dog Walking</a></li>
           <li><a href="/boarding-services.html">Boutique Boarding</a></li>
@@ -447,8 +459,7 @@
 
       // Promo close (session)
       const promo=document.getElementById('promo'), KEY='wow-promo-closed';
-      promo?.querySelector('#promo-close')?.addEventListener('click',()=>{
-        try{ sessionStorage.setItem(KEY,'1'); }catch(_){}
+      promo?.querySelector('#promo-close')?.addEventListener('click',()=>{ try{ sessionStorage.setItem(KEY,'1'); }catch(_){ }
         promo.style.display='none';
       });
       try{ if(sessionStorage.getItem(KEY)==='1' && promo) promo.style.display='none'; }catch(_){}
@@ -465,7 +476,7 @@
             });
             return u.toString();
           }
-        }catch(_){}
+        }catch(_){ }
         return url;
       };
       document.querySelectorAll('a[href*="acuityscheduling.com/schedule.php"]').forEach(a=>{

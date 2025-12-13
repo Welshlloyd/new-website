@@ -20,8 +20,8 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <title>Solo Dog Walker South Melbourne — GPS Tracked & Reactive Friendly</title>
-  <meta name="description" content="Premium 1-on-1 dog walking in South Melbourne. Calm, GPS-tracked solo walks for anxious or reactive dogs. New clients: Get 50% OFF your first walk." />
+  <title>Dog Walker — Solo Walks in South Melbourne</title>
+  <meta name="description" content="Premium 1-on-1 dog walking in South Melbourne. Calm, GPS-tracked solo walks for anxious or reactive dogs. New clients: 50% OFF first casual walk; Boarding 20% OFF for a limited time." />
 
   <link rel="canonical" href="https://www.woofofwalkstreet.com/dog-walker.html" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
@@ -29,8 +29,8 @@
 
   <!-- Social -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Solo Dog Walking Melbourne — No Pack Walks, GPS Tracked">
-  <meta property="og:description" content="One-at-a-time dog walking in Melbourne with GPS tracking & photo updates. 50% off your first casual walk with code WALK50.">
+  <meta property="og:title" content="Dog Walker — Solo Walks in South Melbourne (GPS Tracked)">
+  <meta property="og:description" content="One-at-a-time dog walking in South Melbourne with GPS tracking & photo updates. 50% off your first casual walk (WALK50) + 20% off boarding ().">
   <meta property="og:url" content="https://www.woofofwalkstreet.com/dog-walker.html">
   <meta property="og:image" content="https://www.woofofwalkstreet.com/images/brand/hero-dog-skyline-1200.webp">
   <meta property="og:locale" content="en_AU">
@@ -116,7 +116,7 @@
 
     /* Footer */
     .footer-geo{ background:var(--bg2); border-top:1px solid var(--line); padding:15px 16px; color:var(--muted); font-size:.95rem; text-align:center }
-      /* === Contrast fixes: ensure light text on dark backgrounds, override any global light-theme rules === */
+      /* === Contrast fixes === */
     .hero, .section, .card, .faq, .boarding-geo-links { color: var(--text) !important; }
     .card p, .card li, .card h2, .card h3, .card h4, .card strong { color: var(--text) !important; }
     .list-check li, .list-dash li { color: var(--text) !important; }
@@ -141,36 +141,18 @@
     /* Buttons always readable */
     .btn, .button-primary, .button-secondary { color: inherit; }
 
-  
-
-    /* === Contrast hardening pass (fix lingering dark-on-dark text) === */
-    /* Force headings to inherit light text across all dark sections */
-    :where(.hero,.section,.card,.faq,.boarding-geo-links,.testimonial-bar) :where(h1,h2,h3,h4,h5,h6){
-      color: var(--text) !important;
-    }
-    /* Ensure all common text elements inside cards/boxes render light */
+    /* Global contrast hardening */
+    :where(.hero,.section,.card,.faq,.boarding-geo-links,.testimonial-bar) :where(h1,h2,h3,h4,h5,h6){ color: var(--text) !important; }
     .card :where(p,li,small,strong,em,span,div),
     .section :where(p,li,small,strong,em,span),
-    .faq :where(p,li,small,strong,em,span){
-      color: var(--text) !important;
-    }
-    /* Price/CTA banners and ribbons */
-    .price-banner, .price-banner *,
-    .impact-ribbon, .impact-ribbon *{
-      color: var(--text) !important;
-    }
-    /* Dropdown menu colors */
+    .faq :where(p,li,small,strong,em,span){ color: var(--text) !important; }
+    .price-banner, .price-banner *, .impact-ribbon, .impact-ribbon *{ color: var(--text) !important; }
     .nav-group-list, .nav-group-list a{ color:#fff !important; }
-    /* Any badge/chip styles that might default to dark text */
     .badge, .area-chip{ color: var(--brand) !important; border-color: var(--brand) !important; background: var(--bg2) !important; }
-    /* Details/summary inside dark sections */
     details > summary{ color: var(--text) !important; }
     details > div{ color: var(--text) !important; }
-    /* Breadcrumbs */
     .breadcrumbs, .breadcrumbs a{ color:#cbd6e3 !important; }
-    /* Footer collapsibles */
     .footer-col, .footer-col *{ color: var(--text) !important; }
-
   </style>
 
   <!-- Analytics -->
@@ -179,7 +161,7 @@
     window.dataLayer=window.dataLayer||[]; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config','G-KP5LVKN6X3'); gtag('config','AW-17527927259');
   </script>
 
-  <!-- JSON-LD (from user, preserved) -->
+  <!-- JSON-LD (preserved/updated) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -200,6 +182,7 @@
           {"@type":"City","name":"Southbank"},
           {"@type":"City","name":"South Yarra"}
         ],
+        "sameAs": ["https://instagram.com/woofofwalkstreet","https://www.facebook.com/woofofwalkstreet"],
         "aggregateRating": { "@type":"AggregateRating", "ratingValue": 4.9, "reviewCount": 85 }
       },
       {
@@ -218,12 +201,12 @@
         "provider": { "@id": "https://www.woofofwalkstreet.com/#business" },
         "areaServed": ["South Melbourne","Albert Park","Port Melbourne","Middle Park","Southbank","South Yarra"],
         "url": "https://www.woofofwalkstreet.com/dog-walker.html",
-        "description": "Calm, one-dog-only walks with GPS route and photo updates. New clients save 50% with code WALK50 until 31 Dec 2025.",
+        "description": "Calm, one-dog-only walks with GPS route and photo updates. New clients save 50% with code WALK50 until 31 Jan 2026. Boarding 20% off with code .",
         "offers": {
           "@type": "Offer",
           "priceCurrency": "AUD",
           "price": "100.00",
-          "priceValidUntil": "2025-12-31",
+          "priceValidUntil": "2026-01-31",
           "availability": "https://schema.org/InStock",
           "url": "https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86031931"
         }
@@ -243,11 +226,12 @@
   </script>
 </head>
 <body>
-  <!-- Promo (index-style) -->
-  <div id="promo" class="promo-ribbon" role="region" aria-label="Promo: 50% off Casual Walks">
+  <!-- Promo (holiday-consistent) -->
+  <div id="promo" class="promo-ribbon" role="region" aria-label="Promo: Holiday Offer 20% off Boarding + 50% off Casual Walks">
     <div class="container">
-      <strong>50% OFF</strong> your first <strong>Casual Walk</strong> — code <span class="promo-code">WALK50</span> · Ends 31/12/2025
-      <a class="promo-cta" href="#book-walks">Book 45-min Walk →</a>
+      🎁 <strong>Holiday Offer:</strong> <strong>20% OFF</strong> Boarding (code <span class="promo-code"></span>) + <strong>50% OFF</strong> first Casual Walk (code <span class="promo-code">WALK50</span>) · Ends <strong>31 Jan 2026</strong>
+      <a class="promo-cta" href="#book-walks">Book Walk →</a>
+      
       <button id="promo-close" class="promo-close" aria-label="Dismiss promo" style="margin-left:10px;background:transparent;border:0;color:#fff;cursor:pointer">✕</button>
     </div>
   </div>
@@ -288,9 +272,10 @@
         <a href="/blog/index.html">Blog</a>
         <a href="/faq.html">FAQs</a>
         <a href="/search.html">Search</a>
+        <a href="https://facebook.com/woofofwalkstreet" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
 
         <a class="btn button-primary nav-cta" href="#book-walks">Book 45-min Walk — 50% Off</a>
-        <a class="btn button-primary nav-cta" href="#book-boarding">Boarding 20% Off</a>
+        
       </nav>
       <div class="nav-scrim" aria-hidden="true"></div>
     </div>
@@ -302,7 +287,7 @@
       <div class="container">
         <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="/">Home</a> › Dog Walking Services</nav>
 
-        <h1>Solo Dog Walking Melbourne: Calm, Low-Arousal, GPS Tracked Dog Walker</h1>
+        <h1>Dog Walker — Solo Walks in South Melbourne</h1>
 
         <p class="subhead">Melbourne’s preferred choice for <strong>one-dog-only</strong> walking, focusing on <strong>calm decompression</strong> over chaotic group excursions. Every session includes a <strong>GPS route</strong>, <strong>photo update</strong>, and detailed notes—peace of mind for you and focused attention for your dog.</p>
 
@@ -318,8 +303,8 @@
         </div>
 
         <div class="price-banner">
-          <p><strong>A$100 Casual Solo Walk</strong> — <strong>NEW CLIENT SPECIAL:</strong> secure your first walk for <strong>50% OFF</strong> with code <strong>WALK50</strong>. Offer ends <strong>31 December 2025</strong>.</p>
-          <div class="coupon-help" aria-live="polite">If the discount doesn’t auto-apply, paste this into the coupon field: <code>WALK50</code>.</div>
+          <p><strong>A$100 Casual Solo Walk</strong> — <strong>NEW CLIENT SPECIAL:</strong> secure your first walk for <strong>50% OFF</strong> with code <strong>WALK50</strong>. <p><strong>A$100 Casual Solo Walk</strong> — <strong>NEW CLIENT SPECIAL:</strong> secure your first walk for <strong>50% OFF</strong> with code <strong>WALK50</strong>. Offer ends <strong>31 January 2026</strong>.</p>
+          <div class="coupon-help" aria-live="polite">If the discount doesn’t auto-apply, paste into the coupon field: <code>WALK50</code> <code></code>.</div>
         </div>
 
         <p class="cta-buttons" style="margin-top:16px">
@@ -386,15 +371,7 @@
       </div>
     </section>
 
-    <section class="section" id="book-boarding" aria-label="Book boutique boarding">
-      <div class="container">
-        <h2>Book Dog Boarding Online</h2>
-        <p class="meta" style="margin:8px 0 12px"><strong>Pick-up & drop-off included</strong> in our local area. <strong>Payment required to reserve.</strong> Code <strong>BOARDING20</strong> auto-applies.</p>
-        <div class="scheduler-wrap">
-          <iframe class="scheduler-frame" title="Book boutique boarding" src="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86032167&coupon=BOARDING20" loading="lazy" allow="payment"></iframe>
-        </div>
-      </div>
-    </section>
+    
 
     <!-- Instagram placeholder -->
     <section class="section alt">
@@ -435,7 +412,7 @@
   <!-- Sticky mobile CTA -->
   <div class="sticky-cta" role="region" aria-label="Quick booking">
     <a class="btn button-primary" href="#book-walks">Book 45-min Walk — 50% Off</a>
-    <a class="btn button-primary" href="#book-boarding">Boarding — 20% Off</a>
+    
     <a class="btn button-secondary" href="#faq">FAQs</a>
   </div>
 
@@ -556,7 +533,7 @@
           const u=new URL(url,location.origin);
           if(/acuityscheduling\.com\/schedule\.php/.test(u.href)){
             const type=u.searchParams.get('appointmentType');
-            const coupon=(type==='86032167')?'BOARDING20':'WALK50';
+            const coupon=(type==='86032167')?'':'WALK50';
             if(coupon && !u.searchParams.has('coupon')) u.searchParams.set('coupon',coupon);
             const src=new URLSearchParams(location.search);
             ['utm_source','utm_medium','utm_campaign','utm_term','utm_content'].forEach(k=>{ if(src.has(k) && !u.searchParams.has(k)) u.searchParams.set(k,src.get(k)); });

@@ -114,7 +114,7 @@
     .checklist li{position:relative;padding-left:28px;margin:.52rem 0}
     .checklist li::before{content:"✔";position:absolute;left:0;top:0;color:#10b981;font-weight:900}
 
-    /* Package cards */
+    /* Package cards (original base) */
     .pkg-grid{display:grid;gap:14px}
     @media(min-width:780px){.pkg-grid{grid-template-columns:repeat(4,1fr)}}
     .pkg{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03)), var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:0 10px 30px rgba(0,0,0,.22)}
@@ -142,6 +142,22 @@
     @media (max-width: 860px){
       .site-header{background:#0b0e12 !important;backdrop-filter:none !important;-webkit-backdrop-filter:none !important;border-bottom:1px solid rgba(255,255,255,.08)}
     }
+
+    /* --- Tweaks requested: white cards + gold edge + leveled buttons + white H1 --- */
+    .pkg-grid{ align-items:stretch; } /* equal card heights */
+    .pkg{
+      background:#fff !important;
+      color:#0b0e12;
+      border:2px solid var(--brand) !important;
+      box-shadow:0 14px 34px rgba(0,0,0,.22);
+      display:flex; flex-direction:column;
+    }
+    .pkg h3, .pkg ul li { color:#0b0e12; }
+    .pkg .price{ color:var(--brand); } /* keep price gold */
+    .pkg ul{ margin:.6rem 0 .8rem; padding-left:18px; flex:1 1 auto; } /* pushes button down */
+    .pkg .btn{ height:56px; margin-top:auto; } /* same-height buttons aligned */
+    .hero h1{ color:#ffffff !important; text-shadow:0 1px 0 rgba(0,0,0,.25); }
+    #packages .btn-ghost{ background:#fff; color:#0b0e12; border:1px solid var(--line); }
   </style>
 </head>
 
@@ -179,7 +195,7 @@
         <a href="/blog/index.html">Blog</a>
         <a href="/contact.html">Contact</a>
         <a href="/search.html">Search</a>
-        <!-- New Facebook link -->
+        <!-- Facebook link -->
         <a href="https://www.facebook.com/woofofwalkstreet" target="_blank" rel="noopener">Facebook</a>
         <a class="btn btn-primary nav-cta book-stay-btn" href="#book-options" data-utm-medium="header">Book Boarding — 20% Off</a>
       </nav>
@@ -497,7 +513,7 @@
           <p style="margin-top:12px">
             JavaScript is required to book online. You can
             <a class="btn btn-primary" href="https://app.acuityscheduling.com/schedule.php?owner=37607219&appointmentType=86032167" target="_blank" rel="noopener">open the booking page here</a>
-            or call <a href="tel:+61370731175">(03) 7073 1175</a>.
+            or call <a href="tel:+61370731175">(03) 7073 1175)</a>.
           </p>
         </noscript>
       </div>

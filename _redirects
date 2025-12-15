@@ -59,9 +59,14 @@ https://woofofwalkstreet.com/*                       https://www.woofofwalkstree
 /memberships                                         /memberships.html                                         301
 /memberships/                                        /memberships.html                                         301
 
-# Boarding services hub
-/boarding-services                                   /boarding-services.html                                   301
-/boarding-services/                                  /boarding-services.html                                   301
+# Boarding services hub → NEW canonical page
+/boarding-services                                   /dog-boarding-melbourne.html                              301
+/boarding-services/                                  /dog-boarding-melbourne.html                              301
+/boarding-services.html                              /dog-boarding-melbourne.html                              301
+
+# NEW: Canonical helpers for the new page
+/dog-boarding-melbourne                              /dog-boarding-melbourne.html                              301
+/dog-boarding-melbourne/                             /dog-boarding-melbourne.html                              301
 
 # Casual walking (legacy)
 /casual-dog-walking-south-melbourne                  /casual-dog-walking-south-melbourne.html                  301
@@ -79,7 +84,7 @@ https://woofofwalkstreet.com/*                       https://www.woofofwalkstree
 /dog-walking-middle-park                             /dog-walker-middle-park.html                              301
 /dog-walking-middle-park/                            /dog-walker-middle-park.html                              301
 /dog-walker-middle-park                              /dog-walker-middle-park.html                              301
-/dog-walker-middle-park/                             /dog-walker-middle-park.html                              301
+/dog-walker-middle-park/                             /dog-walker-middle-ark.html                               301
 # Port Melbourne
 /dog-walking-port-melbourne                          /dog-walker-port-melbourne.html                           301
 /dog-walking-port-melbourne/                         /dog-walker-port-melbourne.html                           301
@@ -106,14 +111,14 @@ https://woofofwalkstreet.com/*                       https://www.woofofwalkstree
 /dog-boarding-albert-park                            /dog-boarding-albert-park.html                            301
 /dog-boarding-albert-park/                           /dog-boarding-albert-park.html                            301
 /dog-boarding-middle-park                            /dog-boarding-middle-park.html                            301
-/dog-boarding-middle-park/                           /dog-boarding-middle-park.html                            301
+/dog-boarding-middle-park/                           /dog-boarding-middle-ark.html                             301
 /dog-boarding-southbank                              /dog-boarding-southbank.html                              301
 /dog-boarding-southbank/                             /dog-boarding-southbank.html                              301
 /dog-boarding-south-yarra                            /dog-boarding-south-yarra.html                            301
 /dog-boarding-south-yarra/                           /dog-boarding-south-yarra.html                            301
-# Generic legacy
-/dog-boarding                                        /boarding-services.html                                   301
-/dog-boarding/                                       /boarding-services.html                                   301
+# Generic legacy → NEW canonical
+/dog-boarding                                        /dog-boarding-melbourne.html                              301
+/dog-boarding/                                       /dog-boarding-melbourne.html                              301
 
 # =======================================
 # Unlimited slug consolidation → /unlimited-dog-walks.html
